@@ -1,0 +1,51 @@
+{
+  "id": "4846bde5-8465-4cd4-9fc0-e1c386e58317",
+  "label": "A root with intellect and finite reach give GOD_4 intellectual capacity",
+  "premise_statement_ids": [
+    "beede613-2c17-5fe1-829e-16829d781cfd",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "conclusion_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "inference_ids": [
+    "066c72f3-1d09-4ce8-8d37-9d33b84d910d"
+  ],
+  "meaning": "The bundle supplies one actual root n at w and intellectual capacity of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasIntellect predicate by equality. This route uses the actual-root and intellectual-capacity conjuncts of the existing bundle. The Comparator companion omits the reach premise. In the existing plurality profile under explicit excluded middle, the bundle holds at left, while naming only the instrument fails the reach premise and both named capacity conclusions.",
+  "definition_ids": [
+    "24693bb9-472f-440b-829d-1ebc3ac009b6",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "53b02c11-a28b-57c2-8d2e-7e013893db7e",
+    "15399dcf-49c1-5054-9e71-4a192dfa3453",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "3b0d67c5-59e4-5556-a728-26bd567f0fb1",
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "79644a0a-db5b-5497-bb47-9f96d14cdae7",
+    "06fb4f51-ff5f-5c5e-b947-844f20de4174",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

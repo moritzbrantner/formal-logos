@@ -261,6 +261,7 @@ public import TruthCore.Results.Causality.ModalSenseSupport.Solution
 public import TruthCore.Results.Causality.MotionMapsBatch1.Solution
 public import TruthCore.Results.Causality.MotionMoverFork.Solution
 public import TruthCore.Results.Causality.MutualSupportAsymmetry.Solution
+public import TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution
 public import TruthCore.Results.Causality.NamingVeracityBatch1.Solution
 public import TruthCore.Results.Causality.NarDerivation.Solution
 public import TruthCore.Results.Causality.NarGrafts.Solution

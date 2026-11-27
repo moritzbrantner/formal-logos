@@ -1,0 +1,13 @@
+{
+  "id": "066c72f3-1d09-4ce8-8d37-9d33b84d910d",
+  "label": "A root with intellect and finite reach give GOD_4 intellectual capacity (inference)",
+  "input_statement_ids": [
+    "beede613-2c17-5fe1-829e-16829d781cfd",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "output_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "rule": "Identify the named bearer with the actual root by finite grounding reach and transport intellectual capacity",
+  "meaning": "The bundle supplies one actual root n at w and intellectual capacity of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasIntellect predicate by equality. This route uses the actual-root and intellectual-capacity conjuncts of the existing bundle. The Comparator companion omits the reach premise. In the existing plurality profile under explicit excluded middle, the bundle holds at left, while naming only the instrument fails the reach premise and both named capacity conclusions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
