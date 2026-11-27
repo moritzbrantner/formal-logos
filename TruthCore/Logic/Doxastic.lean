@@ -81,7 +81,8 @@ theorem knownImpliesBelieved (c : Context Agent W) (a : Agent)
     JustificationIntrospection.Knows epistemic p c.actual → Believes c a p c.actual :=
   fun hk v hv => hk v (included v hv)
 
-/-- Transfer preserves the agent and time of the distributed knowledge witness. -/
+/-- Transfer preserves the witnessing agent and uses successor inclusion at the
+witnessing time. -/
 theorem distributedKnownImpliesBelieved {Time : Type}
     (c : Context Agent W) (epistemic : Agent → Time → Frame W) (modal : Frame W)
     (included : ∀ a t v, (c.belief a).access c.actual v →

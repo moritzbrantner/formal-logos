@@ -1495,8 +1495,8 @@ The target is `GodAssentAccurate` (7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad).
 The calibration fixes the existing individuated attitude relation, the
 world/content semantics and a content-to-legacy-proposition report before
 matching any assent. Each legacy assent (DOXASTIC_BELIEF_1) must be covered
-by an independently assented content with that report and a matching truth
-condition at actuality. A second clause calibrates each independently assented
+by an independently assented content with that report, such that truth of that
+content at actuality implies its report. A second clause calibrates each independently assented
 content of the same bearer to its accessibility box (DOXASTIC_BELIEF_2).
 The proof uses the same content in both clauses. If the supplied alternatives
 include actuality, evaluating the box there and disquoting yields the legacy

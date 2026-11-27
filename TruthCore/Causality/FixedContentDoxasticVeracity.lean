@@ -22,7 +22,8 @@ open TruthCore.Modal
 
 /-- OPEN calibration. The report and its world truth conditions are fixed before
 matching the assents. The same content is assented to, reports the legacy
-proposition, agrees with it at actuality, and is believed across alternatives. -/
+proposition, its truth at actuality implies that report, and it is believed across
+alternatives. -/
 def FixedAssentCalibration (σ : Signature) (V : Veracity σ) {W Content : Type}
     (c : Context σ.Being W) (S : Semantics W Content) (report : Content → Prop)
     (A : Attitudes σ Content) : Prop :=

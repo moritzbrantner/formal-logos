@@ -1,7 +1,7 @@
 {
   "id": "104b8748-db76-44a4-917e-108fb8ce1720",
   "label": "Divine DOXASTIC_BELIEF_1 is calibrated to DOXASTIC_BELIEF_2 by fixed contents",
-  "paraphrase": "OPEN calibration. For each GOD_4 with classical attributes, each legacy actual assent has an independently assented content with the same fixed report and matching truth at actuality. Each independently assented content of the bearer is believed under the supplied Kripke box at actuality. The interpretation, report, and assent to individuated contents are fixed across the inference.",
+  "paraphrase": "OPEN calibration. For each GOD_4 with classical attributes, each legacy actual assent has an independently assented content with the same fixed report, such that truth of that content at actuality implies its report. Each independently assented content of the bearer is believed under the supplied Kripke box at actuality. The interpretation, report, and assent to individuated contents are fixed across the inference.",
   "lean_declaration": "TruthCore.Causality.FixedContentDoxasticVeracity.FixedAssentCalibration",
   "definition_ids": [
     "88f9f6e8-997b-5f7d-afa1-c501954c3807",
