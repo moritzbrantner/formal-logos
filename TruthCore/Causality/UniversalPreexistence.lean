@@ -58,6 +58,40 @@ def UniversalSourceHasWhatItGives (F : GradesFrame W B T R) : Prop :=
   ∀ c, CausesAllInGenus F.InAct F.CausesIn F.esse c →
     ∀ x r, x ≠ c → F.CausesIn c x F.esse → F.CausesIn c x r → F.InAct c r
 
+/-! ## The "more perfect mode" step of q.4 a.2, split by comparand
+
+I q.4 a.2 co., first proof: "praeexistere autem in virtute causae agentis, non
+est praeexistere imperfectiori modo, sed perfectiori; licet praeexistere in
+potentia causae materialis, sit praeexistere imperfectiori modo". The comparand
+named in that sentence is preexistence in material potency. The equivocal agent
+is said to have the effect's perfection "eminentiori modo", which compares with
+the univocal mode "secundum eandem rationem", the effect's formal possession.
+
+`HavingMode` names three ways of having a perfection: formally (in the same form,
+IN_ACT_1), virtually (in an agent's power, IN_ACT_2), and potentially (in a
+material cause's potency). `ModeAbove m n` is an explicitly **primitive**
+comparison: having a perfection in mode `m` is more perfect than having it in mode
+`n`. Its meaning is that comparison of modes; no order law is imposed, and it is
+not a comparison of bearers (contrast MORE_1 to MORE_4). It does not by itself say
+that a bearer having a perfection virtually really has that perfection intrinsically. -/
+
+/-- Three ways of having a perfection. -/
+inductive HavingMode where
+  | formal
+  | virtual
+  | potential
+  deriving DecidableEq
+
+/-- The weak version: having a perfection in an agent's power is a more perfect
+mode than having it in a material cause's potency. -/
+def AgentPowerAboveMaterialPotency (ModeAbove : HavingMode → HavingMode → Prop) : Prop :=
+  ModeAbove .virtual .potential
+
+/-- The strong version: having a perfection in an agent's power is a more perfect
+mode than every other way of having it, formal possession by the effect included. -/
+def AgentPowerAboveEveryOtherMode (ModeAbove : HavingMode → HavingMode → Prop) : Prop :=
+  ∀ m, m ≠ .virtual → ModeAbove .virtual m
+
 /-! ## An impersonal universal source -/
 
 namespace Control
@@ -92,6 +126,11 @@ def act : ActFrame Being Respect where
   MovedIn := fun _ _ => False
   MovesIn := fun _ _ _ => False
 
+/-- A stipulated mode order on which an agent's power is above material potency
+and above nothing else. It witnesses only that the strong version of the mode
+step is strictly stronger than the weak one. -/
+def weakModeOrder (m n : HavingMode) : Prop := m = .virtual ∧ n = .potential
+
 def grades : GradesFrame Unit Being Unit Respect :=
   TruthCore.Causality.CartesianAdequacy.gradesOf inclusive more causes false
 
@@ -99,9 +138,11 @@ def grades : GradesFrame Unit Being Unit Respect :=
 act: the source is a universal cause of being; universal-scope transfer
 `b26c10a0`, universal-source possession, universal-source preexistence, q.4 a.2
 preexistence `64498e7e`, unrestricted transfer `f8ba2429` and "nothing has
-actuality except insofar as it is" all hold; the source has life inclusively, and it is perfect in the inclusive sense of
-`GodIsPerfect` when it alone is named; yet the source does not have life
-formally. -/
+actuality except insofar as it is" all hold; the frame's act is exactly the
+inclusive act of the act frame (`GradesActIsInclusive`); the source has life
+inclusively, and it is perfect in the inclusive sense of `GodIsPerfect` when it
+alone is named; yet the source does not have life formally. "Life" here is a
+Boolean stand-in respect, not any recorded sense of LIVING. -/
 def Controls : Prop :=
   CausesAllInGenus grades.InAct grades.CausesIn grades.esse 0 ∧
   TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections
@@ -116,7 +157,10 @@ def Controls : Prop :=
     grades.InAct grades.esse ∧
   grades.InAct 0 true ∧
   TruthCore.Case.Catholicism.GodIsPerfect (fun b => b = 0) grades.InAct ∧
-  ¬ act.InActFormally 0 true
+  TruthCore.Causality.CartesianAdequacy.GradesActIsInclusive grades act ∧
+  ¬ act.InActFormally 0 true ∧
+  AgentPowerAboveMaterialPotency weakModeOrder ∧
+  ¬ AgentPowerAboveEveryOtherMode weakModeOrder
 
 end Control
 

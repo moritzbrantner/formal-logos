@@ -67,6 +67,15 @@ theorem perfectFromGodCauseOfUniversalPreexistence {W B T R : Type}
       fun y hy _ => hCause g y hg hy
     exact hUniversal g hAll x r hOther (hCause g x hg hOther) hx
 
+/-- Strength order for the mode step: if an agent's power is a more perfect mode
+than every other way of having a perfection, it is more perfect than material
+potency. -/
+theorem agentPowerAboveMaterialPotencyOfEveryOther
+    (ModeAbove : HavingMode → HavingMode → Prop)
+    (hStrong : AgentPowerAboveEveryOtherMode ModeAbove) :
+    AgentPowerAboveMaterialPotency ModeAbove :=
+  hStrong .potential (by decide)
+
 /-- The impersonal-source interpretation, checked by decision (with a larger instance budget). -/
 theorem controls : Control.Controls := by
   dsimp [Control.Controls, UniversalSourceHasWhatItGives, UniversalSourcePreexistence,
@@ -75,8 +84,12 @@ theorem controls : Control.Controls := by
     TruthCore.Case.Catholicism.CauseOfBeingCausesEveryPerfection,
     ActualityOnlyInsofarAsBeingReading, GodIsPerfect, TruthCore.Case.Catholicism.IsPerfect,
     Control.grades, Control.act, TruthCore.Causality.CartesianAdequacy.gradesOf,
-    Control.causes, Control.formal, Control.virtual, Control.inclusive, Control.more]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+    Control.causes, Control.formal, Control.virtual, Control.inclusive, Control.more,
+    TruthCore.Causality.CartesianAdequacy.GradesActIsInclusive,
+    TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually,
+    AgentPowerAboveMaterialPotency, AgentPowerAboveEveryOtherMode, Control.weakModeOrder]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
+    fun h => absurd (h .formal (by decide)).2 (by decide)⟩
   all_goals (set_option synthInstance.maxSize 2048 in
     set_option synthInstance.maxHeartbeats 400000 in decide)
 
