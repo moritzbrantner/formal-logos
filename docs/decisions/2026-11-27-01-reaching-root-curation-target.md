@@ -20,19 +20,21 @@ five states, tried in this order.
    `orphans` "connected" notion, unchanged).
 2. **Placed diagnostic:** a premise-free result (control, model, countermodel
    or consistency check) whose result or argument is the subject of a `tests`
-   relation whose object is a root-path statement or an argument concluding
-   one.
+   relation whose object is a root-path statement or a root-path argument.
 3. **Placed rival:** its conclusion is a typed rival of a root-path statement:
    `alternative_to` or `attacks` between the conclusion and a root-path
    statement (either direction), its argument `attacks` or `refutes` a
-   root-path statement, or an argument concluding a root-path statement
-   `refutes` the conclusion.
+   root-path statement, or a root-path argument `attacks` or `refutes` the
+   conclusion.
 4. **Planned:** the conclusion carries a valid `connection_plan` (the shape
    `truth check` requires) whose target is a root-path statement.
 5. **Unplaced:** anything else.
 
 A root-path statement is one in state 1's sense: it reaches the root or
-supports a verified refutation of a recorded rival of one. Transcriptions
+supports a verified refutation of a recorded rival of one. A root-path
+argument has a verified result (coordinator decision on the review of #2109)
+and either concludes a root-path statement or is itself such a verified
+refutation; an unverified argument record is not a path. Transcriptions
 (invariant 16) are counted separately; their state is computed like any
 other, although a transcription does not make a path real. `truth orphans`
 reports the states (`--all` lists every disconnected result with its state;

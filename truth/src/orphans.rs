@@ -261,19 +261,21 @@ pub struct Placement<'a> {
 /// 2. `placed_diagnostic`: a premise-free result (control, model,
 ///    countermodel or consistency check) whose result or argument is the
 ///    subject of a `tests` relation whose object is a root-path statement or
-///    an argument concluding one (or a verified refutation counted in 1).
+///    a root-path argument.
 /// 3. `placed_rival`: its conclusion is a typed rival of a root-path
 ///    statement: `alternative_to` or `attacks` between the conclusion and a
 ///    root-path statement (either direction: both record a competing
 ///    position), the argument `attacks` or `refutes` a root-path statement,
-///    or an argument concluding a root-path statement `refutes` the
-///    conclusion.
+///    or a root-path argument `attacks` or `refutes` the conclusion.
 /// 4. `planned`: the conclusion carries a `connection_plan` that is valid by
 ///    `truth check`'s rule and whose target is a root-path statement.
 /// 5. `unplaced`: anything else.
 ///
 /// "Root-path statement" is the `reaching` notion: a statement reaching the
-/// root or supporting a verified refutation of a recorded rival of one.
+/// root or supporting a verified refutation of a recorded rival of one. A
+/// "root-path argument" has a verified result and either concludes a
+/// root-path statement or is itself such a verified refutation; an
+/// unverified argument record is not a path.
 /// Placement is navigation, not warrant: nothing here closes, supports or
 /// attacks a statement.
 pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placement<'a>> {
@@ -285,12 +287,30 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
         .iter()
         .map(|argument| (text(argument, "id"), *argument))
         .collect();
+    // A root-path argument has a verified result: an unverified argument
+    // record is not a real path. Every refuter is verified already.
+    let verified: std::collections::HashSet<&str> = records
+        .results
+        .iter()
+        .filter(|result| matches!(text(result, "status"), "solution-present" | "verified"))
+        .map(|result| text(result, "argument_id"))
+        .collect();
     let argument_on_path = |id: &str| {
-        refuters.contains(id)
-            || arguments
-                .get(id)
-                .is_some_and(|argument| on_path(text(argument, "conclusion_statement_id")))
+        verified.contains(id)
+            && (refuters.contains(id)
+                || arguments
+                    .get(id)
+                    .is_some_and(|argument| on_path(text(argument, "conclusion_statement_id"))))
     };
+    // Relations by endpoint id, so each result scans only its own.
+    let mut by_endpoint: HashMap<&str, Vec<&Record>> = HashMap::new();
+    for relation in &records.relations {
+        let (subject, object) = (text(relation, "subject_id"), text(relation, "object_id"));
+        by_endpoint.entry(subject).or_default().push(relation);
+        if object != subject {
+            by_endpoint.entry(object).or_default().push(relation);
+        }
+    }
     let statements: HashMap<&str, &Record> = records
         .statements
         .iter()
@@ -318,10 +338,18 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
         let (result_id, argument_id) = (text(result, "id"), text(argument, "id"));
         let conclusion = text(argument, "conclusion_statement_id");
         let premise_free = list(argument, "premise_statement_ids").is_empty();
+        // The relations naming the result, its argument or its conclusion, in
+        // relation-id order so the reported placing relation is deterministic.
+        let mut candidates: Vec<&Record> = [result_id, argument_id, conclusion]
+            .iter()
+            .flat_map(|id| by_endpoint.get(id).into_iter().flatten().copied())
+            .collect();
+        candidates.sort_by_key(|relation| text(relation, "id"));
+        candidates.dedup_by(|left, right| std::ptr::eq(*left, *right));
         let (state, via): (&'static str, Option<Value>) =
             if on_path(conclusion) || refuters.contains(argument_id) {
                 (REACHING, None)
-            } else if let Some(relation) = records.relations.iter().find(|relation| {
+            } else if let Some(relation) = candidates.iter().find(|relation| {
                 premise_free
                     && text(relation, "predicate") == "tests"
                     && match text(relation, "subject_kind") {
@@ -336,7 +364,7 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
                     }
             }) {
                 ("placed_diagnostic", Some(relation_via(relation)))
-            } else if let Some(relation) = records.relations.iter().find(|relation| {
+            } else if let Some(relation) = candidates.iter().find(|relation| {
                 let (subject, object) = (text(relation, "subject_id"), text(relation, "object_id"));
                 let statement_object = text(relation, "object_kind") == "statement";
                 match (text(relation, "predicate"), text(relation, "subject_kind")) {
@@ -344,10 +372,7 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
                         (subject == conclusion && on_path(object))
                             || (object == conclusion && on_path(subject))
                     }
-                    ("attacks", "argument") if statement_object => {
-                        subject == argument_id && on_path(object)
-                    }
-                    ("refutes", "argument") if statement_object => {
+                    ("attacks" | "refutes", "argument") if statement_object => {
                         (subject == argument_id && on_path(object))
                             || (object == conclusion && argument_on_path(subject))
                     }
@@ -2084,6 +2109,59 @@ mod tests {
             ("statement", "C"),
         );
         assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        // Argument-level `attacks` counts in both directions, like `refutes`.
+        relation(
+            root,
+            "R1",
+            ("argument", "ROOT-ARG"),
+            "attacks",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+
+        // A root-path argument must be verified: an argument record concluding
+        // the root without a result places nothing, as a `tests` object or as
+        // the subject of a placing `refutes` or `attacks`.
+        write(
+            root,
+            "corpus/arguments/UNVERIFIED.json",
+            &json!({"id": "UNVERIFIED", "premise_statement_ids": ["P"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "ROOT", "meaning": "m"})
+            .to_string(),
+        );
+        for predicate in ["refutes", "attacks"] {
+            relation(
+                root,
+                "R1",
+                ("argument", "UNVERIFIED"),
+                predicate,
+                ("statement", "C"),
+            );
+            assert_eq!(state(root, "CAUSE-A"), UNPLACED, "{predicate}");
+        }
+        relation(
+            root,
+            "T2",
+            ("argument", "CONTROL"),
+            "tests",
+            ("argument", "UNVERIFIED"),
+        );
+        assert_eq!(state(root, "CONTROL"), UNPLACED);
+        relation(
+            root,
+            "T2",
+            ("argument", "CONTROL"),
+            "tests",
+            ("argument", "ROOT-ARG"),
+        );
+        relation(
+            root,
+            "R1",
+            ("argument", "ROOT-ARG"),
+            "refutes",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
 
         // Planned: a valid plan on the conclusion targeting a root-path node.
         let paraphrase = "Necessary being exists in every accessible world.";
@@ -2284,6 +2362,66 @@ mod tests {
         assert_eq!(
             offending(&run_gate(&head.0, &base.0)),
             [("CAUSE-A".to_owned(), "placement_lost".to_owned())]
+        );
+    }
+
+    #[test]
+    fn the_gate_fails_lost_reaching_and_planned_placements() {
+        // At the base, CAUSE-A reaches the root (a verified argument C -> ROOT)
+        // and MODAL-A is planned (M targets P); the head drops both.
+        let base = fixture();
+        write(
+            &base.0,
+            "corpus/arguments/C-ROOT.json",
+            &json!({"id": "C-ROOT", "premise_statement_ids": ["C"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "ROOT", "meaning": "m"})
+            .to_string(),
+        );
+        write(
+            &base.0,
+            "corpus/results/C-ROOT.json",
+            &json!({"id": "C-ROOT", "argument_id": "C-ROOT", "challenge_module": "c",
+                    "solution_module": "TruthCore.Results.Case.C-ROOT.Solution",
+                    "theorem": "t", "comparator_config": "c", "status": "solution-present"})
+            .to_string(),
+        );
+        let paraphrase = "Necessary being exists in every accessible world.";
+        let lean = "TruthCore.Modal.Kripke.m";
+        plan(
+            &base.0,
+            "M",
+            paraphrase,
+            lean,
+            json!({"target_statement_id": "P", "missing_bridge": "b", "blocker": "c"}),
+        );
+        assert_eq!(state(&base.0, "CAUSE-A"), REACHING);
+        assert_eq!(state(&base.0, "MODAL-A"), "planned");
+        let head = copy(&base.0);
+        assert_eq!(run_gate(&head.0, &base.0)["passed"], true);
+
+        fs::remove_file(head.0.join("corpus/arguments/C-ROOT.json")).unwrap();
+        fs::remove_file(head.0.join("corpus/results/C-ROOT.json")).unwrap();
+        assert_eq!(
+            offending(&run_gate(&head.0, &base.0)),
+            [("CAUSE-A".to_owned(), "placement_lost".to_owned())]
+        );
+        write(
+            &head.0,
+            "corpus/statements/M.json",
+            &json!({"id": "M", "paraphrase": paraphrase, "lean_declaration": lean}).to_string(),
+        );
+        let report = run_gate(&head.0, &base.0);
+        let mut lost = offending(&report);
+        lost.sort();
+        assert_eq!(
+            lost,
+            [
+                ("CAUSE-A".to_owned(), "placement_lost".to_owned()),
+                ("MODAL-A".to_owned(), "placement_lost".to_owned())
+            ]
+        );
+        assert!(
+            format_gate(&report).contains("  M (result MODAL-A; placed at the base, unplaced now)")
         );
     }
 

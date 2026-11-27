@@ -1172,11 +1172,14 @@ Each verified result also gets a **placement state** (owner decision,
 2026-11-27; `docs/corpus-model.md`, "Result placement"), the first that
 applies: `reaching` (the connected notion above), `placed_diagnostic` (a
 premise-free result whose result or argument `tests` a root-path statement or
-an argument concluding one), `placed_rival` (an `alternative_to` or `attacks`
+a root-path argument), `placed_rival` (an `alternative_to` or `attacks`
 relation between its conclusion and a root-path statement, either direction;
-its argument `attacks` or `refutes` one; or a root-path argument `refutes` its
-conclusion), `planned` (a valid `connection_plan` on its conclusion targeting
-a root-path statement) and `unplaced`. `--json` gives `state_counts` over all
+its argument `attacks` or `refutes` one; or a root-path argument `attacks` or
+`refutes` its conclusion), `planned` (a valid `connection_plan` on its conclusion targeting
+a root-path statement) and `unplaced`. A root-path argument has a verified
+result and either concludes a root-path statement or is itself a verified
+refutation counted as connected above; an unverified argument record places
+nothing. `--json` gives `state_counts` over all
 verified results, `transcription_state_counts` for the transcriptions among
 them, per group `placed_count`, `planned_count`, `unplaced_count` and
 `state_counts`, and per result its `state` and `placed_by` (the relation or
