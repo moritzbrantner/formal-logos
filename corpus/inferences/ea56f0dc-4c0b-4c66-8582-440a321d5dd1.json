@@ -1,0 +1,13 @@
+{
+  "id": "ea56f0dc-4c0b-4c66-8582-440a321d5dd1",
+  "label": "No PER_SE_5 esse regress from SERIES_OF_CAUSES_4 and the efficiency bridge (inference)",
+  "input_statement_ids": [
+    "87aa978c-f33c-4fc6-8881-5ff6484f8a7a",
+    "e0088de9-28eb-533c-a1e7-662f780cc0e2"
+  ],
+  "output_statement_id": "ea251340-c89e-4535-a00f-6323cd8403a5",
+  "rule": "Accessibility transfers along an edge inclusion",
+  "meaning": "The explicitly supplied efficiency bridge maps each distinct mode-unspecified actual esse cause to a present efficient cause at esse. Keep the given AsCaused conjunct to get a SERIES_OF_CAUSES_4 edge. The accessibility on that relation gives accessibility along its PER_SE_5 subrelation. The SERIES_OF_CAUSES_4 premise may be assumed directly or obtained through the SERIES_OF_CAUSES_3 inclusion. Its existing derivation from the target PER_SE_5 regress cannot provide independent support for that target.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

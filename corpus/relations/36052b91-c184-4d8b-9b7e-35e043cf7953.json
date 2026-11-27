@@ -1,0 +1,10 @@
+{
+  "id": "36052b91-c184-4d8b-9b7e-35e043cf7953",
+  "label": "Test by WorldSourceRegress.overlapControl (25697a6f)",
+  "subject_kind": "result",
+  "subject_id": "c9f2dea0-cb03-5305-ba0e-fa01c0c07e70",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
+  "note": "Test actual graph accessibility with the supplied bearer some 0. In the sole world, where all candidates are present, that bearer has a direct finite source path to none and an infinite injective predecessor chain. Its failure of Acc refutes well-foundedness of this graph."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3f2634b7-6355-4842-9c8c-e9c9d4bbd73b",
+  "label": "Classical attributes of the unique GOD_4 by identity",
+  "argument_id": "5d1dcaea-a2c2-43e8-92b5-c01a80a5ae0e",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.AttributeHubConnections.attributesOfUniqueGod",
+  "comparator_config": "results/3f2634b7-6355-4842-9c8c-e9c9d4bbd73b/comparator.json",
+  "status": "solution-present",
+  "description": "Eliminate the existing existential bundle and use its numerical uniqueness to identify each GOD_4 candidate with the supplied attribute bearer. Substitution transfers the same primitive field. No attribute-field converse, source attribution or additional premise is used."
+}

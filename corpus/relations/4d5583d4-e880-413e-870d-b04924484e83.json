@@ -1,0 +1,10 @@
+{
+  "id": "4d5583d4-e880-413e-870d-b04924484e83",
+  "label": "Test by EpistemicCredentialing.controls (f56b2ee7)",
+  "subject_kind": "result",
+  "subject_id": "1583ce3d-4c08-4a3b-a81a-50f2f52e9cdc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f56b2ee7-c69e-5e3b-85b0-e671d907ba58",
+  "note": "Omit thin epistemic-reason existence. In noReasonFrame the agent and content carriers remain populated, while Reason and CountsAsReason both have empty extensions. Presentation holds, the credential and transfer clauses are vacuous, and the empty priority relation is well-founded."
+}
