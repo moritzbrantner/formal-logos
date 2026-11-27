@@ -258,6 +258,19 @@ flags must satisfy the existing policy (the full approved three also require an
 existing Solution importing Mathlib). Enabling NanoDa in a draft config does not
 claim that NanoDa, Comparator, axiom inspection or source checks ran.
 
+### Type metadata lints
+
+`truth type-lints [--base REV]` (#2103) turns two recurring review findings into warnings. It reads the elaborated-type cache that `truth bind-check` writes (`.cache/bind-types.json`). For every binder and result type, `scripts/BindTypes.lean` records `reaches`: the *tracked* constants (every definition's and sense's `lean_declaration`, and the logical premises `TruthCore.Logic.ExcludedMiddle` and `PredicativeExcludedMiddle`) that occur in the elaborated type, or in the values of the project definitions it uses, unfolded transitively. A bound variable never counts. The exporter also records each tracked constant's kind.
+
+1. **Whole-argument tests without the logical premise** (#2141). A `tests` relation whose object is a whole argument that registers a logical premise warns when no type of the subject result reaches that premise's declaration. Such a model certifies the nonlogical premises only. Test the exact premises the model certifies, or include the logical premise in the certificate.
+2. **Definition not in the type.** A statement's `definition_ids` link a definition whose `lean_declaration` is a *defined* constant, a definition with a value that is not a structure projection. The lint warns when no bound type of the statement reaches that constant. The statement's bound types are its binder and result types, in every fresh cache entry, whose head is the statement's declaration. When the type reaches another sense of the same disambiguation, the warning names it (de dicto linked for de re). Two kinds of link are not judged:
+   - a link to a primitive: a structure field, inductive or opaque constant, which statements take as a free parameter by convention, or a constant of unknown kind;
+   - a link covered by a parameter tag (`lean_parameters`, #1784) on the statement's declaration.
+
+   One benign class remains: a type that states the definiens inline instead of using the defined constant.
+
+Only fresh cache entries are read. A stale or missing entry leaves its records unchecked; the report counts them and never guesses. With `--base`, only `tests` relations and statements that are new or changed since the base are judged; CI runs it on PRs after `bind-check` and adds the result to the job summary. The command always exits 0. The corpus-wide run is a backlog for #216, not a gate.
+
 ## Composition and visualization
 
 Large visual compositions should be derived from statements + inference applications + arguments. An argument can be collapsed to a single reusable block whose visible output is its conclusion, then expanded to reveal its internal premises and inference steps. React Flow or another graph renderer should consume such a derived projection; it should not become the canonical data model.

@@ -1253,6 +1253,18 @@ and takes that coverage premise. Entries are ordered by the number of
 root-path links and name the missing parts. Neither report closes anything or
 writes records.
 
+## `type-lints`
+
+`truth type-lints [--base REV]` reports advisory metadata warnings over the
+elaborated types `bind-check` cached: whole-argument `tests` relations whose
+subject's certificate does not reach a registered logical premise such as
+`ExcludedMiddle`, and statements that link a definition whose defined Lean
+constant their bound type does not reach, naming another sense of the same
+disambiguation when the type uses one. Only fresh cache entries are read, so
+run `bind-check` (or `bind-check --affected --base REV`) after `lake build`
+first. With `--base`, only records new or changed since that revision are
+judged. It always exits 0 (docs/corpus-model.md, "Type metadata lints").
+
 ## `connectivity`
 
 `truth connectivity [--frontier-root STATEMENT-ID] [--list-isolated N]` is a

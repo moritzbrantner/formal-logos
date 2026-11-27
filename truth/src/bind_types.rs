@@ -123,12 +123,12 @@ impl<'a> Inputs<'a> {
     }
 }
 
-/// The exporter description without what `context` does not show
+/// The exporter description without what `context` and `type-lints` do not use
 /// (wrappers, core heads, senses, expression contracts).
 fn slim(described: &Value) -> Value {
     fn item(value: &Value) -> Value {
         let mut out = Obj::new();
-        for key in ["name", "prop", "head", "type"] {
+        for key in ["name", "prop", "head", "type", "reaches"] {
             if let Some(field) = value.get(key) {
                 out.insert(key.into(), field.clone());
             }
@@ -161,10 +161,21 @@ pub fn write(
 ) -> Result<(PathBuf, usize), String> {
     let path = cache_path(root);
     let inputs = Inputs::new(root);
-    let (mut entries, mut hashes) = match load(root) {
-        Ok(Some(cache)) => (cache.entries, cache.inputs),
-        _ => (Obj::new(), Obj::new()),
+    let (mut entries, mut hashes, mut kinds) = match load(root) {
+        Ok(Some(cache)) => (cache.entries, cache.inputs, cache.tracked_kinds),
+        _ => (Obj::new(), Obj::new(), Obj::new()),
     };
+    // Constant kinds for `type-lints`. A scoped run imports fewer modules, so
+    // its `missing` never replaces a kind an earlier run saw.
+    for (name, kind) in described
+        .iter()
+        .filter_map(|entry| entry.get("tracked_kinds").and_then(Value::as_object))
+        .flatten()
+    {
+        if kind != "missing" || !kinds.contains_key(name) {
+            kinds.insert(name.clone(), kind.clone());
+        }
+    }
     let lookup: HashMap<&str, &Value> = described
         .iter()
         .filter(|entry| entry.get("error").is_none())
@@ -202,6 +213,7 @@ pub fn write(
         "note": "written by `truth bind-check` after running scripts/BindTypes.lean; read by `truth context`; not verification evidence",
         "inputs": hashes,
         "results": entries,
+        "tracked_kinds": kinds,
     });
     if let Some(parent) = path.parent() {
         fs::create_dir_all(parent).map_err(|error| format!("{}: {error}", parent.display()))?;
@@ -220,6 +232,9 @@ pub fn write(
 pub struct Cache {
     entries: Obj,
     inputs: Obj,
+    /// The kind of each tracked constant (`scripts/BindTypes.lean`,
+    /// `tracked_kinds`) as last seen; advisory, not keyed by input digests.
+    pub tracked_kinds: Obj,
 }
 
 /// The cache of `root`: `None` when absent, an error when unreadable.
@@ -238,6 +253,7 @@ pub fn load(root: &Path) -> Result<Option<Cache>, String> {
     Ok(Some(Cache {
         entries: object("results").ok_or("no results object")?,
         inputs: object("inputs").unwrap_or_default(),
+        tracked_kinds: object("tracked_kinds").unwrap_or_default(),
     }))
 }
 
