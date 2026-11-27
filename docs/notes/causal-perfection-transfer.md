@@ -6498,11 +6498,43 @@ here.
   apart.
   - A second-order favouring can rank the bearer's favouring above a
     determination the bearer lacks, a non-present candidate (the weak form).
-  - At a necessary source, no alternative to its own favouring is *possible*
-    for it. The personal source's will of its own goodness is necessary in the
-    same way.
-  - So ranking *possible* alternatives to itself is unavailable to both, while
-    ranking non-present determinations is available to both.
+  - Necessary existence alone does not make every favouring of a necessary
+    source necessarily held. Neither `SelfApplies` nor `SelfAppliesToStandard`
+    supplies a modal premise that the bearer's whole favouring is necessary. The
+    corpus also keeps necessary adherence to one's end apart from non-necessary
+    willing of other things (DEF `90719cb5`; q.19 a.3, navigation only).
+  - For a *necessarily held* favouring, such as self-love, no alternative to it
+    is possible for the bearer. The personal source's will of its own goodness
+    is of this kind, and so is A4's self-favouring if A4 posits it as necessary.
+    Ranking possible alternatives to such a favouring is unavailable to both.
+  - For a *non-necessary* favouring, ranking possible alternatives to it is not
+    excluded by necessary existence alone. Examples are the personal source's
+    willing of other things and a corresponding contingent favouring of other
+    things on A4.
+  - Ranking non-present determinations is available to both (the weak form).
+
+**Does the possible-alternatives test then discriminate?** Checked here
+against the existing records, not assumed: it does not, on the present
+evidence.
+
+- Round 2 defines A4 by its loci, stand-ins and profile, fixed as `better`
+  throughout. It fixes no modal status of the favouring of other things, and
+  nothing in this module types one. A4 can therefore take the personal source's
+  modal profile: necessary self-favouring, and a favouring of other things that
+  is not necessarily held. On that profile, the test returns the same verdict on
+  both sides, for each favouring.
+- A variant of A4 whose favouring of other things is necessarily held would
+  differ in modal profile. The test would then separate modal profiles, not
+  apprehension from its absence.
+- Whether a noncognitive source *can* hold a favouring non-necessarily is the
+  open question. For *giving*, the analogous question is studied in
+  [will-versus-chance](will-versus-chance.md#5-what-discriminates-will-from-chance).
+  There a two-way giving profile at a necessary source is shared by a
+  non-rational chance power, and in that overlay nothing but `Rational`
+  separates them. No mapping from favouring to giving is encoded here, so that
+  finding is cited as the nearest relocation, not applied. Used as a
+  discriminator at `d1fb6414`, the test would need that question settled, and
+  settling it by cognition would presuppose the dispute.
 - *Self-apprehension* (self-knowledge, as in the #1731
   `IntrinsicSelfKnowledge`). The personal account has it by definition and A4
   lacks it by definition. Used as a discriminator, this presupposes the
@@ -6517,7 +6549,7 @@ here.
 | Weak self-application: own favouring over a non-present determination | reduces to the criterion at second order | the same | no; relocates the same bridge |
 | Strong self-application: responsiveness to the second-order standard | on the global standard, no dependence; on the scenario-relative standard, dependence possible (also at a necessary source) | the same | no; parity follows from the structural duplicate |
 | Self-love | yes (q.19 a.3) | the rival's own posit | no |
-| Ranking possible alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
+| Ranking possible alternatives to its own favouring | unavailable for a necessarily held favouring (self-love); not excluded by necessary existence for a non-necessary favouring (willing of other things, DEF `90719cb5`) | the same, for a necessarily held self-favouring and for a favouring of other things not necessarily held; round 2 fixes no modal status | no on the present evidence; it separates modal profiles, and whether a noncognitive source can hold a favouring non-necessarily is open (cf. will-versus-chance §5) |
 | Self-apprehension | yes by definition | no by definition | presupposes the dispute |
 
 ### Same demand, different proposed payments
@@ -6567,6 +6599,11 @@ of that plurality.
 - *Counting self-apprehension as a discriminator.* It presupposes the dispute.
 - *Counting the necessity of self-favouring against A4.* The personal source's
   self-love is necessary too.
+- *Treating every favouring of a necessary source as necessarily held.*
+  Necessary existence alone does not supply it, and the personal source's
+  willing of other things is not necessary (DEF `90719cb5`; Codex P1 on PR
+  #2178). The possible-alternatives row is restricted to necessarily held
+  favourings.
 
 **Standing rival and price.** A4, with no new commitment from this round. Its
 payment for the shared articulation demand is a mind-independent, non-composing
@@ -6595,6 +6632,11 @@ added, discharged or reclassified.
 3. *Explanatory use beyond favouring.* Does the source's relation to its modes do
    work, for example in the truth or intelligibility of creatures, that requires
    the modes to be *for* the source?
+4. *Modal profile of favouring.* Can a noncognitive source hold a favouring of
+   other things non-necessarily, and if so, what separates that from chance? This
+   is the favouring counterpart of the will-versus-chance question for giving.
+   Only a non-question-begging answer would make the possible-alternatives row
+   discriminate.
 
 **Review record.** The independent semantic challenge of
 `ad289e982..8a36e93f0` found three P1s:
@@ -6652,6 +6694,19 @@ table row, the articulation demand, the rejected approaches, the standing rival
 and price, the Lean doc comment and the attempt record are restricted
 accordingly. Registration is now recorded as the same demand on both accounts,
 not a discriminator and not a price of A4. No formal content changed.
+
+A second Codex P1 on PR #2178 (comment 4723136965) found that the
+possible-alternatives bullet and table row excluded ranking possible
+alternatives to a necessary source's *own favouring* in general. Necessary
+existence does not make every favouring necessarily held. The necessity cited
+concerns self-love only, neither self-application definition supplies a modal
+premise, and DEF `90719cb5` keeps necessary adherence to one's end apart from
+non-necessary willing of other things. The bullet, the table row, the rejected
+approaches and the attempt record are restricted to necessarily held favourings,
+for both sides. A check of whether the test then discriminates is added: on the
+present evidence it does not, since round 2 fixes no modal status for A4's
+favouring. A new next test records the open modal-profile question. No formal
+content changed.
 
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 
