@@ -75,7 +75,12 @@ def IntrinsicProfileInvariant (o : Ontic W B) (Has : W → B → D → Prop) (w 
 
 /-- The world-predicate `e` is intrinsic to `g` from `w`: at each accessible world
 at which `g` has exactly its determinations at `w`, `e` agrees with its value at
-`w`. An intrinsic fact about `g` varies only with `g`'s determinations. -/
+`w`. An intrinsic fact about `g` in this sense varies only with `g`'s
+determinations. It is actual-relative supervenience (each accessible world is
+compared with `w` only), not membership in `Has`: it admits every predicate
+constant over the accessible worlds, including necessarily true extrinsic ones,
+and transfers to a narrower notion of intrinsicness only for properties that
+supervene on `g`'s determinations (DEF `f8bd9e72`). -/
 def IntrinsicTo (o : Ontic W B) (Has : W → B → D → Prop) (w : W) (g : B) (e : W → Prop) :
     Prop :=
   ∀ v, o.frame.access w v → (∀ d, Has v g d ↔ Has w g d) → (e v ↔ e w)
@@ -442,7 +447,8 @@ personal case's intrinsic-profile premises.
 
 1. **Cost.** On the account the act is performed at every accessible world and
    does not strictly suffice for the effect (#555's nonnecessitating necessary
-   act); no fact intrinsic to the source discriminates the effect's presence from
+   act); no fact intrinsic to the source (`IntrinsicTo`, actual-relative
+   supervenience on its determinations) discriminates the effect's presence from
    its absence; the act's terminus does discriminate it, and is not intrinsic to
    the source. So no intrinsic fact carries the contrast; the terminus does.
 2. **Real decree under N.** A real decree family that is exclusive at `w`: for any
@@ -514,6 +520,7 @@ account.
    necessitating rule is itself not mirror-invariant.
 6. **Contrast gap for every invariant source.** If a source's intrinsic profile is
    invariant and the mirror image is accessible, no fact intrinsic to the source
+   (`IntrinsicTo`, DEF `f8bd9e72`)
    discriminates any explanandum true at the actual world and false at its
    mirror image (handedness either way).
 7. **An orientation token at a root.** Under `a30c5963`, RootPurity, the

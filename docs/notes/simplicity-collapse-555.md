@@ -324,6 +324,16 @@ alone:
   its absence;
 - the act's terminus does discriminate it, and is **not intrinsic** to the source.
 
+"Intrinsic" here is `IntrinsicTo` (DEF `f8bd9e72`): a world-predicate agrees
+with its value at `w` at every accessible world where the source has exactly its
+actual real determinations. This actual-relative supervenience criterion is not
+membership in `Has`; it admits necessarily true extrinsic predicates and any
+predicate that covaries with the source's profile over the accessible worlds. It
+reaches a narrower metaphysical notion of intrinsicness only for properties that
+supervene on the source's determinations (an open bridge: that `Has` exhausts
+its intrinsic nature). Every "no intrinsic fact" below, and in clause 6 of the
+fork, has this scope.
+
 The certificate ranges over intrinsic facts and the terminus only; it does not
 show that the terminus is the only discriminating fact.
 
