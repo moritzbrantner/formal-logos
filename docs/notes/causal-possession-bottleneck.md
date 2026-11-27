@@ -19,9 +19,23 @@ rule or closure, and it changes no theorem or Challenge outside its own batch.
 `30ca1de` accepted the judgment with qualifications: three P1 and seven P2
 findings. It accepted both original Lean results, the cycle claim, the "no
 price" classification of the rival, and the separation of judgment from
-closure. This version repairs every finding ([§9](#9-review-repairs)) and adds
-the consumer audit ([§6](#6-consumer-audit)). The repaired assertions await the
-challenger's re-check.
+closure. The next version repaired every finding and added the consumer audit
+([§6](#6-consumer-audit)).
+
+A re-check at head `7c483b6a` accepted that version with qualifications: five P1
+and five P2 findings. From the Lean proofs of all 73 consumers it confirmed that
+every direct stage-one God-route use is at esse. It also confirmed that the two
+older arbitrary-respect derivations have siblings, and that MORE_3 and MORE_4 are
+distinct declarations. Its findings were:
+
+- the headline overreached, because stage two reaches arbitrary-respect "more
+  such" through preexistence;
+- the pattern-A certificate was overstated;
+- the first control's comparative was mislabelled as MORE_3;
+- the attack crossed senses.
+
+This version repairs all ten ([§9](#9-review-repairs)). The repaired
+assertions await re-check.
 
 ## 1. Which premise is actually load-bearing
 
@@ -150,9 +164,12 @@ with `distinctCauseGivesOfMoreSuch` (at formal act).
 **`controls`** (statement `84ba508d`). There are two beings (coil, workpiece) and
 two respects (being, and heat read as the threshold quality "being hot").
 
-- With the ordinary comparative, these hold: the formal gap, inclusive
-  possession, the reception premises and the formal bearer. These fail: the
-  inclusive exceeding step, "more such" and formal possession.
+- With a stipulated comparative on which the workpiece is hotter, these hold: the
+  formal gap, inclusive possession, the reception premises and the formal bearer.
+  These fail: the inclusive exceeding step, "more such" and formal possession.
+  This comparative is **not MORE_3**: `OrdinaryComparative` requires both
+  comparands to have the respect formally, and here the coil lacks it. The MORE_3
+  version of this check is in `ordinaryControls`.
 - With an eminent comparative, the package holds at inclusive act, and only the
   formal bearer fails.
 
@@ -166,8 +183,12 @@ having some heat, and having heat at the workpiece's degree. Temperatures are 40
 - The ordinary-comparative gap holds, and the MORE_3 reading of "more such"
   fails.
 - A stipulated MORE_4 reading holds.
-- "Nothing moves except as in act" fails read formally and holds read
-  inclusively.
+- "Nothing moves except as in act" fails read formally at the degree-indexed
+  respect and holds read inclusively. At "having some heat" the coil has heat
+  formally.
+- With MORE_3 as the frame comparative, the package is checked at "having some
+  heat". Inclusive possession, the four reception premises and the formal
+  more-such bearer hold. The exceeding step `7030af77` at inclusive act fails.
 
 **Disclosed artifacts in both controls.** Reception coincides with limitation.
 Being is caused by nothing. The temperatures and the eminent relation are
@@ -224,8 +245,8 @@ of the package that combines one act predicate with a formal more-such bearer.
 | Target | Record | Classification |
 | --- | --- | --- |
 | Formal possession `26632e48` at a degree-indexed respect or "being hot" | Induction | **Kept, established case**, conditional only on CAUSE_2 counting the coil. At "having some heat" the case does not reach it. |
-| `d5a94eb1` on MORE_3 | Induction (`e7db0c0f`, typed `attacks`) | **Kept, established case.** It does not touch MORE_4, the esse instance `cffad050` (the coil causes no being), or Metaphysics II.1's synonymous premise (the coil is no synonymous cause of heat). |
-| `7030af77` at inclusive act with MORE_3 | Induction, through the first control | **Kept** under that pair of readings only. At formal act its antecedent fails for the coil. |
+| The MORE_3 sibling `31b55b01` of "more such" | Induction (`e7db0c0f`, `alternative_to` and typed `attacks`, both on the sibling) | **Kept, established case.** The attack does not target `d5a94eb1`, whose comparative is the primitive MORE_1; no statement identifies MORE_1 with MORE_3. It would reach those consumers of `d5a94eb1` that apply it at an arbitrary perfection with an arbitrary distinct cause, if read with MORE_3: the older `1dff22d0` and `892db443` (with siblings `c201b61a`, `d0c022f8` that do not use `d5a94eb1`) and the Cartesian `62dae664` and `c974d1f0`. It does not reach MORE_4, the esse uses, the cause-of-being uses at any perfection (preexistence, pattern E in §6), or Metaphysics II.1's synonymous premise. |
+| `7030af77` at inclusive act with MORE_3 | Induction, through `ordinaryControls` (MORE_3 as frame comparative, respect "having some heat") | **Kept** under that pair of readings only. At formal act its antecedent fails at the degree-indexed respect. |
 | `f296a694` read formally ("moves only insofar as in act") | The coil moves the workpiece from cold to hot | **Kept** at a degree-indexed respect: the second control checks the structure. By DISAMB-IN-ACT the prima via is then forced onto the uniform inclusive reading. Non-simultaneity must then hold for inclusive act, and the formal-only Metaphysics IX.6 support for it does not carry over. |
 | Inclusive possession `2c0b9bd7`, power determination with an instrument's transient power | A cause that produces r with no power to produce r | **No substantive objection identified.** The Humean view can accept a deflated power ascription. Occasionalism denies creaturely causing and leaves the conditional untouched. |
 | Inclusive possession `2c0b9bd7`, containment by energy | The energy-form reply: the coil's field "contains" the heat as energy | **Restated as an IN_ACT_2 containment reply.** It cannot save `26632e48`, because it is not formal possession of heat. Against `d5a94eb1` it would need r = energy. There the coil's field energy at any moment is far below the workpiece's thermal energy, so "more such" holds only for the whole supply under conserved-quantity bookkeeping. |
@@ -270,89 +291,177 @@ model that the same order does not give it for every cause.
 ## 6. Consumer audit
 
 **Method.** The audit covers every registered argument with `d5a94eb1` as a
-premise and a result. For each, the Lean proof was read to see where the
-hypothesis is applied, following hand-offs to imported lemmas. It also covers
-the three consumers of `2c0b9bd7` and the bearer `c11369aa`.
+premise and a result. For each, the Lean proof was read to find where the
+hypothesis is applied, following hand-offs to imported lemmas. The audit also
+covers the three consumers of `2c0b9bd7` and of the bearer `c11369aa`. The re-check
+at `7c483b6a` read all 73 consumers' proofs independently.
 
-| Pattern | Direct applications | Respect | Cause |
-| --- | --- | --- | --- |
-| A. Maximum or source as cause | `atMostOneMaximeEns` (`ef122ccf`), `godExistsFromMaximeEnsCausingAll` (`678ff65f`), `godMaximalFromCausing` (`482f4ad2`), `AttributesFromEsse.namedSource` (oneFromSource, perfectFromSource, goodFromSource, fromSource), `godHasClassicalAttributes` (`53819d8a`), the identity routes (`c8aa7df3`, `7be49bc0`), `QuartaViaDegreeFork.coverage` (`528ccadd`, through `strictTop`) | esse only | a maximum in being that causes all being |
-| B. Maximum as effect | `godIsSimple` (`c473ec4b`; through it godHasIntellect, godHasWill, godIsInfinite), `maximumHasNoDistinctEsseCause` (`8bbe817d`; through it quartaViaWitness), `fromGodCause` (`0acc8761`), `firstMoverIsFirstBeing` (`f8992ef7`) | esse only | any distinct cause of a maximum's being |
-| C. Any cause at esse | `everywhereAscentOfCause` (`815d22c8`), `groundMoreInEsseOfCause` (`3eafe507`), strength application `74caa472` | esse only | any |
-| D. Arbitrary respect | `nothingMovesExceptInAct` (`892db443`, prima via `f296a694`), `gradesHaveAMaximum` (`1dff22d0`, `6c27657f`), `preexistFromCausalTransfer` (`6b609ddc`, `64498e7e`), `containmentOfStrictComparative` (`62dae664`), `degreeAdequacyOfStrictComparative` (`c974d1f0`), the cycle `9e7de16d` | any r | any distinct cause |
+**Direct applications by pattern.**
 
-The many Catholicism assemblies pass the hypothesis to the stage theorems above
-and inherit their pattern.
+**A. A maximum or source as cause** (respect: esse only; cause: a maximum in being
+that causes all being).
+
+- `atMostOneMaximeEns` (`ef122ccf`)
+- `godExistsFromMaximeEnsCausingAll` (`678ff65f`)
+- `godMaximalFromCausing` (`482f4ad2`)
+- `AttributesFromEsse.namedSource`
+- `godHasClassicalAttributes` (`53819d8a`, first use)
+- the identity uniqueness steps (`c8aa7df3`, `7be49bc0`)
+
+**A+B. Homogeneous-scale fork** (respect: esse only; cause: a maximum as cause,
+and every distinct cause through `causesRaiseDegree`).
+
+- `QuartaViaDegreeFork.coverage` (`528ccadd`, `QuartaViaDegreeFork/Solution.lean`
+  lines 35–37) and through it `strictTop` (`210019ee`).
+- Both sit on `HomogeneousScaleReading`.
+
+**B. A maximum as effect** (respect: esse only; cause: any distinct cause of a
+maximum's being).
+
+- `godIsSimple` (`c473ec4b`)
+- `maximumHasNoDistinctEsseCause` (`8bbe817d`, conclusion `18561596`)
+- `fromGodCause` (`0acc8761`)
+- `firstMoverIsFirstBeing` (`f8992ef7`)
+
+**C. Any cause at esse.**
+
+- `everywhereAscentOfCause` (`815d22c8`)
+- `groundMoreInEsseOfCause` (`3eafe507`)
+- the strength application `74caa472`
+
+**D. Arbitrary respect, arbitrary distinct cause.**
+
+- the older `gradesHaveAMaximum` (`1dff22d0`) and `nothingMovesExceptInAct`
+  (`892db443`), whose siblings `c201b61a` and `d0c022f8` do not use `d5a94eb1`;
+- `containmentOfStrictComparative` (`62dae664`);
+- `degreeAdequacyOfStrictComparative` (`c974d1f0`);
+- the cycle `9e7de16d`.
+
+**E. Arbitrary respect, cause of being as cause** (respect: any r; cause: a cause
+of x's being).
+
+- `preexistFromCausalTransfer` (`6b609ddc`, `PerfectionPreexistence/Solution.lean`
+  line 28). It applies the premise only where c causes x's being (`hTransfer c x r
+  hc hx`).
+
+**Inherited patterns.** The following pass the hypothesis on and inherit the
+pattern of the theorem named.
+
+| Consumers | Inherited from | Pattern |
+| --- | --- | --- |
+| `bc0cff0b` godIsOne; `5ed93bb0` maximeEnsIsGod; `1ac60473` naming; `117cc323` governorIsMaximeEns (via maximeEnsIsGod); `beec1dc1` stageOneViaMaximeEns (via maximeEnsIsGod); `3e86eea5` maximeEnsIsGodViaFullDescription; `661ce61d`, `fd1f7e75` (via maximeEnsIsGodViaFullDescription) | `atMostOneMaximeEns` | A |
+| `210019ee` strictTop | `QuartaViaDegreeFork.coverage` | A+B |
+| `39c30529` firstMoverIsFirstInBeing | `firstMoverIsFirstBeing` | B |
+| godHasIntellect, godHasWill, godIsInfinite; `7366a9b4` attributesFromSeparateProofs | `godIsSimple` | B |
+| `87dd8489` quartaViaWitness | `maximumHasNoDistinctEsseCause` | B |
+| `d8529011` oneFromSource, `1c648123` perfectFromSource, `4c30239f` goodFromSource | `namedSource` | A |
+| `827fa9cd` fromSource | `namedSource` and `godIsSimple` | A and B |
+| `6c6549ae` (local-logic registration) | the local-logic godHasClassicalAttributes | A and B |
+| `51fd6d58`, `79252a71`, `732e38d5`, `1f42ffcd` (godHasClassicalAttributes variants) | the same pair | A and B |
+
+The Catholicism assemblies pass the hypothesis to the stage theorems above.
+
+**Preexistence enters stage two separately.** 62 registered arguments take
+`64498e7e` (preexistence) as a direct premise, about 40 of them on God routes
+(the re-check's count). Among them are:
+
+- `fromGodCause` `0acc8761`, `fromSource` `827fa9cd` and `perfectFromSource`
+  `1c648123`;
+- the godHasClassicalAttributes family and `6c6549ae`;
+- the Dei Filius roots and the Catholicism assemblies.
+
+So stage two is also exposed to pattern E through `64498e7e`. Its registered
+options are:
+
+| Option | Inputs | Exposure |
+| --- | --- | --- |
+| `6b609ddc` | transfer `f8ba2429`, `d5a94eb1` at pattern E, `c11369aa`, excluded middle | E |
+| `e8a3eb51` | transfer `f8ba2429`, cause-of-being possession `d0fc96b7` | none |
+| `400ba1f0` | transfer `f8ba2429`, containment in every cause `634a80b8` | `634a80b8`'s derivation `62dae664` uses `d5a94eb1` at pattern D, which induction on MORE_3 reaches |
+| Direct option | the q.4 a.2 claim `50df1fd8` | none |
+
+All three derivations share unrestricted transfer `f8ba2429`. The 2026-11-18
+assessment in causal-perfection-transfer judged it no stronger than nonuniversal
+transfer `10cd24ed`, which has no positive warrant on file.
 
 **Answers to the audit questions.**
 
-1. **The God-existence and stage-two attribute consumers use "more such" only at
-   esse** (patterns A–C). The arbitrary-r comparative, and with it the ordinary
-   versus eminent problem and the induction case, does not reach them: the coil
-   causes no being. The esse instance `cffad050` would serve them. It has a
-   derivation without arbitrary-r possession (`causeOfBeingMoreInBeing`, from
-   `4ccb319f` and the reception bundle and exceeding step at esse). Several
-   consumers already have such siblings (`5d2b7c6e`, `4d1efe91`); the others
-   (`ef122ccf`, `8bbe817d`, `87dd8489`, `3eafe507`, `815d22c8`, godIsSimple and
-   its dependants) await certification.
-2. **Is the primary as cause enough?** Only for pattern A. There the cause is the
-   maximum that causes all being, so `PrimaryCauseIsMoreSuchReading` at esse
-   would serve. On the attribution order it is certified by `29133b2b`'s first
-   part, given strict primacy and the identification of the maximum with the
-   order's primary.
-   - Pattern B needs more: that any distinct cause of a maximum's being would be
-     more in being than it. That is the claim that a maximum has no distinct
-     cause of its being. The primary-as-cause restriction does not give it.
-   - Pattern C needs the full esse instance.
+1. **The esse restriction.** Every direct stage-one God-route use applies "more
+   such" only at esse (patterns A, A+B, B, C), except the older `1dff22d0` and
+   `892db443`, which have siblings that do not use `d5a94eb1`. Stage two also
+   takes preexistence `64498e7e`, whose `6b609ddc` derivation applies `d5a94eb1` at
+   every perfection with a cause of being as cause (pattern E).
+2. **Is the primary as cause enough?** Not as a lighter load.
+   - For pattern A, `PrimaryCauseIsMoreSuchReading` at esse would serve under the
+     open premises `ApproachToPrimaryReading` at esse and `StrictPrimacyReading`.
+     These are the hypotheses of `29133b2b`'s first part.
+   - But strict primacy (`near x < near p` for every x ≠ p) together with the
+     approach order already makes p more in being than every other being. So
+     every maximum is p, and the uniqueness conclusions follow without any
+     causal premise.
+   - The certificate therefore shifts pattern A's load onto the order model and
+     strict primacy at esse. Both are open, and both carry uniqueness by
+     themselves.
+   - Pattern A+B sits on `HomogeneousScaleReading`, where `29133b2b` does not
+     apply.
+   - Pattern B needs `18561596` (a maximum in being has no distinct cause of its
+     being). Its only registered derivation is `8bbe817d` from `d5a94eb1` at esse,
+     and no independent warrant is recorded for it.
 3. **Formal or inclusive?**
    - `d0c022f8` (prima via) needs only inclusive possession and no comparative.
-   - `c201b61a` (grades maximum) needs inclusive possession, and the bearer only
-     at the initial observed comparison. It does not use the exceeding step, so
+   - `c201b61a` (grades maximum) needs inclusive possession, and the bearer only at
+     the initial observed comparison. It does not use the exceeding step, so
      `moreSuchPackageForcesFormalPossession` does not apply to it.
-   - `892db443` and `1dff22d0` are the legacy arbitrary-r derivations of the
-     same two leaves and have those siblings.
-   - `6b609ddc` (preexistence) and the two Cartesian results use "more such" at
-     arbitrary r with an arbitrary cause of being. On MORE_3 they are refuted by
-     the induction case; on MORE_4 they await its specification.
-4. **Is the observed-grades premise formal?** In `c201b61a` the observed grades
+   - `6b609ddc` is **not refuted by the induction case**: the coil causes no
+     being. Read with MORE_3, it would require every cause of a thing's being to
+     have each of that thing's perfections formally, at a higher measured degree.
+     That conflicts with the route's own account of eminence, since q.4 a.2 places
+     bodily perfections in the first cause only eminently. Read with MORE_4, it is
+     unspecified.
+   - The Cartesian `62dae664` and `c974d1f0` apply it at any respect with any
+     distinct cause. Read with MORE_3, their premise is reached by the case.
+4. **Are the observed grades formal?** In `c201b61a` the observed grades
    ("some things are found more and less good, true, noble") are MORE_1. Their
-   examples (hotter, colder) are ordinary comparatives. Since `c201b61a` takes
-   possession inclusively and never returns to a formal comparative, the
-   induction case is consistent with it. The coil has heat virtually, is exceeded
-   by the workpiece, and has its heat from a further cause. Whether the routes
-   use `6c27657f` only at esse is unaudited.
-5. **Stage-two possession bridges.** No stage-two consumer of `d5a94eb1` applies
-   it outside esse. The question whether GOD_4 has intellect formally or eminently
-   lies in other premises (CartesianAdequacy's asymmetric containment and
-   exemplar bridges), outside this family.
+   examples (hotter, colder) are ordinary comparatives. Since it takes possession
+   inclusively and never returns to a formal comparative, the induction case is
+   consistent with it. Whether the routes use `6c27657f` only at esse is
+   unaudited.
+5. **Stage-two possession.** Stage two takes arbitrary-respect possession through
+   preexistence. Whether GOD_4 has intellect formally or eminently also lies in
+   other premises (CartesianAdequacy's asymmetric containment and exemplar
+   bridges).
 
-## 7. Provisional judgment (2026-11-27, repaired after challenge)
+## 7. Provisional judgment (2026-11-27, second repair)
 
 1. **Formal possession is contradicted by an actual case** at a degree-indexed
    respect or the threshold quality "being hot", under the recorded meaning of
    CAUSE_2. At the respect "having some heat" the case does not reach it. It is
-   not a candidate reading for the routes.
+   not a candidate reading for the routes, and the formal reading of `f296a694`
+   fails at the same respect.
 2. **Inclusive possession `2c0b9bd7` is strong prima facie but light.**
    - On the power determination it is near-analytic, with no substantive
      objection identified. This holds if power includes an instrument's transient
      power and "in a higher way" carries no comparative content.
    - Restricted to a principal agent's own power, the instrument objection stays
      kept conditionally.
-3. **The arbitrary-r comparative package carries less of the God routes' load
-   than the first draft said.**
-   - On MORE_3, "more such" `d5a94eb1` and the inclusive exceeding step are
-     contradicted by the induction case. That is now a typed `attacks`.
-   - On MORE_4 no specification at arbitrary r exists.
-   - But the audit shows that the God-existence and stage-two consumers use
-     "more such" only at esse. **For those routes the load is the esse
-     comparative**: `cffad050`, its exceeding step at esse, and that step's
-     derivation from the degree-calibration premises. Pattern-A uses are
-     certified on the attribution order with the primary as cause (`29133b2b`).
-     Pattern-B uses need the open claim that a maximum in being has no distinct
-     cause of its being.
-   - The arbitrary-r package stays load-bearing only for preexistence
-     (`6b609ddc`), the Cartesian containment results, and the legacy derivations
-     that already have siblings.
+3. **Where the load sits.**
+   - **Stage one** uses "more such" directly only at esse, apart from older
+     derivations that have siblings. Its load is the esse comparative and what
+     replaces it:
+     - for pattern A, the order model at esse plus strict primacy, which carry
+       uniqueness by themselves;
+     - for pattern A+B, the homogeneous-scale fork;
+     - for pattern B, `18561596`, which has no independent warrant;
+     - for patterns B and C, `cffad050` with its exceeding step at esse and the
+       calibration premises behind it.
+   - **Stage two** also takes preexistence `64498e7e`. Its derivations share
+     unrestricted transfer `f8ba2429`, and one of them (`6b609ddc`) uses "more
+     such" at every perfection with a cause of being as cause. The induction case
+     does not reach that use. Read with MORE_3 it conflicts with the route's own
+     eminence account; read with MORE_4 it is unspecified.
+   - On MORE_3, the sibling `31b55b01` and the inclusive exceeding step are
+     contradicted by the case. The typed attack targets the sibling, not
+     `d5a94eb1`.
 4. **The mixed reading is excluded.** It combines eminent possession with a
    formal bearer and the package.
 5. **`376d6a5a` is unchanged.**
@@ -362,56 +471,86 @@ Nothing is established, defeated in the frontier sense, or closed.
 
 **Revision conditions.**
 
-- An independent specification of MORE_4 at arbitrary r. Its form would be a
-  `Surpasses` that makes `7030af77` and `c11369aa` jointly true at inclusive act
-  without defining eminence as the power to cause.
+- An independent specification of MORE_4 at arbitrary r, or at r with a cause of
+  being as cause (pattern E).
+- Independent warrant for `18561596`, or for the order model at esse plus strict
+  primacy.
 - A principled CAUSE_2 restriction excluding coil-type causes.
-- A demonstration that the esse comparative fails for some maximum's distinct
-  cause of being. That would reach pattern B.
+- Positive warrant for nonuniversal transfer `10cd24ed`, which would strengthen
+  `f8ba2429` and with it every derivation of preexistence.
 - A case of production without power.
 
 ## 8. Shared-warrant map
 
 Count each item once.
 
-- `376d6a5a`, `2c0b9bd7` and `d0fc96b7` are one principle at three scopes.
-- `2c0b9bd7` and `d5a94eb1` derive each other. The cycle adds no warrant; its
-  external inputs are the stating claim of `d5a94eb1` and whatever warrants
-  `2c0b9bd7` directly.
-- The prima via (`f296a694` via `d0c022f8`), the grades maximum (`6c27657f` via
-  `c201b61a`) and the maximal-cause routes share the family.
-- **For the God routes the shared item is the esse comparative**, and the eminent
-  comparative and the degree calibration are one missing specification. The
-  exceeding step `7030af77` is derived (argument `1fbc8de7`) from the calibration
-  premises `a961a13e`, `f6677834` and `9eaa3b6e`. The ranking therefore merges the
-  calibration family with the eminent-comparative gap.
-- `a9036c3c` and `d0b76fb9` are derived from the participation and dependence
-  families (arguments `5e42f97e`, `29851dcb`). The cases here bear on neither.
+- **One principle.** `376d6a5a`, `2c0b9bd7` and `d0fc96b7` are one principle at
+  three scopes.
+- **One stage-two load.** Preexistence `64498e7e` and cause-of-being possession
+  `d0fc96b7` are one load under that principle: `e8a3eb51` derives the former
+  from the latter with transfer `f8ba2429`. All registered derivations of
+  `64498e7e` share `f8ba2429`.
+- **The cycle.** `2c0b9bd7` and `d5a94eb1` derive each other. The cycle adds no
+  warrant; its external inputs are the stating claim of `d5a94eb1` and whatever
+  warrants `2c0b9bd7` directly.
+- **Stage one.** The prima via (`f296a694` via `d0c022f8`), the grades maximum
+  (`6c27657f` via `c201b61a`) and the maximal-cause routes share the family. For
+  their uses of "more such", the shared item is the esse comparative. The eminent
+  comparative and the degree calibration are one missing specification: the
+  exceeding step `7030af77` is derived (argument `1fbc8de7`) from `a961a13e`,
+  `f6677834` and `9eaa3b6e`.
+- **The pattern-A substitute is a separate premise.** The order model at esse
+  plus strict primacy carries the uniqueness conclusions by itself. It is not
+  another presentation of the esse comparative.
+- **Participation and dependence.** `a9036c3c` and `d0b76fb9` are derived from the
+  participation and dependence families (arguments `5e42f97e`, `29851dcb`). The
+  cases here bear on neither.
 
 ## 9. Review repairs
 
+**First challenge (head `30ca1de`).**
+
 | Finding | Repair |
 | --- | --- |
-| P1-1 respect | The respect is fixed in `25b67649`, §2 and §4, including the hydroelectric step. The "at least as such" consequence is stated. With "having some heat", the case reaches the family only through MORE_3. The new control checks both respects. |
-| P1-2 Rumford | Restricted to the remote drive under the stated condition, with no independent weight. |
-| P1-3 eminent comparative | `cdb0de59` and DISAMB-ORDER-OF-BEING are linked from `97a338be` and `84ba508d`. The wording now follows `29133b2b`. `705f28fe` is engaged in §5. The primary-as-cause question is answered in §6. |
-| P2-1 energy reply | In the §4 table, with its classification. |
-| P2-2 "in a higher way" | Stated in §2 and §5. |
-| P2-3 ranking | Union-of-routes counts per family. Grades-ascent row (`5cda1946`, `f29a6b53`) added. Calibration merged with the eminent comparative. |
-| P2-4 wording | "Appears in the expanded derivations; direct options remain." |
-| P2-5 `f296a694` | In §4, §6 and the second control. |
-| P2-6 induction basis | Stated as standard engineering practice with typical temperatures. |
-| P2-7 reviewed revision | The attempt's current assessment names the challenged head and this repair. |
+| P1-1 respect | The respect is fixed in `25b67649`, §2 and §4, including the hydroelectric step. The "at least as such" consequence is stated. |
+| P1-2 Rumford | Restricted to the remote drive, with no independent weight. |
+| P1-3 eminent comparative | `cdb0de59` and DISAMB-ORDER-OF-BEING are linked. The wording follows `29133b2b`. `705f28fe` is engaged in §5. |
+| P2-1 to P2-7 | Energy reply classified; "in a higher way" located; ranking union counts, grades-ascent row and calibration merged; wording "appears in the expanded derivations"; `f296a694` covered; induction basis stated; attempt revision recorded. |
+
+**Re-check (head `7c483b6a`).**
+
+| Finding | Repair |
+| --- | --- |
+| P1-1 preexistence | Pattern E added. The three derivations and the direct option of `64498e7e` are recorded. The headline is restated for stage one and stage two (§6, §7). |
+| P1-2 `6b609ddc` | No longer called refuted. It is reclassified: on MORE_3 it conflicts with the route's eminence account; on MORE_4 it is unspecified (§6 answer 3). |
+| P1-3 pattern-A certificate | It now "would serve under the open premises ApproachToPrimary at esse and StrictPrimacy; strict primacy already entails the uniqueness conclusions". `528ccadd` and `210019ee` moved to A+B on the homogeneous scale. |
+| P1-4 first control | Its comparative is relabelled as stipulated workpiece-hotter, not MORE_3, in Lean, statement, argument and relation notes. `ordinaryControls` now checks the MORE_3 package: possession, reception and the formal bearer hold, and the exceeding step fails. |
+| P1-5 attack | Retargeted to the MORE_3 sibling `31b55b01`. The relevance clause names the consumers it would reach (`1dff22d0`, `892db443`, `62dae664`, `c974d1f0`). The degree-indexed control's "more such" test is retargeted to the sibling too. |
+| P2-1 "only at esse" | Qualified by the older derivations with siblings, here, in the spine-map row and in the attempt. |
+| P2-2 respect of `f296a694` | Stated in relation `17658e46`, in §3 and §4, and in the attempt. |
+| P2-3 pattern B | Linked to `18561596`, which has no independent warrant. |
+| P2-4 review state | The attempt's current assessment is set to unreviewed and names the re-check head `7c483b6a`. |
+| P2-5 inheritance | Every consumer is covered in §6, directly or by inheritance. |
 
 ## 10. Next discriminating test
 
-The audit moves the God routes' question to the esse comparative:
+The coordinator proposed preexistence `64498e7e` together with strict primacy and
+uniqueness at esse as the next checkpoint. **Confirmed, split into two
+checkpoints**, because they rest on different principles:
 
-1. Certify esse siblings for the pattern-A and pattern-B consumers, so that the
-   routes consume `cffad050`, or `PrimaryCauseIsMoreSuchReading` at esse for
-   pattern A, in place of `d5a94eb1`. The `d5a94eb1` leaf then leaves those
-   routes.
-2. Assess the warrant of pattern B's claim, that no distinct cause of a
-   maximum's being fails to exceed it in being. Assess it together with the
-   degree-calibration family at esse (`a961a13e`, `f6677834`, `9eaa3b6e`), which
-   is the next ranked bottleneck on this branch of the graph.
+1. **Preexistence `64498e7e`** (stage two). This means:
+   - assessing its direct option on the q.4 a.2 claim `50df1fd8`;
+   - assessing the transfer premise `f8ba2429` that all three derivations share,
+     where the open question is nonuniversal transfer `10cd24ed`;
+   - the pattern-E use of "more such" with a cause of being as cause.
+
+   It is the larger exposure, about 40 God-route arguments, so it goes first.
+2. **The esse comparative** (stage one). This means:
+   - the order model at esse plus strict primacy, which carries uniqueness for
+     pattern A;
+   - `18561596` for pattern B;
+   - the degree-calibration premises behind `7030af77` at esse.
+
+Certifying esse siblings for the remaining A–C consumers is routine formal
+follow-up for either checkpoint. It would take the `d5a94eb1` leaf off those
+stage-one routes.

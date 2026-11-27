@@ -249,8 +249,8 @@ to be one missing specification.)
 
 | Family (members) | GOD_4 routes (of 20) | Catholicism routes (of 28) | Kind |
 | --- | --- | --- | --- |
-| Causal possession: `376d6a5a`, `2c0b9bd7`, `d0fc96b7`, with `d5a94eb1`, `c11369aa` and the reception inputs `cdb79aa6`, `39a4c28c` | 16 | 28 | substantive; selected first ([assessment](causal-possession-bottleneck.md)); the God-existence and stage-two consumers use "more such" only at esse |
-| Degree calibration and the eminent comparative: `98755509`, `ac72bbfe`, `ed766869`, `9eaa3b6e`, `e433b6f5`, `f6677834`, `a961a13e`, `fd2c8710` | 18 | 28 | mixed: representation calibrations plus the substantive `fd2c8710`; carries the exceeding step `7030af77` and with it the esse comparative that the possession assessment locates as the God routes' load |
+| Causal possession: `376d6a5a`, `2c0b9bd7`, `d0fc96b7`, with `d5a94eb1`, `c11369aa` and the reception inputs `cdb79aa6`, `39a4c28c` | 16 | 28 | substantive; selected first ([assessment](causal-possession-bottleneck.md)); direct stage-one God-route uses of "more such" are only at esse (except the older `1dff22d0` and `892db443`, which have siblings `c201b61a` and `d0c022f8`); stage two also takes preexistence `64498e7e`, whose derivation `6b609ddc` uses it at every perfection with a cause of being as cause |
+| Degree calibration and the eminent comparative: `98755509`, `ac72bbfe`, `ed766869`, `9eaa3b6e`, `e433b6f5`, `f6677834`, `a961a13e`, `fd2c8710` | 18 | 28 | mixed: representation calibrations plus the substantive `fd2c8710`; carries the exceeding step `7030af77` and with it the esse comparative that the possession assessment locates as stage one's load |
 | Priority and existential dependence: `47aff057`, `c0d99549`, `e0088de9`, `57c5ed67`, `2e248016`, `2068f91c` | 18 | 28 | substantive; `47aff057` assessed 2026-11-18 ("sound on priority in being"), next test a respect split of SIMPLY_PRIOR_1 |
 | Composition: `86f10ec3`, `6b80cfe4`, `58445bd6`, `fbee7f15`, `b67c6bb9`, `cc0f7879`, `f5db1796` | 16 | 28 | substantive (`86f10ec3`, `fbee7f15`); `6b80cfe4`, `58445bd6` graded strong or moderate in modal-spine |
 | Productive path and ledger: `14539ae8`, `4c32ba60`, `abceb0a7`, `00719dce`, `9968af58`, `88b2caf5`, `dc619ad6` | 16 | 27 | substantive, on the productive-history routes |
@@ -287,11 +287,16 @@ unregistered fork", modal-spine). It appears in the expanded derivations of all
 independent ways (motion, grades, causal maximum). Its high count partly
 reflects strength-order expansion; see the
 [assessment, §1](causal-possession-bottleneck.md#1-which-premise-is-actually-load-bearing).
-The assessment's consumer audit moves the God routes' question to the esse
-comparative, so the next target on this branch is the degree-calibration and
-eminent-comparative family at esse, together with the claim that a maximum in
-being has no distinct cause of its being. The priority family (respect split of
-SIMPLY_PRIOR_1) and composition (`86f10ec3`, `fbee7f15`) follow.
+The assessment's consumer audit splits the follow-up into two targets:
+
+1. Preexistence `64498e7e` for stage two, with the transfer premise
+   `f8ba2429` that all its derivations share.
+2. The esse comparative for stage one: the order model at esse plus strict
+   primacy, the claim `18561596` that a maximum in being has no distinct cause
+   of its being, and the degree-calibration premises at esse.
+
+The priority family (respect split of SIMPLY_PRIOR_1) and composition
+(`86f10ec3`, `fbee7f15`) follow.
 
 ## Research attempts citing this note
 
