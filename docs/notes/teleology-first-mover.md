@@ -1397,13 +1397,20 @@ favouring only, not measures or power. Whether that determination is free of
 reception and of a ceiling is conditional on the Investigation 4 hook below.
 
 A profile defined as tracking D meets the end-content reading of "because of
-its goodness" (BECAUSE_OF_GOODNESS_1) by construction. A physical proxy aligned
+its goodness" (BECAUSE_OF_GOODNESS_1) for a contrast given a variation witness,
+a scenario where D-realization no longer ranks it (the table's `reversal`).
+Without one, a D-tracking profile is fixed and fails that reading. A physical proxy aligned
 with D fails that reading at the recipient-relative reversal. Whether the rival's
 source is a D-tracker or a proxy is interpretive. The rival also fails the
 controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a fixed
-preference for D does. That verdict discriminates only if variation of goodness
-at fixed D-realization is admitted. Such variation is counterpossible if
-goodness is fixed by D-realization, and without it every profile fails reading 2.
+preference for D does. The rival's failure is unconditional, since its favouring
+factors through D-realization. The verdict discriminates only where some
+good-tracking profile passes, which needs goodness to vary within a
+D-realization class for the contrast in question. For a contrast whose
+betterness is fixed by the candidates' contents (c over z), that needs a
+counterpossible scenario. Within a D-class it need not (c over d, `cBetter`
+against `actual`). Only if betterness factors through D-realization does every
+profile fail reading 2.
 
 As typed, what apprehension avoids, a good-general profile also avoids: its
 favouring follows betterness, and it carries no content determination. Such a

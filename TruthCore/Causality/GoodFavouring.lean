@@ -62,10 +62,12 @@ Every model below is a finite structural surrogate. It witnesses only the stated
 formal interpretation, never a metaphysical possibility. Which philosophical
 account a profile represents (rational exercise, good-sensitive propensity,
 intrinsic generative finality, chance) is an interpretive assignment, not typed;
-no intellect, apprehension, chance measure or simplicity is typed. Scenarios
-that vary the goodness standard while D-realization is fixed are counterpossible
-if goodness facts are necessary; law 4 of `GoodDependenceLaws` states what
-follows without them.
+no intellect, apprehension, chance measure or simplicity is typed. A scenario
+that varies the goodness standard with the candidates' whole content fixed
+(`valueless`) is counterpossible if goodness facts are fixed by content; one that
+varies it through other content within a D-realization class (`cBetter` against
+`actual`) need not be. Law 4 of `GoodDependenceLaws` states what follows when
+betterness factors through the held feature.
 -/
 
 @[expose] public section
