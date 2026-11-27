@@ -21,6 +21,7 @@ public import TruthCore.Causality.ActualityImportControls
 public import TruthCore.Causality.AncestorIndividuation
 public import TruthCore.Causality.AppetiteAppraisal
 public import TruthCore.Causality.AppetitePowerExercise
+public import TruthCore.Causality.AppetiteStandard
 public import TruthCore.Causality.AristotelianCauseModes
 public import TruthCore.Causality.AristotelianRivalRefutations
 public import TruthCore.Causality.AtomisticCausalSource
