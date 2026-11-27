@@ -1,0 +1,10 @@
+{
+  "id": "fadd1d43-5497-4ef0-8bc1-a4986fbd9a0c",
+  "label": "Test by GiverIndexedApplication.controls (85eeb70c)",
+  "subject_kind": "result",
+  "subject_id": "a587f218-82d7-4080-b528-f6bc650cdf85",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "85eeb70c-c7c3-4e4f-a645-4ecbb987b3ff",
+  "note": "In profile true, the populated four-role model assigns both incoming givers the final esse edge to the recipient. Its caused-as-caused and binary per se composition premises hold together. Excluded middle remains an explicit input to the derivation."
+}

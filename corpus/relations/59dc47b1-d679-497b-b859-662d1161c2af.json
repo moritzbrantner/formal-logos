@@ -1,0 +1,10 @@
+{
+  "id": "59dc47b1-d679-497b-b859-662d1161c2af",
+  "label": "Test by WitnessLocalTeleology.controls (658814de)",
+  "subject_kind": "result",
+  "subject_id": "f9c0f1e4-7540-44af-a692-107f65d5ecd2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "658814de-ffeb-5824-afdd-2797e5cdad42",
+  "note": "Omit the universal regular-best observation. In strict, the regular predicate holds only for b0, leaving body b1 without a regularly attained best end. The other six global clauses retain the base assignment, with the clauses triggered by regularity restricted to b0."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "45028223-50e6-4983-bdeb-cbbfad542978",
+  "label": "Test by ToleranceOriginRival.controls (1b1462e6)",
+  "subject_kind": "result",
+  "subject_id": "79f66cc6-6a7a-4259-b672-20df29b3ed0c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b1462e6-c285-448c-87e2-3053bc05a341",
+  "note": "Omit Euclidean access at actual on the reflexive symmetric offset frame. Minus and plus are both accessible there but cannot access one another. The history at plus has a contingent-free moment before a contingent concrete bearer appears, and the remaining arrival premises hold. The sole actual concretum is absent at minus."
+}

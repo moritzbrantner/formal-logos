@@ -9,7 +9,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions. Matched individuation continuation: exact provenance excludes the backup candidate, making preservation vacuous in the fixed three-world profile. Role occupancy admits it and the closest-absence selector omits the resulting contrast despite selected loss and accessible realization. Assigning the far output the original producer’s provenance preserves the omission even under exact origin. The typed origin case uses the prior witness theorem to derive model-relative modal exclusion.",
+  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions. Matched individuation continuation: exact provenance excludes the backup candidate, making preservation vacuous in the fixed three-world profile. Role occupancy admits it and the closest-absence selector omits the resulting contrast despite selected loss and accessible realization. Assigning the far output the original producer’s provenance preserves the omission even under exact origin. The typed origin case uses the prior witness theorem to derive model-relative modal exclusion.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 19c36016 tests 06047f4c. With skipEmptyWorld at actual, the accessible near world is excluded although the supplied agent is absent there. Neither bearer exists at near, so removing it loses no effect-present source-absence witness. The weaker preservation premise holds while full coverage fails.",
   "blocker": "OPEN: warrant a same-bearer criterion for a selected sustaining dependence edge and justify which accessible source-absence histories realize genuine contrasts. The dependence-to-strict-ground map still needs an independently interpreted existence-fact theory and its oriented edges.",
   "evidence": [
     "b8c1cfb7-c820-45c2-a102-cb26633c6bf8",
@@ -52,6 +52,13 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2093"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
     }
   ],
   "current_assessment": {

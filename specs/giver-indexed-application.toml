@@ -77,3 +77,43 @@ object_kind = "statement"
 object_id = "7648194d-042b-495d-a098-ce906bdc7005"
 verification_result_id = "Restrict actual esse composition to a following PER_SE_5 link"
 note = "The unrestricted law gives the restricted law on the same profile for any binary classification by dropping its extra guards. Under the separately listed caused-as-caused bridge and equality split, the reverse route also holds. No independent warrant for the full law is claimed from this projection."
+
+[[relation]]
+id = "e80e5048-7c26-40db-890f-de6c08af49bb"
+label = "Test by GiverIndexedApplication.controls (9f2abd14)"
+subject_kind = "result"
+subject_id = "a587f218-82d7-4080-b528-f6bc650cdf85"
+predicate = "tests"
+object_kind = "argument"
+object_id = "9f2abd14-bb9a-4a9b-a394-3604ada5555f"
+note = "In profile true, all four roles are in act in esse. Source and supporter each give esse to the producer, apply it in its production for the recipient, and give esse to the recipient. The indexed credit and every-giver application clauses hold jointly."
+
+[[relation]]
+id = "77030226-6696-4ba1-bb22-a313a21e0f17"
+label = "Test by GiverIndexedApplication.controls (d851dbc6)"
+subject_kind = "result"
+subject_id = "a587f218-82d7-4080-b528-f6bc650cdf85"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d851dbc6-c30f-4fc3-bf41-88fbbd780786"
+note = "Omit every-giver application. In profile false both source and supporter give esse to the producer, but only the supporter applies it to the recipient. Indexed credit holds for that application and the per se composition demanded of the source fails."
+
+[[relation]]
+id = "06770327-98ee-4974-92fb-e83ddafdc5ac"
+label = "Test by GiverIndexedApplication.controls (7648194d)"
+subject_kind = "result"
+subject_id = "a587f218-82d7-4080-b528-f6bc650cdf85"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7648194d-042b-495d-a098-ce906bdc7005"
+note = "Omit the binary per se composition clause. In profile false the caused-as-caused premise holds and the producer's link to the recipient is marked per se. The source gives esse to the producer and has no edge to the recipient, so full composition fails. The derivation keeps its explicit excluded-middle input."
+
+[[relation]]
+id = "7a851bfd-feef-41be-a46a-a9bb04cad33c"
+label = "Test by GiverIndexedApplication.controls (85eeb70c)"
+subject_kind = "result"
+subject_id = "a587f218-82d7-4080-b528-f6bc650cdf85"
+predicate = "tests"
+object_kind = "argument"
+object_id = "85eeb70c-c7c3-4e4f-a645-4ecbb987b3ff"
+note = "In profile true, the populated four-role model assigns both incoming givers the final esse edge to the recipient. Its caused-as-caused and binary per se composition premises hold together. Excluded middle remains an explicit input to the derivation."

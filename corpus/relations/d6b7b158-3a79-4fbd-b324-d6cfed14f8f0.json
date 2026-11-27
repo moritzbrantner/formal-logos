@@ -1,0 +1,10 @@
+{
+  "id": "d6b7b158-3a79-4fbd-b324-d6cfed14f8f0",
+  "label": "Test by SubjectFocalRoles.controls (2fa04c4f)",
+  "subject_kind": "result",
+  "subject_id": "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2fa04c4f-6390-4ae1-afba-0800d3b0765c",
+  "note": "Omit the common-center premise for subject0. Under split, the second accident inheres in subject1 and the first in subject0. Both selected creatures are secondary and receive productive causation from their respective subjects, but subject0 does not cause the second accident."
+}

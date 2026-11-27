@@ -1,0 +1,10 @@
+{
+  "id": "a8622164-46e2-4d83-8cac-731693e0167d",
+  "label": "Test by MetricGrimReaper.controls (0158110b)",
+  "subject_kind": "result",
+  "subject_id": "83fd4e6f-e390-4741-bce8-015154e6b5be",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0158110b-12b7-402e-ae1f-0788a8dbfedc",
+  "note": "In openBelow, accessible true is populated by contingent concreta on the positive reals. The real-valued clock is bounded below by zero, while the earlier moments below any populated time have no first moment. This separates the stronger begun-past claim from metric finitude."
+}
