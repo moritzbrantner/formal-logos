@@ -23,7 +23,8 @@
       "provider": "anthropic",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2177"
     }
   ],
   "current_assessment": {
@@ -40,8 +41,8 @@
     "note": "docs/notes/causal-perfection-transfer.md#when-is-a-restriction-of-content-a-limitation-the-purity-premises-under-one-criterion-2026-11-27-provisional-2145",
     "reviewed_revision": "3a081ef06a30c6f7606eb25209feb92ad187b041",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Branch research/premise-purity, result da9f2d3c (focused Lean build, bind-check, Comparator and NanoDa passed locally). Independent semantic challenge of c0f1e0177 (delivery 0221583ed): Lean accepted; eight P1 and six P2 prose findings, repaired at cc951fe09. Targeted re-check of 3a081ef06: all fourteen fixed; one new P1 (per-bearer standard applied at different levels) and two P2 (nominal sense marker; lane E cited by branch) fixed in the following commit. Accepted as qualified at 3a081ef06; the final wording fix was made afterwards.",
+    "publication": "published",
+    "evidence": "Branch research/premise-purity, result da9f2d3c (focused Lean build, bind-check, Comparator and NanoDa passed locally). Independent semantic challenge of c0f1e0177 (delivery 0221583ed): Lean accepted; eight P1 and six P2 prose findings, repaired at cc951fe09. Targeted re-check of 3a081ef06: all fourteen fixed; one new P1 (per-bearer standard applied at different levels) and two P2 (nominal sense marker; lane E cited by branch) fixed in the following commit. Accepted as qualified at 3a081ef06; the final wording fix was made afterwards. Published as draft PR #2177.",
     "supersedes": "none"
   }
 }
