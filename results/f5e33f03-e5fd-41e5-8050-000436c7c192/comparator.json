@@ -5,6 +5,10 @@
     "TruthCore.Results.Causality.BegunOrHomogeneousGiving.concurrentOfBegunOrHomogeneous",
     "TruthCore.Results.Causality.BegunOrHomogeneousGiving.controls"
   ],
-  "permitted_axioms": [],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
   "enable_nanoda": true
 }
