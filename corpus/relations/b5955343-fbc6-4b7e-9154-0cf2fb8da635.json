@@ -1,0 +1,10 @@
+{
+  "id": "b5955343-fbc6-4b7e-9154-0cf2fb8da635",
+  "label": "Test by SimplicityCollapse.branchCosts (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "32a911e0-6d7f-55da-a631-7042f15d3208",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the supplied target at world 0 in necessitarian. The admitted source fact holds throughout the accessible worlds and strictly suffices for that target. The target also holds throughout those worlds, making the contingency premise fail for that same fact."
+}

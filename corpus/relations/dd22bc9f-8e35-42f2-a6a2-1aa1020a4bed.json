@@ -1,0 +1,10 @@
+{
+  "id": "dd22bc9f-8e35-42f2-a6a2-1aa1020a4bed",
+  "label": "Test by AccessibilityComponents.certificate (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "36c29911-90b2-5f2a-927c-28503869ae5f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "The Bool order frame is reflexive and transitive. False reaches true but true cannot return to false. The two worlds share a weak component and have distinct strong components, showing the role of the symmetry premise in the component identification."
+}

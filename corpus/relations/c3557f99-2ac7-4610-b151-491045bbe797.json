@@ -1,0 +1,10 @@
+{
+  "id": "c3557f99-2ac7-4610-b151-491045bbe797",
+  "label": "Test by ScopeBoundary.checks (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "0c3e85d3-c3ae-52e5-b5bc-25e0997e392b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "Omit symmetry from backwards collapse propagation. On branching, false sees the terminal world true, where all world predicates are necessary or impossible. True cannot access false. The full-predicate collapse holds at the accessible witness and fails at false despite reflexivity."
+}
