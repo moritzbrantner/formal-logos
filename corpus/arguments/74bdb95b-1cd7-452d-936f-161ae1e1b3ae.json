@@ -1,0 +1,17 @@
+{
+  "id": "74bdb95b-1cd7-452d-936f-161ae1e1b3ae",
+  "label": "The proper scope of the selected fusion calibration",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d38fb464-f9f2-4c18-8d0f-3606b180a732",
+  "inference_ids": [
+    "013f3878-72e2-4f8b-8abb-032ab75c78d6"
+  ],
+  "meaning": "All actual candidates are not required to be concrete. In the fixed order, only false lies under the chosen sum false, and no candidate is a cause. The necessary actual candidate false is concrete and true exists at the actual world without being concrete. This checks strictness of the calibration alone, separately from the fusion and causal assumptions.",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e"
+  ]
+}

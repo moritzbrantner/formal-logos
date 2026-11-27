@@ -1,0 +1,9 @@
+{
+  "id": "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+  "label": "Concreteness of necessary actual parts in the selected fusion scope",
+  "term": "Concreteness of necessary actual parts in the selected fusion scope",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.NecessarySelectedFusionPartsConcreteAt",
+  "definition": "Every p that exists at w, satisfies NecessaryAt from w, and lies in the selected fusion part scope satisfies m.concrete.",
+  "basis": "stipulative",
+  "note": "This explicit calibration allows other actual bearers, and nonnecessary parts, to be abstract. It expresses CONCRETE_6 at the supplied Profile and leaves the Ontic and world fixed."
+}

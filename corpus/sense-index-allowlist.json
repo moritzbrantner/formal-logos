@@ -292,21 +292,12 @@
     },
     "ded82995-7a83-590c-8a53-97dac2bd9ac7": {
       "ATEMPORAL_CAUSE_IN_ESSE": [
-        "00e564e2-7170-44b7-a88d-076378ad675b",
         "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
         "8ea914b9-567f-4714-802f-f3ad639b890f"
       ],
       "CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON": [
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
-      ],
-      "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL": [
-        "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-        "b5a882ce-e70c-46e1-8e90-9843bcdacf6f"
-      ],
-      "ORDINARY_ACTUAL_CAUSATION_VERSUS_A_DIRECT": [
-        "19120dc5-dfcb-4486-9664-9f5d7ae96bc0",
-        "614ea46e-6856-4c87-8cba-3cbd2e6f2d52"
       ],
       "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY": [
         "2e064a7b-b29f-4f0b-8978-782674012d86",
@@ -1842,22 +1833,16 @@
     "d026a672-1ec0-53b2-9f0f-729470fe897a": {
       "CONCRETE_AND_ABSTRACT": [
         "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae",
         "c0fdbd00-6e0b-44e5-8a53-faa55a21a032"
       ]
     },
     "4a8193b0-311b-575a-90ee-a20838661f09": {
       "CONCRETE_AND_ABSTRACT": [
         "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae",
         "c0fdbd00-6e0b-44e5-8a53-faa55a21a032"
       ]
     },
     "25ce9863-88ad-53e6-9d11-e3c13b937102": {
-      "CONCRETE_AND_ABSTRACT": [
-        "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae"
-      ],
       "POWER_IMPLIES_CONCRETE_VERSUS_A_CAPACITY": [
         "9b211722-eea4-4c93-811f-8dd5075fefba",
         "e8024d6d-5fe3-45d2-97cc-a56410adf39f"
@@ -1873,18 +1858,6 @@
       "POWER_IMPLIES_CONCRETE_VERSUS_A_CAPACITY": [
         "9b211722-eea4-4c93-811f-8dd5075fefba",
         "e8024d6d-5fe3-45d2-97cc-a56410adf39f"
-      ]
-    },
-    "5ca2c27e-7590-57b8-b49b-c20bf195e276": {
-      "ACTUAL_FUSION_BARE_NECESSARY_EXISTENCE": [
-        "728b4876-f418-46fa-8d0c-57aa3ea29454",
-        "95a3d30d-c4fc-43e8-ab4a-66a0cfd1a172",
-        "c851427f-2953-45c7-993a-aa9a58f7a665"
-      ],
-      "NO_NECESSARY_PARTS_ORDINARY_CONTINGENCY_SELECTED": [
-        "50aed763-e509-408b-b274-de3056b72174",
-        "85bbb43c-0bb3-454c-8a46-11d1de4808c8",
-        "b4ffd228-af72-4f53-9f37-bfad5960dff8"
       ]
     },
     "da0a6376-a3eb-5698-b126-b9881a16240f": {
@@ -1923,18 +1896,6 @@
         "b11d7317-49bb-4c03-b1aa-fefada6943ff"
       ]
     },
-    "bf5f323d-dff0-5440-badd-f5d1afcae503": {
-      "CONCRETE_AND_ABSTRACT": [
-        "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae"
-      ]
-    },
-    "5ed36963-baa4-5c93-bd4e-e934dc3ebbf5": {
-      "CONCRETE_AND_ABSTRACT": [
-        "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae"
-      ]
-    },
     "29851dcb-bd83-5a10-a1a1-f2c0963e1fec": {
       "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE": [
         "018d4f0a-2276-42a7-b20d-b0fe6c9c3714",
@@ -1961,12 +1922,6 @@
       "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE": [
         "018d4f0a-2276-42a7-b20d-b0fe6c9c3714",
         "2478812d-d2cd-4182-8ad0-d27a4bdb9ff2"
-      ]
-    },
-    "84ac831f-ec28-5b16-a694-5558e4346140": {
-      "CONCRETE_AND_ABSTRACT": [
-        "b1175e6c-0519-4c19-98ae-b053616ec750",
-        "bdf2c710-a092-4943-8732-c23f0b8d1fae"
       ]
     },
     "ba0149c2-629d-5410-8fa4-bc5d5dc9ff6c": {
@@ -2452,18 +2407,6 @@
       "WELL_FOUNDEDNESS_OF_THE_SELECTED_RELATION": [
         "2f42c0e7-46ae-4e2b-9ac4-95dcb865da61",
         "f4609d52-a878-4d09-9af3-083b1945770c"
-      ]
-    },
-    "e47d6abd-a3ca-5426-be1f-646929504b1a": {
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ]
-    },
-    "abe97ecb-c6cd-55b2-91f4-a52354c1e881": {
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
       ]
     },
     "84e3a43a-7762-597c-afbc-9dff7fe39646": {
@@ -5810,10 +5753,6 @@
         "4343c0d2-6b10-45ee-a6ac-f77d94540cdf",
         "959c30ea-70e8-47ba-931b-2054a080ea7e"
       ],
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
       "NECESSARY_ANCESTOR_VERSUS_ACTUAL_CONCRETE_ROOT": [
         "1212c399-214a-4cae-b9e8-a48697e793cf",
         "f1c70d6d-5d7f-4505-a3f2-f22bc43017ca"
@@ -6584,7 +6523,6 @@
     },
     "87ed1132-1a59-5e93-b154-48f2a763f597": {
       "ATEMPORAL_CAUSE_IN_ESSE": [
-        "00e564e2-7170-44b7-a88d-076378ad675b",
         "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
         "8ea914b9-567f-4714-802f-f3ad639b890f"
       ],
@@ -6595,14 +6533,6 @@
       "DE_RE_NECESSARY_EXISTENCE_ABSENT_EXISTENTIAL": [
         "2bba28ee-ea32-4fd0-b582-7500ea114b2f",
         "6d0fde78-c9fd-40b9-9802-1d096b77f375"
-      ],
-      "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL": [
-        "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-        "b5a882ce-e70c-46e1-8e90-9843bcdacf6f"
-      ],
-      "ORDINARY_ACTUAL_CAUSATION_VERSUS_A_DIRECT": [
-        "19120dc5-dfcb-4486-9664-9f5d7ae96bc0",
-        "614ea46e-6856-4c87-8cba-3cbd2e6f2d52"
       ],
       "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY": [
         "2e064a7b-b29f-4f0b-8978-782674012d86",
@@ -6792,7 +6722,6 @@
     },
     "2302a4ef-44d8-50a5-aef6-3e82c3340035": {
       "ATEMPORAL_CAUSE_IN_ESSE": [
-        "00e564e2-7170-44b7-a88d-076378ad675b",
         "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
         "8ea914b9-567f-4714-802f-f3ad639b890f"
       ],
@@ -6800,17 +6729,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL": [
-        "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-        "b5a882ce-e70c-46e1-8e90-9843bcdacf6f"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "ORDINARY_ACTUAL_CAUSATION_VERSUS_A_DIRECT": [
-        "19120dc5-dfcb-4486-9664-9f5d7ae96bc0",
-        "614ea46e-6856-4c87-8cba-3cbd2e6f2d52"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -6841,7 +6762,6 @@
     },
     "9d77f415-7cb6-5c81-b38e-0aa404382c8e": {
       "ATEMPORAL_CAUSE_IN_ESSE": [
-        "00e564e2-7170-44b7-a88d-076378ad675b",
         "02217238-2075-4f8f-bff9-eaf03d2ec2eb",
         "8ea914b9-567f-4714-802f-f3ad639b890f"
       ],
@@ -6853,17 +6773,9 @@
         "4f63bd47-86a8-4076-ab17-208c0022aa18",
         "815a5a9b-f3c4-4853-8318-194f046cdf04"
       ],
-      "EXISTENTIAL_SUPPORT_SOURCE_VERSUS_ACTUAL_CAUSAL": [
-        "8afd07c5-d7be-4138-83c4-62c59317dc1a",
-        "b5a882ce-e70c-46e1-8e90-9843bcdacf6f"
-      ],
       "NECESSARY": [
         "7af298fb-a2c4-4239-919b-7685f2e1f67a",
         "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
-      "ORDINARY_ACTUAL_CAUSATION_VERSUS_A_DIRECT": [
-        "19120dc5-dfcb-4486-9664-9f5d7ae96bc0",
-        "614ea46e-6856-4c87-8cba-3cbd2e6f2d52"
       ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
@@ -8788,10 +8700,6 @@
       ]
     },
     "3886c4ba-7753-5826-86db-5fe73495c40a": {
-      "NECESSARY": [
-        "7af298fb-a2c4-4239-919b-7685f2e1f67a",
-        "8c881fa6-2b9f-44be-a32a-c8ef29c13643"
-      ],
       "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT": [
         "1e18ccd2-b582-4d6e-9c55-324d19151ce8",
         "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",

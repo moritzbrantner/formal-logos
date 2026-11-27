@@ -1,0 +1,13 @@
+{
+  "id": "d38fb464-f9f2-4c18-8d0f-3606b180a732",
+  "label": "The selected fusion calibration can hold without all-actual concreteness",
+  "paraphrase": "In the fixed two-world Bool profile, local calibration holds for the selected sum false. That sum is itself actual, de re necessary and CONCRETE_6. There are no causal edges. An unrelated actual nonconcrete individual true is absent in the accessible world and fails all-actual concreteness.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.Control.CalibrationStrictness",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ]
+}

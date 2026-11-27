@@ -1,0 +1,67 @@
+module
+
+public import TruthCore.Causality.LocalActualFusion
+
+@[expose] public section
+
+namespace TruthCore.Results.Causality.LocalActualFusion
+
+open TruthCore.Causality.ActualFusionNecessaryBeing
+open TruthCore.Causality.BruteFoundationBoundary (Profile NecessaryConcreteAt)
+open TruthCore.Causality.LocalActualFusion
+open TruthCore.Logic.CogitoEsse (EveryExistentConcreteAt)
+open TruthCore.Mereology.FusionNoNecessaryParts (NoNecessaryPartsAt)
+
+/-- The reductio inspects parts of the selected sum and of its actual causes. -/
+theorem necessaryConcrete {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B)
+    (hFusion : ActualFusionAt m.ontic w sum)
+    (hParts : SelectedFusionPartsExistAt m.ontic w sum)
+    (hCausal : ActualNoNecessaryPartsHaveCausesAt m.ontic w)
+    (hActual : CausesHaveActualEndpointsAt m.ontic w)
+    (hNonoverlap : CauseEffectNonoverlapAt m.ontic w)
+    (hConcrete : NecessarySelectedFusionPartsConcreteAt m w sum) :
+    NecessaryConcreteAt m w := by
+  apply Classical.byContradiction
+  intro hNone
+  have noNecessaryPart : ∀ p, SelectedFusionPart m.ontic w sum p →
+      ¬ TruthCore.German.Kant.CosmologicalInference.NecessaryAt m.ontic w p := by
+    intro p hp hn
+    have hExists := hParts hFusion.1 p hp
+    exact hNone ⟨p, hConcrete p hExists hn hp, hExists, hn⟩
+  obtain ⟨c, hc⟩ := hCausal sum hFusion.1 (fun p hp => noNecessaryPart p (Or.inl hp))
+  have hcActual := (hActual c sum hc).1
+  have hcNoParts : NoNecessaryPartsAt m.ontic w c :=
+    fun p hp => noNecessaryPart p (Or.inr ⟨c, hcActual, hc, hp⟩)
+  exact hNonoverlap c sum hc ⟨c, le_refl c, hFusion.2.1 c ⟨hcActual, hcNoParts⟩⟩
+
+/-- The original global part-existence policy supplies the localized policy
+without a change of carrier, sum, world or cause relation. -/
+theorem partsExistOfGlobal {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B)
+    (hParts : ActualPartsExistAt m.ontic w) :
+    SelectedFusionPartsExistAt m.ontic w sum := by
+  intro hSum p hp
+  rcases hp with hPart | ⟨c, hActual, _, hPart⟩
+  · exact hParts sum p hSum hPart
+  · exact hParts c p hActual hPart
+
+theorem concreteOfGlobal {W B : Type} [PartialOrder B]
+    (m : Profile W B) (w : W) (sum : B)
+    (hConcrete : EveryExistentConcreteAt m.ontic m.concrete w) :
+    NecessarySelectedFusionPartsConcreteAt m w sum :=
+  fun p hp _ _ => hConcrete p hp
+
+/-- A concretely instantiated local region leaves an unrelated actual
+contingent abstract individual outside the global calibration. -/
+theorem calibrationStrictness : Control.CalibrationStrictness := by
+  refine ⟨?_, ?_⟩
+  · intro p _ hn _
+    cases p with
+    | false => rfl
+    | true => exact False.elim (by simpa [Control.strictProfile] using hn true rfl)
+  · intro h
+    have hTrue := h true (Or.inl rfl)
+    simp [Control.strictProfile] at hTrue
+
+end TruthCore.Results.Causality.LocalActualFusion

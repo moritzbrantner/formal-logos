@@ -1,0 +1,11 @@
+{
+  "id": "0b3b66b9-79f8-4b3f-bb1a-0014630785b0",
+  "label": "All-actual concreteness restricts to necessary actual fusion parts",
+  "argument_id": "7f549878-cb62-4123-825a-5bcfa28012fd",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.concreteOfGlobal",
+  "comparator_config": "results/0b3b66b9-79f8-4b3f-bb1a-0014630785b0/comparator.json",
+  "status": "solution-present",
+  "description": "Every necessary actual part in the selected fusion scope is an actual existent. Apply the global calibration at that same world."
+}

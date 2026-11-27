@@ -1,0 +1,23 @@
+{
+  "id": "7f549878-cb62-4123-825a-5bcfa28012fd",
+  "label": "All-actual concreteness restricts to necessary actual fusion parts",
+  "premise_statement_ids": [
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "conclusion_statement_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
+  "inference_ids": [
+    "0eb754da-eb30-47a7-877a-cd7d8e4edad0"
+  ],
+  "meaning": "Every necessary actual part in the selected fusion scope is an actual existent. Apply the global calibration at that same world.",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

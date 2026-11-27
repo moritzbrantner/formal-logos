@@ -1,0 +1,9 @@
+{
+  "id": "51940f1e-6413-42ff-b8d6-d0d2b2100c3e",
+  "label": "Selected-world cause and effect have no common part",
+  "term": "Selected-world cause and effect have no common part",
+  "lean_declaration": "TruthCore.Causality.ActualFusionNecessaryBeing.CauseEffectNonoverlapAt",
+  "definition": "If c causes x at w in the supplied Ontic, there is no individual p with p ≤ c and p ≤ x in the supplied partial order.",
+  "basis": "stipulative",
+  "note": "Uses the existing common-part Overlap. The premise is stronger than numerical difference."
+}
