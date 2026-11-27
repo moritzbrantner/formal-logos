@@ -6613,6 +6613,418 @@ source, and states the horn-A point symmetrically.
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 
 
+## Do possibilities need a mind? Conceptualism and non-real plurality at a simple root (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145), lane
+H1. This is a horizontal family under the owner's three-angles rule. Three
+approaches to the cognition criterion `3b40009e` and the containment-recognition
+bridge `d1fb6414` each ended in relocation or parity: the Lane 4 induction
+(withdrawn), the
+[individuation trilemma](#individuating-non-present-candidates-the-axiarchic-rival-and-the-cognition-criterion-2026-11-27-provisional-2145)
+(a relocation), and the
+[reasons tests](#counterfactual-guidance-and-self-application-against-imitability-exemplars-2026-11-27-provisional-2145)
+(tie by construction). The strongest standing rival is A4, noncognitive
+imitability exemplarism. Lane C's finding was "same demand, different proposed
+payments".
+
+This section asks a question from outside the favouring framework. Can
+individuated, value-ranked possibilities exist as such without being thought?
+The argument family is conceptualism about possibilities, propositions and
+contents: they are by nature contents of thought. Augustine, Leibniz and
+Plantinga are navigation only. Every formulation below is an analyst
+formulation with attribution deferred; no source, passage or claim record is
+added.
+
+Reused without change: lane C's stand-ins, loci, realization, irreflexivity,
+both locus bridges, the CONTAINED_IN senses and the control carrier
+(`AxiarchicFoundation`); `About` (DEF `3ece6dfe`) and `Apprehends` (DEF
+`07f3fb85`); `GoodGeneral` and the Lane 4 root step `30c6f4c5`; and the #1892
+`ConstitutivelySimple` (at most one real constituent), which now has DEF
+`d6912ecb`. Prior horizontal work on the same family is also reused:
+[eternal truths and an actual concrete foundation](modal-grounding-priority-950.md#eternal-truths-and-an-actual-concrete-foundation-2026-11-11)
+found that objective necessary truth does not discriminate an intellect from
+structural essence, and the
+[undrawn triangle](modal-grounding-priority-950.md#one-undrawn-euclidean-right-triangle-1790)
+found no reason to require an intellect for correctness. This section does not
+repeat those questions. It asks about *individuation and plurality*, not
+correctness.
+
+Lean: [vocabulary](../../TruthCore/Causality/PossibiliaContent.lean),
+[results and controls](../../TruthCore/Results/Causality/PossibiliaContent/Solution.lean),
+[spec](../../specs/possibilia-content.toml).
+
+New vocabulary, each with a stipulative definition:
+
+- **Real constituent** and **constitutive simplicity** (DEF `d6912ecb`, the
+  existing `ConstitutivelySimple`): a real constituent is something in the
+  bearer with being in reality as a part, principle, property or aspect. A
+  simple bearer has at most one. Non-real items are not counted.
+- **Non-real containment** `NonRealContained` (DEF `45d04b45`): contained in
+  the bearer (CONTAINED_IN_1) without being a real constituent of it. It cuts
+  across the intentional and virtual senses. Each may be real or non-real.
+
+### A. The conceptualist inference and where each rival lands
+
+The brief's form of the inference:
+
+1. A possibility individuated in a respect is a content with aboutness.
+2. Whatever has aboutness has it intrinsically, or derives it from something
+   that has it intrinsically.
+3. Intrinsic aboutness belongs only to mental acts.
+4. So individuated possibilities are thoughts, or derive from thoughts.
+
+Each bridge was tested against the rivals at the root's scope, before anything
+is produced. The aim was to place each rival's best answer, not to refute it.
+
+| Rival account of the possibilities | Where its items are | Where it lands at the root |
+| --- | --- | --- |
+| Platonism: abstract propositions with primitive representation (Frege; Merricks's primitively representing propositions; navigation) | real items, independent of the root | horn 1, the independent realm. Its price is the one lane C recorded at `65805e5a`: not the sole ultimate at the inclusive scope of (b) |
+| Ersatz worlds: maximal consistent sets of propositions or world-stories | built from propositions | derived aboutness. The payment is wherever the propositions are; no separate payment |
+| Lewisian concrete possibilia | real concrete worlds | horn 1. They are individuated by being, not by aboutness. A value ranking needs value-facts at those worlds |
+| Meinongian or Zalta-style abstract objects that encode properties | objects given by a comprehension principle, independent of any bearer | horn 1. To be *in* the root they need a further principle that the root grounds exactly these encodings: A4's own grounding primitive |
+| Cognitive-act theories: propositions as types of creaturely acts of predication (Soames, King, Hanks; navigation) | derived from creaturely minds | no stand-ins before creatures. At the root this is horn 3 (nowhere), or act types that exist uninstantiated, which are abstract items (horn 1) |
+| Powers-based modality (Vetter; Borghini and Williams; navigation) | real potentialities of actual bearers, individuated by their manifestations | specifying a manifestation that does not exist leads to Bird's relata problem. Bird and Tugby answer with uninstantiated Platonic properties (horn 1); Molnar answers with primitive directedness of *real* powers. B shows that real plurality is excluded at a simple root |
+| A4: modes of imitability of the root's nature, not understood | in the root | needs non-real containment (B) |
+
+*Two exclusions that bind both sides.* Covariation, natural signs and
+resemblance-matching are factive: they relate an item to something that exists.
+They cannot stand for a candidate that is not present. DEF `3ece6dfe` already
+lists covariation as a non-example; the point holds for a mind whose ideas were
+merely caused by their objects as much as for a power. Derived aboutness at a
+root before creation must derive from something in the root. The independent
+and produced loci are excluded by lane C's two bridges. So bridge 2 adds no
+locus of its own, and the brief's form reduces to the in-source case.
+
+*The adopted sense of abstract does not settle it.* The owner's adopted sense
+([concrete-abstract](concrete-abstract.md#adopted-sense-owner-decision-2026-11-06))
+says an abstract item has no esse in re and "at most" being in the intellect.
+That is an upper bound. It does not assert that abstract or non-real items have
+being *only* in an intellect, so it does not supply the conceptualist premise
+below.
+
+*Where the brief's form stops.* Bridge 3 (Brentano's thesis) would again be a
+direct assumption that A4 denies: A4 says its modes have directedness without
+thought. To find a discriminating test, the inference must use what the
+in-source case requires at a *simple* root, not only that the stand-in is in
+the source.
+
+### B. The shared demand, derived
+
+**`simpleBearerHasNonRealStandIn`** (Lean-only, zero axioms). Suppose a
+constitutively simple bearer has a good-general favouring, and none of its
+candidates is a present input. Then some stand-in is in the bearer without being
+a real constituent of it.
+
+1. Realization and irreflexivity give two distinct stand-ins.
+2. Both candidates are non-present, so excluded middle and the two locus
+   bridges put both stand-ins in the bearer.
+3. Simplicity forbids both being real constituents (`distinctNotBothReal`).
+
+The theorem is about any bearer. It binds the personal source and A4 alike:
+
+- the personal source cannot individuate by a real plurality of representations;
+- A4 cannot individuate by a real plurality of directed powers.
+
+Lane C recorded the shared demand in prose. It is now a theorem from stated
+premises.
+
+**Question C: powers at a simple root.** `realStandInsGiveNoGoodGeneralFavouring`
+(Lean-only, zero axioms) says that if every contained stand-in of a simple,
+patientless bearer is a real constituent, none of its favourings is
+good-general. This is Molnar-type directedness as a real property of a real
+power. Lane 4 recorded that such directedness meets the non-present mark but
+fails value-dependence. At a simple root the failure comes earlier: real
+directed powers cannot even supply distinct stand-ins.
+
+A multi-track power is one real power with several manifestation types. Its
+tracks are individuated in one of two ways:
+
+- *by partners or stimuli.* Control row 5 shows what present inputs do: with
+  one candidate absent and the rest present, the nature itself can stand for
+  the absent one. At a patientless root no partner is available.
+- *by real internal structure.* Simplicity excludes it.
+
+So a powers-based A4 must hold that its tracks are non-real. That departs from
+Molnar's model, in which the directedness is the real power's own nature. The
+same theorem excludes "real ideas" on the personal side. The symmetry is exact.
+
+Does value-dependence fail for A4's non-real modes? No. A4 grounds value in the
+nature: a candidate is better when it imitates the nature more fully. So
+value-dependence is supplied by a common ground, not by alignment. Lane 4's
+verdict, that powers fail value-dependence, still holds for aligned powers (A3).
+It does not hold for A4.
+
+### C. The conceptualist premise and the root route
+
+**Result** (`simpleRootGoodGeneralFavouringIsApprehension`, `19d5872a`,
+registered, zero axioms). Its premises are:
+
+- lane C's five individuation premises: excluded middle `ee4ab504`, realization
+  `633d5c29`, irreflexivity `3ca01752`, the own-favouring bridge `65805e5a` and
+  the source-of-differences bridge `69b9f887`;
+- **root simplicity** (`f4180d0c`, new, open): every actual root is constitutively simple;
+- **no present candidates** (`fce9e0a3`, new, open): no candidate of the favourings under
+  consideration is a present input. `Present` is not indexed by the bearer in
+  the shared signature, so this is a global property of the candidate carrier.
+  It is appropriate for a root's possible effects and false on a carrier that
+  includes present inputs;
+- **the conceptualist premise** `NonRealContainmentIsApprehension` (`cde7f1dd`, new, open):
+  whatever is in a bearer without being a real constituent of it is apprehended
+  by that bearer;
+- **the content premise** `NonRealStandInIsAbout` (`5a3a1432`, new, open, in
+  its weakest form for the route): a non-real contained stand-in of a non-present candidate
+  is about that candidate.
+
+The conclusion is the **root cognition criterion** (`b371638a`, new): every actual root
+with a good-general favouring apprehends some content about some candidate. It
+is the cognition criterion `3b40009e` restricted to actual roots, so 3b40009e
+strengthens it (registered `strengthens` `6b7dce1c`, verified by `rootCriterionOfCriterion`,
+`83b91c73`).
+A further registered result, `actualRootsApprehendFromRootCriterion`
+(`419e24af`), composes
+it with `7fca65ec` and `980e6482` into `3a32d91c`. That is the existing Lane 4
+composition with the root criterion in place of 3b40009e. The route then
+continues `3a32d91c` → `fad1a1ac` → `29818edd`. It uses neither `3b40009e` nor
+`d1fb6414`.
+
+*The conceptualist premise is weaker than conceptualism.* Conceptualism says
+that non-real items have their being *in* being apprehended; that is a
+dependence claim. The typed premise says only that they are apprehended. It is
+the dependence claim's necessary consequence, the weakest form the route needs.
+An account on which non-real items happen always to be apprehended also
+satisfies it.
+
+**Relocation probe** (pre-report self-check 1).
+
+- `rootCriterionGivesRestrictedConceptualism` and
+  `restrictedConceptualismGivesRootCriterion` (Lean-only): the conceptualist
+  premise *restricted to the root route* is equivalent to the conclusion, given
+  the other premises.
+- `rootCriterionWithoutConceptualism` (Comparator companion): the general
+  premise is strictly stronger. On the personal row's carrier the root
+  criterion and every other premise hold, but the source does not apprehend
+  the non-real stand-in of `d`.
+
+So against A4, which grants the other premises, the derivation is a
+**relocation**, not support. Two things are gained:
+
+1. The shared demand is derived, not assumed (B).
+2. The remaining dispute now sits at a *general* thesis about non-real being.
+   That thesis mentions no favouring, so its warrant can be assessed in other
+   domains (E). Whether that warrant discriminates is the horizontal question.
+
+**Controls** (`possibiliaControls`, Comparator companion, `propext`,
+`Classical.choice` and `Quot.sound`). The carrier is lane C's. Every row keeps
+lane C's five premises and has the good-tracking favouring at the root `true`.
+
+| Row | Stand-ins and loci | Premise that fails | Root criterion | Account it represents (interpretive) |
+| --- | --- | --- | --- | --- |
+| 1 | `inner o`, contained, non-real (only `blob` real), about, apprehended | none | holds | divine ideas as objects of understanding |
+| 2 | as row 1, nothing apprehended | conceptualist premise | fails | A4: mind-independent non-real modes |
+| 3 | `inner o`, every contained item real | root simplicity | fails | real powers or real representations in a composite source |
+| 4 | as row 1, nothing about anything | content premise | fails | a template reading of the modes, here with apprehension kept |
+| 5 | `c` absent through `blob`, the rest present through themselves; only `blob` contained | no present candidates | fails | a source facing present inputs |
+
+Disclosed artifacts:
+
+- Rows 1 and 2 differ only in apprehension. That is by construction, because A4
+  is defined as a structural duplicate.
+- Row 4 keeps apprehension so that only the content premise fails. The template
+  rival as such denies apprehension too.
+- In row 3 the conceptualist and content premises hold only vacuously, since
+  nothing non-real is contained. The criterion fails there because nothing is
+  apprehended. The row shows that simplicity is needed. It does not show that
+  composite thinkers do not apprehend.
+- Lane C's `axiarchicControls` already gives single failures of its five
+  premises; they are not duplicated.
+
+None of these rows is a metaphysical possibility.
+
+### D. Both payments under one criterion
+
+The criterion applied to each row: what non-real plurality does the account
+posit at the simple root, what makes the plural items actually distinct, and
+does an established instance of that kind exist outside the root?
+
+| Question (one criterion) | Classical personal root | A4 (noncognitive imitability exemplars) |
+| --- | --- | --- |
+| Real plurality of individuating items | excluded (B): no real plurality of ideas | excluded (B): no real plurality of modes or powers |
+| Status of the plural items | objects of one real act of understanding, with being in being understood (relations of reason, q.15 a.2; navigation) | mind-independent, non-real, non-composing modes (the #1892 objective-eminence status) |
+| What makes them actually distinct | the act of understanding actualizes a distinction founded in the one nature (a distinction of reason with a foundation in reality) | a distinction that holds before and without any act: a Scotist formal distinction a parte rei is the developed precedent (navigation) |
+| If the distinction were only founded, not actual | the stand-ins are not distinct items; by realization and irreflexivity there is no favouring (lane C's nowhere horn) | the same |
+| Its characteristic objection | Euthyphro for ideas: if the intellect finds the distinctions, they are there without it and apprehension does no work for individuation; if it makes them, what guides it is the nature's foundation, and why a subject is needed is the open question | Ockham's identity objection: items really identical with one nature cannot differ in properties; Scotists reply that formal non-identity is compatible with real identity. No consensus |
+| Established instance of the same kind outside the root | none. Human distinctions of reason (convex and concave in one curve) are carried by a real plurality of representations, which simplicity excludes at the root | none. Non-real formalities a parte rei are contested wherever they are posited; real powers and holes are real items |
+| Non-factive standing for a non-present candidate | undisputed for minds (we think of what does not exist) | disputed for powers (Bird and Mumford deny that dispositional directedness is intentional). A4 need not use powers, and a template reading needs no aboutness |
+| Value-dependence | ideas track value grounded in the nature | the modes share that ground (A4 is not A3) |
+
+*Verdict on the table.* Each side posits a non-real plurality in one simple
+nature that has no established instance of its kind outside the root. Each
+faces a characteristic objection whose force is disputed. The undisputed
+non-factive aboutness of minds is an asymmetry. It does not reach A4, which can
+take the template reading and deny aboutness. That costs A4 the content premise
+and nothing identified beyond it. **Parity at the status step.**
+
+### E. Horizontal warrant for the conceptualist premise
+
+The premise is general, so its warrant can come from other domains in which
+non-real items are posited. For each domain, the question is where the
+mind-independent accounts put the items.
+
+| Domain | Leading mind-independent accounts | Where the items are | Mind-independent non-real items in a bearer? |
+| --- | --- | --- | --- |
+| Negations, absences, privations | positive truthmakers with totality facts (Armstrong); absences as no entities, with causation by absence as counterfactual dependence (Lewis); holes as real dependent particulars (Casati and Varzi); navigation | eliminated (truths without items), or real items | no |
+| Merely possible objects | concrete possibilia (Lewis); necessitism, on which merely possible things are actual non-concrete objects (Williamson, Linsky and Zalta) | an independent realm of real items | no |
+| Propositions and contents | Platonism; cognitive-act theories | an independent realm, or derived from creaturely acts | no |
+| Relations to what does not exist | uninstantiated universals as relata (Bird); primitive directedness of real powers (Molnar) | an independent realm, or real properties of composite bearers | no |
+| Distinctions within one thing | real relational properties (convex from one side, concave from the other); Scotist formal distinction | real items, or formalities a parte rei | yes, in Scotus only, and contested |
+
+**Findings.**
+
+1. *Truths are not items.* The best-supported mind-independent account of
+   negative and modal *truths* makes them true by positive reality, without
+   negative or possible *items*. The favouring needs items: realization is an
+   item relation. So that account, applied at the root, puts one stand-in (the
+   nature) for every candidate, which is lane C's nowhere horn. It does not
+   support A4's modes and does not count against the conceptualist premise.
+2. *No domain supplies A4's status without contest.* Except for Scotist
+   formalities, each mind-independent account places the items in an
+   independent realm (horn 1), eliminates them (horn 3), or makes them real
+   items of composite bearers (excluded at a simple root by B).
+3. *No domain supplies the personal status either.* Objects of thought that are
+   non-real exist in human cognition only as the objects of real
+   representations. A non-real plurality of objects of one real act is likewise
+   not instantiated outside the root.
+4. *An inductive argument for the premise is weak.* "Every non-real item we
+   identify is an object of thought" has a substantive selection objection:
+   identifying an item is itself thinking of it (the egocentric predicament).
+   The objection names the inference, a concrete mechanism (a selection
+   effect) and its independent justification (it applies to every
+   identification, whatever is true). So the sampled instances do not show
+   that non-real items are *only* objects of thought.
+5. *Not counted.* A4's status is unusual across domains. Under the
+   Substantive Objection Standard unusualness is not a price, and the personal
+   status is equally unusual.
+
+So the conceptualist premise does **not** have independent warrant from its
+domain-general record that would discriminate it from A4's denial. What it has
+is a defensible primitive role in one tradition, with a coherent rival (Scotus)
+and a coherent consequence (Ockham's objection) still in dispute.
+
+### Assessment, standing rival and graph effect
+
+**What was clarified, connected and derived.**
+
+- The horizontal family is connected to the cognition route by a new,
+  registered conditional support option for `3a32d91c`. It goes through the
+  root criterion, not through `3b40009e` or `d1fb6414`. Its new open premises
+  are root simplicity, no present candidates, the conceptualist premise and the
+  content premise; it shares lane C's five premises. It is a different
+  presentation of the same dispute, not additional evidence: against A4 it is a
+  relocation (C).
+- The shared demand of "same demand, different proposed payments" is now a
+  theorem from stated premises (B). Real plurality is excluded on both sides:
+  real ideas, and real directed powers (question C answered). Present inputs
+  would remove the demand (row 5).
+- The brief's form (aboutness, intrinsic or derived, mental) reduces at a root to the
+  in-source case. Factive relations, derived aboutness and every
+  independent-realm account land on loci lane C already priced (A).
+- The two payments are compared under one criterion in one table (D). The
+  personal side's own price is recorded: the Euthyphro dilemma for ideas, and
+  a non-real plurality of objects of one act with no established instance.
+
+**Rejected approaches, with reasons.**
+
+- *Brentano's thesis as the bridge.* It is a direct assumption that A4 denies
+  for its modes. It adds no test.
+- *Factivity against A4.* It binds both sides equally, and A4's modes are not
+  factive signs.
+- *Hyperintensional grain of thought as a discriminator.* Favouring profiles are
+  scenario-based. Respects that agree in every scenario get the same
+  dependence verdicts (lane C round 3, `guidanceLabelIndependent`), so the
+  favouring framework cannot use grain.
+- *Aristotle's rational powers for contraries* (Met. Θ.2; navigation). The
+  contingency and selection question is already owned by lanes 2 and 2b. It is
+  not the plurality question.
+- *Unusualness of A4's status as a price.* Not counted (E5).
+- *Induction from identified non-real items.* Weak, for the selection effect
+  (E4).
+
+**Strongest standing rival and its price.** A4, in its template form (no
+aboutness, no apprehension). It denies the conceptualist premise and the
+content premise. Its price is a mind-independent, actual, non-real distinction
+among modes of one simple nature: a Scotist formal distinction, open to
+Ockham's identity objection, with no uncontested instance elsewhere. The
+personal price at the same step is a non-real plurality of objects of one act,
+also with no instance elsewhere, together with the Euthyphro dilemma for ideas.
+
+**Provisional judgment.** **Parity.** The conceptualist premise is a direct
+assumption with a defensible primitive role. Its domain-general record does not
+discriminate it from A4's denial. The cognition criterion's overall warrant
+does not change. What changed:
+
+- a second, independent route shape to `3a32d91c` (with the shared dependencies
+  above);
+- the shared demand is derived;
+- the dispute is relocated to one general thesis about non-real being, which
+  other argument families can now test.
+
+Formal establishment is unchanged and no premise is discharged. No
+unconditional ranking of personal over impersonal accounts is made.
+
+**Graph.** Three registered results:
+
+- `19d5872a` `simpleRootGoodGeneralFavouringIsApprehension` (root criterion
+  from the horizontal premises);
+- `83b91c73` `rootCriterionOfCriterion` (verifies that `3b40009e` strengthens
+  the root criterion);
+- `419e24af` `actualRootsApprehendFromRootCriterion` (root criterion →
+  `3a32d91c`).
+
+New open premises: root simplicity, no present candidates, the conceptualist
+premise and the content premise. The inclusive reading of (b) is still not
+registered. A1's price at `65805e5a` remains conditional on it.
+
+**Pre-report self-checks.**
+
+1. *Relocation probe.* Done in Lean (C). Restricted to the route, the
+   conceptualist premise is equivalent to the conclusion given the rest; the
+   general premise is strictly stronger. The result is reported as a
+   relocation; what is gained is listed in C.
+2. *Does the classical side pay here too?* Table D has a personal row at every
+   question, at the same level. The personal account pays the non-real
+   plurality and the Euthyphro dilemma.
+3. *Quantifier width.* `GoodGeneral` is existential: one scenario, one pair.
+   The shared-demand theorem gives *some* non-real stand-in, not that every
+   stand-in is non-real; one of the two may be the real nature. The root
+   criterion gives *some* apprehended content about *some* candidate; it does
+   not say that the content is a stand-in or that apprehension governs the
+   favouring. `NoPresentCandidates` is global over the carrier (C). Simplicity
+   counts real constituents only.
+
+**Next discriminating tests.**
+
+1. *Truthmakers for the modes.* What in the one real nature makes it true that
+   these non-real items are distinct? For the personal side it is the act's
+   content; for A4 it is the nature's imitability. If modes are individuated by
+   limits (a candidate is the nature under a limit), the plurality is a
+   plurality of negations. That joins lane H2's question about a root's
+   negative profile facts.
+2. *Ockham's objection without begging the question.* State formal
+   non-identity and real identity as distinct relations, and test whether real
+   identity's indiscernibility excludes non-real distinctness under premises
+   both sides accept. Apply the same test to ideas, which are also really
+   identical with the essence.
+3. *Explanatory use beyond favouring* (lane C round 3, test 3). Does the
+   source's relation to its modes do work, for example in the truth or
+   intelligibility of creatures, that requires them to be *for* the source?
+
+**Review record.** Independent semantic challenge pending (coordinator).
+
+[Attempt record](../../corpus/attempts/0d8b9153-ad65-48a3-be6a-478612f0e2a1.json)
+
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

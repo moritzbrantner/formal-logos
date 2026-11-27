@@ -1,0 +1,42 @@
+{
+  "id": "5b16ebe7-15f0-4982-9d90-1fb69893e9d7",
+  "label": "Root cognition criterion, from simplicity and conceptualism about non-real being",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "633d5c29-a594-4c1a-b3f6-2b899a0e65ed",
+    "3ca01752-0d5d-4140-be03-68150a17aefb",
+    "65805e5a-818a-49a0-ae3c-eba95724500f",
+    "69b9f887-582a-479c-924b-e7328f3930b4",
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "fce9e0a3-f0c1-43d1-b97f-495d4a7e92a0",
+    "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+    "5a3a1432-38f7-44b9-bdc6-01acc066b622"
+  ],
+  "conclusion_statement_id": "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8",
+  "inference_ids": [
+    "803acc7a-ec6d-45b5-8e48-0d44afbb8e9f"
+  ],
+  "meaning": "Let r be an actual root at w with a good-general favouring phi: at some scenario s and pair x, y, phi depends on value with end content fixed, so phi favours x over y at s. By item realization and irreflexivity the stand-ins of x and y differ (favouredIndividuated). No candidate is a present input, so by excluded middle, the own-favouring bridge and the source-of-differences bridge both stand-ins are contained in r (CONTAINED_IN_1). Roots are constitutively simple, so two distinct items are not both real constituents of r; by excluded middle one of the stand-ins is contained in r without being a real constituent (Lean-only simpleBearerHasNonRealStandIn: the shared demand, which binds the personal source and the noncognitive rival alike). The conceptualist premise makes r apprehend that stand-in, and the content premise makes it about its candidate, so r apprehends some content about some candidate. Neither the cognition criterion 3b40009e nor the containment-recognition bridge d1fb6414 is used. Against the noncognitive imitability-exemplar rival, which grants the other premises, the dispute is relocated to the conceptualist premise (or the content premise): restricted to the route that premise is equivalent to the conclusion given the rest (Lean-only rootCriterionGivesRestrictedConceptualism, restrictedConceptualismGivesRootCriterion), and the general premise is strictly stronger (Comparator companion rootCriterionWithoutConceptualism). What the derivation adds is that the shared demand is derived rather than assumed, and that the remaining premise is a general thesis about non-real being whose warrant is assessed outside the favouring framework. The main theorem uses no axioms. The Comparator companion possibiliaControls (propext, Classical.choice and Quot.sound, on lane C's carrier) gives the personal row with every premise and the conclusion, and rows where exactly one new premise fails and the conclusion fails: mind-independent non-real modes (the conceptualist premise), real plurality in a composite source (simplicity), a template reading (the content premise) and present inputs. Lane C's axiarchicControls already gives single failures of its five premises. These are structural surrogates, not metaphysical possibilities; which account a row represents is an interpretive assignment.",
+  "term_senses": {
+    "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d",
+    "CONTAINED_IN": "03ce80c5-aaba-4aae-adbf-a87092044dd4"
+  },
+  "definition_ids": [
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df",
+    "45d04b45-4396-4f95-87ad-a8e762bce91a",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "b71adcba-9430-4c3b-a87e-60471247d2dd",
+    "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "fae7bbb8-931c-4a95-9f44-1d59921d1c83",
+    "fcfb7a8b-1373-4437-89c3-b7893d850031"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "4c3751a6-6b32-47f2-89c4-d094dabe5613"
+  ]
+}

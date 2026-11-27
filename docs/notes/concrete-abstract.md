@@ -81,3 +81,11 @@ the corpus sense.
 - **Constant instantiations.** `corpus.py check` warns about a constant
   `concrete`/`abstract` that has no `category-constant: intended (<reason>)`
   declaration (#1107).
+
+## Non-real being and the cognition route (#2145 lane H1, 2026-11-27)
+
+The adopted sense gives an abstract item "at most" being in the intellect. That
+is an upper bound, not the conceptualist thesis that non-real items have being
+only as objects of apprehension. Lane H1 registers that thesis, in a weaker
+typed form, as an open premise of a root-route derivation and assesses its
+warrant: [Do possibilities need a mind?](causal-perfection-transfer.md#do-possibilities-need-a-mind-conceptualism-and-non-real-plurality-at-a-simple-root-2026-11-27-provisional-2145)

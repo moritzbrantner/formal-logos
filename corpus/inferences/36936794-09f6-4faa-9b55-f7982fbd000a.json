@@ -1,0 +1,14 @@
+{
+  "id": "36936794-09f6-4faa-9b55-f7982fbd000a",
+  "label": "Actual roots apprehend, from finality and the root criterion (inference)",
+  "input_statement_ids": [
+    "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+    "980e6482-054d-4765-8487-c27ee77cd0ce",
+    "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8"
+  ],
+  "output_statement_id": "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+  "rule": "Commitment (e) gives the root a favouring, good-generality of root favouring makes it good-general, and the root criterion gives an apprehended content",
+  "meaning": "Fix an actual root r at w. Commitment (e) in its weakest favouring form gives r a favouring determination phi; every favouring of an actual root is good-general, so phi is; the root cognition criterion then gives r an apprehended content about some candidate. The same composition as the existing route through the cognition criterion 3b40009e, with that criterion replaced by its restriction to actual roots, so the route from the conceptualist derivation reaches 3a32d91c without 3b40009e or d1fb6414. The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "419e24af-22fb-46b5-998e-8b715cb43d15",
+  "label": "Actual roots apprehend, from finality and the root criterion",
+  "argument_id": "588e1dfb-6a46-4550-bcf2-d463bd2eac4a",
+  "challenge_module": "TruthCore.Results.Causality.PossibiliaContent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PossibiliaContent.Solution",
+  "theorem": "TruthCore.Results.Causality.PossibiliaContent.actualRootsApprehendFromRootCriterion",
+  "comparator_config": "results/419e24af-22fb-46b5-998e-8b715cb43d15/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w. Commitment (e) in its weakest favouring form gives r a favouring determination phi; every favouring of an actual root is good-general, so phi is; the root cognition criterion then gives r an apprehended content about some candidate. The same composition as the existing route through the cognition criterion 3b40009e, with that criterion replaced by its restriction to actual roots, so the route from the conceptualist derivation reaches 3a32d91c without 3b40009e or d1fb6414. The main theorem uses no axioms."
+}
