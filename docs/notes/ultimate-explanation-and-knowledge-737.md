@@ -512,6 +512,32 @@ declaration, source-attributed corpus claim, proposition, result, graph edge or 
 The two original analyst conditionals and their review are recorded in PR #1904.
 They have no Lean binding. The computed frontier comparison is linked in the PR.
 
+## Deterministic transcript laws and fabricated-past testing (#2103)
+
+The [existing historical attempt](../../corpus/attempts/82b6c542-3f01-41eb-8a3d-b3b8b34d6315.json)
+records the retrospective coverage. Under the blind two-bit history interface,
+every finite deterministic adaptive transcript fails to identify the past
+marker. Its exact observation law fails as well, because each fixed model's
+law is a point mass at its transcript. The supplied one-action audit identifies
+the marker on the same two-bit domain. The composition is
+`HistoryObservationLaws.historicalBoundary` (result `fc1a8179`), using the
+adaptive controls and the proposition criterion for exact identifiability.
+The result uses no probability over histories. For a stochastic replacement,
+an equal observed sample is compatible with different observation laws.
+The stochastic comparison requires equality of the induced transcript laws
+for the policies and horizons claimed. A suitable matching of stochastic
+transitions and readouts is one sufficient route. For example, if every readout
+is constant, a transition that preserves a hidden bit and one that toggles it
+induce the same transcript laws even though their hidden-state transitions differ.
+
+A calibration statistic computed solely from the matched transcript preserves
+that match. Calibration with a further trace can split it if production and
+provenance supply an actual discriminator, as the toy audit does by reading
+the retained marker. The next test is to specify such a channel for an actual
+historical claim and defend its admissible inputs. The present result evaluates
+exact identification on the given class; fallible warrant still depends on
+the actual channel and the epistemic standard.
+
 ## Research attempts citing this note
 
 - [Apparent-past equivalence, calibration bootstrapping and the warrant for scientific laws](../../corpus/attempts/82b6c542-3f01-41eb-8a3d-b3b8b34d6315.json)
