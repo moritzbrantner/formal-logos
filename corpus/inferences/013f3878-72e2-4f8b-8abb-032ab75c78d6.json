@@ -1,0 +1,10 @@
+{
+  "id": "013f3878-72e2-4f8b-8abb-032ab75c78d6",
+  "label": "The proper scope of the selected fusion calibration (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d38fb464-f9f2-4c18-8d0f-3606b180a732",
+  "rule": "Two-world finite interpretation",
+  "meaning": "All actual candidates are not required to be concrete. In the fixed order, only false lies under the chosen sum false, and no candidate is a cause. The actual candidate false is concrete and true exists at the actual world without being concrete. This checks strictness of the calibration alone, separately from the fusion and causal assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

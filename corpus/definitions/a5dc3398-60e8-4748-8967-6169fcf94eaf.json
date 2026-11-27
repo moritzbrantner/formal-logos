@@ -1,0 +1,9 @@
+{
+  "id": "a5dc3398-60e8-4748-8967-6169fcf94eaf",
+  "label": "Actual existence of parts in the selected fusion scope",
+  "term": "Actual existence of parts in the selected fusion scope",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.SelectedFusionPartsExistAt",
+  "definition": "If the selected sum exists at w, then at w each part of that sum and each part of any actual cause of it exists.",
+  "basis": "stipulative",
+  "note": "This explicit existence requirement specializes ActualPartsExistAt. It carries no modal persistence or concreteness claim."
+}

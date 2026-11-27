@@ -1,0 +1,41 @@
+{
+  "id": "cd90a95a-a867-456c-b079-828b51b9d100",
+  "label": "Exact outside-scope difference for fusion concreteness calibration",
+  "subject_kind": "statement",
+  "subject_id": "dd5cd8fa-cc79-4a1c-8871-3fc7633dfb3f",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
+  "comparison_spec": "TruthCore.Causality.LocalActualFusion.calibrationComparison",
+  "delta_statement_id": "e31b4d08-658f-4eb7-a96c-8ab1c25b54d6",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "495ca112-e611-4e18-9d50-4613ecf615d6",
+    "implication": "cad867dd-941f-4ff5-ac19-1d042f43511e"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "weaker": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "delta": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "note": "The global clause uses the definitionally equal Profile form because the checker selects direct telescope parameters and the original global predicate takes separate Ontic and concrete parameters. There is no background claim. The same sum, ontology and partial order define the local region and its complement."
+}

@@ -9,5 +9,10 @@
   ],
   "disambiguation_ids": [
     "91d5918a-a193-491d-806f-d32441ee41c5"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "d7741cdc-881b-5bda-85ce-d70223162f78",
+    "missing_bridge": "Interpret the same selected bearer and its constitutive principles in an explicit partial order. Show when its matter/form or real esse/essence distinction gives a proper subobject and when order-composition agrees with the q.3 a.7 Composite predicate.",
+    "blocker": "Strict lower cones contain individuals of the ordered carrier. The typed q.3 composition can compare principles in a separate sort without supplying proper subobjects. Extensional identity of order composites alone says nothing about what constitutes the bearer; simple priority and cause of esse would require separate premises even after calibration."
+  }
 }

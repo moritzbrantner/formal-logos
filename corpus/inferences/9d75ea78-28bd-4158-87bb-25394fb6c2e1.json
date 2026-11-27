@@ -1,0 +1,13 @@
+{
+  "id": "9d75ea78-28bd-4158-87bb-25394fb6c2e1",
+  "label": "An actual concretum with no necessary parts is a contingent witness (inference)",
+  "input_statement_ids": [
+    "adb5020c-f115-5a26-a736-343ec2fc9d68",
+    "589bdaa6-ecff-5cb5-b458-fc01eab86458"
+  ],
+  "output_statement_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "rule": "Reflexive parthood and classical duality of accessible universal existence",
+  "meaning": "The specified actual concrete object is its own part under the fixed reflexive partial order, so no necessary parts entails that the same object fails de re necessity. Classically some accessible world omits it; selected-world actuality supplies the other conjunct of ContingentAt. In composition with the existing L3 result c3073ba5, select that theorem's very sum on the same Ontic, world and order and supply its actuality and concreteness separately. No actuality of a fusion follows from its Sum2 specification, and no account of a proper component, substantial composition or causation is assumed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
