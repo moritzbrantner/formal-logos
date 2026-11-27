@@ -1,0 +1,10 @@
+{
+  "id": "c7bcfe95-a2cb-4b2e-9ddc-e3c2ae1057cb",
+  "label": "Test by OriginToleranceIdentity.faithfulControls (1b1462e6)",
+  "subject_kind": "result",
+  "subject_id": "468cbe86-1bba-4a0c-9484-5feb910a22e6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1b1462e6-c285-448c-87e2-3053bc05a341",
+  "note": "Omit Euclidean access at World.actual in the five-world faithful history. Both aMinus and plus are accessible from actual, but their shared individual's origins are two steps apart and aMinus does not access plus. Reflexivity at actual, presence-to-existence, inert emptiness and the possible contingent-free past are retained."
+}
