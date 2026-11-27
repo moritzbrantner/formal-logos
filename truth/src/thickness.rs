@@ -68,6 +68,12 @@ pub struct FrontierInputs {
     /// Arguments backing a strength registration (ordinary closure steps
     /// except inside a support cycle; owner decision 2026-11-12).
     pub registration_arguments: HashSet<String>,
+    /// The closed statements (any closure reason).
+    pub closed: HashSet<String>,
+    /// The edges of the reaching walk ([`crate::frontier::Frontier::root_edges`]).
+    /// Empty when the inputs are read from a report JSON
+    /// ([`inputs_from_report`]), which does not carry them.
+    pub root_edges: Vec<crate::frontier::RootEdge>,
 }
 
 /// Records by kind in file order, as Python `load_dir` lists them.
@@ -101,7 +107,10 @@ impl<'a> Records<'a> {
 /// from the one frontier computation (`crate::frontier`), so thickness and
 /// frontier cannot disagree on closure, depths or walks.
 pub fn frontier_inputs(root: &str, records: &Records, flags: &[Flag]) -> FrontierInputs {
-    inputs_from_report(root, &Frontier::new(root, records, flags).report(false))
+    let frontier = Frontier::new(root, records, flags);
+    let mut inputs = inputs_from_report(root, &frontier.report(false));
+    inputs.root_edges = frontier.root_edges();
+    inputs
 }
 
 /// The thickness inputs of a full frontier report (`frontier --json`).
@@ -189,6 +198,13 @@ pub fn inputs_from_report(root: &str, report: &Value) -> FrontierInputs {
             .filter_map(|entry| entry["argument_id"].as_str())
             .map(str::to_owned)
             .collect(),
+        closed: report["closed_statements"]
+            .as_object()
+            .into_iter()
+            .flatten()
+            .map(|(id, _)| id.clone())
+            .collect(),
+        root_edges: Vec::new(),
     }
 }
 

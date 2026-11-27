@@ -13,7 +13,11 @@
 //! decision 2026-11-27): reaching, placed diagnostic, placed rival, planned or
 //! unplaced. [`gate`] (`truth orphans --base REV --gate`) fails on results
 //! new or changed since a base revision that are unplaced; pre-existing
-//! unplaced results are backlog.
+//! unplaced results are backlog. A reaching result also gets a provenance
+//! ([`provenance`]): substantive, transcription, loop-back, bare-premise
+//! strength registration, unverified route or refutation support. The gate
+//! reports it and warns on new undeclared heuristic transcriptions; neither
+//! fails it.
 //!
 //! Contacts are discovery leads, not equivalences or entailments (AGENTS.md
 //! invariants 6 and 16). Nothing here closes a statement, changes a route
@@ -22,6 +26,7 @@
 //! `thickness` (`thickness::frontier_inputs`).
 use crate::{
     Corpus,
+    frontier::{EdgeKind, RootEdge},
     thickness::{self, FrontierInputs, Records},
 };
 use serde_json::{Map, Value, json};
@@ -251,6 +256,239 @@ pub struct Placement<'a> {
     /// The transcription kind, when the result is a transcription
     /// (invariant 16). A transcription's state is computed like any other.
     pub transcription: Option<String>,
+    /// For a `reaching` result, how it reaches ([`provenance`]); none
+    /// otherwise.
+    pub provenance: Option<Value>,
+}
+
+/// A substantive (non-transcription) derivation whose conclusion reaches the
+/// root through verified non-transcription arguments that avoid its own
+/// premises.
+pub const SUBSTANTIVE: &str = "substantive";
+
+/// The provenance categories of a `reaching` result ([`provenance`]), in the
+/// order they are tried, with their report titles. Navigation, not warrant:
+/// none of them closes or supports anything; they say what the placement
+/// rests on (docs/corpus-model.md, "Result placement").
+pub const PROVENANCES: [(&str, &str); 6] = [
+    ("loop_back", "loop-back"),
+    ("registration_bare", "bare-premise strength registration"),
+    ("transcription", "transcription"),
+    ("unverified_route", "unverified route"),
+    ("refutation_support", "refutation support"),
+    (SUBSTANTIVE, "substantive derivation"),
+];
+
+/// The upward index of the reaching walk's edges: premise -> edges.
+struct Upward<'f> {
+    edges: HashMap<&'f str, Vec<&'f RootEdge>>,
+}
+
+impl<'f> Upward<'f> {
+    fn new(edges: &'f [RootEdge]) -> Self {
+        let mut index: HashMap<&str, Vec<&RootEdge>> = HashMap::new();
+        for edge in edges {
+            index.entry(edge.premise.as_str()).or_default().push(edge);
+        }
+        for list in index.values_mut() {
+            list.sort_by(|left, right| {
+                (&left.argument_id, &left.conclusion).cmp(&(&right.argument_id, &right.conclusion))
+            });
+        }
+        Self { edges: index }
+    }
+
+    /// A shortest path from `start` up to `root` through edges of the
+    /// `allowed` kinds that never enters a `blocked` statement, as the
+    /// edges taken in order; `None` when there is none.
+    fn path(
+        &self,
+        start: &str,
+        root: &str,
+        blocked: &BTreeSet<&str>,
+        allowed: &[EdgeKind],
+    ) -> Option<Vec<&'f RootEdge>> {
+        if start == root {
+            return Some(Vec::new());
+        }
+        let mut parent: HashMap<&str, &RootEdge> = HashMap::new();
+        let mut seen: std::collections::HashSet<&str> = std::collections::HashSet::from([start]);
+        let mut queue = std::collections::VecDeque::from([start.to_owned()]);
+        while let Some(current) = queue.pop_front() {
+            for edge in self.edges.get(current.as_str()).into_iter().flatten() {
+                let next = edge.conclusion.as_str();
+                if !allowed.contains(&edge.kind) || blocked.contains(next) || !seen.insert(next) {
+                    continue;
+                }
+                parent.insert(next, edge);
+                if next == root {
+                    let mut path = vec![*edge];
+                    let mut node = edge.premise.as_str();
+                    while node != start {
+                        let edge = parent[node];
+                        path.push(edge);
+                        node = edge.premise.as_str();
+                    }
+                    path.reverse();
+                    return Some(path);
+                }
+                queue.push_back(next.to_owned());
+            }
+        }
+        None
+    }
+}
+
+/// The provenance of one `reaching` result, first match wins:
+///
+/// 1. `loop_back`: its conclusion reaches the root only through a path that
+///    re-enters one of its own premises (no path avoids them), so the
+///    derivation adds no root contact its premise did not already have.
+/// 2. `registration_bare`: the argument backs a strength registration and
+///    every premise is bare (no stating claim, no support) and unclosed.
+/// 3. `transcription`: the result is itself a transcription (it contributes
+///    at most rule (d) closure), or every path avoiding its premises enters a
+///    transcription argument.
+/// 4. `unverified_route`: every such path enters an argument record without
+///    a verified result (admitted by the walk where the conclusion is not
+///    routed).
+/// 5. `refutation_support`: the conclusion is not on a root route but
+///    supports a verified refutation of a recorded rival of a root-path
+///    statement.
+/// 6. `substantive`: a non-transcription result whose conclusion reaches the
+///    root through verified non-transcription arguments only, avoiding its
+///    premises.
+///
+/// The JSON carries the category, a shortest witnessing `route` (statement,
+/// argument, statement, ..., root) and, for each transcription argument on
+/// it, whether all of that argument's premises are closed (rule (d) carries
+/// closure through it). A `loop_back` route is one that re-enters a premise,
+/// listed under `reentered_premises`.
+fn provenance(
+    upward: &Upward,
+    frontier: &FrontierInputs,
+    arguments: &HashMap<&str, &Record>,
+    argument: &Record,
+    self_transcription: bool,
+) -> Value {
+    let conclusion = text(argument, "conclusion_statement_id");
+    let premises: BTreeSet<&str> = list(argument, "premise_statement_ids")
+        .into_iter()
+        .filter(|premise| *premise != conclusion)
+        .collect();
+    let root = frontier.root.as_str();
+    let route_json = |path: &[&RootEdge]| -> Value {
+        let mut route = vec![json!(conclusion)];
+        for edge in path {
+            route.push(json!(edge.argument_id));
+            route.push(json!(edge.conclusion));
+        }
+        Value::Array(route)
+    };
+    let transcriptions = |path: &[&RootEdge]| -> Value {
+        Value::Array(
+            path.iter()
+                .filter(|edge| edge.kind == EdgeKind::Transcription)
+                .map(|edge| {
+                    let closed = arguments
+                        .get(edge.argument_id.as_str())
+                        .is_some_and(|step| {
+                            list(step, "premise_statement_ids")
+                                .iter()
+                                .all(|premise| frontier.closed.contains(*premise))
+                        });
+                    json!({"argument_id": edge.argument_id, "premises_closed": closed})
+                })
+                .collect(),
+        )
+    };
+    if !frontier.reaching_root.contains(conclusion) {
+        let category = if self_transcription {
+            "transcription"
+        } else {
+            "refutation_support"
+        };
+        return json!({"category": category, "route": Value::Null});
+    }
+    let all = [
+        EdgeKind::Sound,
+        EdgeKind::Transcription,
+        EdgeKind::Unverified,
+    ];
+    let Some(free) = upward.path(conclusion, root, &premises, &all) else {
+        let looped = upward
+            .path(conclusion, root, &BTreeSet::new(), &all)
+            .unwrap_or_default();
+        let reentered: Vec<&str> = looped
+            .iter()
+            .map(|edge| edge.conclusion.as_str())
+            .filter(|statement| premises.contains(statement))
+            .collect();
+        return json!({
+            "category": "loop_back",
+            "route": route_json(&looped),
+            "reentered_premises": reentered,
+        });
+    };
+    let bare_registration = frontier
+        .registration_arguments
+        .contains(text(argument, "id"))
+        && !premises.is_empty()
+        && premises.iter().all(|premise| {
+            frontier.statement_depths.get(*premise).copied() == Some("bare")
+                && !frontier.closed.contains(*premise)
+        });
+    let sound = upward.path(conclusion, root, &premises, &[EdgeKind::Sound]);
+    let (category, path) = if bare_registration {
+        ("registration_bare", sound.unwrap_or(free))
+    } else if let (false, Some(path)) = (self_transcription, &sound) {
+        (SUBSTANTIVE, path.clone())
+    } else if let Some(path) = sound.clone().or_else(|| {
+        upward.path(
+            conclusion,
+            root,
+            &premises,
+            &[EdgeKind::Sound, EdgeKind::Transcription],
+        )
+    }) {
+        ("transcription", path)
+    } else if self_transcription {
+        ("transcription", free)
+    } else {
+        ("unverified_route", free)
+    };
+    json!({
+        "category": category,
+        "route": route_json(&path),
+        "transcription_arguments": transcriptions(&path),
+    })
+}
+
+/// Counts per provenance category, every category listed (zero included).
+fn provenance_counts<'p, 'a: 'p>(placements: impl Iterator<Item = &'p Placement<'a>>) -> Value {
+    let mut counts: Map<String, Value> = PROVENANCES
+        .iter()
+        .map(|(key, _)| ((*key).to_owned(), json!(0)))
+        .collect();
+    for placement in placements {
+        if let Some(category) = placement
+            .provenance
+            .as_ref()
+            .and_then(|value| value["category"].as_str())
+            && let Some(entry) = counts.get_mut(category)
+        {
+            *entry = json!(entry.as_u64().unwrap_or(0) + 1);
+        }
+    }
+    Value::Object(counts)
+}
+
+fn provenance_line(counts: &Value) -> String {
+    PROVENANCES
+        .iter()
+        .map(|(key, title)| format!("{title} {}", counts[*key].as_u64().unwrap_or(0)))
+        .collect::<Vec<_>>()
+        .join("; ")
 }
 
 /// The placement state of every verified result, first match wins:
@@ -327,6 +565,7 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
             "object_id": text(relation, "object_id"),
         })
     };
+    let upward = Upward::new(&frontier.root_edges);
     let mut placements = Vec::new();
     for result in &records.results {
         if !matches!(text(result, "status"), "solution-present" | "verified") {
@@ -392,15 +631,26 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
             } else {
                 (UNPLACED, None)
             };
+        let transcription = frontier
+            .transcription_results
+            .get(result_id)
+            .map(|kind| kind.kind.clone());
+        let provenance = (state == REACHING).then(|| {
+            provenance(
+                &upward,
+                frontier,
+                &arguments,
+                argument,
+                transcription.is_some(),
+            )
+        });
         placements.push(Placement {
             result,
             argument,
             state,
             via,
-            transcription: frontier
-                .transcription_results
-                .get(result_id)
-                .map(|kind| kind.kind.clone()),
+            transcription,
+            provenance,
         });
     }
     placements
@@ -484,6 +734,7 @@ pub fn gate(
             "state": placement.state,
             "placed_by": placement.via,
             "transcription": placement.transcription,
+            "provenance": placement.provenance,
             "change": change,
         });
         match change {
@@ -509,6 +760,52 @@ pub fn gate(
         }
         Value::Object(counts)
     };
+    // Heuristic transcriptions without a declared kind, new at the head (the
+    // result is new, or newly flagged). A warning, never a failure: the
+    // heuristic also flags real multi-step proofs, and a record cannot
+    // declare a result not to be a transcription.
+    let undeclared = |frontier: &FrontierInputs| -> BTreeSet<String> {
+        frontier
+            .transcription_results
+            .iter()
+            .filter(|(_, kind)| !kind.declared)
+            .map(|(id, _)| id.clone())
+            .collect()
+    };
+    let (head_undeclared, base_undeclared) =
+        (undeclared(&head_frontier), undeclared(&base_frontier));
+    let undeclared_warnings: Vec<Value> = head_places
+        .iter()
+        .filter(|placement| {
+            let id = text(placement.result, "id");
+            head_undeclared.contains(id) && !base_undeclared.contains(id)
+        })
+        .map(|placement| {
+            let conclusion = text(placement.argument, "conclusion_statement_id");
+            json!({
+                "result_id": text(placement.result, "id"),
+                "conclusion_statement_id": conclusion,
+                "conclusion_label": label(conclusion),
+                "heuristic_kind": placement.transcription,
+                "state": placement.state,
+            })
+        })
+        .collect();
+    let judged_provenance = {
+        let mut counts: Map<String, Value> = PROVENANCES
+            .iter()
+            .map(|(key, _)| ((*key).to_owned(), json!(0)))
+            .collect();
+        for entry in &judged {
+            if let Some(value) = entry["provenance"]["category"]
+                .as_str()
+                .and_then(|key| counts.get_mut(key))
+            {
+                *value = json!(value.as_u64().unwrap_or(0) + 1);
+            }
+        }
+        Value::Object(counts)
+    };
     let root_known = head.get("statements", head_root).is_some();
     json!({
         "root": head_root,
@@ -516,6 +813,9 @@ pub fn gate(
         "base": base_label,
         "passed": root_known && offending.is_empty(),
         "head_state_counts": state_counts(head_places.iter()),
+        "head_provenance_counts": provenance_counts(head_places.iter()),
+        "judged_provenance_counts": judged_provenance,
+        "undeclared_transcription_warnings": undeclared_warnings,
         "head_transcription_state_counts": state_counts(
             head_places.iter().filter(|placement| placement.transcription.is_some())),
         "judged_state_counts": judged_counts,
@@ -580,6 +880,10 @@ pub fn format_gate(report: &Value) -> String {
             states_line(&report["judged_state_counts"], 0)
         ),
         format!(
+            "  how the judged reaching results reach (plumbing, not warrant): {}",
+            provenance_line(&report["judged_provenance_counts"])
+        ),
+        format!(
             "backlog (pre-existing unplaced results, reported, not failed): {} ({} transcription)",
             report["backlog_count"], report["backlog_transcription_count"]
         ),
@@ -591,7 +895,62 @@ pub fn format_gate(report: &Value) -> String {
             "transcriptions among them: {}",
             states_line(&report["head_transcription_state_counts"], 0)
         ),
+        format!(
+            "how every reaching result at the head reaches: {}",
+            provenance_line(&report["head_provenance_counts"])
+        ),
     ];
+    let judged_reaching: Vec<&Value> = judged
+        .iter()
+        .filter(|entry| {
+            entry["provenance"]["category"]
+                .as_str()
+                .is_some_and(|category| category != SUBSTANTIVE)
+        })
+        .collect();
+    let undeclared = report["undeclared_transcription_warnings"]
+        .as_array()
+        .cloned()
+        .unwrap_or_default();
+    if !undeclared.is_empty() {
+        lines.push(String::new());
+        lines.push(
+            "Warning (not failed): the transcription heuristic flags these new or newly flagged \
+             results, and they declare no `transcription` kind. If the proof only applies or \
+             repackages a premise (invariant 16), declare the kind and begin the description \
+             with \"Transcription (<kind>):\"; if it is a real multi-step derivation, say so \
+             in the PR (the heuristic also flags those):"
+                .into(),
+        );
+        for entry in &undeclared {
+            lines.push(format!(
+                "  {} (result {}; heuristic {})",
+                entry["conclusion_statement_id"]
+                    .as_str()
+                    .unwrap_or_default(),
+                entry["result_id"].as_str().unwrap_or_default(),
+                entry["heuristic_kind"].as_str().unwrap_or_default(),
+            ));
+        }
+    }
+    if !judged_reaching.is_empty() {
+        lines.push(String::new());
+        lines.push(
+            "Judged results that reach the root without a substantive derivation (placed, \
+             not failed; report them as such, never as support):"
+                .into(),
+        );
+        for entry in judged_reaching {
+            lines.push(format!(
+                "  {} (result {}): {}",
+                entry["conclusion_statement_id"]
+                    .as_str()
+                    .unwrap_or_default(),
+                entry["result_id"].as_str().unwrap_or_default(),
+                entry["provenance"]["category"].as_str().unwrap_or_default(),
+            ));
+        }
+    }
     let offending = report["offending"].as_array().cloned().unwrap_or_default();
     if !offending.is_empty() {
         lines.push(String::new());
@@ -811,12 +1170,21 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
             .iter()
             .filter(|placement| placement.transcription.is_some()),
     );
+    let provenance_totals = provenance_counts(placements.iter());
     let mut connected = 0usize;
+    let mut reaching_results: Vec<Value> = Vec::new();
     let mut orphans: Vec<Orphan> = Vec::new();
     for placement in &placements {
         let (result, argument) = (placement.result, placement.argument);
         if placement.state == REACHING {
             connected += 1;
+            reaching_results.push(json!({
+                "result_id": text(result, "id"),
+                "argument_id": text(argument, "id"),
+                "conclusion_statement_id": text(argument, "conclusion_statement_id"),
+                "transcription": placement.transcription,
+                "provenance": placement.provenance,
+            }));
             continue;
         }
         let mut touches: Vec<String> = list(argument, "premise_statement_ids")
@@ -1106,6 +1474,10 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
         // connected count); transcriptions are also counted on their own.
         "state_counts": state_totals,
         "transcription_state_counts": transcription_totals,
+        // How each reaching result reaches ([`provenance`]): plumbing, not
+        // warrant.
+        "provenance_counts": provenance_totals,
+        "reaching_results": reaching_results,
         "reaching_root_statement_count": reaching.len(),
         "groups": output_groups,
         "scope": "Contacts are advisory leads (Lean import reuse, shared vocabulary modules, shared definitions, paraphrase overlap); no equivalence, entailment or closure is inferred.",
@@ -1483,6 +1855,11 @@ pub fn format(report: &Value, all: bool) -> String {
         format!(
             "placement of transcriptions among them: {}",
             states_line(&report["transcription_state_counts"], 0)
+        ),
+        format!(
+            "how the reaching results reach (plumbing, not warrant; --json lists each with a \
+             route): {}",
+            provenance_line(&report["provenance_counts"])
         ),
         if all {
             "Listing every disconnected result with its state.".into()
@@ -2366,6 +2743,61 @@ mod tests {
     }
 
     #[test]
+    fn the_gate_warns_on_new_undeclared_heuristic_transcriptions() {
+        let base = fixture();
+        let head = copy(&base.0);
+        // A new result on the root path whose proof only applies its premise.
+        write(
+            &head.0,
+            "corpus/arguments/APPLY.json",
+            &json!({"id": "APPLY", "premise_statement_ids": ["C"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "P", "meaning": "m"})
+            .to_string(),
+        );
+        let result = json!({"id": "APPLY", "argument_id": "APPLY", "challenge_module": "c",
+                "solution_module": "TruthCore.Results.Case.APPLY.Solution",
+                "theorem": "TruthCore.Results.Case.APPLY.t", "comparator_config": "c",
+                "status": "solution-present"});
+        write(&head.0, "corpus/results/APPLY.json", &result.to_string());
+        write(
+            &head.0,
+            "TruthCore/Results/Case/APPLY/Solution.lean",
+            "theorem t (P Q : Prop) (h : P → Q) (hp : P) : Q := by\n  exact h hp\n",
+        );
+        let report = run_gate(&head.0, &base.0);
+        assert_eq!(report["passed"], true, "a warning never fails the gate");
+        let warnings = report["undeclared_transcription_warnings"]
+            .as_array()
+            .unwrap();
+        assert_eq!(warnings.len(), 1);
+        assert_eq!(warnings[0]["result_id"], "APPLY");
+        assert_eq!(warnings[0]["heuristic_kind"], "single_application");
+        let text = format_gate(&report);
+        assert!(text.contains("Warning (not failed)"), "{text}");
+        assert!(text.contains("  P (result APPLY; heuristic single_application)"));
+        // The judged reaching result is reported with its provenance.
+        assert_eq!(
+            report["judged"][0]["provenance"]["category"],
+            "transcription"
+        );
+        assert_eq!(report["judged_provenance_counts"]["transcription"], 1);
+
+        // Declared: no warning. Flagged at the base already: no warning.
+        let mut declared = result.clone();
+        declared["transcription"] = json!("single_application");
+        write(&head.0, "corpus/results/APPLY.json", &declared.to_string());
+        assert_eq!(
+            run_gate(&head.0, &base.0)["undeclared_transcription_warnings"],
+            json!([])
+        );
+        write(&head.0, "corpus/results/APPLY.json", &result.to_string());
+        assert_eq!(
+            run_gate(&head.0, &head.0)["undeclared_transcription_warnings"],
+            json!([])
+        );
+    }
+
+    #[test]
     fn the_gate_fails_lost_reaching_and_planned_placements() {
         // At the base, CAUSE-A reaches the root (a verified argument C -> ROOT)
         // and MODAL-A is planned (M targets P); the head drops both.
@@ -2434,5 +2866,108 @@ mod tests {
         let text = format_count_summary("ROOT", "BASE", 3, None);
         assert!(text.contains("| `BASE` | unavailable | 3 | unavailable |"));
         assert!(text.ends_with("No zero baseline is assumed."));
+    }
+
+    /// The provenance of every reaching result of `root`, by result id.
+    fn provenances(root: &Path) -> BTreeMap<String, Value> {
+        let corpus = Corpus::load(root).unwrap();
+        let records = Records::from_corpus(&corpus);
+        let flags = crate::frontier::transcription_flags(root, &records);
+        let frontier = thickness::frontier_inputs("ROOT", &records, &flags);
+        place(&records, &frontier)
+            .into_iter()
+            .filter_map(|placement| {
+                placement
+                    .provenance
+                    .map(|value| (text(placement.result, "id").to_owned(), value))
+            })
+            .collect()
+    }
+
+    #[test]
+    fn provenance_separates_substantive_transcription_loop_back_and_bare_registration() {
+        use std::sync::atomic::{AtomicU32, Ordering};
+        static NEXT: AtomicU32 = AtomicU32::new(0);
+        let dir = Dir(std::env::temp_dir().join(format!(
+            "truth-orphans-provenance-{}-{}",
+            std::process::id(),
+            NEXT.fetch_add(1, Ordering::Relaxed)
+        )));
+        let root = &dir.0;
+        for id in ["ROOT", "A", "X", "B", "D", "E", "S", "W", "R"] {
+            write(
+                root,
+                &format!("corpus/statements/{id}.json"),
+                &json!({"id": id, "paraphrase": format!("{id} holds.")}).to_string(),
+            );
+        }
+        let argument = |id: &str, premises: &[&str], conclusion: &str, kind: Option<&str>| {
+            write(
+                root,
+                &format!("corpus/arguments/{id}.json"),
+                &json!({"id": id, "premise_statement_ids": premises, "inference_ids": ["I"],
+                        "conclusion_statement_id": conclusion, "meaning": "m"})
+                .to_string(),
+            );
+            let mut result = json!({"id": id, "argument_id": id, "challenge_module": "c",
+                "solution_module": format!("TruthCore.Results.Case.{id}.Solution"),
+                "theorem": "t", "comparator_config": "c", "status": "solution-present"});
+            if let Some(kind) = kind {
+                result["transcription"] = json!(kind);
+            }
+            write(
+                root,
+                &format!("corpus/results/{id}.json"),
+                &result.to_string(),
+            );
+        };
+        // A reaches the root by a sound derivation; X supports A soundly.
+        argument("TOP", &["A"], "ROOT", None);
+        argument("SUB", &["X"], "A", None);
+        // B reaches only through BUP back to A: LOOP derives B from A.
+        argument("BUP", &["B"], "A", None);
+        argument("LOOP", &["A"], "B", None);
+        // D reaches only through the declared transcription TR; E supports D.
+        argument("TR", &["D"], "A", Some("assembly"));
+        argument("DER", &["E"], "D", None);
+        // S strengthens W (W on the root path); S is bare and open.
+        argument("WUP", &["W"], "A", None);
+        argument("REG", &["S"], "W", None);
+        write(
+            root,
+            "corpus/relations/REL-S.json",
+            &json!({"id": "REL-S", "subject_kind": "statement", "subject_id": "S",
+                    "predicate": "strengthens", "object_kind": "statement", "object_id": "W",
+                    "verification_result_id": "REG"})
+            .to_string(),
+        );
+        // An unrelated, unplaced result has no provenance.
+        argument("OFF", &["E"], "R", None);
+        let found = provenances(root);
+        let category = |id: &str| found[id]["category"].as_str().unwrap().to_owned();
+        for id in ["TOP", "SUB", "BUP", "WUP"] {
+            assert_eq!(category(id), SUBSTANTIVE, "{id}");
+        }
+        assert_eq!(category("LOOP"), "loop_back");
+        assert_eq!(found["LOOP"]["reentered_premises"], json!(["A"]));
+        assert_eq!(
+            found["LOOP"]["route"],
+            json!(["B", "BUP", "A", "TOP", "ROOT"])
+        );
+        assert_eq!(category("TR"), "transcription");
+        assert_eq!(category("DER"), "transcription");
+        // D is closed as the conclusion of the verified non-transcription
+        // DER (rule (a)), so rule (d) carries closure through TR.
+        assert_eq!(
+            found["DER"]["transcription_arguments"],
+            json!([{"argument_id": "TR", "premises_closed": true}])
+        );
+        assert_eq!(category("REG"), "registration_bare");
+        assert_eq!(found["SUB"]["route"], json!(["A", "TOP", "ROOT"]));
+        assert!(!found.contains_key("OFF"));
+
+        // A second route for D through a sound argument makes DER substantive.
+        argument("DUP", &["D"], "ROOT", None);
+        assert_eq!(provenances(root)["DER"]["category"], SUBSTANTIVE);
     }
 }
