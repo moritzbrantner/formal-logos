@@ -1,0 +1,10 @@
+{
+  "id": "906f9077-478e-4730-a46b-5c6ce27c62c0",
+  "label": "No actual root could have a determination it lacks",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r of the selected grounding relation at w, every world v accessible from w and every determination d, if r really has d at v then r really has d at w. The root's absences are necessary: it could not have had a determination it actually lacks. It says nothing about why they are necessary. A root whose profile is contingent (as on a Humean recombination account) denies it.",
+  "lean_declaration": "TruthCore.Causality.RootClosure.RootAbsencesNecessary",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ]
+}

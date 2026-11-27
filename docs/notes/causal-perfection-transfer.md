@@ -4992,6 +4992,308 @@ is fixed in the commit that adds this sentence.
    needs an articulation). Decide whether that articulation must be impure
    at a simple source (case i).
 
+## Closure for a root's own determinations: essence, carriage and truthmakers (2026-11-27; provisional, #2145)
+
+### Question, fixed meanings and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+premise lane E. E (`9281317d`, `NoUnexplainedAbsenceAtRoots`) says no actual
+root lacks a determination that an admissible profile has together with all of
+the root's determinations. The two sections above left it bare: it is neutral
+in form, but given the background it decides the point at issue, and no graph
+node supplied a closure principle at roots. The question here: is there warrant
+for E, or for a weaker sufficient version, that is independent of the
+conclusion it serves and applies alike to personal and impersonal roots?
+
+Reused without change: the #2153 family and cases (`UnexplainedAbsence`,
+`HasCompatibleExtension`, `ActualProfile`), the #2162 requirement relation and
+its necessity direction `AdmissibleIsExclusionFree` (`89c988d9`), the purity of
+requirements `0c8631bd`, strict root purity `3b39e0ba`, the truthmaker
+vocabulary (`Making`, `Sound`, `MakerNecessitation`, `NeedsMakerAt`), the PSR
+arena and `WhyStance` of `BruteContingencyParity`, and the #2153 control
+carrier. Lean: [vocabulary](../../TruthCore/Causality/RootClosure.lean),
+[results and controls](../../TruthCore/Results/Causality/RootClosure/Solution.lean),
+[spec](../../specs/root-closure.toml).
+
+**A finer sense of essence (ESSENCE_6).** The existing ESSENCE_5
+(`EssentialTruth`) puts a world-proposition in a being's nature. That is too
+coarse for the question. A world-proposition about a root's profile cannot say
+what it demands of a profile that no world realizes, so "this essential truth
+excludes the root's having `q`" would hold vacuously of every unrealized `q`,
+and an essentialist account of possibility stated with it would be idle.
+ESSENCE_6 (`ProfileEssentialCondition`, [definition](../../corpus/definitions/8e1ba83c-04e3-4bd3-8e25-e0c532a703a6.json))
+puts a condition on sets of real determinations in a being's nature: "it lies
+in the nature of `y` that `x`'s profile satisfies `C`". It is a declared
+primitive. No passage between ESSENCE_5 and ESSENCE_6 is asserted.
+
+Four new open premises, all about actual roots at `w`:
+
+| Label | Statement | Content |
+| --- | --- | --- |
+| N | `906f9077` | no accessible world gives the root a determination it lacks: its absences are necessary |
+| EM | `f6f956a1` | whatever set of determinations satisfies every ESSENCE_6 condition on the root's profile is had by the root at some accessible world (essence-grounded modality) |
+| EP | `61a0b3e6` | every ESSENCE_6 condition on the root's profile holds of every admissible extension of that profile (positive essences) |
+| LE | `682e6436` | such a condition can fail at an admissible extension only where some determination of the root requires the lack of members of it (carriage) |
+
+### A. Essence-grounded necessity: a derivation and a relocation
+
+Registered results (main theorems use no axioms):
+
+- `noUnexplainedAbsenceFromPositiveEssence` [`4fef9522`]: N, EM and EP give
+  E. If the root lacked `d` while an admissible `q` contains its profile and
+  `d`, EP puts every essential condition at `q`, EM realizes `q` at an
+  accessible world, and N returns `d` to the actual world.
+- `positiveEssenceFromCarriage` [`10f44921`]: LE and the necessity direction of
+  member grounding (`89c988d9`) give EP. An admissible extension is
+  exclusion-free, so no root determination requires a lack within it, and LE
+  gives each essential condition there.
+- `carriedOfPositive` [`2abc0501`]: EP gives LE, registered as a `strengthens`
+  relation. Row 3 of `carriageControls` satisfies LE and fails EP.
+
+Controls. In `essenceControls` each of N, EM and EP fails alone, with the other
+two holding and E failing:
+- a contingent lack of noesis (N fails);
+- a necessary lack that no nature grounds (EM fails; modal primitivism or
+  brutalism);
+- a nature containing the negative clause "lacks noesis" (EP fails).
+
+In `carriageControls`:
+- the uncarried negative clause fails LE;
+- the clause carried by the pure `a` requiring the lack of noesis, in a family
+  that still admits every pure profile, fails the necessity direction.
+
+These rows are assignments of the stated relations, not models of essence.
+
+**Does the essentialist thesis contain E?** EM alone does not: the EP row
+satisfies it. But EP does, in the following sense. `positivityOfNoUnexplainedAbsence`
+(Lean-only) proves that E together with factivity of essential conditions
+(each holds of the root's actual profile) gives EP. Root-profile admissibility
+is not needed. So under N, EM and factivity, EP and E are equivalent, and the
+first derivation is a relocation of E into essence form, in the same way that
+member grounding relocated joint compossibility (#2162). Its gain is not
+warrant for EP. It is that N and EM, which carry warrant outside this dispute,
+are now separated from the one contested thesis, and that the rival's escape
+is fixed to exact options (part D).
+
+**Warrant for N and EM.** N is the necessitarian picture that both sides
+usually share: a necessary root with a necessary nature. A root whose profile
+could vary pays elsewhere (part B). EM is the Fine-style essentialist account of
+the source of modality (navigation only, attribution deferred), at the profile
+level. It is a general theory of modality, motivated by explaining modal
+knowledge and the modal profile of mathematical and natural-kind necessities,
+not by this dispute. It has three serious rivals with different effects here:
+
+| Account of modality | Effect on the route |
+| --- | --- |
+| Essentialist (EM) | the route applies |
+| Humean recombination | gives at least as many possibilities, so with it N fails: the lack becomes contingent |
+| Powers (possibility needs a power; Pruss, Vetter; the existence-level PGP `20d5fecd`) | a necessary root's lack is necessary because nothing has power over its profile; EM fails, and the route gives E no support |
+| Primitivism or brutalism | EM fails |
+
+Theists in the Aristotelian line who hold the powers account therefore cannot
+use this route. That is a limit on the support, not a price for the rival.
+
+**Symmetry.** The premises quantify over every actual root and every
+determination. A personal root lacking an admissible pure `a` violates E under
+them exactly as an impersonal root lacking noesis does. A classical personal
+root with every pure perfection meets them. Its necessary lacks are of impure
+items. Those are either inadmissible (case i), or carried by a pure determination
+requiring the lack of an impure item. `0c8631bd` permits that, and the necessity
+direction then makes the extension inadmissible (case ii).
+
+### B. The selection tu quoque
+
+Both sides accept that selecting among tied or undominated outcomes is a
+contingent exercise with no further determining explanation (#2154 law 6,
+#2163). The rival asks why a closure demand should apply to the root's lack of
+intellect. `selectionParity` (Lean-only, a finite scene with the existing
+`WhyStance`) shows the following:
+
+- **Non-contrastive standard.** The stance that requires a reason why for both
+  the contingent selection and the necessary lack is honored (`WhyHonors`). The
+  exercised power is a reason for the selection. A bare negative clause in the
+  root's nature is a reason for the lack.
+- **Necessitating standard.** `WhyHonorsNecessitating` fails, and it fails at
+  the selection, not at the lack: the clause necessitates the lack, and the
+  power does not necessitate the selection.
+
+So the tu quoque does not convict the theist of inconsistency: the selection
+has a non-contrastive source, its exercise. Nor does the necessary/contingent
+difference count against the rival. Under the non-contrastive standard both
+facts have reasons. Under the determining standard the rival does better on
+this pair. The only standard that separates them is a constraint on what may
+serve as a reason for a root's profile fact: that a nature's exclusion be
+carried by a determination (LE).
+
+This refines the parity remark of the previous section (C). "By its own nature"
+for a profile fact is case (i) or (ii) only under LE. A stance that admits bare
+negative clauses as nature-reasons meets a feature-uniform demand while keeping
+case (iii) at the profile level.
+
+The contingent branch has a formal counterpart: `unexplainedAbsenceIsContingent`
+(Lean-only). Under EM and EP an unexplained absence is a contingent one, so a
+rival who denies N to keep case (iii) brings the lack inside the scope of a
+contingent-fact PSR (`ContingentPSR`). The existing restriction of the PSRs to
+contingent facts, noted in #2162 §C, then no longer shelters it. Applying that
+PSR to profile facts still needs a fact-to-profile bridge that is not
+registered. The rival must then give a reason for a contingent intrinsic fact
+at a root that has no actual concrete ground, which leaves an internal
+self-determination or a brute contingent fact.
+
+### C. Carriage, the totality fact and truthmakers
+
+The rival's totality fact for the root ("these are all of `n`'s
+determinations") has three readings:
+
+1. **A real determination of `n`** (a closure determination). It requires the
+   lack of every determination outside the list, so it carries the exclusion
+   and LE holds. Under the necessity direction the extension with `k` is then
+   inadmissible (`carriedClosureNotUnexplained`, Lean-only): the absence is
+   case (ii), not case (iii). This is the #2153 classification. With joint
+   compossibility, L then makes it limiting. More directly, if `k` is pure the
+   carrier requires the lack of a pure determination. So by `0c8631bd` it is
+   impure, and at an actual root strict purity (`3b39e0ba`) excludes it
+   (`closureCarrierExcludedAtRoots`, Lean-only). The rival's escape by this
+   reading lands in case (ii) and fails at the root.
+2. **A fact about `n` that is not a determination of `n`.** Then nothing in
+   `n` carries the exclusion: LE fails, and this is the EP-failing row of
+   `essenceControls`. It is the rival's live option.
+3. **A distinct entity** (a totality state of affairs) that makes the lack
+   true. It is an extrinsic determiner of the root's intrinsic profile. It is
+   excluded only by the open bridge that any extrinsic determiner would be an
+   actual concrete ground, and a non-concrete totality is exactly what that
+   bridge must address.
+
+**What the truthmaker family supplies.** `necessaryFactAnyMaker` (Lean-only)
+proves that for a fact true at every accessible world, any existent at `w` is
+a sound maker that necessitates it and meets `NeedsMakerAt`. So maximalist
+coverage with necessitation is satisfied trivially for a necessary lack, by
+the root itself or by anything else. It neither demands a totality fact nor
+excludes one. A totality fact is needed as a maker only for contingent negative
+truths. That is the role truthmaker theorists give it (navigation only,
+attribution deferred), and on the contingent reading part B applies. Picking
+out the root's determinations as the relevant maker of a necessary lack needs a
+relevance constraint, which is LE in truthmaker form. The family adds no
+warrant beyond LE, but it removes the totality fact's independent motivation
+from the necessary case.
+
+### D. The negated-premise test and the price table
+
+The negation of E is that some actual root has an unexplained absence. Given
+the derivations, it requires denying one of N, EM, LE or the necessity
+direction:
+
+| Denial | Impersonal root lacking noesis | Classical personal root (every pure perfection) | Personal root lacking a pure `a` | Independent motivation for the denial |
+| --- | --- | --- | --- | --- |
+| N (contingent profile) | the lack is contingent; contingent-fact PSR scope, needs a reason at a groundless root | not needed | same as the impersonal root | Humean recombination |
+| EM (modality not essence-grounded) | a necessary lack with no essential ground | not needed | same | powers accounts, primitivism |
+| LE (uncarried negative clause) | a nature with an exclusion that no real determination carries | not needed | same | brute negative facts; no case outside the dispute is recorded |
+| necessity direction | a root determination requires a lack that does not bind admissibility | not needed | same | none identified |
+| (LE kept, carrier real) | the carrier is impure: excluded by `0c8631bd` and `3b39e0ba` | not needed | same | — |
+
+The standard is the same in every column. The classical personal root pays
+nothing because its profile has no case-(iii) absence, not because it is
+exempt.
+
+**What discriminates.** No observation does. Two theoretical questions do,
+and both arise outside this dispute:
+
+1. **Which account of modality is correct?** It decides EM, and the answer is
+   shared with modal epistemology generally.
+2. **Can a nature contain a necessary exclusion that no real determination of
+   its bearer carries?**
+   - If closure determinations count as real determinations, LE is cheap
+     outside the root. A triangle's lacking a fourth side is carried by
+     "having exactly three sides". An exact determinate excludes the other
+     determinates of its determinable.
+   - At the root, all of LE's force then comes from `0c8631bd` and strict
+     purity.
+   - If the rival denies that the closure is a real determination, it holds
+     an uncarried essential exclusion.
+
+   One accepted case of an uncarried necessary negative fact outside the
+   dispute would undercut LE's inductive base. None is recorded.
+
+   **Assessed objection to LE at the root:**
+   - *Target:* LE at the root.
+   - *Proposed mechanism:* at an unlimited root no pure carrier is available,
+     so its exclusions are uncarried.
+   - *Independent justification:* none. The mechanism presupposes that the
+     root lacks a pure determination, so it begs the question.
+   - *Simplicity:* not a relevant difference, because the carrier would be the
+     root's esse itself.
+   - *Necessity:* not relevant, because ordinary essential exclusions are
+     necessary too.
+   - *Regress-stopping:* requires some primitive, not a negative one.
+   - *Verdict:* no substantive objection identified beyond the general denial
+     of carried negative facts.
+
+### Assessment, standing rival and graph effect
+
+**What changed.**
+- E is no longer bare. It is the conclusion of a verified non-transcription
+  derivation whose open inputs are N, EM, LE and the necessity direction
+  `89c988d9`. The last now reaches the root.
+- The derivation is a relocation in the logical sense: EP is equivalent to E
+  given N, EM and factivity. The relocated thesis LE is a general claim about
+  how natures constrain profiles.
+- The totality-fact escape is classified:
+  - as a real determination it lands in case (ii), and at a root it is
+    excluded by purity;
+  - as a non-determination it denies LE;
+  - as a distinct entity it is the extrinsic case.
+- Truthmaker necessitation does not discriminate makers of necessary facts.
+- The selection tu quoque is answered but gives the theist no positive
+  discrimination.
+
+**Shared dependency.** LE, E and member grounding (`6bba8431`) express one
+rationale: negative facts at a root's profile have positive grounds in what
+its determinations require. The necessity direction is the part of member
+grounding that this route uses, so the shared dependency is now a shared
+premise in the graph. These are not independent pieces of evidence.
+
+**Standing rival and its price.** The impersonal eminent source (#1892)
+without intellect survives in four forms:
+- with an uncarried negative essential clause (denies LE);
+- with an ungrounded necessity (denies EM, for example on the powers account
+  the theist may also hold);
+- with a contingent profile, which faces the contingent-fact PSR at a groundless
+  root;
+- or with a nonbinding requirement (denies the necessity direction).
+
+The first is its cheapest formal option.
+
+**Provisional judgment.** E's warrant has moved from "no node supplies it" to
+the conjunction of N, EM, LE and the necessity direction:
+- N is widely shared.
+- EM is a mainstream but contested theory of modality, and the theist's own
+  powers account does not supply it.
+- LE has an inductive base outside the dispute and no substantive objection at
+  the root. It shares its rationale with member grounding.
+
+This is conditional support of moderate strength. E is not established, and
+the comparison is not at parity. Under the same standards the impersonal root
+must deny one named thesis and the classical root need not, but that asymmetry
+counts only as far as EM and LE are warranted. Formal validity is unchanged by
+this judgment.
+
+**Review state.** The independent semantic challenge is pending
+(coordinator-dispatched).
+
+### Next discriminating tests
+
+1. Search outside the dispute (mathematics, physics, kinds) for a necessary
+   negative intrinsic fact that no real determination of its bearer carries,
+   or show that closure determinations always serve. This bears on LE's
+   inductive base.
+2. Register the powers-account counterpart. Can a power-grounded modality
+   derive E from a premise about what the root's own act excludes, without EM?
+3. Register a fact-to-profile bridge into `ContingentPSR` so that the
+   contingent branch (`unexplainedAbsenceIsContingent`) reaches an existing
+   PSR statement.
+4. Test whether the necessity direction `89c988d9` has warrant independent of
+   LE. It is now the one shared premise between member grounding and E.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

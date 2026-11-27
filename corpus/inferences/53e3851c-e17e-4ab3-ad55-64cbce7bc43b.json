@@ -1,0 +1,14 @@
+{
+  "id": "53e3851c-e17e-4ab3-ad55-64cbce7bc43b",
+  "label": "No unexplained absence at roots, from essence-grounded modality and positive ESSENCE_6 (inference)",
+  "input_statement_ids": [
+    "906f9077-478e-4730-a46b-5c6ce27c62c0",
+    "f6f956a1-c1bb-4d92-8278-f50c4a33ff97",
+    "61a0b3e6-b115-4533-9148-82b17b149616"
+  ],
+  "output_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "rule": "Positivity puts every essential condition at the admissible extension; essence-grounded modality realizes it at an accessible world; necessity of the root's absences returns the missing determination to the actual world",
+  "meaning": "Fix an actual root r at w and a determination d that r lacks while some admissible profile q contains all of r's determinations and d (an unexplained absence). Positivity makes every ESSENCE_6 condition on r's profile hold of q. Essence-grounded modality then gives a world v accessible from w at which r has every member of q, in particular d. Necessity of the root's absences gives r the determination d at w, a contradiction. So no actual root has an unexplained absence. The derivation is a relocation: under N, EM and factivity of essential conditions, positivity is equivalent to the conclusion (Lean-only positivityOfNoUnexplainedAbsence), so the argument adds the warrant of N and EM, which have support outside this dispute, and moves the contested load to positivity. The main theorem uses no axioms. The Comparator companion essenceControls (three Mathlib axioms; the #2153 carrier with the open family, the source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other two hold and the conclusion fails: a contingent lack of noesis (N fails), a necessary lack that no nature grounds (EM fails), and a nature with the negative clause 'lacks noesis' (positivity fails). The rows are assignments of the stated relations, not models of essence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "0c181f3b-1e13-45d5-a243-f4715e83f17f",
+  "label": "Closure for a root's own determinations: essence-grounded modality, carriage and truthmakers",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "9281317d-1f0a-4522-b91c-58cc07652e92",
+    "906f9077-478e-4730-a46b-5c6ce27c62c0",
+    "f6f956a1-c1bb-4d92-8278-f50c4a33ff97",
+    "61a0b3e6-b115-4533-9148-82b17b149616",
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#2145 premise lane E. Introduced ESSENCE_6 (a condition on a bearer's profile of real determinations in a being's nature; ESSENCE_5's world-propositions make an essentialist possibility account idle for unrealized profiles) and derived E (9281317d) from N (906f9077, the root's absences are necessary), EM (f6f956a1, essence-grounded modality for root profiles) and EP (61a0b3e6, positive root essences) [4fef9522], and EP from LE (682e6436, essential exclusions carried by root determinations' requirements of lack) and the necessity direction of member grounding 89c988d9 [10f44921]; EP strengthens LE [2abc0501]. Lean-only: E with factivity gives EP, so under N, EM and factivity EP is equivalent to E (a relocation); under EM and EP an unexplained absence is contingent; a carried closure of a pure determination at an actual root contradicts 0c8631bd with 3b39e0ba, and under the necessity direction makes the absence case (ii); truthmaker necessitation is met by any existent for a necessary fact, so maximalism neither demands nor excludes a totality fact there; in a finite WhyStance scene the non-contrastive standard is honored by both the selection (exercise) and the lack (a bare negative clause) and the necessitating standard fails at the selection, not the lack. Controls: each of N, EM, EP and LE and the necessity direction fails alone with the conclusion failing.",
+  "blocker": "Conditional. Open inputs: N (shared by necessitarian rivals), EM (a contested general theory of modality; powers accounts, Humean recombination and primitivism deny it, and the powers account many theists hold gives this route no support), LE (inductive base outside the dispute, shares its rationale with member grounding and E) and the necessity direction 89c988d9 (now a shared premise with member grounding). The rival's live option is an uncarried negative essential clause; no case outside the dispute is recorded and no substantive objection to LE at the root is identified beyond the general denial of carried negative facts. Next: search for an uncarried necessary negative fact outside the dispute; a powers-account counterpart; a fact-to-profile bridge into ContingentPSR; independent warrant for 89c988d9.",
+  "evidence": [
+    "4fef9522-d151-469a-a244-4b0538440bce",
+    "10f44921-7cb8-4f6c-a26c-0de2dddb95d6",
+    "2abc0501-70df-4c88-9a59-b3b3752f578e"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
+}

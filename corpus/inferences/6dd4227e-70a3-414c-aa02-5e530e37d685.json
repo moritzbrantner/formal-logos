@@ -1,0 +1,13 @@
+{
+  "id": "6dd4227e-70a3-414c-aa02-5e530e37d685",
+  "label": "Positive ESSENCE_6 at roots, from carriage and member grounding's necessity direction (inference)",
+  "input_statement_ids": [
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "output_statement_id": "61a0b3e6-b115-4533-9148-82b17b149616",
+  "rule": "An admissible extension is exclusion-free, so no root determination requires a lack within it; carriage then gives every essential condition there",
+  "meaning": "Fix an actual root r at w, an ESSENCE_6 condition C on its profile and an admissible profile q containing r's determinations. The necessity direction of member grounding makes q exclusion-free: no member of q, and so no determination of r, requires the lack of a subset of q. Carriage then gives C at q. The necessity direction is the part of member grounding (6bba8431) not used by the #2162 derivations, so this argument makes the shared rationale of E and member grounding explicit as a shared premise: both say that a root's negative facts are fixed by what its determinations require. The main theorem uses no axioms. The Comparator companion carriageControls (three Mathlib axioms; same carrier) gives a positive witness, a row where the negative clause 'lacks noesis' is carried by no determination (carriage fails, the necessity direction holds, positivity fails) and a row where the clause is carried by the pure a requiring the lack of noesis while the family still admits every pure profile (carriage holds, the necessity direction fails, positivity fails). In that row the purity of requirements (0c8631bd) also fails.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
