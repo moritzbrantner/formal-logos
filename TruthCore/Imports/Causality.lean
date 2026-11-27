@@ -247,6 +247,7 @@ public import TruthCore.Causality.PerfectionTransferGrounding
 public import TruthCore.Causality.PhysicalGroundControls
 public import TruthCore.Causality.PluralRootConfluence
 public import TruthCore.Causality.PossessionSensitiveAppetite
+public import TruthCore.Causality.PossibiliaContent
 public import TruthCore.Causality.PossibleCausalSourceNecessity
 public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.PostCutStore
