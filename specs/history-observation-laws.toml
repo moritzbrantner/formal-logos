@@ -1,0 +1,61 @@
+[batch]
+vocab = "TruthCore.Science.HistoryObservationLaws"
+results = "TruthCore.Results.Science.HistoryObservationLaws"
+
+[[statement]]
+id = "Exact deterministic transcript laws separate the blind history test from the supplied audit"
+lean = "HistoricalBoundary"
+definitions = ["4a52e22b-c56f-4814-9661-9ef540301cb4", "7011ffa0-1d24-4e36-84e2-714a38cbdeac", "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c", "68f277cc-e5fc-4665-86b5-2fed6d82cdba", "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"]
+paraphrase = "In the two-bit history surrogate, for every finite length and deterministic adaptive policy on the blind interface, the exact probability law of the transcript fails to identify the stipulated past-event marker. The exact transcript law of the supplied one-action audit identifies it on the same inputs. Each model has a deterministic readout, so those laws are point masses, with no prior across models. Real historical truth, admissibility, stochastic matching and epistemic warrant are open."
+
+[statement.connection_plan]
+target_statement_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+missing_bridge = "Apply the historical fiber test to the reliability objection to the brute-contingency rival of the local existence PSR."
+blocker = "No admitted real replacement pair with matching readouts and opposed content is tied to denial of the local existence PSR. The loss of exact identification would still need a bridge to the target method’s epistemic entitlement."
+
+[[argument]]
+id = "Transfer adaptive historical classification to exact deterministic transcript laws"
+theorem = "historicalBoundary"
+premises = []
+conclusion = "Exact deterministic transcript laws separate the blind history test from the supplied audit"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Map a point mass through the transcript, use injectivity of Dirac, and reuse the adaptive controls"
+meaning = "Combines the blind and audit classifiers from AdaptiveHistoryAccess.historyControls with the exact proposition-identification criterion in Science.Identifiability. The deterministic Experiment.law is the Dirac measure at its transcript. Discrete transcripts have separating measurable singletons, so the full measure provides exactly the original transcript distinctions. No shared sample between genuinely random channels would by itself establish equality of their laws."
+
+[[statement]]
+id = "Late deterministic law changes preserve the prefix observation law and split the successor law"
+lean = "ScheduleBoundary"
+definitions = ["10d0fb41-49a3-404f-898f-caabd0d0324e", "58d12f26-3402-5f67-b768-3c71f3381894", "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"]
+paraphrase = "For any record cutoff n and switch date k at or after n, the copy and delayed-toggle schedules have the same exact observation law for the finite trace through n. The observation of their state at the successor of k has different laws. These are per-schedule point masses, without weights over the two schedules, and the result is conditional on that supplied pair of alternatives."
+
+[statement.connection_plan]
+target_statement_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+missing_bridge = "Apply the delayed-switch comparison to the law-reliability objection to the brute-contingency rival of the local existence PSR."
+blocker = "No warranted bridge connects a missing #312 existence reason to scope-ground absence and then to the admission of both delayed-switch histories at fixed evidence. The loss of an exact old-record forecast does not establish the epistemic-warrant bridge."
+
+[[argument]]
+id = "Compare prefix and successor observation laws across a delayed switch"
+theorem = "scheduleBoundary"
+premises = []
+conclusion = "Late deterministic law changes preserve the prefix observation law and split the successor law"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse the certified switch and compare its two deterministic pushforward measures"
+meaning = "NoFoundationLawChaos.lawSwitch supplies the two complete paths, equal all-true prefix conditions and opposite states at the switching successor. The same deterministic experiment wrapper yields equal prefix laws and different successor laws. Agreement of the exact old-record observation laws is compatible with distinct transition rules and possible prospective discrimination within the supplied class. No inference from absence of explanation to the admission of this pair or the admission of any richer class is encoded."
+
+[[relation]]
+id = "Deterministic transcript laws test the blind and audit history contrast"
+subject_kind = "argument"
+subject_id = "Transfer adaptive historical classification to exact deterministic transcript laws"
+predicate = "tests"
+object_kind = "statement"
+object_id = "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e"
+note = "Tests whether access to the entire observation law instead of a realized transcript splits the same latent-history pair in the deterministic blind model, using the audit on the same inputs as a positive control."
+
+[[relation]]
+id = "Prefix observation laws test exposure of the delayed switch"
+subject_kind = "argument"
+subject_id = "Compare prefix and successor observation laws across a delayed switch"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1c262955-7c5e-4066-a562-aed00158d52c"
+note = "Tests observational exposure of the supplied law switch at two observation scopes. It contributes no restriction or warrant on metaphysical admissibility."
