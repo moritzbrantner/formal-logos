@@ -482,6 +482,15 @@ Seek nonvacuity witnesses and omission countermodels where practical and informa
 
 See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
 
+**Placement is plumbing, not warrant** (owner decision 2026-11-27, `docs/decisions/2026-11-27-02-curation-ends-mechanical-review-strict-main.md`). A result is "reaching the root" or placed when it is connected, not when it is supported. Progress reports keep four standings apart:
+
+1. established;
+2. conditionally supported by a substantive derivation;
+3. connected only through a transcription, a loop-back or a backing result (the provenance `truth orphans` reports);
+4. planned.
+
+Counts are never progress (owner direction, 2026-11-24).
+
 ## Proof-seeking stance
 
 - Seek machine-checkable consequence, not prose approval. An LLM may propose readings, propositions, formalizations, or proof steps, but its agreement is never evidence that a conclusion follows.
