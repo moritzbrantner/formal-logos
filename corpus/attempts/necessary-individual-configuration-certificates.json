@@ -12,12 +12,22 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Reused the exact existing individual-first quantifier predicates and alternating model after inspecting the bundled-law and countermodel dossiers. Exposed independent component bindings; certified both elementary incompatible pairs, the fixed-witness and joint-absence implications, and complete finite evaluations in alternating, everywhere-present and everywhere-absent Boolean interpretations. Every premise shares frame, rigid roster, presence and world parameters. The singleton deletions of each pair have independent finite witnesses, so pair minimality is relative to these exact stipulated semantics. All positive selections of these four components in the registered Boolean profile are settled by these cores and controls; no missing certificate is portrayed as philosophical uncertainty. Neither source fidelity, metaphysical possibility nor any root premise is established. Actualist/counterpart/concreteness defenses remain outside these controls.",
+  "summary": "Reused the exact existing individual-first quantifier predicates and alternating model after inspecting the bundled-law and countermodel dossiers. Exposed independent component bindings; certified both elementary incompatible pairs, the fixed-witness and joint-absence implications, and complete finite evaluations in alternating, everywhere-present and everywhere-absent Boolean interpretations. Every premise shares frame, rigid roster, presence and world parameters. The singleton deletions of each pair have independent finite witnesses, so pair minimality is relative to these exact stipulated semantics. All positive selections of these four components in the registered Boolean profile are settled by these cores and controls; no missing certificate is portrayed as philosophical uncertainty. Neither source fidelity, metaphysical possibility nor any root premise is established. Actualist/counterpart/concreteness defenses remain outside these controls.\n\n2026-11-27, #2103 placement curation. Necessary individual. cbcdb308 (unplaced): Every successor has a fixed-roster member versus an accessible world jointly absent of all those candidates. Retain as a conditional incompatibility; no closure edge. 562fe43a (unplaced): One rigid candidate is present at every successor versus every candidate having an absence successor. Retain as a conditional incompatibility; no closure edge.",
   "evidence": [
     "cbcdb308-6ddf-5fd2-996a-696c1a9841c2",
     "562fe43a-5a92-5ff7-be85-39d717cedb74",
     "880f6f37-3307-5cce-b0dc-da91d9524efa",
     "dfd0cc90-39fd-54d1-b84c-c0e734b47def",
     "PR-480"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2110"
+    }
   ]
 }

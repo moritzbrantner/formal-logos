@@ -1,0 +1,10 @@
+{
+  "id": "e5155504-6c48-4603-bea7-10b798cba1df",
+  "label": "Test by ConcurrentActualization.controls (d7f5a528)",
+  "subject_kind": "result",
+  "subject_id": "955ef523-695d-4920-b88d-bf6e737e71e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d7f5a528-6e11-44a1-a12a-438c88a46cbf",
+  "note": "Omit concurrence. In the relay history 0 causes the being of 1 and gives it being at time 1. From time 2 on, 2 gives the received bearer 1 being. Reception and concurrent actualization hold, but cause 0 fails to sustain 1."
+}
