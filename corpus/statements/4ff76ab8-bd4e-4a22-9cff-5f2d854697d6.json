@@ -1,0 +1,15 @@
+{
+  "id": "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+  "label": "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every bearer x and pure determination k, if x's real-determination profile is admissible, k occurs in some admissible profile, and no admissible profile contains x's determinations together with k, then x has one of the three represented limiting principles (LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_2: composite, esse other than essence, or a distinct simply prior being). It is the L bridge in the structural sense; it does not say that a mere absence is a limitation.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.PositiveProfileExclusionLimits",
+  "definition_ids": [
+    "a919ce52-6c8b-5e0f-9aaa-5b570bded78b",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f"
+  ]
+}

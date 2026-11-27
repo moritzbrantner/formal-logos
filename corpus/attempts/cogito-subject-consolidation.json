@@ -23,5 +23,15 @@
     "PR-525",
     "PR-538"
   ],
-  "blocker": "Witness actual thought occurrence (the #515 retorsion schema is the intended route; its presupposition link is open) and source the bearer principle from a pinned primary witness (for example Descartes, Meditationes II, or a relation to Aquinas ST I q.75 a.2), or record it as an open premise against impersonal-event rivals. A first-person test needs constrained indexical vocabulary."
+  "blocker": "Witness actual thought occurrence (the #515 retorsion schema is the intended route; its presupposition link is open) and source the bearer principle from a pinned primary witness (for example Descartes, Meditationes II, or a relation to Aquinas ST I q.75 a.2), or record it as an open premise against impersonal-event rivals. A first-person test needs constrained indexical vocabulary. Placement disposition of the substantial-subject result 672b50a6 (curation pass 2, lane F, #2103, 2026-11-27): left unplaced. Substance is an unconstrained predicate here. The only available edge is a weakening of its conclusion b236fc8b to the root-path thinking-subject statement 0315d471, which already has its own derivation from a subset of these premises, so such an edge would be contrived. No root-path premise uses the thinker's substancehood. A placement needs a constrained substance vocabulary with a case consumer (for example a route through ST I q.75 a.2), not a weakening.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2157"
+    }
+  ]
 }

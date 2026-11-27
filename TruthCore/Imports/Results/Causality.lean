@@ -59,6 +59,7 @@ public import TruthCore.Results.Causality.ClassicalGodFromPositiveRoot.Solution
 public import TruthCore.Results.Causality.ClassicalGodRevelationBoundary.Solution
 public import TruthCore.Results.Causality.ClosedEsseSourceGod.Solution
 public import TruthCore.Results.Causality.ClosedGroundingRoots.Solution
+public import TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Solution
 public import TruthCore.Results.Causality.CogitoCapacityInterface.Solution
 public import TruthCore.Results.Causality.CogitoNecessaryConcrete.Solution
 public import TruthCore.Results.Causality.ComingToBeHorns.Solution
@@ -380,6 +381,7 @@ public import TruthCore.Results.Causality.RootIntellectWillReduced.Solution
 public import TruthCore.Results.Causality.RootIntellectWillStrictPureAct.Solution
 public import TruthCore.Results.Causality.RootMultiplication.Solution
 public import TruthCore.Results.Causality.RootNonlimitationFromCompositionKinds.Solution
+public import TruthCore.Results.Causality.RootPerfectionExclusion.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWill.Solution
 public import TruthCore.Results.Causality.RootPositiveIntellectWillControl.Solution
 public import TruthCore.Results.Causality.RootPurity.Solution

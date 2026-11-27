@@ -1,0 +1,27 @@
+# Lane F (#2103): connect the Cogito's necessary concrete ground-ancestor to
+# the root-path NecessaryConcreteAt on the same profile.
+[batch]
+vocab = "TruthCore.Causality.CogitoNecessaryConcrete"
+results = "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete"
+
+[[argument]]
+id = "The Cogito's necessary concrete ground-ancestor witnesses a necessary concretum at w"
+theorem = "necessaryConcreteOfThinkerAncestor"
+premises = ["da31142e-34bd-579d-82a7-9b3745d534e6"]
+conclusion = "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+axioms = []
+transcription = "instantiation"
+sense_bridges = [{ term = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE", from = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_1", to = "A_THOUGHT_OCCURS_VERSUS_SOMETHING_CONCRETE_2", statement_id = "da31142e-34bd-579d-82a7-9b3745d534e6", role = "premise" }]
+rule = "Instantiate the vocabulary projection necessaryConcreteAt_of_ancestor"
+meaning = "On one profile m, world w and occurrence data, the premise supplies some bearer b of an occurring episode e and a ground-ancestor x of b that is concrete under m.concrete, exists at w and exists at every world accessible from w. The conclusion keeps that same x with the same three properties and drops b, e and the ancestry fact. The premise is the sense bridge from a thought occurring to something concrete existing: it asserts both of one witness chain, and the proof uses exactly its concrete-existence part. Necessity stays accessibility-relative and de re; nothing about all-world existence, uniqueness, underivedness or God follows. Declared an instantiation: it adds no warrant beyond the premise."
+description = "Instantiation of the vocabulary lemma necessaryConcreteAt_of_ancestor. It places the Cogito's necessary-ancestor conclusion below the root-path NecessaryConcreteAt without adding support beyond it."
+
+[[argument]]
+id = "Thinker-local anti-brute-root closes the contingent horn of the Cogito fork"
+theorem = "necessaryAncestorOfFork"
+premises = ["7e9ca71a-643f-5bbc-8622-80144bd05480", "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae"]
+conclusion = "da31142e-34bd-579d-82a7-9b3745d534e6"
+axioms = []
+rule = "Case analysis on the fork; the anti-brute-root principle refutes the contingent-root horn"
+meaning = "On one profile m, world w and occurrence data. The fork 7e9ca71a gives either a necessary concrete ground-ancestor of some bearer of an occurring thought, or a ground-ancestor x of such a bearer that is concrete, exists at w, is contingent at w and has no actual concrete ground at w. The thinker-local anti-brute-root principle f8dafcc7 gives every such contingent ancestor an actual concrete ground at w, which contradicts the second horn. So the first horn holds. No excluded middle is used in this step; it enters the fork's own derivations. The fork is a derived statement (from the Cogito premises, thinker-local accessibility and excluded middle) and f8dafcc7 is an open premise. The step separates the existing necessary-ancestor route into the fork and its anti-brute-root step, with the same senses (thinker-local ancestry, accessibility-relative de re necessity)."
+description = "Derives the Cogito's necessary concrete ground-ancestor from the thinker-local fork and the thinker-local anti-brute-root principle by refuting the contingent-root horn. Conditional on the derived fork 7e9ca71a and the open premise f8dafcc7."
