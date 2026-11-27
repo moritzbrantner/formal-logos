@@ -1,0 +1,18 @@
+{
+  "id": "9b461d83-561b-411d-8e77-7cb3e27abf30",
+  "label": "Exact deterministic transcript laws separate the blind history test from the supplied audit",
+  "paraphrase": "In the two-bit history surrogate, for every finite length and deterministic adaptive policy on the blind interface, the exact probability law of the transcript fails to identify the stipulated past-event marker. The exact transcript law of the supplied one-action audit identifies it on the same inputs. Each model has a deterministic readout, so those laws are point masses, with no prior across models. Real historical truth, admissibility, stochastic matching and epistemic warrant are open.",
+  "lean_declaration": "TruthCore.Science.HistoryObservationLaws.HistoricalBoundary",
+  "definition_ids": [
+    "4a52e22b-c56f-4814-9661-9ef540301cb4",
+    "7011ffa0-1d24-4e36-84e2-714a38cbdeac",
+    "a6e1ef95-8138-5cfc-8fe2-1202ba3b9a5c",
+    "68f277cc-e5fc-4665-86b5-2fed6d82cdba",
+    "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"
+  ],
+  "connection_plan": {
+    "target_statement_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "missing_bridge": "Apply the historical fiber test to the reliability objection to the brute-contingency rival of the local existence PSR.",
+    "blocker": "No admitted real replacement pair with matching readouts and opposed content is tied to denial of the local existence PSR. The loss of exact identification would still need a bridge to the target method’s epistemic entitlement."
+  }
+}
