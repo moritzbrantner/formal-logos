@@ -1,0 +1,10 @@
+{
+  "id": "bdaacf0c-13c1-4b1a-884b-a654c8983053",
+  "label": "Test by BruteContingencyParity.b2SupportControls (6c6191dc)",
+  "subject_kind": "result",
+  "subject_id": "4c79358e-1872-41a5-8a34-7c57eaeec756",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6c6191dc-082d-4417-b675-b32d4fab4573",
+  "note": "Omit the exclusion of reasons about the very contingent bearer. At true the first mover's own intrinsic token covers its existence in bruteFirst. Coverage and the reason-to-cause clause for reasons about other bearers hold, while the mover lacks a distinct CAUSE_2 of esse."
+}

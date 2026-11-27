@@ -1,0 +1,10 @@
+{
+  "id": "fe0a65f4-5a7d-4a8e-8ebd-cf3a2d274425",
+  "label": "Test by BruteContingencyParity.b2SupportControls (0e44041e)",
+  "subject_kind": "result",
+  "subject_id": "4c79358e-1872-41a5-8a34-7c57eaeec756",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0e44041e-4591-4aad-857a-f6748032f142",
+  "note": "Omit the bridge from an existence reason about another bearer to that bearer causing esse. At true the reason model assigns the contingent mover an occasion token about the moved bearer in bruteFirst, while the esse-cause relation is empty. Contingent-existence coverage and the no-self clause hold."
+}
