@@ -1,0 +1,16 @@
+{
+  "id": "31640849-834c-4ac7-ae5e-1c728a5d8503",
+  "label": "Worldwise deletion excludes a necessary concretum at any world of the same profile",
+  "paraphrase": "Closed result about the formal readings, attribution deferred: for every profile m and world w, if worldwise deletion holds for m's Ontic and concreteness predicate (every concrete individual existing at any world v is absent from some world accessible from v, 2f055224), then no concrete individual exists at w and at every world accessible from w (b19ffd92 fails at w). Deletion at w applied to the would-be witness gives an accessible world lacking it. Neither reading is asserted; the certificate shows only that they cannot both hold at one world of one profile.",
+  "lean_declaration": "TruthCore.Causality.OriginDeletionIncompatibility.DeletionExcludesNecessaryConcrete",
+  "definition_ids": [
+    "10a7b462-bc9a-4ec6-ab78-1242816a5331",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "baddf770-36bf-542f-bb3c-2297342d5452"
+  ],
+  "disambiguation_ids": [
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

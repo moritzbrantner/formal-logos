@@ -1,0 +1,13 @@
+{
+  "id": "de1f6c17-7af8-455c-8660-d1f9bfcb3878",
+  "label": "There cannot be no holder of another that is MOTION_3 held in no respect",
+  "paraphrase": "Analyst conclusion, attribution deferred, the MOTION_3 sibling of the absolute First-Way conclusion c1b68c21: it is impossible that there be no f that presently actualizes some other x in some respect (holding, definition 6ab9a832) and is MOTION_3 held (definition ea1904bc) in no respect. It is the First-Way reading with being moved read as MOTION_3 holding and moving read as holding another (firstUnheldHolder_iff_reading). It says nothing of potency, necessity, uniqueness or God, and nothing about MOTION_1 motion.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.FirstUnheldHolderCannotBeLacking",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}
