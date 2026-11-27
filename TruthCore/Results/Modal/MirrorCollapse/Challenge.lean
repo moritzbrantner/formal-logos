@@ -28,17 +28,18 @@ open TruthCore.Causality.SourceIntellectControls.ProfileControls (Determination)
 
 /-! ## B. The mirror argument -/
 
-/-- The chiral mirror argument. With the four premises of `notCollapsedFromMirror`
-the mirror image is accessible and has the opposite handedness; an actual
-concrete being that exists only at worlds sharing the actual handedness is absent
-there, so it is contingent. -/
+/-- The chiral mirror argument, mirror in sense MIRROR_2 (CPT conjugation). With
+essence-grounded possibility, factivity, preservation by the CPT map and reversed
+handedness at the CPT image, the CPT image is accessible and has the opposite
+handedness; an actual concrete being that exists at the CPT image only if that
+image keeps the actual handedness is absent there, so it is contingent. -/
 theorem contingentFromChiralMirror {W B : Type} (m : Profile W B) (w : W)
-    (Essential : B → (W → Prop) → Prop) (σ : W → W) (H : W → Prop)
+    (Essential : B → (W → Prop) → Prop) (τ : CPTConjugation W) (H : W → Prop)
     (hEM : EssenceGroundedWorldPossibility m.ontic w Essential)
     (hFact : EssentialTruthsHoldAt Essential w)
-    (hPres : EssentialTruthsPreservedByMirrorAt Essential σ w)
-    (hRev : HandednessReversedAt σ H w)
-    (hChiral : ChiralIndividualAt m w H) :
+    (hPres : EssentialTruthsPreservedByCPTAt Essential τ w)
+    (hRev : HandednessReversedByCPTAt τ H w)
+    (hChiral : ChiralAtCPTImageAt m τ w H) :
     SomeActualContingentAt m w := by
   sorry
 

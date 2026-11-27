@@ -59,22 +59,37 @@ theorem notCollapsedFromMirror {W B : Type} (o : Ontic W B) (w : W)
   have hContra : H w ↔ ¬ H w := hSame.symm.trans hRev
   exact (iff_not_self hContra)
 
-/-- The chiral mirror argument. With the four premises of `notCollapsedFromMirror`
+/-- Lean-only (any world map). With the four premises of `notCollapsedFromMirror`
 the mirror image is accessible and has the opposite handedness; an actual
-concrete being that exists only at worlds sharing the actual handedness is absent
-there, so it is contingent. -/
-theorem contingentFromChiralMirror {W B : Type} (m : Profile W B) (w : W)
+concrete being that exists at the mirror image only if the mirror image keeps the
+actual handedness is absent there, so it is contingent. -/
+theorem contingentFromMirrorImage {W B : Type} (m : Profile W B) (w : W)
     (Essential : B → (W → Prop) → Prop) (σ : W → W) (H : W → Prop)
     (hEM : EssenceGroundedWorldPossibility m.ontic w Essential)
     (hFact : EssentialTruthsHoldAt Essential w)
     (hPres : EssentialTruthsPreservedByMirrorAt Essential σ w)
     (hRev : HandednessReversedAt σ H w)
-    (hChiral : ChiralIndividualAt m w H) :
+    (hChiral : ChiralAtMirrorImageAt m σ w H) :
     SomeActualContingentAt m w := by
-  obtain ⟨x, hx, hxw, hOnly⟩ := hChiral
+  obtain ⟨x, hx, hxw, hLoc⟩ := hChiral
   have hAcc : m.ontic.frame.access w (σ w) := hEM _ fun y φ h => hPres y φ h (hFact y φ h)
   refine ⟨x, hx, hxw, σ w, hAcc, fun hxσ => ?_⟩
-  exact iff_not_self ((hOnly (σ w) hxσ).symm.trans hRev)
+  exact iff_not_self ((hLoc hxσ).symm.trans hRev)
+
+/-- The chiral mirror argument, mirror in sense MIRROR_2 (CPT conjugation). With
+essence-grounded possibility, factivity, preservation by the CPT map and reversed
+handedness at the CPT image, the CPT image is accessible and has the opposite
+handedness; an actual concrete being that exists at the CPT image only if that
+image keeps the actual handedness is absent there, so it is contingent. -/
+theorem contingentFromChiralMirror {W B : Type} (m : Profile W B) (w : W)
+    (Essential : B → (W → Prop) → Prop) (τ : CPTConjugation W) (H : W → Prop)
+    (hEM : EssenceGroundedWorldPossibility m.ontic w Essential)
+    (hFact : EssentialTruthsHoldAt Essential w)
+    (hPres : EssentialTruthsPreservedByCPTAt Essential τ w)
+    (hRev : HandednessReversedByCPTAt τ H w)
+    (hChiral : ChiralAtCPTImageAt m τ w H) :
+    SomeActualContingentAt m w :=
+  contingentFromMirrorImage m w Essential τ.image H hEM hFact hPres hRev hChiral
 
 /-- Lean-only (review probe, adopted). Under essence grounding necessity at `w`,
 essence-grounded possibility and factivity, preservation by the mirror is
@@ -154,7 +169,7 @@ theorem mirrorFork : MirrorForkCertificate := by
       exact hNone ⟨hPar.2 hPr, hPr⟩
   · intro W B m w E σ H hNec hFact hPres hRev hChiral hEM
     obtain ⟨x, hx, hxw, v, hv, hnv⟩ :=
-      contingentFromChiralMirror m w E σ H hEM hFact hPres hRev hChiral
+      contingentFromMirrorImage m w E σ H hEM hFact hPres hRev hChiral
     exact hnv (hNec x hx hxw v hv)
   · intro W B o w E σ hEGN hEM hFact
     exact pres_iff_mirrorPossible o w E σ hEGN hEM hFact
@@ -178,11 +193,11 @@ theorem mirrorFork : MirrorForkCertificate := by
 
 /-! ## Mirror controls -/
 
-theorem mirror_reversed : HandednessReversedAt not handed true := by
-  simp [HandednessReversedAt, handed]
+theorem mirror_reversed : HandednessReversedByCPTAt cptNot handed true := by
+  simp [HandednessReversedByCPTAt, HandednessReversedAt, handed, cptNot]
 
-theorem id_notReversed : ¬ HandednessReversedAt id handed true := by
-  simp [HandednessReversedAt, handed]
+theorem id_notReversed : ¬ HandednessReversedByCPTAt cptId handed true := by
+  simp [HandednessReversedByCPTAt, HandednessReversedAt, handed, cptId]
 
 theorem emUniv {E : Unit → (Bool → Prop) → Prop} :
     EssenceGroundedWorldPossibility (cProfile univAccess).ontic true E :=
@@ -198,12 +213,12 @@ theorem factOriented : EssentialTruthsHoldAt orientedEss true := by
   subst h
   rfl
 
-theorem notPresOriented : ¬ EssentialTruthsPreservedByMirrorAt orientedEss not true := by
+theorem notPresOriented : ¬ EssentialTruthsPreservedByCPTAt orientedEss cptNot true := by
   intro h
   have := h () (fun v => v = true) rfl rfl
-  cases this
+  simp [cptNot] at this
 
-theorem presNoEss {σ : Bool → Bool} : EssentialTruthsPreservedByMirrorAt noEss σ true :=
+theorem presNoEss {τ : CPTConjugation Bool} : EssentialTruthsPreservedByCPTAt noEss τ true :=
   fun _ _ h => h.elim
 
 theorem factNoEss : EssentialTruthsHoldAt noEss true := fun _ _ h => h.elim
@@ -215,17 +230,17 @@ theorem emAbsurd : EssenceGroundedWorldPossibility (cProfile onlyActual).ontic t
 theorem notFactAbsurd : ¬ EssentialTruthsHoldAt absurdEss true :=
   fun h => h () (fun _ => False) rfl
 
-theorem presAbsurd : EssentialTruthsPreservedByMirrorAt absurdEss not true := by
+theorem presAbsurd : EssentialTruthsPreservedByCPTAt absurdEss cptNot true := by
   intro x φ h hw
   change φ = _ at h
   subst h
   exact hw.elim
 
-theorem chiral {acc : Bool → Bool → Prop} : ChiralIndividualAt (cProfile acc) true handed :=
-  ⟨(), trivial, rfl, fun v hv => by
-    change v = true at hv
-    subst hv
-    exact Iff.rfl⟩
+theorem chiral {acc : Bool → Bool → Prop} : ChiralAtCPTImageAt (cProfile acc) cptNot true handed :=
+  ⟨(), trivial, rfl, fun h => Bool.noConfusion (h : false = true)⟩
+
+theorem chiralId {acc : Bool → Bool → Prop} : ChiralAtCPTImageAt (cProfile acc) cptId true handed :=
+  ⟨(), trivial, rfl, fun _ => Iff.rfl⟩
 
 theorem univ_contingent : SomeActualContingentAt (cProfile univAccess) true :=
   ⟨(), trivial, rfl, false, trivial, by simp [cProfile]⟩
@@ -234,8 +249,8 @@ theorem onlyActual_notContingent : ¬ SomeActualContingentAt (cProfile onlyActua
   rintro ⟨_, -, -, v, hv, hnv⟩
   exact hnv hv
 
-theorem mirror3_reversed : HandednessReversedAt (Option.map not) handed3 (some true) := by
-  simp [HandednessReversedAt, handed3]
+theorem mirror3_reversed : HandednessReversedByCPTAt cpt3 handed3 (some true) := by
+  simp [HandednessReversedByCPTAt, HandednessReversedAt, handed3, cpt3]
 
 /-- The controls of the chiral mirror argument. -/
 theorem mirrorControls : MirrorControls := by
@@ -243,32 +258,30 @@ theorem mirrorControls : MirrorControls := by
     ⟨emOriented, factOriented, notPresOriented, mirror_reversed, chiral,
       onlyActual_notContingent⟩,
     ⟨fun h => ?_, factNoEss, presNoEss, mirror_reversed, chiral, onlyActual_notContingent⟩,
-    ⟨emOriented, factOriented, fun x φ h hw => by simpa using hw, id_notReversed, chiral,
-      onlyActual_notContingent⟩,
+    ⟨emOriented, factOriented, fun x φ h hw => by simpa [cptId] using hw, id_notReversed,
+      chiralId, onlyActual_notContingent⟩,
     ⟨emAbsurd, notFactAbsurd, presAbsurd, mirror_reversed, chiral, onlyActual_notContingent⟩,
     ⟨fun _ _ => trivial, factNoEss, presNoEss, mirror_reversed, ?_, ?_⟩,
     ⟨emUniv, factOriented, notPresOriented, mirror_reversed, chiral, univ_contingent⟩,
     ⟨fun h => ?_, fun _ _ h => h.elim, fun _ _ h => h.elim, mirror3_reversed, ?_, ?_⟩,
-    ⟨emUniv, factNoEss, presNoEss, id_notReversed, chiral, univ_contingent⟩,
+    ⟨emUniv, factNoEss, presNoEss, id_notReversed, chiralId, univ_contingent⟩,
     ⟨emUniv, notFactAbsurd, presAbsurd, mirror_reversed, chiral, univ_contingent⟩,
     ⟨fun _ _ => trivial, fun _ _ h => h.elim, fun _ _ h => h.elim, mirror3_reversed, ?_, ?_⟩⟩
   · have := h false (fun _ _ hx => hx.elim)
     cases this
-  · rintro ⟨_, -, -, hall⟩
-    have := (hall false trivial).2 (rfl : handed true)
-    cases this
+  · rintro ⟨_, -, -, hLoc⟩
+    have := (hLoc trivial).2 (rfl : handed true)
+    simp [handed, cptNot] at this
   · rintro ⟨_, -, -, v, -, hnv⟩
     exact hnv trivial
   · exact absurd (h none (fun _ _ hx => hx.elim)) (by simp [threeProfile])
-  · refine ⟨(), trivial, rfl, fun v hv => ?_⟩
-    change v = some true at hv
-    subst hv
-    exact Iff.rfl
+  · refine ⟨(), trivial, rfl, fun h => ?_⟩
+    simp [threeProfile, cpt3] at h
   · exact ⟨(), trivial, rfl, some false, by simp [threeProfile], by simp [threeProfile]⟩
-  · rintro ⟨_, -, -, hall⟩
-    have := (hall none (by simp [threeUnivProfile])).2 rfl
-    simp [handed3] at this
-  · exact ⟨(), trivial, by simp [threeUnivProfile], some false, trivial,
+  · rintro ⟨_, -, -, hLoc⟩
+    have := (hLoc (by simp [threeUnivProfile, cpt3])).2 rfl
+    simp [handed3, cpt3] at this
+  · exact ⟨(), trivial, by simp [threeUnivProfile], none, trivial,
       by simp [threeUnivProfile]⟩
 
 /-! ## A. The relation-of-reason account -/

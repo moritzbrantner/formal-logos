@@ -45,9 +45,12 @@ world, preservation of the actual world's essential truths by the mirror, and
 reversal of handedness by the mirror. A necessitarian who keeps all four
 contradicts actual modal collapse (`RouteCollapsedAt`); denying each premise is
 one of the brief's options (non-qualitative nature; no distinct mirror image;
-brute impossibility). With a fifth premise, a chiral individual
-(`ChiralIndividualAt`), the same four give a contingent actual concrete being
-(`SomeActualContingentAt`), so they also press concrete necessitarianism.
+brute impossibility). With a fifth premise, a chiral individual at the mirror
+image (`ChiralAtMirrorImageAt`), the same four give a contingent actual concrete
+being (`SomeActualContingentAt`), so they also press concrete necessitarianism.
+The registered argument takes the mirror in sense MIRROR_2 (CPT conjugation,
+`CPTConjugation`); MIRROR_1 (spatial reflection P, `SpatialReflection`) is a
+distinct type.
 -/
 
 @[expose] public section
@@ -180,14 +183,63 @@ image (`σ w = w`) denies it. -/
 def HandednessReversedAt (σ : W → W) (H : W → Prop) (w : W) : Prop :=
   H (σ w) ↔ ¬ H w
 
-/-- OPEN premise (a chiral individual): some actual concrete being exists only at
-worlds that share the actual handedness. Example: an actual molecule of one
-enantiomer, if being of its chemical kind is essential to it and its mirror image
-is a molecule of the other kind. A haecceitist who holds that the same molecule
-exists, mirrored, at the mirror image denies it. -/
-def ChiralIndividualAt (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B) (w : W)
-    (H : W → Prop) : Prop :=
-  ∃ x, m.concrete x ∧ m.ontic.ExistsAt w x ∧ ∀ v, m.ontic.ExistsAt v x → (H v ↔ H w)
+/-- OPEN premise (a chiral individual, local to the mirror image): some actual
+concrete being exists at the mirror image `σ w` only if `σ w` has the actual
+handedness. With reversed handedness it is equivalent to the being's absence from
+`σ w`, and the absence implies it. It says nothing about any other world.
+Example: an actual molecule of one enantiomer, if being of its chemical kind is
+essential to it and its only candidate at the mirror image is its mirror
+counterpart, a molecule of the other kind; then it is absent from `σ w`. A
+haecceitist who holds that the same molecule exists, mirrored, at the mirror
+image denies it. The earlier global form (the being exists only at worlds sharing
+the actual handedness) is not supported by this example and is not used. -/
+def ChiralAtMirrorImageAt (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B)
+    (σ : W → W) (w : W) (H : W → Prop) : Prop :=
+  ∃ x, m.concrete x ∧ m.ontic.ExistsAt w x ∧
+    (m.ontic.ExistsAt (σ w) x → (H (σ w) ↔ H w))
+
+/-! ### The two mirror senses (DISAMB `MIRROR`)
+
+The generic premises above take any world map `σ`. The registered argument fixes
+the sense of the mirror: MIRROR_2, CPT conjugation. MIRROR_1, spatial reflection
+P, is recorded as a distinct type so that a statement in one sense cannot be
+used for the other. -/
+
+/-- MIRROR_1 (PRIMITIVE): spatial reflection P as a map on worlds. `image v` is `v`
+with every spatial arrangement reflected and nothing else changed. Lean fixes only
+the type; which features the map preserves is not assumed. Under it, preservation
+of essential truths is doubtful on dispositional essentialism, since the weak
+interaction is not invariant under P. -/
+structure SpatialReflection (W : Type) where
+  /-- The P-image of each world. -/
+  image : W → W
+
+/-- MIRROR_2 (PRIMITIVE): CPT conjugation as a map on worlds. `image v` is the CPT
+conjugate of `v`: spatial reflection, charge conjugation and time reversal
+together. Lean fixes only the type; which features the map preserves is not
+assumed. Local Lorentz-invariant quantum field theory is invariant under it
+(physics background, navigation only). -/
+structure CPTConjugation (W : Type) where
+  /-- The CPT image of each world. -/
+  image : W → W
+
+/-- OPEN premise, MIRROR_2: the CPT image of `w` satisfies every essential truth
+`w` satisfies. `EssentialTruthsPreservedByMirrorAt` at the CPT map. -/
+def EssentialTruthsPreservedByCPTAt (Essential : B → (W → Prop) → Prop)
+    (τ : CPTConjugation W) (w : W) : Prop :=
+  EssentialTruthsPreservedByMirrorAt Essential τ.image w
+
+/-- OPEN premise, MIRROR_2: the CPT image of `w` has the opposite handedness.
+`HandednessReversedAt` at the CPT map. -/
+def HandednessReversedByCPTAt (τ : CPTConjugation W) (H : W → Prop) (w : W) : Prop :=
+  HandednessReversedAt τ.image H w
+
+/-- OPEN premise, MIRROR_2: some actual concrete being exists at the CPT image of
+`w` only if that image has the actual handedness. `ChiralAtMirrorImageAt` at the
+CPT map. -/
+def ChiralAtCPTImageAt (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B)
+    (τ : CPTConjugation W) (w : W) (H : W → Prop) : Prop :=
+  ChiralAtMirrorImageAt m τ.image w H
 
 /-- A rule `ρ` singles out `w` among the worlds that violate no essential truth:
 `ρ` holds at `w` and at no other such world. A necessitating selection rule in
@@ -301,7 +353,8 @@ def rrModel : TruthCore.Explanation.ExistencePSR.Model Bool Bool := ⟨rrOntic, 
 
 /-! ### B. The mirror carrier
 
-Worlds `Bool`, actual world `true`, one concrete being, `σ = not` (or `id`), and
+Worlds `Bool`, actual world `true`, one concrete being, the mirror `not` (or `id`)
+as a `CPTConjugation` value (`cptNot`, `cptId`), and
 handedness `H v := v = true`. The three-world carriers add `none`, a world that
 no essential truth excludes; the mirror there is `Option.map not`. -/
 
@@ -347,6 +400,15 @@ def threeUnivProfile (ex : Option Bool → Prop) : Profile (Option Bool) Unit wh
   ontic := ⟨⟨fun _ _ => True⟩, fun v _ => ex v, fun _ _ _ => False⟩
   concrete := fun _ => True  -- category-constant: intended (one stipulated concrete being; the model tests modal structure, not the concrete/abstract line)
   grounds := fun _ _ _ => False
+
+/-- The mirror `not` on the two-world carrier, as a CPT map. -/
+def cptNot : CPTConjugation Bool := ⟨not⟩
+
+/-- The identity as a CPT map (option 2: the mirror image is the world itself). -/
+def cptId : CPTConjugation Bool := ⟨id⟩
+
+/-- The mirror on the three-world carrier, as a CPT map. -/
+def cpt3 : CPTConjugation (Option Bool) := ⟨Option.map not⟩
 
 /-- No essential truths on the three-world carrier. -/
 def noEss3 (_ : Unit) (_ : Option Bool → Prop) : Prop := False
@@ -452,7 +514,7 @@ account.
    and their parity in purity, no actual root has either token. This concerns
    real determinations (`Has`), not ESSENCE_5 truths.
 8. **Concrete necessitarianism.** If every actual concrete being is necessary,
-   and there is a chiral individual, then with factivity, preservation and
+   and some actual concrete being is chiral at the mirror image, then with factivity, preservation and
    reversed handedness, world-level essence-grounded possibility fails: the
    concrete necessitarian, not only the full-collapse necessitarian, must take
    one of the fork's options (or deny the chiral individual).
@@ -498,7 +560,7 @@ def MirrorForkCertificate : Prop :=
       (H : W → Prop),
     TruthCore.Causality.ContingentBeingNode.EveryActualConcreteNecessaryAt m w →
     EssentialTruthsHoldAt E w → EssentialTruthsPreservedByMirrorAt E σ w →
-    HandednessReversedAt σ H w → ChiralIndividualAt m w H →
+    HandednessReversedAt σ H w → ChiralAtMirrorImageAt m σ w H →
     ¬ EssenceGroundedWorldPossibility m.ontic w E) ∧
   (∀ (W B : Type) (o : Ontic W B) (w : W) (E : B → (W → Prop) → Prop) (σ : W → W),
     EssenceGroundsNecessityAt o w E → EssenceGroundedWorldPossibility o w E →
@@ -517,8 +579,10 @@ def MirrorForkCertificate : Prop :=
 
 /-- Controls for the chiral mirror argument (the companion of
 `contingentFromChiralMirror`). `P1`…`P5` are essence-grounded possibility,
-factivity, preservation, reversal and a chiral individual at the actual world;
-`C` is that some actual concrete being is contingent.
+factivity, preservation, reversal and a chiral individual at the mirror image,
+all at the actual world and, for the mirror, in sense MIRROR_2 (the CPT map
+`cptNot`, `cptId` or `cpt3`; the identity map in rows 3 and 8); `C` is that some
+actual concrete being is contingent.
 
 * Row 0: all five premises and `C` (universal access, no essential truths, the
   one being present only at the actual world).
@@ -535,8 +599,9 @@ factivity, preservation, reversal and a chiral individual at the actual world;
   7. three worlds, an unexcluded inaccessible world (possibility fails);
   8. the identity mirror with universal access (reversal fails);
   9. the unsatisfiable essential truth with universal access (factivity fails);
-  10. three worlds, the being present at the actual world and at the unexcluded
-      world `none`, absent at the mirror image (no chiral individual).
+  10. three worlds, the being present at the actual world and at its mirror
+      image, absent at the unexcluded world `none` (no chiral individual at the
+      mirror image).
   Rows 6 and 9 violate essence grounding necessity (`EssenceGroundsNecessityAt`),
   which is the source of factivity. Under that principle, essence-grounded
   possibility and factivity, preservation is equivalent to the accessibility of
@@ -545,69 +610,69 @@ factivity, preservation, reversal and a chiral individual at the actual world;
 def MirrorControls : Prop :=
   -- row 0
   (EssenceGroundedWorldPossibility (cProfile univAccess).ontic true noEss ∧
-    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByMirrorAt noEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile univAccess) true handed ∧
+    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByCPTAt noEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile univAccess) cptNot true handed ∧
     SomeActualContingentAt (cProfile univAccess) true) ∧
   -- row 1
   (EssenceGroundedWorldPossibility (cProfile onlyActual).ontic true orientedEss ∧
     EssentialTruthsHoldAt orientedEss true ∧
-    ¬ EssentialTruthsPreservedByMirrorAt orientedEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile onlyActual) true handed ∧
+    ¬ EssentialTruthsPreservedByCPTAt orientedEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile onlyActual) cptNot true handed ∧
     ¬ SomeActualContingentAt (cProfile onlyActual) true) ∧
   -- row 2
   (¬ EssenceGroundedWorldPossibility (cProfile onlyActual).ontic true noEss ∧
-    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByMirrorAt noEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile onlyActual) true handed ∧
+    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByCPTAt noEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile onlyActual) cptNot true handed ∧
     ¬ SomeActualContingentAt (cProfile onlyActual) true) ∧
   -- row 3
   (EssenceGroundedWorldPossibility (cProfile onlyActual).ontic true orientedEss ∧
     EssentialTruthsHoldAt orientedEss true ∧
-    EssentialTruthsPreservedByMirrorAt orientedEss id true ∧
-    ¬ HandednessReversedAt id handed true ∧ ChiralIndividualAt (cProfile onlyActual) true handed ∧
+    EssentialTruthsPreservedByCPTAt orientedEss cptId true ∧
+    ¬ HandednessReversedByCPTAt cptId handed true ∧ ChiralAtCPTImageAt (cProfile onlyActual) cptId true handed ∧
     ¬ SomeActualContingentAt (cProfile onlyActual) true) ∧
   -- row 4
   (EssenceGroundedWorldPossibility (cProfile onlyActual).ontic true absurdEss ∧
     ¬ EssentialTruthsHoldAt absurdEss true ∧
-    EssentialTruthsPreservedByMirrorAt absurdEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile onlyActual) true handed ∧
+    EssentialTruthsPreservedByCPTAt absurdEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile onlyActual) cptNot true handed ∧
     ¬ SomeActualContingentAt (cProfile onlyActual) true) ∧
   -- row 5
   (EssenceGroundedWorldPossibility fixedProfile.ontic true noEss ∧
-    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByMirrorAt noEss not true ∧
-    HandednessReversedAt not handed true ∧ ¬ ChiralIndividualAt fixedProfile true handed ∧
+    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByCPTAt noEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ¬ ChiralAtCPTImageAt fixedProfile cptNot true handed ∧
     ¬ SomeActualContingentAt fixedProfile true) ∧
   -- row 6
   (EssenceGroundedWorldPossibility (cProfile univAccess).ontic true orientedEss ∧
     EssentialTruthsHoldAt orientedEss true ∧
-    ¬ EssentialTruthsPreservedByMirrorAt orientedEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile univAccess) true handed ∧
+    ¬ EssentialTruthsPreservedByCPTAt orientedEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile univAccess) cptNot true handed ∧
     SomeActualContingentAt (cProfile univAccess) true) ∧
   -- row 7
   (¬ EssenceGroundedWorldPossibility (threeProfile fun v => v = some true).ontic (some true)
       noEss3 ∧
     EssentialTruthsHoldAt noEss3 (some true) ∧
-    EssentialTruthsPreservedByMirrorAt noEss3 (Option.map not) (some true) ∧
-    HandednessReversedAt (Option.map not) handed3 (some true) ∧
-    ChiralIndividualAt (threeProfile fun v => v = some true) (some true) handed3 ∧
+    EssentialTruthsPreservedByCPTAt noEss3 cpt3 (some true) ∧
+    HandednessReversedByCPTAt cpt3 handed3 (some true) ∧
+    ChiralAtCPTImageAt (threeProfile fun v => v = some true) cpt3 (some true) handed3 ∧
     SomeActualContingentAt (threeProfile fun v => v = some true) (some true)) ∧
   -- row 8
   (EssenceGroundedWorldPossibility (cProfile univAccess).ontic true noEss ∧
-    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByMirrorAt noEss id true ∧
-    ¬ HandednessReversedAt id handed true ∧ ChiralIndividualAt (cProfile univAccess) true handed ∧
+    EssentialTruthsHoldAt noEss true ∧ EssentialTruthsPreservedByCPTAt noEss cptId true ∧
+    ¬ HandednessReversedByCPTAt cptId handed true ∧ ChiralAtCPTImageAt (cProfile univAccess) cptId true handed ∧
     SomeActualContingentAt (cProfile univAccess) true) ∧
   -- row 9
   (EssenceGroundedWorldPossibility (cProfile univAccess).ontic true absurdEss ∧
     ¬ EssentialTruthsHoldAt absurdEss true ∧
-    EssentialTruthsPreservedByMirrorAt absurdEss not true ∧
-    HandednessReversedAt not handed true ∧ ChiralIndividualAt (cProfile univAccess) true handed ∧
+    EssentialTruthsPreservedByCPTAt absurdEss cptNot true ∧
+    HandednessReversedByCPTAt cptNot handed true ∧ ChiralAtCPTImageAt (cProfile univAccess) cptNot true handed ∧
     SomeActualContingentAt (cProfile univAccess) true) ∧
   -- row 10
-  (EssenceGroundedWorldPossibility (threeUnivProfile fun v => v ≠ some false).ontic (some true)
+  (EssenceGroundedWorldPossibility (threeUnivProfile fun v => v ≠ none).ontic (some true)
       noEss3 ∧
     EssentialTruthsHoldAt noEss3 (some true) ∧
-    EssentialTruthsPreservedByMirrorAt noEss3 (Option.map not) (some true) ∧
-    HandednessReversedAt (Option.map not) handed3 (some true) ∧
-    ¬ ChiralIndividualAt (threeUnivProfile fun v => v ≠ some false) (some true) handed3 ∧
-    SomeActualContingentAt (threeUnivProfile fun v => v ≠ some false) (some true))
+    EssentialTruthsPreservedByCPTAt noEss3 cpt3 (some true) ∧
+    HandednessReversedByCPTAt cpt3 handed3 (some true) ∧
+    ¬ ChiralAtCPTImageAt (threeUnivProfile fun v => v ≠ none) cpt3 (some true) handed3 ∧
+    SomeActualContingentAt (threeUnivProfile fun v => v ≠ none) (some true))
 
 end TruthCore.Modal.MirrorCollapse

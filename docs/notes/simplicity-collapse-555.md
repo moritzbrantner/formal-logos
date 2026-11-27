@@ -428,9 +428,16 @@ apprehends and acts for reasons, which is the cognition lane's question.
 ### B. The mirror-world rule
 
 Setting: a world map `σ` (the global mirror) and a world feature `H` (global
-spatial handedness), DEF `3fc924f3`. Two readings of `σ` are recorded. **P**:
-plain spatial reflection. **CPT**: spatial reflection with charge conjugation and
-time reversal. Physics background (navigation only, no attributed claim): the
+spatial handedness), DEF `3fc924f3`. The two readings of `σ` are distinct
+senses with distinct Lean types (disambiguation `dec35f6f`, term MIRROR):
+**MIRROR_1 = P**, plain spatial reflection (`SpatialReflection`, DEF
+`567674e6`); **MIRROR_2 = CPT**, spatial reflection with charge conjugation and
+time reversal (`CPTConjugation`, DEF `7147bcb5`). The generic premises and the
+fork certificate take any map `σ` and are untagged; the registered argument is
+stated in MIRROR_2 only (premises `EssentialTruthsPreservedByCPTAt`,
+`HandednessReversedByCPTAt`, `ChiralAtCPTImageAt`, the generic premises at
+`τ.image`; argument `term_senses` MIRROR = MIRROR_2), so a P-premise cannot be
+used for it. No statement in MIRROR_1 is recorded. Physics background (navigation only, no attributed claim): the
 weak interaction is not invariant under P (Wu et al. 1957; V−A coupling), nor
 under CP, while local Lorentz-invariant quantum field theory is invariant under
 CPT. Both readings reverse spatial handedness. The owner's left/right example
@@ -444,8 +451,8 @@ constrain worlds. Four OPEN premises at the actual world
 | --- | --- | --- |
 | every world violating no essential truth is possible | `EssenceGroundedWorldPossibility` | option 3: the mirror image is impossible though no nature excludes it (brute); also denied by powers accounts. Humean recombination does not deny it; primitivism denies only the grounding |
 | every essential truth holds at `w` | `EssentialTruthsHoldAt` | the actual world violates a nature (not a live option where essence grounds necessity on a reflexive frame) |
-| the mirror image satisfies every essential truth `w` satisfies | `EssentialTruthsPreservedByMirrorAt` | option 1: some nature contains an orientation (for P, available at creaturely law-natures on dispositional essentialism) |
-| the mirror image has the opposite handedness | `HandednessReversedAt` | option 2: no distinct mirror image (relationalism about orientation) |
+| the mirror image satisfies every essential truth `w` satisfies | `EssentialTruthsPreservedByMirrorAt` (registered: `EssentialTruthsPreservedByCPTAt`, MIRROR_2) | option 1: some nature contains an orientation (for MIRROR_1 = P, available at creaturely law-natures on dispositional essentialism) |
+| the mirror image has the opposite handedness | `HandednessReversedAt` (registered: `HandednessReversedByCPTAt`, MIRROR_2) | option 2: no distinct mirror image (relationalism about orientation) |
 
 **The full-collapse form** (`notCollapsedFromMirror`, Lean-only, axiom-free):
 the four premises give `185ce448` (the route's world is not collapsed). It is not
@@ -454,23 +461,34 @@ registered: `185ce448` is not on a current root route, and no honest bridge from
 case itself shows why: a mirrored world can contain the same beings, so the
 contingency of a feature does not give the contingency of a being.
 
-**Registered argument** `contingentFromChiralMirror` (result `8d5ad56a`): the four
-premises and a **chiral individual** (`ChiralIndividualAt`: some actual concrete
-being exists only at worlds with the actual handedness) give `c94b5446` (some
-actual concrete being is CONTINGENT_1). Axiom-free. It is a conditional support
+**Registered argument** `contingentFromChiralMirror` (result `8d5ad56a`), mirror
+in sense MIRROR_2: the four premises at the CPT image and a **chiral individual
+at the CPT image** (`ChiralAtCPTImageAt`, statement `9331a979`: some actual
+concrete being exists at the CPT image only if that image keeps the actual
+handedness) give `c94b5446` (some actual concrete being is CONTINGENT_1).
+Axiom-free; the generic Lean-only `contingentFromMirrorImage` holds for any map. It is a conditional support
 option for `c94b5446`. It is **not** independent of modal intuition: its warrant
 is the same kind as the direct support for `c94b5446` (a judgment that some world
 is possible), here for the CPT-mirror world, plus the symmetry consideration that
 the mirror image violates no nature the actual world satisfies. The chirality premise
 has a stated positive rationale: an actual molecule of one enantiomer, if being of
-its chemical kind is essential to it and its mirror image is a molecule of the
-other kind (sortal essentialism, enantiomers as distinct kinds). Its denial is
-haecceitism about mirrored individuals (the same molecule exists, mirrored).
+its chemical kind is essential to it and its only candidate at the CPT image is
+its CPT counterpart, a molecule of the other kind (sortal essentialism,
+enantiomers as distinct kinds). That rationale supports the molecule's absence
+from the CPT image, which implies the premise; with reversed handedness the two
+are equivalent. It does **not** support the global form used before the Codex
+review of #2179 (`ChiralIndividualAt`: the being exists only at worlds with the
+actual handedness, statement `a0d94a8d`), which needed an unstated
+local-to-global bridge; that form was removed, not kept as a strong version. Its
+denial is haecceitism about mirrored individuals (the same molecule exists,
+mirrored).
 Comparator companion `mirrorControls` (propext only): a positive row; for each of
 the five premises a row where it alone fails, the other four hold and the
 conclusion fails (options 1–3 realized, factivity, and no chiral individual); and
 rows 6–10 where one premise fails, the other four hold and the conclusion still
-holds.
+holds (row 10: the being is present at `w` and at its mirror image, absent at
+the unexcluded world `none`). The mirror in every row is a `CPTConjugation`
+value (`cptNot`, `cptId`, `cpt3`).
 
 **Relocation probe: the load is the mirror world's possibility.** Factivity is
 supported by essence grounding necessity (`EssenceGroundsNecessityAt`). Under
@@ -490,8 +508,8 @@ creaturely natures, and the weak interaction is not reflection-invariant; the
 P-image of the actual world then violates an essential truth of a creaturely
 kind. That is **option 1 at a creature**, with independent physical support, and
 it takes no orientation in the source's nature. The argument's preservation
-premise is therefore to be read with σ = CPT; with σ = P it is doubtful on that
-view. On a Humean view of laws the P-image with mirrored laws may be possible.
+premise is therefore registered in sense MIRROR_2 (CPT) only; in sense MIRROR_1
+(P) it is doubtful on that view, and no statement or argument uses it. On a Humean view of laws the P-image with mirrored laws may be possible.
 
 **The fork, certified** (`mirrorFork`, result `28b64d7f`, registered certificate,
 placed by `tests` on `c94b5446`):
@@ -526,7 +544,8 @@ placed by `tests` on `c94b5446`):
    assumed; the mirror motivates it if purity is mirror-invariant. Clause 7 says
    nothing by itself about an orientation in a root's ESSENCE_5 nature.
 8. *Concrete necessitarianism.* If every actual concrete being is necessary and
-   some actual being is chiral, then with factivity, preservation and reversal,
+   some actual concrete being is chiral at the mirror image (`ChiralAtMirrorImageAt`,
+   the local form), then with factivity, preservation and reversal,
    essence-grounded possibility fails: the concrete necessitarian (the recorded
    rival of `c94b5446`), not only the full-collapse necessitarian, must take one
    of the options or deny chirality.
@@ -687,7 +706,8 @@ P2). Its findings, as reconstructed here:
   preservation as a separate warrant (repaired: `pres_iff_mirrorPossible`,
   fork clause 9);
 - parity fails under the plain reflection P (weak interaction), so σ is read as
-  CPT conjugation (repaired: P/CPT distinction in the premises and table);
+  CPT conjugation (repaired: P/CPT distinction in the premises and table; made
+  a sense distinction with distinct Lean types after the Codex review of #2179);
 - clause 7 reached no root nature without an ESSENCE_5-to-token bridge
   (repaired: open bridge `OrientationInNatureCarried`, fork clause 10);
 - fork clause 1 was presented as a cost although it restates collapse with
@@ -709,3 +729,18 @@ are repaired in `d111a0f8a`. The confirmation review of `d111a0f8a` found one
 residual: the cross-reference in causal-perfection-transfer.md (R2) still called
 lane P's commitment "descriptive". It now quotes lane P's claim and marks the
 "descriptive" judgment as lane M's own; no other new overstatement was found.
+
+The Codex review of #2179 (head `cb6d516c2`) raised two P1s, both repaired with
+a change of the registered argument's frozen type (regenerated Challenge, no
+independent Solution work existed). (1) The global chirality premise
+`ChiralIndividualAt` (statement `a0d94a8d`) was stronger than the molecular
+example supports: excluding the mirrored molecule gives at most absence from the
+mirror image. It is replaced by the local premise `ChiralAtCPTImageAt` (statement
+`9331a979`), which the absence implies and which still suffices with reversal;
+the global form is removed, so no `strengthens` pair is registered. Fork clause 8
+takes the generic local form `ChiralAtMirrorImageAt`. Control row 10 now keeps
+the being at the mirror image and drops it at `none`, since the old row satisfies
+the local premise. (2) P and CPT shared one primitive meaning. They are now
+senses MIRROR_1 and MIRROR_2 of disambiguation `dec35f6f` with distinct Lean
+types; the registered argument declares MIRROR = MIRROR_2, and `truth semantics`
+reports MIRROR_2 as its single sense.
