@@ -1,7 +1,7 @@
 {
   "id": "8ba44d60-7fbf-48e3-b052-26b0ac7688b1",
   "label": "Every GOD_4 with intrinsic self-knowledge HAS_INTELLECT_1",
-  "paraphrase": "OPEN recognition bridge, analyst formulation, attribution deferred: every g that is GOD_4 and has intrinsic self-knowledge (a true, actually apprehended, cognitively grounded content about itself) satisfies the unary HAS_INTELLECT_1. It reads such self-knowledge as sufficient for intellect; it does not say that intellect requires it.",
+  "paraphrase": "OPEN recognition bridge, analyst formulation, attribution deferred: every g that is GOD_4 and has intrinsic self-knowledge (a true, actually apprehended, cognitively grounded content about itself) satisfies the unary HAS_INTELLECT_1. It reads such self-knowledge as sufficient for intellect; it does not say that intellect requires it. It also carries the intellectual, as against sensory, grade of HAS_INTELLECT_1 (intellectual cognition as distinguished from sense): nothing in intrinsic self-knowledge itself distinguishes the grades.",
   "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.GodIntrinsicSelfKnowledgeIsIntellect",
   "definition_ids": [
     "88f9f6e8-997b-5f7d-afa1-c501954c3807",

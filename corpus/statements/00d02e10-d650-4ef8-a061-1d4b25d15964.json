@@ -1,7 +1,7 @@
 {
   "id": "00d02e10-d650-4ef8-a061-1d4b25d15964",
-  "label": "Every PURE_ACT_5 actual root has intrinsic self-knowledge",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: every actual concrete root of the selected grounding relation at w that is in potency in no respect of the independently supplied potency predicate has intrinsic self-knowledge: some content about it and correct of it that it itself actually apprehends, with cognitive grounding. It does not say that any root is in pure act, that there is a root, or that the root knows anything other than itself.",
+  "label": "Every PURE_ACT_1 actual root has intrinsic self-knowledge",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every actual concrete root of the selected grounding relation at w that is PURE_ACT_1 (in potency in no respect of the independently supplied potency predicate) has intrinsic self-knowledge: some content about it and correct of it that it itself actually apprehends, with cognitive grounding. It does not say that any root is in pure act, that there is a root, or that the root knows anything other than itself.",
   "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.PureActRootsKnowThemselves",
   "definition_ids": [
     "52352824-6be9-53c6-83d4-82fed9a08cbb",

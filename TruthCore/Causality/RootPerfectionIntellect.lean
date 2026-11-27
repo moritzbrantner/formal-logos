@@ -47,7 +47,8 @@ variable {W B D C R : Type}
 /-! ## A. Purity of intellect -/
 
 /-- OPEN, analyst formulation: the determination `wisdom` (subject-grounded
-apprehension, made intellectual only by the separate `WisdomSelfCapacity`
+apprehension, read as the bearer's own apprehension and not as productive or
+exemplary wisdom; made intellectual only by the separate `WisdomSelfCapacity`
 bridge) is a pure perfection in the sense of the supplied `Pure` parameter
 (DEF-PURE-PERFECTION). It is the same parameter as in
 `ActualRootHasEveryPureDetermination`, so no sense passage is involved. -/
@@ -56,7 +57,7 @@ def WisdomIsPure {D : Type} (Pure : D → Prop) (wisdom : D) : Prop := Pure wisd
 /-- Every actual concrete root at `w` that is PURE_ACT_1 (in potency in no
 respect of the independently supplied `InPotency`, DEF-INDEPENDENT-POTENCY) has
 intrinsic self-knowledge: a true, actually apprehended and cognitively grounded
-content about itself. -/
+content about itself. PURE_ACT_1 is DEF-PURE-ACT (`a49e4cf1`). -/
 def PureActRootsKnowThemselves (m : Profile W B) (w : W) (About Correct : C → B → Prop)
     (Apprehends CognitivelyGrounded : B → C → Prop) (InPotency : B → R → Prop) : Prop :=
   ∀ r, ActualRoot m w r → PureAct InPotency r →
@@ -66,7 +67,9 @@ def PureActRootsKnowThemselves (m : Profile W B) (w : W) (About Correct : C → 
 satisfies the unary `HasIntellect` of HAS_INTELLECT_1. It is the same premise
 shape as the one `godHasIntellectFromWholePowerWisdom` takes inline. It reads
 actual, true, cognitively grounded self-apprehension as sufficient for
-intellect; it does not say that intellect requires it. -/
+intellect; it does not say that intellect requires it. It also carries the
+intellectual (as against sensory) grade of HAS_INTELLECT_1: nothing in
+`IntrinsicSelfKnowledge` distinguishes the grades. -/
 def GodIntrinsicSelfKnowledgeIsIntellect (IsGod HasIntellect : B → Prop)
     (About Correct : C → B → Prop) (Apprehends CognitivelyGrounded : B → C → Prop) : Prop :=
   ∀ g, IsGod g → IntrinsicSelfKnowledge About Correct Apprehends CognitivelyGrounded g →
@@ -85,19 +88,39 @@ meeting three given demands together (`S` with three members, no pair
 excluded). Non-example: knowing a truth requires the lack of nothing.
 Distinguishing conditions: it is not actual non-co-occurrence, not the
 incompatibility of two descriptions, and not causal prevention. It is directed
-(from `d` to `S`) and need not be symmetric. Nothing makes it monotone in `S`
-or irreflexive. -/
+(from `d` to `S`) and need not be symmetric. The intended reading is upward
+closed in `S` (requiring the lack of `S` together implies requiring the lack
+of any superset together); that is not encoded, and nothing makes it
+irreflexive. It is a requirement of LACK; a requirement of presence (`d` needs
+`e` alongside it) is a different relation and is not expressible by it. -/
 def ExclusionFree (RequiresLack : D → Set D → Prop) (q : Set D) : Prop :=
   ∀ d ∈ q, ∀ S ⊆ q, ¬ RequiresLack d S
 
 /-- OPEN constitutive reading of the #2153 admissible family: a profile is
-admissible exactly when it is exclusion-free. Every incompatibility in the
-family is then grounded in what some member requires. It is neutral about
-purity. It denies irreducibly holistic incompatibilities: a joint prohibition
-that no member's requirement accounts for. -/
+admissible exactly when it is exclusion-free. Every inadmissibility is then
+attributed to a member's requirement of a lack. It is neutral about purity.
+Because exclusion-freedom is inherited by subsets, it makes the family
+downward closed and puts the empty profile in it. It therefore excludes two
+kinds of constraint: irreducibly holistic prohibitions that no member's
+requirement accounts for, and requirements of PRESENCE (a member that needs
+another member alongside it, as in the articulation objection's
+`noesis`-needs-an-impure-articulation form, or a family that requires `esse`
+in every profile). `ExclusionFreeAdmissible` is its weaker sufficiency
+direction, the one the derivations use. -/
 def MemberGroundedAdmissibility (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) : Prop :=
   ∀ q, Admissible q ↔ ExclusionFree RequiresLack q
+
+/-- OPEN, the weaker sibling of `MemberGroundedAdmissibility`: every
+exclusion-free profile is admissible. It says nothing about inadmissible
+profiles being excluded by a member, so it allows requirements of presence
+and other extra admissibility constraints. Together with
+`PureRequiresNoPureLack` it is equivalent (for a free requirement relation) to
+"every profile of pure determinations is admissible"
+(`sufficiencyPremisesIffAllPure`). -/
+def ExclusionFreeAdmissible (Admissible : Set D → Prop)
+    (RequiresLack : D → Set D → Prop) : Prop :=
+  ∀ q, ExclusionFree RequiresLack q → Admissible q
 
 /-- OPEN: no pure determination requires the joint lack of pure
 determinations. The rationale is DEF-PURE-PERFECTION: requiring the lack of a
@@ -204,6 +227,13 @@ def godIntellect (n : Bool) (i : Prop) : Prop :=
 combination is allowed. -/
 def bruteTriple (q : Set Determination) : Prop :=
   ¬ (Determination.a ∈ q ∧ Determination.b ∈ q ∧ Determination.noesis ∈ q)
+/-- `noesis` needs the impure `limiter` alongside it: a requirement of presence. -/
+def needsLimiter (q : Set Determination) : Prop :=
+  Determination.noesis ∈ q → Determination.limiter ∈ q
+/-- Every determination requires the lack of every infinite set (anchoring control). -/
+def infiniteLack (_ : Nat) (S : Set Nat) : Prop := S.Infinite
+/-- Every profile is admissible. -/
+def anyProfile (_ : Set Determination) : Prop := True
 /-- `noesis` is in no admissible profile. -/
 def noNoesis (q : Set Determination) : Prop := Determination.noesis ∉ q
 /-- The root's actual profile is admissible (`0a9d3a40`). -/

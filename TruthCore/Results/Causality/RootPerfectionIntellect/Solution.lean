@@ -83,74 +83,163 @@ theorem godHasIntellectFromRootPerfection {W B C R : Type} (m : Profile W B) (w 
   subst hIdentity
   exact hRecognition g hg (hKnow g hn hPure)
 
-/-! ## B. Constitutive admissibility -/
+/-! ## B. Constitutive admissibility
+
+The registered derivations use only the sufficiency direction
+`ExclusionFreeAdmissible`. Under it and `PureRequiresNoPureLack` every profile of
+pure determinations is admissible, so the conclusions hold with room to spare.
+`premisesIffStructural` and `sufficiencyPremisesIffAllPure` show what the premise
+pairs amount to once the requirement relation is free: they relocate joint
+compossibility into requirement form; they add no structural content beyond
+downward closure (member grounding) and the localization of incompatibility in a
+member, which lives in the intended reading of `RequiresLack`. -/
 
 /-- Exclusion-freedom is inherited by subsets. -/
 theorem exclusionFreeMono {D : Type} (RequiresLack : D → Set D → Prop) {p q : Set D}
     (hpq : p ⊆ q) (hq : ExclusionFree RequiresLack q) : ExclusionFree RequiresLack p :=
   fun d hd S hS => hq d (hpq hd) S (hS.trans hpq)
 
+/-- Member grounding (strong) gives its sufficiency direction (weak). -/
+theorem exclusionFreeAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
+    (RequiresLack : D → Set D → Prop)
+    (hGround : MemberGroundedAdmissibility Admissible RequiresLack) :
+    ExclusionFreeAdmissible Admissible RequiresLack := fun q => (hGround q).2
+
 /-- Under the two premises every profile of pure determinations is admissible. -/
 theorem allPureAdmissible {D : Type} (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure) (q : Set D) (hq : ∀ d ∈ q, Pure d) :
     Admissible q :=
-  (hGround q).2 fun d hd S hS => hPure d S (hq d hd) (fun e he => hq e (hS he))
+  hSuff q fun d hd S hS => hPure d S (hq d hd) (fun e he => hq e (hS he))
 
-/-- Joint compossibility `500d0e2d` derived: member grounding and the purity
-rationale make every pure insertion admissible. The insertion law's
-admissibility hypotheses are not used, so the conclusion holds with room to
-spare. -/
-theorem jointCompossibilityOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
-    (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+/-- Joint compossibility `500d0e2d` from the sufficiency direction and the
+purity premise. The insertion law's admissibility hypotheses are not used. -/
+theorem jointCompossibilityOfExclusionFreeAdmissibility {D : Type}
+    (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure) :
     PureExtensionsAdmissible Admissible Pure := by
   intro q k _ hAll hk _
-  apply allPureAdmissible Admissible RequiresLack Pure hGround hPure
+  apply allPureAdmissible Admissible RequiresLack Pure hSuff hPure
   intro d hd
   rcases Set.mem_insert_iff.mp hd with rfl | h
   · exact hk
   · exact hAll d h
 
-/-- Admissibility of each pure determination `ee287fd3` derived: its singleton
-is exclusion-free. -/
-theorem pureAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
+/-- Admissibility of each pure determination `ee287fd3`: its singleton is
+exclusion-free. -/
+theorem pureAdmissibleOfExclusionFreeAdmissibility {D : Type} (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure) :
     PureDeterminationsAdmissible Admissible Pure := fun k hk =>
-  ⟨{k}, allPureAdmissible Admissible RequiresLack Pure hGround hPure {k}
+  ⟨{k}, allPureAdmissible Admissible RequiresLack Pure hSuff hPure {k}
     (fun _ hd => (Set.mem_singleton_iff.mp hd) ▸ hk), Set.mem_singleton k⟩
 
-/-- Admissibility of each actual root's profile `0a9d3a40` derived, given
-that every determination of an actual root is pure (`3b39e0ba`). -/
-theorem rootProfilesAdmissibleOfMemberGrounding {W B D : Type} (m : Profile W B) (w : W)
-    (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Has : B → D → Prop)
-    (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+/-- Admissibility of each actual root's profile `0a9d3a40`, given that every
+determination of an actual root is pure (`3b39e0ba`). -/
+theorem rootProfilesAdmissibleOfExclusionFreeAdmissibility {W B D : Type} (m : Profile W B)
+    (w : W) (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop)
+    (Has : B → D → Prop) (Pure : D → Prop)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure)
     (hRootPure : ActualRootDeterminationsArePure m w Has Pure) :
     RootProfilesAdmissible m w Admissible Has := fun r hr =>
-  allPureAdmissible Admissible RequiresLack Pure hGround hPure _ (fun d hd => hRootPure r hr d hd)
+  allPureAdmissible Admissible RequiresLack Pure hSuff hPure _ (fun d hd => hRootPure r hr d hd)
 
-/-- Partial converse: under member grounding and admissibility of each pure
-determination, joint compossibility already gives the singleton case of the
-purity premise. No pure determination requires the lack of a single pure
-determination. -/
-theorem singletonPurityOfJointCompossibility {D : Type} (Admissible : Set D → Prop)
-    (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
-    (hPureAdm : PureDeterminationsAdmissible Admissible Pure)
-    (hJoint : PureExtensionsAdmissible Admissible Pure) (d e : D) (hd : Pure d) (he : Pure e) :
-    ¬ RequiresLack d {e} := by
-  obtain ⟨q, hq, hdq⟩ := hPureAdm d hd
-  have hSingle : Admissible {d} := (hGround _).2
-    (exclusionFreeMono RequiresLack (Set.singleton_subset_iff.mpr hdq) ((hGround q).1 hq))
-  have hPair : Admissible (insert e {d}) := hJoint {d} e hSingle
-    (fun x hx => (Set.mem_singleton_iff.mp hx) ▸ hd) he (hPureAdm e he)
-  exact (hGround _).1 hPair d (by simp) {e} (by simp)
+/-- With the requirement relation free, member grounding and the purity
+premise together say exactly: the family is downward closed, contains the empty
+profile, and contains every all-pure profile. (Reviewer probe, registered as a
+Lean-only lemma.) -/
+theorem premisesIffStructural {D : Type} (Admissible : Set D → Prop) (Pure : D → Prop) :
+    (∃ RL : D → Set D → Prop, MemberGroundedAdmissibility Admissible RL ∧
+        PureRequiresNoPureLack RL Pure) ↔
+      ((∀ p q, p ⊆ q → Admissible q → Admissible p) ∧ Admissible ∅ ∧
+        ∀ q, (∀ d ∈ q, Pure d) → Admissible q) := by
+  constructor
+  · rintro ⟨RL, hG, hP⟩
+    refine ⟨fun p q hpq hq => (hG p).2 (exclusionFreeMono RL hpq ((hG q).1 hq)),
+      (hG ∅).2 (fun d hd => absurd hd (Set.notMem_empty d)),
+      fun q hq => allPureAdmissible Admissible RL Pure
+        (exclusionFreeAdmissibleOfMemberGrounding Admissible RL hG) hP q hq⟩
+  · rintro ⟨hDown, hEmpty, hAll⟩
+    refine ⟨fun d S => ¬ Admissible (insert d S), fun q => ⟨?_, ?_⟩, ?_⟩
+    · intro hq d hd S hS hR
+      exact hR (hDown _ q (Set.insert_subset hd hS) hq)
+    · intro hEF
+      by_cases hne : q.Nonempty
+      · obtain ⟨d, hd⟩ := hne
+        have h1 : ¬¬Admissible (insert d q) := hEF d hd q (subset_refl q)
+        rw [Set.insert_eq_of_mem hd] at h1
+        exact Classical.byContradiction h1
+      · rw [Set.not_nonempty_iff_eq_empty.mp hne]; exact hEmpty
+    · intro d S hd hS hR
+      apply hR
+      apply hAll
+      intro e he
+      rcases Set.mem_insert_iff.mp he with rfl | h
+      · exact hd
+      · exact hS e h
+
+/-- With the requirement relation free, the sufficiency direction and the purity
+premise together say exactly: every all-pure profile is admissible. -/
+theorem sufficiencyPremisesIffAllPure {D : Type} (Admissible : Set D → Prop)
+    (Pure : D → Prop) :
+    (∃ RL : D → Set D → Prop, ExclusionFreeAdmissible Admissible RL ∧
+        PureRequiresNoPureLack RL Pure) ↔
+      ∀ q, (∀ d ∈ q, Pure d) → Admissible q := by
+  constructor
+  · rintro ⟨RL, hS, hP⟩
+    exact allPureAdmissible Admissible RL Pure hS hP
+  · intro hAll
+    refine ⟨fun d S => ¬ Admissible (insert d S), ?_, ?_⟩
+    · intro q hEF
+      by_cases hne : q.Nonempty
+      · obtain ⟨d, hd⟩ := hne
+        have h1 : ¬¬Admissible (insert d q) := hEF d hd q (subset_refl q)
+        rw [Set.insert_eq_of_mem hd] at h1
+        exact Classical.byContradiction h1
+      · rw [Set.not_nonempty_iff_eq_empty.mp hne]
+        exact hAll ∅ (fun d hd => absurd hd (Set.notMem_empty d))
+    · intro d S hd hS hR
+      apply hR
+      apply hAll
+      intro e he
+      rcases Set.mem_insert_iff.mp he with rfl | h
+      · exact hd
+      · exact hS e h
+
+/-- Finite converse: under member grounding and admissibility of each pure
+determination, joint compossibility gives the purity premise for every FINITE
+set of pure determinations. (Reviewer probe, registered as a Lean-only lemma.) -/
+theorem finiteConverse {D : Type} (Admissible : Set D → Prop)
+    (RL : D → Set D → Prop) (Pure : D → Prop)
+    (hG : MemberGroundedAdmissibility Admissible RL)
+    (hPDA : PureDeterminationsAdmissible Admissible Pure)
+    (hJ : PureExtensionsAdmissible Admissible Pure)
+    (d : D) (S : Set D) (hS : S.Finite) (hd : Pure d) (hSP : ∀ e ∈ S, Pure e) :
+    ¬ RL d S := by
+  have hSingle : Admissible {d} := by
+    obtain ⟨q, hq, hdq⟩ := hPDA d hd
+    exact (hG _).2 (exclusionFreeMono RL (Set.singleton_subset_iff.mpr hdq) ((hG q).1 hq))
+  have key : ∀ T : Set D, T.Finite → T ⊆ S → Admissible (insert d T) := by
+    intro T hT
+    refine Set.Finite.induction_on _ hT ?_ ?_
+    · intro _; simpa using hSingle
+    · intro a T _ _ ih hsub
+      have hT' : T ⊆ S := fun x hx => hsub (Set.mem_insert_of_mem a hx)
+      have hA := ih hT'
+      have : insert a (insert d T) = insert d (insert a T) := Set.insert_comm a d T
+      rw [← this]
+      refine hJ _ a hA ?_ (hSP a (hsub (Set.mem_insert a T)))
+        (hPDA a (hSP a (hsub (Set.mem_insert a T))))
+      intro x hx
+      rcases Set.mem_insert_iff.mp hx with rfl | h
+      · exact hd
+      · exact hSP x (hT' h)
+  have hA := key S hS (subset_refl S)
+  exact (hG _).1 hA d (Set.mem_insert d S) S (Set.subset_insert d S)
 
 /-! ## Finite controls -/
 
@@ -409,15 +498,73 @@ theorem noNoesisNotPure : ¬ PureDeterminationsAdmissible noNoesis isPure := by
   obtain ⟨q, hq, hn⟩ := h Determination.noesis ((memPure _).2 (by decide))
   exact hq hn
 
-theorem notGroundedTriple : ¬ MemberGroundedAdmissibility bruteTriple noRequirement := by
+theorem notSuffTriple : ¬ ExclusionFreeAdmissible bruteTriple noRequirement := by
   intro h
-  have := (h {Determination.a, Determination.b, Determination.noesis}).2
-    (exclusionFreeNone _)
+  have := h {Determination.a, Determination.b, Determination.noesis} (exclusionFreeNone _)
   exact this ⟨by simp, by simp, by simp⟩
 
-theorem notGroundedNoNoesis : ¬ MemberGroundedAdmissibility noNoesis noRequirement := by
+theorem notSuffNoNoesis : ¬ ExclusionFreeAdmissible noNoesis noRequirement := by
   intro h
-  exact ((h {Determination.noesis}).2 (exclusionFreeNone _)) rfl
+  exact (h {Determination.noesis} (exclusionFreeNone _)) rfl
+
+/-- A requirement of presence: `noesis` needs the impure `limiter` alongside it.
+No requirement-of-lack relation makes this family member-grounded (downward
+closure fails), and no relation satisfies the sufficiency direction together
+with the purity premise (`{noesis}` is all pure and inadmissible); yet every
+pure determination is admissible somewhere and joint compossibility fails. The
+failure is grounded in what a member requires, but not in a requirement of
+lack. (Reviewer probe.) -/
+theorem presenceRequirement :
+    (∀ RL, ¬ MemberGroundedAdmissibility needsLimiter RL) ∧
+    ¬ (∃ RL, ExclusionFreeAdmissible needsLimiter RL ∧ PureRequiresNoPureLack RL isPure) ∧
+    PureDeterminationsAdmissible needsLimiter isPure ∧
+    ¬ PureExtensionsAdmissible needsLimiter isPure := by
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro RL h
+    have hEF := (h {Determination.noesis, Determination.limiter}).1 (fun _ => by simp)
+    have := (h {Determination.noesis}).2 (exclusionFreeMono RL (by simp) hEF) rfl
+    simp at this
+  · intro hEx
+    have := (sufficiencyPremisesIffAllPure needsLimiter isPure).1 hEx {Determination.noesis}
+      (fun d hd => by
+        rw [Set.mem_singleton_iff.mp hd]
+        exact (memPure _).2 (by decide)) rfl
+    simp at this
+  · intro k _
+    exact ⟨{k, Determination.limiter}, fun _ => by simp, by simp⟩
+  · intro h
+    have := h {Determination.esse} Determination.noesis (fun h => by simp at h)
+      (fun d hd => by
+        rw [Set.mem_singleton_iff.mp hd]
+        exact (memPure _).2 (by decide))
+      ((memPure _).2 (by decide))
+      ⟨{Determination.noesis, Determination.limiter}, fun _ => by simp, by simp⟩
+    have hl := this (by simp)
+    simp at hl
+
+/-- The #2153 anchoring family (finite profiles of natural numbers) IS
+member-grounded, with every determination requiring the lack of every infinite
+set; but no requirement relation gives it the sufficiency direction together
+with the purity premise when every determination is pure, since the infinite
+all-pure profile is inadmissible. (First conjunct: reviewer probe.) -/
+theorem anchorFamilyGrounding :
+    MemberGroundedAdmissibility TruthCore.Causality.RootPerfectionExclusion.Control.finiteAdmissible
+      infiniteLack ∧
+    ¬ (∃ RL, ExclusionFreeAdmissible
+        TruthCore.Causality.RootPerfectionExclusion.Control.finiteAdmissible RL ∧
+      PureRequiresNoPureLack RL TruthCore.Causality.RootPerfectionExclusion.Control.allPure) := by
+  refine ⟨?_, ?_⟩
+  · intro q
+    constructor
+    · intro hq d _ S hS hInf
+      exact hInf (Set.Finite.subset hq hS)
+    · intro hEF
+      by_contra hInf
+      rcases Set.eq_empty_or_nonempty q with h | ⟨d, hd⟩
+      · exact hInf (h ▸ Set.finite_empty)
+      · exact hEF d hd q (subset_refl q) hInf
+  · intro hEx
+    exact Set.infinite_univ ((sufficiencyPremisesIffAllPure _ _).1 hEx Set.univ (fun _ _ => trivial))
 
 theorem rootPureIff (src : Set Determination) : rootPure src ↔ ∀ d ∈ src, isPure d := by
   constructor
@@ -436,66 +583,77 @@ theorem rootAdmIff (adm : Set Determination → Prop) (src : Set Determination) 
     obtain rfl := (rootIff r).1 hr
     exact h
 
-/-- Constitutive-admissibility controls on the #1970 determinations. Each row
-names the requirement relation, the family and which premise fails:
+/-- Constitutive-admissibility controls on the #1970 determinations, stated
+for the sufficiency direction `ExclusionFreeAdmissible` that the registered
+derivations use. Each row names the requirement relation, the family and which
+premise fails:
 
 1. positive witness: only the nonpure `limiter` requires a lack (of `noesis`);
-   member grounding, the purity premise and joint compossibility hold, and
-   the root with every pure determination has an admissible profile;
-2. the triple family with no requirement: member grounding fails (an
-   irreducibly holistic prohibition), the purity premise holds, joint
-   compossibility fails;
+   member grounding (hence sufficiency), the purity premise and joint
+   compossibility hold, and the root with every pure determination has an
+   admissible profile;
+2. the triple family with no requirement: sufficiency fails (an irreducibly
+   holistic prohibition), the purity premise holds, joint compossibility fails;
 3. the SAME triple family with `noesis` requiring the joint lack of `a` and
-   `b`: member grounding holds, the purity premise fails, joint
-   compossibility fails. This is the model in which the constitutive reading
-   holds and joint compossibility fails;
-4. and 5. the family without `noesis`, with no requirement (member grounding
-   fails) or with `noesis` requiring its own lack (purity fails): pure
-   admissibility fails;
+   `b`: member grounding and sufficiency hold, the purity premise fails, joint
+   compossibility fails;
+4. and 5. the family without `noesis`, with no requirement (sufficiency fails)
+   or with `noesis` requiring its own lack (purity fails): pure admissibility
+   fails;
 6. the root's profile with the nonpure `limiter` and `noesis`: member grounding
    and purity hold, root purity and root-profile admissibility fail;
 7. the all-pure root profile in the triple family: root purity holds and
-   root-profile admissibility fails; by rows 2 and 3 member grounding fails
-   with no requirement and purity fails with the pair requirement. -/
+   root-profile admissibility fails;
+8. strictness: with every profile admissible and `noesis` requiring its own
+   lack, sufficiency holds and member grounding fails. -/
 theorem constitutiveControls :
     (MemberGroundedAdmissibility (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
+      ExclusionFreeAdmissible (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
       PureRequiresNoPureLack limiterExcludesNoesis isPure ∧
       PureExtensionsAdmissible (ExclusionFree limiterExcludesNoesis) isPure ∧
       rootPure TruthCore.Causality.SourceIntellectControls.ProfileControls.pure ∧
       rootAdm (ExclusionFree limiterExcludesNoesis)
         TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) ∧
-    (¬ MemberGroundedAdmissibility bruteTriple noRequirement ∧
+    (¬ ExclusionFreeAdmissible bruteTriple noRequirement ∧
       PureRequiresNoPureLack noRequirement isPure ∧
       ¬ PureExtensionsAdmissible bruteTriple isPure) ∧
     (MemberGroundedAdmissibility bruteTriple noesisExcludesPair ∧
+      ExclusionFreeAdmissible bruteTriple noesisExcludesPair ∧
       ¬ PureRequiresNoPureLack noesisExcludesPair isPure ∧
       PairwiseAdmitted bruteTriple ∧
       ¬ PureExtensionsAdmissible bruteTriple isPure) ∧
-    (¬ MemberGroundedAdmissibility noNoesis noRequirement ∧
+    (¬ ExclusionFreeAdmissible noNoesis noRequirement ∧
       ¬ PureDeterminationsAdmissible noNoesis isPure) ∧
-    (MemberGroundedAdmissibility noNoesis noesisSelfExcluding ∧
+    (ExclusionFreeAdmissible noNoesis noesisSelfExcluding ∧
       ¬ PureRequiresNoPureLack noesisSelfExcluding isPure ∧
       ¬ PureDeterminationsAdmissible noNoesis isPure) ∧
-    (MemberGroundedAdmissibility (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
+    (ExclusionFreeAdmissible (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
       PureRequiresNoPureLack limiterExcludesNoesis isPure ∧
       ¬ rootPure (insert Determination.limiter effect) ∧
       ¬ rootAdm (ExclusionFree limiterExcludesNoesis) (insert Determination.limiter effect)) ∧
     (rootPure TruthCore.Causality.SourceIntellectControls.ProfileControls.pure ∧
-      ¬ rootAdm bruteTriple TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) := by
+      ¬ rootAdm bruteTriple TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) ∧
+    (ExclusionFreeAdmissible anyProfile noesisSelfExcluding ∧
+      ¬ MemberGroundedAdmissibility anyProfile noesisSelfExcluding) := by
   have hPureAll : ∀ d ∈ TruthCore.Causality.SourceIntellectControls.ProfileControls.pure,
       isPure d := fun d hd => hd
-  refine ⟨⟨fun _ => Iff.rfl, purityLimiter,
-      jointCompossibilityOfMemberGrounding _ _ _ (fun _ => Iff.rfl) purityLimiter,
+  have hPairMG : MemberGroundedAdmissibility bruteTriple noesisExcludesPair :=
+    fun q => (exclusionFreePair q).symm
+  have hSelfMG : MemberGroundedAdmissibility noNoesis noesisSelfExcluding :=
+    fun q => (exclusionFreeSelf q).symm
+  refine ⟨⟨fun _ => Iff.rfl, fun _ h => h, purityLimiter,
+      jointCompossibilityOfExclusionFreeAdmissibility _ _ _ (fun _ h => h) purityLimiter,
       (rootPureIff _).2 hPureAll, ?_⟩,
-    ⟨notGroundedTriple, purityNone, bruteTripleNotJoint⟩,
-    ⟨fun q => (exclusionFreePair q).symm, notPurityPair, bruteTriplePairwise,
-      bruteTripleNotJoint⟩,
-    ⟨notGroundedNoNoesis, noNoesisNotPure⟩,
-    ⟨fun q => (exclusionFreeSelf q).symm, notPuritySelf, noNoesisNotPure⟩,
-    ⟨fun _ => Iff.rfl, purityLimiter, ?_, ?_⟩,
-    ⟨(rootPureIff _).2 hPureAll, ?_⟩⟩
+    ⟨notSuffTriple, purityNone, bruteTripleNotJoint⟩,
+    ⟨hPairMG, exclusionFreeAdmissibleOfMemberGrounding _ _ hPairMG, notPurityPair,
+      bruteTriplePairwise, bruteTripleNotJoint⟩,
+    ⟨notSuffNoNoesis, noNoesisNotPure⟩,
+    ⟨exclusionFreeAdmissibleOfMemberGrounding _ _ hSelfMG, notPuritySelf, noNoesisNotPure⟩,
+    ⟨fun _ h => h, purityLimiter, ?_, ?_⟩,
+    ⟨(rootPureIff _).2 hPureAll, ?_⟩,
+    ⟨fun _ _ => trivial, ?_⟩⟩
   · rw [rootAdmIff]
-    exact allPureAdmissible _ _ isPure (fun _ => Iff.rfl) purityLimiter _ hPureAll
+    exact allPureAdmissible _ _ isPure (fun _ h => h) purityLimiter _ hPureAll
   · rw [rootPureIff]
     intro h
     exact (memPure _).1 (h Determination.limiter (by simp)) rfl
@@ -505,6 +663,9 @@ theorem constitutiveControls :
     exact fun h => h ⟨by simp [TruthCore.Causality.SourceIntellectControls.ProfileControls.pure],
       by simp [TruthCore.Causality.SourceIntellectControls.ProfileControls.pure],
       by simp [TruthCore.Causality.SourceIntellectControls.ProfileControls.pure]⟩
+  · intro h
+    exact (h {Determination.noesis}).1 trivial _ rfl {Determination.noesis}
+      (subset_refl _) ⟨rfl, rfl⟩
 
 end Controls
 

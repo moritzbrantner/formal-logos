@@ -137,6 +137,17 @@ theorem absenceTrichotomyExclusive {B D : Type} (Admissible : Set D → Prop)
   · rintro ⟨⟨_, _, hExcluded⟩, _, hCompatible⟩
     exact hExcluded hCompatible
 
+/-- Case (ii) is vacuous when no admissible profile contains the bearer's
+profile: then every absent `k` that is admissible somewhere falls under it.
+Inadmissibility of the profile alone does not suffice, since the family need
+not be closed downward. -/
+theorem absenceVacuousWithoutAdmissibleSuperset {B D : Type} (Admissible : Set D → Prop)
+    (Has : B → D → Prop) {x : B} {k : D} (hLacks : ¬ Has x k)
+    (hNoSuperset : ∀ q, Admissible q → ¬ ActualProfile Has x ⊆ q)
+    (hSome : ∃ q, Admissible q ∧ k ∈ q) :
+    AbsenceFromPositiveProfile Admissible Has x k :=
+  ⟨hLacks, hSome, fun ⟨q, hq, hSub, _⟩ => hNoSuperset q hq hSub⟩
+
 /-- A single excluding determination is one way case (ii) arises. -/
 theorem singleExcluderGivesPositiveExclusion {B D : Type} (Admissible : Set D → Prop)
     (Has : B → D → Prop) {x : B} {d k : D} (hLacks : ¬ Has x k) (hd : Has x d)

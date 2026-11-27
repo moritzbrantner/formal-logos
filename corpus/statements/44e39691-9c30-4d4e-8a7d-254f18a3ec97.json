@@ -1,10 +1,11 @@
 {
   "id": "44e39691-9c30-4d4e-8a7d-254f18a3ec97",
-  "label": "Intellectual wisdom is a pure perfection",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: the determination wisdom (subject-grounded apprehension) is a pure perfection: an actuality that involves no potency, limitation or reception (DEF-PURE-PERFECTION). It uses the same purity parameter as 'every actual concrete root has every pure perfection', so no sense passage is involved. What makes this determination intellectual is not its name but the separate open bridge that a subsistent bearer of it can apprehend a true content about itself; the two premises are about the same token.",
+  "label": "The determination wisdom is a pure perfection",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the determination wisdom (read as the bearer's own subject-grounded apprehension, not productive or exemplary wisdom) is a pure perfection: an actuality that involves no potency, limitation or reception (DEF-PURE-PERFECTION). It uses the same purity parameter as 'every actual concrete root has every pure perfection', so no sense passage is involved. The Lean type is only Pure wisdom for one token; what makes that token intellectual is not its name but the separate open bridge that a subsistent bearer of it can apprehend a true content about itself.",
   "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.WisdomIsPure",
   "definition_ids": [
     "65e38ffa-5a1c-55d0-935c-6538d843b780",
-    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "04d7652c-25df-46b0-8bef-2b619664855b"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
   "label": "No pure determination requires the lack of pure determinations",
-  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every pure determination d and every set S of pure determinations, d does not require the lack of S. It covers a single excluded determination and a joint lack alike. Its rationale is DEF-PURE-PERFECTION: requiring the lack of a positive actuality would be a limitation of the requirer.",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every pure determination d and every set S of pure determinations, d does not require the lack of S. It covers a single excluded determination and a joint lack alike. Its rationale is DEF-PURE-PERFECTION: requiring the lack of a positive actuality would be a limitation of the requirer. It is the requirement-form counterpart of joint compossibility, not independent of it: under member grounding and pure admissibility, joint compossibility gives it for every finite set (finiteConverse).",
   "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.PureRequiresNoPureLack",
   "definition_ids": [
     "65e38ffa-5a1c-55d0-935c-6538d843b780",

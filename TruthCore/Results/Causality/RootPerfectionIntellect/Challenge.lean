@@ -70,34 +70,48 @@ theorem godHasIntellectFromRootPerfection {W B C R : Type} (m : Profile W B) (w 
     GodHasIntellect IsGod HasIntellect := by
   sorry
 
-/-! ## B. Constitutive admissibility -/
+/-! ## B. Constitutive admissibility
 
-/-- Joint compossibility `500d0e2d` derived: member grounding and the purity
-rationale make every pure insertion admissible. The insertion law's
-admissibility hypotheses are not used, so the conclusion holds with room to
-spare. -/
-theorem jointCompossibilityOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
-    (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+The registered derivations use only the sufficiency direction
+`ExclusionFreeAdmissible`. Under it and `PureRequiresNoPureLack` every profile of
+pure determinations is admissible, so the conclusions hold with room to spare.
+`premisesIffStructural` and `sufficiencyPremisesIffAllPure` show what the premise
+pairs amount to once the requirement relation is free: they relocate joint
+compossibility into requirement form; they add no structural content beyond
+downward closure (member grounding) and the localization of incompatibility in a
+member, which lives in the intended reading of `RequiresLack`. -/
+
+/-- Member grounding (strong) gives its sufficiency direction (weak). -/
+theorem exclusionFreeAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
+    (RequiresLack : D → Set D → Prop)
+    (hGround : MemberGroundedAdmissibility Admissible RequiresLack) :
+    ExclusionFreeAdmissible Admissible RequiresLack := by
+  sorry
+
+/-- Joint compossibility `500d0e2d` from the sufficiency direction and the
+purity premise. The insertion law's admissibility hypotheses are not used. -/
+theorem jointCompossibilityOfExclusionFreeAdmissibility {D : Type}
+    (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure) :
     PureExtensionsAdmissible Admissible Pure := by
   sorry
 
-/-- Admissibility of each pure determination `ee287fd3` derived: its singleton
-is exclusion-free. -/
-theorem pureAdmissibleOfMemberGrounding {D : Type} (Admissible : Set D → Prop)
+/-- Admissibility of each pure determination `ee287fd3`: its singleton is
+exclusion-free. -/
+theorem pureAdmissibleOfExclusionFreeAdmissibility {D : Type} (Admissible : Set D → Prop)
     (RequiresLack : D → Set D → Prop) (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure) :
     PureDeterminationsAdmissible Admissible Pure := by
   sorry
 
-/-- Admissibility of each actual root's profile `0a9d3a40` derived, given
-that every determination of an actual root is pure (`3b39e0ba`). -/
-theorem rootProfilesAdmissibleOfMemberGrounding {W B D : Type} (m : Profile W B) (w : W)
-    (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop) (Has : B → D → Prop)
-    (Pure : D → Prop)
-    (hGround : MemberGroundedAdmissibility Admissible RequiresLack)
+/-- Admissibility of each actual root's profile `0a9d3a40`, given that every
+determination of an actual root is pure (`3b39e0ba`). -/
+theorem rootProfilesAdmissibleOfExclusionFreeAdmissibility {W B D : Type} (m : Profile W B)
+    (w : W) (Admissible : Set D → Prop) (RequiresLack : D → Set D → Prop)
+    (Has : B → D → Prop) (Pure : D → Prop)
+    (hSuff : ExclusionFreeAdmissible Admissible RequiresLack)
     (hPure : PureRequiresNoPureLack RequiresLack Pure)
     (hRootPure : ActualRootDeterminationsArePure m w Has Pure) :
     RootProfilesAdmissible m w Admissible Has := by
@@ -168,52 +182,66 @@ theorem stepTwoControls :
       ¬ godIntellect true False) := by
   sorry
 
-/-- Constitutive-admissibility controls on the #1970 determinations. Each row
-names the requirement relation, the family and which premise fails:
+/-- A requirement of presence: `noesis` needs the impure `limiter` alongside it.
+No requirement-of-lack relation makes this family member-grounded (downward
+closure fails), and no relation satisfies the sufficiency direction together
+with the purity premise (`{noesis}` is all pure and inadmissible); yet every
+pure determination is admissible somewhere and joint compossibility fails. The
+failure is grounded in what a member requires, but not in a requirement of
+lack. (Reviewer probe.) -/
+
+/-- Constitutive-admissibility controls on the #1970 determinations, stated
+for the sufficiency direction `ExclusionFreeAdmissible` that the registered
+derivations use. Each row names the requirement relation, the family and which
+premise fails:
 
 1. positive witness: only the nonpure `limiter` requires a lack (of `noesis`);
-   member grounding, the purity premise and joint compossibility hold, and
-   the root with every pure determination has an admissible profile;
-2. the triple family with no requirement: member grounding fails (an
-   irreducibly holistic prohibition), the purity premise holds, joint
-   compossibility fails;
+   member grounding (hence sufficiency), the purity premise and joint
+   compossibility hold, and the root with every pure determination has an
+   admissible profile;
+2. the triple family with no requirement: sufficiency fails (an irreducibly
+   holistic prohibition), the purity premise holds, joint compossibility fails;
 3. the SAME triple family with `noesis` requiring the joint lack of `a` and
-   `b`: member grounding holds, the purity premise fails, joint
-   compossibility fails. This is the model in which the constitutive reading
-   holds and joint compossibility fails;
-4. and 5. the family without `noesis`, with no requirement (member grounding
-   fails) or with `noesis` requiring its own lack (purity fails): pure
-   admissibility fails;
+   `b`: member grounding and sufficiency hold, the purity premise fails, joint
+   compossibility fails;
+4. and 5. the family without `noesis`, with no requirement (sufficiency fails)
+   or with `noesis` requiring its own lack (purity fails): pure admissibility
+   fails;
 6. the root's profile with the nonpure `limiter` and `noesis`: member grounding
    and purity hold, root purity and root-profile admissibility fail;
 7. the all-pure root profile in the triple family: root purity holds and
-   root-profile admissibility fails; by rows 2 and 3 member grounding fails
-   with no requirement and purity fails with the pair requirement. -/
+   root-profile admissibility fails;
+8. strictness: with every profile admissible and `noesis` requiring its own
+   lack, sufficiency holds and member grounding fails. -/
 theorem constitutiveControls :
     (MemberGroundedAdmissibility (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
+      ExclusionFreeAdmissible (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
       PureRequiresNoPureLack limiterExcludesNoesis isPure ∧
       PureExtensionsAdmissible (ExclusionFree limiterExcludesNoesis) isPure ∧
       rootPure TruthCore.Causality.SourceIntellectControls.ProfileControls.pure ∧
       rootAdm (ExclusionFree limiterExcludesNoesis)
         TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) ∧
-    (¬ MemberGroundedAdmissibility bruteTriple noRequirement ∧
+    (¬ ExclusionFreeAdmissible bruteTriple noRequirement ∧
       PureRequiresNoPureLack noRequirement isPure ∧
       ¬ PureExtensionsAdmissible bruteTriple isPure) ∧
     (MemberGroundedAdmissibility bruteTriple noesisExcludesPair ∧
+      ExclusionFreeAdmissible bruteTriple noesisExcludesPair ∧
       ¬ PureRequiresNoPureLack noesisExcludesPair isPure ∧
       PairwiseAdmitted bruteTriple ∧
       ¬ PureExtensionsAdmissible bruteTriple isPure) ∧
-    (¬ MemberGroundedAdmissibility noNoesis noRequirement ∧
+    (¬ ExclusionFreeAdmissible noNoesis noRequirement ∧
       ¬ PureDeterminationsAdmissible noNoesis isPure) ∧
-    (MemberGroundedAdmissibility noNoesis noesisSelfExcluding ∧
+    (ExclusionFreeAdmissible noNoesis noesisSelfExcluding ∧
       ¬ PureRequiresNoPureLack noesisSelfExcluding isPure ∧
       ¬ PureDeterminationsAdmissible noNoesis isPure) ∧
-    (MemberGroundedAdmissibility (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
+    (ExclusionFreeAdmissible (ExclusionFree limiterExcludesNoesis) limiterExcludesNoesis ∧
       PureRequiresNoPureLack limiterExcludesNoesis isPure ∧
       ¬ rootPure (insert Determination.limiter effect) ∧
       ¬ rootAdm (ExclusionFree limiterExcludesNoesis) (insert Determination.limiter effect)) ∧
     (rootPure TruthCore.Causality.SourceIntellectControls.ProfileControls.pure ∧
-      ¬ rootAdm bruteTriple TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) := by
+      ¬ rootAdm bruteTriple TruthCore.Causality.SourceIntellectControls.ProfileControls.pure) ∧
+    (ExclusionFreeAdmissible anyProfile noesisSelfExcluding ∧
+      ¬ MemberGroundedAdmissibility anyProfile noesisSelfExcluding) := by
   sorry
 
 end TruthCore.Results.Causality.RootPerfectionIntellect

@@ -1,0 +1,10 @@
+{
+  "id": "6040cb64-9f0a-47e3-997e-7fe8ef999e27",
+  "label": "Test by S5.SymmetryBoundary.checks (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "e2a36f6f-0504-52e3-b348-90e8c11aadf4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "Omit global symmetry in the full-predicate collapse propagation test. On branching, false accesses true and true accesses only itself. Reflexivity and transitivity hold. Full collapse holds at the accessible true world and fails at false, where true and false supply distinct accessible outcomes."
+}
