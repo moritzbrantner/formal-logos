@@ -11,7 +11,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. Semantic review at 0be519f7 accepted the characterizations and required that the population condition be registered as an explicit premise, since the empty atom type has no sequent to witness consistency. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. The independent negation tests in TruthCore/Models/SelectedPlgNegations.lean favor population for a witnessed, totally labelled application. They distinguish literal modal co-existence (no consistent universal map in directedNature) from causal supply, and show that explosion can mask a missing path on the same edge. The note records the provisional judgment and revision test for each premise. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.",
+  "summary": "On a populated atom type an exact supplied assumption set is consistent iff no initial strict step has a weak return path. The derived predecessor-set rank validates every member and witnesses an underivable strict self-sequent. In a consistent set exact strict partial derivability is a path with a strict step. These results give conditional arguments for both target premises on the same S. Semantic review at 0be519f7 accepted the characterizations and required that the population condition be registered as an explicit premise, since the empty atom type has no sequent to witness consistency. On two fixed labels, weakening a strict full assumption removes the map, while adding a weak reverse assumption keeps the map and destroys consistency. The existing infinite witness still permits descent. The independent negation tests in TruthCore/Models/SelectedPlgNegations.lean favor population for a witnessed, totally labelled application. They distinguish literal modal co-existence (no consistent universal map in directedNature) from causal supply, and show that explosion can mask a missing path on the same edge. The note records the provisional judgment and revision test for each premise. See docs/notes/distinct-dependence-strict-ground-route.md#testing-a-supplied-plg-theory.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 1ea2f628 tests 2bdf810f. Omit absence of a strict step with a weak return in the inhabited Bool atom type. The selected withWeakReturn theory keeps the strict full step from false to true and adds the weak full step from true to false. This gives a return and breaks consistency. 1ea2f628 tests b6784d40. Omit strict-step coverage for the sole distinct dependence edge of true on false. The consistent weakOnly theory has just a weak full sequent from false to true. It has no strict step, so it cannot supply the required path for that dependence edge. 1ea2f628 tests 4bd8457a. Witness the joint consistency inputs on two Boolean atoms. In strictForward, the sole strict step goes from false to true and no weak steps can lead back. Both the populated-atom and no-strict-return premises hold. 1ea2f628 tests ea09d50b. Witness strict-step coverage on the two populated Boolean labels. The sole distinct dependence edge of true on false has its required path in the singleton strictForward theory, consisting of the strict full step from false to true.",
   "blocker": "The root consumers leave S and the labelling arbitrary. There is no independent existence-fact presentation to test there. The next application needs one effect and labelled facts, an independently justified set including any weak assumptions, and warrant for interpreting each selected path as same-respect existential supply.",
   "evidence": [
     "006f49e8-4c68-424d-9403-9f025185b555",
@@ -54,6 +54,13 @@
       "model": "claude-opus-5-5",
       "date": "2026-11-26",
       "pr": "PR-2040"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
     }
   ],
   "current_assessment": {
