@@ -24,7 +24,8 @@ premises = ["29818edd-9f5a-5414-baa2-9a7d0c8abf18", "090be689-b77f-51a1-9d5d-caf
 conclusion = "STMT-GOD-HAS-WILL"
 axioms = []
 rule = "Apply the existing will-follows-intellect principle at each same GOD_4 witness"
-meaning = "A modular consumer for any support of GodHasIntellect, including the local teleology route. Unlike the older monolithic GodHasWill argument, this does not repeat its immateriality derivation. It retains the exact open will-follows-intellect input. HasWill is capacity-level intellectual appetite, not current exercise, intentional creation, free choice or recipient-directed love. Universal conditionals supply no God-existence witness."
+transcription = "single_application"
+meaning = "Single-application transcription (invariant 16): the proof applies the open will-follows-intellect premise, whose consequent is the advertised conclusion, to the supplied GOD_4 intellect. A modular consumer for any support of GodHasIntellect, including the local teleology route. Unlike the older monolithic GodHasWill argument, this does not repeat its immateriality derivation. It retains the exact open will-follows-intellect input. HasWill is capacity-level intellectual appetite, not current exercise, intentional creation, free choice or recipient-directed love. Universal conditionals supply no God-existence witness."
 
 [[argument]]
 id = "Local Fifth Way GOD_4 intellect attachment controls checked"

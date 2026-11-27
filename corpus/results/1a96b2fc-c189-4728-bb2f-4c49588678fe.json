@@ -1,0 +1,11 @@
+{
+  "id": "1a96b2fc-c189-4728-bb2f-4c49588678fe",
+  "label": "Test actual recipient absence with contingent replacement giving",
+  "argument_id": "5540d68f-e49d-4ef7-b756-ee5c5fd7533a",
+  "challenge_module": "TruthCore.Results.Modal.ActualRecipientReplacement.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ActualRecipientReplacement.Solution",
+  "theorem": "TruthCore.Results.Modal.ActualRecipientReplacement.boundary",
+  "comparator_config": "results/1a96b2fc-c189-4728-bb2f-4c49588678fe/comparator.json",
+  "status": "solution-present",
+  "description": "Uses the Pruss-power roster with factive giving in both worlds. Every actual contingent is the first recipient, so the alternative supports the fixed-population withholding condition while still supplying a contingent recipient. The assigned power and universally accessible worlds are structural inputs. The control supplies no purpose, rational appetite, intrinsic invariance, simplicity or real-world modal admissibility."
+}
