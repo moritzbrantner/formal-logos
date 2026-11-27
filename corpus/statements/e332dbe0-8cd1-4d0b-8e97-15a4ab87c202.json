@@ -1,7 +1,7 @@
 {
   "id": "e332dbe0-8cd1-4d0b-8e97-15a4ab87c202",
   "label": "First Way received-esse controls and POTENCY_1 boundary",
-  "paraphrase": "Premise-free general result plus three finite semantic interpretations. Universal law: combining R1, R2 at ADOPTED unactualized POTENCY_1 in the esse respect and the existing-at-w → in-act-of-esse interface excludes all contingent beings at w. Positive nonvacuous witness: a contingent being receives esse in a principle and the principle is in receptive potency to its already possessed act; the unactualized subject transfer fails. Conservation model: contingent first mover is pure act under the adopted subject-level distribution but is externally supported and prior-caused in its esse exactly where it exists; firstness in being fails, and identity-scoped reception can be falsified by receipt in another principle. Brute candidate: a contingent first pure-act mover whose represented essence/esse differ but with no reception. These establish logical independence and a causal support interpretation, not metaphysical possibility.",
+  "paraphrase": "Premise-free general result plus three finite semantic interpretations. Universal law: combining R1, R2 at ADOPTED unactualized POTENCY_1 in the esse respect and the existing-at-w → in-act-of-esse interface excludes all contingent beings at w. Positive nonvacuous witness: a contingent being receives esse in a principle and the principle is in receptive potency to its already possessed act; R2 holds for the free `subjectPotencyAtEsse` predicate and fails for `AdoptedPotency.InPotency actAtEsse canBeAny`. Conservation model: contingent first mover is pure act under the stipulated `movedPotency` assignment but is externally supported and prior-caused in its esse exactly where it exists; firstness in being fails, and identity-scoped reception can be falsified by receipt in another principle. Brute candidate: a contingent first pure-act mover whose represented essence/esse differ but with no reception. These establish logical independence and a causal support interpretation, not metaphysical possibility.",
   "lean_declaration": "TruthCore.Causality.FirstMoverNecessity.Model.ReceptionControls",
   "definition_ids": [
     "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
@@ -11,6 +11,7 @@
     "183b48d2-1753-583d-aef9-4199cff86231",
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "9f874532-f37e-590b-bec9-a9affb2762ac",
+    "3ea2762f-1a85-5059-b4e7-d29f192b16b6",
     "fc6f0e12-470f-5717-8c5b-ece7a450fe59",
     "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
   ],
