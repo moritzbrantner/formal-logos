@@ -1,0 +1,25 @@
+{
+  "id": "0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5",
+  "label": "Original finality: end-dependent versus for-the-good",
+  "term": "original finality",
+  "sense_definition_ids": [
+    "f35499f9-5905-4eb9-bc10-f40bfadc0b31",
+    "188efb7f-0b64-4a54-a462-f053a5cd84e6"
+  ],
+  "resolution": "'The origin specifies the recipients' ends and mutual fit' has two typed readings. ORIGINAL_FINALITY_1 (OriginalFinality): the favoured arrangement is better, the origin's own profile favours it, and that favouring depends on realization of the end D. ORIGINAL_FINALITY_2 (OriginalFinalityForGood): ORIGINAL_FINALITY_1 together with dependence on goodness at fixed D-realization (E4, the end operates as good); it is stronger by definition. The answer to 'does original finality require production because of goodness (BECAUSE_OF_GOODNESS_2)?' differs per sense: no under sense 1 (the D-directed profile meets sense 1 and lacks sense 2, table row 9); yes under sense 2, by definition. No step passes between them: the table states each sense separately for the same profiles. If the two answers are ever recorded as statements, the order between them is to be registered as a strengthens relation (sense 2 to sense 1, #1017).",
+  "term_label": "ORIGINAL_FINALITY",
+  "senses": [
+    {
+      "id": "ca65b5bc-0d55-4522-a6f8-773376b23138",
+      "label": "ORIGINAL_FINALITY_1",
+      "definition_id": "f35499f9-5905-4eb9-bc10-f40bfadc0b31",
+      "lean_declaration": "TruthCore.Causality.GoodFavouring.OriginalFinality"
+    },
+    {
+      "id": "fb8391a6-2a70-4150-a651-6fd715c5fc7b",
+      "label": "ORIGINAL_FINALITY_2",
+      "definition_id": "188efb7f-0b64-4a54-a462-f053a5cd84e6",
+      "lean_declaration": "TruthCore.Causality.GoodFavouring.OriginalFinalityForGood"
+    }
+  ]
+}
