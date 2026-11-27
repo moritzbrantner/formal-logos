@@ -5925,6 +5925,9 @@ disambiguated separately (DISAMB `da16b898`).
 
 The conclusion is horn A's `7fca65ec`. A pure favouring makes exactly value's
 verdicts, so it is good-general at the standard's own witness.
+The three new premises are stated with `ValueStandard good`
+(STANDARD_OF_FAVOURING_1), which is definitionally `good`. It marks the sense so
+that `bind-check` checks it.
 
 The route does not use the admissible family, joint compossibility,
 root-profile admissibility, pure admissibility, the structural L, `e2357adc`,
@@ -6262,6 +6265,9 @@ The repairs in the commit that adds this paragraph:
 - rewrite A2–A6, B, C, D and the assessment as above;
 - add DISAMB `da16b898` with DEFs `e14aa0f0` and `b2eab05f` and their Lean
   declarations;
+- state the new premises of `da9f2d3c` with the sense marker
+  `ValueStandard good`, so the main theorem's Challenge type changes only by
+  that definitional marker;
 - add the Lean-only lemmas `noBestSelectionAgainstFavouring`, `noBestNat`,
   `endRealizerUndominated`, `refinementCondemnsDNature`,
   `variationIffSomeGoodGeneral` and `factoringDeniesVariation`.

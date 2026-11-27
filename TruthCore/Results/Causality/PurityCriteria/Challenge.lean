@@ -34,9 +34,9 @@ theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours good)
-    (hBacked : UnbackedVerdictIsImpure Pure favours good)
-    (hVaries : BetternessVariesWithinEndClass good fitOf Present) :
+    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
+    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good))
+    (hVaries : BetternessVariesWithinEndClass (ValueStandard good) fitOf Present) :
     ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present := by
   sorry
 

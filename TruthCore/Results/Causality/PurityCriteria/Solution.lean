@@ -38,9 +38,9 @@ theorem actualRootFavouringIsGoodGeneralFromStandard {W B T R D P S X Z : Type}
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours good)
-    (hBacked : UnbackedVerdictIsImpure Pure favours good)
-    (hVaries : BetternessVariesWithinEndClass good fitOf Present) :
+    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
+    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good))
+    (hVaries : BetternessVariesWithinEndClass (ValueStandard good) fitOf Present) :
     ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present := by
   intro r hr φ hφ
   have hP : Pure (favours φ) := hPurity r (hRoots r hr) (favours φ) hφ
@@ -63,8 +63,8 @@ theorem actualRootHasOneFavouringFromStandard {W B T R D P S X : Type}
     (hEM : ExcludedMiddle)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hLoss : MissingVerdictIsImpure Pure favours good)
-    (hBacked : UnbackedVerdictIsImpure Pure favours good) :
+    (hLoss : MissingVerdictIsImpure Pure favours (ValueStandard good))
+    (hBacked : UnbackedVerdictIsImpure Pure favours (ValueStandard good)) :
     ∀ r, ActualRoot m w r → ∀ φ ψ, Has r (favours φ) → Has r (favours ψ) → φ = ψ := by
   intro r hr φ ψ hφ hψ
   have hTrack : ∀ χ, Has r (favours χ) → ∀ s x y, χ s x y ↔ good s x y := by
