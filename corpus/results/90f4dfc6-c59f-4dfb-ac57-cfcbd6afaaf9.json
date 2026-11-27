@@ -1,0 +1,11 @@
+{
+  "id": "90f4dfc6-c59f-4dfb-ac57-cfcbd6afaaf9",
+  "label": "Root profiles admissible from member grounding and root purity",
+  "argument_id": "bb0b7c27-8d6e-42e1-abf3-0c457407c69a",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.rootProfilesAdmissibleOfMemberGrounding",
+  "comparator_config": "results/90f4dfc6-c59f-4dfb-ac57-cfcbd6afaaf9/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w. Every real determination of r is pure (strict pure actuality at roots), so by the purity premise no member of r's profile requires the lack of any subset of it, and member grounding makes the profile admissible. The infinite all-pure root profile of the #2153 anchoring control is therefore admissible under these premises; that control's finite family is not member-grounded. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), a root profile containing the nonpure limiter and noesis keeps member grounding and the purity premise but fails root purity and admissibility, and the all-pure root profile in the triple family is inadmissible while member grounding fails (no requirement relation) or the purity premise fails (noesis requiring the joint lack of a and b)."
+}

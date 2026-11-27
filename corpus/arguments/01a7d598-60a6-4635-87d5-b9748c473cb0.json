@@ -1,0 +1,47 @@
+{
+  "id": "01a7d598-60a6-4635-87d5-b9748c473cb0",
+  "label": "GOD_4 HAS_INTELLECT_1 from a PURE_ACT_5 root's self-knowledge and finite reach",
+  "premise_statement_ids": [
+    "593d7307-c8e1-5863-9776-a26cfe09d20c",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+    "00d02e10-d650-4ef8-a061-1d4b25d15964",
+    "8ba44d60-7fbf-48e3-b052-26b0ac7688b1"
+  ],
+  "conclusion_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "inference_ids": [
+    "63c359d2-4b14-4e66-a5a6-1ea67b16e384"
+  ],
+  "meaning": "Some n is an actual concrete root at w, necessary, first and in potency in no respect. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n, and since n has no actual concrete ground the path is trivial, so g = n (namedRootOfReach). The root-level premise gives n intrinsic self-knowledge, and the recognition bridge gives g HAS_INTELLECT_1. The q.14 immateriality premise of the existing intellect routes is not used. The main theorem uses no axioms. The Comparator companion stepTwoControls (propext, Quot.sound; same carrier) gives a positive witness and, for each of the four premises, an assignment where it fails, the three others hold and GOD_4 HAS_INTELLECT_1 fails: the root in potency (root self-knowledge then holds vacuously), GOD_4 naming the effect, which is no ancestor of the root, the root without self-knowledge, and self-knowledge without the HasIntellect predicate.",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "25e19d5a-5cdf-5916-a888-f6a0ce970f11",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "3ea2762f-1a85-5059-b4e7-d29f192b16b6",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c2e13bb8-679a-55ea-8754-ae77d345bcd2",
+    "a49e4cf1-ca4f-5519-9724-892af257cedb",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "e1c85e81-7fb9-41c3-83c9-970ce40fa2d5"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "79644a0a-db5b-5497-bb47-9f96d14cdae7",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "002f42cb-3015-5644-80b3-d408538394e6",
+    "508617ab-cf24-5f3b-a387-64b3991359ec",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

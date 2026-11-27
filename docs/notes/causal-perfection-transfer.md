@@ -4541,6 +4541,320 @@ commit changes only durable review-state text and one wording repair in §D.
    statement, so `fe67d766` reaches `29818edd` with every bridge visible.
    This was deferred from this delivery.
 
+## From every pure perfection to intellect, and constitutive admissibility (2026-11-27; provisional, #2145)
+
+### Question and reuse
+
+Program [#2145](https://github.com/moritzbrantner/truth-core/issues/2145),
+Investigation 1, second slice. It continues the
+[previous section](#why-could-a-pure-perfection-be-absent-at-an-unlimited-root-2026-11-27-provisional-2145),
+whose conclusion `fe67d766` (every actual concrete root has every pure
+perfection) says nothing about which determinations are pure. Two questions:
+
+- **A.** Can `fe67d766` reach GOD_4 HAS_INTELLECT_1 (`29818edd`) with purity of
+  intellect and every wisdom-to-intellect bridge as explicit premises?
+- **B.** Under a constitutive reading of the admissible family, is joint
+  compossibility (`500d0e2d`) derivable, or only restated?
+
+Reused without change: the four `WisdomSelfUnderstanding` bridges and
+`actualRootSelfKnowledgeFromWisdom` of `WholePowerPerfection` (attempt
+`d3a0e98a`), `namedRootOfReach` (`ActualAncestralSource`), the #2153 family and
+premises, the #1970 determinations and the #2153 control carrier. Lean:
+[vocabulary](../../TruthCore/Causality/RootPerfectionIntellect.lean),
+[results and controls](../../TruthCore/Results/Causality/RootPerfectionIntellect/Solution.lean),
+[spec](../../specs/root-perfection-intellect.toml).
+
+### A. Purity of intellect and the registered route
+
+**Purity statement.** "Intellectual wisdom is a pure perfection" is a new
+open premise (`WisdomIsPure Pure wisdom`). Its `Pure` is the same parameter as
+in `fe67d766` and in `WholePowerPerfection` (DEF-PURE-PERFECTION), so no sense
+bridge is needed: the composition shares the parameter, and the senses are
+not passed between. The strict and unrestricted purity notions (`b5ac268c`,
+`956247e3`) are statements about first movers built from the same `Pure`; they
+are not other senses of "pure". What makes `wisdom` intellectual is not its
+name. It is fixed only by the open capacity bridge, which is about the same
+token.
+
+Warrant (cumulative-warrant policy). The positive case:
+
+- On DEF-PURE-PERFECTION, a determination is pure if it involves no potency,
+  limitation or reception.
+- Subject-grounded apprehension of truth, taken in the abstract form used
+  here, names actual grasp. Its specification in the bridges is
+  self-directed: content about the bearer itself. Neither discursiveness,
+  temporal acquisition nor sensory reception is part of it (the grounding
+  bridge says so explicitly).
+- The finite knowers we know apprehend by receiving forms. The pure reading
+  takes that reception to belong to the finite mode of the knower, not to
+  apprehension as such. Self-apprehension is the case where no distinct
+  object is received.
+
+Strongest objection meeting the standard:
+
+- *Target:* the purity premise.
+- *Mechanism:* if being informed by a distinct object belongs to what
+  cognition is, then apprehension involves reception, and it is not pure.
+- *Independent justification:* every instance of cognition otherwise known,
+  and the Aristotelian account of the possible intellect, is receptive.
+- *Relevance:* it would make the purity premise false, not merely unproven.
+- *Status:* it is an inductive generalization from finite knowers. The
+  relevant difference it must justify is between reception as constitutive
+  of apprehension and reception as the finite mode of it. Self-apprehension
+  of a bearer that receives nothing is the test case, and that case is
+  exactly what is in dispute. So the objection does not refute the premise;
+  it locates the open question.
+
+The Plotinian duality objection (a knower and the known make two) targets
+admissibility with simplicity (case i, `ee287fd3`), not purity.
+
+Provisional assessment: the purity premise has a real positive rationale and
+a serious standing objection. Its warrant is moderate. It is not established.
+
+**Registered route** (two steps, both zero-axiom main theorems):
+
+1. `pureActRootsKnowThemselvesFromPurity` (step one). Premises:
+   - `a30c5963` (actual roots have no represented limiting principle);
+   - `26e8e6ed` (an unlimited being is its own being);
+   - `fe67d766`;
+   - the purity premise;
+   - the capacity bridge (`WisdomSelfCapacity`);
+   - the exercise-or-potency bridge (`SelfCapacityExercisedOrPotent`);
+   - the grounding bridge (`TrueSelfApprehensionGrounded`).
+
+   Conclusion: every PURE_ACT_5 actual root has intrinsic self-knowledge
+   (`PureActRootsKnowThemselves`). The proof is the existing
+   `actualRootSelfKnowledgeFromWisdom`. The q.4 a.2 whole-power premises
+   (`d164b1ff`, `c4fb87a6`) are not used. Every producer of `fe67d766` feeds
+   this step: the E∘L routes of #2153, the whole-power route, the infinity
+   route and the finite-dependence route.
+2. `godHasIntellectFromRootPerfection` (step two). Premises:
+   - `593d7307` (some actual first root is PURE_ACT_5);
+   - `75974d26` (finite grounding reach of GOD_4);
+   - the step-one conclusion;
+   - the recognition bridge (GOD_4 with intrinsic self-knowledge
+     HAS_INTELLECT_1).
+
+   Conclusion: `29818edd`. The identity of each GOD_4 with the root is the
+   existing `namedRootOfReach`.
+
+Neither step is a transcription. Step one composes seven premises. Step two
+derives the identity of GOD_4 with the pure-act root before the recognition
+bridge applies. The recognition bridge itself is a one-step open rule: what
+the route derives is its antecedent, intrinsic self-knowledge, not its
+consequent.
+
+**Controls.** In `stepOneControls` and `stepTwoControls`, every one of the
+eleven premises is load-bearing on the #2153 carrier: an assignment makes
+it fail while the others hold and the conclusion fails, and a positive row
+witnesses all of them together. Encoding disclosures:
+
+- In the exercise row the source can apprehend its own content, does not, and
+  has no potency. That is an assignment only because `InPotency` is the
+  independently supplied POTENCY_2.
+- In the first-root row the root is in potency, so the step-one conclusion
+  holds vacuously.
+- In the reach row GOD_4 names the effect.
+- The assignments witness the stated relations only. They say nothing about
+  what wisdom, apprehension or grounding are.
+
+**`aptitudeIffExerciseAtPureAct` (question A3).** It does not discharge or
+simplify `SelfCapacityExercisedOrPotent`; it consumes it. Given that bridge,
+pure act and ab esse ad posse, it shows that own capacity and exercise
+coincide. Its only effect here is that, under the step-one premises, the
+capacity-level and the actual-level readings of HAS_INTELLECT_1 converge at a
+pure-act root. The capacity-only theorem `godHasIntellectFromWisdomCapacity`
+remains an unregistered weaker option. It drops exercise, grounding and pure
+act, but it requires the capacity reading of HAS_INTELLECT_1.
+
+**Shared dependencies and independence.** Two existing routes to `29818edd`
+run through the q.14 immateriality premise `180f5ad2` (`ea6608a9` via
+`beede613`, and `26e368d3`); a third runs through local teleology
+(`b8394dbb`). This route uses neither, so it is a horizontal support
+family. It shares two premises with `ea6608a9`: finite reach `75974d26` and
+the existence of an actual root (here through `593d7307`). Its own load sits
+in four places: purity, the three bridges, recognition and `fe67d766`. The
+last of these carries E, or the premises of the other producers.
+
+### B. A constitutive reading of admissibility
+
+The #2153 family `Admissible` is a primitive. The constitutive reading states,
+as an open premise `MemberGroundedAdmissibility`, that a profile is admissible
+exactly when it is exclusion-free. That means no member `d` requires the lack
+of a subset `S` of the profile. The primitive `RequiresLack d S` reads:
+"it belongs to what `d` is that a bearer of `d` does not have all of `S`"
+(new definitions `22c26860`, `88f7c656`). The premise does not identify the
+primitive family with the defined notion. It says that they coincide, so the
+identification is not hidden in a definitional equality. It is neutral about
+purity and n-ary: a member can require a joint lack with no pair excluded.
+
+A second premise, `PureRequiresNoPureLack`, says no pure determination
+requires the lack of pure determinations. Its rationale is DEF-PURE-PERFECTION:
+requiring the lack of a positive actuality is a limitation of the requirer.
+
+Results (all zero-axiom main theorems; companion `constitutiveControls`):
+
+- `jointCompossibilityOfMemberGrounding`: the two premises give `500d0e2d`.
+- `pureAdmissibleOfMemberGrounding`: they give `ee287fd3`.
+- `rootProfilesAdmissibleOfMemberGrounding`: with `3b39e0ba` (every
+  determination of an actual root is pure) they give `0a9d3a40`. The infinite
+  all-pure root profile of `anchorControl` is therefore admissible here; that
+  control's finite family is not member-grounded.
+- Member grounding makes the family downward closed (`exclusionFreeMono`).
+  The primitive #2153 family need not be. Only under member grounding does
+  an inadmissible actual profile imply that no admissible profile contains
+  it. Nothing here relies on that implication for the primitive family.
+- Lean-only: `allPureAdmissible` (every all-pure profile is admissible, so the
+  insertion law holds with room to spare) and
+  `singletonPurityOfJointCompossibility` (a partial converse: given member
+  grounding and `ee287fd3`, joint compossibility already gives the singleton
+  case of the purity premise).
+
+**Verdict: derivable, not merely restated.** Neither premise mentions
+insertion or joint compossibility. Member grounding is a thesis about where
+incompatibility lives, the same for pure and impure determinations; the
+purity premise is about what single determinations require. The test case
+decides where the content went. The #2153 `jointConflict` family admits
+every pure pair and forbids the triple `a`, `b`, noesis. Its downward-closed
+counterpart `bruteTriple` (the same prohibition, without the requirement
+that `esse` be in every profile) has two readings:
+
+| Reading of the triple prohibition | Member grounding | Purity premise | Joint compossibility |
+| --- | --- | --- | --- |
+| no member requires anything (irreducibly holistic) | fails | holds | fails |
+| noesis requires the joint lack of a and b | holds | fails | fails |
+
+The second row is the discriminating model: the constitutive reading holds
+and joint compossibility fails. It fails exactly because a pure member
+requires a lack. So the constitutive reading excludes the rival's case (ii)
+only through a dilemma. Either the prohibition is grounded in no member
+(denying member grounding), or it is grounded in a pure determination that
+requires a lack (denying the purity premise). The first horn is a brute,
+ungrounded necessary incompatibility. The second must name the pure
+determination and the lack it requires. The same dilemma governs case (i):
+the family without noesis is either ungrounded or has noesis requiring its
+own lack (rows 4 and 5).
+
+The `jointConflict` family itself is never member-grounded, for a trivial
+reason. It requires `esse` in every profile, while an exclusion-free family
+always admits the empty profile. That is an encoding artifact, which is why
+the comparison uses `bruteTriple`. For a profile that contains `esse` and
+not the limiter, and a pure target, the two families give the same
+`HasCompatibleExtension` facts.
+
+**Objection to the purity premise meeting the standard.**
+
+- *Target:* `PureRequiresNoPureLack`, for pairs of classical pure perfections.
+- *Mechanism:* knowing what is now the case requires change, and immutability
+  requires its lack. Two pure perfections would then exclude each other
+  (the omniscience-immutability argument, attribution deferred).
+- *Independent justification:* the claim that tensed knowledge cannot be had
+  without changing with time.
+- *Relevance:* it attacks the purity premise directly.
+- *Status:* standing. The classical reply is that knowing tensed facts as
+  tensed belongs to a temporally located knower, so it is not the pure
+  determination. That reply is the same kind of distinction as in the purity
+  objection of A. No intellect-specific conflict is known that would make
+  noesis require the lack of a pure determination; the articulation objection
+  is aimed at simplicity (case i), not at another pure mode.
+
+**Shared rationale with E.** Member grounding says necessary incompatibilities
+in a simple source's profile are grounded in what its members require. E says
+that absences at a root are fixed by the admissibility constraints or by the
+positive profile. Both apply one principle to two kinds of negative fact
+about a root's profile: negative facts have positive grounds. They are not
+independent evidence. A rival who accepts brute negative facts rejects both
+at once, and the brute horn of the dilemma above is the incompatibility
+counterpart of E's case (iii).
+
+### C. E's warrant against the graph's explanatory principles
+
+There is no existing node that supplies a closure principle at roots for
+determinations.
+
+- The local existence PSR `608a262d` (`NoBruteContingentExistenceAt`) covers
+  existence facts of beings contingent at w. A root's lack of a determination
+  is neither an existence fact nor, at a necessary root with a necessary
+  profile, contingent.
+- `ContingentPSR` and `NecessaryPSR` (`PSRStrength`) have the same
+  contingency restriction.
+- The unrestricted `FactPSR` covers every fact. It is vocabulary only: no
+  statement binds it. It would supply E only together with a further bridge:
+  any reason for a fact about a root's intrinsic profile is its admissibility
+  constraints or its positive profile.
+- The parity norm of `BruteContingencyParity` (`ExcludesUnreasonedAcceptance`,
+  `FeatureUniform`) applies only to facts that share the selected feature.
+  Suppose a stance rejects unreasoned existence of the foundation and accepts
+  "by its own nature" as the self-reason for necessary existence. If its
+  feature is "a necessary intrinsic fact about the foundation", then by
+  uniformity it must give the foundation's profile closure a reason too.
+  "By its own nature" for a profile fact is case (i) or (ii), not case (iii).
+  A stance whose feature is only "existence fact" escapes. Whether that
+  narrower feature is principled is the open question. The same standard
+  applies to a personal root: its lack of impure determinations is fixed by
+  the limitation premises, case (i) or (ii).
+
+So E's warrant remains the general, not yet registered, demand that negative
+facts at a root have intrinsic grounds. Member grounding (B) depends on the
+same demand.
+
+### Assessment, standing rival and graph effect
+
+**What changed.**
+
+- `fe67d766` now reaches GOD_4 HAS_INTELLECT_1 by a registered route.
+  Purity, the three bridges and recognition are separate open premises.
+  It is independent of the q.14 immateriality premise.
+- Three #2153 premises (joint compossibility, pure admissibility and, given
+  root purity, root-profile admissibility) are now conclusions of two premises
+  that do not mention them.
+- The rival's case (ii) has become an exact dilemma: an ungrounded
+  incompatibility, or a pure determination that requires a lack.
+
+**Standing rival and its price.** The impersonal eminent source (#1892) without
+intellect survives in four forms, each with a price:
+
+- deny that understanding is pure (the reception objection above), or deny
+  that noesis is admissible with simplicity: the purity premise or case (i);
+- accept an ungrounded necessary incompatibility among pure determinations:
+  member grounding;
+- name a pure determination whose requirement excludes noesis: the purity
+  premise, with no candidate yet supplied;
+- accept an unexplained absence: E.
+
+The second and fourth are one commitment, brute negative facts at the
+root, applied twice.
+
+**Provisional judgment.** The route is conditional support. It does not
+establish `29818edd`. Its strongest new feature is the reduction of the joint
+compossibility premise to member grounding and pairwise-or-joint purity. Its
+weakest points:
+
+- the purity of intellect itself (moderate warrant, a standing objection);
+- recognition and grounding (semantic bridges, primitives with intended
+  readings);
+- the shared demand that negative facts at a root be grounded. It now
+  carries both E and member grounding, and it has no registered warrant.
+
+Parity: a brute-negative-facts stance applies the same way to personal and
+impersonal roots. It only counts against the impersonal profile as far as
+that demand is warranted.
+
+**Next discriminating tests.**
+
+1. Formalize the C comparison as a `WhyStance` over profile facts. Decide
+   whether a feature-uniform stance can principledly select "existence fact"
+   rather than "necessary intrinsic fact about the foundation".
+2. Encode the omniscience-immutability conflict as a `RequiresLack` instance
+   and test whether its pure-determination reading survives the
+   tensed/untensed distinction.
+3. Give `CanApprehend` and `CognitivelyGrounded` a constraint that separates
+   own from productive capacity. This is the recognition step's semantic
+   obligation.
+4. Encode the #1879 articulation test as a `RequiresLack` instance. Decide
+   whether real articulation makes noesis require its own lack at a simple
+   source (case i).
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

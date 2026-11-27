@@ -1,0 +1,11 @@
+{
+  "id": "6bba8431-d3f7-47f5-85cf-8c69d32b082f",
+  "label": "A profile is admissible exactly when no member requires the lack of members",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the constitutive reading of the admissible intrinsic profile family. A set of real determinations is admissible exactly when it is exclusion-free: no member d and subset S of the set are such that d requires the lack of S. Every incompatibility in the family is then grounded in what some member requires. It is neutral about purity; it denies irreducibly holistic incompatibilities, joint prohibitions that no member's requirement accounts for. It does not identify the primitive family with the defined notion; it states that they coincide.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.MemberGroundedAdmissibility",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

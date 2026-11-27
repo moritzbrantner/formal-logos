@@ -1,0 +1,11 @@
+{
+  "id": "8ba44d60-7fbf-48e3-b052-26b0ac7688b1",
+  "label": "Every GOD_4 with intrinsic self-knowledge HAS_INTELLECT_1",
+  "paraphrase": "OPEN recognition bridge, analyst formulation, attribution deferred: every g that is GOD_4 and has intrinsic self-knowledge (a true, actually apprehended, cognitively grounded content about itself) satisfies the unary HAS_INTELLECT_1. It reads such self-knowledge as sufficient for intellect; it does not say that intellect requires it.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.GodIntrinsicSelfKnowledgeIsIntellect",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "e1c85e81-7fb9-41c3-83c9-970ce40fa2d5"
+  ]
+}

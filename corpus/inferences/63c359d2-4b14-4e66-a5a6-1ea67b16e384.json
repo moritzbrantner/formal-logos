@@ -1,0 +1,15 @@
+{
+  "id": "63c359d2-4b14-4e66-a5a6-1ea67b16e384",
+  "label": "GOD_4 HAS_INTELLECT_1 from a PURE_ACT_5 root's self-knowledge and finite reach (inference)",
+  "input_statement_ids": [
+    "593d7307-c8e1-5863-9776-a26cfe09d20c",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+    "00d02e10-d650-4ef8-a061-1d4b25d15964",
+    "8ba44d60-7fbf-48e3-b052-26b0ac7688b1"
+  ],
+  "output_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "rule": "Identify each GOD_4 with the pure-act actual root by finite grounding reach, apply root self-knowledge, then the recognition bridge",
+  "meaning": "Some n is an actual concrete root at w, necessary, first and in potency in no respect. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n, and since n has no actual concrete ground the path is trivial, so g = n (namedRootOfReach). The root-level premise gives n intrinsic self-knowledge, and the recognition bridge gives g HAS_INTELLECT_1. The q.14 immateriality premise of the existing intellect routes is not used. The main theorem uses no axioms. The Comparator companion stepTwoControls (propext, Quot.sound; same carrier) gives a positive witness and, for each of the four premises, an assignment where it fails, the three others hold and GOD_4 HAS_INTELLECT_1 fails: the root in potency (root self-knowledge then holds vacuously), GOD_4 naming the effect, which is no ancestor of the root, the root without self-knowledge, and self-knowledge without the HasIntellect predicate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "7cb21968-1826-4057-9f9a-e6dc65ffe164",
+  "label": "Pure determinations admissible from member-grounded admissibility (inference)",
+  "input_statement_ids": [
+    "6bba8431-d3f7-47f5-85cf-8c69d32b082f",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+  ],
+  "output_statement_id": "ee287fd3-3890-4739-8407-a27d7c81191d",
+  "rule": "The singleton of a pure determination is exclusion-free",
+  "meaning": "For a pure k, its singleton consists of pure determinations, so by the purity premise k does not require the lack of any subset of it; member grounding makes the singleton admissible, so k occurs in an admissible profile. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the family that admits no profile containing noesis fails member grounding with no requirement relation, and fails the purity premise when noesis requires its own lack; pure admissibility fails in both. A denial that intellect is admissible with simplicity (case i of the #2153 trichotomy) must therefore either deny member grounding or name a requirement of a lack that noesis itself carries.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

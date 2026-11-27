@@ -1,0 +1,11 @@
+{
+  "id": "fd01e30c-360d-485c-9420-eedad060cecb",
+  "label": "PURE_ACT_5 roots know themselves, from every pure perfection and pure wisdom",
+  "argument_id": "57d42ac6-5d9d-48db-b7d9-377870c4679b",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.pureActRootsKnowThemselvesFromPurity",
+  "comparator_config": "results/fd01e30c-360d-485c-9420-eedad060cecb/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w that is in potency in no respect. Actual roots have no represented limiting principle, so the open premise that an unlimited being is its own being makes r its own being. Every actual root has every pure perfection, and wisdom is pure, so r has wisdom. The capacity bridge gives r its own capacity for a true content c about itself. The exercise-or-potency bridge says r apprehends c or is in potency in the understanding respect; pure act excludes the second. The grounding bridge makes the true apprehension cognitively grounded. So r has intrinsic self-knowledge. The proof applies the existing actualRootSelfKnowledgeFromWisdom unchanged; the q.4 a.2 whole-power premises are not used, because 'every actual root has every pure perfection' replaces them, so every producer of that statement feeds this step. The main theorem uses no axioms. The Comparator companion stepOneControls (propext, Quot.sound; two beings, the source the only actual root at true) gives a positive witness and, for each of the seven premises, an assignment where it fails, the six others hold and the conclusion fails. In the exercise row the source can apprehend its own content, does not, and is in potency in no respect; that is an assignment only because potency is the independently supplied predicate. The assignments say nothing about what wisdom, apprehension or grounding metaphysically are."
+}

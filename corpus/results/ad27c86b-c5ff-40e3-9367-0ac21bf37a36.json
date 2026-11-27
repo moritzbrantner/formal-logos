@@ -1,0 +1,11 @@
+{
+  "id": "ad27c86b-c5ff-40e3-9367-0ac21bf37a36",
+  "label": "Pure determinations admissible from member-grounded admissibility",
+  "argument_id": "85ef0dc5-28b0-49f1-9fe4-81c75eb28ff7",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.pureAdmissibleOfMemberGrounding",
+  "comparator_config": "results/ad27c86b-c5ff-40e3-9367-0ac21bf37a36/comparator.json",
+  "status": "solution-present",
+  "description": "For a pure k, its singleton consists of pure determinations, so by the purity premise k does not require the lack of any subset of it; member grounding makes the singleton admissible, so k occurs in an admissible profile. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the family that admits no profile containing noesis fails member grounding with no requirement relation, and fails the purity premise when noesis requires its own lack; pure admissibility fails in both. A denial that intellect is admissible with simplicity (case i of the #2153 trichotomy) must therefore either deny member grounding or name a requirement of a lack that noesis itself carries."
+}

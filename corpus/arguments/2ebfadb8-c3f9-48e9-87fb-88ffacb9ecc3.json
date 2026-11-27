@@ -1,0 +1,19 @@
+{
+  "id": "2ebfadb8-c3f9-48e9-87fb-88ffacb9ecc3",
+  "label": "Joint compossibility from member-grounded admissibility",
+  "premise_statement_ids": [
+    "6bba8431-d3f7-47f5-85cf-8c69d32b082f",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+  ],
+  "conclusion_statement_id": "500d0e2d-c7e3-41a6-a152-01e4cda8fce5",
+  "inference_ids": [
+    "1c3767e2-e32b-4933-959d-5191abe38601"
+  ],
+  "meaning": "Fix an admissible profile q of pure determinations and a pure k admissible somewhere. Every member of q with k added is pure, and every subset of it consists of pure determinations, so by the purity premise no member requires the lack of any subset. By member grounding the extended profile is admissible. The proof does not use that q or k is admissible: under the two premises every profile of pure determinations is admissible. Neither premise mentions insertion or joint compossibility: member grounding is neutral about purity and the purity premise is about requirements of single determinations. The main theorem uses no axioms. The Comparator companion constitutiveControls (three Mathlib axioms; the five #1970 determinations) takes the triple family, where a, b and noesis are never had together while every pure pair is admissible. With no requirement relation, member grounding fails and the purity premise holds; with noesis requiring the joint lack of a and b, member grounding holds and the purity premise fails. Joint compossibility fails in both. So a joint prohibition of pure determinations is either ungrounded in any member, denying member grounding, or grounded in a pure member's requirement of a lack, denying the purity premise.",
+  "definition_ids": [
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ]
+}
