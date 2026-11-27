@@ -1,0 +1,28 @@
+{
+  "id": "a43516c3-836d-407a-b3a9-f3cb6f961d10",
+  "label": "Asymmetric grade excludes mutual NECESSARY_2 support",
+  "premise_statement_ids": [
+    "40ce286d-b26d-4773-8a92-0a68da477414",
+    "d0d25272-e577-4c79-8988-2954f37c076e"
+  ],
+  "conclusion_statement_id": "47a34ac9-5496-43de-a9ac-61f688790148",
+  "inference_ids": [
+    "7bed724c-7947-4227-a970-af0745e6f5b7"
+  ],
+  "meaning": "Take both existing source guards and both selected-relation edges from the rival at its two admitted worlds. These worlds need not be accessible from w; the two candidates satisfy the same classifier and the same NECESSARY_2 condition relative to w. The ascent hypothesis maps the two edges to opposite comparisons at esse, contradicting local asymmetry. The proof also works when the candidates or worlds coincide. Both hypotheses remain open. Excluding mutual support leaves longer cycles and infinite descent open.",
+  "definition_ids": [
+    "2873d86b-7d15-41c5-8b93-362a117cb4cf",
+    "293d6ad6-ea47-4861-bef7-ee05eef2090a",
+    "9146789d-5b36-572f-baa1-7eef28967793",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "b242943a-34cc-582d-8c38-c1203b9d2c91",
+    "d39970e4-1ec3-4977-9a65-a36aa90fe5d6"
+  ],
+  "disambiguation_ids": [
+    "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "5d15d8f2-1080-53c9-886f-cee2a4ff23a9"
+  ]
+}
