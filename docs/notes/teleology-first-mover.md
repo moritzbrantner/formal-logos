@@ -1407,10 +1407,13 @@ goodness is fixed by D-realization, and without it every profile fails reading 2
 
 As typed, what apprehension avoids, a good-general profile also avoids: its
 favouring follows betterness, and it carries no content determination. Such a
-profile explains a finite measure by goodness only where a better or
-undominated measure exists. Where measures are tied or strictly improvable, the
-measure comes from a contingent exercise, for personal and impersonal profiles
-alike. So the finite-measure test does not by itself change the parity. It
+profile attributes a finite measure to goodness only where that measure is
+better than every relevant rival measure, and then as favouring, not
+determination. Where several measures are undominated (tied or incomparable),
+goodness favours none over the others and the choice among them is unresolved
+by goodness. Where every measure is strictly improvable, no measure is selected
+by goodness. In both of these cases the measure comes from a contingent
+exercise, for personal and impersonal profiles alike. So the finite-measure test does not by itself change the parity. It
 moves the open point to two places. One is which sense of original finality
 the case needs: only the for-the-good sense (ORIGINAL_FINALITY_2) includes
 non-coincidence of the origin's favouring with goodness. The other is whether
