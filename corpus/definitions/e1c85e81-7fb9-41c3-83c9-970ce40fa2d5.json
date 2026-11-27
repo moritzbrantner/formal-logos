@@ -1,0 +1,9 @@
+{
+  "id": "e1c85e81-7fb9-41c3-83c9-970ce40fa2d5",
+  "label": "Intrinsic self-knowledge: a true, actually apprehended, cognitively grounded content about oneself",
+  "term": "intrinsic self-knowledge (IntrinsicSelfKnowledge)",
+  "definition": "IntrinsicSelfKnowledge g: there is a content c that is about g, correct of g, actually apprehended by g itself (Apprehends g c) and cognitively grounded in g (CognitivelyGrounded g c: the apprehension's truth is grounded in the intelligible object rather than being a successful register reading or a lawlike output). It is actual knowledge of oneself, not a capacity for it, not omniscience and not a signal produced in another being. Apprehends and CognitivelyGrounded are primitive relations whose meaning is fixed by this intended reading and by the open bridges that use them.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.IntrinsicSelfKnowledge",
+  "note": "Stipulative analyst notion (#1731, #2145), attribution deferred. It is a stronger, knowledge-like specification than the unary HAS_INTELLECT_1, which it is linked to only by an explicit recognition premise. The WisdomSelfUnderstanding controls separate its three inputs (capacity, exercise, grounding). That the primitives Apprehends and CognitivelyGrounded mean the source's own cognition is an open semantic obligation; nothing in the types excludes a merely productive reading."
+}
