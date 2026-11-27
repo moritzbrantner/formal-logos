@@ -38,10 +38,10 @@
     "assessment": "e2357adc remains open; its warrant is relocated to 'value is the measure of a root's favouring' plus goodness variation within a D-class. A symmetric locus criterion (profile restriction versus contingent selection) exempts the classical God's choice-specification and an impersonal permissive propensity alike without special pleading; the only tested measure criterion adequate on the ordinary cases is standard-relative, and on it the D-nature (value standard) or the good-tracking profile (D standard) is restricted, at parity in form. A lighter conditional support option for 7fca65ec (da9f2d3c) avoids e2357adc, 3e6ae3e7, joint compossibility and E. 44e39691: the constitutive side's enumerative support fails the reference-class test; weak, non-decisive asymmetry for the mode reading. 3e6ae3e7: no derivation as stated; its bearer-level counterpart follows from the standard bridges; its denial costs the noncognitive rival the criterion or E. The immutability candidate gives no pure-requires-pure-lack instance. No premise is established.",
     "next_test": "Argue non-question-beggingly whether an original source's favouring answers to value or to its end content (is 'originating ends as goods' more than ORIGINAL_FINALITY_2 restated?); goodness variation within a D-class for an original source; whether self-aboutness needs information transfer; test 'successive possession involves potency' against an A-theoretic account of becoming; encode the (Id) part-reading of favouring tokens and retest horn A.",
     "note": "docs/notes/causal-perfection-transfer.md#when-is-a-restriction-of-content-a-limitation-the-purity-premises-under-one-criterion-2026-11-27-provisional-2145",
-    "reviewed_revision": "7e6136421a95a71bef607ab41a688a7ecdac7d90",
+    "reviewed_revision": "0221583edbd584db3086e35d4b7787684dd1cf5e",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Branch research/premise-purity, result da9f2d3c (focused Lean build; bind-check and Comparator on the delivered revision). Independent semantic challenge not yet run.",
+    "evidence": "Branch research/premise-purity, result da9f2d3c (focused Lean build, bind-check, Comparator and NanoDa passed locally). Independent semantic challenge not yet run.",
     "supersedes": "none"
   }
 }
