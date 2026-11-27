@@ -1,0 +1,10 @@
+{
+  "id": "e93271aa-0830-447f-b743-ddfc54975bdc",
+  "label": "Preexistence at the universal source: impersonal-source controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "b4a0e5cc-bf24-42cb-8b4a-39ee9bdd2937",
+  "rule": "Explicit finite interpretation over Fin 3 and Bool, checked by decision",
+  "meaning": "One finite interpretation of an impersonal universal source. On the inclusive reading of act, universal transfer, universal-source possession and preexistence, q.4 a.2 preexistence, unrestricted transfer and the inclusive PERFECT_2 of the source all hold, while the source lacks life formally. A structural surrogate: it shows these premises do not by themselves give formal or intrinsic possession at the source; the virtual relation is stipulated, not a modelled power or containment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

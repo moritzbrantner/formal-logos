@@ -1,0 +1,149 @@
+# Warrant phase, checkpoint 2 (2026-11-27, #2103, #143): q.4 a.2 preexistence
+# 64498e7e. Every registered derivation of it uses the unrestricted transfer
+# f8ba2429, whose nonuniversal part 10cd24ed has no positive warrant on file. Its
+# God-route consumers apply it only with a universal source of being as the cause.
+# This batch states that restriction, derives it from universal-scope transfer
+# b26c10a0 and universal-source possession, registers both strength orders,
+# re-derives "perfection of GOD_4" (78b7c124) from it, and checks an impersonal universal
+# source on which every premise holds at inclusive act while the source lacks life
+# formally. Assessment: docs/notes/preexistence-bottleneck.md. Analyst
+# formulations, attribution deferred. Nothing is established.
+
+[batch]
+vocab = "TruthCore.Causality.UniversalPreexistence"
+results = "TruthCore.Results.Causality.UniversalPreexistence"
+definitions = []
+disambiguations = []
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "Every perfection of another thing whose being a universal cause of being causes is in that cause"
+label = "Every perfection of another thing whose being a universal cause of being causes is in that cause"
+lean = "UniversalSourcePreexistence"
+paraphrase = "Analyst formulation, attribution deferred: q.4 a.2 preexistence 64498e7e restricted to universal causes of being. If c causes the being of every other being that has being (CausesAllInGenus at esse, DEF-UNIVERSAL-ESSE-CAUSE-SCOPE), then for every x other than c whose being c causes, every perfection x has is in c (the frame's InAct, IN_ACT_4, one predicate on both sides as in 64498e7e). It says nothing about nonuniversal causes of being. It is the scope that the q.4 a.2 first proof applies explicitly ('cum ergo Deus sit prima causa effectiva rerum, oportet omnium rerum perfectiones praeexistere in Deo'), and the scope in which every God-route consumer of 64498e7e except perfectFromAncestry uses it. Open."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "A universal cause of being has every perfection it causes in another thing whose being it causes"
+label = "A universal cause of being has every perfection it causes in another thing whose being it causes"
+lean = "UniversalSourceHasWhatItGives"
+paraphrase = "Analyst formulation, attribution deferred: the cause-of-being possession d0fc96b7 restricted to universal causes of being and distinct effects. If c causes the being of every other being that has being, and c causes x's being and x's being r, with x other than c, then c is in act in r (the frame's InAct, IN_ACT_4). It is the scope of the possession principle (376d6a5a, 2c0b9bd7, d0fc96b7) at the universal source. Open."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "5cbd5a0a-9055-4b69-af39-bd0bff1279fd", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+[[statement]]
+id = "Preexistence at the universal source: impersonal-source controls"
+label = "Preexistence at the universal source: impersonal-source controls"
+lean = "Control.Controls"
+paraphrase = "Closed finite interpretation; statements about it only. Three beings (a source, a living effect, a nonliving effect) and two respects (being, life). The source causes the being and every formally had perfection of each other being; everything has being formally; only the living effect has life formally; the source has life virtually (IN_ACT_2). The frame's act is inclusive (formal or virtual). Checked: the source is a universal cause of being; universal-scope transfer b26c10a0, universal-source possession, universal-source preexistence, q.4 a.2 preexistence 64498e7e, unrestricted transfer f8ba2429 and 'nothing has actuality except insofar as it is' hold; the source has life inclusively and is perfect in the inclusive sense of GodIsPerfect when it alone is named; the source does not have life formally. Encoding artifacts, disclosed: the virtual relation is stipulated; whether it is read as a power to produce or as higher-mode containment is not encoded; no comparative is used. It shows that these premises, on the inclusive reading, do not by themselves give the source formal or intrinsic life; it is not evidence that an impersonal source exists or is possible."
+definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "a5bda545-3e76-5240-808d-25f897a07be5", "f7833666-c764-5624-a766-708949d9feee", "115f23e3-2a19-5dcb-bc7f-96408004f110", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "Universal-source preexistence from universal transfer and universal-source possession"
+label = "Universal-source preexistence from universal transfer and universal-source possession"
+theorem = "universalPreexistenceOfTransferAndPossession"
+premises = ["b26c10a0-983d-5a88-aa03-cc601bc1ddc6", "A universal cause of being has every perfection it causes in another thing whose being it causes"]
+conclusion = "Every perfection of another thing whose being a universal cause of being causes is in that cause"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Universal-scope transfer, then universal-source possession"
+meaning = "Let c be a universal cause of being, x another thing whose being c causes, and r a perfection x has. Universal-scope transfer b26c10a0 gives that c causes x's being r; universal-source possession gives that c has r. It is the universal-scope counterpart of e8a3eb51 (preexistence from unrestricted transfer f8ba2429 and cause-of-being possession d0fc96b7): no nonuniversal transfer 10cd24ed is used. Conditional consequence only; both premises stay open."
+
+[[argument]]
+id = "Q.4 a.2 preexistence entails its universal-source restriction"
+label = "Q.4 a.2 preexistence entails its universal-source restriction"
+theorem = "universalPreexistenceOfPreexistence"
+premises = ["64498e7e-7f10-54a0-9ec0-c65e6076de1f"]
+conclusion = "Every perfection of another thing whose being a universal cause of being causes is in that cause"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Drop the universality and distinctness antecedents"
+meaning = "Strength order registration: preexistence for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here."
+
+[[argument]]
+id = "Cause-of-being possession entails its universal-source restriction"
+label = "Cause-of-being possession entails its universal-source restriction"
+theorem = "universalPossessionOfCauseOfBeingPossession"
+premises = ["d0fc96b7-fd2d-504e-912f-925de3b1e6ed"]
+conclusion = "A universal cause of being has every perfection it causes in another thing whose being it causes"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Drop the universality and distinctness antecedents"
+meaning = "Strength order registration: cause-of-being possession for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here."
+
+[[argument]]
+id = "Perfection of GOD_4 from its gift of esse, with universal-source preexistence"
+label = "Perfection of GOD_4 from its gift of esse, with universal-source preexistence"
+theorem = "perfectFromGodCauseOfUniversalPreexistence"
+premises = ["86d02b69-87eb-5594-9958-ccaa5fe6b685", "Every perfection of another thing whose being a universal cause of being causes is in that cause", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
+conclusion = "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Excluded middle on identity; GOD_4 causes all other being, so it is a universal source; universal-source preexistence"
+meaning = "Sibling of ea6317cf (perfectFromGodCause) with universal-source preexistence in place of q.4 a.2 preexistence 64498e7e, which that proof applies only with GOD_4 as the cause. Let g be GOD_4 and x in act in r. If x is g, done. Otherwise GOD_4 causes the being of every other being (86d02b69), so g is a universal cause of being and causes x's being; universal-source preexistence gives that g is in act in r. The conclusion 78b7c124 is in the frame's mode-open act (IN_ACT_4). The route through this sibling needs no nonuniversal transfer. Conditional consequence only; no premise is established."
+
+[[argument]]
+id = "Preexistence at the universal source: impersonal-source controls, checked"
+label = "Preexistence at the universal source: impersonal-source controls, checked"
+theorem = "controls"
+premises = []
+conclusion = "Preexistence at the universal source: impersonal-source controls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+rule = "Explicit finite interpretation over Fin 3 and Bool, checked by decision"
+meaning = "One finite interpretation of an impersonal universal source. On the inclusive reading of act, universal transfer, universal-source possession and preexistence, q.4 a.2 preexistence, unrestricted transfer and the inclusive PERFECT_2 of the source all hold, while the source lacks life formally. A structural surrogate: it shows these premises do not by themselves give formal or intrinsic possession at the source; the virtual relation is stipulated, not a modelled power or containment."
+
+# ---------------------------------------------------------------- relations
+
+[[relation]]
+id = "Q.4 a.2 preexistence strengthens universal-source preexistence"
+label = "Q.4 a.2 preexistence strengthens universal-source preexistence"
+subject_kind = "statement"
+subject_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every perfection of another thing whose being a universal cause of being causes is in that cause"
+verification_result_id = "Q.4 a.2 preexistence entails its universal-source restriction"
+note = "Same InAct, CausesIn and esse; the weak version constrains only universal causes of being and distinct effects. No strictness result is registered."
+
+[[relation]]
+id = "Cause-of-being possession strengthens universal-source possession"
+label = "Cause-of-being possession strengthens universal-source possession"
+subject_kind = "statement"
+subject_id = "d0fc96b7-fd2d-504e-912f-925de3b1e6ed"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "A universal cause of being has every perfection it causes in another thing whose being it causes"
+verification_result_id = "Cause-of-being possession entails its universal-source restriction"
+note = "Same InAct, CausesIn and esse; the weak version constrains only universal causes of being and distinct effects. No strictness result is registered."
+
+[[relation]]
+id = "Test by the impersonal-source controls of q.4 a.2 preexistence"
+label = "Test by the impersonal-source controls of q.4 a.2 preexistence"
+subject_kind = "result"
+subject_id = "d180310f-4eda-44be-8c26-cca3347040bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+note = "Joint-satisfiability and non-entailment test, not an omission model: preexistence holds at inclusive act together with universal and unrestricted transfer, while the universal source lacks life formally. Preexistence read inclusively does not by itself give formal possession at the source."
+
+[[relation]]
+id = "Test by the impersonal-source controls of perfection of GOD_4"
+label = "Test by the impersonal-source controls of perfection of GOD_4"
+subject_kind = "result"
+subject_id = "d180310f-4eda-44be-8c26-cca3347040bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6"
+note = "With the source alone named, its perfection in the frame's inclusive act holds (GodIsPerfect, the Lean content of this statement) while it lacks life formally: the inclusive perfection conclusion does not discriminate a source that has life only virtually."
+
+[[relation]]
+id = "Test by the impersonal-source controls of universal transfer"
+label = "Test by the impersonal-source controls of universal transfer"
+subject_kind = "result"
+subject_id = "d180310f-4eda-44be-8c26-cca3347040bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
+note = "Universal-scope transfer holds in the interpretation together with the formal-life gap at the source; it gives causation of every perfection, not its formal possession by the source."

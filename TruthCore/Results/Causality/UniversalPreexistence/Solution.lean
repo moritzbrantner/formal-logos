@@ -2,6 +2,7 @@ module
 
 public import TruthCore.Causality.UniversalPreexistence
 public import TruthCore.Logic.ExcludedMiddle
+public import TruthCore.Case.Catholicism.AttributesFromEsse
 
 /-!
 # Preexistence at the universal source: results
@@ -21,6 +22,7 @@ open TruthCore.Latin.Aquinas.SummaTheologiae
 open TruthCore.Case.Catholicism
   (UniversalCauseTransfersPerfections GodIsMaximalInBeing GodIsPerfect)
 open TruthCore.Causality.CausalMapsBatch1 (CauseOfBeingHasWhatItGives)
+open TruthCore.Causality.GodMaximalCausal (GodCausesBeingOfAllOthers)
 
 /-- Universal-source preexistence from universal-scope transfer and
 universal-source possession: a universal cause of `x`'s being causes each of
@@ -49,30 +51,23 @@ theorem universalPossessionOfCauseOfBeingPossession {W B T R : Type}
     UniversalSourceHasWhatItGives F :=
   fun c _ x r _ hBeing hr => hHas c x r hBeing hr
 
-/-- Sibling of `godIsPerfect` with universal-source preexistence in place of
-q.4 a.2 preexistence, which that proof applies only at a maximum in being, a
-universal cause of being by the genus principle. -/
-theorem godIsPerfectOfUniversalPreexistence {W B T R : Type} (F : GradesFrame W B T R)
-    (IsGod : B → Prop)
-    (hMaximal : GodIsMaximalInBeing IsGod F.InAct F.MoreIn F.esse)
-    (hGenus : MaximumInGenusCausesAllInGenusReading F.InAct F.MoreIn F.CausesIn)
-    (hBeing : ActualityOnlyInsofarAsBeingReading F.InAct F.esse)
+/-- Sibling of `AttributesFromEsse.perfectFromGodCause` with universal-source
+preexistence in place of q.4 a.2 preexistence, which that proof applies only with
+GOD_4, the cause of the being of every other being, as the cause. -/
+theorem perfectFromGodCauseOfUniversalPreexistence {W B T R : Type}
+    (F : GradesFrame W B T R) (IsGod : B → Prop)
+    (hCause : GodCausesBeingOfAllOthers IsGod F.CausesIn F.esse)
     (hUniversal : UniversalSourcePreexistence F)
     (hEM : TruthCore.Logic.ExcludedMiddle) :
-    GodIsPerfect IsGod F.InAct := by
+    TruthCore.Case.Catholicism.AttributesFromEsse.PerfectInFrame F IsGod := by
   intro g hg x r hx
-  cases hEM (x = g) with
-  | inl hSame => exact hSame ▸ hx
-  | inr hOther =>
-    have hAll : CausesAllInGenus F.InAct F.CausesIn F.esse g :=
-      hGenus F.esse g (hMaximal g hg)
-    exact hUniversal g hAll x r hOther (hAll x hOther (hBeing x r hx)) hx
+  rcases hEM (x = g) with hSame | hOther
+  · exact hSame ▸ hx
+  · have hAll : CausesAllInGenus F.InAct F.CausesIn F.esse g :=
+      fun y hy _ => hCause g y hg hy
+    exact hUniversal g hAll x r hOther (hCause g x hg hOther) hx
 
-set_option synthInstance.maxSize 2048 in
-set_option synthInstance.maxHeartbeats 400000 in
-/-- The impersonal-source interpretation, checked by decision. The larger
-instance budget only lets instance search assemble the `Decidable` instances of
-the nested quantifiers. -/
+/-- The impersonal-source interpretation, checked by decision (with a larger instance budget). -/
 theorem controls : Control.Controls := by
   dsimp [Control.Controls, UniversalSourceHasWhatItGives, UniversalSourcePreexistence,
     CausesAllInGenus, UniversalCauseTransfersPerfections,
@@ -82,6 +77,7 @@ theorem controls : Control.Controls := by
     Control.grades, Control.act, TruthCore.Causality.CartesianAdequacy.gradesOf,
     Control.causes, Control.formal, Control.virtual, Control.inclusive, Control.more]
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
-  all_goals decide
+  all_goals (set_option synthInstance.maxSize 2048 in
+    set_option synthInstance.maxHeartbeats 400000 in decide)
 
 end TruthCore.Results.Causality.UniversalPreexistence

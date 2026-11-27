@@ -1,0 +1,11 @@
+{
+  "id": "916fe2ae-de45-445d-a8d5-c0f5328d1b14",
+  "label": "Universal-source preexistence from universal transfer and universal-source possession",
+  "argument_id": "77856f0e-2e6b-4e44-a851-8bc238ab43c4",
+  "challenge_module": "TruthCore.Results.Causality.UniversalPreexistence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalPreexistence.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalPreexistence.universalPreexistenceOfTransferAndPossession",
+  "comparator_config": "results/916fe2ae-de45-445d-a8d5-c0f5328d1b14/comparator.json",
+  "status": "solution-present",
+  "description": "Let c be a universal cause of being, x another thing whose being c causes, and r a perfection x has. Universal-scope transfer b26c10a0 gives that c causes x's being r; universal-source possession gives that c has r. It is the universal-scope counterpart of e8a3eb51 (preexistence from unrestricted transfer f8ba2429 and cause-of-being possession d0fc96b7): no nonuniversal transfer 10cd24ed is used. Conditional consequence only; both premises stay open."
+}

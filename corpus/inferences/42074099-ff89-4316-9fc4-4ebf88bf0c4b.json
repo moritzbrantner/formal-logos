@@ -1,0 +1,14 @@
+{
+  "id": "42074099-ff89-4316-9fc4-4ebf88bf0c4b",
+  "label": "Perfection of GOD_4 from its gift of esse, with universal-source preexistence (inference)",
+  "input_statement_ids": [
+    "86d02b69-87eb-5594-9958-ccaa5fe6b685",
+    "60176223-d091-4002-a09d-024677fc948c",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6",
+  "rule": "Excluded middle on identity; GOD_4 causes all other being, so it is a universal source; universal-source preexistence",
+  "meaning": "Sibling of ea6317cf (perfectFromGodCause) with universal-source preexistence in place of q.4 a.2 preexistence 64498e7e, which that proof applies only with GOD_4 as the cause. Let g be GOD_4 and x in act in r. If x is g, done. Otherwise GOD_4 causes the being of every other being (86d02b69), so g is a universal cause of being and causes x's being; universal-source preexistence gives that g is in act in r. The conclusion 78b7c124 is in the frame's mode-open act (IN_ACT_4). The route through this sibling needs no nonuniversal transfer. Conditional consequence only; no premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
