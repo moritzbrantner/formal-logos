@@ -365,6 +365,7 @@ public import TruthCore.Results.Causality.RelaySourceRecognition.Solution
 public import TruthCore.Results.Causality.RestatedPremises.Solution
 public import TruthCore.Results.Causality.RivalRefutationsRound2.Solution
 public import TruthCore.Results.Causality.RootEssenceIdentity.Solution
+public import TruthCore.Results.Causality.RootGroundComposition.Solution
 public import TruthCore.Results.Causality.RootIntellectWill.Solution
 public import TruthCore.Results.Causality.RootIntellectWillOmission.Solution
 public import TruthCore.Results.Causality.RootIntellectWillPureAct.Solution

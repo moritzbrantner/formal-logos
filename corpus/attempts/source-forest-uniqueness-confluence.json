@@ -10,17 +10,30 @@
     "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
     "c638c6f7-31e2-53a4-9668-bb23b88cc04e",
     "861e20d6-7d65-5856-85cf-0cd0d0c167f3",
-    "96082032-91f1-586b-9db8-e42edbb5e52e"
+    "96082032-91f1-586b-9db8-e42edbb5e52e",
+    "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9",
+    "c80768f5-a04e-43ba-bc66-3af231a177b5"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Analyst structural slice for #320, baseline73dcbb13. Inventory found existing Graph/Source, actualGraph, FiniteCausalPath and WorldSourceRegress.sourcePath_of_acc, and Mathlib EqvGen, Relator.LeftUnique, ReflTransGen, Join and Church\u2013Rosser; no existing repository source-uniqueness theorem under these conditions. First proved weak causal connectivity plus unique immediate predecessor gives at-most-one source without WF or population. Generalized through Mathlib equivalence_join to upstream confluence; a fixed finite diamond proves this condition strictly weaker than unique immediate predecessor. Confluence is defined by joining arbitrary finite upstream branches, not by existence of a named/common source. WF plus explicit population composes the existing source-path theorem to produce one source with finite paths from all nodes. Four frozen controls separate V-shaped multiple sources, disconnected sources, connected source-free integer chain and empty carrier. The integer chain preserves uniqueness vacuously while failing existence; no nonemptiness is hidden inside connectivity. Rejected inferring causal connectivity from accessibility connectivity, necessity/no-parts/essence-esse identity from graph structure, or multiple immediate causes from metaphysical impossibility. Strongest residual objection: neither the original LeftUnique restriction nor its weaker upstream-confluence replacement is independently warranted for actual causes. Shared service full-content probes used causal-harvest at detached73dcbb13, unique Scratch/issue320-forest/Proof.lean under /tmp/truth-core-lean.lock; HTTP200, lock wait0, versions1-8, final SHA2562ada60dfb3e81cb69400c0dd015147dbc21bbd0a3ea6e582e17db0938957e8bd, no diagnostics at version8. Initial frozen Challenge SHA25681823585e4e0f91db1bfa83637f2428131142d963e2177f33873984509a62bdb preserved; separate confluence Challenge SHA256592527e0a7b20e2d58b7ed2074e9de1c98d62a4d0ea3130defee2c1052456e59. Interactive elaboration is not final Comparator/NanoDa certification. No source attribution or actual metaphysical profile established. Intended and actual root-premise delta zero: all previous root leaves retained, none added or removed; no route or root closure changes.",
+  "summary": "Analyst structural slice for #320, baseline73dcbb13. Inventory found existing Graph/Source, actualGraph, FiniteCausalPath and WorldSourceRegress.sourcePath_of_acc, and Mathlib EqvGen, Relator.LeftUnique, ReflTransGen, Join and Church–Rosser; no existing repository source-uniqueness theorem under these conditions. First proved weak causal connectivity plus unique immediate predecessor gives at-most-one source without WF or population. Generalized through Mathlib equivalence_join to upstream confluence; a fixed finite diamond proves this condition strictly weaker than unique immediate predecessor. Confluence is defined by joining arbitrary finite upstream branches, not by existence of a named/common source. WF plus explicit population composes the existing source-path theorem to produce one source with finite paths from all nodes. Four frozen controls separate V-shaped multiple sources, disconnected sources, connected source-free integer chain and empty carrier. The integer chain preserves uniqueness vacuously while failing existence; no nonemptiness is hidden inside connectivity. Rejected inferring causal connectivity from accessibility connectivity, necessity/no-parts/essence-esse identity from graph structure, or multiple immediate causes from metaphysical impossibility. Strongest residual objection: neither the original LeftUnique restriction nor its weaker upstream-confluence replacement is independently warranted for actual causes. Shared service full-content probes used causal-harvest at detached73dcbb13, unique Scratch/issue320-forest/Proof.lean under /tmp/truth-core-lean.lock; HTTP200, lock wait0, versions1-8, final SHA2562ada60dfb3e81cb69400c0dd015147dbc21bbd0a3ea6e582e17db0938957e8bd, no diagnostics at version8. Initial frozen Challenge SHA25681823585e4e0f91db1bfa83637f2428131142d963e2177f33873984509a62bdb preserved; separate confluence Challenge SHA256592527e0a7b20e2d58b7ed2074e9de1c98d62a4d0ea3130defee2c1052456e59. Interactive elaboration is not final Comparator/NanoDa certification. No source attribution or actual metaphysical profile established. Intended and actual root-premise delta zero: all previous root leaves retained, none added or removed; no route or root closure changes. Lane E batch 2, #2103: disposition (ii) for 96082032. On ConcreteExistentialSupply.graph of one selected profile and world, an incoming actual concrete ground is exactly an incoming edge to the source. Finite path induction then gives ACTUAL-COMMON-ROOT under the new open root-starting composition law on the same edge relation. Finite ancestry without the law is insufficient: the existing mediated-chain control reaches all actual nodes from d along d→g→c and has no direct common root. The conditional use does not interpret an arbitrary causal graph as existential grounding.",
   "evidence": [
     "f532348a-a29e-5001-b9e8-b3f17cbf83f0",
     "f3e28be5-987b-54fd-b8c5-0d6e63a90155",
     "2e76d998-a6f1-5e8b-8269-d84affc10c27",
     "7a1dcb73-7789-5571-a8be-51d50cd7a3aa",
     "d25f68a3-a9f7-547e-81f1-964da24856e0",
-    "PR-633"
+    "PR-633",
+    "8347cd06-cde4-431a-b42b-6c8616934be7"
+  ],
+  "blocker": " The new consumer needs root-starting composition as a direct-edge law in Profile.grounds. It does not follow from finite ancestry. For application, justify closure in the selected sense of grounding or keep the mediated reading with paths and no shortcut.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }

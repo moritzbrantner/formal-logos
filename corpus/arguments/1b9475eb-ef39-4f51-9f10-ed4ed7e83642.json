@@ -1,0 +1,32 @@
+{
+  "id": "1b9475eb-ef39-4f51-9f10-ed4ed7e83642",
+  "label": "Root-starting composition gives a direct common root from finite ancestry",
+  "premise_statement_ids": [
+    "96082032-91f1-586b-9db8-e42edbb5e52e",
+    "c80768f5-a04e-43ba-bc66-3af231a177b5"
+  ],
+  "conclusion_statement_id": "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9",
+  "inference_ids": [
+    "d1d7cec1-546c-4a04-b21d-01064e5d8e8b"
+  ],
+  "meaning": "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct actual recipient and no stronger causal interpretation.",
+  "definition_ids": [
+    "3818558a-d30a-4804-8624-f0a874c17e45",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "1dff2d68-1348-5e7e-8ee7-248af63c8c53",
+    "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
+    "7439c292-82a4-530d-8144-a61a6c21f502",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "4b02d34a-9226-5009-9ac2-3b52f4222b21",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}
