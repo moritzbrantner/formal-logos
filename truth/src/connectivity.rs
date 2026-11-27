@@ -16,6 +16,10 @@
 //!   endpoint standing for statements: a statement for itself, a claim for
 //!   its statement, an argument for its conclusion and premises, a result
 //!   for its argument's; `background_statement_ids` join the object;
+//! - a `strength_comparison` or `strengthens` relation also joins its object
+//!   to the statements it certifies: its delta and remainder statements and
+//!   the statements of the results it names as evidence (implication,
+//!   equivalence, separator, strictness);
 //! - an attempt joins the statements it names.
 //!
 //! The method is that of the cohesive-graph measurement script
@@ -191,6 +195,41 @@ impl<'a> Graph<'a> {
             }
             for background in list(relation, "background_statement_ids") {
                 graph.link(text(relation, "object_id"), background);
+            }
+            // A strength registration or comparison is typed contact for the
+            // statements it certifies: the delta and remainder statements of
+            // a `strength_comparison`, and the statements of the results a
+            // `strength_comparison` or `strengthens` record names as its
+            // evidence (implication, equivalence, separator, strictness).
+            if matches!(
+                text(relation, "predicate"),
+                "strength_comparison" | "strengthens"
+            ) {
+                let object = text(relation, "object_id");
+                let mut certified: Vec<&str> = ["delta_statement_id", "remainder_statement_id"]
+                    .into_iter()
+                    .map(|field| text(relation, field))
+                    .filter(|id| !id.is_empty())
+                    .collect();
+                let mut results: Vec<&str> = ["verification_result_id", "strictness_result_id"]
+                    .into_iter()
+                    .map(|field| text(relation, field))
+                    .collect();
+                if let Some(evidence) = relation
+                    .get("evidence_result_ids")
+                    .and_then(Value::as_object)
+                {
+                    results.extend(evidence.values().filter_map(Value::as_str));
+                }
+                if let Some(separator) = relation.get("separator").and_then(Value::as_object) {
+                    results.extend(separator.get("result_id").and_then(Value::as_str));
+                }
+                for result in results.into_iter().filter(|id| !id.is_empty()) {
+                    certified.extend(endpoint("result", result));
+                }
+                for statement in certified {
+                    graph.link(object, statement);
+                }
             }
         }
         for attempt in corpus.records("attempts").into_iter().filter(|_| attempts) {
@@ -873,6 +912,52 @@ mod tests {
         assert_eq!(second["root_component"], 3);
         assert_eq!(second["isolated"], 1);
         assert_eq!(second["isolated_listed"], json!([]));
+    }
+
+    /// ROOT <- W (argument). S strengthens W; a `strength_comparison` of S
+    /// over W names the delta D, an equivalence result concluding E and a
+    /// separator result concluding X; a `strengthens` record names the
+    /// strictness result concluding K. All of them join the root component
+    /// without a `tests` edge; an unrelated Z does not.
+    #[test]
+    fn strength_records_are_typed_contact_for_their_certificates() {
+        let checkout = Checkout::new("strength");
+        for id in ["ROOT", "W", "S", "D", "E", "X", "K", "Z"] {
+            checkout.write("statements", statement(id));
+        }
+        checkout.write("arguments", argument("ARG-ROOT", &["W"], "ROOT"));
+        for (argument_id, conclusion) in [("ARG-E", "E"), ("ARG-X", "X"), ("ARG-K", "K")] {
+            checkout.write("arguments", argument(argument_id, &[], conclusion));
+            checkout.write(
+                "results",
+                json!({"id": format!("RES-{conclusion}"), "argument_id": argument_id,
+                       "challenge_module": "c", "solution_module": "s", "theorem": "t",
+                       "comparator_config": "f", "status": "verified"}),
+            );
+        }
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        assert_eq!(report(&corpus, "ROOT", 0)["root_component"], 2);
+        checkout.write(
+            "relations",
+            json!({"id": "CMP", "subject_kind": "statement", "subject_id": "S",
+                   "predicate": "strength_comparison", "object_kind": "statement",
+                   "object_id": "W", "delta_statement_id": "D",
+                   "background_statement_ids": [],
+                   "evidence_result_ids": {"equivalence": "RES-E"},
+                   "separator": {"setting": "s", "result_id": "RES-X"}}),
+        );
+        checkout.write(
+            "relations",
+            json!({"id": "STR", "subject_kind": "statement", "subject_id": "S",
+                   "predicate": "strengthens", "object_kind": "statement", "object_id": "W",
+                   "strictness_result_id": "RES-K"}),
+        );
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        let after = report(&corpus, "ROOT", 0);
+        // ROOT, W, S, D, E, X, K: contact, not derivation.
+        assert_eq!(after["root_component"], 7);
+        assert_eq!(after["reaching_root"], 2);
+        assert_eq!(after["isolated"], 1);
     }
 
     fn argument(id: &str, premises: &[&str], conclusion: &str) -> Value {
