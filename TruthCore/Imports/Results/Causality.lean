@@ -410,6 +410,7 @@ public import TruthCore.Results.Causality.SelectedConeSupplyControls.Solution
 public import TruthCore.Results.Causality.SelectedNecessaryRoute.Solution
 public import TruthCore.Results.Causality.SelectedPlgTheory.Solution
 public import TruthCore.Results.Causality.SelectedSourcePath.Solution
+public import TruthCore.Results.Causality.SelectionScope.Solution
 public import TruthCore.Results.Causality.SelfCausationPriority.Solution
 public import TruthCore.Results.Causality.SelfMotionSeparation.Solution
 public import TruthCore.Results.Causality.SelfOperationLife.Solution

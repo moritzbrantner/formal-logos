@@ -305,6 +305,7 @@ public import TruthCore.Causality.SelectedAncestryUniqueControl
 public import TruthCore.Causality.SelectedConeSupply
 public import TruthCore.Causality.SelectedPlgTheory
 public import TruthCore.Causality.SelectedSourcePath
+public import TruthCore.Causality.SelectionScope
 public import TruthCore.Causality.SelfCausationPriority
 public import TruthCore.Causality.SelfMotionSeparation
 public import TruthCore.Causality.SelfOperationLife

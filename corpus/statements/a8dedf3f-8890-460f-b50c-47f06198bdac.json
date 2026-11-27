@@ -1,0 +1,18 @@
+{
+  "id": "a8dedf3f-8890-460f-b50c-47f06198bdac",
+  "label": "Every GOD_4 exists at w and has power for there being no contingent concrete being",
+  "paraphrase": "OPEN (analyst formulation, unattributed): every GOD_4 exists at w and has at w a power (PowerFor) for there being no contingent concrete being (NoContingentConcreteIn): the world-level total-noncreation power (TOTAL_REFRAINING_2). As typed it is independent of 0050b6ed (joint absence of the actual contingents): neither entails the other without Euclidean access and monotone powers. Motivation, navigation only: on classical theism God could have refrained from creating (ST I q.19 a.3). It does not exclude necessary concreta and says nothing about which creatures exist otherwise.",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.GodsHoldTotalAbsencePower",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "6ce98992-366e-4115-a0db-e240a7701e42"
+  ]
+}
