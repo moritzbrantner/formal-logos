@@ -1,0 +1,10 @@
+{
+  "id": "7b001811-3a13-4e1b-a804-e734a6b56171",
+  "label": "Test by Controls.controls (48f3c367)",
+  "subject_kind": "result",
+  "subject_id": "a8aced0e-08dc-5224-9dbd-7bfb406fbc3a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "48f3c367-eaff-4a66-aa97-4bc69ba581ac",
+  "note": "Test event acyclicity in the simultaneous motion model. The two clock-zero event tokens are linked in both directions, with distinct target respects. The two-edge return is a nonempty event cycle even though the clock never goes backward and each local act and potency condition holds."
+}

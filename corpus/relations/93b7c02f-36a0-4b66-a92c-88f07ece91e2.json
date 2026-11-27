@@ -1,0 +1,10 @@
+{
+  "id": "93b7c02f-36a0-4b66-a92c-88f07ece91e2",
+  "label": "Test by ScopedActualCausality.strictControl (43f9545d)",
+  "subject_kind": "result",
+  "subject_id": "c545337e-07a1-5a5f-bd4e-73b23b53d3e0",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "43f9545d-20f1-5868-b634-5b5c1c92ec28",
+  "note": "The identity parthood lifted to the subtype of bearers existing at false satisfies population, atomicity, conditional caused-simple coverage and nonoverlap together with selected-world causal coverage. A contingent bearer exists at false."
+}

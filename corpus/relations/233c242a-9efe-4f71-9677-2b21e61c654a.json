@@ -1,0 +1,10 @@
+{
+  "id": "233c242a-9efe-4f71-9677-2b21e61c654a",
+  "label": "Test by UnderivedRootRoute.underivedRouteControls (2a9378b4)",
+  "subject_kind": "result",
+  "subject_id": "eb7f5423-fec4-590a-97dc-73ff632c7f79",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2a9378b4-3dad-591b-a88e-1907a79f1fa5",
+  "note": "The weaker support-presence condition holds at the selected world true, with a necessarily underived witness. The stronger lifting condition fails because the supporter d exists at true and supports a necessary candidate but is absent at accessible false."
+}

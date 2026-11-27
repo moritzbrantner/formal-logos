@@ -1,0 +1,10 @@
+{
+  "id": "76b7115c-346a-42d0-96bb-a8e095010eb1",
+  "label": "Test by Countermodels.checks (62b4a40a)",
+  "subject_kind": "result",
+  "subject_id": "c81e1a75-82d0-5dff-99ac-4316a0eeba6e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "62b4a40a-919e-5da4-998c-131c386b7361",
+  "note": "Test global Euclideanness over the reflexive transitive pockets frame. For either choice of the paired flag, root accesses left and right, while left does not access right. This pair of successors supplies the failing Euclidean instance."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "4ba8acb6-b5e9-4b73-99fb-457176b3c864",
+  "label": "Test by ExistentialSelfActualization.controls (e9da0216)",
+  "subject_kind": "result",
+  "subject_id": "63208bf9-26e6-56be-b6db-911a75a1f910",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e9da0216-07df-5c7f-b9e8-475d12671f59",
+  "note": "Omit irreflexivity. Universal priority gives a transitive relation permitting both bearer-to-act and act-to-bearer priority, so the single occurring act can be assigned production of its own bearer."
+}

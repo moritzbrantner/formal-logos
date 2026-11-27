@@ -138,6 +138,7 @@ description = "Same-witness conditional result: the First Way's own first mover 
 [[argument]]
 id = "First Way necessary first root witnesses the necessary first PURE_ACT_5 endpoint"
 theorem = "firstMoverRootIsNecessaryFirstPureAct"
+transcription = "assembly"
 premises = ["Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"]
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"}, {term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "593d7307-c8e1-5863-9776-a26cfe09d20c", role = "conclusion"}]
 conclusion = "593d7307-c8e1-5863-9776-a26cfe09d20c"

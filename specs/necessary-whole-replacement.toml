@@ -6,7 +6,8 @@ results = "TruthCore.Results.Causality.NecessaryWholeReplacement"
 id = "Fixed-candidate replacement control with all-world contingent grounding and no reversed direct edges"
 lean = "Control"
 paraphrase = "One explicit five-candidate/two-world structural interpretation. The same candidate none actually exists and exists at both universally accessible worlds; it receives present contingent support in each. Every support edge has present endpoints, each world's present-support relation is well-founded, and every contingent candidate has a present concrete ground wherever it exists. No pair of opposite direct support edges occurs even across worlds. The necessary-only support union is empty and well-founded; no-contingent-concrete-support and all-world necessary-concrete-underivedness both fail. Concrete is uniformly stipulated. No parthood, fusion, intrinsic essence, real support adequacy or metaphysical possibility is certified."
-definitions = ["DEF-NO-CONTINGENT-CONCRETE-SUPPORT", "DEF-CONCRETE-SUPPORT-RESTRICTION", "DEF-KANT-MODAL-NECESSITY", "DEF-PRESENT-ESSE-SUPPORT"]
+definitions = ["DEF-NO-CONTINGENT-CONCRETE-SUPPORT", "DEF-CONCRETE-SUPPORT-RESTRICTION", "DEF-KANT-MODAL-NECESSITY", "DEF-PRESENT-ESSE-SUPPORT", "DEF-CONCRETE-NECESSARY-UNION-WF", "DEF-NECESSARY-CONCRETE-UNDERIVED-AT", "DEF-WELL-FOUNDED-PRESENT-ESSE-SUPPORT"]
+disambiguations = ["DISAMB-EXISTENCE-ESSE-SUPPORT", "DISAMB-NECESSARY-EXISTENCE-VS-UNDERIVED", "DISAMB-ACTUAL-VS-WHOLE-CARRIER-WF"]
 
 [[argument]]
 id = "50c97077-9a5a-468d-b0ac-377a73828537"
@@ -29,3 +30,13 @@ coverage = "One structural interpretation, not all replaceable-realization accou
 exclusivity = "The exhibited contingent supporters violate NoContingentConcreteSupport. No reverse implication, metaphysical exclusion or completeness of rival coverage is asserted."
 witness = "TruthCore.Results.Causality.NecessaryWholeReplacement.checks"
 next_step = "Fix an independently motivated identity criterion and genuinely existential support account; test whether it requires each present supporter rigidly, permits generic replacement, or rules out only the longer cross-world ancestry loop. Do not infer essentiality from support's name."
+
+[[relation]]
+id = "4690f6b0-1a21-4b5c-a4cb-a11c7637b186"
+label = "Test by NecessaryWholeReplacement.checks (dd41c165)"
+subject_kind = "result"
+subject_id = "be32d3af-2d06-443e-a0b1-fa22d608d5b4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dd41c165-129a-59d3-84ce-bd13c0944901"
+note = "Candidate none exists at both worlds, but a different contingent candidate supports it at each world. Actual grounding is well-founded, every actual contingent concretum is grounded, and the necessary-only union is empty. The global restriction on contingent supporters fails and no necessary concretum is underived across worlds."

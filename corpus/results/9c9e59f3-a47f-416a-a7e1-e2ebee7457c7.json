@@ -1,0 +1,11 @@
+{
+  "id": "9c9e59f3-a47f-416a-a7e1-e2ebee7457c7",
+  "label": "The necessary classical GOD_4 root from the negative and positive attribute packages",
+  "argument_id": "d89e75d6-cae0-424d-a690-507c58b959ab",
+  "challenge_module": "TruthCore.Results.Causality.NecessaryNegativeAttributeConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NecessaryNegativeAttributeConnection.Solution",
+  "theorem": "TruthCore.Results.Causality.NecessaryNegativeAttributeConnection.classicalRootFromNegativeAndPositive",
+  "comparator_config": "results/9c9e59f3-a47f-416a-a7e1-e2ebee7457c7/comparator.json",
+  "status": "solution-present",
+  "description": "The positive package makes its bearer the only actual root at the selected world of the fixed profile. The negative package’s bearer is an actual root there, so transport its firstness, potency exclusion, noncomposition and remoteness to the same positive witness. Reuse maximum-equals-root for the full nominal description, then apply the explicit naming, infinity, eternity and field premises to that witness. The branch through 7ea1949a already uses 593d7307. The producer a4596f66 derives that first and pure root internally from its own whole-roster inputs, so it shares the subargument even where 593d7307 is not a listed direct premise."
+}
