@@ -8,7 +8,7 @@
   "inference_ids": [
     "c89715c4-6333-446e-85c3-022b7ee9f0e9"
   ],
-  "meaning": "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. It certifies the strength order of the two premises. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment.",
+  "meaning": "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. Given the PSR for root lack facts and the lack facts the converse holds, so the two are then equivalent. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment.",
   "definition_ids": [
     "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
     "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",

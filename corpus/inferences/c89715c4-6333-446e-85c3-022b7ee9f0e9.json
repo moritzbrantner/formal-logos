@@ -6,7 +6,7 @@
   ],
   "output_statement_id": "fedc67d8-9752-419a-8eb5-9896081ccfe4",
   "rule": "Drop the reason hypothesis",
-  "meaning": "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. It certifies the strength order of the two premises. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment.",
+  "meaning": "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. Given the PSR for root lack facts and the lack facts the converse holds, so the two are then equivalent. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

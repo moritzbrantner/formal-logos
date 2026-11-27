@@ -7884,9 +7884,10 @@ Registered results (main theorems use no axioms):
   root lack facts, the lack facts, the sense bridge and the necessity
   direction of member grounding (`89c988d9`) give E.
 - `positiveLackReasonsOfNoUnexplainedAbsence` [`a7644793`]: E alone gives the
-  sense bridge for every arena, lack map and requirement relation, registered
-  as a `strengthens` relation. Given the other three premises the bridge and E
-  are equivalent: a relocation.
+  sense bridge for every arena, lack map and requirement relation. Given the
+  other three premises the bridge and E are equivalent: a relocation. It is not
+  registered as a `strengthens` relation, because the bridge replaces E in
+  other arguments only together with those premises.
 - `noUnexplainedAbsenceFromEssentialLackReasons` [`1844def4`]: the PSR for
   root lack facts, the lack facts, the reason-essence thesis, LE and the
   necessity direction give E. Clause 7 (the factorization) shows how: the
@@ -7933,8 +7934,8 @@ self-undermining charge is available on the present graph.
 
 `noUnexplainedAbsenceFromEssentialExclusion` [`915d06fd`]: XN, LE and the
 necessity direction give E. `lackReasonsEssentialOfExcluded` [`3452ca1e`]: XN
-gives the reason-essence thesis, a `strengthens` relation that is strict on
-the base-arena row. Given the PSR for root lack facts and the lack facts, XN
+gives the reason-essence thesis (strict on the base-arena row; not a
+`strengthens` relation, for the same reason as the bridge). Given the PSR for root lack facts and the lack facts, XN
 and the reason-essence thesis are equivalent, so the PSR is idle once XN is
 assumed directly.
 

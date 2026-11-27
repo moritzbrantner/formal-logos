@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Explanation.InquiryClosure.positiveLackReasonsOfNoUnexplainedAbsence",
   "comparator_config": "results/a7644793-0495-41e8-9851-9c7d2b95836b/comparator.json",
   "status": "solution-present",
-  "description": "Strength-order certificate and relocation converse: E implies the sense bridge for every arena. Establishes no premise."
+  "description": "Relocation converse: E implies the sense bridge for every arena. Not registered as a strength relation, since the bridge replaces E in other arguments only together with the PSR for root lack facts, the lack facts and the necessity direction. Establishes no premise."
 }

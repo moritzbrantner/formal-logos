@@ -82,8 +82,8 @@ conclusion = "An actual root's absence with an admitted reason is positively fix
 sense_bridges = [{ term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_1", to = "EXPLAINED_ABSENCE_2", statement_id = "An actual root's absence with an admitted reason is positively fixed", role = "conclusion" }]
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "An absence that is not unexplained is fixed at the admissibility level, whatever reasons it has"
-meaning = "If no actual root has an unexplained absence, then every absence of an actual root, with or without an admitted reason, is one that no admissible profile adds to the root's determinations, which is the first disjunct of a positively fixed absence. It holds for every arena, lack map and requirement relation. It certifies that E is at least as strong as the bridge, so the derivation of E from the bridge is a relocation. The main theorem uses no axioms. In the Comparator companion lackReasonControls, row 3 (the base arena, no reasons for lacks) satisfies the bridge vacuously while E fails, so the order is strict on that assignment."
-description = "Strength-order certificate and relocation converse: E implies the sense bridge for every arena. Establishes no premise."
+meaning = "If no actual root has an unexplained absence, then every absence of an actual root, with or without an admitted reason, is one that no admissible profile adds to the root's determinations, which is the first disjunct of a positively fixed absence. It holds for every arena, lack map and requirement relation. So the derivation of E from the bridge is a relocation. The main theorem uses no axioms. In the Comparator companion lackReasonControls, row 3 (the base arena, no reasons for lacks) satisfies the bridge vacuously while E fails, so the order is strict on that assignment."
+description = "Relocation converse: E implies the sense bridge for every arena. Not registered as a strength relation, since the bridge replaces E in other arguments only together with the PSR for root lack facts, the lack facts and the necessity direction. Establishes no premise."
 
 [[argument]]
 id = "No unexplained absence at roots, from the root lack PSR, the reason-essence thesis and carriage"
@@ -105,8 +105,8 @@ premises = ["Every absence of an actual root is excluded by some ESSENCE_6 condi
 conclusion = "An actual root's absence has an admitted reason only if some nature excludes it"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Drop the reason hypothesis"
-meaning = "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. It certifies the strength order of the two premises. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment."
-description = "Strength-order certificate: essential exclusion of root absences implies the reason-essence thesis. Establishes no premise."
+meaning = "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. Given the PSR for root lack facts and the lack facts the converse holds, so the two are then equivalent. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment."
+description = "Essential exclusion of root absences implies the reason-essence thesis. Not registered as a strength relation, since the thesis replaces essential exclusion only together with the PSR for root lack facts and the lack facts. Establishes no premise."
 
 [[argument]]
 id = "No unexplained absence at roots, from essential exclusion and carriage"
@@ -140,26 +140,6 @@ object_kind = "statement"
 object_id = "Every lack fact of an actual root has an admitted reason"
 verification_result_id = "Root lack PSR, from the unrestricted fact PSR"
 note = "Same arena and world. The strong version gives an admitted reason to every fact true at w, the weak one to the true lack facts of actual roots. No strictness result is registered."
-
-[[relation]]
-id = "No unexplained absence at roots strengthens the sense bridge for root absences"
-subject_kind = "statement"
-subject_id = "9281317d-1f0a-4522-b91c-58cc07652e92"
-predicate = "strengthens"
-object_kind = "statement"
-object_id = "An actual root's absence with an admitted reason is positively fixed"
-verification_result_id = "Sense bridge for root absences, from no unexplained absence at roots"
-note = "Same profile, world and admissible family; the weak version adds an arena, a lack map and a requirement relation, for every choice of which the order holds. Row 3 of lackReasonControls (no reasons for lacks) satisfies the weak version vacuously and fails the strong one. The PSR for root lack facts, the lack facts and the necessity direction of member grounding together with the weak version give the strong one (noUnexplainedAbsenceFromPositiveLackReasons); no certified difference is registered."
-
-[[relation]]
-id = "Essential exclusion of root absences strengthens the reason-essence thesis"
-subject_kind = "statement"
-subject_id = "Every absence of an actual root is excluded by some ESSENCE_6 condition"
-predicate = "strengthens"
-object_kind = "statement"
-object_id = "An actual root's absence has an admitted reason only if some nature excludes it"
-verification_result_id = "Reason-essence thesis for root absences, from essential exclusion of root absences"
-note = "Same root, profile and ESSENCE_6 relation; the weak version adds an arena and a lack map. The strong version excludes every absence, the weak one only absences with an admitted reason. Row 2 of lackReasonEssenceControls satisfies the weak version vacuously and fails the strong one. The PSR for root lack facts and the lack facts together with the weak version give the strong one; no certified difference is registered."
 
 [[relation]]
 id = "Test by InquiryClosure.inquiryScopeMap (9281317d)"
