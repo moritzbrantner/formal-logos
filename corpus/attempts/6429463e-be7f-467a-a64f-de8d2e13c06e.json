@@ -23,5 +23,20 @@
       "effort": "high",
       "date": "2026-11-27"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "d1fb6414-976e-4833-908d-17787cca2502"
+    ],
+    "scope": "Owner-approved round-3 tests of the gap between imitability exemplars (A4) and apprehension: counterfactual guidance by outweighed reasons and self-application, applied identically to the personal source",
+    "assessment": "Neither test discriminates between A4 and the personal source. Counterfactual guidance is profile-level (guidanceOfTracking, guidanceLabelIndependent), so A4 and the personal source, which share the good-tracking profile, get the same verdict; it does separate good-tracking from fixed favouring (guidanceTable 1587c760, fixedNotGuided), a further mark the D-nature fails. Registration of outweighed reasons needs articulated stand-ins (degreeOnlyRegistersNoRespectBetweenTies), available to both at the shared #1879 articulation price. Self-application over alternatives reduces to the criterion at second order (selfApplicationIndividuates); self-love is available to both; ranking alternatives to its own favouring is unavailable to both at a necessary source; self-apprehension presupposes the dispute. Round 2's parity at d1fb6414 is unchanged.",
+    "next_test": "A non-counterpossible analogue of error and correction at a necessary source; whether unity of articulated modes needs a principle only apprehension supplies (#1879 for both); whether the source's relation to its modes does explanatory work (truth, intelligibility of creatures) requiring them to be for the source (#1892 through its consequences).",
+    "note": "docs/notes/causal-perfection-transfer.md#counterfactual-guidance-and-self-application-against-imitability-exemplars-2026-11-27-provisional-2145",
+    "reviewed_revision": "417a33eeb9e32b8eaaa782d94dd765946dd35a0c",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Branch research/premise-cognition-r3 (stacked on research/premise-cognition at ad289e982) with placed diagnostic 1587c760: focused Lean build, bind-check, Comparator and NanoDa passed locally; no independent semantic challenge yet.",
+    "supersedes": "None. It adds a scoped assessment beside 421caba9's round-2 assessment, which it leaves unchanged."
+  }
 }
