@@ -359,10 +359,12 @@ inductive Ca
   | c
   deriving DecidableEq
 
-/-- The value order: at `s0`, `a` over `b` and `c` over `a`; nothing at `s1`. -/
+/-- The value order: at `s0`, `c` over `a` over `b` (so `c` over `b`); nothing at
+`s1`. -/
 def value : Sc → Ca → Ca → Prop
   | .s0, .a, .b => True
   | .s0, .c, .a => True
+  | .s0, .c, .b => True
   | _, _, _ => False
 
 /-- An intrinsic power order: at `s0`, `a` over `b` and `a` over `c`; nothing at
@@ -379,11 +381,14 @@ def sameEnd (_ : Sc) : Unit := ()
 def noneHere (_ : Sc) (_ : Ca) : Prop := False
 
 /-- The power-tracking profile is good-general (the two orders coincide on `a`
-over `b` at `s0` and both fail at `s1`), both orders are irreflexive and
-asymmetric, and they rank `a` and `c` oppositely at `s0`. -/
+over `b` at `s0` and both fail at `s1`); both relations are strict orders
+(asymmetric, hence irreflexive, and transitive); and they rank `a` and `c`
+oppositely at `s0`. -/
 def WitnessOnlyAlignment : Prop :=
   ImpersonalFoundationJoint.GoodGeneral value sameEnd noneHere power ∧
   (∀ s x y, value s x y → ¬ value s y x) ∧ (∀ s x y, power s x y → ¬ power s y x) ∧
+  (∀ s x y z, value s x y → value s y z → value s x z) ∧
+  (∀ s x y z, power s x y → power s y z → power s x z) ∧
   power .s0 .a .c ∧ value .s0 .c .a
 
 end AlignmentControl

@@ -362,11 +362,15 @@ theorem witnessOnlyAlignment :
     TruthCore.Causality.AxiarchicFoundation.AlignmentControl.WitnessOnlyAlignment := by
   open TruthCore.Causality.AxiarchicFoundation.AlignmentControl in
   refine ⟨⟨.s0, .a, .b, ⟨trivial, trivial, .s1, rfl, fun h => h, fun h => h⟩, Or.inl id⟩,
-    ?_, ?_, trivial, trivial⟩
+    ?_, ?_, ?_, ?_, trivial, trivial⟩
   · intro s x y h h'
     cases s <;> cases x <;> cases y <;> simp_all [value]
   · intro s x y h h'
     cases s <;> cases x <;> cases y <;> simp_all [power]
+  · intro s x y z h h'
+    cases s <;> cases x <;> cases y <;> cases z <;> simp_all [value]
+  · intro s x y z h h'
+    cases s <;> cases x <;> cases y <;> cases z <;> simp_all [power]
 
 end Controls
 
