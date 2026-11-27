@@ -1,0 +1,24 @@
+{
+  "id": "9666d95f-6610-4aa1-8118-6eddd30fdc8e",
+  "label": "Matched good-favouring table, by computation",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "e1d13faf-e671-43e8-85d8-011125a24501",
+  "inference_ids": [
+    "e7a5d3de-efa4-460d-9cdb-356183f45065"
+  ],
+  "meaning": "Rows 2 and 3 unfold the profiles at the actual and cBetter contents on the exercise frame's histories c and d. Row 4 applies the re-description and non-triviality laws to the contingent outcome c. Row 5 uses the reversal scenario as witness for the D-tracking profiles; the proxy is fixed. Row 6 uses the valueless scenario, which has the actual D-realization, as witness for the good-tracking profiles; the D-nature and determined will factor through D-realization and the proxy is fixed. Row 8: betterness does not rank z over c, nor c over d, at actual. Row 9 combines rows 5 and 6 with the betterness of c over z.",
+  "definition_ids": [
+    "188efb7f-0b64-4a54-a462-f053a5cd84e6",
+    "45541b02-ec42-4bae-9d45-4c67d2902004",
+    "aaaad7b2-fd1c-49ad-ac0b-666763ef96df",
+    "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+    "da7e9520-18d1-4514-8490-186e7b29a56d",
+    "f35499f9-5905-4eb9-bc10-f40bfadc0b31"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "59b60fe6-1bfe-512f-a90c-17416218bba4",
+    "0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5"
+  ],
+  "sense_mixing_control": true
+}
