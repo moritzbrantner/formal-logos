@@ -27,10 +27,12 @@ things that phrase joins.
   exclusive in Lean: a favouring is fixed by both when the two states are
   correlated in the scenario space.
 * **Object: what the favouring is measured by.** A formal-object assignment
-  `obj` gives the ranking that measures each favouring (the formal object of its
-  kind, not its particular content). The per-bearer standard bridge
-  `PureFavouringTracksItsObject` says that a pure favouring makes exactly the
-  verdicts of its formal object. The object premise
+  `obj b φ` gives, for a bearer `b` and its favouring `φ`, the ranking that
+  measures it (intended: the formal object of `b`'s kind of operation, not `φ`'s
+  particular content; the type does not enforce that). It is indexed by the
+  bearer because one profile can belong to bearers of different kinds. The
+  per-bearer standard bridge `PureFavouringTracksItsObject` says that a pure
+  favouring makes exactly the verdicts of its formal object for its bearer. The object premise
   `ActualRootFavouringObjectIsValue` says that the formal object of every
   favouring of an actual root is the value order (STANDARD_OF_FAVOURING_1).
 
@@ -46,7 +48,9 @@ directions:
   (`NaturalStateAdUnum`, determination of a natural form to one end), no natural
   appetite fixed by it is good-general, so under the mode dichotomy every
   good-general favouring is rational. A natural state that responds to the
-  candidates' full content is the countermodel.
+  candidates' full content is the countermodel. Neither `GoodGeneral` nor the
+  route's premises encode mode, and no type requires a natural state to be
+  non-apprehensive.
 
 Every model in `Control` is a finite structural surrogate. It witnesses only the
 stated formal interpretation, never a metaphysical possibility. Which account a
@@ -109,42 +113,60 @@ apprehension does not vary with the candidates. -/
 def ConstantApprehension (a : ApprehensionState S Y) : Prop :=
   ∀ s t, a.state s = a.state t
 
-/-- OPEN, Lean-only: DETERMINATION TO ONE END (ad unum) of a natural state. Any
-two scenarios that agree on end-realization give the same natural state: the
-nature responds to the candidates only through whether they realize its end. -/
+/-- OPEN, Lean-only: DETERMINATION TO ONE END (ad unum) of a natural state, in
+the end-content sense. Any two scenarios that agree on end-realization give the
+same natural state: the nature responds to the candidates only through whether
+they realize its end content D (`fitOf`). Sense restriction: this is
+determination to one end-*content class*. A nature determined to the good as
+such (the will as nature; the imitability-exemplar rival) is not ad unum in this
+sense, so the encoding does not cover the claim that such a determination is
+"to one" as well. -/
 def NaturalStateAdUnum {Z : Type} (n : NaturalState S K) (fitOf : S → Z) : Prop :=
   Function.FactorsThrough n.state fitOf
 
-/-! ## Object: what a favouring is measured by -/
+/-! ## Object: what a favouring is measured by
+
+The formal object is indexed by the bearer: `obj b φ` is the ranking by which
+`b`'s favouring `φ` is measured. One profile can be had by two bearers of
+different kinds (Lane 2b's `dNature` and `determinedWill` are the same function,
+`fitOrder`), and then it can have two formal objects: the end of a nature for
+the natural bearer, the good for the willing one. A profile-indexed object could
+not represent that. -/
 
 /-- OPEN per-bearer standard bridge (the per-bearer reading of the loss and
-arbitrariness bridges together): every favouring determination that is pure
-(DEF-PURE-PERFECTION, the same `Pure` parameter as the #2153 premises) makes
-exactly the verdicts of its own formal object `obj φ`. The formal object is the
-ranking that measures the favouring's *kind* of operation (for a will, the good;
-for a natural tendency, the end of the nature), not its particular content: with
-`obj φ := φ` the bridge would be trivial, and that reading is not intended. -/
-def PureFavouringTracksItsObject (Pure : D → Prop) (favours : GoodFavouring.Profile S X → D)
-    (obj : GoodFavouring.Profile S X → S → X → X → Prop) : Prop :=
-  ∀ φ, Pure (favours φ) → Tracks φ (obj φ)
+arbitrariness bridges together): whenever a bearer `b` has the favouring
+determination `favours φ` and that determination is pure (DEF-PURE-PERFECTION,
+the same `Pure` parameter as the #2153 premises), `φ` makes exactly the verdicts
+of its formal object for `b`, `obj b φ`. The formal object is intended as the
+ranking that measures `b`'s *kind* of operation (for a will, the good; for a
+natural tendency, the end of the nature), not `φ`'s particular content. The type
+does not enforce that: with `obj b φ := φ` the bridge would be trivial, and that
+reading is not intended. -/
+def PureFavouringTracksItsObject (Pure : D → Prop) (Has : B → D → Prop)
+    (favours : GoodFavouring.Profile S X → D)
+    (obj : B → GoodFavouring.Profile S X → S → X → X → Prop) : Prop :=
+  ∀ b φ, Has b (favours φ) → Pure (favours φ) → Tracks φ (obj b φ)
 
-/-- OPEN object premise: the formal object of every favouring determination of an
-actual root at `w` is the value order `v` (STANDARD_OF_FAVOURING_1, the relation
-`v.better`). It does not say whether that favouring is a natural or a rational
-appetite. -/
+/-- OPEN object premise: for every actual root `r` at `w` and every favouring
+determination of `r`, its formal object for `r` is the value order `v`
+(STANDARD_OF_FAVOURING_1, the relation `v.better`). It does not say whether that
+favouring is a natural or a rational appetite. -/
 def ActualRootFavouringObjectIsValue (m : Profile W B) (w : W) (Has : B → D → Prop)
-    (favours : GoodFavouring.Profile S X → D) (obj : GoodFavouring.Profile S X → S → X → X → Prop)
-    (v : ValueStandardOrder S X) : Prop :=
-  ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → obj φ = v.better
+    (favours : GoodFavouring.Profile S X → D)
+    (obj : B → GoodFavouring.Profile S X → S → X → X → Prop) (v : ValueStandardOrder S X) :
+    Prop :=
+  ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → obj r φ = v.better
 
-/-- Lean-only kind rule for rational appetite: the formal object of a favouring
-that is a rational appetite of bearer `b` (fixed by `b`'s apprehension state) is
-the value order. It is the "formal object of willing is the good" half of lane
-P's per-bearer reading. Natural appetites are left free: their formal object is
-the end of the nature, whatever it is. -/
-def RationalObjectIsValue (app : B → ApprehensionState S Y)
-    (obj : GoodFavouring.Profile S X → S → X → X → Prop) (v : ValueStandardOrder S X) : Prop :=
-  ∀ b φ, RationalAppetite (app b) φ → obj φ = v.better
+/-- Lean-only kind rule for rational appetite: when a bearer `b` has the
+favouring `φ` and `φ` is a rational appetite of `b` (fixed by `b`'s apprehension
+state), the formal object of `φ` for `b` is the value order. It is the "formal
+object of willing is the good" half of lane P's per-bearer reading. It says
+nothing about the formal object of a favouring that is not a rational appetite
+of its bearer, nor about bearers that do not have the favouring. -/
+def RationalObjectIsValue (Has : B → D → Prop) (favours : GoodFavouring.Profile S X → D)
+    (app : B → ApprehensionState S Y) (obj : B → GoodFavouring.Profile S X → S → X → X → Prop)
+    (v : ValueStandardOrder S X) : Prop :=
+  ∀ b φ, Has b (favours φ) → RationalAppetite (app b) φ → obj b φ = v.better
 
 /-! ## Finite controls
 
@@ -190,6 +212,28 @@ def noApprehension : ApprehensionState Scenario Unit := ⟨fun _ => ()⟩
 scenario (veridical apprehension; the personal source). -/
 def fullApprehension : ApprehensionState Scenario Scenario := ⟨id⟩
 
+/-- Nothing is apprehended, as an apprehension state of the same type as
+`fullApprehension` (a constant state). -/
+def noApprehensionS : ApprehensionState Scenario Scenario := ⟨fun _ => .actual⟩
+
+/-- Two bearers with the same favouring profile: `true` is the D-directed nature
+(natural, apprehending nothing), `false` a will with a fixed preference for D
+(rational, apprehending everything). Lane 2b's `dNature` and `determinedWill`
+are the same function `fitOrder`, so both bearers have the one token
+`favours dNature`. -/
+def twoHas : Bool → Det → Prop := fun _ d => d = Det.fav dNature
+
+/-- The two bearers' apprehension states. -/
+def twoApp : Bool → ApprehensionState Scenario Scenario
+  | true => noApprehensionS
+  | false => fullApprehension
+
+/-- Bearer-indexed formal objects: the D-directed nature is measured by its end
+(D-realization), the will by the good (the value order). -/
+def kindObj : Bool → GoodFavouring.Profile Scenario Outcome → Scenario → Outcome → Outcome → Prop
+  | true, _ => fitOrder
+  | false, _ => better
+
 /-- The mode-by-object grid on one carrier. Rows are (mode, object) pairs; the
 favouring profiles are Lane 2b's.
 
@@ -206,15 +250,24 @@ favouring profiles are Lane 2b's.
 4. (rational, D), the determined will: a rational appetite of the full
    apprehension state, not a natural appetite of the inert state, not
    good-general.
-5. Per-bearer verdicts. Each good-tracking row makes exactly the verdicts of its
-   object, the value order; the D-directed nature makes exactly the verdicts of
-   its object, D-realization; the determined will, measured by the good as its
-   kind's object, misses a value verdict.
+5. Profile facts used by the per-bearer reading: the good-tracking profile makes
+   exactly the value order's verdicts; the D-directed profile makes exactly
+   D-realization's verdicts; the same profile (`determinedWill` is the function
+   `dNature`) misses a value verdict. Which ranking measures it depends on the
+   bearer (row 8).
 6. Common-value verdicts are the same in both modes: the good-tracking profile
    neither misses nor adds a value verdict; the D-directed profile misses one.
-7. The cognition criterion separates rows 1 and 2 on the same profile: with the
-   good-tracking source it holds when the source apprehends and fails when
-   nothing is apprehended. -/
+7. The cognition criterion on the good-tracking source: it holds with the
+   apprehension relation `appSource` and fails with `appNone`. These `Apprehends`
+   relations of Lane 4 are linked to the apprehension states above only by
+   interpretation.
+8. One profile, two bearers, two formal objects. `dNature = determinedWill`. With
+   the bearer-indexed objects `kindObj`, the kind rule for rational appetite
+   holds: it fixes the will's object as the good and says nothing about the
+   D-directed nature, whose favouring is not a rational appetite of its (empty)
+   apprehension state. The D-directed nature's favouring makes exactly its
+   object's verdicts; the will's identical favouring does not; so the per-bearer
+   bridge fails if that shared token is pure. -/
 def AppetiteGrid : Prop :=
   (NaturalAppetite contentState better ∧ ¬ RationalAppetite noApprehension better ∧ gg better ∧
     ¬ NaturalStateAdUnum contentState fits) ∧
@@ -225,57 +278,65 @@ def AppetiteGrid : Prop :=
     ¬ gg determinedWill) ∧
   (Tracks better better ∧ Tracks dNature fitOrder ∧ MissesVerdict better determinedWill) ∧
   (¬ MissesVerdict better better ∧ ¬ UnbackedVerdict better better ∧ MissesVerdict better dNature) ∧
-  (criterion personalSrc appSource ∧ ¬ criterion personalSrc appNone)
+  (criterion personalSrc appSource ∧ ¬ criterion personalSrc appNone) ∧
+  (dNature = determinedWill ∧
+    RationalObjectIsValue twoHas favTok twoApp kindObj ⟨better⟩ ∧
+    ¬ RationalAppetite (twoApp true) dNature ∧ RationalAppetite (twoApp false) dNature ∧
+    Tracks dNature (kindObj true dNature) ∧ ¬ Tracks determinedWill (kindObj false determinedWill) ∧
+    ¬ PureFavouringTracksItsObject (fun d => d = Det.fav dNature) twoHas favTok kindObj)
 
-/-- The per-bearer bridge on the carrier, with formal-object assignment `obj`. -/
-def ownObj (pure : Det → Prop) (obj : GoodFavouring.Profile Scenario Outcome →
+/-- The per-bearer bridge on the carrier (bearers have `src` at the source), with
+formal-object assignment `obj`. -/
+def ownObj (src : Set Det) (pure : Det → Prop) (obj : Bool → GoodFavouring.Profile Scenario Outcome →
     Scenario → Outcome → Outcome → Prop) : Prop :=
-  PureFavouringTracksItsObject pure favTok obj
+  PureFavouringTracksItsObject pure (hasSrc src) favTok obj
 
 /-- The object premise on the carrier, with the value order whose relation is `std`. -/
-def object (src : Set Det) (obj : GoodFavouring.Profile Scenario Outcome →
+def object (src : Set Det) (obj : Bool → GoodFavouring.Profile Scenario Outcome →
     Scenario → Outcome → Outcome → Prop) (std : GoodFavouring.Profile Scenario Outcome) : Prop :=
   ActualRootFavouringObjectIsValue rootProfile true (hasSrc src) favTok obj ⟨std⟩
 
-/-- The formal-object assignment that measures every favouring by `std` (one
-kind, with object `std`). -/
+/-- The formal-object assignment that measures every favouring of every bearer
+by `std`. -/
 def objAll (std : GoodFavouring.Profile Scenario Outcome) :
-    GoodFavouring.Profile Scenario Outcome → Scenario → Outcome → Outcome → Prop :=
-  fun _ => std
+    Bool → GoodFavouring.Profile Scenario Outcome → Scenario → Outcome → Outcome → Prop :=
+  fun _ _ => std
 
 /-- Controls for the formal-object route to horn A's conclusion. Each row lists
 which premises hold and which fail, on one carrier.
 
 1. Positive witness: the good-tracking source, every favouring measured by value.
-   The same row in natural mode: its favouring is a natural appetite of the
-   content state, it apprehends nothing (`appNone`), and the cognition criterion
-   fails; every premise and the conclusion still hold.
+   The same row read in natural mode: its favouring is fixed by the content state
+   (as every profile on this carrier is, since that state is the scenario itself)
+   and not by the empty apprehension state, and with the apprehension relation
+   `appNone` the cognition criterion fails; every premise and the conclusion
+   still hold. `noApprehension` (an `ApprehensionState`) and `appNone` (Lane 4's
+   `Apprehends` relation) are linked only by interpretation.
 2. A composite root (the D-directed favouring): only the no-limiting-principle
    premise fails.
 3. The D-directed favouring counted impure at an unlimited root: only RootPurity
    fails.
 4. The empty (chance) favouring counted pure, measured by value: only the
    per-bearer bridge fails.
-5. The D-directed nature measured by its own end (its formal object is
-   D-realization, as a natural appetite's object is the end of its nature): the
-   per-bearer bridge, RootPurity and variation hold, and only the object premise
-   fails. This is the D-rival's row.
+5. The D-directed nature measured by its own end (its formal object for the
+   source is D-realization): the per-bearer bridge, RootPurity and variation
+   hold, and only the object premise fails. This is the D-rival's row.
 6. The value order coincides with D-realization: only variation fails. -/
 def FormalObjectControls : Prop :=
-  (roots False ∧ purity personalSrc purePos False ∧ ownObj purePos (objAll better) ∧
+  (roots False ∧ purity personalSrc purePos False ∧ ownObj personalSrc purePos (objAll better) ∧
     object personalSrc (objAll better) better ∧ varies better ∧ generalFor better personalSrc ∧
     NaturalAppetite contentState better ∧ ¬ RationalAppetite noApprehension better ∧
     ¬ criterion personalSrc appNone) ∧
-  (¬ roots True ∧ purity dNatureSrc purePos True ∧ ownObj purePos (objAll better) ∧
+  (¬ roots True ∧ purity dNatureSrc purePos True ∧ ownObj dNatureSrc purePos (objAll better) ∧
     object dNatureSrc (objAll better) better ∧ varies better ∧ ¬ generalFor better dNatureSrc) ∧
-  (roots False ∧ ¬ purity dNatureSrc purePos False ∧ ownObj purePos (objAll better) ∧
+  (roots False ∧ ¬ purity dNatureSrc purePos False ∧ ownObj dNatureSrc purePos (objAll better) ∧
     object dNatureSrc (objAll better) better ∧ varies better ∧ ¬ generalFor better dNatureSrc) ∧
-  (roots False ∧ purity chanceSrc pureChance False ∧ ¬ ownObj pureChance (objAll better) ∧
+  (roots False ∧ purity chanceSrc pureChance False ∧ ¬ ownObj chanceSrc pureChance (objAll better) ∧
     object chanceSrc (objAll better) better ∧ varies better ∧ ¬ generalFor better chanceSrc) ∧
-  (roots False ∧ purity dNatureSrc pureNoGG False ∧ ownObj pureNoGG (objAll fitOrder) ∧
+  (roots False ∧ purity dNatureSrc pureNoGG False ∧ ownObj dNatureSrc pureNoGG (objAll fitOrder) ∧
     ¬ object dNatureSrc (objAll fitOrder) better ∧ varies better ∧
     ¬ generalFor better dNatureSrc) ∧
-  (roots False ∧ purity dNatureSrc pureNoGG False ∧ ownObj pureNoGG (objAll fitOrder) ∧
+  (roots False ∧ purity dNatureSrc pureNoGG False ∧ ownObj dNatureSrc pureNoGG (objAll fitOrder) ∧
     object dNatureSrc (objAll fitOrder) fitOrder ∧ ¬ varies fitOrder ∧
     ¬ generalFor fitOrder dNatureSrc)
 

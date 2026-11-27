@@ -26,7 +26,7 @@ premise. Let `r` be an actual root and `favours φ` one of its determinations.
 Actual roots have no represented limiting principle (its distinct simply prior
 being is the frame's `PriorSimply`), so by the RootPurity bridge `favours φ` is
 pure. By the per-bearer bridge a pure favouring makes exactly the verdicts of its
-formal object, and by the object premise that object is the value order `v`
+formal object for `r`, and by the object premise that object is the value order `v`
 (STANDARD_OF_FAVOURING_1). Betterness varies within an end-realization class, so
 `φ` favours `x` over `y` at the witness scenario and not at the other scenario of
 the same end-realization class: `φ` is good-general. Neither the per-bearer
@@ -36,16 +36,16 @@ theorem actualRootFavouringIsGoodGeneralFromFormalObject {W B T R D P S X Z : Ty
     (F : CausalityFrame W B T R) (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop) (Composite : B → Prop) (essence esse : B → P)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (obj : TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
+    (obj : B → TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
     (v : ValueStandardOrder S X) (fitOf : S → Z) (Present : S → X → Prop)
     (hRoots : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essence esse)
     (hPurity : UnlimitedDeterminationsArePure Composite F.PriorSimply essence esse Has Pure)
-    (hOwn : PureFavouringTracksItsObject Pure favours obj)
+    (hOwn : PureFavouringTracksItsObject Pure Has favours obj)
     (hObj : ActualRootFavouringObjectIsValue m w Has favours obj v)
     (hVaries : BetternessVariesWithinEndClass v fitOf Present) :
     ActualRootFavouringIsGoodGeneral m w Has favours v.better fitOf Present := by
   intro r hr φ hφ
-  have hT : Tracks φ (obj φ) := hOwn φ (hPurity r (hRoots r hr) (favours φ) hφ)
+  have hT : Tracks φ (obj r φ) := hOwn r φ hφ (hPurity r (hRoots r hr) (favours φ) hφ)
   rw [hObj r hr φ hφ] at hT
   obtain ⟨s, x, y, ⟨hg, -, t, ht, hng, -⟩, hPres⟩ := hVaries
   exact ⟨s, x, y, ⟨hg, (hT s x y).2 hg, t, ht, hng, fun h => hng ((hT t x y).1 h)⟩, hPres⟩
@@ -114,25 +114,29 @@ theorem adUnumNoncognitiveNotGoodGeneral {S X Z K Y : Type} (good : S → X → 
 /-! ## Object: per-bearer and common-value forms (Lean-only) -/
 
 /-- Lean-only. The two value-sense bridges (`720bccc2`, `a141e6a8`, lane P's
-common value standard) are the per-bearer bridge with every favouring measured
-by value. -/
-theorem valueBridgesArePerBearerConstant {D S X : Type} (Pure : D → Prop)
+common value standard) give the per-bearer bridge with every favouring of every
+bearer measured by value. -/
+theorem valueBridgesArePerBearerConstant {B D S X : Type} (Pure : D → Prop) (Has : B → D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D) (v : ValueStandardOrder S X)
     (hEM : ExcludedMiddle) (hLoss : MissingValueVerdictIsImpure Pure favours v)
     (hBacked : UnbackedValueVerdictIsImpure Pure favours v) :
-    PureFavouringTracksItsObject Pure favours (fun _ => v.better) := by
-  intro φ hP s x y
+    PureFavouringTracksItsObject Pure Has favours (fun _ _ => v.better) := by
+  intro _ φ _ hP s x y
   exact ⟨fun hf => (hEM (v.better s x y)).elim id fun hn => (hBacked φ ⟨s, x, y, hf, hn⟩ hP).elim,
     fun hg => (hEM (φ s x y)).elim id fun hn => (hLoss φ ⟨s, x, y, hg, hn⟩ hP).elim⟩
 
-/-- Lean-only converse of `valueBridgesArePerBearerConstant`: the per-bearer bridge
-with every favouring measured by value gives both value-sense bridges. -/
-theorem perBearerConstantGivesValueBridges {D S X : Type} (Pure : D → Prop)
-    (favours : TruthCore.Causality.GoodFavouring.Profile S X → D) (v : ValueStandardOrder S X)
-    (hOwn : PureFavouringTracksItsObject Pure favours (fun _ => v.better)) :
-    MissingValueVerdictIsImpure Pure favours v ∧ UnbackedValueVerdictIsImpure Pure favours v :=
-  ⟨fun φ ⟨s, x, y, hg, hn⟩ hP => hn ((hOwn φ hP s x y).2 hg),
-    fun φ ⟨s, x, y, hf, hn⟩ hP => hn ((hOwn φ hP s x y).1 hf)⟩
+/-- Lean-only partial converse of `valueBridgesArePerBearerConstant`: the
+per-bearer bridge with every favouring measured by value gives both value-sense
+bridges for every favouring that some bearer has. Favourings no bearer has are
+outside the per-bearer bridge. -/
+theorem perBearerConstantGivesValueBridges {B D S X : Type} (Pure : D → Prop)
+    (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (v : ValueStandardOrder S X)
+    (hOwn : PureFavouringTracksItsObject Pure Has favours (fun _ _ => v.better)) :
+    ∀ b φ, Has b (favours φ) → Pure (favours φ) →
+      ¬ MissesVerdict v.better φ ∧ ¬ UnbackedVerdict v.better φ :=
+  fun b φ hφ hP => ⟨fun ⟨s, x, y, hg, hn⟩ => hn ((hOwn b φ hφ hP s x y).2 hg),
+    fun ⟨s, x, y, hf, hn⟩ => hn ((hOwn b φ hφ hP s x y).1 hf)⟩
 
 /-- Lean-only. The per-bearer bridge and the object premise give, for every pure
 favouring of an actual root, neither a missed nor an unbacked value verdict: the
@@ -140,29 +144,30 @@ value-sense bridges restricted to actual roots. -/
 theorem perBearerAndObjectGiveRootValueVerdicts {W B D S X : Type} (m : Profile W B) (w : W)
     (Has : B → D → Prop) (Pure : D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (obj : TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
-    (v : ValueStandardOrder S X) (hOwn : PureFavouringTracksItsObject Pure favours obj)
+    (obj : B → TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
+    (v : ValueStandardOrder S X) (hOwn : PureFavouringTracksItsObject Pure Has favours obj)
     (hObj : ActualRootFavouringObjectIsValue m w Has favours obj v) :
     ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → Pure (favours φ) →
       ¬ MissesVerdict v.better φ ∧ ¬ UnbackedVerdict v.better φ := by
   intro r hr φ hφ hP
-  have hT : Tracks φ (obj φ) := hOwn φ hP
+  have hT : Tracks φ (obj r φ) := hOwn r φ hφ hP
   rw [hObj r hr φ hφ] at hT
   exact ⟨fun ⟨s, x, y, hg, hn⟩ => hn ((hT s x y).2 hg),
     fun ⟨s, x, y, hf, hn⟩ => hn ((hT s x y).1 hf)⟩
 
 /-- Lean-only. The kind rule for rational appetite gives the object premise when
-every favouring of an actual root is a rational appetite. The converse fails:
-`FormalObjectControls` row 1 meets the object premise with a natural appetite
-and no apprehension. -/
+every favouring of an actual root is a rational appetite of that root (`hRat`,
+itself the disputed mode step at a root). `FormalObjectControls` row 1 meets the
+object premise with a favouring that is not a rational appetite of the empty
+apprehension state. -/
 theorem rationalKindGivesObject {W B D S X Y : Type} (m : Profile W B) (w : W)
     (Has : B → D → Prop) (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
-    (obj : TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
+    (obj : B → TruthCore.Causality.GoodFavouring.Profile S X → S → X → X → Prop)
     (v : ValueStandardOrder S X) (app : B → ApprehensionState S Y)
-    (hKind : RationalObjectIsValue app obj v)
+    (hKind : RationalObjectIsValue Has favours app obj v)
     (hRat : ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → RationalAppetite (app r) φ) :
     ActualRootFavouringObjectIsValue m w Has favours obj v :=
-  fun r hr φ hφ => hKind r φ (hRat r hr φ hφ)
+  fun r hr φ hφ => hKind r φ hφ (hRat r hr φ hφ)
 
 /-- Lean-only. ORIGINAL_FINALITY_2 at one scenario and pair, with one candidate
 not a present input, is good-generality of the same profile. Reading commitment
@@ -232,13 +237,13 @@ private theorem pureNoGGFavH (φ : TruthCore.Causality.GoodFavouring.Profile Sce
   · exact Det.noConfusion h
   · exact Det.fav.inj h
 
-private theorem ownPosBetter : ownObj purePos (objAll better) := by
-  intro φ hP
+private theorem ownPosBetter (src : Set Det) : ownObj src purePos (objAll better) := by
+  intro _ φ _ hP
   obtain rfl := purePosFavH φ hP
   exact fun _ _ _ => Iff.rfl
 
-private theorem ownNoGGFit : ownObj pureNoGG (objAll fitOrder) := by
-  intro φ hP
+private theorem ownNoGGFit (src : Set Det) : ownObj src pureNoGG (objAll fitOrder) := by
+  intro _ φ _ hP
   obtain rfl := pureNoGGFavH φ hP
   exact fun _ _ _ => Iff.rfl
 
@@ -258,25 +263,39 @@ theorem appetiteGrid : AppetiteGrid := by
       ⟨.cBetter, .c, .d, Or.inr ⟨rfl, rfl⟩, by simp [determinedWill, fitOrder, fits]⟩⟩,
     ⟨fun ⟨_, _, _, h, hn⟩ => hn h, fun ⟨_, _, _, h, hn⟩ => hn h,
       ⟨.cBetter, .c, .d, Or.inr ⟨rfl, rfl⟩, by simp [dNature, fitOrder, fits]⟩⟩,
-    criterionSource, notCriterionNone⟩
-  intro h
-  have := h fitsActualCBetter
-  exact Scenario.noConfusion this
+    ⟨criterionSource, notCriterionNone⟩, rfl, ?_, fun h => fitOrderActualReversalDiffer
+      (h (a := .actual) (b := .reversal) rfl), fun _ _ h => congrArg dNature h,
+    fun _ _ _ => Iff.rfl, ?_, ?_⟩
+  · intro h
+    have := h fitsActualCBetter
+    exact Scenario.noConfusion this
+  · intro b φ hφ hR
+    cases b
+    · rfl
+    · obtain rfl : φ = dNature := Det.fav.inj hφ
+      exact (fitOrderActualReversalDiffer (hR (a := .actual) (b := .reversal) rfl)).elim
+  · intro h
+    have := (h .cBetter .c .d).2 (Or.inr ⟨rfl, rfl⟩)
+    simp [determinedWill, fitOrder, fits] at this
+  · intro h
+    have := ((h false dNature rfl rfl) .cBetter .c .d).2 (Or.inr ⟨rfl, rfl⟩)
+    simp [dNature, fitOrder, fits] at this
 
 theorem formalObjectControls : FormalObjectControls := by
   obtain ⟨⟨hR, hPurPos, -, -, hVar, hGenPos⟩, ⟨hNotR, hPurComp, -, -, -, hGenD⟩,
     ⟨-, hNotPurD, -, -, -, -⟩, ⟨-, hPurChance, -, -, -, hGenChance⟩, -,
     ⟨-, hPurNoGG, -, -, hNotVarFit, hGenFit⟩⟩ :=
     TruthCore.Results.Causality.PurityCriteria.standardControls
-  refine ⟨⟨hR, hPurPos, ownPosBetter, objectAll _ _, hVar, hGenPos, natContentBetter,
+  refine ⟨⟨hR, hPurPos, ownPosBetter _, objectAll _ _, hVar, hGenPos, natContentBetter,
       notRatNoneBetter, notCriterionNone⟩,
-    ⟨hNotR, hPurComp, ownPosBetter, objectAll _ _, hVar, hGenD⟩,
-    ⟨hR, hNotPurD, ownPosBetter, objectAll _ _, hVar, hGenD⟩,
+    ⟨hNotR, hPurComp, ownPosBetter _, objectAll _ _, hVar, hGenD⟩,
+    ⟨hR, hNotPurD, ownPosBetter _, objectAll _ _, hVar, hGenD⟩,
     ⟨hR, hPurChance, ?_, objectAll _ _, hVar, hGenChance⟩,
-    ⟨hR, hPurNoGG, ownNoGGFit, ?_, hVar, hGenD⟩,
-    ⟨hR, hPurNoGG, ownNoGGFit, objectAll _ _, hNotVarFit, hGenFit⟩⟩
+    ⟨hR, hPurNoGG, ownNoGGFit _, ?_, hVar, hGenD⟩,
+    ⟨hR, hPurNoGG, ownNoGGFit _, objectAll _ _, hNotVarFit, hGenFit⟩⟩
   · intro h
-    exact ((h chance (Or.inr rfl)) .actual .c .z).2 (show fitOrder .actual .c .z from ⟨rfl, rfl⟩)
+    exact ((h true chance (by simp [hasSrc, chanceSrc, favTok]) (Or.inr rfl)) .actual .c .z).2
+      (show fitOrder .actual .c .z from ⟨rfl, rfl⟩)
   · intro h
     exact dNatureNeBetter (h true ((TruthCore.Results.Causality.RootPerfectionExclusion.rootIff true).2 rfl)
       dNature (by simp [hasSrc, dNatureSrc, favTok]))
