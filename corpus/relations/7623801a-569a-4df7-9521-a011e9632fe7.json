@@ -1,0 +1,10 @@
+{
+  "id": "7623801a-569a-4df7-9521-a011e9632fe7",
+  "label": "Test by NecessaryWholeReplacement.checks (dd41c165)",
+  "subject_kind": "result",
+  "subject_id": "be32d3af-2d06-443e-a0b1-fa22d608d5b4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dd41c165-129a-59d3-84ce-bd13c0944901",
+  "note": "Candidate none exists at both worlds, but a different contingent candidate supports it at each world. Actual grounding is well-founded, every actual contingent concretum is grounded, and the necessary-only union is empty. The global restriction on contingent supporters fails and no necessary concretum is underived across worlds."
+}

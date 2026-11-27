@@ -1,0 +1,10 @@
+{
+  "id": "4f8bbe2e-6c83-4524-9fa9-6b099866560f",
+  "label": "Test by ScopedActualCausality.strictControl (ef69a630)",
+  "subject_kind": "result",
+  "subject_id": "c545337e-07a1-5a5f-bd4e-73b23b53d3e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ef69a630-2277-56be-86ca-f05f8193093a",
+  "note": "The mixed ontology satisfies the selected-world coverage law and the four structural premises at false, with a contingent bearer there. At true a contingent source has no incoming cause from an existing bearer, so the global coverage law fails."
+}
