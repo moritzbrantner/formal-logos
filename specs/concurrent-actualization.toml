@@ -50,8 +50,8 @@ disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "DISAMB-BECOMING-BEIN
 id = "Concurrent-actualization controls: inertia, persistence power, relay, omissions and nonvacuity"
 lean = "Control.Certificate"
 paraphrase = "Closed controls on interpretations with one world and natural-number times; statements about these interpretations only. (1) Extrinsic existential inertia (Schmid's no-change account): two individuals, true causes false's being and gives it being at time 1 only, false (alone with received esse) persists from time 1 on. The reception bridge, concurrence of causes of being, presence-in-act and the contact principle hold and true is IMMENSE_2; concurrent actualization (weak) fails, the weak sustaining reading fails, and true is not present to all whenever they are. (2) Intrinsic persistence power: the same history, with false giving itself being from time 1 on. The reception bridge, the weak concurrent actualization and contact hold; the strong version, concurrence and the weak sustaining reading fail. (3) Relay, three individuals: 0 causes 1's being and gives it being at time 1; a later sustainer 2 gives 1 being from time 2 on. The reception bridge, the strong concurrent actualization and contact hold; concurrence and the weak sustaining reading fail. (4) No received esse, inertia history: both versions of concurrent actualization (vacuously) and concurrence hold; the reception bridge and the weak sustaining reading fail. (5) Every thing causes its own being only, no giving: the weak sustaining reading holds and the sustaining reading 23e04ae5 fails. (6) An absent giver: the weak sustaining reading and presence-in-act hold, contact and presence to all fail; nothing in act and no causes: the weak sustaining reading and contact hold, presence-in-act and presence to all fail. (7) true present always, false from time 1 with received esse, true giving it being from time 1 on: the reception bridge, both versions of concurrent actualization, concurrence, both sustaining readings, presence-in-act and contact hold, true is IMMENSE_2 and present to all whenever they are."
-definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "ed47a5a7-fa84-43cb-950b-2552b33b99ff", "1335688a-d3f2-492e-9b71-c8062280fe16", "641c767b-4289-4d92-b900-da7ad603d282", "DEF-TEMPORAL-HISTORY-NOW-SLICE"]
-disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "3fc3ee02-c3cc-4a61-9724-914d9d07b0dd"]
+definitions = ["DEF-ESSE-RECEIVED-IN", "158301bc-9585-4145-be60-34f08c9f922c", "ed47a5a7-fa84-43cb-950b-2552b33b99ff", "1335688a-d3f2-492e-9b71-c8062280fe16", "641c767b-4289-4d92-b900-da7ad603d282", "DEF-TEMPORAL-HISTORY-NOW-SLICE", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "80dea550-60c1-447a-83bf-d3f27ea0b2a8"]
+disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d", "3fc3ee02-c3cc-4a61-9724-914d9d07b0dd", "DISAMB-ESSE-RECEPTION", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
 
 # ---------------------------------------------------------------- arguments
 
@@ -153,3 +153,93 @@ object_kind = "statement"
 object_id = "ce55210c-d3b5-4720-bd83-a3f63c5dc884"
 verification_result_id = "The sustaining reading entails its restriction to causes of another's being"
 note = "Same history, giving relation and cause of being; the weak version adds the hypothesis that the cause is distinct from its effect. Strict: Control part 5 (a self-cause that gives nothing)."
+
+[[relation]]
+id = "2e525cee-d793-4740-8a77-f78c8790ca54"
+label = "Test by ConcurrentActualization.controls (da72ae93)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da72ae93-5c8d-4717-8c17-97eeb8037317"
+note = "Omit the reception bridge in sustainingOfConcurrentActualization. In the inertia history true causes the being of false, but the received-esse predicate is empty. Concurrent actualization and the requirement that the original cause give at each giving moment both hold, while sustaining fails."
+
+[[relation]]
+id = "ebfc04fb-012c-406c-b1c0-338a160389e0"
+label = "Test by ConcurrentActualization.controls (40a97664)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "40a97664-e481-42d7-8458-78374a61aa26"
+note = "Omit concurrent actualization. In the inertia history false is present from time 1 on, receives esse, and is given being only at time 1. The reception and concurrence premises hold, and the cause fails to give being at later times."
+
+[[relation]]
+id = "9b287177-c446-451b-8edd-f4a95cd680b1"
+label = "Test by ConcurrentActualization.controls (d7f5a528)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d7f5a528-6e11-44a1-a12a-438c88a46cbf"
+note = "Omit concurrence. In the relay history 0 causes the being of 1 and gives it being at time 1. From time 2 on, 2 gives the received bearer 1 being. Reception and concurrent actualization hold, but cause 0 fails to sustain 1."
+
+[[relation]]
+id = "8e399f0e-6b40-4f8c-9454-bc7bb2c33bce"
+label = "Test by ConcurrentActualization.controls (366a6ea3)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "argument"
+object_id = "366a6ea3-604f-4485-9fdf-2f58a094df84"
+note = "In the sustained history the cause true gives false being throughout its presence. The reception bridge, concurrent actualization and concurrence all hold under that same history and giving relation."
+
+[[relation]]
+id = "fb31b658-609d-45e6-94cc-316cdb00992b"
+label = "Test by ConcurrentActualization.controls (76d2cc96)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+note = "With selfGiving, false gives itself being from time 1 on and its distinct giver true gives it being only at time 1. The weak concurrent actualization holds whenever the recipient is present, while distinct-giver actualization fails after time 1."
+
+[[relation]]
+id = "67db3304-98a9-4dfe-9268-365841101079"
+label = "Test by ConcurrentActualization.controls (23e04ae5)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa"
+note = "Assign only self-causes and no giving in the sustained history. The restriction to distinct causes holds vacuously. The unrestricted sustaining claim fails on a present bearer with a self-cause."
+
+[[relation]]
+id = "0a14606b-542f-46aa-98e2-f5b3adaf670b"
+label = "Test by ConcurrentActualization.controls (c4661518)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4661518-33cc-4a53-ae55-cb986be9c2b5"
+note = "Omit giver presence in immense2PresentToAllOfAnothers. With absentGiver and alwaysGiving, sustaining and presence as act hold, while the giver true is absent at a time when it gives false being."
+
+[[relation]]
+id = "283003ec-e4a3-440e-8a94-41c64b26f7c0"
+label = "Test by ConcurrentActualization.controls (140544c4)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "140544c4-3152-4543-9590-9567acf874a2"
+note = "Omit the bridge from temporal presence to being in act in immense2PresentToAllOfAnothers. In the sustained history with no causes or giving, the sustaining and giver-presence laws hold, while the being-in-act predicate is empty and the IMMENSE_2 presence requirement fails."
+
+[[relation]]
+id = "038acbe5-69a3-4091-9fb3-1e25a1ef3b00"
+label = "Test by ConcurrentActualization.controls (ce55210c)"
+subject_kind = "result"
+subject_id = "955ef523-695d-4920-b88d-bf6e737e71e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ce55210c-d3b5-4720-bd83-a3f63c5dc884"
+note = "Omit the sustaining law for distinct causes in immense2PresentToAllOfAnothers. The inertia history has presence in act and giver contact whenever giving occurs. The cause true fails to give false being at its later times of presence."

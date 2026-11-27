@@ -1,0 +1,11 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.UnderivedConcreteness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UnderivedConcreteness.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.UnderivedConcreteness.underivedConcreteOfCalibration",
+    "TruthCore.Results.Causality.UnderivedConcreteness.jointlySatisfied",
+    "TruthCore.Results.Causality.UnderivedConcreteness.calibrationOmission"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}
