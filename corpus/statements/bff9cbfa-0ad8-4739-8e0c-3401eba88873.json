@@ -13,5 +13,10 @@
     "197f0097-f2ae-4a47-8770-3d43758f737b",
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "b90ee2de-8ae5-438b-bea4-e3158889c3e7",
+    "missing_bridge": "Certify the same two-member collective absence fixture with the five actual-roster premises and the separately registered excluded-middle premise of the necessary-holder route.",
+    "blocker": "TwoMemberCollective certifies the actual-roster premises and failure of individual absence powers. Its finite power assignment does not provide unrestricted ExcludedMiddle."
+  }
 }
