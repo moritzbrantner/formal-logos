@@ -1,11 +1,11 @@
 {
   "id": "8d5ad56a-8a75-476b-9cf0-c316284a78ad",
-  "label": "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the MIRROR_2 mirror and chirality",
+  "label": "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the MIRROR_2 mirror image",
   "argument_id": "8ce71fb8-b484-4273-8dca-fc9830b48d72",
   "challenge_module": "TruthCore.Results.Modal.MirrorCollapse.Challenge",
   "solution_module": "TruthCore.Results.Modal.MirrorCollapse.Solution",
   "theorem": "TruthCore.Results.Modal.MirrorCollapse.contingentFromChiralMirror",
   "comparator_config": "results/8d5ad56a-8a75-476b-9cf0-c316284a78ad/comparator.json",
   "status": "solution-present",
-  "description": "Conditional support option for c94b5446. Not a transcription. Establishes no premise. Its warrant is the same kind as the direct modal-intuition support for c94b5446 (a judgment that a world is possible), here for the CPT-mirror world, plus the symmetry consideration that the mirror image violates no nature the actual world satisfies; it is not independent of modal intuition. The contested load sits on world-level essence-grounded possibility (which powers theorists reject), on orientation-free natures under CPT (equivalently, under essence grounding necessity, the CPT-mirror world's possibility) and on the chiral individual's absence from the CPT image."
+  "description": "Conditional support option for c94b5446. Not a transcription. Establishes no premise. Its warrant is the same kind as the direct modal-intuition support for c94b5446 (a judgment that a world is possible), here for the CPT-mirror world, plus the symmetry consideration that the mirror image violates no nature the actual world satisfies; it is not independent of modal intuition. The contested load sits on world-level essence-grounded possibility (which powers theorists reject), on orientation-free natures under CPT (equivalently, under essence grounding necessity, the CPT-mirror world's possibility) and on the absence of an actual concrete being from the CPT image (warranted, under sortal essentialism, by the kind change charge conjugation makes)."
 }

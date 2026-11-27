@@ -177,7 +177,8 @@ def EssentialTruthsPreservedByMirrorAt (Essential : B → (W → Prop) → Prop)
 
 /-- OPEN premise (the mirror image is a different arrangement): the feature `H`
 (global spatial handedness) holds at the mirror image of `w` exactly when it fails
-at `w`. Reflection and CPT conjugation both reverse spatial handedness.
+at `w`. Reflection and CPT conjugation are both intended to reverse spatial
+handedness; this premise says that the given map does at `w`.
 A relationalist about orientation who identifies a world with its global mirror
 image (`σ w = w`) denies it. -/
 def HandednessReversedAt (σ : W → W) (H : W → Prop) (w : W) : Prop :=
@@ -187,11 +188,13 @@ def HandednessReversedAt (σ : W → W) (H : W → Prop) (w : W) : Prop :=
 concrete being exists at the mirror image `σ w` only if `σ w` has the actual
 handedness. With reversed handedness it is equivalent to the being's absence from
 `σ w`, and the absence implies it. It says nothing about any other world.
-Example: an actual molecule of one enantiomer, if being of its chemical kind is
-essential to it and its only candidate at the mirror image is its mirror
-counterpart, a molecule of the other kind; then it is absent from `σ w`. A
-haecceitist who holds that the same molecule exists, mirrored, at the mirror
-image denies it. The earlier global form (the being exists only at worlds sharing
+Example: an actual molecule, if being of its chemical kind is essential to it and
+its only candidate at the mirror image is its mirror counterpart, of another
+kind; then it is absent from `σ w`. Under the CPT map the counterpart is made of
+antimatter, so charge conjugation alone changes the kind and the absence holds
+for achiral material beings too; under the plain reflection only an enantiomer's
+reversed handedness changes the kind. A haecceitist who holds that the same
+molecule exists at the mirror image (for CPT, as antimatter) denies it. The earlier global form (the being exists only at worlds sharing
 the actual handedness) is not supported by this example and is not used. -/
 def ChiralAtMirrorImageAt (m : TruthCore.Causality.BruteFoundationBoundary.Profile W B)
     (σ : W → W) (w : W) (H : W → Prop) : Prop :=

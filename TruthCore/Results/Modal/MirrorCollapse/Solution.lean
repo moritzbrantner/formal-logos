@@ -61,7 +61,7 @@ theorem notCollapsedFromMirror {W B : Type} (o : Ontic W B) (w : W)
 
 /-- Lean-only (any world map). With the four premises of `notCollapsedFromMirror`
 the mirror image is accessible and has the opposite handedness; an actual
-concrete being that exists at the mirror image only if the mirror image keeps the
+concrete being that exists at the mirror image only if the mirror image has the
 actual handedness is absent there, so it is contingent. -/
 theorem contingentFromMirrorImage {W B : Type} (m : Profile W B) (w : W)
     (Essential : B → (W → Prop) → Prop) (σ : W → W) (H : W → Prop)
@@ -80,7 +80,7 @@ theorem contingentFromMirrorImage {W B : Type} (m : Profile W B) (w : W)
 essence-grounded possibility, factivity, preservation by the CPT map and reversed
 handedness at the CPT image, the CPT image is accessible and has the opposite
 handedness; an actual concrete being that exists at the CPT image only if that
-image keeps the actual handedness is absent there, so it is contingent. -/
+image has the actual handedness is absent there, so it is contingent. -/
 theorem contingentFromChiralMirror {W B : Type} (m : Profile W B) (w : W)
     (Essential : B → (W → Prop) → Prop) (τ : CPTConjugation W) (H : W → Prop)
     (hEM : EssenceGroundedWorldPossibility m.ontic w Essential)

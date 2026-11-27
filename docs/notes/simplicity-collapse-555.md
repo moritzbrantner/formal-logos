@@ -440,7 +440,8 @@ stated in MIRROR_2 only (premises `EssentialTruthsPreservedByCPTAt`,
 used for it. No statement in MIRROR_1 is recorded. Physics background (navigation only, no attributed claim): the
 weak interaction is not invariant under P (Wu et al. 1957; V−A coupling), nor
 under CP, while local Lorentz-invariant quantum field theory is invariant under
-CPT. Both readings reverse spatial handedness. The owner's left/right example
+CPT. Both readings are intended to reverse spatial handedness; whether the CPT
+image of `w` does is the open premise `314f6b15`. The owner's left/right example
 survives as the CPT-mirror: the CPT image of a world with a left hand has a right
 hand made of antimatter, its history run in reverse.
 ESSENCE_5 (`EssentialTruth`, DEF `7cf63236`) is the grain at which natures
@@ -464,24 +465,31 @@ contingency of a feature does not give the contingency of a being.
 **Registered argument** `contingentFromChiralMirror` (result `8d5ad56a`), mirror
 in sense MIRROR_2: the four premises at the CPT image and a **chiral individual
 at the CPT image** (`ChiralAtCPTImageAt`, statement `9331a979`: some actual
-concrete being exists at the CPT image only if that image keeps the actual
+concrete being exists at the CPT image only if that image has the actual
 handedness) give `c94b5446` (some actual concrete being is CONTINGENT_1).
 Axiom-free; the generic Lean-only `contingentFromMirrorImage` holds for any map. It is a conditional support
 option for `c94b5446`. It is **not** independent of modal intuition: its warrant
 is the same kind as the direct support for `c94b5446` (a judgment that some world
 is possible), here for the CPT-mirror world, plus the symmetry consideration that
-the mirror image violates no nature the actual world satisfies. The chirality premise
-has a stated positive rationale: an actual molecule of one enantiomer, if being of
-its chemical kind is essential to it and its only candidate at the CPT image is
-its CPT counterpart, a molecule of the other kind (sortal essentialism,
-enantiomers as distinct kinds). That rationale supports the molecule's absence
-from the CPT image, which implies the premise; with reversed handedness the two
-are equivalent. It does **not** support the global form used before the Codex
+the mirror image violates no nature the actual world satisfies. The premise at the
+CPT image has a stated positive rationale: an actual molecule, if being of its
+chemical kind is essential to it and its only candidate at the CPT image is its
+CPT counterpart, which is made of antimatter. Under sortal essentialism charge
+conjugation alone already changes the kind, so the rationale supports the
+molecule's absence from the CPT image, and so the premise, for achiral material
+beings too; for a chiral molecule the counterpart's reversed handedness (an
+enantiomer as a distinct kind) is a second kind change that is not needed. The
+warrant therefore lies in charge conjugation, not in chirality or in the
+reversal premise `314f6b15`; chirality is only the formal shape in which the
+premise enters the proof (absence implies it; with reversed handedness the two
+are equivalent). Under the plain reflection P (MIRROR_1), by contrast, only the
+enantiomer kind change is available and chirality would carry the warrant. It does **not** support the global form used before the Codex
 review of #2179 (`ChiralIndividualAt`: the being exists only at worlds with the
 actual handedness, statement `a0d94a8d`), which needed an unstated
 local-to-global bridge; that form was removed, not kept as a strong version. Its
-denial is haecceitism about mirrored individuals (the same molecule exists,
-mirrored).
+denial is haecceitism about mirrored individuals: the same molecule exists at the
+CPT image, mirrored and as antimatter, a higher price than identity across a
+mere reflection.
 Comparator companion `mirrorControls` (propext only): a positive row; for each of
 the five premises a row where it alone fails, the other four hold and the
 conclusion fails (options 1–3 realized, factivity, and no chiral individual); and
