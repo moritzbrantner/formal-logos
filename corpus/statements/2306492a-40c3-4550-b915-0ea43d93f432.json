@@ -1,0 +1,16 @@
+{
+  "id": "2306492a-40c3-4550-b915-0ea43d93f432",
+  "label": "A pure favouring determination makes exactly the verdicts of its formal object",
+  "paraphrase": "OPEN analyst bridge, attribution deferred: for every favouring profile phi, if the real determination that a favouring of the bearer is phi is a pure perfection (DEF-PURE-PERFECTION, the same purity parameter as the #2153 premises), then in every variation scenario phi favours x over y exactly when phi's formal object ranks x over y. The formal object is the ranking that measures phi's kind of operation (for a will, the good; for a natural tendency, the end of its nature), not phi's particular content; the Lean parameter does not enforce that, and with phi as its own object the bridge would be trivial. It is lane P's per-bearer reading of the loss and arbitrariness bridges taken together: a pure favouring neither misses nor adds a verdict of its own standard. It does not fix which standard that is, and it says nothing about whether the favouring is a natural or a rational appetite. With every favouring measured by value it is equivalent to the two value-sense bridges 720bccc2 and a141e6a8 together (Lean-only: valueBridgesArePerBearerConstant, with excluded middle, and perBearerConstantGivesValueBridges). Lane 2b's D-directed nature, measured by its own end, satisfies it.",
+  "lean_declaration": "TruthCore.Causality.AppetiteStandard.PureFavouringTracksItsObject",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "f58cd6bf-bcc0-4b47-97a1-a20e9933a086",
+    "53634064-7959-4c9d-90c5-7dc88b741bea",
+    "8e29c4fa-2f76-4158-a088-42cd7fcf6250"
+  ],
+  "disambiguation_ids": [
+    "da16b898-110d-457b-81fb-b987f55f07c3"
+  ]
+}

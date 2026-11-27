@@ -1,0 +1,15 @@
+{
+  "id": "f2e8eb42-ed31-4760-ae92-ad9648fe3d23",
+  "label": "Every favouring of an actual root has the value order as its formal object",
+  "paraphrase": "OPEN analyst premise, attribution deferred: for every actual root r at w and every favouring profile phi such that the favouring determination of phi is a real determination of r, the formal object of phi (the ranking that measures its kind of operation) is the value order v's relation v.better (STANDARD_OF_FAVOURING_1, the type ValueStandardOrder). In words: an actual root's favouring is measured by the good, not by an end content. It says nothing about whether that favouring is a natural or a rational appetite. A rational appetite meets it under the kind rule that the object of willing is the good (rationalKindGivesObject, Lean-only); a natural appetite whose nature's end is the good meets it as well (formalObjectControls row 1 with no apprehension). Lane 2b's D-directed nature, whose formal object is D-realization, denies it.",
+  "lean_declaration": "TruthCore.Causality.AppetiteStandard.ActualRootFavouringObjectIsValue",
+  "definition_ids": [
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "f58cd6bf-bcc0-4b47-97a1-a20e9933a086",
+    "e14aa0f0-6271-42a2-9762-52a8285c3180"
+  ],
+  "disambiguation_ids": [
+    "da16b898-110d-457b-81fb-b987f55f07c3"
+  ]
+}
