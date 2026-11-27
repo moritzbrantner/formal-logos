@@ -1,0 +1,20 @@
+{
+  "id": "b4521b89-ed88-486b-a53a-720ed863d7ef",
+  "label": "More such package and mode of possession: degree-indexed induction controls",
+  "paraphrase": "Closed finite interpretation; statements about it only. Two beings (coil and workpiece) and three respects: being, having some heat, and having heat at or above the workpiece's degree. The coil causes and moves the workpiece in both heat respects; both have being and some heat formally; only the workpiece has heat at its own degree formally; the coil has both heat respects virtually; temperatures are 40 for the coil and 1000 for the workpiece. Checked: the coil has some heat formally but not heat at the workpiece's degree; the formal possession gap holds (witnessed only at the degree-indexed respect); formal possession holds at the respect of having some heat; the ordinary-comparative gap holds and the MORE_3 reading of 'more such' fails; with a stipulated eminent surpassing relation the MORE_4 reading of 'more such' holds; 'nothing moves except as in act' fails read with formal act and holds read with inclusive act. Encoding artifacts, disclosed: the temperatures and the surpassing relation are stipulated; the respect of being is caused by nothing. A structural surrogate of the case, not its evidence.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.Control.OrdinaryControls",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+    "b4a7f37e-83d4-4e5f-bb24-b2a72cd85ca6",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "f7833666-c764-5624-a766-708949d9feee",
+    "115f23e3-2a19-5dcb-bc7f-96408004f110",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

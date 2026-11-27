@@ -34,4 +34,12 @@ reinterpretation, checked by decision. -/
 theorem controls : Control.Controls := by
   sorry
 
+set_option synthInstance.maxSize 1024 in
+set_option synthInstance.maxHeartbeats 200000 in
+/-- The degree-indexed interpretation, checked by decision. The larger instance
+budget only lets instance search assemble the `Decidable` instance of the
+negated three-variable quantifier. -/
+theorem ordinaryControls : Control.OrdinaryControls := by
+  sorry
+
 end TruthCore.Results.Causality.MoreSuchSenseCollapse
