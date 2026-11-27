@@ -59,8 +59,18 @@ theorem controls : Control.Controls := by
     FiniteEsseReceivedAndLimited, IntensiveEsse,
     TruthCore.Causality.ReceptionLimitation.OwnBeingIsNoRecipient,
     TruthCore.Causality.ReceptionLimitation.NonRecipientDeterminationsArePure,
-    Control.recipient, Control.received, Control.limited]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+    Control.recipient, Control.received, Control.limited,
+    OwnBeingLacksNoPerfectionOfBeingInAct, Control.eminentFrame]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   all_goals decide
+
+/-- R-act₂ is `c4fb87a6` with "perfection of being" read as perfection of esse
+(PERFECTION_OF_BEING_2): the two propositions coincide. Evidence for the
+`logically_equivalent_to` registration; a definitional identity, not a derivation. -/
+theorem intensiveEsseIffPurePertainsToEsse {D : Type} (I : IntensiveEsseFrame D)
+    (Pure : D → Prop) :
+    IntensiveEsse I Pure ↔
+      TruthCore.Causality.WholePowerPerfection.PurePerfectionsPertainToBeing Pure I.OfEsse :=
+  Iff.rfl
 
 end TruthCore.Results.Causality.ModeOfBeingMiddleTerm

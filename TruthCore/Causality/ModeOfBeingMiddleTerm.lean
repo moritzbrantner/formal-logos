@@ -138,11 +138,13 @@ def FiniteEsseReceivedAndLimited {P : Type} (OwnBeing : B → Prop)
   ∀ x, ¬ OwnBeing x → (∃ p, EsseReceivedIn x p) ∧ EsseLimited x
 
 /-- Ad 3 read formally or eminently: whatever is its own being lacks no perfection
-of being, being in act in it in the frame's mode-open act ("nulla de perfectionibus
-essendi potest deesse"), not necessarily having it as a real determination. -/
-def OwnBeingLacksNoPerfectionOfBeingInAct (OwnBeing : B → Prop)
-    (InAct : B → R → Prop) (OfBeing : R → Prop) : Prop :=
-  ∀ x, OwnBeing x → ∀ r, OfBeing r → InAct x r
+of being, being in act in it in the shared frame's `F.InAct` (IN_ACT_4, the mode of
+possession left open: formal, virtual or eminent), "nulla de perfectionibus essendi
+potest deesse". It does not say that the bearer has the perfection as a real
+determination (`Has`, HAVING_EVERY_PERFECTION_2). -/
+def OwnBeingLacksNoPerfectionOfBeingInAct (F : GradesFrame W B T R)
+    (OwnBeing : B → Prop) (OfBeing : R → Prop) : Prop :=
+  ∀ x, OwnBeing x → ∀ r, OfBeing r → F.InAct x r
 
 /-! ## Two readings of "perfection of being" on one subsistent source -/
 
@@ -175,6 +177,23 @@ def received (b : Bool) (_ : Unit) : Prop := b = true
 
 def limited (b : Bool) : Prop := b = true
 
+/-- A grades frame on the same beings and determinations, with every determination
+in act in every being in the mode-open sense (IN_ACT_4): the source lacks nothing,
+formally or eminently. Determination `false` (being) is `esse`. -/
+def eminentFrame : GradesFrame Unit Bool Unit Bool where
+  history :=
+    { ontic := ⟨⟨fun _ _ => True⟩, fun _ _ => True, fun _ _ _ => False⟩
+      IsAt := fun _ _ _ => True
+      now := () }
+  GivesAt := fun _ _ _ _ => False
+  CausesIn := fun _ _ _ => False
+  MovesIn := fun _ _ _ => False
+  DependsForBeing := fun _ _ => False
+  PriorSimply := fun _ _ => False
+  esse := false
+  InAct := fun _ _ => True
+  MoreIn := fun _ _ _ => False
+
 /-- Statements about these two profiles only. Thin profile: the source is its own
 being and lacks no perfection of being (`d164b1ff` holds), but the pure
 determination standing for life is not a perfection of being (`c4fb87a6` fails),
@@ -183,7 +202,15 @@ premises hold and the source has every pure determination. On the thin profile,
 with the effect as the only recipient, R-act₁ (`FiniteEsseReceivedAndLimited`),
 own being is no recipient (`7338142d`) and a nonrecipient's determinations are
 pure (`32695660`) all hold, while R-act₂ (`IntensiveEsse`) with the thin reading
-fails; with the intensive reading taken as purity it holds. -/
+fails; with the intensive reading taken as purity it holds. These two R-act results
+are non-entailment from the vocabulary alone: R-act₁ and the two interfaces never
+mention `OfEsse`.
+
+Locus (b) needs `d164b1ff` as well as R-act₂. On the thin profile with the
+intensive reading taken as purity, R-act₂, purity and own being hold, but the source
+does not really have the stand-in for life, so `d164b1ff` read intensively fails.
+Keeping `9a0a4951` (lacking nothing in the mode-open act, in `eminentFrame`) while
+rejecting real having is satisfiable on the same source. -/
 def Controls : Prop :=
   OwnBeingLacksNoPerfectionOfBeing ownBeing hasThin ofBeingThin ∧
   ¬ PurePerfectionsPertainToBeing pure ofBeingThin ∧
@@ -196,7 +223,12 @@ def Controls : Prop :=
   TruthCore.Causality.ReceptionLimitation.NonRecipientDeterminationsArePure
     recipient hasThin pure ∧
   ¬ IntensiveEsse ⟨ofBeingThin⟩ pure ∧
-  IntensiveEsse ⟨pure⟩ pure
+  IntensiveEsse ⟨pure⟩ pure ∧
+  -- locus (b) without d164b1ff: R-act₂, purity and own being, no real having
+  ownBeing false ∧ pure true ∧ ¬ hasThin false true ∧
+  ¬ OwnBeingLacksNoPerfectionOfBeing ownBeing hasThin pure ∧
+  -- keep 9a0a4951 (formal or eminent), reject real having
+  OwnBeingLacksNoPerfectionOfBeingInAct eminentFrame ownBeing pure
 
 end Control
 

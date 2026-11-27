@@ -2,7 +2,8 @@
   "challenge_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Challenge",
   "solution_module": "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.Solution",
   "theorem_names": [
-    "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.controls"
+    "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.controls",
+    "TruthCore.Results.Causality.ModeOfBeingMiddleTerm.intensiveEsseIffPurePertainsToEsse"
   ],
   "permitted_axioms": [
     "propext",

@@ -36,15 +36,15 @@ label = "The subsistent-esse pair is equivalent to: what is its own being has ev
 lean = "OwnBeingPairIffEveryPure"
 paraphrase = "Analyst formulation, attribution deferred. For any own-being predicate, real-determination relation and purity predicate: the pair d164b1ff and c4fb87a6, existentially closed over the primitive OfBeing, is equivalent to the composite: what is its own being has every pure perfection. This is an instance of a general logical fact about two-premise decompositions and certifies nothing about warrant by itself. In every registered consumer (7d8bbdcb, 95c04a6d, ff74a7ac) OfBeing occurs only in these two premises, and no fixing of it independent of the intensive reading is on file, so the pair carries the composite's load; which member carries it depends on the reading of perfection of being (thin or intensive). It asserts neither premise."
 definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "5f851204-5991-5e16-87f1-e8b3ed729708", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
-disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811"]
+disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811", "62ca3d65-8dd4-4187-abe1-a928b3045f12"]
 
 [[statement]]
 id = "Thin and act readings of perfection of being on one subsistent source: controls"
 label = "Thin and act readings of perfection of being on one subsistent source: controls"
 lean = "Control.Controls"
-paraphrase = "Closed finite profiles; statements about them only. A source that is its own being and a living effect; two stipulated pure determinations, one standing for being and one, a Boolean stand-in for life (not any recorded sense of LIVING). Thin profile: only being is a perfection of being and the source has only being; d164b1ff holds, c4fb87a6 fails at the stand-in for life, and the source lacks it. Act profile: every pure determination is a perfection of being and the source has every determination; both premises and their composite hold. On the thin profile, with the effect as the only recipient of esse, R-act₁ (the esse of whatever is not its own being is received in a principle and limited), own being is no recipient (7338142d) and a nonrecipient's determinations are pure (32695660) hold, while R-act₂ (intensive esse) with the thin reading fails; with the intensive reading taken as purity it holds. It witnesses where a thin reading of 'perfection of being' (PERFECTION_OF_BEING_1) leaves the pair: it can keep d164b1ff and must give up c4fb87a6; and that reception of esse does not by itself give intensive esse. It is not evidence for either reading."
+paraphrase = "Closed finite profiles; statements about them only. A source that is its own being and a living effect; two stipulated pure determinations, one standing for being and one, a Boolean stand-in for life (not any recorded sense of LIVING). Thin profile: only being is a perfection of being and the source has only being; d164b1ff holds, c4fb87a6 fails at the stand-in for life, and the source lacks it. Act profile: every pure determination is a perfection of being and the source has every determination; both premises and their composite hold. On the thin profile, with the effect as the only recipient of esse, R-act₁ (the esse of whatever is not its own being is received in a principle and limited), own being is no recipient (7338142d) and a nonrecipient's determinations are pure (32695660) hold, while R-act₂ (intensive esse) with the thin reading fails; with the intensive reading taken as purity it holds. Locus (b): on the thin profile with the intensive reading taken as purity, R-act₂, purity and own being hold, yet the source does not really have the stand-in for life and d164b1ff read intensively fails; and the source lacks no perfection of being in the mode-open act of a frame where everything is in act (9a0a4951) while still not really having it. It witnesses where a thin reading of 'perfection of being' (PERFECTION_OF_BEING_1) leaves the pair: it can keep d164b1ff and must give up c4fb87a6; and that reception of esse does not by itself give intensive esse. It is not evidence for either reading."
 definitions = ["5dc08b95-ca15-52ab-b8cd-2b558e9a13f7", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "84147eb5-88ef-46e7-9a0d-9c18d5137f16", "0a2bf1a0-bfc5-45d7-966a-a28919b6e847", "4433942e-aaf6-55a9-b777-66e55638103d", "6ced5205-e6a4-585e-950e-3b22e7c9ef01"]
-disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811"]
+disambiguations = ["b1640e51-d7d4-5a80-9992-29fa1ded8048", "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "1aef8986-ed29-564f-9803-d812d2ff63e1", "1795a62e-f78b-5f5b-94e7-9e7490824811", "62ca3d65-8dd4-4187-abe1-a928b3045f12"]
 
 [[argument]]
 id = "The mode-of-being premise pair is equivalent to its composite, checked"
@@ -80,12 +80,13 @@ meaning = "Forward: from whole-power possession and purity-as-perfection-of-bein
 id = "Thin and act readings of perfection of being on one subsistent source: controls, checked"
 label = "Thin and act readings of perfection of being on one subsistent source: controls, checked"
 theorem = "controls"
+comparator_theorems = ["intensiveEsseIffPurePertainsToEsse"]
 premises = []
 conclusion = "Thin and act readings of perfection of being on one subsistent source: controls"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite profiles over Bool, checked by decision"
-meaning = "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. The thin profile also satisfies R-act₁ with the reception and purity interfaces while R-act₂ fails. A structural surrogate."
+meaning = "Two profiles of one subsistent source differing only in the reading of 'perfection of being' and what the source has: on the thin one whole-power possession holds and purity-as-perfection-of-being fails at the stand-in for life; on the act one both hold. The thin profile also satisfies R-act₁ with the reception and purity interfaces while R-act₂ fails. A structural surrogate. Locus (b): R-act₂, purity and own being without real having (d164b1ff intensive fails); 9a0a4951 kept while real having is rejected. Companion: intensiveEsseIffPurePertainsToEsse, R-act₂ as c4fb87a6 read as perfection of esse."
 
 [[relation]]
 id = "Test by the mode pair certificate of the mode premise"
@@ -153,7 +154,7 @@ note = "On the thin profile c4fb87a6 is the premise that fails (at the stand-in 
 id = "R-act1: the esse of whatever is not its own being is received in a principle and limited"
 label = "R-act1: the esse of whatever is not its own being is received in a principle and limited"
 lean = "FiniteEsseReceivedAndLimited"
-paraphrase = "Analyst formulation, attribution deferred: the reception thesis of the act of being. For every x that is not its own being, x's esse is received in some principle, as act in receiving potency (EsseReceivedIn), and x's esse is limited (EsseLimited). It is the content shared with the reception framework (7fcfcee8, 14325c83) and the real-distinction premises of the q.3 a.4 routes. It does not say that every pure perfection is a perfection of esse (R-act2): the thin profile of the mode-of-being controls satisfies it while R-act2 fails. Its source arguments (q.4 a.1 ad 3, q.3 a.4, De ente c.4) are to be assessed, not taken as a bare primitive. Open."
+paraphrase = "Analyst formulation, attribution deferred: the reception thesis of the act of being. For every x that is not its own being, x's esse is received in some principle, as act in receiving potency (EsseReceivedIn), and x's esse is limited (EsseLimited). It belongs to a shared-warrant cluster of logically distinct members: 7fcfcee8 (a receiver is in receptive potency, conditional on reception), 14325c83 (no principle is in receptive potency to itself, negative), 7338142d (own being is no recipient), 7de89edb (received esse is limited, conditional) and 1304b462 (limited esse is received, conditional). These hold vacuously where nothing is received; of the route premises, 29e71e43 (every CREATURE_1's esse is received) assumes the reception half for creatures, and with 7de89edb the limited half. It does not say that every pure perfection is a perfection of esse (R-act2): the thin profile of the mode-of-being controls satisfies it while R-act2 fails. Its source arguments (q.4 a.1 ad 3, q.3 a.4, De ente c.4) are to be assessed, not taken as a bare primitive. Open."
 definitions = ["4433942e-aaf6-55a9-b777-66e55638103d", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 disambiguations = []
 
@@ -161,7 +162,7 @@ disambiguations = []
 id = "R-act2, intensive esse: every pure perfection is a perfection of esse itself"
 label = "R-act2, intensive esse: every pure perfection is a perfection of esse itself"
 lean = "IntensiveEsse"
-paraphrase = "Analyst formulation, attribution deferred: every pure perfection is a perfection of esse itself (PERFECTION_OF_BEING_2, IntensiveEsseFrame.OfEsse), so that subsistent esse includes it. It is c4fb87a6 with 'perfection of being' read in the intensive sense. q.4 a.1 ad 3 states the act thesis in two steps ('comparatur enim ad omnia ut actus ... unde ipsum esse est actualitas omnium rerum, et etiam ipsarum formarum'), and q.4 a.2 ad 3 applies it to life and wisdom. Reception of esse (R-act1) does not give it: the bridge from R-act1 to R-act2 is missing. Purity of life and wisdom is a stipulative classification (DEF-PURE-PERFECTION). Open."
+paraphrase = "Analyst formulation, attribution deferred: every pure perfection is a perfection of esse itself (PERFECTION_OF_BEING_2, IntensiveEsseFrame.OfEsse), so that subsistent esse includes it. It is c4fb87a6 with 'perfection of being' read in the intensive sense. q.4 a.1 ad 3 states the act thesis in two steps ('comparatur enim ad omnia ut actus ... unde ipsum esse est actualitas omnium rerum, et etiam ipsarum formarum'), and q.4 a.2 ad 3 applies it to life and wisdom. On the stated interfaces, reception of esse (R-act1) does not give it: the controls show non-entailment from the vocabulary alone, since R-act1 and the reception and purity interfaces never mention OfEsse. The candidate bridge is the q.7 a.1 family (ReceptionLimitation): unreceived esse is unlimited, so it includes every pure perfection. Purity of life and wisdom is a stipulative classification (DEF-PURE-PERFECTION). Open."
 definitions = ["0a2bf1a0-bfc5-45d7-966a-a28919b6e847", "65e38ffa-5a1c-55d0-935c-6538d843b780"]
 disambiguations = ["62ca3d65-8dd4-4187-abe1-a928b3045f12"]
 
@@ -169,7 +170,7 @@ disambiguations = ["62ca3d65-8dd4-4187-abe1-a928b3045f12"]
 id = "What is its own being lacks no perfection of being, being in act in it formally or eminently"
 label = "What is its own being lacks no perfection of being, being in act in it formally or eminently"
 lean = "OwnBeingLacksNoPerfectionOfBeingInAct"
-paraphrase = "The formal-or-eminent reading of ST I q.4 a.2 ad 3's reason clause ('nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens'): whatever is its own being is in act, in the frame's mode-open act, in every perfection of being. 'Not lacking' is read as being in act formally or eminently, the HAVING_EVERY_PERFECTION_1 side of DISAMB dc9c0a1b, not as really having the perfection as a determination (d164b1ff, the HAVING_EVERY_PERFECTION_2 side). The same article satisfies 'not lacking' through eminent preexistence (first proof) and 'ut unum' (ad 1). Sibling reading, not a strength-ordered version: no statement relates InAct to Has."
+paraphrase = "Analyst formulation, attribution deferred: whatever is its own being lacks no perfection of being: each is in act in it in the shared frame's InAct (IN_ACT_4, mode of possession left open, so formally, virtually or eminently). It is the HAVING_EVERY_PERFECTION_1 side of DISAMB dc9c0a1b: it does not say that the bearer has each perfection as a real determination (Has, d164b1ff). ST I q.4 a.2 ad 3 states it ('nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens'). R-act2 makes at most this 'not lacking' a meaning postulate of subsistent esse, not real having. Open."
 definitions = ["ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5f851204-5991-5e16-87f1-e8b3ed729708"]
 disambiguations = ["dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
 
@@ -192,3 +193,13 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "R-act2, intensive esse: every pure perfection is a perfection of esse itself"
 note = "R-act2 fails on the thin profile, where R-act1 and the reception and purity interfaces hold, and holds when the intensive reading is taken as purity."
+
+[[relation]]
+id = "R-act2 is purity as perfection of being read as perfection of esse"
+label = "R-act2 is purity as perfection of being read as perfection of esse (PERFECTION_OF_BEING_2)"
+subject_kind = "statement"
+subject_id = "R-act2, intensive esse: every pure perfection is a perfection of esse itself"
+predicate = "logically_equivalent_to"
+object_kind = "statement"
+object_id = "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946"
+note = "Same proposition over any carrier of determinations when c4fb87a6's OfBeing is read as PERFECTION_OF_BEING_2 (OfBeing := IntensiveEsseFrame.OfEsse; DISAMB 62ca3d65). Evidence: intensiveEsseIffPurePertainsToEsse (Iff.rfl), a Comparator companion of the controls result of specs/mode-of-being-middle-term.toml. It is a sense identification, not a derivation, and adds no warrant to either."

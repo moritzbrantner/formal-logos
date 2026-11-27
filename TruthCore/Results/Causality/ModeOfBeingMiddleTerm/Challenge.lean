@@ -36,4 +36,13 @@ theorem ownBeingPairIffEveryPure {B D : Type} (OwnBeing : B → Prop)
 theorem controls : Control.Controls := by
   sorry
 
+/-- R-act₂ is `c4fb87a6` with "perfection of being" read as perfection of esse
+(PERFECTION_OF_BEING_2): the two propositions coincide. Evidence for the
+`logically_equivalent_to` registration; a definitional identity, not a derivation. -/
+theorem intensiveEsseIffPurePertainsToEsse {D : Type} (I : IntensiveEsseFrame D)
+    (Pure : D → Prop) :
+    IntensiveEsse I Pure ↔
+      TruthCore.Causality.WholePowerPerfection.PurePerfectionsPertainToBeing Pure I.OfEsse := by
+  sorry
+
 end TruthCore.Results.Causality.ModeOfBeingMiddleTerm
