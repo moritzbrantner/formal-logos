@@ -48,7 +48,7 @@
     "reviewed_revision": "f880e762c17503ae00cba6ad0277e9f5603ab976",
     "review": "changes_requested",
     "publication": "published",
-    "evidence": "Draft PR-2153. The independent semantic challenge of head f880e762c17503ae00cba6ad0277e9f5603ab976 accepted all four registered steps as valid conditional derivations, not transcriptions, and found three P1 (root-profile admissibility for case ii, overstated parity of E, over-read personal variant in standingRival) and nine P2 findings, repaired at REPAIR_HEAD; the targeted re-check of the repairs has not yet run.",
+    "evidence": "Draft PR-2153. The independent semantic challenge of head f880e762c17503ae00cba6ad0277e9f5603ab976 accepted all four registered steps as valid conditional derivations, not transcriptions, and found three P1 (root-profile admissibility for case ii, overstated parity of E, over-read personal variant in standingRival) and nine P2 findings, repaired at 07046c461abfa1a863ee1ac68ff261e33a2745aa; the targeted re-check of the repairs has not yet run.",
     "supersedes": "None; 72a86cf4, 521613fc and 58750abd keep their scoped assessments."
   }
 }

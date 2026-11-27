@@ -4497,7 +4497,7 @@ Formal validity is unchanged by this judgment.
 **Review state.** The independent semantic challenge reviewed head
 `f880e762c`. It accepted all four registered steps as valid conditional
 derivations, not transcriptions. It found three P1s and nine P2s, which
-are repaired at REPAIR_HEAD:
+are repaired at `07046c461abfa1a863ee1ac68ff261e33a2745aa`:
 
 - (ii) needs root-profile admissibility;
 - the parity verdict on E was overstated;
