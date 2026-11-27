@@ -1,0 +1,18 @@
+{
+  "id": "b9143dd2-a012-4b21-a992-0656d7b8d0d0",
+  "label": "Having a perfection in an agent's power is a more perfect mode than every other way of having it",
+  "paraphrase": "Analyst formulation of the strong comparand of the q.4 a.2 first proof's mode step: for the primitive comparison of modes ModeAbove, the virtual mode (in an agent's power) is above every other way of having a perfection, the effect's formal possession ('secundum eandem rationem') included. It is the reading on which the equivocal agent has the effect's perfection 'eminentiori modo' than the effect has it. It compares modes, not bearers; it is not the eminent comparative of bearers MORE_4 and does not say that the agent has the perfection intrinsically. The passage applies 'eminentiori modo' to the sun. Open.",
+  "lean_declaration": "TruthCore.Causality.UniversalPreexistence.AgentPowerAboveEveryOtherMode",
+  "definition_ids": [
+    "41446d47-1c3e-4152-be4f-217d4d2eec1b",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ],
+  "connection_plan": {
+    "target_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "missing_bridge": "A bridge from the strong mode comparison to intrinsic possession of a pure perfection at an actual root: that having a perfection virtually, in a mode above the effect's formal possession, is a way of really having it.",
+    "blocker": "The passage attributes the eminent mode to the sun, an impersonal agent, so a mode ranking above formal possession does not by itself give intrinsic possession; the intrinsic-perfection obligations (E and L, causal-perfection-transfer 2026-11-24) and the second proof's subsistent-esse premises carry that content and remain open."
+  }
+}

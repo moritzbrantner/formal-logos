@@ -57,6 +57,15 @@ theorem perfectFromGodCauseOfUniversalPreexistence {W B T R : Type}
     TruthCore.Case.Catholicism.AttributesFromEsse.PerfectInFrame F IsGod := by
   sorry
 
+/-- Strength order for the mode step: if an agent's power is a more perfect mode
+than every other way of having a perfection, it is more perfect than material
+potency. -/
+theorem agentPowerAboveMaterialPotencyOfEveryOther
+    (ModeAbove : HavingMode → HavingMode → Prop)
+    (hStrong : AgentPowerAboveEveryOtherMode ModeAbove) :
+    AgentPowerAboveMaterialPotency ModeAbove := by
+  sorry
+
 /-- The impersonal-source interpretation, checked by decision (with a larger instance budget). -/
 theorem controls : Control.Controls := by
   sorry

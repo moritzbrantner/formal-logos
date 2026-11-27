@@ -1,0 +1,9 @@
+{
+  "id": "41446d47-1c3e-4152-be4f-217d4d2eec1b",
+  "label": "Modes of having a perfection and the primitive comparison of modes",
+  "term": "mode of having a perfection; more perfect mode",
+  "definition": "`HavingMode` names three ways of having a perfection: `formal` (in the same form, as the effect has it, 'secundum eandem rationem'), `virtual` (in an agent's power, 'in virtute causae agentis') and `potential` (in a material cause's potency, 'in potentia causae materialis'). `ModeAbove m n` is an explicitly primitive parameter: having a perfection in mode m is more perfect than having it in mode n. Distinguishing conditions: it compares modes, not bearers (contrast MORE_1 to MORE_4), and it imposes no order law. OPEN semantic obligations: what makes one mode more perfect than another (q.4 a.2 gives 'agens, inquantum huiusmodi, est perfectum; materia, inquantum huiusmodi, est imperfecta' for the virtual-over-potential case only); whether a mode above formal possession is a way of really having the perfection intrinsically. The mode labels are not the act-frame predicates IN_ACT_1 and IN_ACT_2 and are not linked to them by any statement.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.UniversalPreexistence.HavingMode",
+  "note": "Stipulative analyst definition, attribution deferred; the three modes and the virtual-over-potential comparison are navigated from I q.4 a.2 co., first proof (read in the materialized SCTA witness of the I q.4 a.2 passage), and the comparison with formal possession from its 'eminentiori modo'. The comparison relation is a Lean parameter, not a declaration. Introduced for the preexistence assessment (docs/notes/preexistence-bottleneck.md)."
+}

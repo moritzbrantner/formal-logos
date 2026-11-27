@@ -1,0 +1,11 @@
+{
+  "id": "f6dac5af-f2a7-4185-aae6-654ef7a358a5",
+  "label": "The strong mode step entails the weak mode step",
+  "argument_id": "e44dff9e-d35e-43b7-b3cc-7f9db67744d5",
+  "challenge_module": "TruthCore.Results.Causality.UniversalPreexistence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalPreexistence.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalPreexistence.agentPowerAboveMaterialPotencyOfEveryOther",
+  "comparator_config": "results/f6dac5af-f2a7-4185-aae6-654ef7a358a5/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: if the virtual mode is above every other way of having a perfection, it is above the potential mode. Application only; it establishes neither. Strictness: the stipulated mode order in the impersonal-source controls satisfies the weak version and falsifies the strong."
+}

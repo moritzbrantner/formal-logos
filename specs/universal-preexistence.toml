@@ -37,7 +37,7 @@ disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9
 id = "Preexistence at the universal source: impersonal-source controls"
 label = "Preexistence at the universal source: impersonal-source controls"
 lean = "Control.Controls"
-paraphrase = "Closed finite interpretation; statements about it only. Three beings (a source, a living effect, a nonliving effect) and two respects (being, life). The source causes the being and every formally had perfection of each other being; everything has being formally; only the living effect has life formally; the source has life virtually (IN_ACT_2). The frame's act is inclusive (formal or virtual). Checked: the source is a universal cause of being; universal-scope transfer b26c10a0, universal-source possession, universal-source preexistence, q.4 a.2 preexistence 64498e7e, unrestricted transfer f8ba2429 and 'nothing has actuality except insofar as it is' hold; the source has life inclusively and is perfect in the inclusive sense of GodIsPerfect when it alone is named; the source does not have life formally. Encoding artifacts, disclosed: the virtual relation is stipulated; whether it is read as a power to produce or as higher-mode containment is not encoded; no comparative is used. It shows that these premises, on the inclusive reading, do not by themselves give the source formal or intrinsic life; it is not evidence that an impersonal source exists or is possible."
+paraphrase = "Closed finite interpretation; statements about it only. Three beings (a source, a living effect, a nonliving effect) and two respects (being, life). The source causes the being and every formally had perfection of each other being; everything has being formally; only the living effect has life formally; the source has life virtually (IN_ACT_2). The frame's act is inclusive (formal or virtual). Checked: the source is a universal cause of being; universal-scope transfer b26c10a0, universal-source possession, universal-source preexistence, q.4 a.2 preexistence 64498e7e, unrestricted transfer f8ba2429 and 'nothing has actuality except insofar as it is' hold; the frame's act is the act frame's inclusive act (GradesActIsInclusive); the source has life inclusively and is perfect in the inclusive sense of GodIsPerfect when it alone is named; the source does not have life formally. A separate stipulated mode order satisfies the weak version of the q.4 a.2 mode step (an agent's power above material potency) and falsifies the strong version (above every other mode), witnessing that the strong version is strictly stronger. Encoding artifacts, disclosed: 'life' is a Boolean stand-in respect, not any recorded sense of LIVING; the virtual relation is stipulated, and whether it is read as a power to produce or as higher-mode containment is not encoded; no comparative of bearers is used. It shows that these premises, on the inclusive reading and for this stand-in respect, do not by themselves give the source formal or intrinsic possession; it is not evidence that an impersonal source exists or is possible."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "c19faf56-0908-5e6e-8c39-ccba40dce5d1", "a5bda545-3e76-5240-808d-25f897a07be5", "f7833666-c764-5624-a766-708949d9feee", "115f23e3-2a19-5dcb-bc7f-96408004f110", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"]
 disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
@@ -136,7 +136,7 @@ subject_id = "d180310f-4eda-44be-8c26-cca3347040bf"
 predicate = "tests"
 object_kind = "statement"
 object_id = "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6"
-note = "With the source alone named, its perfection in the frame's inclusive act holds (GodIsPerfect, the Lean content of this statement) while it lacks life formally: the inclusive perfection conclusion does not discriminate a source that has life only virtually."
+note = "With the source alone named, the Lean content of this statement (GodIsPerfect over the frame's act, its IN_ACT_4 conclusion, interpreted inclusively here) holds while the source lacks the Boolean stand-in 'life' formally: the conclusion read inclusively does not discriminate a source that has the stand-in respect only virtually."
 
 [[relation]]
 id = "Test by the impersonal-source controls of universal transfer"
@@ -147,3 +147,52 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "b26c10a0-983d-5a88-aa03-cc601bc1ddc6"
 note = "Universal-scope transfer holds in the interpretation together with the formal-life gap at the source; it gives causation of every perfection, not its formal possession by the source."
+
+# ---------------------------------------------------------------- 2026-11-27 review repair: the mode step as a strength fork
+
+[[statement]]
+id = "Having a perfection in an agent's power is a more perfect mode than having it in material potency"
+label = "Having a perfection in an agent's power is a more perfect mode than having it in material potency"
+lean = "AgentPowerAboveMaterialPotency"
+paraphrase = "Analyst formulation of the weak comparand of the q.4 a.2 first proof's mode step: 'praeexistere autem in virtute causae agentis, non est praeexistere imperfectiori modo, sed perfectiori; licet praeexistere in potentia causae materialis, sit praeexistere imperfectiori modo'. For the primitive comparison of modes ModeAbove, the virtual mode (in an agent's power) is above the potential mode (in a material cause's potency). It compares modes, not bearers, and does not say that a bearer with a perfection virtually has it intrinsically. On the passage's own example, the sun, a nonliving equivocal agent, has the likeness of what it generates in this mode. Open."
+definitions = ["41446d47-1c3e-4152-be4f-217d4d2eec1b", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[statement.connection_plan]
+target_statement_id = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+missing_bridge = "A bridge from a mode comparison of virtual possession to intrinsic possession of a pure perfection at an actual root: that having a perfection in a mode above the effect's formal possession is a way of really having it, which with universal-source preexistence would supply the intrinsic Has that fe67d766 states."
+blocker = "No record specifies the comparison of modes beyond the passage's virtual-over-potential case, and the passage's own equivocal agent (the sun) is impersonal, so the mode step alone does not give intrinsic possession; the 2026-11-24 E and L obligations of causal-perfection-transfer remain open."
+
+[[statement]]
+id = "Having a perfection in an agent's power is a more perfect mode than every other way of having it"
+label = "Having a perfection in an agent's power is a more perfect mode than every other way of having it"
+lean = "AgentPowerAboveEveryOtherMode"
+paraphrase = "Analyst formulation of the strong comparand of the q.4 a.2 first proof's mode step: for the primitive comparison of modes ModeAbove, the virtual mode (in an agent's power) is above every other way of having a perfection, the effect's formal possession ('secundum eandem rationem') included. It is the reading on which the equivocal agent has the effect's perfection 'eminentiori modo' than the effect has it. It compares modes, not bearers; it is not the eminent comparative of bearers MORE_4 and does not say that the agent has the perfection intrinsically. The passage applies 'eminentiori modo' to the sun. Open."
+definitions = ["41446d47-1c3e-4152-be4f-217d4d2eec1b", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa"]
+
+[statement.connection_plan]
+target_statement_id = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+missing_bridge = "A bridge from the strong mode comparison to intrinsic possession of a pure perfection at an actual root: that having a perfection virtually, in a mode above the effect's formal possession, is a way of really having it."
+blocker = "The passage attributes the eminent mode to the sun, an impersonal agent, so a mode ranking above formal possession does not by itself give intrinsic possession; the intrinsic-perfection obligations (E and L, causal-perfection-transfer 2026-11-24) and the second proof's subsistent-esse premises carry that content and remain open."
+
+[[argument]]
+id = "The strong mode step entails the weak mode step"
+label = "The strong mode step entails the weak mode step"
+theorem = "agentPowerAboveMaterialPotencyOfEveryOther"
+premises = ["Having a perfection in an agent's power is a more perfect mode than every other way of having it"]
+conclusion = "Having a perfection in an agent's power is a more perfect mode than having it in material potency"
+axioms = []
+rule = "Instantiate the strong version at the potential mode"
+meaning = "Strength order registration: if the virtual mode is above every other way of having a perfection, it is above the potential mode. Application only; it establishes neither. Strictness: the stipulated mode order in the impersonal-source controls satisfies the weak version and falsifies the strong."
+
+[[relation]]
+id = "The strong mode step strengthens the weak mode step"
+label = "The strong mode step strengthens the weak mode step"
+subject_kind = "statement"
+subject_id = "Having a perfection in an agent's power is a more perfect mode than every other way of having it"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Having a perfection in an agent's power is a more perfect mode than having it in material potency"
+verification_result_id = "The strong mode step entails the weak mode step"
+note = "Same primitive ModeAbove; the weak version compares the virtual mode only with the potential mode. Strict: the stipulated mode order of the impersonal-source controls."
