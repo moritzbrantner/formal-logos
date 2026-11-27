@@ -1,0 +1,8 @@
+{
+  "id": "b28d7e04-694b-442b-a42b-65f39190956f",
+  "label": "Present input: the candidate is actually presented to the favouring at the scenario",
+  "term": "present input (Present s x)",
+  "basis": "stipulative",
+  "definition": "Present s x: at scenario s the candidate x is actually present to the favouring source as something that acts on it, as the loads on a balance's pans are. A source favouring among candidates before any of them is produced has no present inputs.",
+  "note": "Stipulative analyst notion (#2145 Investigation 4), attribution deferred. Lean has no declaration for it: it is the parameter Present : S → X → Prop. It is a declared primitive; it is not existence at a world and not being caused."
+}

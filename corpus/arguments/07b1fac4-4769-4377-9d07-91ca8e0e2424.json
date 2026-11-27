@@ -25,7 +25,8 @@
   "disambiguation_ids": [
     "5921354b-51e6-5da3-8d8c-e9041840fd9f",
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
-    "8bb31748-e20f-5266-ac39-c442faab6622"
+    "8bb31748-e20f-5266-ac39-c442faab6622",
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"
   ],
   "strong_version_needed": {
     "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7": "Only its instances at beings whose esse equals their essence are used; the weak version b9316115 (IdentityScopedOwnEssence) is stated on the separate EsseReceptionDefinitionFork Frame, not on the q.3 a.4 profile with EsseReceivedIn used here, so the strong version is taken on this profile."

@@ -1,0 +1,11 @@
+{
+  "id": "00398c84-6547-404f-a4f8-04ba329cbe88",
+  "label": "Cause-of-being possession strengthens universal-source possession",
+  "subject_kind": "statement",
+  "subject_id": "d0fc96b7-fd2d-504e-912f-925de3b1e6ed",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "66252c05-49e7-4505-9644-e8f8ed823f1d",
+  "verification_result_id": "a35e5195-abe4-4389-a171-3a0def89d8ae",
+  "note": "Same InAct, CausesIn and esse; the weak version constrains only universal causes of being and distinct effects. No strictness result is registered."
+}

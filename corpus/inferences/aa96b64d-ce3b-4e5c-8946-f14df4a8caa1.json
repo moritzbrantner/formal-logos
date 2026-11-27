@@ -1,0 +1,15 @@
+{
+  "id": "aa96b64d-ce3b-4e5c-8946-f14df4a8caa1",
+  "label": "R-act2 from dependence through the first unde and inclusion, checked (inference)",
+  "input_statement_ids": [
+    "7067553d-cad9-5d79-b6b2-912e35051530",
+    "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+    "11437cb4-494a-47c3-b70b-7d66d4a25c78",
+    "fdd2213a-90ee-4f7c-86cd-ca4872549bd6"
+  ],
+  "output_statement_id": "254ee26f-01d5-4359-bdde-5779b6e80533",
+  "rule": "Witness the pure perfection, actualize it through esse, include it in esse",
+  "meaning": "For a pure perfection d, some x has d in act; by R-dep x has being; by the first unde d is actual in x through esse; by inclusion d is a perfection of esse itself. Given the first three premises, inclusion is equivalent to the conclusion (undeLoadMap).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

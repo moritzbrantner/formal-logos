@@ -1,0 +1,11 @@
+{
+  "id": "d6bfcd0d-d172-46ef-9b55-3183678903e0",
+  "label": "The all-admissible family separates member grounding from sufficiency",
+  "argument_id": "acec134f-4954-4531-a46f-1cc51ee76532",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.strictSeparates",
+  "comparator_config": "results/d6bfcd0d-d172-46ef-9b55-3183678903e0/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness control for member grounding over its sufficiency direction. Establishes no premise."
+}

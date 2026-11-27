@@ -1,0 +1,36 @@
+{
+  "id": "c5b14912-432d-484d-84ee-8dd361c9ef6d",
+  "label": "GOD_4 HAS_INTELLECT_1 from good-general apprehension at the root and finite reach",
+  "premise_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+    "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+    "02f04027-2f35-43f9-b283-2030c718ea67"
+  ],
+  "conclusion_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "inference_ids": [
+    "b7200821-9da2-4857-812d-dd4b2fc7c1a6"
+  ],
+  "meaning": "Some n is an actual concrete root at w. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n; since n has no actual concrete ground, the path is trivial and g = n (namedRootOfReach). The root-level premise gives n a good-general favouring and an apprehended content, and the recognition bridge gives g HAS_INTELLECT_1. Neither the q.14 immateriality premise nor every-pure-perfection (fe67d766) nor the #2153 E premise is used. The main theorem uses no axioms. The Comparator companion intellectStepControls (propext, Quot.sound; same carrier) gives a positive witness and, for three of the four premises, a row where it fails, the others hold and GOD_4 HAS_INTELLECT_1 fails: the D-directed root fails the root-level premise, GOD_4 naming the effect fails reach, and the recognition bridge fails without the HasIntellect predicate. Root existence holds on every assignment of this carrier.",
+  "definition_ids": [
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "822c9912-2313-584b-b2b7-77031da20107",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "term_senses": {
+    "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
+  }
+}

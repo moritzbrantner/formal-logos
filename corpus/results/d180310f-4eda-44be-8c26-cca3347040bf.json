@@ -1,0 +1,11 @@
+{
+  "id": "d180310f-4eda-44be-8c26-cca3347040bf",
+  "label": "Preexistence at the universal source: impersonal-source controls, checked",
+  "argument_id": "6df18963-50de-43a1-968f-67ed7f002d35",
+  "challenge_module": "TruthCore.Results.Causality.UniversalPreexistence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalPreexistence.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalPreexistence.controls",
+  "comparator_config": "results/d180310f-4eda-44be-8c26-cca3347040bf/comparator.json",
+  "status": "solution-present",
+  "description": "One finite interpretation of an impersonal universal source. On the inclusive reading of act, universal transfer, universal-source possession and preexistence, q.4 a.2 preexistence, unrestricted transfer and the inclusive PERFECT_2 of the source all hold, and the frame's act coincides with the act frame's inclusive act (both inclusions checked), while the source lacks formally the Boolean stand-in respect labelled 'life'. Two further conjuncts concern a separate stipulated mode order, unrelated to the source's frame, which satisfies the weak q.4 a.2 mode step and falsifies the strong one. A structural surrogate: it shows these premises do not by themselves give formal or intrinsic possession at the source; the virtual relation is stipulated, not a modelled power or containment."
+}

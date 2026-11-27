@@ -1,0 +1,64 @@
+# #2145 premise lane C: is value-responsiveness to non-present candidates
+# apprehension? Where are a value-responsive source's non-present candidates
+# individuated (independent realm, the source, a produced realm, nowhere)? The
+# cognition criterion 3b40009e is derived from item realization, irreflexivity,
+# two bridges excluding the independent and merely produced loci, and a narrower
+# containment-recognition bridge. Analyst formulations, attribution deferred. See
+# docs/notes/causal-perfection-transfer.md, section "Individuating non-present
+# candidates: the axiarchic rival and the cognition criterion".
+
+[batch]
+vocab = "TruthCore.Causality.AxiarchicFoundation"
+results = "TruthCore.Results.Causality.AxiarchicFoundation"
+
+[[statement]]
+id = "633d5c29-a594-4c1a-b3f6-2b899a0e65ed"
+label = "Favouring determinations are realized on stand-in items"
+lean = "FavouringRealizedOnItems"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "fae7bbb8-931c-4a95-9f44-1d59921d1c83"]
+paraphrase = "OPEN analyst bridge, attribution deferred: for every bearer b and every favouring determination of b (the real determination that a favouring of b is the profile phi), in every variation scenario s and for all candidates x, y, phi favours x over y at s exactly when a relation among items, indexed by b, phi and s, holds between b's stand-in for x and b's stand-in for y (the profile is the inverse image of an item relation under the stand-in assignment). Because the relation is indexed by the profile, several favourings of one bearer are allowed; one favouring per bearer is the separate open bridge 3e6ae3e7. A stand-in is the item through which a candidate figures in b's favouring. With irreflexivity, realization requires only that favoured pairs have distinct stand-ins. It does not require the stand-ins to be real in any further sense: the identity assignment (candidates as their own stand-ins) satisfies it, and such stand-ins fall under the own-favouring bridge 65805e5a, which carries the demand for real terms. The function shape of the stand-in assignment assumes that every way a candidate figures in a bearer's favourings goes through one item."
+
+[[statement]]
+id = "3ca01752-0d5d-4140-be03-68150a17aefb"
+label = "No favouring determination favours a candidate over itself"
+lean = "FavouringIrreflexive"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded"]
+paraphrase = "OPEN analyst premise, attribution deferred: for every bearer b, every favouring determination of b with profile phi, every scenario s and every candidate x, phi does not favour x over x at s. It is weaker than the asymmetry (net favouring) assumed by the #2163 outcome-independent favouring standard."
+
+[[statement]]
+id = "65805e5a-818a-49a0-ae3c-eba95724500f"
+label = "No own favouring has an independent stand-in for a non-present candidate"
+lean = "NoIndependentStandIn"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "fae7bbb8-931c-4a95-9f44-1d59921d1c83", "b28d7e04-694b-442b-a42b-65f39190956f", "c917dda9-f382-48fa-8cc1-a0b9e609c164", "b71adcba-9430-4c3b-a87e-60471247d2dd", "fcfb7a8b-1373-4437-89c3-b7893d850031"]
+disambiguations = ["4c3751a6-6b32-47f2-89c4-d094dabe5613"]
+paraphrase = "OPEN own-favouring bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination, every scenario s and every candidate x that is not a present input at s, b's stand-in for x is not independent of b: it is not the case that b neither contains (CONTAINED_IN_1) nor produces it. Rationale: the favouring is the bearer's own (not supplied by another determiner, DEF abd8cfa4), and an independent item makes a difference to a bearer by acting on it (then it is a present input) or by being represented in it (then a contained item stands for it). It excludes the independent-realm horn: Leslie-type requiredness of abstract value-facts that is creatively effective on the bearer's favouring without being present to it, a demiurge guided by Forms it neither contains nor makes, and candidates standing for themselves. At an actual root it would be a reading of an inclusive sole-foundation commitment, which is not registered as a statement; the encoded underivedness of a root (no actual concrete ground) does not imply it, since it concerns non-concrete co-determiners."
+
+[[statement]]
+id = "69b9f887-582a-479c-924b-e7328f3930b4"
+label = "No own favouring has a merely produced stand-in for a non-present candidate"
+lean = "NoMerelyProducedStandIn"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "fae7bbb8-931c-4a95-9f44-1d59921d1c83", "b28d7e04-694b-442b-a42b-65f39190956f", "c917dda9-f382-48fa-8cc1-a0b9e609c164", "b71adcba-9430-4c3b-a87e-60471247d2dd"]
+disambiguations = ["4c3751a6-6b32-47f2-89c4-d094dabe5613"]
+paraphrase = "OPEN source-of-differences bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination, every scenario s and every candidate x that is not a present input at s, b's stand-in for x is not an item that b produces (makes as something other than itself) without containing it (CONTAINED_IN_1). Rationale: to produce distinct items for x and y the bearer would already have to discriminate x from y (a common principle must contain what distinguishes its effects; ST I q.14 a.6, navigation only), and that contained discrimination, not the produced item, is then the first stand-in. It excludes a realm of possibles that the source makes and that then guides its favouring. It does not concern items grounded in b without being made by it, such as modes of b's own nature, which are contained if they are b's determinations."
+
+[[statement]]
+id = "d1fb6414-976e-4833-908d-17787cca2502"
+label = "A CONTAINED_IN_1 individuating stand-in guiding value-dependent favouring is apprehended"
+lean = "ContainedStandInIsApprehended"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "fae7bbb8-931c-4a95-9f44-1d59921d1c83", "b28d7e04-694b-442b-a42b-65f39190956f", "c917dda9-f382-48fa-8cc1-a0b9e609c164", "c82c75e9-1786-43f1-8e0d-1b295ae5699a", "07f3fb85-6036-4e42-8eb8-a18db846719f", "3ece6dfe-c033-4546-b7d4-94ef48a235df"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf", "4c3751a6-6b32-47f2-89c4-d094dabe5613"]
+paraphrase = "OPEN containment-recognition bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination of profile phi, every scenario s and candidates z, w: if phi depends on betterness (read as value) with end-realization held fixed (BECAUSE_OF_GOODNESS_2) for z over w or for w over z at s, z is not a present input at s, b's stand-in for z is contained in b (CONTAINED_IN_1), and it differs from b's stand-in for w, then that stand-in is a content about z that b contains intentionally (CONTAINED_IN_2, Lean ContainsIntentionally: contained, about some candidate, and apprehended by b). In the Lean type the antecedent's containment is ContainsGenerically (CONTAINED_IN_1) and the consequent is ContainsIntentionally, so this is the only premise of its argument reaching both senses. Given the other premises of the registered derivation every good-general bearer meets its antecedent, so its added antecedent conditions narrow nothing there; with those premises it is strictly stronger than the cognition criterion (the criterion implies its weakened form, the weakened form with those premises gives the criterion, and on the control carrier the criterion and those premises hold while this bridge fails). It is the passage from generic to intentional containment. A virtual reading of the containment (CONTAINED_IN_3: a power to produce z, or a mode in which the bearer is imitable by z, not apprehended) denies it; nothing in the Lean types beyond Apprehends separates the two readings."
+
+[[argument]]
+id = "e3c662b6-2695-4e25-8d12-7ba34d790f17"
+label = "Good-general favouring is apprehension, from individuation of non-present candidates"
+theorem = "goodGeneralFavouringIsApprehensionOfIndividuation"
+comparator_theorems = ["axiarchicControls", "criterionDoesNotGiveRecognition"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "633d5c29-a594-4c1a-b3f6-2b899a0e65ed", "3ca01752-0d5d-4140-be03-68150a17aefb", "65805e5a-818a-49a0-ae3c-eba95724500f", "69b9f887-582a-479c-924b-e7328f3930b4", "d1fb6414-976e-4833-908d-17787cca2502"]
+conclusion = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {BECAUSE_OF_GOODNESS = "BECAUSE_OF_GOODNESS_2", CONTAINED_IN = "CONTAINED_IN_1"}
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf", "4c3751a6-6b32-47f2-89c4-d094dabe5613"]
+sense_bridges = [{ term = "CONTAINED_IN", from = "03ce80c5-aaba-4aae-adbf-a87092044dd4", to = "30130a78-4a0e-44bb-bb2c-9e037651fa06", statement_id = "d1fb6414-976e-4833-908d-17787cca2502" }]
+rule = "A value-dependent favouring of x over y gives distinct stand-ins (nowhere horn out); excluded middle and two locus bridges, each denying one horn, place the non-present candidate's stand-in in the bearer; the recognition bridge, strictly stronger than the criterion given the rest, applies"
+meaning = "Let b have a favouring determination whose profile phi is good-general: at some scenario s, for candidates x and y, at least one not a present input, phi depends on betterness with end-realization fixed, so in particular phi favours x over y at s. By item realization phi at s is the inverse image of an item relation (indexed by b, phi and s) under b's stand-in assignment; by irreflexivity phi does not favour y over y. If x and y had the same stand-in, phi would favour y over y, so their stand-ins differ (unindividuatedNotFavoured). This only discharges the individuation conjunct of the recognition bridge; without that conjunct realization and irreflexivity are not needed (recognitionWithoutIndividuationGivesCriterion). Take the candidate z of the pair that is not a present input. By excluded middle its stand-in is contained in b (CONTAINED_IN_1, intentionally or virtually), or not contained and produced by b, or neither (independent). The own-favouring bridge excludes the independent realm and the source-of-differences bridge excludes the merely produced item, so it is contained; this is a disjunctive syllogism over premises that each deny one horn. The containment-recognition bridge, declared as the sense bridge from CONTAINED_IN_1 to CONTAINED_IN_2, then makes that stand-in a content about z that b itself apprehends, which is the cognition criterion's conclusion for b. Given the other five premises the recognition bridge is strictly stronger than the criterion (criterionGivesWeakRecognition, weakRecognitionGivesCriterion and the Comparator companion criterionDoesNotGiveRecognition), so the derivation localizes the dispute rather than adding warrant against a rival who grants those premises. The main theorem uses no axioms. The Comparator companion axiarchicControls (propext and Quot.sound, within the permitted Mathlib axiom set; Lane 4's carrier with the Lane 2b profiles and a new item type) gives the personal row with every premise and the criterion, and for each of the five non-logical premises a row where it alone fails: contained but unapprehended stand-ins (recognition fails; the same stand-ins, relation and loci as the personal row), an independent realm, a produced realm, one undifferentiated item with the good-tracking favouring (no item relation realizes it), and one item with a non-contrastive favouring that is good-general in the formal sense but favours an outcome over itself. In rows 3 to 6 recognition holds only vacuously, and the criterion fails there because those rows assign no apprehension, not because of the failed premise. These are structural surrogates, not metaphysical possibilities; which account a row represents is an interpretive assignment."

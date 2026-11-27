@@ -1,0 +1,9 @@
+{
+  "id": "e81a6f5d-4d2f-4647-b3e0-300e2707340d",
+  "label": "Undominated complete decision: a feasible decision not strictly surpassed by a feasible decision",
+  "term": "undominated complete decision",
+  "basis": "stipulative",
+  "lean_declaration": "Maximal",
+  "definition": "Mathlib's Maximal (· ∈ insert o C) d on a partial order of complete decisions: d is feasible (omission o or a creation decision in C) and no feasible decision is strictly greater (maximal_iff_forall_gt). Strict superiority (<) is all-things-considered superiority of decisions, not quality of a product.",
+  "note": "Stipulative application of a Mathlib order notion to #1953's complete-decision fork. Weaker than OptimalCreationChoice.Optimal (IsGreatest of the quality image) in partial orders. The order, the feasible set and the policy of choosing an undominated decision are explicit parameters, not consequences of perfect goodness. See docs/notes/optimal-creation-choice.md §62."
+}
