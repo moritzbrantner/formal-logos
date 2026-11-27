@@ -164,12 +164,13 @@ theorem actualRootsApprehendFromRootCriterion {W B D S X Z C : Type}
 
 /-! ## Lean-only: relocation probe
 
-The conceptualist premise restricted to the root route
-(`NonRealStandInYieldsApprehension`) is equivalent to the root criterion given
-the other premises; the general premise is strictly stronger than the root
-criterion given them (`rootCriterionWithoutConceptualism`). -/
+Given the other premises, the root criterion is equivalent to the weakened
+existential form `NonRealStandInYieldsApprehension` (some apprehended content
+about some candidate, not the stand-in itself). The conceptualist premise, even
+restricted to the route, is strictly stronger than the root criterion given them
+(`rootCriterionWithoutConceptualism`). -/
 
-/-- The root criterion implies the restricted premise. -/
+/-- The root criterion implies the weakened existential form. -/
 theorem rootCriterionGivesRestrictedConceptualism {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
@@ -182,8 +183,8 @@ theorem rootCriterionGivesRestrictedConceptualism {W B D S X Z C : Type}
       RealConstituent About Apprehends :=
   fun r hr φ _ _ hφ hg _ _ => h r hr φ hφ hg
 
-/-- The restricted premise with the other premises (minus the conceptualist and
-content premises) gives the root criterion. -/
+/-- The weakened existential form with the other premises (minus the
+conceptualist and content premises) gives the root criterion. -/
 theorem restrictedConceptualismGivesRootCriterion {W B D S X Z C : Type}
     (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)

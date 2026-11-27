@@ -6688,8 +6688,13 @@ is produced. The aim was to place each rival's best answer, not to refute it.
 | A4: modes of imitability of the root's nature, not understood | in the root | needs non-real containment (B) |
 
 *Two exclusions that bind both sides.* Covariation, natural signs and
-resemblance-matching are factive: they relate an item to something that exists.
-They cannot stand for a candidate that is not present. DEF `3ece6dfe` already
+actual resemblance-matching are factive: they relate an item to something that
+exists. They cannot stand for a candidate that is not present. Counterfactual
+matching ("whatever would match it", the template reading in D) is not
+excluded by this point, because it needs no existing match. It needs instead
+that the mode fix, with nothing matching it, which candidate would match. That
+is itself a non-factive standing for a non-present candidate. Whether it
+differs from aboutness in more than its name is open (D, next test 6). DEF `3ece6dfe` already
 lists covariation as a non-example; the point holds for a mind whose ideas were
 merely caused by their objects as much as for a power. Derived aboutness at a
 root before creation must derive from something in the root. The independent
@@ -6785,8 +6790,12 @@ registered, zero axioms). Its premises are:
   whatever is in a bearer without being a real constituent of it is apprehended
   by that bearer;
 - **the content premise** `NonRealStandInIsAbout` (`5a3a1432`, new, open, in
-  its weakest form for the route): a non-real contained stand-in of a non-present candidate
-  is about that candidate.
+  a restricted form): a non-real contained stand-in of a non-present candidate
+  is about that candidate. It is restricted to non-real contained stand-ins of
+  non-present candidates, but it still ranges over every bearer and every
+  favouring the bearer has, not only over actual roots, good-general
+  favourings or the witnessed pair. So it is not the weakest form the route
+  needs.
 
 The conclusion is the **root cognition criterion** (`b371638a`, new): every actual root
 with a good-general favouring apprehends some content about some candidate. It
@@ -6826,16 +6835,27 @@ before production. That sibling and its bridge are not registered (next test
 **Relocation probe** (pre-report self-check 1).
 
 - `rootCriterionGivesRestrictedConceptualism` and
-  `restrictedConceptualismGivesRootCriterion` (Lean-only): the conceptualist
-  premise *restricted to the root route* is equivalent to the conclusion, given
-  the other premises.
-- `rootCriterionWithoutConceptualism` (Comparator companion): the general
-  premise is strictly stronger. On the personal row's carrier the root
-  criterion and every other premise hold, but the source does not apprehend
-  the non-real stand-in of `d`.
+  `restrictedConceptualismGivesRootCriterion` (Lean-only): given the other
+  premises, the root criterion is equivalent to a *weakened existential form*,
+  `NonRealStandInYieldsApprehension`. That form says that if an actual root
+  with a good-general favouring has a non-real contained stand-in of a
+  non-present candidate, it apprehends *some* content about *some* candidate.
+  It does not say that the root apprehends that stand-in. It is the root
+  criterion with idle antecedents and the content premise folded in, not a
+  restriction of `cde7f1dd`.
+- `rootCriterionWithoutConceptualism` (Comparator companion): `cde7f1dd` is
+  strictly stronger than the root criterion given the other premises, even
+  restricted to the route. On the personal row's carrier the root criterion
+  and every other premise hold. Yet `inner d`, a non-real contained stand-in of
+  the non-present candidate `d` at the actual root `true` with the good-general
+  favouring `better`, is not apprehended. So "the root apprehends that very
+  stand-in" fails there.
 
-So against A4, which grants the other premises, the derivation is a
-**relocation**, not support. Two things are gained:
+The relocation verdict rests on what A4 holds. A4 grants the other premises and
+denies every apprehension at the root. On the route's instances it therefore
+denies both `cde7f1dd` and the root criterion. Against A4 the derivation is a
+**relocation**, not support: it moves the disagreement to `cde7f1dd` without
+giving A4 a reason to accept it. Two things are gained:
 
 1. The shared demand is derived, not assumed (B).
 2. The remaining dispute now sits at a *general* thesis about non-real being.
@@ -6864,6 +6884,8 @@ Disclosed artifacts:
   nothing non-real is contained. The criterion fails there because nothing is
   apprehended. The row shows that simplicity is needed. It does not show that
   composite thinkers do not apprehend.
+- In row 5, as in row 3, the conceptualist and content premises hold only
+  vacuously, since nothing non-real is contained.
 - In rows 2, 3 and 5 the root criterion fails because the row assigns no
   apprehension (`appNone`). In row 5 it would hold with `appInner` (not
   registered as a row). Row 5 shows that the no-present-candidates premise is
@@ -6886,8 +6908,8 @@ does an established instance of that kind exist outside the root?
 | What makes them actually distinct | the act of understanding actualizes a distinction founded in the one nature (a distinction of reason with a foundation in reality) | a distinction that holds before and without any act: a Scotist formal distinction a parte rei is the developed precedent (navigation) |
 | If the distinction were only founded, not actual | the stand-ins are not distinct items; by realization and irreflexivity there is no favouring (lane C's nowhere horn) | the same |
 | Its characteristic objection | Euthyphro for ideas: if the intellect finds the distinctions, they are there without it and apprehension does no work for individuation; if it makes them, what guides it is the nature's foundation, and why a subject is needed is the open question | Ockham's identity objection (navigation): items really identical with one nature cannot differ in properties; the Scotist reply is that formal non-identity is compatible with real identity. In the analyst's assessment neither side of that exchange is decisive here |
-| Established instance of the same kind outside the root | none. Human distinctions of reason (convex and concave in one curve) are carried by a real plurality of representations, which simplicity excludes at the root | none. Non-real formalities a parte rei are contested wherever they are posited; real powers and holes are real items |
-| Non-factive standing for a non-present candidate | established for human minds (we think of what does not exist), but there it is carried by real representations, so at a simple root it is the same extrapolation as in the row above | in the analyst's assessment, contested for powers (navigation: critics of physical intentionality). In composite bearers it is also carried by real powers, so the same discount applies. A4 need not use powers, and a template reading needs no aboutness |
+| Established instance of the same kind outside the root | none, in the analyst's assessment. Human distinctions of reason (convex and concave in one curve) are, in that assessment, carried by a real plurality of representations, which simplicity excludes at the root. Whether one human act can have several non-real objects without plural real representations is untested (next test 7) | none, in the analyst's assessment. Non-real formalities a parte rei are, in that assessment, contested wherever they are posited; real powers and holes are real items |
+| Non-factive standing for a non-present candidate | established for human minds (we think of what does not exist); in the analyst's assessment it is carried there by real representations, so at a simple root it is the same extrapolation as in the row above | in the analyst's assessment, contested for powers (navigation: critics of physical intentionality). In composite bearers it is also carried by real powers, so the same discount applies. A4 need not use powers, and a template reading needs no aboutness |
 | Value-dependence | ideas track value grounded in the nature | the modes share that ground (A4 is not A3) |
 
 *Verdict on the table.* Each side posits a non-real plurality in one simple
@@ -6895,9 +6917,16 @@ nature that has no established instance of its kind outside the root. Each
 faces a characteristic objection whose force is disputed. The same discount
 applies to non-factive standing: its human instances are carried by real
 representations, as the instances on the powers side are carried by real
-powers. So it is no asymmetry at a simple root. Besides, A4 can take the template
-reading and deny aboutness. That costs A4 the content premise and nothing
-identified beyond it. **Parity at the status step.**
+powers. So it is no asymmetry at a simple root. This verdict depends on the
+analyst's assessment that human non-real plurality is always carried by plural
+real representations; a human act with several non-real objects and no plural
+real representations would be an established personal instance and would
+break the parity (next test 7). Besides, A4 can take the template reading and
+deny aboutness. That costs A4 the content premise. A possible further price is
+recorded, not established: the template's counterfactual matching is itself a
+non-factive standing for non-present candidates, and if it is aboutness under
+another name, the template concedes the content premise and denies only
+apprehension (A, next test 6). **Parity at the status step.**
 
 ### E. Horizontal warrant for the conceptualist premise
 
@@ -6995,7 +7024,9 @@ undecided.
 aboutness, no apprehension). It denies the conceptualist premise and the
 content premise. Its price is a mind-independent, actual, non-real distinction
 among modes of one simple nature: a Scotist formal distinction, open to
-Ockham's identity objection, with no uncontested instance elsewhere. The
+Ockham's identity objection, with no uncontested instance elsewhere. A
+possible further price, not established, is that its counterfactual matching
+may be aboutness under another name (next test 6). The
 personal price at the same step is a non-real plurality of objects of one act,
 also with no instance elsewhere, together with the Euthyphro dilemma for ideas.
 
@@ -7006,8 +7037,11 @@ does not change. What changed:
 
 - a second route shape to `3a32d91c`, which avoids `3b40009e` and `d1fb6414`.
   It re-presents the same dispute and is not additional evidence. A4 (control
-  row 2) holds every premise except `cde7f1dd`. Restricted to the route,
-  `cde7f1dd` is equivalent to the conclusion. The instances the route uses (a
+  row 2) holds every premise except `cde7f1dd`; it denies every apprehension
+  at the root, so on the route's instances it denies both `cde7f1dd` and the
+  root criterion. Given the rest, the root criterion is equivalent only to the
+  weakened existential form `NonRealStandInYieldsApprehension`; `cde7f1dd`,
+  even restricted to the route, is strictly stronger. The instances the route uses (a
   non-real stand-in contained in a simple root, for a non-present candidate of
   a value-dependent pair with distinct stand-ins) are also instances of
   `d1fb6414`, and A4 denies apprehension of them under either premise. The
@@ -7034,10 +7068,12 @@ registered. A1's price at `65805e5a` remains conditional on it.
 
 **Pre-report self-checks.**
 
-1. *Relocation probe.* Done in Lean (C). Restricted to the route, the
-   conceptualist premise is equivalent to the conclusion given the rest; the
-   general premise is strictly stronger. The result is reported as a
-   relocation; what is gained is listed in C.
+1. *Relocation probe.* Done in Lean (C). Given the rest, the conclusion is
+   equivalent to the weakened existential form
+   `NonRealStandInYieldsApprehension`; the conceptualist premise, even
+   restricted to the route, is strictly stronger. The result is reported as a
+   relocation, because A4 denies both the premise and the conclusion on the
+   route's instances; what is gained is listed in C.
 2. *Does the classical side pay here too?* Table D has a personal row at every
    question, at the same level. The personal account pays the non-real
    plurality and the Euthyphro dilemma.
@@ -7073,13 +7109,22 @@ registered. A1's price at `65805e5a` remains conditional on it.
 5. *The pair-restricted present-input premise.* Register the weakest version of
    `fce9e0a3`, on which only the witnessed pair is non-present, if a
    pair-restricted present-input relation is added to the shared signature.
+6. *Counterfactual matching versus aboutness.* State the template's "would
+   match" relation positively and test whether it differs from aboutness (DEF
+   `3ece6dfe`) in more than its name. If it does not, the template concedes
+   the content premise.
+7. *A human act with several non-real objects.* Is there one human act with
+   several non-real objects that is not carried by plural real
+   representations? An instance would be an established personal precedent
+   and would break the parity in D.
 
 **Review record.** An independent semantic challenge of
 `ad04834f7..95077bd33` ran after delivery. Its itemized findings were not
 preserved; only the repairs begun from them survive. In the account kept with
 those repairs, it accepted the Lean, the report of the relocation, the strength
 order (`83b91c73`, `6b7dce1c`), the two Lean-only theorems on the shared demand
-and on real directed powers, the controls and the parity verdict. Its findings
+and on real directed powers, the controls and the parity verdict (the second
+challenge below corrected the relocation report's equivalence claim). Its findings
 concerned wording and records, not the Lean statements or proofs.
 
 Repairs, all in the commit after `95077bd33`:
@@ -7109,8 +7154,39 @@ Repairs, all in the commit after `95077bd33`:
 - *Senses of "simple".* The missing disambiguation between DEF `d6912ecb`,
   SIMPLE_4 and #2153's encoded simplicity is recorded for #216.
 
-No Lean statement or proof changed. A re-check of the repaired revision by the
-coordinator is pending.
+No Lean statement or proof changed in that round.
+
+A second independent semantic challenge, of `36d6d8fbb`, found one P1 and five
+P2s. It found the first round's acceptance of the relocation report stale on
+one point (P1). All six are repaired in the commit after `36d6d8fbb`:
+
+1. *P1: the route equivalence was overstated.* The note, the Lean docstrings,
+   statement `cde7f1dd`, argument `5b16ebe7` (result `19d5872a`, inference
+   `803acc7a`), argument `588e1dfb` (result `419e24af`, inference `36936794`)
+   and the attempt said that `cde7f1dd` restricted to the route is equivalent
+   to the root criterion. `NonRealStandInYieldsApprehension` concludes only
+   that the root apprehends some content about some candidate, not the stand-in
+   itself. It is a weakened existential form. A faithful route restriction of
+   `cde7f1dd` fails in `rootCriterionWithoutConceptualism`. Each location now
+   says that, given the rest, the root criterion is equivalent to the weakened
+   form and `cde7f1dd`, even restricted, is strictly stronger. The relocation
+   verdict now rests on A4 denying every apprehension, hence both premises on
+   the route's instances.
+2. *P2: "weakest form for the route".* The content premise ranges over every
+   bearer and favouring. It is now called a restricted form (Lean docstring,
+   statement `5a3a1432`, C).
+3. *P2: factivity versus the template.* A now says why counterfactual matching
+   escapes the factivity exclusion and records its possible price; D, the
+   standing rival and next test 6 carry it. "Nothing identified beyond" the
+   content premise is withdrawn.
+4. *P2: table D's instance cells.* Both are marked as the analyst's
+   assessment; the verdict's dependence on the personal one is stated, with
+   next test 7.
+5. *P2: row 5 vacuity.* The conceptualist and content premises hold in row 5
+   only vacuously; this is disclosed in C and the Lean docstring.
+6. *P2: this review record* is updated.
+
+No Lean statement or proof changed in this round.
 
 [Attempt record](../../corpus/attempts/0d8b9153-ad65-48a3-be6a-478612f0e2a1.json)
 

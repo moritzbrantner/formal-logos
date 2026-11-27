@@ -98,10 +98,13 @@ def NonRealContainmentIsApprehension (Contains RealConstituent : B → C → Pro
     (Apprehends : B → C → Prop) : Prop :=
   ∀ b e, NonRealContained Contains RealConstituent b e → Apprehends b e
 
-/-- OPEN content premise, in its weakest form for the route: a stand-in through
-which a non-present candidate figures in a bearer's favouring, if it is in the
-bearer without being a real constituent of it, is about that candidate (DEF
-`3ece6dfe`: it represents the candidate). Denied by a template reading, on which
+/-- OPEN content premise, in a restricted form: for every bearer `b`, every
+favouring `φ` that `b` has, and every candidate `x` not present at a scenario
+`s`, if `b`'s stand-in for `x` is in `b` without being a real constituent of it,
+that stand-in is about `x` (DEF `3ece6dfe`: it represents the candidate). It is
+restricted to non-real contained stand-ins of non-present candidates, but not
+to actual roots, good-general favourings or the witnessed pair, so it is not the
+weakest form the route needs. Denied by a template reading, on which
 a mode individuates the candidate only as whatever would match it. -/
 def NonRealStandInIsAbout (Has : B → D → Prop) (favours : GoodFavouring.Profile S X → D)
     (Present : S → X → Prop) (stand : B → X → C) (Contains RealConstituent : B → C → Prop)
@@ -119,12 +122,15 @@ def RootGoodGeneralFavouringIsApprehension (m : Profile W B) (w : W) (Has : B �
   ∀ r, ActualRoot m w r → ∀ φ, Has r (favours φ) → GoodGeneral good fitOf Present φ →
     ∃ c y, About c y ∧ Apprehends r c
 
-/-- Lean-only relocation notion (pre-report probe): the conceptualist premise
-restricted to the root route. At an actual root with a good-general favouring,
-a non-real contained stand-in of a non-present candidate yields some apprehended
-content about some candidate. Given the other premises it is equivalent to the
-root criterion (results module), so it would be a relocation; the registered
-premise is the general `NonRealContainmentIsApprehension`. -/
+/-- Lean-only relocation notion (pre-report probe): a weakened existential
+form, not a route restriction of the conceptualist premise. At an actual root
+with a good-general favouring, a non-real contained stand-in of a non-present
+candidate yields *some* apprehended content about *some* candidate, not
+necessarily that stand-in; it is the root criterion with idle antecedents and
+the content premise folded in. Given the other premises it is equivalent to the
+root criterion (results module). The conceptualist premise, even restricted to
+the route (the root apprehends that very stand-in), is strictly stronger than the
+root criterion given the other premises (`RootCriterionWithoutConceptualism`). -/
 def NonRealStandInYieldsApprehension (m : Profile W B) (w : W) (Has : B → D → Prop)
     (favours : GoodFavouring.Profile S X → D) (good : S → X → X → Prop) (fitOf : S → Z)
     (Present : S → X → Prop) (stand : B → X → C) (Contains RealConstituent : B → C → Prop)
@@ -213,8 +219,9 @@ and has the good-tracking favouring at the root `true`.
    fails; the root criterion fails (apprehension without aboutness).
 5. Present inputs: every outcome except `c` is present, `c` stands through the
    source's one nature, present outcomes through themselves; the source contains
-   only its nature. Only `NoPresentCandidates` fails; the root criterion fails
-   with nothing apprehended.
+   only its nature. Only `NoPresentCandidates` fails; as in row 3, the
+   conceptualist and content premises hold only vacuously (nothing non-real is
+   contained); the root criterion fails with nothing apprehended.
 
 Artifacts: rows 1 and 2 differ only in apprehension, by construction (A4 is
 defined as a structural duplicate). Row 4 assigns apprehension to isolate the
@@ -243,11 +250,13 @@ def PossibiliaControls : Prop :=
     ¬ rootCrit onlyCAbsent aboutItem appNone)
 
 /-- Relocation probe (Comparator companion): with the personal row's stand-ins,
-the root criterion and every other premise hold, while the general conceptualist
-premise fails, because the source apprehends the stand-in of `c` but not the
-non-real stand-in of `d`. So the root criterion with the other premises does not
-give the conceptualist premise: given them, it is strictly stronger than the
-root criterion. -/
+the root criterion and every other premise hold, while the conceptualist premise
+fails, because the source apprehends the stand-in of `c` but not the non-real
+stand-in of `d`. The failure is on the route itself: `inner d` is a non-real
+contained stand-in of the non-present candidate `d` at the actual root `true`,
+whose favouring `better` is good-general. So the root criterion with the other
+premises does not give the conceptualist premise, even restricted to the route:
+given them, that premise is strictly stronger than the root criterion. -/
 def RootCriterionWithoutConceptualism : Prop :=
   laneC contains noInputs Item.inner ∧ simple realBlob ∧ NoPresentCandidates noInputs ∧
     ca contains noInputs Item.inner realBlob aboutItem ∧ rootCrit noInputs aboutItem appInnerC ∧

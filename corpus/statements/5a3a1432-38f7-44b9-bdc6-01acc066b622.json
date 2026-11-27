@@ -1,7 +1,7 @@
 {
   "id": "5a3a1432-38f7-44b9-bdc6-01acc066b622",
   "label": "A non-real CONTAINED_IN_1 stand-in of a non-present candidate is about that candidate",
-  "paraphrase": "OPEN content premise, analyst formulation, attribution deferred: for every bearer b with a favouring determination of profile phi, every scenario s and candidate x not a present input at s, if b's stand-in for x is contained in b (CONTAINED_IN_1) without being a real constituent of b, then that stand-in is about x (it represents x, DEF 3ece6dfe). It is the weakest form the route needs: it concerns only non-real contained stand-ins of non-present candidates. A template reading denies it: a mode individuates its candidate only as whatever would match it, without representing it.",
+  "paraphrase": "OPEN content premise, analyst formulation, attribution deferred: for every bearer b with a favouring determination of profile phi, every scenario s and candidate x not a present input at s, if b's stand-in for x is contained in b (CONTAINED_IN_1) without being a real constituent of b, then that stand-in is about x (it represents x, DEF 3ece6dfe). It is a restricted form: it concerns only non-real contained stand-ins of non-present candidates, but it ranges over every bearer and every favouring the bearer has, not only actual roots, good-general favourings or the witnessed pair, so it is not the weakest form the route needs. A template reading denies it: a mode individuates its candidate only as whatever would match it, without representing it.",
   "lean_declaration": "TruthCore.Causality.PossibiliaContent.NonRealStandInIsAbout",
   "definition_ids": [
     "45d04b45-4396-4f95-87ad-a8e762bce91a",
