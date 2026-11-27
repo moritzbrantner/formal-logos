@@ -113,9 +113,12 @@ def MemberGroundedAdmissibility (Admissible : Set D → Prop)
   ∀ q, Admissible q ↔ ExclusionFree RequiresLack q
 
 /-- OPEN, the weaker sibling of `MemberGroundedAdmissibility`: every
-exclusion-free profile is admissible. It says nothing about inadmissible
-profiles being excluded by a member, so it allows requirements of presence
-and other extra admissibility constraints. Together with
+exclusion-free profile is admissible. Read contrapositively, every
+inadmissible profile fails exclusion-freedom, so (classically) some member
+requires the lack of some of its members: it keeps the localization of every
+inadmissibility in a member's requirement of a lack. What it omits is the
+necessity direction (`AdmissibleIsExclusionFree`), which makes every such
+requirement binding. Together with
 `PureRequiresNoPureLack` it is equivalent (for a free requirement relation) to
 "every profile of pure determinations is admissible"
 (`sufficiencyPremisesIffAllPure`). -/
@@ -215,8 +218,15 @@ open TruthCore.Causality.ActualAncestralSource (GodReachesActualConcreta)
 
 /-! ### Step-one premises and conclusion on the carrier -/
 
+/-- The #1873 control frame with simple priority set to the control's `prior`
+(the source is simply prior to the effect). The step theorems take a frame;
+the controls instantiate them at this one. -/
+def priorFrame : TruthCore.Causality.Frame.CausalityFrame Bool Bool Unit Unit :=
+  { TruthCore.Causality.IntentionalExemplarExtension.Control.frame with PriorSimply := prior }
+
 /-- `ownIf o` is its own being whenever it has no limiting principle (`26e8e6ed`). -/
-def ownUnlimited (c o : Prop) : Prop := UnlimitedIsOwnBeing (composite c) prior rep rep (ownIf o)
+def ownUnlimited (c o : Prop) : Prop :=
+  UnlimitedIsOwnBeing (composite c) priorFrame.PriorSimply rep rep (ownIf o)
 /-- Every actual root has every pure determination (`fe67d766`). -/
 def every (h p : Prop) : Prop := ActualRootHasEveryPureDetermination rootProfile true (hasIf h) (pureIf p)
 /-- The purity of `wisdom`. -/
@@ -237,7 +247,8 @@ def knows (q ap cg : Prop) : Prop :=
 /-! ### Step-two premises and conclusion on the carrier -/
 
 /-- `593d7307` with potency at the root exactly when `q`. -/
-def first (q : Prop) : Prop := NecessaryActualFirstPureActAt rootProfile true prior (potencyIf q)
+def first (q : Prop) : Prop :=
+  NecessaryActualFirstPureActAt rootProfile true priorFrame.PriorSimply (potencyIf q)
 /-- `75974d26` with GOD_4 naming `n`. -/
 def reach (n : Bool) : Prop := GodReachesActualConcreta rootProfile true (isGod n)
 /-- The recognition bridge. -/

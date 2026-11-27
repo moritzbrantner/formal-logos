@@ -29,6 +29,7 @@ open TruthCore.Causality.SourceIntellectControls.ProfileControls
   (Determination PairwiseAdmitted effect)
 open TruthCore.Case.Catholicism (GodHasIntellect)
 open TruthCore.Latin.Aquinas.SummaTheologiae (PureAct)
+open TruthCore.Causality.Frame (CausalityFrame)
 
 /-! ## A. From every pure perfection to intellect -/
 
@@ -39,15 +40,20 @@ give the root `wisdom`. The three open WisdomSelfUnderstanding bridges and the
 root's pure act then give intrinsic self-knowledge. The proof is the existing
 `actualRootSelfKnowledgeFromWisdom`, unchanged. The whole-power premises of the
 q.4 a.2 route (`d164b1ff`, `c4fb87a6`) are not used: `fe67d766` replaces
-them, so any producer of `fe67d766` feeds this step. -/
-theorem pureActRootsKnowThemselvesFromPurity {W B P D C R : Type}
-    (m : Profile W B) (w : W) (Composite : B → Prop) (PriorSimply : B → B → Prop)
+them, so any producer of `fe67d766` feeds this step. Simple priority is the
+shared frame's `F.PriorSimply` (PRIOR_1, #1784); the respects of `InPotency`
+are the frame's respects. The legacy theorem is instantiated at the frame's
+field, with no adapter needed. -/
+theorem pureActRootsKnowThemselvesFromPurity {W B T P D C R : Type}
+    (F : CausalityFrame W B T R)
+    (m : Profile W B) (w : W) (Composite : B → Prop)
     (essenceOf esseOf : B → P) (OwnBeing : B → Prop) (Has : B → D → Prop)
     (Pure : D → Prop) (wisdom : D) (About Correct : C → B → Prop)
     (CanApprehend Apprehends CognitivelyGrounded : B → C → Prop)
     (InPotency : B → R → Prop) (understanding : R)
-    (hNoLimits : ActualRootsWithoutLimitingPrinciple m w Composite PriorSimply essenceOf esseOf)
-    (hOwn : UnlimitedIsOwnBeing Composite PriorSimply essenceOf esseOf OwnBeing)
+    (hNoLimits : ActualRootsWithoutLimitingPrinciple m w Composite F.PriorSimply essenceOf
+      esseOf)
+    (hOwn : UnlimitedIsOwnBeing Composite F.PriorSimply essenceOf esseOf OwnBeing)
     (hEvery : ActualRootHasEveryPureDetermination m w Has Pure)
     (hPureWisdom : WisdomIsPure Pure wisdom)
     (hSelfCapacity : WisdomSelfCapacity OwnBeing Has wisdom About Correct CanApprehend)
@@ -58,18 +64,20 @@ theorem pureActRootsKnowThemselvesFromPurity {W B P D C R : Type}
     PureActRootsKnowThemselves m w About Correct Apprehends CognitivelyGrounded InPotency :=
   fun r hr hPure =>
     TruthCore.Results.Causality.WholePowerPerfection.actualRootSelfKnowledgeFromWisdom
-      m w Composite PriorSimply essenceOf esseOf OwnBeing Has Pure wisdom About Correct
+      m w Composite F.PriorSimply essenceOf esseOf OwnBeing Has Pure wisdom About Correct
       CanApprehend Apprehends CognitivelyGrounded InPotency understanding hNoLimits hOwn
       hEvery hPureWisdom hSelfCapacity hExercise hGrounding r hr hPure
 
 /-- Step two. Some actual first root at `w` is PURE_ACT_1 (`593d7307`). Finite
 grounding reach (`75974d26`) makes every GOD_4 that same root
 (`namedRootOfReach`). Step one gives it intrinsic self-knowledge, and the open
-recognition bridge gives HAS_INTELLECT_1. -/
-theorem godHasIntellectFromRootPerfection {W B C R : Type} (m : Profile W B) (w : W)
-    (PriorSimply : B → B → Prop) (InPotency : B → R → Prop) (IsGod HasIntellect : B → Prop)
+recognition bridge gives HAS_INTELLECT_1. Simple priority (in "first") is the
+shared frame's `F.PriorSimply`. -/
+theorem godHasIntellectFromRootPerfection {W B T C R : Type} (F : CausalityFrame W B T R)
+    (m : Profile W B) (w : W)
+    (InPotency : B → R → Prop) (IsGod HasIntellect : B → Prop)
     (About Correct : C → B → Prop) (Apprehends CognitivelyGrounded : B → C → Prop)
-    (hFirst : NecessaryActualFirstPureActAt m w PriorSimply InPotency)
+    (hFirst : NecessaryActualFirstPureActAt m w F.PriorSimply InPotency)
     (hReach : GodReachesActualConcreta m w IsGod)
     (hKnow : PureActRootsKnowThemselves m w About Correct Apprehends CognitivelyGrounded
       InPotency)

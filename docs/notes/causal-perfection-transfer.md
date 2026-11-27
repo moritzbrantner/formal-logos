@@ -4728,7 +4728,12 @@ therefore excludes two kinds of constraint:
 
 The derivations use only its sufficiency direction, the registered weaker
 sibling `ExclusionFreeAdmissible` (`63e88cef`): every exclusion-free profile
-is admissible. It has a `strengthens` relation from member grounding,
+is admissible. Read contrapositively, it already localizes every
+inadmissibility: an inadmissible profile is not exclusion-free, so
+(classically) some member requires the lack of some of its members. The
+split is this: the weak premise localizes every inadmissibility in a member's
+requirement of a lack, and the necessity direction makes such requirements
+binding (a profile containing one is inadmissible). It has a `strengthens` relation from member grounding,
 verified by `exclusionFreeAdmissibleOfMemberGrounding`. Its difference is
 certified (#1598): member grounding is the sufficiency direction plus the
 necessity direction "every admissible profile is exclusion-free"
@@ -4819,21 +4824,20 @@ required impure item everywhere, which is not encoded. The
 `presenceRequirement` family admits every pure determination somewhere, so it
 is a case (ii) family.
 
-**Objection to the purity premise meeting the standard.**
+**A recorded candidate against the purity premise.**
 
 - *Target:* `PureRequiresNoPureLack`, for pairs of classical pure perfections.
-- *Mechanism:* knowing what is now the case requires change, and immutability
-  requires its lack. Immutability would then be a pure determination
-  requiring the lack of tensed knowing (the omniscience–immutability argument,
-  attribution deferred).
-- *Independent justification:* the claim that tensed knowledge cannot be had
-  without changing with time.
-- *Relevance:* it attacks the purity premise directly. It concerns noesis
-  only if tensed knowing is part of noesis.
-- *Status:* standing. It is a recorded candidate for a pure determination
-  requiring a lack. The reply denies that tensed knowing as tensed is noesis:
-  that would belong to a temporally located knower. The reply is the same
-  kind of distinction as the reception fork in A.
+- *Proposed mechanism:* immutability would be a pure determination requiring
+  the lack of tensed knowing, if knowing what is now the case requires change
+  (the omniscience–immutability argument, attribution deferred).
+- *Independent justification:* not supplied here. The claim that tensed
+  knowing requires change is the mechanism itself, and the corpus records no
+  independent support for it (`truth index search 'immutability omniscience
+  tensed'` finds only this section).
+- *Status:* a recorded candidate, not a standing objection. It carries no
+  evidential weight for either side until its mechanism is independently
+  supported. If it were, it would concern noesis only if tensed knowing is
+  part of noesis; the available reply denies that.
 
 **Shared rationale with E.** Member grounding localizes necessary
 incompatibilities in a simple source's profile in what its members require.
@@ -4923,8 +4927,9 @@ without intellect survives in any of five forms, each with a price:
 - accept an ungrounded necessary incompatibility among pure determinations.
   This denies localization.
 - name a pure determination whose requirement excludes noesis. One candidate
-  is recorded and standing: immutability against tensed knowing. The reply
-  denies that tensed knowing is noesis.
+  is recorded (immutability against tensed knowing), but its mechanism has
+  no independent justification here, so it carries no evidential weight for
+  either side.
 - accept an unexplained absence. This denies E.
 
 The third and fifth are one commitment, brute negative facts at the root,
@@ -4954,7 +4959,7 @@ interpretive layer of B as presented. Its findings were repaired at `6cac8d105`:
 - the relocation verdict;
 - the requirement-of-presence option;
 - the anchoring family;
-- the recorded immutability candidate;
+- the immutability candidate (recorded; no independent justification supplied);
 - the wisdom definition and relabelling;
 - the weaker sufficiency sibling;
 - the shared ancestry;
