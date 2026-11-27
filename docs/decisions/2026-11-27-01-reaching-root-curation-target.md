@@ -48,7 +48,7 @@ of every new edge. `truth connectivity --base` stays: it judges statements,
 including source readings and premises that no result concludes, which this
 gate does not cover. Placement is navigation, not warrant: it closes,
 supports and attacks nothing, and frontier closure is unchanged. At adoption
-the backlog on `main` was 1,507 unplaced of 2,729 verified results (931
-reaching, 251 placed diagnostics, 36 placed rivals, 4 planned); 254 of the
+the backlog on `main` was 1,507 unplaced of 2,731 verified results (931
+reaching, 251 placed diagnostics, 36 placed rivals, 6 planned); 254 of the
 unplaced were transcriptions. The contract is in `docs/corpus-model.md`,
 "Connection plans", and `truth/README.md`, "`orphans`".
