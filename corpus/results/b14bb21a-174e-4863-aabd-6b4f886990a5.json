@@ -1,0 +1,11 @@
+{
+  "id": "b14bb21a-174e-4863-aabd-6b4f886990a5",
+  "label": "The two composition kinds entail the matter-form inclusion",
+  "argument_id": "63634ce5-8ba4-4e51-a058-374d20e022d4",
+  "challenge_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution",
+  "theorem": "TruthCore.Results.Causality.NamedRootStructuralAttributes.matterFormOfCompositionKinds",
+  "comparator_config": "results/b14bb21a-174e-4863-aabd-6b4f886990a5/comparator.json",
+  "status": "solution-present",
+  "description": "The same MatterForm and Composite predicates appear on both sides. The full law additionally forces composition wherever the represented maps differ. The strictness companion interprets both predicates as true only of true on Bool, and the represented maps as constantly false and true. Matter-form inclusion holds at both candidates and applies at true. The full law would require composition of false because its maps differ."
+}

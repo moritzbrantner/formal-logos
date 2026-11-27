@@ -1,0 +1,10 @@
+{
+  "id": "788cba3e-9512-41c8-9181-75265b85ce46",
+  "label": "Test by SoleEsseGiver.equalDegree (87f41688)",
+  "subject_kind": "result",
+  "subject_id": "4dc0cb3f-b84e-4296-8d45-6ae71bb326c2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "87f41688-c06f-4fe9-994b-0682a4be3038",
+  "note": "Omit non-strict total-cause degree adequacy. With the sole efficient total edge true to false fixed, assign degree 1 to the giver and 2 to the recipient. The sole-giver and efficient-total clauses still hold, and the giver no longer bounds the participant."
+}

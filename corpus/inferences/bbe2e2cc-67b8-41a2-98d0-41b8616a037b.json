@@ -1,0 +1,13 @@
+{
+  "id": "bbe2e2cc-67b8-41a2-98d0-41b8616a037b",
+  "label": "A root with will and finite reach give GOD_4 the capacity of will (inference)",
+  "input_statement_ids": [
+    "beede613-2c17-5fe1-829e-16829d781cfd",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f"
+  ],
+  "output_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+  "rule": "Identify the named bearer with the actual root by finite grounding reach and transport will",
+  "meaning": "The bundle supplies the actual root n at w and will of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasWill predicate by equality. This proof uses the bundle's actual-root and will conjuncts. The intellect-to-will application can warrant the will conjunct in upstream producers. Here the named conclusion is derived by identifying the bearer with the witness that already has will.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

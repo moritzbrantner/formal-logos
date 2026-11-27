@@ -1,0 +1,10 @@
+{
+  "id": "6a9199b7-6c64-4496-ac3b-30505b1658a4",
+  "label": "Every matter-form bearer satisfies the selected composition predicate",
+  "paraphrase": "Open analyst premise. On the same carrier and predicates, every bearer satisfying MatterForm also satisfies Composite. The law is the matter-form half of the existing two-kind composition premise d7741cdc.",
+  "lean_declaration": "TruthCore.Causality.NamedRootStructuralAttributes.MatterFormIsComposite",
+  "definition_ids": [
+    "e0010549-b46d-4aaa-8ea2-a2aa203fad2c",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105"
+  ]
+}

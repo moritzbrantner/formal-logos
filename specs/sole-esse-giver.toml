@@ -64,3 +64,23 @@ premises = []
 conclusion = "One total giver of participated esse permits a tied degree and does not entail degree adequacy"
 rule = "Evaluate two degree assignments on the same fixed two-bearer causal profile"
 meaning = "A constant degree satisfies total-cause adequacy and gives the distinct giver and recipient equal degrees. On the same efficient total edge the assignment giver 1, recipient 2 violates adequacy. This tests formal entailment without treating unconstrained degree assignments as metaphysical counterexamples."
+
+[[relation]]
+id = "c2e4be0c-4b4c-469e-993d-0a0d29053a79"
+label = "Test by SoleEsseGiver.equalDegree (dcec5717)"
+subject_kind = "result"
+subject_id = "4dc0cb3f-b84e-4296-8d45-6ae71bb326c2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "dcec5717-3794-4b13-b463-f238112bb2a9"
+note = "In the two-bearer esse profile, true is the sole essential giver for the present participant false, and that edge is efficient and total. The constant degree satisfies the non-strict total-cause adequacy premise jointly with the giver and efficiency premises, while the distinct bearers tie."
+
+[[relation]]
+id = "2ed5b525-8e34-4374-a650-af99e2e9390f"
+label = "Test by SoleEsseGiver.equalDegree (87f41688)"
+subject_kind = "result"
+subject_id = "4dc0cb3f-b84e-4296-8d45-6ae71bb326c2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "87f41688-c06f-4fe9-994b-0682a4be3038"
+note = "Omit non-strict total-cause degree adequacy. With the sole efficient total edge true to false fixed, assign degree 1 to the giver and 2 to the recipient. The sole-giver and efficient-total clauses still hold, and the giver no longer bounds the participant."

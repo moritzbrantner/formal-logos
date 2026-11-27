@@ -1,0 +1,11 @@
+{
+  "id": "0fb8f0c9-af91-4242-bdff-89ec86b87af0",
+  "label": "A root with will and finite reach give GOD_4 the capacity of will",
+  "argument_id": "82d261f5-2130-4b7b-84f3-66010ffb5192",
+  "challenge_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution",
+  "theorem": "TruthCore.Results.Causality.NamedRootStructuralAttributes.willOfReach",
+  "comparator_config": "results/0fb8f0c9-af91-4242-bdff-89ec86b87af0/comparator.json",
+  "status": "solution-present",
+  "description": "The bundle supplies the actual root n at w and will of that same n. For each g satisfying IsGod, the open reach premise and n's roothood give g = n by namedRootOfReach on the same m and w. Transfer the same HasWill predicate by equality. This proof uses the bundle's actual-root and will conjuncts. The intellect-to-will application can warrant the will conjunct in upstream producers. Here the named conclusion is derived by identifying the bearer with the witness that already has will."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "e674bad9-4228-4d48-a732-34045f43749c",
+  "label": "The two composition kinds entail the matter-form inclusion (inference)",
+  "input_statement_ids": [
+    "d7741cdc-881b-5bda-85ce-d70223162f78"
+  ],
+  "output_statement_id": "6a9199b7-6c64-4496-ac3b-30505b1658a4",
+  "rule": "Take the matter-form implication at every bearer",
+  "meaning": "The same MatterForm and Composite predicates appear on both sides. The full law additionally forces composition wherever the represented maps differ. The strictness companion interprets both predicates as true only of true on Bool, and the represented maps as constantly false and true. Matter-form inclusion holds at both candidates and applies at true. The full law would require composition of false because its maps differ.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

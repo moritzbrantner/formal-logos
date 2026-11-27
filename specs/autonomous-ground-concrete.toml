@@ -28,3 +28,13 @@ coverage = "Only explicit encoded full-ground and modal de re existence interpre
 exclusivity = "Selected interpretation fixed; semantic extensions are not asserted exclusive."
 witness = "TruthCore.Results.Explanation.AutonomousGroundConcrete.certificate certifies Certificate: populated full package, NecessaryConcreteAt model false, not IngredientAt ground false, nonempty members and an actual contingent concrete neighbour."
 next_step = "Test an explicitly contentful essence or noncausal explanatory-ground adequacy condition on this same carrier; the present other-fact semantics does not supply it."
+
+[[relation]]
+id = "34b9227e-85b2-447b-bf7f-662dea4060ef"
+label = "Test by AutonomousGroundConcrete.certificate (6558769c)"
+subject_kind = "result"
+subject_id = "7d65e5fe-aa7c-4c70-b385-3c72cabc4350"
+predicate = "tests"
+object_kind = "argument"
+object_id = "6558769c-cc46-52e6-8949-1cdfe75957c4"
+note = "At false in the Bool arena, the supplied target false is concrete and present at both worlds. The single admitted record has the always-true autonomous contributor other () and targets the coherent positive existence label of false. The target holds wherever that record's member holds, so all five premises share the same frame and target. Bearer true is also present at false and absent at true."

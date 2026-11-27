@@ -62,3 +62,23 @@ object_kind = "statement"
 object_id = "Every world sees itself, yet two possibilities of one world need not see each other"
 verification_result_id = "Tolerance non-Euclidean access gives the reflexive non-Euclidean rival"
 note = "Same frame; symmetry dropped and the selected world taken as witness."
+
+[[relation]]
+id = "8fff22d7-51c6-48be-bf10-e440e3aa38e0"
+label = "Test by ToleranceOriginRival.controls (1b1462e6)"
+subject_kind = "result"
+subject_id = "79f66cc6-6a7a-4259-b672-20df29b3ed0c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1b1462e6-c285-448c-87e2-3053bc05a341"
+note = "Omit Euclidean access at actual on the reflexive symmetric offset frame. Minus and plus are both accessible there but cannot access one another. The history at plus has a contingent-free moment before a contingent concrete bearer appears, and the remaining arrival premises hold. The sole actual concretum is absent at minus."
+
+[[relation]]
+id = "d636720d-c12f-4e9d-a487-6dc0d0cb99ec"
+label = "Test by ToleranceOriginRival.controls (0cb07f05)"
+subject_kind = "result"
+subject_id = "79f66cc6-6a7a-4259-b672-20df29b3ed0c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0cb07f05-5268-4685-8213-0eefa9ec4255"
+note = "Omit the accessible contingent-free-then-populated history. The chained offset reading leaves the same presence assignment but makes every offset accessible from every other. At actual and plus the always-present false bearer is now contingent, and minus remains empty. The other arrival premises hold while the contingent-free past and the necessary concretum fail."
