@@ -30,7 +30,8 @@ says that `c` causes the being of every other being that has being.
 The `Control` namespace gives one finite interpretation of an impersonal
 universal source: on the inclusive reading of act (formal or virtual) the
 universal-source premises and q.4 a.2 preexistence all hold, while the source
-lacks life formally. -/
+lacks formally a Boolean stand-in respect labelled "life" (not any recorded
+sense of LIVING). -/
 
 @[expose] public section
 
@@ -67,13 +68,18 @@ named in that sentence is preexistence in material potency. The equivocal agent
 is said to have the effect's perfection "eminentiori modo", which compares with
 the univocal mode "secundum eandem rationem", the effect's formal possession.
 
-`HavingMode` names three ways of having a perfection: formally (in the same form,
-IN_ACT_1), virtually (in an agent's power, IN_ACT_2), and potentially (in a
-material cause's potency). `ModeAbove m n` is an explicitly **primitive**
-comparison: having a perfection in mode `m` is more perfect than having it in mode
-`n`. Its meaning is that comparison of modes; no order law is imposed, and it is
-not a comparison of bearers (contrast MORE_1 to MORE_4). It does not by itself say
-that a bearer having a perfection virtually really has that perfection intrinsically. -/
+`HavingMode` names three ways of having a perfection: formally (in the same form;
+cf. IN_ACT_1), virtually (in an agent's power; cf. IN_ACT_2), and potentially (in
+a material cause's potency). The labels are glosses only: no statement relates
+them to the act-frame predicates. The modes are not exclusive: a univocal agent
+has its effect's perfection both formally and in its power. `ModeAbove m n` is an
+explicitly **primitive** comparison: having a perfection in mode `m` is more
+perfect than having it in mode `n`. Its meaning is that comparison of modes; no
+order law is imposed, and it is not a comparison of bearers in a perfection (the
+MORE senses compare bearers). No statement relates it to the eminent comparative
+of bearers proposed in PR #2166 (MORE_4, `Surpasses`). It does not by itself say
+that a bearer having a perfection virtually really has that perfection
+intrinsically. -/
 
 /-- Three ways of having a perfection. -/
 inductive HavingMode where
@@ -126,9 +132,9 @@ def act : ActFrame Being Respect where
   MovedIn := fun _ _ => False
   MovesIn := fun _ _ _ => False
 
-/-- A stipulated mode order on which an agent's power is above material potency
-and above nothing else. It witnesses only that the strong version of the mode
-step is strictly stronger than the weak one. -/
+/-- A separate stipulated mode order, unrelated to the source's frame, on which an
+agent's power is above material potency and above nothing else. It witnesses only
+that the strong version of the mode step is strictly stronger than the weak one. -/
 def weakModeOrder (m n : HavingMode) : Prop := m = .virtual ∧ n = .potential
 
 def grades : GradesFrame Unit Being Unit Respect :=
@@ -138,11 +144,14 @@ def grades : GradesFrame Unit Being Unit Respect :=
 act: the source is a universal cause of being; universal-scope transfer
 `b26c10a0`, universal-source possession, universal-source preexistence, q.4 a.2
 preexistence `64498e7e`, unrestricted transfer `f8ba2429` and "nothing has
-actuality except insofar as it is" all hold; the frame's act is exactly the
-inclusive act of the act frame (`GradesActIsInclusive`); the source has life
-inclusively, and it is perfect in the inclusive sense of `GodIsPerfect` when it
-alone is named; yet the source does not have life formally. "Life" here is a
-Boolean stand-in respect, not any recorded sense of LIVING. -/
+actuality except insofar as it is" all hold; the frame's act and the act frame's
+inclusive act coincide (`GradesActIsInclusive` and its converse); the source has
+the stand-in respect "life" inclusively, and it is perfect in the inclusive sense
+of `GodIsPerfect` when it alone is named; yet the source does not have the
+stand-in respect formally. "Life" here is a Boolean stand-in respect, not any
+recorded sense of LIVING. The last two conjuncts concern a separate stipulated
+mode order, unrelated to the source's frame: it satisfies the weak mode step and
+falsifies the strong one. -/
 def Controls : Prop :=
   CausesAllInGenus grades.InAct grades.CausesIn grades.esse 0 ∧
   TruthCore.Case.Catholicism.UniversalCauseTransfersPerfections
@@ -158,6 +167,7 @@ def Controls : Prop :=
   grades.InAct 0 true ∧
   TruthCore.Case.Catholicism.GodIsPerfect (fun b => b = 0) grades.InAct ∧
   TruthCore.Causality.CartesianAdequacy.GradesActIsInclusive grades act ∧
+  (∀ x r, act.InActFormallyOrVirtually x r → grades.InAct x r) ∧
   ¬ act.InActFormally 0 true ∧
   AgentPowerAboveMaterialPotency weakModeOrder ∧
   ¬ AgentPowerAboveEveryOtherMode weakModeOrder

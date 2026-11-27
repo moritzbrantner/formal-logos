@@ -88,7 +88,7 @@ theorem controls : Control.Controls := by
     TruthCore.Causality.CartesianAdequacy.GradesActIsInclusive,
     TruthCore.Causality.TermSenseForks.ActFrame.InActFormallyOrVirtually,
     AgentPowerAboveMaterialPotency, AgentPowerAboveEveryOtherMode, Control.weakModeOrder]
-  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
     fun h => absurd (h .formal (by decide)).2 (by decide)⟩
   all_goals (set_option synthInstance.maxSize 2048 in
     set_option synthInstance.maxHeartbeats 400000 in decide)
