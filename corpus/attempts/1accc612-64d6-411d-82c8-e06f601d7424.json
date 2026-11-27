@@ -24,7 +24,8 @@
     "6b79e32d-4ae4-4b2e-987f-e4d594c1381e",
     "5a084d1b-b6e3-4fec-a788-2afb62f27251",
     "a1954608-e63e-4de4-a600-502b4a17b167",
-    "052851f3-ed41-4082-bf9a-6d4a710df845"
+    "052851f3-ed41-4082-bf9a-6d4a710df845",
+    "PR-2142"
   ],
   "blocker": "No local Lean/Lake toolchain, checkout, corpus CLI or independent semantic reviewer available in the authoring runtime. Draft requires actual build, Comparator/NanoDa, binding, semantic challenge and computed frontier comparison. Physical/world-to-measure and actual designer bridges remain open.",
   "workers": [
@@ -33,7 +34,8 @@
       "provider": "openai",
       "model": "gpt-6.2",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2142"
     }
   ]
 }

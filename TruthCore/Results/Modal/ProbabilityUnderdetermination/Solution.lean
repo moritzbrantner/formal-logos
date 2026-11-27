@@ -20,7 +20,7 @@ theorem noUniform : NoUniform.{u} := by
   by_cases hz : c = 0
   · simp [hz] at hs
   · rw [ENNReal.tsum_const_eq_top_of_ne_zero hz] at hs
-    exact ENNReal.top_ne_one hs
+    simp at hs
 
 private noncomputable def natEquiv (W : Type u) [Countable W] [Infinite W] :
     ℕ ≃ W :=
@@ -321,11 +321,13 @@ private theorem density_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k : ℕ)
     simpa [mul_comm] using hlR
   have hupper : (((n+k-1)/k : ℕ) : ℝ)/n - 1/k < 1/n := by
     have hbound : (((n+k-1)/k : ℕ) : ℝ) - (n : ℝ)/k < 1 := by
-      rw [sub_lt_iff_lt_add, ← div_add_one hkR.ne']
-      apply (lt_div_iff₀ hkR).mpr
-      simpa [mul_comm] using huR
+      have hdiv : (((n+k-1)/k : ℕ) : ℝ) < ((n : ℝ)+k)/k :=
+        (lt_div_iff₀ hkR).mpr (by simpa [mul_comm] using huR)
+      rw [add_div, div_self hkR.ne'] at hdiv
+      linarith
     calc
-      _ = ((((n+k-1)/k : ℕ) : ℝ) - (n : ℝ)/k)/n := by field_simp
+      _ = ((((n+k-1)/k : ℕ) : ℝ) - (n : ℝ)/k)/n := by
+        field_simp <;> ring
       _ < 1/n := (div_lt_div_iff_of_pos_right hnR).mpr hbound
   rw [abs_of_nonneg (sub_nonneg.mpr hlow)]
   exact hupper.trans hsmall
