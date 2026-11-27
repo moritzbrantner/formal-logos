@@ -8,11 +8,10 @@ open TruthCore.Causality.PartFreePlurality
 open TruthCore.Causality.RootIntellectWillPureAct
 open TruthCore.Causality.RootIntellectWillPureActPlurality (model hasIntellect hasWill)
 open TruthCore.Case.Catholicism (GodIsImmutable IsImmutable)
-open TruthCore.Latin.Aquinas.SummaTheologiae (PrimaPars)
 open TruthCore.Logic (ExcludedMiddle)
 
 theorem immutableOfReach {W B P R : Type} (m : Profile W B) (w : W)
-    (p : PrimaPars.Question3.Article4.Profile B P R)
+    (p : TruthCore.Latin.Aquinas.SummaTheologiae.PrimaPars.Question3.Article4.Profile B P R)
     (PriorSimply ComponentOf : B → B → Prop)
     (Composite MatterForm HasIntellect HasWill IsGod : B → Prop)
     (InPotency : B → R → Prop)

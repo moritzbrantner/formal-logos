@@ -1,0 +1,11 @@
+{
+  "id": "bab84bf4-e94c-4395-baf4-30fba3cc220b",
+  "label": "Pure-act root and finite concrete ancestry yield immutability of every GOD_4",
+  "argument_id": "ba50028b-6e4c-4e55-881a-648d154e0d5b",
+  "challenge_module": "TruthCore.Results.Causality.PureActRootImmutability.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PureActRootImmutability.Solution",
+  "theorem": "TruthCore.Results.Causality.PureActRootImmutability.immutableOfReach",
+  "comparator_config": "results/bab84bf4-e94c-4395-baf4-30fba3cc220b/comparator.json",
+  "status": "solution-present",
+  "description": "The same-witness bundle supplies an actual root n with no potency in any supplied respect. Each g satisfying the supplied GOD_4 predicate reaches n by the open finite-grounding-ancestry premise on the same profile m and selected world w. Any nonempty path would end in an incoming actual concrete grounding edge to n, so namedRootOfReach identifies g with n. Transport the no-potency conjunct along that equality using the same InPotency predicate; IsImmutable uses this very PureAct body. The proof uses only the actual-root and pure-act conjuncts of the existing bundle. The other conjuncts grant no premise about the identity or existence of a named God. The Comparator companion uses the existing plurality profile under its explicit excluded-middle hypothesis and names only the instrument, which is in potency as to drive. The pure-act root bundle holds there, while finite reach and immutability of the named bearer fail. This tests the omission of the finite reach premise on that interpretation."
+}
