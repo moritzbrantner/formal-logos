@@ -45,7 +45,7 @@ disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9
 id = "84ba508d-2ac6-429f-a210-fe9aeef9dd4c"
 label = "More such package and mode of possession: induction-shaped controls"
 lean = "Control.Controls"
-paraphrase = "Closed finite interpretation; statements about it only. Two beings (a source, read as the coil, and a recipient, read as the workpiece) and two respects (being and heat); the source causes the recipient's heat and nothing else is caused; both have being formally, only the recipient is formally hot, the source has heat virtually (IN_ACT_2, as a power to produce it); the recipient's heat is received in and limited by the recipient. With the ordinary comparative (MORE_3 reading: the recipient is hotter), heat being read as the threshold quality being hot, which the coil lacks formally: the formal possession gap 25b67649, inclusive (IN_ACT_3) distinct-cause possession 2c0b9bd7, the four reception premises a9036c3c, cdb79aa6, 39a4c28c and d0b76fb9, and the formal more-such bearer c11369aa hold; the inclusive exceeding step 7030af77, 'more such' d5a94eb1 and formal possession 26632e48 fail. With the eminent comparative on the same causes, acts and reception (the source exceeds by eminence): inclusive possession, the reception premises checked, the inclusive exceeding step, 'more such' and the inclusive more-such bearer hold, and the formal more-such bearer fails. Encoding artifacts, disclosed: reception and limitation coincide; the respect of being is caused by nothing; the eminent comparative is stipulated as the source exceeding the recipient in heat, not derived from any measure. It witnesses which member of the package fails under each comparative in this one interpretation; it is not evidence that a premise is false of reality."
+paraphrase = "Closed finite interpretation; statements about it only. Two beings (a source, read as the coil, and a recipient, read as the workpiece) and two respects (being and heat); the source causes the recipient's heat and nothing else is caused; both have being formally, only the recipient is formally hot, the source has heat virtually (IN_ACT_2, as a power to produce it); the recipient's heat is received in and limited by the recipient. With a stipulated comparative on which the recipient is hotter (not MORE_3, which needs both comparands to have the respect formally; heat is read as the threshold quality being hot, which the coil lacks formally): the formal possession gap 25b67649, inclusive (IN_ACT_3) distinct-cause possession 2c0b9bd7, the four reception premises a9036c3c, cdb79aa6, 39a4c28c and d0b76fb9, and the formal more-such bearer c11369aa hold; the inclusive exceeding step 7030af77, 'more such' d5a94eb1 and formal possession 26632e48 fail. With the eminent comparative on the same causes, acts and reception (the source exceeds by eminence): inclusive possession, the reception premises checked, the inclusive exceeding step, 'more such' and the inclusive more-such bearer hold, and the formal more-such bearer fails. Encoding artifacts, disclosed: reception and limitation coincide; the respect of being is caused by nothing; the eminent comparative is stipulated as the source exceeding the recipient in heat, not derived from any measure. It witnesses which member of the package fails under each comparative in this one interpretation; it is not evidence that a premise is false of reality."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "a5bda545-3e76-5240-808d-25f897a07be5", "f7833666-c764-5624-a766-708949d9feee", "115f23e3-2a19-5dcb-bc7f-96408004f110", "5766de66-8a37-5b04-aa65-9eec53319f50", "cf4875cb-6baf-5bf5-8590-84a21777c66c", "245797e9-e5e9-5296-8d34-2138cc6b7ae6"]
 disambiguations = ["dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b", "cdb0de59-5015-4fa6-986c-4cd1527dd2b3", "1795a62e-f78b-5f5b-94e7-9e7490824811"]
 
@@ -70,7 +70,7 @@ conclusion = "84ba508d-2ac6-429f-a210-fe9aeef9dd4c"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite interpretation over Bool, checked by decision"
-meaning = "One finite interpretation shaped like induction heating, read twice: with an ordinary comparative and with an eminent comparative on the same causes, acts and reception. With the ordinary comparative, the formal possession gap, inclusive possession, the reception premises and the formal more-such bearer hold while the inclusive exceeding step, 'more such' and formal possession fail. With the eminent comparative the whole package holds at inclusive act and only the formal more-such bearer fails. The control shows that mixing eminent possession with a formal bearer fails in this interpretation. It is a structural surrogate: it shows which premise carries the failure in one interpretation, not that the premise is false of reality."
+meaning = "One finite interpretation shaped like induction heating, read twice: with a stipulated workpiece-hotter comparative (not MORE_3) and with an eminent comparative on the same causes, acts and reception. With the stipulated comparative, the formal possession gap, inclusive possession, the reception premises and the formal more-such bearer hold while the inclusive exceeding step, 'more such' and formal possession fail. With the eminent comparative the whole package holds at inclusive act and only the formal more-such bearer fails. The control shows that mixing eminent possession with a formal bearer fails in this interpretation. It is a structural surrogate: it shows which premise carries the failure in one interpretation, not that the premise is false of reality."
 
 # ---------------------------------------------------------------- relations
 
@@ -92,7 +92,7 @@ subject_id = "97016bbd-9873-4dca-8fc8-36ac34cce220"
 predicate = "tests"
 object_kind = "statement"
 object_id = "7030af77-c1d4-5f67-bc0c-875048d1b55c"
-note = "With the ordinary comparative, the exceeding step read at inclusive act (IN_ACT_3) is the member of the package that fails while inclusive possession, the four reception premises and the formal more-such bearer hold. With the eminent comparative it holds."
+note = "With the stipulated workpiece-hotter comparative (not MORE_3), the exceeding step read at inclusive act (IN_ACT_3) is the member of the package that fails while inclusive possession, the four reception premises and the formal more-such bearer hold. With the eminent comparative it holds."
 
 [[relation]]
 id = "Test by the induction-shaped controls of more such"
@@ -102,7 +102,7 @@ subject_id = "97016bbd-9873-4dca-8fc8-36ac34cce220"
 predicate = "tests"
 object_kind = "statement"
 object_id = "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d"
-note = "'More such' fails with the ordinary comparative (the recipient, not its cause, is hotter) and holds with the eminent comparative on the same causes."
+note = "'More such' fails with the stipulated workpiece-hotter comparative (the recipient, not its cause, is hotter; not MORE_3) and holds with the eminent comparative on the same causes."
 
 [[relation]]
 id = "Test by the induction-shaped controls of the formal more-such bearer"
@@ -112,7 +112,7 @@ subject_id = "97016bbd-9873-4dca-8fc8-36ac34cce220"
 predicate = "tests"
 object_kind = "statement"
 object_id = "c11369aa-7c3d-5dea-8421-535d5b4b3104"
-note = "The more-such bearer read with formal act holds with the ordinary comparative and fails with the eminent comparative, where the bearer read with inclusive act holds."
+note = "The more-such bearer read with formal act holds with the stipulated workpiece-hotter comparative (not MORE_3) and fails with the eminent comparative, where the bearer read with inclusive act holds."
 
 [[relation]]
 id = "Test by the induction-shaped controls of formal distinct-cause possession"
@@ -166,7 +166,7 @@ disambiguations = ["cdb0de59-5015-4fa6-986c-4cd1527dd2b3", "dba7b1de-f3a0-57af-9
 id = "More such package and mode of possession: degree-indexed induction controls"
 label = "More such package and mode of possession: degree-indexed induction controls"
 lean = "Control.OrdinaryControls"
-paraphrase = "Closed finite interpretation; statements about it only. Two beings (coil and workpiece) and three respects: being, having some heat, and having heat at or above the workpiece's degree. The coil causes and moves the workpiece in both heat respects; both have being and some heat formally; only the workpiece has heat at its own degree formally; the coil has both heat respects virtually; temperatures are 40 for the coil and 1000 for the workpiece. Checked: the coil has some heat formally but not heat at the workpiece's degree; the formal possession gap holds (witnessed only at the degree-indexed respect); formal possession holds at the respect of having some heat; the ordinary-comparative gap holds and the MORE_3 reading of 'more such' fails; with a stipulated eminent surpassing relation the MORE_4 reading of 'more such' holds; 'nothing moves except as in act' fails read with formal act and holds read with inclusive act. Encoding artifacts, disclosed: the temperatures and the surpassing relation are stipulated; the respect of being is caused by nothing. A structural surrogate of the case, not its evidence."
+paraphrase = "Closed finite interpretation; statements about it only. Two beings (coil and workpiece) and three respects: being, having some heat, and having heat at or above the workpiece's degree. The coil causes and moves the workpiece in both heat respects; both have being and some heat formally; only the workpiece has heat at its own degree formally; the coil has both heat respects virtually; temperatures are 40 for the coil and 1000 for the workpiece. Checked: the coil has some heat formally but not heat at the workpiece's degree; the formal possession gap holds (witnessed only at the degree-indexed respect); formal possession holds at the respect of having some heat; the ordinary-comparative gap holds and the MORE_3 reading of 'more such' fails; with a stipulated eminent surpassing relation the MORE_4 reading of 'more such' holds; 'nothing moves except as in act' fails read with formal act at the degree-indexed respect and holds read with inclusive act (at the respect of having some heat the coil has heat formally); and, with the frame comparative MORE_3, inclusive distinct-cause possession 2c0b9bd7, the four reception premises a9036c3c, cdb79aa6, 39a4c28c and d0b76fb9 and the formal more-such bearer c11369aa hold while the exceeding step 7030af77 read with inclusive act fails. Encoding artifacts, disclosed: reception and limitation coincide; the temperatures and the surpassing relation are stipulated; the respect of being is caused by nothing. A structural surrogate of the case, not its evidence."
 definitions = ["211a6432-8b8f-53ed-85e3-75173bb15b24", "5c5e062c-43ce-4b4e-af4e-45bf93dd8196", "b4a7f37e-83d4-4e5f-bb24-b2a72cd85ca6", "a5bda545-3e76-5240-808d-25f897a07be5", "f7833666-c764-5624-a766-708949d9feee", "115f23e3-2a19-5dcb-bc7f-96408004f110", "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"]
 disambiguations = ["cdb0de59-5015-4fa6-986c-4cd1527dd2b3", "dba7b1de-f3a0-57af-9af9-b2a4da3136fa", "00e0d443-eb39-56a3-9179-9c8852ca4a2b"]
 
@@ -179,7 +179,7 @@ conclusion = "More such package and mode of possession: degree-indexed induction
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite interpretation over Bool and Fin 3 with natural-number degrees, checked by decision"
-meaning = "One finite interpretation with the respect fixed by degree. It shows that the formal possession gap needs a degree-indexed respect (or the threshold quality 'being hot'), that the ordinary-comparative gap and the failure of the MORE_3 reading of 'more such' need only the respect of having some heat, that a stipulated MORE_4 reading of 'more such' holds in the same case, and that the formal reading of 'nothing moves except as in act' fails where its inclusive reading holds. A structural surrogate; it is not evidence that a premise is false of reality."
+meaning = "One finite interpretation with the respect fixed by degree. It shows that the formal possession gap needs a degree-indexed respect (or the threshold quality 'being hot'), that the ordinary-comparative gap and the failure of the MORE_3 reading of 'more such' need only the respect of having some heat, that a stipulated MORE_4 reading of 'more such' holds in the same case, that the formal reading of 'nothing moves except as in act' fails at the degree-indexed respect where its inclusive reading holds, and that with MORE_3 as the frame comparative the member of the package that fails is the exceeding step at inclusive act while possession, reception and the formal bearer hold. A structural surrogate; it is not evidence that a premise is false of reality."
 
 [[relation]]
 id = "Ordinary-comparative gap is the alternative to the MORE_3 reading of more such"
@@ -198,8 +198,8 @@ subject_kind = "statement"
 subject_id = "Some distinct cause of a quality in another is not MORE_3 more such than it"
 predicate = "attacks"
 object_kind = "statement"
-object_id = "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d"
-note = "Target: 'more such' d5a94eb1 read with the ordinary comparative MORE_3 (the reading of its own example, 'the cause of another's heat is hotter'). Mechanism: induction transfers energy electromagnetically, so the cause of the workpiece's heat need not be hotter than it. Independent justification: standard induction-heating practice (water-cooled coil below about 60 °C, workpiece at roughly 800-1200 °C). Relevance: d5a94eb1 is a proved leaf on God-existence routes. Scope: an established case against the MORE_3 reading only; it does not touch the MORE_4 reading, the esse instance cffad050 (the coil causes no being) or Metaphysics II.1's synonymous premise (the coil is no synonymous cause of heat). The consumer audit in the note finds that the God-existence and stage-two consumers apply d5a94eb1 only at esse."
+object_id = "Whatever causes a quality in another thing is MORE_3 more such than it, by measured degree"
+note = "Target: the MORE_3 sibling of 'more such' (every distinct cause of a quality in another is more such by measured degree, both having it formally). It does not target d5a94eb1, whose MoreIn is the primitive MORE_1; no statement identifies MORE_1 with MORE_3. Mechanism: induction transfers energy electromagnetically, so the cause of the workpiece's heat need not be hotter than it. Independent justification: standard induction-heating practice (water-cooled coil below about 60 °C, workpiece at roughly 800-1200 °C). Relevance: the consumers of d5a94eb1 that apply it at an arbitrary perfection with an arbitrary distinct cause would be reached if read with MORE_3: gradesHaveAMaximum 1dff22d0 and nothingMovesExceptInAct 892db443 (older derivations with siblings c201b61a and d0c022f8 that do not use d5a94eb1), and the Cartesian containmentOfStrictComparative 62dae664 and degreeAdequacyOfStrictComparative c974d1f0. Scope: it does not reach the MORE_4 reading, the esse uses (the coil causes no being), the cause-of-being uses at any perfection (preexistence 6b609ddc) or Metaphysics II.1's synonymous premise."
 
 [[relation]]
 id = "Test by the degree-indexed induction controls of nothing moves except as in act"
@@ -209,7 +209,7 @@ subject_id = "15d89a59-2725-410a-853c-b27d4c1b4f5e"
 predicate = "tests"
 object_kind = "statement"
 object_id = "f296a694-aeea-5fa7-bdbf-0076530f9441"
-note = "The coil moves the workpiece from cold to hot in the heat respects: the formal (IN_ACT_1) reading of the premise fails and its inclusive (IN_ACT_3) reading holds. By DISAMB-IN-ACT the prima via then needs non-simultaneity on the inclusive reading, where the Metaphysics IX.6 support, given for formal act, does not carry over."
+note = "The coil moves the workpiece from cold to hot in the heat respects. The formal (IN_ACT_1) reading of the premise fails at the degree-indexed respect (heat at or above the workpiece's degree), which the coil lacks formally; at the respect of having some heat the coil has heat formally and that instance holds. The inclusive (IN_ACT_3) reading holds. By DISAMB-IN-ACT the prima via then needs non-simultaneity on the inclusive reading, where the Metaphysics IX.6 support, given for formal act, does not carry over."
 
 [[relation]]
 id = "Test by the degree-indexed induction controls of more such"
@@ -218,5 +218,15 @@ subject_kind = "result"
 subject_id = "15d89a59-2725-410a-853c-b27d4c1b4f5e"
 predicate = "tests"
 object_kind = "statement"
-object_id = "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d"
+object_id = "Whatever causes a quality in another thing is MORE_3 more such than it, by measured degree"
 note = "With the respect of having some heat and temperature as the degree, the MORE_3 reading of 'more such' fails and a stipulated MORE_4 reading holds on the same causes."
+
+[[relation]]
+id = "Test by the degree-indexed induction controls of the exceeding step"
+label = "Test by the degree-indexed induction controls of the exceeding step"
+subject_kind = "result"
+subject_id = "15d89a59-2725-410a-853c-b27d4c1b4f5e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7030af77-c1d4-5f67-bc0c-875048d1b55c"
+note = "With MORE_3 as the frame comparative and inclusive act, the exceeding step is the member of the package that fails, while inclusive possession, the four reception premises and the formal more-such bearer hold."

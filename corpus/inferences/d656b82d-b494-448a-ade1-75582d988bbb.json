@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "b4521b89-ed88-486b-a53a-720ed863d7ef",
   "rule": "Explicit finite interpretation over Bool and Fin 3 with natural-number degrees, checked by decision",
-  "meaning": "One finite interpretation with the respect fixed by degree. It shows that the formal possession gap needs a degree-indexed respect (or the threshold quality 'being hot'), that the ordinary-comparative gap and the failure of the MORE_3 reading of 'more such' need only the respect of having some heat, that a stipulated MORE_4 reading of 'more such' holds in the same case, and that the formal reading of 'nothing moves except as in act' fails where its inclusive reading holds. A structural surrogate; it is not evidence that a premise is false of reality.",
+  "meaning": "One finite interpretation with the respect fixed by degree. It shows that the formal possession gap needs a degree-indexed respect (or the threshold quality 'being hot'), that the ordinary-comparative gap and the failure of the MORE_3 reading of 'more such' need only the respect of having some heat, that a stipulated MORE_4 reading of 'more such' holds in the same case, that the formal reading of 'nothing moves except as in act' fails at the degree-indexed respect where its inclusive reading holds, and that with MORE_3 as the frame comparative the member of the package that fails is the exceeding step at inclusive act while possession, reception and the formal bearer hold. A structural surrogate; it is not evidence that a premise is false of reality.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

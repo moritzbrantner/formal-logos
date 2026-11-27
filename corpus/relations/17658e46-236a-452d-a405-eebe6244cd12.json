@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "f296a694-aeea-5fa7-bdbf-0076530f9441",
-  "note": "The coil moves the workpiece from cold to hot in the heat respects: the formal (IN_ACT_1) reading of the premise fails and its inclusive (IN_ACT_3) reading holds. By DISAMB-IN-ACT the prima via then needs non-simultaneity on the inclusive reading, where the Metaphysics IX.6 support, given for formal act, does not carry over."
+  "note": "The coil moves the workpiece from cold to hot in the heat respects. The formal (IN_ACT_1) reading of the premise fails at the degree-indexed respect (heat at or above the workpiece's degree), which the coil lacks formally; at the respect of having some heat the coil has heat formally and that instance holds. The inclusive (IN_ACT_3) reading holds. By DISAMB-IN-ACT the prima via then needs non-simultaneity on the inclusive reading, where the Metaphysics IX.6 support, given for formal act, does not carry over."
 }
