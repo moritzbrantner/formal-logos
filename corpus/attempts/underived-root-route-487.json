@@ -28,7 +28,8 @@
     "PR-808",
     "PR-814",
     "PR-815",
-    "b1a86380-f0ac-474f-ba54-93369d553d0c"
+    "b1a86380-f0ac-474f-ba54-93369d553d0c",
+    "PR-2113"
   ],
   "blocker": "No defence for any real relation of the closing premise, restricted well-foundedness, present support or concrete supporters. The calibration consumer added in lane E supplies a conditional root path. For the direct-esse same witness, independently justify all-world support transport back to actual w and actual concreteness of arbitrary existing supporters of that necessary actual concretum. Accessible-world transport alone is insufficient for NamedNecessarilyUnderived, whose absence ranges over all admitted worlds. The direct-esse common-source helpers constrain outgoing actual grounding and one-way cause-to-ground correspondence, not incoming support at other worlds. Even the target-local transport/concreteness instances used by the existing proof remain unestablished; existing negative certificates concern their earlier advertised bundles, not the exact new eight-input direct-esse bundle. Lane E adds a conditional consumer of the underived witness. The separate selected-world calibration and the grounding route's open assumptions still need warrant. Reopen the calibration when a narrower independently justified classification covers the underived witness without presupposing its concreteness.",
   "workers": [
@@ -37,7 +38,8 @@
       "provider": "codex",
       "model": "gpt-6.2-sol",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2113"
     }
   ]
 }
