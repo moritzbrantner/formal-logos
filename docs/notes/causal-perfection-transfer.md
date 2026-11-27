@@ -6436,17 +6436,24 @@ with the value order at s ranks above one that does not
 
 - `scenarioRelativeStandardDependedOn`. On the guidance carrier, the fit-blind
   profile agrees with value at base but not at raised. So the second-order
-  profile that follows the scenario-relative standard depends on it. A bearer
-  whose favourings agree with value in some scenarios and not others can show
-  value-dependence at second order.
-- `invariantAlignmentNoSecondOrderDependence`. If whether each profile agrees
-  with value is the same in every scenario, the scenario-relative standard is
-  invariant too, and no second-order profile depends on it. That is the case
-  at a necessary source whose favourings and value standard do not vary.
+  profile that follows the scenario-relative standard depends on it. The
+  favouring ranked first there is the good-tracking one, which agrees with value
+  in every scenario: it can be a necessary source's own favouring. The
+  dependence comes from the alternative's agreement varying, not from the bearer
+  being contingent. So under the scenario-relative standard, both sides can show
+  second-order dependence, including at a necessary source. Its own good-tracking
+  favouring is ranked over an alternative whose agreement varies.
+- `invariantAlignmentNoSecondOrderDependence`. If each profile's agreement with
+  value is the same in every scenario, the standard is invariant too, and no
+  second-order profile depends on it. That hypothesis holds only on a scenario
+  space where value does not vary. It fails in the good-general setting of the
+  root, since first-order `GoodGeneral` requires value to vary across the
+  scenarios.
 
-So at the root, strong self-application supports no value-dependence at second
-order on either side. Parity there follows from A4 being a structural duplicate
-of the personal source.
+So whether strong self-application shows second-order value-dependence depends on
+which standard is read and on the scenario space, not on whether the bearer is
+contingent. It is the same for both sides. Parity at `d1fb6414` is unaffected,
+because A4 is a structural duplicate of the personal source.
 
 **A note on horn A, stated symmetrically.** Lane 4's horn A rests on the
 rationale "restriction of favouring content is limitation". Its encoded test of
@@ -6497,7 +6504,7 @@ here.
 | Counterfactual guidance, outweighed reason raised alone | passes (good-tracking profile) | passes (same profile) | no; profile-level, and A4 is a structural duplicate |
 | Registration of the outweighed respect in the actual state | needs per-respect ideas (an analyst extension) | needs per-respect modes (a new commitment) | not tested; the demand is the same and the proposed payments differ (below) |
 | Weak self-application: own favouring over a non-present determination | reduces to the criterion at second order | the same | no; relocates the same bridge |
-| Strong self-application: responsiveness to the second-order standard | at a necessary source, no value-dependence on the standard (global or scenario-relative) | the same | no; parity follows from the structural duplicate. A contingent bearer can show second-order dependence on the scenario-relative standard. The standard is scenario-invariant |
+| Strong self-application: responsiveness to the second-order standard | on the global standard, no dependence; on the scenario-relative standard, dependence possible (also at a necessary source) | the same | no; parity follows from the structural duplicate |
 | Self-love | yes (q.19 a.3) | the rival's own posit | no |
 | Ranking possible alternatives to its own favouring | unavailable at a necessary source | unavailable | no |
 | Self-apprehension | yes by definition | no by definition | presupposes the dispute |
@@ -6526,9 +6533,9 @@ of that plurality.
   the second-order standard.
 - Guidance separates good-tracking favouring from blind and fixed favouring.
   It is blind to the difference between A4 and the personal source.
-- Strong self-application supports no value-dependence on its standard at a
-  necessary source, for both sides. A contingent bearer can show it on the
-  scenario-relative standard.
+- Strong self-application supports no value-dependence on the
+  scenario-invariant standard. On the scenario-relative standard both sides can
+  show it, a necessary source included.
 - Registration and weak self-application relocate the same demand.
 - Because A4 is a structural duplicate, none of this is new evidence for
   parity. It shows that a structural test cannot separate the two.
@@ -6609,6 +6616,13 @@ It also found one new P2: the horn-A sentence was one-sided.
 Both are fixed in the following commit. That commit adds the scenario-relative
 standard and its two Lean-only results, restricts the claim to a necessary
 source, and states the horn-A point symmetrically.
+
+The final confirmation at `70d3e8d2b` found one P1: a prose misreading of the
+invariant lemma. The split "contingent bearer versus necessary source" and the
+claim of no second-order dependence at the root were overstated, because the
+lemma's hypothesis fails where value varies, as it must in the good-general
+setting. The claims were withdrawn and qualified in the following commit, with
+no new formal content. The review is closed at the repair cap.
 
 [Attempt record](../../corpus/attempts/6429463e-be7f-467a-a64f-de8d2e13c06e.json)
 
