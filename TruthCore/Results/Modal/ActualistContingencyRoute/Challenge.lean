@@ -5,8 +5,7 @@ namespace TruthCore.Results.Modal.ActualistContingencyRoute
 open TruthCore.Causality.BruteFoundationBoundary (Profile)
 open TruthCore.Causality.ContingentBeingNode (SomeActualContingentAt)
 open TruthCore.Modal.ActualistContingencyRoute
-open TruthCore.Results.Modal.ActualistDomains
-  (boxAllToAllBox_iff increasing_excludes_contingency)
+open TruthCore.Results.Modal.ActualistDomains (checks)
 
 /-- The route's contingent bearer rules out the forward transfer policy. -/
 theorem forwardTransferFails {W B : Type} (m : Profile W B) (w : W)
