@@ -1,0 +1,12 @@
+{
+  "id": "71a2786e-3ce5-4a04-bb28-3860121d72a2",
+  "label": "Classical attributes of the unique named God by identity (inference)",
+  "input_statement_ids": [
+    "20a2b6a3-83e7-5ea0-be63-9dbc03c302b3"
+  ],
+  "output_statement_id": "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5",
+  "rule": "Substitute equals in the signature attribute field",
+  "meaning": "Eliminate the existing existential bundle and use its numerical uniqueness to identify each GOD_4 candidate with the supplied attribute bearer. Substitution transfers the same primitive field. No attribute-field converse, source attribution or additional premise is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

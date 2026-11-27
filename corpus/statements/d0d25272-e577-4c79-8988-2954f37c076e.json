@@ -1,0 +1,13 @@
+{
+  "id": "d0d25272-e577-4c79-8988-2954f37c076e",
+  "label": "The fixed grade is asymmetric on NECESSARY_2 candidates selected by the profile",
+  "paraphrase": "Open analyst premise. Among candidates classified as concrete by the supplied profile and existing at every world accessible from w, MoreIn esse a b excludes MoreIn esse b a. No separate selected-world existence guard is built in. The comparison is the same at every admitted world. The law excludes opposite comparisons and self-comparisons on this domain, without imposing well-foundedness.",
+  "lean_declaration": "TruthCore.Causality.MutualSupportAsymmetry.NecessaryGradeAsymmetric",
+  "definition_ids": [
+    "293d6ad6-ea47-4861-bef7-ee05eef2090a",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "9146789d-5b36-572f-baa1-7eef28967793"
+  ]
+}

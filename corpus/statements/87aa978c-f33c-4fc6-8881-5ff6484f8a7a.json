@@ -11,5 +11,10 @@
   ],
   "disambiguation_ids": [
     "81c233d4-01b4-528c-8bbd-7da228443ffe"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "3d01134d-0b03-4469-a81a-a18d6e179fa0",
+    "missing_bridge": "For producer 0d89840b, independently supply an existential predecessor for each actual distinct-esse bearer: a terminal actual giver whose esse is its essence, or a continuing distinct-esse giver whose present per se edge is of SERIES_OF_CAUSES_4. Use the resulting accessibility to descend and the existing link conversion to recover a chain of actual esse causes.",
+    "blocker": "This producer assumes the per se actual-esse regress that the new accessibility transfer concludes. It needs a forward use with independent predecessor coverage instead of that return path. Producer c6a1167b has a separate use through its wider efficient-series input."
+  }
 }

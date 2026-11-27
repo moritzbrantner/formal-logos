@@ -1,0 +1,10 @@
+{
+  "id": "0d5e18bf-68b0-45e9-8cd2-4f0c242c4c49",
+  "label": "No novel support conditionally excludes the recorded mutual-support rival",
+  "subject_kind": "argument",
+  "subject_id": "a5e08c0c-1b6c-4979-8c7a-14ba5789deb8",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "12a167a4-dd1d-4f04-92e5-c22325cbbd1a",
+  "note": "Existing verified conditional negation on the same profile. Actual reflexivity, well-founded actual grounding and no novel necessary support exclude the rival. These are open inputs."
+}
