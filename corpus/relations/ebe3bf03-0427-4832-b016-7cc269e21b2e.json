@@ -1,0 +1,10 @@
+{
+  "id": "ebe3bf03-0427-4832-b016-7cc269e21b2e",
+  "label": "Test by ConcurrentActualization.controls (40a97664)",
+  "subject_kind": "result",
+  "subject_id": "955ef523-695d-4920-b88d-bf6e737e71e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "40a97664-e481-42d7-8458-78374a61aa26",
+  "note": "Omit concurrent actualization. In the inertia history false is present from time 1 on, receives esse, and is given being only at time 1. The reception and concurrence premises hold, and the cause fails to give being at later times."
+}
