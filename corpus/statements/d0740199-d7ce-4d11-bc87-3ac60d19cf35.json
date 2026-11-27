@@ -1,0 +1,15 @@
+{
+  "id": "d0740199-d7ce-4d11-bc87-3ac60d19cf35",
+  "label": "Begun-or-homogeneous coverage controls: omissions and strictness on integer times",
+  "paraphrase": "Closed controls on interpretations with one world, integer times and two individuals, false alone with received esse; statements about these interpretations only. (1) Eternal history (both present at every moment), a supplied fact marks false at moment 0, no giving: concurrent actualization for begun things and for homogeneous things both hold, since false has no first moment and is not homogeneous; the begun-or-homogeneous coverage and weak concurrent actualization 40a97664 fail. (2) Eternal history, no supplied facts, no giving: the begun restriction and the coverage (false is homogeneous) hold; the homogeneous restriction and 40a97664 fail. (3) Begun history (false present from moment 0 on), no supplied facts, true gives false being at moment 0 only: the homogeneous restriction and the coverage (false begins at 0) hold; the begun restriction and 40a97664 fail. (4) Eternal history, moment 0 marked, true gives false being at every moment: 40a97664 holds and the coverage fails.",
+  "lean_declaration": "TruthCore.Causality.BegunOrHomogeneousGiving.Control.Certificate",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}
