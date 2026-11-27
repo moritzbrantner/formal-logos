@@ -1,0 +1,10 @@
+{
+  "id": "27b4097e-2f68-4943-b3c2-62f3d8e06809",
+  "label": "Test by SelectedPlgTheory.presentationControls (b6784d40)",
+  "subject_kind": "result",
+  "subject_id": "1ea2f628-a121-4e37-a21c-5f4af77f0321",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b6784d40-65cb-444d-9027-b93a074592ac",
+  "note": "Omit strict-step coverage for the sole distinct dependence edge of true on false. The consistent weakOnly theory has just a weak full sequent from false to true. It has no strict step, so it cannot supply the required path for that dependence edge."
+}
