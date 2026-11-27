@@ -26,8 +26,17 @@ were these:
   that decides it.
 - The scope of the cause was wrongly counted as an overreach.
 
-This version repairs all nine findings ([§9](#9-review-repairs)). The repaired
+The next version repaired all nine. A re-check at head `684342da` accepted it with
+qualifications: one P1 and eight P2. It confirmed the restored quotation, the
+sibling claim, the strength order and its strictness witness, and the `82c7e24b`
+audit entry. Its P1: the mode fork was not related to MORE_4, so the records could
+not say whether a rival granting the strong ranking also grants MORE_4. This
+version repairs those nine findings too ([§9](#9-review-repairs)). The repaired
 assertions await re-check.
+
+**Dependency on PR #2166.** MORE_3 and MORE_4 are registered by PR #2166, which is
+not yet merged. Every mention of them here is conditional on that PR. This branch
+will merge `origin/main` after #2166 lands.
 
 ## 1. Fixed meaning
 
@@ -95,8 +104,10 @@ produces, and constrains only the cause's act.
   preexistence in material potency. The equivocal agent has the effect's
   perfection "eminentiori modo", which compares it with the univocal mode
   "secundum eandem rationem", the effect's formal possession.
-- **The passage's own equivocal agent is the sun.** It is nonliving and
-  impersonal, and holds the likeness "per virtutem solis".
+- **The passage's own equivocal agent is the sun.** It is impersonal, and holds
+  the likeness "per virtutem solis". The passage does not say the sun is
+  nonliving, and I q.70 a.3 is guarded on the point, so "nonliving" is not used
+  here.
 
 The two comparands are encoded as a strength fork over a primitive comparison of
 modes, `ModeAbove`. That comparison compares modes, not bearers (definition
@@ -105,9 +116,34 @@ modes, `ModeAbove`. That comparison compares modes, not bearers (definition
 - weak `47b51faf`: an agent's power is above material potency;
 - strong `b9143dd2`: an agent's power is above every other mode, the effect's
   formal possession included;
-- `strengthens` strong → weak is registered, and strictness is witnessed.
+- `strengthens` strong → weak is registered, and strictness is witnessed by a
+  separate stipulated mode order, unrelated to the source's frame.
 
 `64498e7e` encodes neither step.
+
+The strong version extends the passage's "eminentiori modo" to the virtual mode as
+such. The passage says it of the equivocal agent's possession compared with the
+effect's. The extension is an unattributed analyst step. The modes are not
+exclusive: a univocal agent has its effect's perfection both formally and in its
+power. The mode labels relate to IN_ACT_1 and IN_ACT_2 only as "cf." glosses; no
+statement links them.
+
+**Relation to MORE_4 (PR #2166): stated independence.**
+
+- MORE_4 is `EminentComparative := InActVirtually x r ∧ Surpasses r x y`, with
+  `Surpasses` a primitive comparison of bearers.
+- `ModeAbove` compares modes and has no bearer or respect argument. It therefore
+  falls outside the MORE disambiguation `cdb0de59`, whose senses all compare two
+  bearers in a perfection.
+- No statement relates `ModeAbove` and `Surpasses`.
+- **The natural open bridge, unregistered:** for x having r virtually and y having
+  r formally, `Surpasses r x y` holds exactly when `ModeAbove .virtual .formal`.
+  Call this the ranking reading of `Surpasses`.
+  - On the ranking reading, granting the strong mode step grants MORE_4 for such
+    pairs.
+  - On an intrinsic reading, `Surpasses r x y` says that x's higher way of having r
+    is a way of really having it, intrinsically. On that reading the bridge fails
+    as an identification, and `Surpasses` carries the further content.
 
 ## 2. Consumer audit
 
@@ -149,14 +185,15 @@ NanoDa acceptance.
 - **`agentPowerAboveMaterialPotencyOfEveryOther`** registers the strength order
   of the mode fork (§1).
 - **`controls`** (`b4a0e5cc`) models an impersonal universal source. The frame's
-  act is checked to be the act frame's inclusive act (`GradesActIsInclusive`).
+  act is checked to coincide with the act frame's inclusive act
+  (`GradesActIsInclusive` and its converse).
   - These hold: universal and unrestricted transfer, universal-source possession,
     universal-source preexistence, `64498e7e`, and the inclusive perfection of
     the source.
-  - The source lacks "life" formally. "Life" here is a Boolean stand-in respect,
-    not any recorded sense of LIVING.
-  - A stipulated mode order satisfies the weak mode step and falsifies the strong
-    one.
+  - The source lacks formally the Boolean stand-in respect labelled "life", which
+    is not any recorded sense of LIVING.
+  - A separate stipulated mode order, unrelated to the source's frame, satisfies
+    the weak mode step and falsifies the strong one.
 
 ## 4. Strongest positive warrant
 
@@ -165,10 +202,10 @@ NanoDa acceptance.
 | `64498e7e`, direct option (claim `50df1fd8`) | The q.4 a.2 first proof. It supports the produced-perfection form at every agent cause (now sibling claim `29789ca3` on `d0fc96b7`) and the universal-source application. The extension to every perfection of the effect is the analyst's reading recorded in the claim. | The produced-perfection form is the possession principle of PR #2166. |
 | `64498e7e`, by derivation (`e8a3eb51`, `6b609ddc`, `400ba1f0`) | Transfer `f8ba2429` plus one presentation of the possession principle. | All three derivations share `f8ba2429` and the possession principle. |
 | Universal-source preexistence `60176223` | Universal transfer `b26c10a0` plus universal-source possession, and the passage's explicit application. | `b26c10a0` is shared with naming, reduced naming and goodness. |
-| Universal transfer `b26c10a0` | Derived (`dae70d8a`) from `5e281daf`, `2f6b9eff` and `791fa216`. `791fa216` is an OPEN Lean-bound reading of `5c5281dd` (q.4 a.2 co.: "omnium autem perfectiones pertinent ad perfectionem essendi"). It reads "pertain to the perfection of being" as "is a mode of its being". Claim `5dd2d69f` states `5c5281dd` and supports the transfer bridge with a gap note. | The second proof (§7). |
+| Universal transfer `b26c10a0` | Derived (`dae70d8a`) from `5e281daf`, `2f6b9eff` and `791fa216`. `791fa216` is an OPEN Lean-bound reading of `5c5281dd` (q.4 a.2 co.: "omnium autem perfectiones pertinent ad perfectionem essendi"). It reads "pertain to the perfection of being" as "is a mode of its being". Claim `5dd2d69f` states `5c5281dd` and supports, with gap notes, unrestricted transfer `f8ba2429`, `791fa216` and `c4fb87a6`. | The second proof and locus (a) (§7). |
 | Universal-source possession `66252c05` | The possession principle at the universal source; near-analytic on the power determination. | The PR #2166 family, counted once. |
 | Weak mode step `47b51faf` | The passage's own sentence and its ground: "agens, inquantum huiusmodi, est perfectum; materia, inquantum huiusmodi, est imperfecta". | Granted by the impersonal-source rival (§5). |
-| Strong mode step `b9143dd2` | The passage's "eminentiori modo" for the equivocal agent, illustrated by the sun. | Applied by the passage to an impersonal agent (§5). |
+| Strong mode step `b9143dd2` | The passage's "eminentiori modo" for the equivocal agent, illustrated by the sun; its extension to the virtual mode as such is an unattributed analyst step. | Applied by the passage to an impersonal agent (§5). |
 
 ## 5. Rivals and the negated-premise test
 
@@ -178,8 +215,8 @@ NanoDa acceptance.
 - *Every perfection:* this needs transfer plus possession.
   - At the universal source, `b26c10a0` rests on `791fa216` and the total-cause
     premises.
-  - At nonuniversal causes it rests on `10cd24ed`, which has no positive warrant
-    on file.
+  - At nonuniversal causes it rests on nonuniversal transfer (`10cd24ed`, or the
+    residual `5a4afaa5` via `932ec4ec`), for which no positive warrant is on file.
 
 **Denial at nonuniversal causes**, with the respect fixed: some cause of x's being
 lacks, formally and virtually, a determinate perfection of x that x acquired from
@@ -213,11 +250,16 @@ objection identified on the power determination. The secondary-cause rival
     grant the strong mode step read as a ranking of modes.
 - **What it denies.** It denies two things, and these are where the
   discriminating content lies:
-  - (a) that the source's higher mode is a way of really having the perfection
-    intrinsically. That is a surpassing of the effect's formal possession that
-    amounts to intrinsic possession (MORE_4's open `Surpasses` together with the
-    intrinsic-perfection bridges `d164b1ff`, `122b112e`, `fe67d766` and the
-    2026-11-24 E and L obligations).
+  - (a) the bridge from a higher mode to intrinsic possession: that the source's
+    higher mode of having a perfection is a way of really having it. Stated
+    exactly against MORE_4 (PR #2166):
+    - On the **ranking reading** of `Surpasses` (§1, open bridge), the rival grants
+      the strong mode step and with it MORE_4 for virtual-over-formal pairs. It
+      denies the higher-mode-to-intrinsic-possession bridge, carried by the
+      intrinsic-perfection bridges `d164b1ff`, `122b112e`, `fe67d766` and the
+      2026-11-24 E and L obligations.
+    - On the **intrinsic reading** of `Surpasses`, the rival denies `Surpasses`
+      itself. Locus (a) is then that denial.
   - (b) the second proof's subsistent-esse premises with ad 3: God is *ipsum esse
     subsistens*, all perfections pertain to the perfection of being, and "ipsum
     esse Dei includit in se vitam et sapientiam".
@@ -244,7 +286,8 @@ objection identified on the power determination. The secondary-cause rival
      perfection scope (every perfection of the effect). The scope of the cause is
      not an overreach.
    - The analyst's extension to every perfection of the effect at nonuniversal
-     causes is why `perfectFromAncestry` needs `10cd24ed`. That extension faces a
+     causes is why `perfectFromAncestry` needs nonuniversal transfer (`10cd24ed`,
+     or the residual `5a4afaa5` via `932ec4ec`). That extension faces a
      conditional objection under the generator reading.
 2. **Every God-route consumer except `perfectFromAncestry` needs preexistence only
    at the universal source, or only at esse** (`82c7e24b`, independently supported
@@ -260,16 +303,19 @@ objection identified on the power determination. The secondary-cause rival
    - The impersonal source grants the passage's weak mode step, and by the
      passage's own example of the sun can grant "eminentiori modo" as a ranking
      of modes.
-   - The theistic content lies elsewhere: (a) intrinsic possession in the higher
-     mode (MORE_4 against formal possession, with the intrinsic-perfection
-     bridges) and (b) the second proof with ad 3. Neither is carried by
-     `64498e7e`.
+   - The theistic content lies elsewhere. Neither locus is carried by `64498e7e`:
+     - (a) the higher-mode-to-intrinsic-possession bridge. On the ranking reading
+       of MORE_4's `Surpasses`, the rival grants MORE_4 and denies this bridge. On
+       the intrinsic reading, it denies `Surpasses` (§5; conditional on
+       PR #2166).
+     - (b) the second proof with ad 3.
 4. **The load of `64498e7e` is transfer plus possession.** Possession is
    near-analytic on the power reading, so the substantive load is transfer. At
    the universal source that means `b26c10a0`, and through it the total-cause
    premises and `791fa216`.
 5. **`perfectFromAncestry` is the one consumer needing the nonuniversal
-   extension**, and with it `10cd24ed`, which has no positive warrant on file.
+   extension**, and with it nonuniversal transfer (`10cd24ed`, or the residual
+   `5a4afaa5` via `932ec4ec`), for which no positive warrant is on file.
 
 These are first grades. Nothing is established, defeated in the frontier sense,
 or closed.
@@ -281,7 +327,9 @@ or closed.
   possession a way of really having the perfection.
 - An assessment of the second proof's subsistent-esse premises and ad 3.
 - A principled generator reading of CAUSE_2 at esse.
-- Positive warrant for `10cd24ed`.
+- Positive warrant for nonuniversal transfer (`10cd24ed` or `5a4afaa5`).
+- A registered relation between `ModeAbove` and MORE_4's `Surpasses` (PR #2166),
+  which would fix whether granting the strong mode step grants MORE_4.
 
 ## 7. Shared-warrant map against PR #2166
 
@@ -295,14 +343,21 @@ Count each item once.
   reading, **the substantive load of `64498e7e` is transfer**.
 - **`b26c10a0`** is one premise, shared with naming, reduced naming and goodness.
 - **Two theistic loci, kept apart.**
-  - (a) MORE_4 against formal possession, together with the intrinsic-perfection
-    bridges. These form one gap.
+  - (a) The higher-mode-to-intrinsic-possession bridge, read against MORE_4's
+    `Surpasses` (ranking or intrinsic reading), together with the
+    intrinsic-perfection bridges. These form one gap.
   - (b) The second proof and ad 3.
 - **The weak comparand is not part of the MORE_4 gap.** The rival grants it.
-- **One shared dependency.** The second proof (b) and universal transfer
-  `b26c10a0` both lean on the same q.4 a.2 sentence, "omnium autem perfectiones
-  pertinent ad perfectionem essendi" (`5c5281dd`, read by `791fa216`). A
-  judgment of that sentence's reading moves both.
+- **One shared dependency under all three.** The same q.4 a.2 sentence, "omnium
+  autem perfectiones pertinent ad perfectionem essendi" (`5c5281dd`, stated by
+  claim `5dd2d69f`), underwrites all three loci:
+  - universal transfer `b26c10a0`, through `791fa216`; `5dd2d69f` also supports
+    unrestricted transfer `f8ba2429`;
+  - locus (b), the second proof with ad 3;
+  - locus (a). Its intrinsic-perfection bridges take `c4fb87a6`: `122b112e` via
+    `95c04a6d`, and `fe67d766` via `7d8bbdcb`. `5dd2d69f` supports `c4fb87a6`.
+
+  A judgment of that sentence's reading moves all three.
 
 ## 8. Next discriminating test
 
@@ -327,3 +382,17 @@ Universal-source siblings for the other row-U consumers are routine follow-up.
 | P2-5 shared-warrant map | Two theistic loci kept apart. Weak comparand removed from the MORE_4 gap. Shared `5c5281dd` made visible. `64498e7e`'s substantive load is transfer. |
 | P2-6 `strong_version_needed` | Added on `aba2aba4`. Row-U siblings recorded as follow-up. |
 | P2-7 sibling claim | `29789ca3`, `interpretation_of` `50df1fd8`, on `d0fc96b7`, with an attribution note. |
+
+**Re-check (head `684342da`).**
+
+| Finding | Repair |
+| --- | --- |
+| P1 mode fork and MORE_4 | Stated independence and the unregistered open bridge are recorded in §1 and definition `41446d47`. Locus (a) is stated for both readings of `Surpasses` (§5, §6.3, §7). `41446d47` says why "more perfect mode" falls outside `cdb0de59`. MORE_3 and MORE_4 references are conditional on PR #2166. |
+| P2-1 inclusion | The converse conjunct is added and checked. The docs say the two acts coincide. |
+| P2-2 stand-in scope | "Life" is scoped to the stand-in in the module docstring, `b4a0e5cc`, the controls argument (`d180310f`, `6df18963`), the `tests` notes and the attempt. The new conjuncts are described. The strictness order is called a separate stipulated mode order, unrelated to the source's frame. |
+| P2-3 `47b51faf` plan | Two steps: extend to every other mode, then the intrinsic-possession bridge. |
+| P2-4 `b9143dd2` | The extension of "eminentiori modo" is recorded as an unattributed analyst step. The modes are not exclusive. |
+| P2-5 IN_ACT glosses | "cf." glosses in the Lean doc, §1 and `41446d47`. |
+| P2-6 `932ec4ec` | "Nonuniversal transfer (`10cd24ed`, or the residual `5a4afaa5` via `932ec4ec`)" in `aba2aba4`, the attempt, §5 and §6. |
+| P2-7 one sentence under three loci | §7. The §4 row names `f8ba2429` for `5dd2d69f`. Carried into checkpoint 3 (PR #2171). |
+| P2-8 the sun | "Nonliving" is dropped; "impersonal" is used. |

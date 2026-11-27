@@ -1,7 +1,7 @@
 {
   "id": "47b51faf-50fc-4d64-9d1f-9db83117643b",
   "label": "Having a perfection in an agent's power is a more perfect mode than having it in material potency",
-  "paraphrase": "Analyst formulation of the weak comparand of the q.4 a.2 first proof's mode step: 'praeexistere autem in virtute causae agentis, non est praeexistere imperfectiori modo, sed perfectiori; licet praeexistere in potentia causae materialis, sit praeexistere imperfectiori modo'. For the primitive comparison of modes ModeAbove, the virtual mode (in an agent's power) is above the potential mode (in a material cause's potency). It compares modes, not bearers, and does not say that a bearer with a perfection virtually has it intrinsically. On the passage's own example, the sun, a nonliving equivocal agent, has the likeness of what it generates in this mode. Open.",
+  "paraphrase": "Analyst formulation of the weak comparand of the q.4 a.2 first proof's mode step: 'praeexistere autem in virtute causae agentis, non est praeexistere imperfectiori modo, sed perfectiori; licet praeexistere in potentia causae materialis, sit praeexistere imperfectiori modo'. For the primitive comparison of modes ModeAbove, the virtual mode (in an agent's power) is above the potential mode (in a material cause's potency). It compares modes, not bearers, and does not say that a bearer with a perfection virtually has it intrinsically. On the passage's own example, the sun, an impersonal equivocal agent, has the likeness of what it generates in this mode. Open.",
   "lean_declaration": "TruthCore.Causality.UniversalPreexistence.AgentPowerAboveMaterialPotency",
   "definition_ids": [
     "41446d47-1c3e-4152-be4f-217d4d2eec1b",
@@ -12,7 +12,7 @@
   ],
   "connection_plan": {
     "target_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
-    "missing_bridge": "A bridge from a mode comparison of virtual possession to intrinsic possession of a pure perfection at an actual root: that having a perfection in a mode above the effect's formal possession is a way of really having it, which with universal-source preexistence would supply the intrinsic Has that fe67d766 states.",
+    "missing_bridge": "Two steps. First, extend the comparison from material potency to every other mode, the effect's formal possession included (the strong version b9143dd2, an unattributed analyst step). Second, a bridge from that strong mode comparison to intrinsic possession of a pure perfection at an actual root: that having a perfection in a mode above the effect's formal possession is a way of really having it, which with universal-source preexistence would supply the intrinsic Has that fe67d766 states.",
     "blocker": "No record specifies the comparison of modes beyond the passage's virtual-over-potential case, and the passage's own equivocal agent (the sun) is impersonal, so the mode step alone does not give intrinsic possession; the 2026-11-24 E and L obligations of causal-perfection-transfer remain open."
   }
 }

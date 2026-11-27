@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "b4a0e5cc-bf24-42cb-8b4a-39ee9bdd2937",
   "rule": "Explicit finite interpretation over Fin 3 and Bool, checked by decision",
-  "meaning": "One finite interpretation of an impersonal universal source. On the inclusive reading of act, universal transfer, universal-source possession and preexistence, q.4 a.2 preexistence, unrestricted transfer and the inclusive PERFECT_2 of the source all hold, while the source lacks life formally. A structural surrogate: it shows these premises do not by themselves give formal or intrinsic possession at the source; the virtual relation is stipulated, not a modelled power or containment.",
+  "meaning": "One finite interpretation of an impersonal universal source. On the inclusive reading of act, universal transfer, universal-source possession and preexistence, q.4 a.2 preexistence, unrestricted transfer and the inclusive PERFECT_2 of the source all hold, and the frame's act coincides with the act frame's inclusive act (both inclusions checked), while the source lacks formally the Boolean stand-in respect labelled 'life'. Two further conjuncts concern a separate stipulated mode order, unrelated to the source's frame, which satisfies the weak q.4 a.2 mode step and falsifies the strong one. A structural surrogate: it shows these premises do not by themselves give formal or intrinsic possession at the source; the virtual relation is stipulated, not a modelled power or containment.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }
