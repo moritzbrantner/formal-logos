@@ -18,7 +18,7 @@
   "date": "2026-10-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt. An acyclic infinite regress visits infinitely many distinct bearers. Reversing the same successor edge on the same infinite roster changes whether there is a first cause. Occam’s headcount comparison favors finite additional commitments under equal explanatory adequacy when the regress requires infinitely many distinct posits. Each posit may cover any finite number of positions on the endless chain. The used inventory is still infinite even without a uniform bound on group sizes. Infinite reuse of one posit is compatible with infinitely many others, as the even/odd control shows. In a probability comparison, preference beyond every finite factor requires zero weight for the regress hypothesis. Uniformly discounted depth events covering every member of the regress class in one model force zero weight for that class. Discounting one specific infinite sequence does not suffice. A single charge for a shared law permits positive weight. At matched adequacy the finite commitments merit preference on this headcount criterion. Whether an actual first cause exists remains open. Application depends on what each account must independently assume to explain the same recipient. See docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress.",
+  "summary": "A genuine finite-set and acyclic-transitive-closure route derives accessibility and transfers it by explicit per-se edge inclusion. Each hypothesis has an omission model. This does not identify finite distinct ancestors with no infinite histories, defend the premises, supply the event/being map, or close the root frontier. Proof verification status is recorded in the linked result, not inferred from this attempt. An acyclic infinite regress visits infinitely many distinct bearers. Reversing the same successor edge on the same infinite roster changes whether there is a first cause. Occam’s headcount comparison favors finite additional commitments under equal explanatory adequacy when the regress requires infinitely many distinct posits. Each posit may cover any finite number of positions on the endless chain. The used inventory is still infinite even without a uniform bound on group sizes. Infinite reuse of one posit is compatible with infinitely many others, as the even/odd control shows. In a probability comparison, preference beyond every finite factor requires zero weight for the regress hypothesis. Uniformly discounted depth events covering every member of the regress class in one model force zero weight for that class. Discounting one specific infinite sequence does not suffice. A single charge for a shared law permits positive weight. At matched adequacy the finite commitments merit preference on this headcount criterion. Whether an actual first cause exists remains open. Application depends on what each account must independently assume to explain the same recipient. See docs/notes/causal-finitism-367.md#does-occams-razor-favor-a-finite-account-of-an-infinite-regress.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 844a12de tests 97f5850f. Omit accessibility of the per se cause relation in the Second Way. The reversed Nat successor edge retains the other four formal premises and is acyclic, but each bearer has an infinite upstream per se chain and there is no first efficient cause.",
   "evidence": [
     "a4558f9c-3063-5d3b-b8a3-164e26160ed2",
     "98991434-ec43-5e9c-b3d3-bdca82e57366",
@@ -50,5 +50,14 @@
     "publication": "published",
     "evidence": "Independent review at e85b5f23b and targeted acceptance at c33ff837b covered the original six results, paired charges, whole-class probability and provisional application (merged #2005). A separate review at 8b892c5b4 verified the finite-fiber and mixed infinite-reuse companions and their interpretation. Delivered in PR #2009.",
     "supersedes": "Extends the original #2005 headcount assessment from distinct and paired charges to arbitrary finite fibers. Its whole-hypothesis probability assessment and the prior finite-ancestry derivation remain applicable."
-  }
+  },
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ]
 }

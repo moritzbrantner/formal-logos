@@ -1,0 +1,10 @@
+{
+  "id": "3a0d4498-ce93-4461-87ff-07fbca084ba5",
+  "label": "Test by ContingencyGrounding.unprioritizedSeparates (6508c239)",
+  "subject_kind": "result",
+  "subject_id": "dd9bccd1-4296-4604-82cc-1fb536683be6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6508c239-b36d-4010-b9e4-ff0cdd5757e5",
+  "note": "At reading world true the simple, unreceived contingent mover has a distinct esse cause. That cause lacks simple priority over it, so the weak receptive-or-cause disjunction holds and the stronger disjunction with priority fails."
+}
