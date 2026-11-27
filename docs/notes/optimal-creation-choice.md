@@ -4439,7 +4439,8 @@ The answers differ per sense (table row 9):
   favouring that is a function of the betterness of arbitrary candidate
   contents is an apprehension. Sense 2 also needs admissible counterpossible
   variation.
-- **Reading 3** (an apprehended plan governs) needs, beyond sense 2, the
+- **Original finality with reading 3** (an apprehended plan governs) needs,
+  beyond sense 2, the
   content-generality bridge *and* the bridge reading `SpecifiesGiving` as
   controlled dependence. Neither is typed or established.
 
@@ -4596,8 +4597,8 @@ and the will routes to `66aecdd7` are unchanged. The content-generality bridge
 is recorded as an open question, not as a statement. Attempt record:
 [ff4f5b3f](../../corpus/attempts/ff4f5b3f-32c4-4983-9656-5ed31c1262ed.json).
 
-**Review record.** The independent semantic challenge of the delta
-`cc5ecdc80..49e56a19f` accepted `652f9917` as typed, `Governing` as the
+**Review record.** The independent semantic challenge at `49e56a19f` (delta
+`cc5ecdc80..49e56a19f`) accepted `652f9917` as typed, `Governing` as the
 premise's plan reading, the three BECAUSE_OF_GOODNESS senses and the
 sense-mixing control. It found four P1s:
 
@@ -4618,6 +4619,10 @@ cross-carrier `tests` edge, and the foreseen-plan relation note. The repairs:
 - The table gains a perverse and a bias control (row 8) and the two
   ORIGINAL_FINALITY senses (row 9), and uses the pair (c, z) throughout row 5.
 - The prose above is rescoped.
+
+The repairs are at `4b7604832`. The targeted re-check at `dbf825b4a` accepted
+all three registered steps (`652f9917`, `b5fe7a87`, `da0125fd`) as now
+presented, with no remaining P1 and all thirteen findings fixed.
 
 ## Research attempts citing this note
 
