@@ -34,7 +34,8 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "effort": "high",
-      "date": "2026-11-27"
+      "date": "2026-11-27",
+      "pr": "PR-2157"
     }
   ],
   "blocker": "Root connection is delivered through NecessaryConcreteAt (accessibility-relative de re); a bridge to the tertia via's cannot-not-be necessary being (DEF-NECESSARY-BEING) remains a separate modeling question (DISAMB-NECESSARY-INDIVIDUAL-SCOPE). Premises: independent defence of the thinker-local anti-brute-root principle (#505, #545) and thinker-local accessibility of grounding, plus O, B, C and E."
