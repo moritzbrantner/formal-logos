@@ -1,0 +1,45 @@
+{
+  "id": "4e519f40-be19-41f4-bb2c-cfc8999ebec2",
+  "label": "Actual access and represented divine assent in KD45",
+  "statement_ids": [
+    "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad",
+    "104b8748-db76-44a4-917e-108fb8ce1720",
+    "aba394e1-845d-441d-9cfb-24b71fe8da0a",
+    "1c343669-b662-477d-829b-243c57295618"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Issue #2057. Independent review rejected the unrestricted per-assent world predicate. Lean now checks why that interface is only the conditional from actual self-access to accuracy for the given assent. The replacement fixes content semantics, an independently supplied individuated assent relation and the legacy report. Calibration links the two belief senses and the actual edge supplies the exact accuracy node consumed by the sincerity route. The same interpreted contingent content witnesses positive application and failure of accuracy when actuality is outside the KD45 profile. Accurate assent confined to an everywhere-true content survives in that same nonreflexive pointed frame. The actual-access and calibration warrants, and preference-independent authority, remain open. The existing probability, knowledge and Moore results retain their scopes. See docs/notes/divine-veracity-1410.md#actual-access-and-represented-divine-assent-2057 for the provisional assessment and reopening conditions.",
+  "evidence": [
+    "88e2451e-323d-43da-a598-42454b0d8261",
+    "0bc37341-bc5c-4d44-946f-b44a97458991",
+    "PR-2102"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2102"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2102"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2102"
+    }
+  ]
+}

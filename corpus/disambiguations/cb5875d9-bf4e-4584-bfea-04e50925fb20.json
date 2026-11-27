@@ -1,0 +1,25 @@
+{
+  "id": "cb5875d9-bf4e-4584-bfea-04e50925fb20",
+  "label": "Actual assent and relational doxastic belief",
+  "term": "belief in the doxastic veracity argument",
+  "term_label": "DOXASTIC_BELIEF",
+  "sense_definition_ids": [
+    "9851b8f8-9a75-4d46-b197-5c6d9b4f5f07",
+    "eb1125b6-816b-4e58-bc27-e810399be48d"
+  ],
+  "senses": [
+    {
+      "id": "059c4046-d05e-4ad5-a42d-7374d0a90554",
+      "label": "DOXASTIC_BELIEF_1",
+      "definition_id": "9851b8f8-9a75-4d46-b197-5c6d9b4f5f07",
+      "lean_declaration": "TruthCore.Causality.NamingVeracityBatch1.Veracity.Believes"
+    },
+    {
+      "id": "61e9ed8a-cd00-44bf-9a3e-c5cfaaf54c9b",
+      "label": "DOXASTIC_BELIEF_2",
+      "definition_id": "eb1125b6-816b-4e58-bc27-e810399be48d",
+      "lean_declaration": "TruthCore.Logic.Doxastic.Believes"
+    }
+  ],
+  "resolution": "Actual Prop-indexed assent is primitive. The Kripke box is a universal truth condition on a world predicate. A supplied content, disquotation and a content-assent-to-box calibration are needed to move between them."
+}
