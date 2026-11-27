@@ -29,6 +29,7 @@ public import TruthCore.Causality.AtomisticRequirementControl
 public import TruthCore.Causality.AtomisticUniversalCausePriority
 public import TruthCore.Causality.AttenuationFit
 public import TruthCore.Causality.AxiarchicFoundation
+public import TruthCore.Causality.AxiarchicGuidance
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Causality.BegunComingToBe
 public import TruthCore.Causality.BegunOrHomogeneousGiving
