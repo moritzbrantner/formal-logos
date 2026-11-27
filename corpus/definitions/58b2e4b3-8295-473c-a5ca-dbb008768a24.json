@@ -1,0 +1,9 @@
+{
+  "id": "58b2e4b3-8295-473c-a5ca-dbb008768a24",
+  "label": "Second-order standard: a value-tracking favouring ranks above one that does not",
+  "term": "second-order standard (SecondOrderStandard)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AxiarchicGuidance.SecondOrderStandard",
+  "definition": "SecondOrderStandard good favours s d d': d is the favouring determination of some profile that tracks the value order good in every scenario, and d' that of some profile that does not. Read as a second-order value ranking of favourings: the standard by which a source's favouring is itself correct. It is the same in every scenario, since tracking quantifies over all of them. A second-order favouring that ranks a bearer's own favouring over another by this standard is strong self-application (SelfAppliesToStandard). Example: an agent approving its own impartial preference over a biased one. Non-example: a second-order favouring that ranks favourings by how often they are exercised.",
+  "note": "Stipulative analyst notion (#2145 premise lane C, round 3), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Counterfactual guidance and self-application against imitability exemplars'. Because the standard is scenario-invariant, no second-order profile depends on it under any control (secondOrderStandardNotDependedOn, law 4 of GoodDependenceLaws)."
+}
