@@ -864,11 +864,15 @@ untimed lackability:
 With `6e2176cd`, a holder held in some respect could lack being and so its
 operative act, which the first holder cannot. Result `544bc129` concludes
 `de1f6c17`: there cannot be no holder of another held (MOTION_3) in no respect.
-It uses no timed giving: neither `PresentMomentHoldingReading` nor the esse
-instance `f834ee65` as an input. The connection plans on `f834ee65`,
-`166dba9d` (to `c71c068c`) and `f360bb6f` (to `da3facd6`) concern other
-targets and stay as recorded. `f834ee65` and `166dba9d` now also reach the root
-upstream of C\*-holding.
+The passage itself uses no timed giving. Upstream, one support of `5eb16c61`
+runs through C\*-holding `1dd5be70`, and so through `166dba9d`, `f834ee65`
+and the present-moment reading `dedc431f`. That support uses the reading only
+in the direction it supplies, from timed giving to holding at esse. The plans
+recorded by #2108 need the converse direction, from a holder to a selected
+actual ground: on `f834ee65` and `166dba9d` toward `c71c068c`, and on
+`f360bb6f` toward `da3facd6`. They concern other targets and stay as recorded.
+`f834ee65`, `166dba9d` and `dedc431f` now also reach the root through
+C\*-holding.
 
 **Bridge (3), as two explicit open sense bridges.** `de1f6c17` is the First-Way
 reading with being moved read as holding (`firstUnheldHolder_iff_reading`).
