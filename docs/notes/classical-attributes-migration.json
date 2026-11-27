@@ -129,7 +129,7 @@
       "path": "corpus/statements/excluded-middle.json",
       "status": "repaired",
       "classification": "intentional_abstraction",
-      "finding": "Reviewed scope metadata correction: object-level ExcludedMiddle declaration and legacy floor basis/justification remain unchanged. The serious withholding position targets universal assertion; exact analyst global negation remains an unrefuted logical rival. Disagreement metadata includes that complement. Focused actual-record regression prevents floor-removal from turning instance-denial refutation into proof of global EM. 2026-11-08 type audit: excluded-middle statement links the existing p ∨ ¬p definition instead of administrative self-evident marking; its proposition, binding and self_evident status are unchanged.",
+      "finding": "Reviewed scope metadata correction: object-level ExcludedMiddle declaration and legacy floor basis/justification remain unchanged. The serious withholding position targets universal assertion; exact analyst global negation remains an unrefuted logical rival. Disagreement metadata includes that complement. Focused actual-record regression prevents floor-removal from turning instance-denial refutation into proof of global EM. 2026-11-08 type audit: excluded-middle statement links the existing p \u2228 \u00acp definition instead of administrative self-evident marking; its proposition, binding and self_evident status are unchanged.",
       "before": {
         "sha256": "279edc03ac8141e2a580cefd9c9998f4dd260565e154c5856b4735abdda3eaa8",
         "lean_declaration": "TruthCore.Logic.ExcludedMiddle"
@@ -142,12 +142,12 @@
       "path": "corpus/statements/god-has-classical-divine-attributes.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Universal over the same σ.IsGod witness; no existence and no unpacking of the primitive HasClassicalAttributes field. Empty IsGod interpretation remains admitted.",
+      "finding": "Universal over the same \u03c3.IsGod witness; no existence and no unpacking of the primitive HasClassicalAttributes field. Empty IsGod interpretation remains admitted. 2026-11-27 type/link reconciliation: the quantified binder and signature are unchanged. Add the explicit definition record for the signature\u2019s primitive attribute field.",
       "before": {
         "sha256": "360ff5ab30ca29c81f8bbc62c8eee4f47bb55a6caf7d8a0fba76c753f1ef91ae",
         "lean_declaration": "TruthCore.Case.Catholicism.GodHasClassicalAttributes"
       },
-      "reviewed_sha256": "73924d847a61c6b551dc2d5bb612b1391a50bb7fc357094ef0cc855164151226"
+      "reviewed_sha256": "2c7c8d84881fd990c27d4892d62f4189ad1997097e6fa305ab68108f85f922aa"
     },
     {
       "kind": "statements",
@@ -429,11 +429,11 @@
       "path": "corpus/definitions/classical-attributes-bundle.json",
       "status": "repaired",
       "classification": "defect",
-      "finding": "Existing one-way warning retained; names NineClassicalAttributes and checked curried/conjunctive regrouping. No converse to the primitive field; no new statement IDs for ordinary connective occurrences. Re-reviewed in the #1103 definitions audit: the note now records that the attribute 'one' (IsTheOneGod σ.IsGod) mentions IsGod and holds vacuously when nothing is God; a dependency, not a circular proof; existence requires separate premises.",
+      "finding": "Existing one-way warning retained; names NineClassicalAttributes and checked curried/conjunctive regrouping. No converse to the primitive field; no new statement IDs for ordinary connective occurrences. Re-reviewed in the #1103 definitions audit: the note now records that the attribute 'one' (IsTheOneGod \u03c3.IsGod) mentions IsGod and holds vacuously when nothing is God; a dependency, not a circular proof; existence requires separate premises.",
       "before": {
         "sha256": "fdfbcb586159f5837c706684cbc2eb804ea2d4099203a42d011a48075bda127e",
         "lean_declaration": "TruthCore.Case.Catholicism.ClassicalAttributesSuffice",
-        "prose": "The owner's stage-2 reading of Dei Filius ch. 1. Signature.HasClassicalAttributes is still a primitive field. ClassicalAttributesSuffice is an explicit open, one-way premise from the nine predicates to that field, not a definitional equality or an eliminator recovering all nine predicates from it. GodHasClassicalAttributes means ∀ g, σ.IsGod g → σ.HasClassicalAttributes g. No changed proof, closed frontier, or truth of the bridge is claimed by adding this mapping."
+        "prose": "The owner's stage-2 reading of Dei Filius ch. 1. Signature.HasClassicalAttributes is still a primitive field. ClassicalAttributesSuffice is an explicit open, one-way premise from the nine predicates to that field, not a definitional equality or an eliminator recovering all nine predicates from it. GodHasClassicalAttributes means \u2200 g, \u03c3.IsGod g \u2192 \u03c3.HasClassicalAttributes g. No changed proof, closed frontier, or truth of the bridge is claimed by adding this mapping."
       },
       "reviewed_sha256": "550db15efaf8134cbefaf1bd31189e74ffade6f5e660553e0fcdcb5d3e4d3b76"
     },
@@ -534,7 +534,7 @@
       "path": "corpus/definitions/will.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. WillFollowsIntellectReading formalizes HasIntellect x → HasWill x, not the internal structure of intellectual appetite or divine choice. The source supplies the intended meaning; no equivalence definition of HasWill is added.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. WillFollowsIntellectReading formalizes HasIntellect x \u2192 HasWill x, not the internal structure of intellectual appetite or divine choice. The source supplies the intended meaning; no equivalence definition of HasWill is added.",
       "before": {
         "sha256": "dfd544e34de8506b44fe89df3c3eafc38118a04929968f5d21eb7fee0a75b864",
         "lean_declaration": "TruthCore.Case.Catholicism.GodHasWill"
@@ -547,7 +547,7 @@
       "path": "corpus/definitions/immutable.json",
       "status": "repaired",
       "classification": "defect",
-      "finding": "Removed duplicated no-potency body by reusing existing PureAct. isImmutable_iff_noPotency : IsImmutable p g ↔ ∀ r, ¬p g r is Iff.rfl under original Sort parameters. General philosophical immutability remains distinct.",
+      "finding": "Removed duplicated no-potency body by reusing existing PureAct. isImmutable_iff_noPotency : IsImmutable p g \u2194 \u2200 r, \u00acp g r is Iff.rfl under original Sort parameters. General philosophical immutability remains distinct.",
       "before": {
         "sha256": "31fd07b13fbd052e24a2106ee9b2f908589e17248665de5ed56f69855f5843d4",
         "lean_declaration": "TruthCore.Case.Catholicism.IsImmutable",
@@ -587,7 +587,7 @@
       "path": "corpus/definitions/infinite.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. SubsistentBeingIsInfiniteReading gives only the sufficient condition esseOf x = essenceOf x → Infinite x, reading non-reception through q.3 a.4. Infinite has no definitional expansion imposing the full source account; the theorem remains conditional on that interpretation and premise.",
+      "finding": "Inspected existing meaning and Lean binding where present. Retain this sense and its recorded source/stipulative limits; no equivalence with a merely similar relation is introduced. SubsistentBeingIsInfiniteReading gives only the sufficient condition esseOf x = essenceOf x \u2192 Infinite x, reading non-reception through q.3 a.4. Infinite has no definitional expansion imposing the full source account; the theorem remains conditional on that interpretation and premise.",
       "before": {
         "sha256": "c3b5222ff51bbd4cf8ac245d6d3c024cd22e0d196b94f1959579572edf183fdf",
         "lean_declaration": "TruthCore.Case.Catholicism.GodIsInfinite"
@@ -600,7 +600,7 @@
       "path": "corpus/definitions/maxime-ens.json",
       "status": "repaired",
       "classification": "reviewed_locator_clarification",
-      "finding": "Uses exactly the same IsMaximumIn at esse. Uniqueness follows from genus and causal-ascent assumptions plus explicit logical choice, not from the name. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximalIn. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. 2026-11-08 type audit: MAXIME_ENS points directly to the IsMaximumIn body occurring in the frozen types, rather than its IsMaximalIn alias. Both spellings express InAct m r ∧ ∀ y, ¬ MoreIn r y m; no greatestness or new type distinction is claimed. The generic sixth sense remains an alias and an unfinished legacy distinction.",
+      "finding": "Uses exactly the same IsMaximumIn at esse. Uniqueness follows from genus and causal-ascent assumptions plus explicit logical choice, not from the name. Follow-up #1110: reviewed the exact Lean signature against this metadata-only locator/scope clarification. Exact field/predicate locator TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximalIn. Primitive interpretation and open premise status remain explicit; no source attribution, theorem type, structural law or premise truth changes. 2026-11-08 type audit: MAXIME_ENS points directly to the IsMaximumIn body occurring in the frozen types, rather than its IsMaximalIn alias. Both spellings express InAct m r \u2227 \u2200 y, \u00ac MoreIn r y m; no greatestness or new type distinction is claimed. The generic sixth sense remains an alias and an unfinished legacy distinction.",
       "before": {
         "sha256": "234c126e4e7111fb3facbda59fb7a3b14fa51f502dd2fedac3b603e50523c907",
         "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn"
@@ -639,7 +639,7 @@
       "path": "corpus/definitions/one-god.json",
       "status": "inspected",
       "classification": "intentional_abstraction",
-      "finding": "IsTheOneGod IsGod g is ∀ g′, IsGod g′ → g′ = g; it asserts neither IsGod g nor existence. Assembly separately carries IsGod g and uses identical g throughout.",
+      "finding": "IsTheOneGod IsGod g is \u2200 g\u2032, IsGod g\u2032 \u2192 g\u2032 = g; it asserts neither IsGod g nor existence. Assembly separately carries IsGod g and uses identical g throughout.",
       "before": {
         "sha256": "4f16637dddb106061838c277b33238bc83ad629a282096297299e41e2991bb69",
         "lean_declaration": "TruthCore.Case.Catholicism.IsTheOneGod"
@@ -886,7 +886,7 @@
       "path": "corpus/disambiguations/maxime-ens.json",
       "status": "repaired",
       "classification": "intentional_abstraction",
-      "finding": "Source-scope re-review for PR905: Merely maximal (nothing above), greatest represented degree (all bearer degrees below or equivalent) and strict primacy remain distinct. Greatest degree permits tied bearers; no uniqueness or strict supremacy enters the new source reading. The old maximality theorem interfaces remain unchanged; weakening an antecedent strengthens a causal conditional. Earlier recorded disposition (historical context, not the current source attribution): Existing sense separation retained. The selected result uses a single fixed vocabulary context and does not change sense across premises. The record constrains interpretation, not premise truth. Definition-fork re-review: the new paragraph preserves every original meaning and source boundary; only separate conditional interfaces are registered. The old selected-esse maximal causal premise follows from greatest-degree causation only with explicit maximal-to-greatest transfer, itself derived under supplied active-pair degree calibration, local directedness and excluded middle. Neither source attribution nor old theorem inputs gain those assumptions silently. #1111: the existing maximal/greatest distinction now explicitly includes the generic selected-perfection IsMaximumIn sense and its esse specialization; #1141 bridges/countermodels and open source-to-old-I boundary retained. No proof premise changed. Follow-up review (term sense forks, batch 3): the appended sense-fork pointer names MAXIME_1-3 and their declarations (StrictlyGreatestIn is new, only in TruthCore.Causality.TermSenseForks3); the audited results still use the one merely-maximal IsMaximalIn at esse, so no step here changes sense. 2026-11-08 type audit: MAXIME_ENS points directly to the IsMaximumIn body occurring in the frozen types, rather than its IsMaximalIn alias. Both spellings express InAct m r ∧ ∀ y, ¬ MoreIn r y m; no greatestness or new type distinction is claimed. The generic sixth sense remains an alias and an unfinished legacy distinction. 2026-11-09 conceptual-declaration review: NoGreaterConceivable now binds the existing conceptual sense with explicit accessible thought, entertainment and intentional-reference witnesses. The original three root readings and coverage enum remain unchanged; conceptual no-greater entails merely maximal only under separately supplied actuality, competitor coverage and directional alignment. Their omission controls retain the boundary. Both genuine maximality aliases remain unresolved. No audited theorem or frozen premise changed.",
+      "finding": "Source-scope re-review for PR905: Merely maximal (nothing above), greatest represented degree (all bearer degrees below or equivalent) and strict primacy remain distinct. Greatest degree permits tied bearers; no uniqueness or strict supremacy enters the new source reading. The old maximality theorem interfaces remain unchanged; weakening an antecedent strengthens a causal conditional. Earlier recorded disposition (historical context, not the current source attribution): Existing sense separation retained. The selected result uses a single fixed vocabulary context and does not change sense across premises. The record constrains interpretation, not premise truth. Definition-fork re-review: the new paragraph preserves every original meaning and source boundary; only separate conditional interfaces are registered. The old selected-esse maximal causal premise follows from greatest-degree causation only with explicit maximal-to-greatest transfer, itself derived under supplied active-pair degree calibration, local directedness and excluded middle. Neither source attribution nor old theorem inputs gain those assumptions silently. #1111: the existing maximal/greatest distinction now explicitly includes the generic selected-perfection IsMaximumIn sense and its esse specialization; #1141 bridges/countermodels and open source-to-old-I boundary retained. No proof premise changed. Follow-up review (term sense forks, batch 3): the appended sense-fork pointer names MAXIME_1-3 and their declarations (StrictlyGreatestIn is new, only in TruthCore.Causality.TermSenseForks3); the audited results still use the one merely-maximal IsMaximalIn at esse, so no step here changes sense. 2026-11-08 type audit: MAXIME_ENS points directly to the IsMaximumIn body occurring in the frozen types, rather than its IsMaximalIn alias. Both spellings express InAct m r \u2227 \u2200 y, \u00ac MoreIn r y m; no greatestness or new type distinction is claimed. The generic sixth sense remains an alias and an unfinished legacy distinction. 2026-11-09 conceptual-declaration review: NoGreaterConceivable now binds the existing conceptual sense with explicit accessible thought, entertainment and intentional-reference witnesses. The original three root readings and coverage enum remain unchanged; conceptual no-greater entails merely maximal only under separately supplied actuality, competitor coverage and directional alignment. Their omission controls retain the boundary. Both genuine maximality aliases remain unresolved. No audited theorem or frozen premise changed.",
       "before": {
         "sha256": "09f962384fd21f5a330426b296b4167a159e3fc4a30dd53f9d3bd9ab5ea0e713",
         "lean_declaration": null
@@ -912,7 +912,7 @@
       "path": "corpus/claims/vatican-i-dei-filius-ch1-one-true-living-god.json",
       "status": "repaired",
       "classification": "defect",
-      "finding": "Re-read materialized VATICAN-I-DEI-FILIUS-CH1, DS 3001–3002. The council confesses an existing God and attributes; it does not universally quantify arbitrary predicates into a skeleton field. Corrected explanatory bridge wording without revising the source-bound statement or adding a claim.",
+      "finding": "Re-read materialized VATICAN-I-DEI-FILIUS-CH1, DS 3001\u20133002. The council confesses an existing God and attributes; it does not universally quantify arbitrary predicates into a skeleton field. Corrected explanatory bridge wording without revising the source-bound statement or adding a claim.",
       "before": {
         "sha256": "30f1cac9de7051ce7aa7e15a9b87ac3ab92d51b9a114a7a0c087dce63662c9c8",
         "lean_declaration": null,
@@ -926,12 +926,25 @@
       "path": "corpus/definitions/excluded-middle-logical-holding.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "Existing logical meaning of excluded middle: every proposition p has p ∨ ¬p, with locator TruthCore.Logic.ExcludedMiddle. Replaces the administrative marking link in the shared premise. No axiom, proof, premise truth or source attribution changes.",
+      "finding": "Existing logical meaning of excluded middle: every proposition p has p \u2228 \u00acp, with locator TruthCore.Logic.ExcludedMiddle. Replaces the administrative marking link in the shared premise. No axiom, proof, premise truth or source attribution changes.",
       "before": {
         "sha256": "1daf00789d907d5cd73307519ed7f9e0ac2b42669b77422c5286d26638de5697",
         "lean_declaration": "TruthCore.Logic.ExcludedMiddle"
       },
       "reviewed_sha256": "1daf00789d907d5cd73307519ed7f9e0ac2b42669b77422c5286d26638de5697"
+    },
+    {
+      "kind": "definitions",
+      "id": "eb96d3f9-3c9a-45b5-9fd3-62a5f5ccafbd",
+      "path": "corpus/definitions/eb96d3f9-3c9a-45b5-9fd3-62a5f5ccafbd.json",
+      "status": "inspected",
+      "classification": "primitive_field_definition",
+      "finding": "The linked declaration is the exact primitive signature field applied to the same being. The separately supplied sufficiency map stays one-way.",
+      "before": {
+        "sha256": "73924d847a61c6b551dc2d5bb612b1391a50bb7fc357094ef0cc855164151226",
+        "lean_declaration": "TruthCore.Case.Catholicism.GodHasClassicalAttributes"
+      },
+      "reviewed_sha256": "2e06b7165d6969f12b04068de66f5640d5f333fee6594f55aef466f9f24ce515"
     }
   ],
   "limits": [

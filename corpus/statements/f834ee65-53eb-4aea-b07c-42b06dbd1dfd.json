@@ -11,5 +11,10 @@
   ],
   "disambiguation_ids": [
     "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+    "missing_bridge": "Use the existing existence-to-act calibration at esse. Show that modal absence from an accessible world gives CanLack at esse for the same actual concretum. Show that the distinct holder at esse is concrete, exists at the selected world, and grounds the recipient there.",
+    "blocker": "Holding and lackability are primitive and untimed. PresentMomentHoldingReading maps timed giving into holding, while this application needs the holder-to-selected-actual-ground direction. A present actualization alone does not certify the giver\u2019s concreteness or the selected grounding edge."
+  }
 }
