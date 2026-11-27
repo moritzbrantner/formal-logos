@@ -6,7 +6,7 @@
   "inference_ids": [
     "ef183ad2-7d96-4305-9165-12d275eaeb91"
   ],
-  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. Models witness only their formal interpretation.",
+  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. fixedPlusLocal satisfies the GOD_4 conclusion and NecessaryConcreteAt and falsifies persistence, so the conclusion entails neither bridge sibling. Models witness only their formal interpretation.",
   "definition_ids": [
     "337b660c-ffd3-4316-af08-424ca641d6c9",
     "539443e8-0f99-4cb9-925f-fb522d3cc042",

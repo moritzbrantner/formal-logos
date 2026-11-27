@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "87a7fd12-9831-41d2-b7ab-4ad8baeff378",
   "rule": "Evaluate the five finite models by simp",
-  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. Models witness only their formal interpretation.",
+  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. fixedPlusLocal satisfies the GOD_4 conclusion and NecessaryConcreteAt and falsifies persistence, so the conclusion entails neither bridge sibling. Models witness only their formal interpretation.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

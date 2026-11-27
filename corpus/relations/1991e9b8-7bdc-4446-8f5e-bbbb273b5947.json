@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "cce5a30e-c72f-43e6-ba29-19f8be68feeb",
-  "note": "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, persistence fails (the GOD_4 at the standpoint is absent from the other world) and neither conclusion holds."
+  "note": "Omission model swapped: each world has its own concrete GOD_4, so the boxed conditional, possibility and both frame conditions hold, persistence fails (the GOD_4 at the standpoint is absent from the other world) and neither conclusion holds. Model fixedPlusLocal: both conclusions hold while persistence fails, so the conclusion does not entail the bridge."
 }

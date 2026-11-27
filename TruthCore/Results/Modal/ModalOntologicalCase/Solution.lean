@@ -40,16 +40,31 @@ theorem persistsOfRigid {W : Type} (σ : Signature) (m : Profile W σ.Being) (w 
     (hRigid : GodPresenceRigidAt σ m w) : GodPresencePersistsAt σ m w :=
   persists_of_rigid σ m w hRigid
 
+/-- Certified difference (#1598): rigidity is exactly persistence together with
+uniqueness of concrete GOD_4 at accessible worlds whenever one exists at `w`. -/
+theorem rigidOverPersistsExact : RigidOverPersistsExact := by
+  intro W σ m w
+  constructor
+  · intro hRigid
+    refine ⟨persists_of_rigid σ m w hRigid, fun ⟨x, hx⟩ v hv y z hy hz => ?_⟩
+    rw [hRigid v x y hv hx hy, hRigid v x z hv hx hz]
+  · rintro ⟨hPersists, hUnique⟩ v x y hv hx hy
+    have hxv : GodConcretePresent σ m x v :=
+      ⟨hx.1, hx.2.1, hPersists x hx v hv ⟨y, hy⟩⟩
+    exact hUnique ⟨x, hx⟩ v hv y x hy hxv
+
 /-- The omission, nonvacuity and strictness controls. -/
 theorem controls : Controls := by
   refine ⟨⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩,
-    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩⟩ <;>
+    ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩, ⟨?_, ?_, ?_⟩,
+    ⟨?_, ?_, ?_⟩⟩ <;>
   simp [EuclideanAt, ActualReflexive, GodPossiblyExistsAt, GodNecessaryIfExistentAt,
     GodPresenceRigidAt, GodPresencePersistsAt, NecessaryGodConcreteAt, NecessaryConcreteAt,
     GodConcreteExists, GodConcretePresent, TruthCore.Modal.NecessaryIfExistent.NecessaryIf,
     TruthCore.Modal.NecessaryIfExistent.PossibleExistence,
     TruthCore.Isabelle.AFP.GoedelGod.Box, TruthCore.Isabelle.AFP.GoedelGod.Dia,
     TruthCore.German.Kant.CosmologicalInference.NecessaryAt,
-    onlyHere, nobody, swapped, fixedOne, fixedPlusVisitor, boolProfile, boolSignature]
+    onlyHere, nobody, swapped, fixedOne, fixedPlusVisitor, fixedPlusLocal, boolProfile,
+    boolSignature]
 
 end TruthCore.Results.Modal.ModalOntologicalCase

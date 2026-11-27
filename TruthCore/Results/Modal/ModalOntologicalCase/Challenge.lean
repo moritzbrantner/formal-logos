@@ -31,6 +31,11 @@ theorem persistsOfRigid {W : Type} (σ : Signature) (m : Profile W σ.Being) (w 
     (hRigid : GodPresenceRigidAt σ m w) : GodPresencePersistsAt σ m w := by
   sorry
 
+/-- Certified difference (#1598): rigidity is exactly persistence together with
+uniqueness of concrete GOD_4 at accessible worlds whenever one exists at `w`. -/
+theorem rigidOverPersistsExact : RigidOverPersistsExact := by
+  sorry
+
 /-- The omission, nonvacuity and strictness controls. -/
 theorem controls : Controls := by
   sorry

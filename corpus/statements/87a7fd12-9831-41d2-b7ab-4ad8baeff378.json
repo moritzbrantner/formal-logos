@@ -1,7 +1,7 @@
 {
   "id": "87a7fd12-9831-41d2-b7ab-4ad8baeff378",
   "label": "Modal ontological case omission, nonvacuity and strictness controls",
-  "paraphrase": "In two-world, two-candidate models whose frame is reflexive and Euclidean and where both candidates are GOD_4 and concrete: omitting the boxed conditional, the possibility premise or the persistence bridge (each other premise holding) leaves both the GOD_4 de re necessity (NecessaryGodConcreteAt) and NecessaryConcreteAt false; with all five premises both hold; and NecessaryGodConcreteAt and persistence can hold while rigidity fails. Formal models only.",
+  "paraphrase": "In two-world, two-candidate models whose frame is reflexive and Euclidean and where both candidates are GOD_4 and concrete: omitting the boxed conditional, the possibility premise or the persistence bridge (each other premise holding) leaves both the GOD_4 de re necessity (NecessaryGodConcreteAt) and NecessaryConcreteAt false; with all five premises both hold; NecessaryGodConcreteAt and persistence can hold while rigidity fails; and NecessaryGodConcreteAt and NecessaryConcreteAt can hold while persistence fails. Formal models only.",
   "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.Controls",
   "definition_ids": [
     "c9576df7-8e9e-4ecc-a031-cc1560c733d9",

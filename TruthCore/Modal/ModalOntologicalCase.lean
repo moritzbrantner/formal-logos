@@ -5,6 +5,7 @@ public import TruthCore.Causality.ActualEuclidean
 public import TruthCore.Causality.BruteFoundationBoundary
 public import TruthCore.Case.Catholicism.Root
 public import TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.Quantifiers
+public import TruthCore.Logic.StrengthComparison
 
 /-!
 Case instance of the stipulated proposition `G` of `NecessaryIfExistent`
@@ -96,6 +97,28 @@ theorem atMostOne_of_rigid (σ : Signature) (m : Profile W σ.Being) (w : W)
     y = x :=
   hRigid w x y hReflexive hx hy
 
+/-- The difference of rigidity over persistence: whenever a concrete GOD_4
+exists at `w`, every world accessible from `w` has at most one concrete GOD_4.
+It asserts no existence. -/
+def GodPresenceUniqueWhenPresentAt (σ : Signature) (m : Profile W σ.Being) (w : W) : Prop :=
+  (∃ x, GodConcretePresent σ m x w) → ∀ v, m.ontic.frame.access w v →
+    ∀ y z, GodConcretePresent σ m y v → GodConcretePresent σ m z v → y = z
+
+/-- The certified-difference comparison (#1598): rigidity over persistence,
+with no background. -/
+def rigidOverPersists (σ : Signature) (m : Profile W σ.Being) (w : W) :
+    TruthCore.Logic.StrengthComparison.ComparisonSpec where
+  stronger := GodPresenceRigidAt σ m w
+  weaker := GodPresencePersistsAt σ m w
+  delta := GodPresenceUniqueWhenPresentAt σ m w
+
+/-- Premise-free equivalence: rigidity holds exactly when persistence and the
+difference hold. -/
+def RigidOverPersistsExact : Prop :=
+  ∀ {W : Type} (σ : Signature) (m : Profile W σ.Being) (w : W),
+    GodPresenceRigidAt σ m w ↔
+      GodPresencePersistsAt σ m w ∧ GodPresenceUniqueWhenPresentAt σ m w
+
 /-- One and the same concrete GOD_4 exists at `w` and at every world accessible
 from `w` (de re, accessibility-relative). No all-world existence, uniqueness
 or classical attribute follows. -/
@@ -171,6 +194,9 @@ def fixedOne : Profile Bool boolSignature.Being := boolProfile fun _ x => x = fa
 /-- Candidate `false` exists at both worlds; `true` exists only at world `true`. -/
 def fixedPlusVisitor : Profile Bool boolSignature.Being :=
   boolProfile fun v x => x = false ∨ (x = true ∧ v = true)
+/-- Candidate `false` exists at both worlds; `true` exists only at world `false`. -/
+def fixedPlusLocal : Profile Bool boolSignature.Being :=
+  boolProfile fun v x => x = false ∨ (x = true ∧ v = false)
 
 /-- Omission and nonvacuity controls at standpoint `false`.
 (1) `onlyHere`: every premise but `GodNecessaryIfExistentAt` holds; both conclusions fail.
@@ -180,7 +206,9 @@ def fixedPlusVisitor : Profile Bool boolSignature.Being :=
 candidates, one existing at both worlds).
 (5) `fixedPlusVisitor`: the GOD_4 conclusion and the persistence bridge hold
 while rigidity fails: the conclusion does not entail rigidity, and persistence
-is strictly weaker than rigidity. -/
+is strictly weaker than rigidity.
+(6) `fixedPlusLocal`: the GOD_4 conclusion and `NecessaryConcreteAt` hold while
+persistence fails, so the conclusion does not entail persistence either. -/
 def Controls : Prop :=
   (EuclideanAt onlyHere.ontic.frame false ∧ ActualReflexive onlyHere.ontic false ∧
     GodPossiblyExistsAt boolSignature onlyHere false ∧
@@ -208,6 +236,9 @@ def Controls : Prop :=
     NecessaryConcreteAt fixedOne false) ∧
   (NecessaryGodConcreteAt boolSignature fixedPlusVisitor false ∧
     GodPresencePersistsAt boolSignature fixedPlusVisitor false ∧
-    ¬ GodPresenceRigidAt boolSignature fixedPlusVisitor false)
+    ¬ GodPresenceRigidAt boolSignature fixedPlusVisitor false) ∧
+  (NecessaryGodConcreteAt boolSignature fixedPlusLocal false ∧
+    NecessaryConcreteAt fixedPlusLocal false ∧
+    ¬ GodPresencePersistsAt boolSignature fixedPlusLocal false)
 
 end TruthCore.Modal.ModalOntologicalCase
