@@ -1,12 +1,12 @@
 [batch]
 vocab = "TruthCore.Causality.RootIntellectWillPureAct"
 results = "TruthCore.Results.Causality.PureActRootImmutability"
+disambiguations = ["DISAMB-POTENCY"]
 
 [[argument]]
 id = "Pure-act root and finite concrete ancestry yield immutability of every GOD_4"
 theorem = "immutableOfReach"
 comparator_theorems = ["reachOmission"]
-senses = {POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED = "POTENCY_CAPACITY_AND_POWER_ACROSS_ADOPTED_2"}
 premises = ["124e21e6-11bc-5a5e-9c6a-fd4eb49aba44", "75974d26-9483-4e1b-81a9-693a90ee9d0f"]
 conclusion = "fb3802a8-d04c-5486-95a5-b7ab57857396"
 rule = "Identify the pure-act actual root by finite grounding reach, then transport the no-potency property"
