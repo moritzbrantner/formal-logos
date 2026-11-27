@@ -1,0 +1,10 @@
+{
+  "id": "202c639b-5bae-47d5-9d5d-ebf0d014b663",
+  "label": "Test by PrussPowerPremises.prussPowerControls (887d5efc)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "887d5efc-caf6-4972-b592-8d4f1dbf5f49",
+  "note": "Omit concreteness of the holder at the absence worlds. In theistG with only c and d concrete, g alone holds the power from the absence world and is present at both worlds. It fails the concrete holder requirement."
+}
