@@ -8,7 +8,7 @@ public import TruthCore.Logic.CogitoEsse
 
 namespace TruthCore.Causality.LocalActualFusion
 open TruthCore.Causality.BruteFoundationBoundary (Profile)
-open TruthCore.German.Kant.CosmologicalInference (Ontic NecessaryAt)
+open TruthCore.German.Kant.CosmologicalInference (Ontic)
 open TruthCore.Logic.CogitoEsse (EveryExistentConcreteAt)
 
 /-- A part of the selected sum or of any actual cause of that same sum. -/
@@ -22,10 +22,10 @@ def SelectedFusionPartsExistAt {W B : Type} [PartialOrder B]
     (m : Ontic W B) (w : W) (sum : B) : Prop :=
   m.ExistsAt w sum → ∀ p, SelectedFusionPart m w sum p → m.ExistsAt w p
 
-/-- Only actual, necessary parts in the selected fusion scope must be concrete. -/
-def NecessarySelectedFusionPartsConcreteAt {W B : Type} [PartialOrder B]
+/-- Only actual parts in the selected fusion scope must be concrete. -/
+def SelectedActualFusionPartsConcreteAt {W B : Type} [PartialOrder B]
     (m : Profile W B) (w : W) (sum : B) : Prop :=
-  ∀ p, m.ontic.ExistsAt w p → NecessaryAt m.ontic w p →
+  ∀ p, m.ontic.ExistsAt w p →
     SelectedFusionPart m.ontic w sum p → m.concrete p
 
 namespace Control
@@ -42,7 +42,7 @@ def strictProfile : Profile Bool Bool where
   grounds := fun _ _ _ => False
 
 def CalibrationStrictness : Prop :=
-  NecessarySelectedFusionPartsConcreteAt strictProfile false false ∧
+  SelectedActualFusionPartsConcreteAt strictProfile false false ∧
     ¬ EveryExistentConcreteAt strictProfile.ontic strictProfile.concrete false
 
 end Control

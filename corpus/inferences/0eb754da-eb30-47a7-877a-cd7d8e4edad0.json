@@ -6,7 +6,7 @@
   ],
   "output_statement_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
   "rule": "Restriction of concreteness calibration",
-  "meaning": "Every necessary actual part in the selected fusion scope is an actual existent. Apply the global calibration at that same world.",
+  "meaning": "Every actual part in the selected fusion scope is an actual existent. Apply the global calibration at that same world.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

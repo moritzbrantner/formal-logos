@@ -14,7 +14,7 @@ theorem necessaryConcrete {W B : Type} [PartialOrder B]
     (hCausal : ActualNoNecessaryPartsHaveCausesAt m.ontic w)
     (hActual : CausesHaveActualEndpointsAt m.ontic w)
     (hNonoverlap : CauseEffectNonoverlapAt m.ontic w)
-    (hConcrete : NecessarySelectedFusionPartsConcreteAt m w sum) :
+    (hConcrete : SelectedActualFusionPartsConcreteAt m w sum) :
     NecessaryConcreteAt m w := by
   sorry
 
@@ -27,7 +27,7 @@ theorem partsExistOfGlobal {W B : Type} [PartialOrder B]
 theorem concreteOfGlobal {W B : Type} [PartialOrder B]
     (m : Profile W B) (w : W) (sum : B)
     (hConcrete : EveryExistentConcreteAt m.ontic m.concrete w) :
-    NecessarySelectedFusionPartsConcreteAt m w sum := by
+    SelectedActualFusionPartsConcreteAt m w sum := by
   sorry
 
 theorem calibrationStrictness : Control.CalibrationStrictness := by

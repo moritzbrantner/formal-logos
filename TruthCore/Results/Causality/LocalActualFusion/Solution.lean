@@ -20,7 +20,7 @@ theorem necessaryConcrete {W B : Type} [PartialOrder B]
     (hCausal : ActualNoNecessaryPartsHaveCausesAt m.ontic w)
     (hActual : CausesHaveActualEndpointsAt m.ontic w)
     (hNonoverlap : CauseEffectNonoverlapAt m.ontic w)
-    (hConcrete : NecessarySelectedFusionPartsConcreteAt m w sum) :
+    (hConcrete : SelectedActualFusionPartsConcreteAt m w sum) :
     NecessaryConcreteAt m w := by
   apply Classical.byContradiction
   intro hNone
@@ -28,7 +28,7 @@ theorem necessaryConcrete {W B : Type} [PartialOrder B]
       ¬ TruthCore.German.Kant.CosmologicalInference.NecessaryAt m.ontic w p := by
     intro p hp hn
     have hExists := hParts hFusion.1 p hp
-    exact hNone ⟨p, hConcrete p hExists hn hp, hExists, hn⟩
+    exact hNone ⟨p, hConcrete p hExists hp, hExists, hn⟩
   obtain ⟨c, hc⟩ := hCausal sum hFusion.1 (fun p hp => noNecessaryPart p (Or.inl hp))
   have hcActual := (hActual c sum hc).1
   have hcNoParts : NoNecessaryPartsAt m.ontic w c :=
@@ -49,17 +49,19 @@ theorem partsExistOfGlobal {W B : Type} [PartialOrder B]
 theorem concreteOfGlobal {W B : Type} [PartialOrder B]
     (m : Profile W B) (w : W) (sum : B)
     (hConcrete : EveryExistentConcreteAt m.ontic m.concrete w) :
-    NecessarySelectedFusionPartsConcreteAt m w sum :=
-  fun p hp _ _ => hConcrete p hp
+    SelectedActualFusionPartsConcreteAt m w sum :=
+  fun p hp _ => hConcrete p hp
 
 /-- A concretely instantiated local region leaves an unrelated actual
 contingent abstract individual outside the global calibration. -/
 theorem calibrationStrictness : Control.CalibrationStrictness := by
   refine ⟨?_, ?_⟩
-  · intro p _ hn _
-    cases p with
-    | false => rfl
-    | true => exact False.elim (by simpa [Control.strictProfile] using hn true rfl)
+  · intro p _ hp
+    rcases hp with hPart | ⟨c, _, hc, _⟩
+    · cases p with
+      | false => rfl
+      | true => exact ((by decide : ¬ (true : Bool) ≤ false) hPart).elim
+    · exact hc.elim
   · intro h
     have hTrue := h true (Or.inl rfl)
     simp [Control.strictProfile] at hTrue
