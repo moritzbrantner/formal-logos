@@ -1,0 +1,11 @@
+{
+  "id": "286395b0-7571-4c38-8b4c-37f80af43835",
+  "label": "The fixed recipient’s unlocated root is a NECESSARY_2 CONCRETE_6 witness",
+  "argument_id": "c6539b44-f844-4c50-ac42-9dcf7ecc4960",
+  "challenge_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.UnlocatedRootNecessity.necessaryConcreteOfUnlocatedFork",
+  "comparator_config": "results/286395b0-7571-4c38-8b4c-37f80af43835/comparator.json",
+  "status": "solution-present",
+  "description": "The fork and recipient-local denial of an injective regress give an actual concrete root upstream of the same selected recipient. Excluded middle and the existing nonnecessity-to-contingency result turn any failure of the root's de re necessity into an actual contingent root. Such a root contradicts the existing contingent-grounding premise on the same Profile and world. The root itself witnesses concrete necessity at w and its accessible worlds. Unlocatedness is a property of the recovered witness in the supplied spacetime frame and is unused in the modal step. Regress denial is local to the selected recipient. The proof requires neither global well-foundedness nor an identification of grounding with causal or spatial relations."
+}

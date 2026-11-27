@@ -9,6 +9,11 @@ lean = "RayReportCharacterization"
 definitions = ["e1b95906-8d38-59c3-abee-0ccc1c9d333b"]
 paraphrase = "For any panel of positions on parallel successor rays, a Boolean report extends to a global solution of the local transmission rule exactly when observations at positions with an upstream cut report off, and every pair of observations with intact tails on the same ray gives the same reading. A panel can repeat positions or observe several positions on a ray."
 
+[statement.connection_plan]
+target_statement_id = "de05072a-5db0-4a31-8e24-b18fedf01401"
+missing_bridge = "Calibrate ray activity and independently verified intact or cut links to actual giving of esse for the same participated recipient. Establish that a recovered feed is an actual cause of its esse and has intrinsic actuality under OwnBeing. For the universal target, supply the recipient-wise coverage of this calibration."
+blocker = "Within-ray agreement and cut positions constrain Boolean activity. Agreeing readings fit both independent synchronized rays and one common switch, and a surviving feed can itself be supplied elsewhere. No link interpretation or observation here identifies an actual cause in the esse respect or tests its intrinsic actuality."
+
 [[statement]]
 id = "A finite panel has two to the power of its distinct live ray count feasible reports"
 lean = "FiniteRayReportCount"
