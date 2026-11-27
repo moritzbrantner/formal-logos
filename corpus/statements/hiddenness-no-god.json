@@ -17,7 +17,7 @@
   ],
   "connection_plan": {
     "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
-    "missing_bridge": "Derive TruthCore.Hiddenness.ActualRoot.RouteIdentification for the selected case IsGod and the same actual hiddenness signature from independently defended commitments about a GOD_4 bearer. The existing noRouteGod theorems use this as an explicit premise.",
-    "blocker": "The case predicate alone does not identify any bearer with the hiddenness personal ultimate. The omission conjunct of ActualRoot.Controls has an inhabited case GodExists with no personal ultimate in the hiddenness signature."
+    "missing_bridge": "Derive TruthCore.Hiddenness.ActualRoot.RouteIdentification for the selected case predicate and the same actual hiddenness signature from independently defended commitments. This is one-way existence transport: for every g, IsGod g implies s.God s.actual. Its consequent has no bearer parameter.",
+    "blocker": "Case GodExists alone does not entail the hiddenness personal-ultimate existence proposition. ActualRoot.Controls has an inhabited case predicate while the hiddenness personal ultimate is absent. The existing noRouteGod theorems require the transport as an explicit premise."
   }
 }

@@ -1,10 +1,10 @@
 {
   "id": "31795aea-0fca-49da-a8f7-b1495660bfbf",
-  "label": "Actual hiddenness control tests GOD_4 identification",
+  "label": "Actual hiddenness control tests RouteIdentification",
   "subject_kind": "result",
   "subject_id": "4a63f31d-e115-4be8-bb4a-3ab9bf737f1e",
   "predicate": "tests",
   "object_kind": "statement",
-  "object_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
-  "note": "The final conjunct of TruthCore.Hiddenness.ActualRoot.Controls witnesses the four actual hiddenness inputs together with the exact stage-one GodExists predicate inhabited and RouteIdentification false. This isolates the identification needed to transport the hiddenness conclusion to stage one in the supplied interpretation."
+  "object_id": "c08f6a70-b75c-47de-b1af-e3aad89da98f",
+  "note": "The final conjunct of TruthCore.Hiddenness.ActualRoot.Controls keeps the four actual hiddenness premises and an inhabited case GodExists while falsifying RouteIdentification. The Unit carrier with IsGod true supplies the case witness. RouteIdentification is the omitted premise."
 }
