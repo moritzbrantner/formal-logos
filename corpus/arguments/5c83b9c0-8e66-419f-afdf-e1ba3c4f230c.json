@@ -1,0 +1,13 @@
+{
+  "id": "5c83b9c0-8e66-419f-afdf-e1ba3c4f230c",
+  "label": "Complete-decision fork, by Mathlib order theory",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0bec39cd-08c3-400b-a926-fabb76ac3df0",
+  "inference_ids": [
+    "2ff1845c-5f75-4031-8f51-07185c39f7c4"
+  ],
+  "meaning": "Omission's maximality fails exactly at a strictly better creation. A creation's maximality in insert o C splits into maximality in C and not lying below o. In a finite C every creation lies below a maximal one, which uniqueness makes m. An improvable C with a creation above o leaves no maximal decision. The policy clause is clause 1 at each world. The control evaluates singletons of Bool.",
+  "definition_ids": [
+    "e81a6f5d-4d2f-4647-b3e0-300e2707340d"
+  ]
+}

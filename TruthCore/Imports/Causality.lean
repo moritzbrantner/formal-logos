@@ -283,6 +283,7 @@ public import TruthCore.Causality.RootIntellectWillOmission
 public import TruthCore.Causality.RootIntellectWillPureAct
 public import TruthCore.Causality.RootIntellectWillPureActPlurality
 public import TruthCore.Causality.RootMultiplication
+public import TruthCore.Causality.RootPerfectionExclusion
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
@@ -304,6 +305,7 @@ public import TruthCore.Causality.SelectedAncestryUniqueControl
 public import TruthCore.Causality.SelectedConeSupply
 public import TruthCore.Causality.SelectedPlgTheory
 public import TruthCore.Causality.SelectedSourcePath
+public import TruthCore.Causality.SelectionScope
 public import TruthCore.Causality.SelfCausationPriority
 public import TruthCore.Causality.SelfMotionSeparation
 public import TruthCore.Causality.SelfOperationLife
