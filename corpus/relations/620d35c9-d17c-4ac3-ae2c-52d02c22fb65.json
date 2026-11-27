@@ -1,0 +1,10 @@
+{
+  "id": "620d35c9-d17c-4ac3-ae2c-52d02c22fb65",
+  "label": "Test by ModalGrounding.controls (20d5fecd)",
+  "subject_kind": "result",
+  "subject_id": "ef54f023-8184-406a-9b0c-caa2df7415b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+  "note": "Omit power grounding of contingency at reading world true. In bruteFirst the foundational mover exists there and is absent at the other accessible world, despite being incorruptible simply and under no bearer’s power over its esse. Both power grounding and the necessity verdict fail."
+}

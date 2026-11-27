@@ -8,7 +8,7 @@
   ],
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "See docs/notes/contingency-receptivity-c2.md#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot. Independently calibrated joint limits can require the same contributor even when every member and every pair can do without it. A common signal can also gain evidential support without identifying its bearer. If one order requires unbounded joint supply and each n-free arrangement has a fixed finite capacity, the whole can exclude them even if every finite selection of loads is realizable without using n. A joint violation of a group guarantee or two independently possible outcomes that cannot both retain n can evidence P without imagining n absent at the outset. A three-way majority cycle is intelligible, yet cannot be selected by one invariant strict ranking of the same three options. Applying that test to n requires actual control over the options and winners, strictness, and value independent of the menu. Realizing each complete creature history with n leaves other realizations open; successful actualization within each exact world already requires its presence there. A composite cosmos genuinely underived in esse would exclude an essentially simple n that must supply other such beings, but material priority alone does not give existential underivedness. These are analyst inferences from existing distinctions. Moderate confidence in suspension for the fixed profile.",
+  "summary": "See docs/notes/contingency-receptivity-c2.md#what-can-a-group-or-a-whole-world-show-that-one-creature-cannot. Independently calibrated joint limits can require the same contributor even when every member and every pair can do without it. A common signal can also gain evidential support without identifying its bearer. If one order requires unbounded joint supply and each n-free arrangement has a fixed finite capacity, the whole can exclude them even if every finite selection of loads is realizable without using n. A joint violation of a group guarantee or two independently possible outcomes that cannot both retain n can evidence P without imagining n absent at the outset. A three-way majority cycle is intelligible, yet cannot be selected by one invariant strict ranking of the same three options. Applying that test to n requires actual control over the options and winners, strictness, and value independent of the menu. Realizing each complete creature history with n leaves other realizations open; successful actualization within each exact world already requires its presence there. A composite cosmos genuinely underived in esse would exclude an essentially simple n that must supply other such beings, but material priority alone does not give existential underivedness. These are analyst inferences from existing distinctions. Moderate confidence in suspension for the fixed profile.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 9bba1325 tests the nonvacuity of argument 259571ae. Tests whether the route has a model with two contingent concreta at the origin even when powers for individual absence fail. In twoMemberG, c and d are present and contingent at (true, true). The concrete g holds the joint-absence power there and is present at accessible (false, false), where both members are absent. The model jointly witnesses all five nonlogical premises. The argument separately assumes excluded middle. The same model falsifies EachActualAbsenceGrounded. That distributive predicate has no registered root-path statement.",
   "blocker": "Necessity by this joint-supply route needs independently supported joint requirements covering every admissible order and excluding brute occurrence or n-free supply, including coalition or replacement sources. To support P, joint failure must be warranted independently of whether n is there and the same n must have the contrary essential commitment. Absolute underivedness of a possible composite cosmos and the corresponding essential giver role remain open. Strict groundlessness of P at actuality excludes a complete world as its full prior ground.",
   "evidence": [
     "9bba1325-f031-450d-b506-f91ca9f0bc46",
@@ -19,5 +19,15 @@
     "PR-1889",
     "PR-1897",
     "PR-1903"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2116"
+    }
   ]
 }

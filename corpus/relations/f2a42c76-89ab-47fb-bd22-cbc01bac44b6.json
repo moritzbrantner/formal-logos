@@ -1,0 +1,10 @@
+{
+  "id": "f2a42c76-89ab-47fb-bd22-cbc01bac44b6",
+  "label": "Test by PrussPowerPremises.prussPowerControls (9c8e99e7)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9c8e99e7-3e7c-42c3-8e9e-d37dfe17ae7f",
+  "note": "Omit initiator presence at the absence worlds. In absentHolderG at origin false, g exists at true where it holds a power for false obtaining, yet g is absent at false. Grounding and the other nonlogical premises hold, and the required actual holder fails."
+}

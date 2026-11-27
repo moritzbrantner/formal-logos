@@ -1,0 +1,10 @@
+{
+  "id": "05aaee9e-67f6-4a52-91bc-5214eabc0cec",
+  "label": "Test by ModalGrounding.controls (94393b5b)",
+  "subject_kind": "result",
+  "subject_id": "ef54f023-8184-406a-9b0c-caa2df7415b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "94393b5b-8950-4a52-aef1-50cd09232e64",
+  "note": "Omit grounding for the global absence possibility. In creatureFrame at true there is a contingent concretum and an accessible world with no contingent concretum. No candidate has a power for the latter proposition. Initiator presence and holder concreteness hold vacuously."
+}

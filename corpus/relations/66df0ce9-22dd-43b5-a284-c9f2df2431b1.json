@@ -1,0 +1,10 @@
+{
+  "id": "66df0ce9-22dd-43b5-a284-c9f2df2431b1",
+  "label": "Test by ModalGrounding.controls (fffa0693)",
+  "subject_kind": "result",
+  "subject_id": "ef54f023-8184-406a-9b0c-caa2df7415b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "fffa0693-d04d-4387-b43d-514e092f72d1",
+  "note": "Omit initiator presence for the global absence possibility. In creatureFrame the sole power holder is the contingent creature false, which exists at the reading world true but is absent from the only accessible outcome with no contingent concretum."
+}
