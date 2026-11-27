@@ -1,0 +1,10 @@
+{
+  "id": "bf30ab73-431c-4169-bb77-f6c49a79c331",
+  "label": "Complete-decision fork tests the GOD_4 joint-absence power",
+  "subject_kind": "result",
+  "subject_id": "cdde5406-3265-401b-a2eb-f2a1defc91ed",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+  "note": "Shows that an undominated-decision policy with a creation above omission excludes total refraining but not replacement, the scope 0050b6ed needs."
+}

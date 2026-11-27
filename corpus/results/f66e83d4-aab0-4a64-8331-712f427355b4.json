@@ -1,0 +1,11 @@
+{
+  "id": "f66e83d4-aab0-4a64-8331-712f427355b4",
+  "label": "Matched four-account table under determination, by computation",
+  "argument_id": "8462ddcc-09a4-47d3-9522-15cf2854c508",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.fourAccountTable",
+  "comparator_config": "results/f66e83d4-aab0-4a64-8331-712f427355b4/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 608a262d. Under one determination standard and matched reach and recipient good: necessary manifestation selects only by making c non-contingent; an invariant D-directed source (impersonal propensity, generative finality, or standing will alone) explains 'rather than nothing' and 'rather than the unfit z' but never 'rather than d'; a permissive invariant source does not even explain 'rather than nothing'; every account that selects a contingent c does so through a contingent exercise level that its invariant nature does not see to. Rational adoption, propensity actualization and generative exercise share that encoding, so the standard certifies parity between them: what separates them is the classification and the operative content of the exercise, which this standard does not test. Establishes no premise."
+}

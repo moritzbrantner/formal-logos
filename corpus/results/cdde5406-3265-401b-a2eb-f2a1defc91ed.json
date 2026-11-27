@@ -1,0 +1,11 @@
+{
+  "id": "cdde5406-3265-401b-a2eb-f2a1defc91ed",
+  "label": "Complete-decision fork, by Mathlib order theory",
+  "argument_id": "5c83b9c0-8e66-419f-afdf-e1ba3c4f230c",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.completeDecisionFork",
+  "comparator_config": "results/cdde5406-3265-401b-a2eb-f2a1defc91ed/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 0050b6ed. It certifies #1953's complete-decision fork in Lean with Mathlib's Maximal rather than IsGreatest: an account that necessarily chooses an undominated complete decision, when some creation strictly surpasses omission, never totally refrains (it is necessarily productive in the sense of the omission table), while each particular creation can still be omitted; with a strictly improvable creation set it has no admissible decision. The theorem is neutral between personal and impersonal choosers: a maximizing will and an optimizing nature are bound alike. Establishes no premise."
+}

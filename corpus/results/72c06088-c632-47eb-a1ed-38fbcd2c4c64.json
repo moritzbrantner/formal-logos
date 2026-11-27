@@ -1,0 +1,11 @@
+{
+  "id": "72c06088-c632-47eb-a1ed-38fbcd2c4c64",
+  "label": "Three omission scopes of giving, by derivation and finite controls",
+  "argument_id": "3c988509-1eaa-4a41-9e2b-35ab8762b11a",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.omissionScopeTable",
+  "comparator_config": "results/72c06088-c632-47eb-a1ed-38fbcd2c4c64/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 0050b6ed. It certifies the §56 omission table that was hand-checked only: individual omission, whole-actual-roster withholding with replacement, and total refraining are distinct and strictly ordered modal profiles of a source's giving; a necessarily productive source (necessarily operative purpose, categorically directed generative nature, or a maximizer for whom a creation beats omission) can satisfy the first two but not the third, and a necessary manifestation satisfies none. The replacement frame satisfies #1897's ActualAbsenceByWithholding while giving something at every world. Finite surrogates only; no intellect, goodness or simplicity is typed."
+}

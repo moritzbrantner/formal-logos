@@ -1,0 +1,11 @@
+{
+  "id": "54e1279c-543d-4cfe-8811-5a66a3a33216",
+  "label": "Choice-cell determination laws, from the definitions",
+  "argument_id": "006a2dda-4770-4b74-ade4-d3b65fa13bd3",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.selectionRangeLaws",
+  "comparator_config": "results/54e1279c-543d-4cfe-8811-5a66a3a33216/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 608a262d: an invariant explanans (the kind an existential PSR reason token can be) explains the realized range of outcomes and no contrast within it; explaining the actual selection of a contingent outcome requires an explanans level whose own cell is contingent and is not seen to by any invariant level. The standard is label-free (law 7): it sees cell partitions, not whether a level is called an adoption, an actualization or an exercise. Establishes no premise; it is one contrastive standard (determination), not a theory of explanation."
+}

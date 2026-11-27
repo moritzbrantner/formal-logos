@@ -1,0 +1,9 @@
+{
+  "id": "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4",
+  "label": "Total refraining: at some accessible world where the source exists it gives nothing",
+  "term": "total refraining from giving",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.WithholdsAllAt",
+  "definition": "WithholdsAllAt F w g: at one accessible world v where g exists, g gives being to nothing. Not the same as there being no contingent concrete being at v: brute or otherwise-caused beings are not excluded.",
+  "note": "Stipulative giving-level reading of 'could have refrained from creating' (total noncreation scope of optimal-creation-choice.md §56). See docs/notes/optimal-creation-choice.md §61."
+}

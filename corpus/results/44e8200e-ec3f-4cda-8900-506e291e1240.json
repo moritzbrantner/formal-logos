@@ -1,0 +1,11 @@
+{
+  "id": "44e8200e-ec3f-4cda-8900-506e291e1240",
+  "label": "Joint-absence power scope controls, by finite models",
+  "argument_id": "7bbd3894-8f8f-465d-9a1e-d8689af941a1",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.actualAbsencePowerScopeControls",
+  "comparator_config": "results/44e8200e-ec3f-4cda-8900-506e291e1240/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 0050b6ed. Decides its scope: the premise as typed needs only the replacement scope (a world where the actual contingents are all absent, others allowed), is strictly weaker than total refraining, and holds of a source that gives something at every accessible world. The total-refraining warrant reaches it only through Euclidean access and monotone powers, each shown needed. Consequence: 0050b6ed does not by itself distinguish an optional creator from a necessarily productive (maximizing or categorically purposive, personal or impersonal) source. Encoding disclosures: the possibility reading has no causal content; the non-Euclidean holder is contingent at a; the maximally specific power is an artifact."
+}

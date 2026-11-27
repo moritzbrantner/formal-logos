@@ -1,0 +1,14 @@
+{
+  "id": "006a2dda-4770-4b74-ade4-d3b65fa13bd3",
+  "label": "Choice-cell determination laws, from the definitions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "d42bb07c-2b04-4635-87b1-1a6461f3ffb6",
+  "inference_ids": [
+    "43d5a016-8224-41d0-b4e7-8f50d17ae0ac"
+  ],
+  "meaning": "Law 1 is the definition of Cstit read as cell-range exclusion. Law 2 is set algebra, using that the cell range lies in the realized range. Law 3: with one cell, Cstit of 'not y' quantifies over every history. Law 4: with one cell, selection says every history has the actual outcome. Law 5 uses excluded middle on the outcome of a cell member. Law 6: a history with another outcome lies outside the selecting cell, so the cell proposition is not necessary, and a single-cell level's cell contains that history. Law 7 transports Cstit along equal cells. Not a transcription: the definitions do not contain the laws.",
+  "definition_ids": [
+    "5a818c39-1ba6-4cce-adf6-246d1d49fd1e",
+    "9e9af2c4-5938-4204-859b-fcf78d485e20"
+  ]
+}
