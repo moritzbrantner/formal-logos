@@ -1,0 +1,30 @@
+{
+  "id": "8fd690a2-2735-4559-8708-8996c0ad2c79",
+  "label": "Cogito thinking-root and same-witness essence nodes against actual root existence",
+  "statement_ids": [
+    "b401eca0-7fb9-48a7-a89c-3872f9912eea",
+    "db72222b-cf8d-4eca-8b80-56b418d488a6",
+    "debcd4e1-017d-4db4-a47f-ca287fe7f283",
+    "63bd518f-8d08-59cb-bce3-6d584ae56d8d",
+    "dc397705-d727-419e-92f9-65d44e1ff15d"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Curation pass 2 of #2103 (lane E). The Cogito route's necessary thinking root b401eca0 (producer 60df7e87, consuming the thinker-local premises db72222b and debcd4e1 with producers 601022e8 and 9e38fb0b) had no consumer reaching the root. Result b8b4e9f5 (actualRootOfThinkingRoot, specs/cogito-actual-root.toml) keeps its rootness clause and gives the root-path input dc397705 (ActualRootExistsAt) at the same profile and world. It is a projection: thinking, ancestry and de re necessity are dropped. It opens a support option for dc397705 whose warrant runs through an occurring thought and thinker-local premises instead of a global population, roster or well-foundedness premise. Rejected in the same pass: the analogous projection from the same-witness essence node 63bd518f. That statement links two senses each of NECESSARY (the frame NECESSARY_11 and NECESSARY_2), CAUSE_OF_ESSE_VERSUS_SUFFICIENT_REASON, WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY and WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT, so the projection would need four premise-carried sense bridges, one of them registering a frame parameter as a sense passage; that would be a contrived edge for clauses the proof discards.",
+  "blocker": "63bd518f and its producers 9d77f415 and 2302a4ef stay unplaced. A consumer would need a root-path statement that uses its essence-esse identity on the same witness (for example the no-limiting-principle root 6c37be2d, which also needs noncomposition and firstness), or a per-sense split of 63bd518f.",
+  "evidence": [
+    "b8b4e9f5-5a2d-48b6-be24-9e75abc266be",
+    "PR-2156"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2156"
+    }
+  ]
+}

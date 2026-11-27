@@ -1,0 +1,32 @@
+{
+  "id": "3249b20c-63be-4988-b2cf-afffc04cb4df",
+  "label": "An actual root exists, from the Cogito necessary thinking root",
+  "premise_statement_ids": [
+    "b401eca0-7fb9-48a7-a89c-3872f9912eea"
+  ],
+  "conclusion_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "inference_ids": [
+    "9112010d-3670-4000-8573-3ae18ceb54eb"
+  ],
+  "meaning": "The premise b401eca0 gives a bearer b of an occurring thought and one n that thinks, is a ground ancestor of b, is an actual root of the selected relation at w (concrete, existing at w, with no actual concrete ground there) and exists at every world accessible from w. Keeping only the rootness clause gives ActualRootExistsAt at the same profile and world: some actual concrete root exists at w. Thinking, ancestry and de re necessity are dropped, so the conclusion says nothing about a thinker, necessity, uniqueness or God. The step is a projection; its interest is the support option it opens for the root-path input dc397705, whose warrant here runs through the Cogito route: an occurring thought with a concrete bearer existing at w and the thinker-local premises (accessible thinking ancestry debcd4e1, grounding of contingent thinking cone members db72222b, earlier distinct thinking predecessors and excluded middle) in place of a global population, roster or well-foundedness premise. Sense bridge: b401eca0 states rootness as the absence of an actual concrete ground (WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1); ActualRoot (_2) is defined from that absence, and the premise carries both about the same n.",
+  "definition_ids": [
+    "12c3b24c-f278-499a-b127-db56a407af4c",
+    "8181eef7-4f03-42c3-bc1b-f440acc4556d",
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "statement_id": "b401eca0-7fb9-48a7-a89c-3872f9912eea"
+    }
+  ]
+}

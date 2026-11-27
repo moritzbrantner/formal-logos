@@ -1,0 +1,12 @@
+{
+  "id": "9112010d-3670-4000-8573-3ae18ceb54eb",
+  "label": "An actual root exists, from the Cogito necessary thinking root (inference)",
+  "input_statement_ids": [
+    "b401eca0-7fb9-48a7-a89c-3872f9912eea"
+  ],
+  "output_statement_id": "dc397705-d727-419e-92f9-65d44e1ff15d",
+  "rule": "Keep the rootness clause of the supplied thinking root",
+  "meaning": "The premise b401eca0 gives a bearer b of an occurring thought and one n that thinks, is a ground ancestor of b, is an actual root of the selected relation at w (concrete, existing at w, with no actual concrete ground there) and exists at every world accessible from w. Keeping only the rootness clause gives ActualRootExistsAt at the same profile and world: some actual concrete root exists at w. Thinking, ancestry and de re necessity are dropped, so the conclusion says nothing about a thinker, necessity, uniqueness or God. The step is a projection; its interest is the support option it opens for the root-path input dc397705, whose warrant here runs through the Cogito route: an occurring thought with a concrete bearer existing at w and the thinker-local premises (accessible thinking ancestry debcd4e1, grounding of contingent thinking cone members db72222b, earlier distinct thinking predecessors and excluded middle) in place of a global population, roster or well-foundedness premise. Sense bridge: b401eca0 states rootness as the absence of an actual concrete ground (WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1); ActualRoot (_2) is defined from that absence, and the premise carries both about the same n.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
