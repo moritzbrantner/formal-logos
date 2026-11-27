@@ -1,0 +1,11 @@
+{
+  "id": "04b7e78b-0f43-4452-9bb6-452c2e8d50b1",
+  "label": "Well-founded NECESSARY_2 grades strengthen their asymmetry",
+  "subject_kind": "statement",
+  "subject_id": "78945dde-2e6b-4e40-9383-ecb615208930",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "d0d25272-e577-4c79-8988-2954f37c076e",
+  "verification_result_id": "3bc885c0-80c7-4ab2-b66c-35c27a1c3837",
+  "note": "Strict on the same guarded grade, witnessed by asymmetricGradeWithoutFoundation in the backing Comparator configuration."
+}
