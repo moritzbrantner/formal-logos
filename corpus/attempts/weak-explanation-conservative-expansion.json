@@ -13,11 +13,20 @@
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Inventoried ExistencePSR, WorldwiseExplanation, BruteFoundationExplanations, HistoryContrastive, UnderivedCommonSource and PowerExistenceBoundary and read target dossiers. Existing finite scope/nonnecessitation controls and conservation-to-this-power conditional are reused, not repeated. New general construction expands ANY Ontic to weak sound token coverage plus stable tokens and guarded reason invariance with its exact original frame/existence/causes. A projection theorem certifies no added ontic constraint for this model class. Unchanged named fixedEffects supplies actual necessary cause and necessary caused effect; unchanged alternatingEffects supplies a contingent existent whose same weak token does not explain its absence elsewhere. Rejected treating intrinsic tags as adequate intrinsic reasons, stable tokens as unconditionally world-invariant explaining, ontic necessity as independence, or the old SupportsEsse field as independently defended real conservation. Materialized/read full existing translated q104a1; its direct-conservation/becoming distinction is already sourced and the CausesIn interpretation remains open. No new historical claim or cross-domain identity. Exact philosophical premise delta zero; no root leaf discharged. Development diagnostics pass with no axioms; final delivered CI owns build/binding/Comparator/NanoDa. Full reasoning and remaining bridges persist in docs/notes/weak-explanation-conservative-expansion.md.",
+  "summary": "Inventoried ExistencePSR, WorldwiseExplanation, BruteFoundationExplanations, HistoryContrastive, UnderivedCommonSource and PowerExistenceBoundary and read target dossiers. Existing finite scope/nonnecessitation controls and conservation-to-this-power conditional are reused, not repeated. New general construction expands ANY Ontic to weak sound token coverage plus stable tokens and guarded reason invariance with its exact original frame/existence/causes. A projection theorem certifies no added ontic constraint for this model class. Unchanged named fixedEffects supplies actual necessary cause and necessary caused effect; unchanged alternatingEffects supplies a contingent existent whose same weak token does not explain its absence elsewhere. Rejected treating intrinsic tags as adequate intrinsic reasons, stable tokens as unconditionally world-invariant explaining, ontic necessity as independence, or the old SupportsEsse field as independently defended real conservation. Materialized/read full existing translated q104a1; its direct-conservation/becoming distinction is already sourced and the CausesIn interpretation remains open. No new historical claim or cross-domain identity. Exact philosophical premise delta zero; no root leaf discharged. Development diagnostics pass with no axioms; final delivered CI owns build/binding/Comparator/NanoDa. Full reasoning and remaining bridges persist in docs/notes/weak-explanation-conservative-expansion.md.\n\nCuration pass 2, lane D batch 4 (#2103, 2026-11-27). 6cebe7ba remains unplaced. The fixed-effects expansion supplies coverage on a populated roster with a necessary source and necessary effect. In the alternating expansion the intrinsic-tag token explains the first effect at `false`, and the effect is absent at `true`. That token fails to explain its existence at `true`, while existence-guarded `ReasonInvariant` still holds. The exact unguarded persistence condition has no root-path registration.",
   "evidence": [
     "6cebe7ba-83b6-5b26-b18d-940157a3111d",
     "da9c82ed-e886-5335-81c3-cebad9b27345",
     "40aefb2e-c9b3-5bb1-8802-96bbc4e2ed83",
     "PR-677"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
   ]
 }
