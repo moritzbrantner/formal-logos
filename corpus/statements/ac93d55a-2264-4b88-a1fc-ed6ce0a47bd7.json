@@ -1,0 +1,14 @@
+{
+  "id": "ac93d55a-2264-4b88-a1fc-ed6ce0a47bd7",
+  "label": "A holder of another MOTION_1 moves it in some respect",
+  "paraphrase": "OPEN analyst sense bridge from MOTION_3 to MOTION_1, attribution deferred: if f, distinct from x, presently actualizes x in respect r (holding, definition 6ab9a832), then f moves x (the First Way's MovesIn, read broadly as educing from potency to act, MOTION_1, definition a7904c82) in some respect. Strongest support: x's act in r is from f's present acting, so f is presently reducing x's potency to that act, which is the broad reading of moving in DISAMB-MOTION. Substantive objection, recorded: where holding only conserves an act that x already has, the DISAMB-MOTION resolution reads moving as eduction from potency to act, and continued possession of an act is not a new eduction; on that reading conservation is not MOTION_1 moving, and the bridge holds only if present conservation of a lackable act counts as continuous reduction of potency to act.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.HoldingAnotherIsMoving",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

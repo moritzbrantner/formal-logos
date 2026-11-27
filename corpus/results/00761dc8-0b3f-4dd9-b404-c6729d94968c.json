@@ -1,0 +1,11 @@
+{
+  "id": "00761dc8-0b3f-4dd9-b404-c6729d94968c",
+  "label": "Relative first holder not MOTION_3 held, from the total-holding repair",
+  "argument_id": "5e55fbf1-22e3-4bd5-ad8f-049c054c6f67",
+  "challenge_module": "TruthCore.Results.Causality.HoldingFirstMover.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingFirstMover.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingFirstMover.unheldOperativeOfUnheldTotal",
+  "comparator_config": "results/00761dc8-0b3f-4dd9-b404-c6729d94968c/comparator.json",
+  "status": "solution-present",
+  "description": "TotallyHolds f x r includes f distinct from x and f presently actualizing x in r, so a total holder not MOTION_3 held in r is a holder of another not held in r; the double negation is carried through. This gives cf7940a7 a support through the total-holding repair (4b9462dd with the open bridge b41f6bcd, giving 6fdb45c3), which is consistent with the leaning-cards observation (TotalHolding Control part 1), beside its original support from the unrestricted holding per se link 685933c7, which that observation contradicts (f401994a). The weakening adds no warrant beyond 6fdb45c3's; b41f6bcd stays contested by co-support on the physical-holder reading."
+}

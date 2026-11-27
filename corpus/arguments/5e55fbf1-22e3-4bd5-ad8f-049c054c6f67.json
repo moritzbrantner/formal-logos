@@ -1,0 +1,20 @@
+{
+  "id": "5e55fbf1-22e3-4bd5-ad8f-049c054c6f67",
+  "label": "Relative first holder not MOTION_3 held, from the total-holding repair",
+  "premise_statement_ids": [
+    "6fdb45c3-2a30-4d42-9c86-937397d17f85"
+  ],
+  "conclusion_statement_id": "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4",
+  "inference_ids": [
+    "ce027241-740c-4185-b96b-366fefae8024"
+  ],
+  "meaning": "TotallyHolds f x r includes f distinct from x and f presently actualizing x in r, so a total holder not MOTION_3 held in r is a holder of another not held in r; the double negation is carried through. This gives cf7940a7 a support through the total-holding repair (4b9462dd with the open bridge b41f6bcd, giving 6fdb45c3), which is consistent with the leaning-cards observation (TotalHolding Control part 1), beside its original support from the unrestricted holding per se link 685933c7, which that observation contradicts (f401994a). The weakening adds no warrant beyond 6fdb45c3's; b41f6bcd stays contested by co-support on the physical-holder reading.",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "edca52e4-f224-491d-ac45-5816fac1a9fd"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

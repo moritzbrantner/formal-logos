@@ -1,0 +1,14 @@
+{
+  "id": "89f0d0d5-d22b-4811-bab6-1fa0d1830644",
+  "label": "What is MOTION_3 held in a respect could lack its act there",
+  "paraphrase": "OPEN analyst premise, attribution deferred: if x is MOTION_3 held in respect r (in act in r and presently actualized in r by something other than x, HeldMotion, definition ea1904bc), then x could lack its act in r (Lackability.CanLack, the primitive untimed lackability of definition 56b438a0). Strongest support: an act that x has from another's present acting depends on that acting, and what depends for an act on another's acting could be without it were that acting absent. Substantive objection, recorded: a thing necessary through another. The tertia via's own vocabulary (IsNecessaryPerSe, DEF-NECESSARY-PER-SE) admits beings that are necessary yet have a cause of their necessity; if such a being is presently held as to being by its cause, it is held in esse and could not lack being, so the premise excludes held beings necessary through another. It is the converse direction of C* in the holding sense (1dd5be70), which goes from lackable to held, and is not entailed by it.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.HeldActsAreLackable",
+  "definition_ids": [
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

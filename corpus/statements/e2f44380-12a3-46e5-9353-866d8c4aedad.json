@@ -1,0 +1,14 @@
+{
+  "id": "e2f44380-12a3-46e5-9353-866d8c4aedad",
+  "label": "Whatever is MOTION_1 moved in some respect is MOTION_3 held in some respect",
+  "paraphrase": "OPEN analyst sense bridge from MOTION_3 to MOTION_1, attribution deferred: if f is being moved (the First Way's MovedIn, MOTION_1, definition a7904c82) in some respect, then f is MOTION_3 held (definition ea1904bc) in some respect: f is in act in that respect and something other than f presently actualizes it there. It does not require the holding respect to be the respect of the motion. Strongest support: the First Way's own premise that whatever is moved is moved by another (4a952b96), together with the simultaneity of a per se mover and what it moves, gives a present actualizer of the moved thing in the act of its being moved. Substantive objection, recorded: accounts on which a motion, once begun, continues without any present mover (inertial uniform motion, and the extrinsic inertialist account of continued being recorded at 40a97664) deny a present actualizer; on those accounts the bridge fails for anything moved only by a past mover.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.MovedIsHeld",
+  "definition_ids": [
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e",
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ]
+}

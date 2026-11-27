@@ -1,0 +1,122 @@
+# The holding route to the absolute First-Way conclusion c1b68c21: the passage
+# (2') from the first holder's operative respect to every respect, the
+# total-holding repair feeding the relative first holder, and the MOTION_3 to
+# MOTION_1 sense bridges (3) named in docs/notes/caused-mover-cstar.md 9.4 and
+# 10.5. Curation pass 2 of #2103 (lane E batch 7). Analyst formulations,
+# attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.HoldingFirstMover"
+results = "TruthCore.Results.Causality.HoldingFirstMover"
+
+# ---------------------------------------------------------------- statements
+
+[[statement]]
+id = "What is MOTION_3 held in a respect could lack its act there"
+lean = "HeldActsAreLackable"
+paraphrase = "OPEN analyst premise, attribution deferred: if x is MOTION_3 held in respect r (in act in r and presently actualized in r by something other than x, HeldMotion, definition ea1904bc), then x could lack its act in r (Lackability.CanLack, the primitive untimed lackability of definition 56b438a0). Strongest support: an act that x has from another's present acting depends on that acting, and what depends for an act on another's acting could be without it were that acting absent. Substantive objection, recorded: a thing necessary through another. The tertia via's own vocabulary (IsNecessaryPerSe, DEF-NECESSARY-PER-SE) admits beings that are necessary yet have a cause of their necessity; if such a being is presently held as to being by its cause, it is held in esse and could not lack being, so the premise excludes held beings necessary through another. It is the converse direction of C* in the holding sense (1dd5be70), which goes from lackable to held, and is not entailed by it."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "56b438a0-7fcc-4dd5-916b-1d2e2162310b", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "What could lack being could lack each act it has"
+lean = "LackableBeingLacksEveryAct"
+paraphrase = "OPEN analyst premise, attribution deferred: if x could lack its act as to being (CanLack x esse, definition 56b438a0) and x is in act in respect r, then x could lack its act in r. Strongest support: 7067553d, nothing has actuality except insofar as it is; if x could be without being, it could be without whatever act it has. The premise fixes a uniform reading of the primitive CanLack: 'could be without the act, including by not being'. On a rival reading for respects other than esse, 'could exist while lacking the act', it fails for the essential acts of a contingent thing (a contingent thing that cannot exist without an essential property), so the two readings of CanLack must not be mixed; 'could lack being' is coherent only on the inclusive reading. It takes no stand on which things could lack being."
+definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"]
+
+[[statement]]
+id = "There cannot be no holder of another that is MOTION_3 held in no respect"
+lean = "FirstUnheldHolderCannotBeLacking"
+paraphrase = "Analyst conclusion, attribution deferred, the MOTION_3 sibling of the absolute First-Way conclusion c1b68c21: it is impossible that there be no f that presently actualizes some other x in some respect (holding, definition 6ab9a832) and is MOTION_3 held (definition ea1904bc) in no respect. It is the First-Way reading with being moved read as MOTION_3 holding and moving read as holding another (firstUnheldHolder_iff_reading). It says nothing of potency, necessity, uniqueness or God, and nothing about MOTION_1 motion."
+definitions = ["ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "A holder of another MOTION_1 moves it in some respect"
+lean = "HoldingAnotherIsMoving"
+paraphrase = "OPEN analyst sense bridge from MOTION_3 to MOTION_1, attribution deferred: if f, distinct from x, presently actualizes x in respect r (holding, definition 6ab9a832), then f moves x (the First Way's MovesIn, read broadly as educing from potency to act, MOTION_1, definition a7904c82) in some respect. Strongest support: x's act in r is from f's present acting, so f is presently reducing x's potency to that act, which is the broad reading of moving in DISAMB-MOTION. Substantive objection, recorded: where holding only conserves an act that x already has, the DISAMB-MOTION resolution reads moving as eduction from potency to act, and continued possession of an act is not a new eduction; on that reading conservation is not MOTION_1 moving, and the bridge holds only if present conservation of a lackable act counts as continuous reduction of potency to act."
+definitions = ["6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "a7904c82-eef8-58e4-ac7c-0bb93374cb43", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[[statement]]
+id = "Whatever is MOTION_1 moved in some respect is MOTION_3 held in some respect"
+lean = "MovedIsHeld"
+paraphrase = "OPEN analyst sense bridge from MOTION_3 to MOTION_1, attribution deferred: if f is being moved (the First Way's MovedIn, MOTION_1, definition a7904c82) in some respect, then f is MOTION_3 held (definition ea1904bc) in some respect: f is in act in that respect and something other than f presently actualizes it there. It does not require the holding respect to be the respect of the motion. Strongest support: the First Way's own premise that whatever is moved is moved by another (4a952b96), together with the simultaneity of a per se mover and what it moves, gives a present actualizer of the moved thing in the act of its being moved. Substantive objection, recorded: accounts on which a motion, once begun, continues without any present mover (inertial uniform motion, and the extrinsic inertialist account of continued being recorded at 40a97664) deny a present actualizer; on those accounts the bridge fails for anything moved only by a past mover."
+definitions = ["a7904c82-eef8-58e4-ac7c-0bb93374cb43", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1"]
+disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+# ---------------------------------------------------------------- arguments
+
+[[argument]]
+id = "A holder held in no respect, from the first holder and the lackability premises"
+label = "A holder MOTION_3 held in no respect, from the unlosable first holder"
+theorem = "firstUnheldHolderOfUnlosable"
+comparator_theorems = ["controls"]
+premises = ["5eb16c61-cbc4-4338-8e7d-e50b46401f07", "What is MOTION_3 held in a respect could lack its act there", "6e2176cd-eeb6-413c-8fd2-7b2df4a34ad4", "What could lack being could lack each act it has"]
+conclusion = "There cannot be no holder of another that is MOTION_3 held in no respect"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Suppose the first holder held in some respect; it could then lack that act, hence being, hence its operative act"
+meaning = "5eb16c61 supplies, under double negation, an f that presently actualizes some other x in r, is in act in r and could not lack its act in r. Suppose f were MOTION_3 held in some respect s. Then f is in act in s and, by the first lackability premise, could lack its act in s; by 6e2176cd it is in act as to being and could lack being; by the second lackability premise, since f is in act in r, it could lack its act in r, against the choice of f. So f is held in no respect, and the same f holds x. All on one Holding, one Lackability, one InAct and one esse. This is the passage (2') from the operative respect to every respect that docs/notes/caused-mover-cstar.md 10.5 records as unformulated. It does not use the esse instance f834ee65, the timed present-moment reading or any giving relation, so it neither duplicates nor depends on the connection plans of f834ee65 and f360bb6f. Each lackability premise is needed (controls parts 2 and 3) and the bundle is satisfiable with a holder (part 1). All premises stay open."
+
+[[argument]]
+id = "The First-Way conclusion from the MOTION_3 first holder and the sense bridges"
+label = "The First Way conclusion from the MOTION_3 first holder and two sense bridges"
+theorem = "firstMoverOfFirstUnheldHolder"
+comparator_theorems = ["firstUnheldHolder_iff_reading", "controls"]
+premises = ["There cannot be no holder of another that is MOTION_3 held in no respect", "A holder of another MOTION_1 moves it in some respect", "Whatever is MOTION_1 moved in some respect is MOTION_3 held in some respect"]
+conclusion = "c1b68c21-fa36-5ab0-a499-444259eda78a"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_bridges = [
+  { term = "MOTION", from = "MOTION_3", to = "MOTION_1", statement_id = "A holder of another MOTION_1 moves it in some respect" },
+  { term = "MOTION", from = "MOTION_3", to = "MOTION_1", statement_id = "Whatever is MOTION_1 moved in some respect is MOTION_3 held in some respect" },
+]
+rule = "Carry the first holder through the two sense bridges"
+meaning = "From the MOTION_3 first holder, under double negation, take f that holds some other x in r and is held in no respect. The mover-side bridge gives a respect s in which f moves x (MovesIn, MOTION_1). If f were moved (MovedIn, MOTION_1) in some respect t, the moved-side bridge would make it MOTION_3 held in some respect, which it is not. So f moves something and is moved in no respect: the First-Way reading for the supplied MovedIn and MovesIn, the absolute First-Way conclusion c1b68c21. The companion firstUnheldHolder_iff_reading records that the MOTION_3 first holder is that same reading with MovedIn and MovesIn read as holding; the two open bridges are what carries it to the route's MOTION_1 reading, and each is needed (controls parts 4 and 5). Passage between senses happens only through the two bridges, from MOTION_3 to MOTION_1. It identifies the first mover with nothing and says nothing of potency or God. A support option for c1b68c21 beside the prima via proofs a8ced49e and d337ab29, sharing none of their premises; its weakest points are the two bridges and the lackability premises, with the objections recorded on each."
+
+[[argument]]
+id = "The relative first holder from the first total holder unheld in its operative act"
+label = "Relative first holder not MOTION_3 held, from the total-holding repair"
+theorem = "unheldOperativeOfUnheldTotal"
+premises = ["6fdb45c3-2a30-4d42-9c86-937397d17f85"]
+conclusion = "cf7940a7-659d-47c1-9ab8-54b18e5bc9d4"
+axioms = []
+rule = "A total holder is a holder of another"
+meaning = "TotallyHolds f x r includes f distinct from x and f presently actualizing x in r, so a total holder not MOTION_3 held in r is a holder of another not held in r; the double negation is carried through. This gives cf7940a7 a support through the total-holding repair (4b9462dd with the open bridge b41f6bcd, giving 6fdb45c3), which is consistent with the leaning-cards observation (TotalHolding Control part 1), beside its original support from the unrestricted holding per se link 685933c7, which that observation contradicts (f401994a). The weakening adds no warrant beyond 6fdb45c3's; b41f6bcd stays contested by co-support on the physical-holder reading."
+
+# ---------------------------------------------------------------- placement of the controls
+
+[[relation]]
+id = "Held-back control tests held acts are lackable"
+subject_kind = "result"
+subject_id = "A holder held in no respect, from the first holder and the lackability premises"
+predicate = "tests"
+object_kind = "statement"
+object_id = "What is MOTION_3 held in a respect could lack its act there"
+note = "Comparator companion controls, part 2 (heldBack): the unlosable first holder, 6e2176cd and the second lackability premise hold; HeldActsAreLackable and the MOTION_3 first-holder conclusion fail, since every holder is held in some respect. Part 1 (soleHolder) satisfies the whole bundle with one holder held nowhere."
+
+[[relation]]
+id = "Esse-loop control tests lackable being lacks every act"
+subject_kind = "result"
+subject_id = "A holder held in no respect, from the first holder and the lackability premises"
+predicate = "tests"
+object_kind = "statement"
+object_id = "What could lack being could lack each act it has"
+note = "Comparator companion controls, part 3 (esseLoop): the unlosable first holder, HeldActsAreLackable and 6e2176cd hold; LackableBeingLacksEveryAct and the MOTION_3 first-holder conclusion fail, since the first holder could lack being but not its operative act and is held as to being."
+
+[[relation]]
+id = "Nothing-moves control tests holding another is moving"
+subject_kind = "result"
+subject_id = "The First-Way conclusion from the MOTION_3 first holder and the sense bridges"
+predicate = "tests"
+object_kind = "statement"
+object_id = "A holder of another MOTION_1 moves it in some respect"
+note = "Comparator companion controls, part 4: with the sole holder and empty MovedIn and MovesIn, the MOTION_3 first holder and MovedIsHeld hold; HoldingAnotherIsMoving and the First-Way reading fail."
+
+[[relation]]
+id = "Everything-moved control tests moved is held"
+subject_kind = "result"
+subject_id = "The First-Way conclusion from the MOTION_3 first holder and the sense bridges"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Whatever is MOTION_1 moved in some respect is MOTION_3 held in some respect"
+note = "Comparator companion controls, part 5: with the sole holder, MovesIn read as holding another and MovedIn true everywhere, the MOTION_3 first holder and HoldingAnotherIsMoving hold; MovedIsHeld and the First-Way reading fail."
