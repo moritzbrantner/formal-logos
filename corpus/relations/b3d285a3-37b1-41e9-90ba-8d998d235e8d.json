@@ -1,0 +1,10 @@
+{
+  "id": "b3d285a3-37b1-41e9-90ba-8d998d235e8d",
+  "label": "Test by ExplanatoryAdequacy.core (9acbdc2b)",
+  "subject_kind": "result",
+  "subject_id": "94ae21f5-ec46-575f-90f2-dec9ce70c27a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9acbdc2b-8a51-5bd1-aa9c-3b42eca37467",
+  "note": "Omit reason closure in the four-condition account core. At world 0 the sole reason for the contingent target is a contingent source fact with no admitted reason. The two-member account keeps contingent-reason foundation and admits only varying reasons, yet no reason-closed account of the target exists in that arena."
+}
