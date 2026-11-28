@@ -1,6 +1,6 @@
 # AGENTS.md shortening map (#2183)
 
-This note maps every section and rule of `AGENTS.md` as of `aabe61d38` (772 lines, 11,713 words) to its location after the shortening of #2183. No rule was dropped or weakened. Each rule either stays in `AGENTS.md`, condensed, or moves to a document that `AGENTS.md` names as mandatory reading for the task it governs. The earlier attempt, #2001, was used for ideas only.
+This note maps every section and rule of `AGENTS.md` as of `aabe61d38` (772 lines, 11,713 words) to its location after the shortening of #2183. Each rule either stays in `AGENTS.md`, condensed, or moves to [agent operations](../agent-operations.md) (which binds like `AGENTS.md`) or the systematic loop (followed as the canonical method); history and detail that already existed elsewhere stay in the decision records and the corpus model that `AGENTS.md` links. The earlier attempt, #2001, was used for ideas only. An independent completeness review of `e0b7e7721` found condensed wording that had narrowed or weakened some rules and one unsourced synthesis sentence; those were repaired, and the wording below is meant to drop or weaken no rule.
 
 Short forms used below: **A** = `AGENTS.md`, **OPS** = [`docs/agent-operations.md`](../agent-operations.md) (the one new document), **LOOP** = [`docs/systematic-corpus-loop.md`](../systematic-corpus-loop.md), **CM** = [`docs/corpus-model.md`](../corpus-model.md).
 
@@ -10,7 +10,7 @@ Headings that other files link to by anchor are unchanged: `research-continuatio
 
 | Old section (old line) | Rules | New location |
 | --- | --- | --- |
-| `# Codex worker contract` (1) | Purpose; complexity in the philosophy | A, title and first paragraph (heading kept). A now opens with a mandatory-reading table. |
+| `# Codex worker contract` (1) | Purpose; complexity in the philosophy | A, title and first paragraph (heading kept). A now opens with a table of the documents it cites: agent operations binds like A (its text moved from A), the loop is followed as the canonical method, the configuration loop when selected, the Catholic case is read first; the rest are references, as before. |
 | Current research focus, 2026-11-17 (5) | God-existence priority; defer historical and Catholic identification; root unchanged | A, Current research focus, paragraph 1 |
 | | End-to-end routes, strongest warrant, provisional assessment, matching-scope comparison, primitives kept, horizontal moves, no double-counting, visible dependencies, reviewed checkpoints, current-case view without leaf ranking | A, Current research focus, paragraph 2 |
 | | Encode formal definitions, mathematical claims, countermodels and worked proof applications in compiled Lean; reuse declarations; link the theorem and register results; keep observations, attribution, judgments and applications traceable (b35a72189) | A, Lean first and encode first, "Lean first" paragraph |
@@ -55,7 +55,7 @@ Headings that other files link to by anchor are unchanged: `research-continuatio
 | | Generators, conflict handling, pre-#416 rows | A, same heading (summary); full text OPS, Generated shared files |
 | One atomic work item (598), steps 1–6 | Source evidence; reuse; formalizing a reading; fidelity critique; Challenge/Solution/module/aggregator/result/Comparator; missing premises | OPS, One atomic work item (verbatim); A, Formalization, verification and review gates (summary) |
 | Step 7, Verify the three boundaries (665) | `truth` CLI; command list; `bundle_audit.py`; `bind-check` semantics; offline source checks; Comparator; NanoDa | OPS, step 7 (verbatim); A, Formalization, verification and review gates, "Verification coverage" |
-| Step 8, Self-sweep before requesting review (704) | Review-guideline self-review; semantic defects checklist; automated review is not the challenge; draft PR rule; `scripts/preflight.sh` (#2038); attribution self-check (#989); definition links; claim vs type; computed premise reporting; route costs; establishment rules | OPS, step 8 (verbatim); A, Formalization, verification and review gates, "Before the first push" and "Premise reporting" |
+| Step 8, Self-sweep before requesting review (704) | Review-guideline self-review; semantic defects checklist; automated review is not the challenge; draft PR rule; `scripts/preflight.sh` before pushing (#2038); attribution self-check before the first push (#989); definition links; claim vs type; computed premise reporting; route costs; establishment rules | OPS, step 8 (verbatim); A, Formalization, verification and review gates, "Before pushing", "Before requesting `@codex review`", "Before the first push" and "Premise reporting"; the claim-vs-type gaps also in A, Review guidelines, item 4 |
 | Review guidelines (724) | Items 1–5; P1 and P2 rules; `truth check` mechanical part | A, same heading (kept in A because `@codex review` reads it; condensed wording, the same P1 and P2 lists) |
 | Naming (746) | Namespaces; UUID ids; labels; legacy aliases; label-cleanup list only shrinks; migration | OPS, Naming (verbatim); A, Naming (summary) |
 | Turborepo block (762) | Generated guidance | A, end of file, byte-identical |
@@ -65,13 +65,15 @@ Headings that other files link to by anchor are unchanged: `research-continuatio
 The two owner statements of 2026-11-25 quoted in #2183 are in A, Lean first and encode first, "Lean first". The section also covers:
 
 - **Encode first.** The 2026-11-03 rules stay under the same heading. Encode first asked for prose on "provisional judgments … and what cannot yet be typed", while Lean first asks to encode "warrant criteria … defeaters". The two are reconciled explicitly: criteria, evidence and defeaters are encoded where practical, and the overall provisional judgment stays a prose assessment that cites them. It is never asserted as a Lean proposition. This matches Encode first's existing sentence "a provisional assessment is not an opaque proposition to assert in Lean".
-- **Logic first.** A closing sentence states that the three directions set one priority: formalize and check the logic now, and pursue fidelity and attribution when selected. [OPS, One atomic work item](../agent-operations.md#one-atomic-work-item) adds the matching clarification that an analyst formulation skips step 1 and the claim and passage items of step 3. The fidelity questions of step 4 still apply to the working reconstruction it formalizes. This restates the existing Logic-first bullet "New formalizations do not need new source, passage or claim records" at the step where it applies.
+- **Logic first** keeps its own section and scope (the Carneades.org campaign and other assigned logic tasks); no sentence merges it with Lean first or Encode first. [OPS, One atomic work item](../agent-operations.md#one-atomic-work-item) repeats, at the step where it applies, the existing Logic-first sentence that new formalizations need no new source, passage or claim records and are labelled analyst formulations with attribution deferred. Source-derived claims still follow invariants 1–3 and the fidelity critique of step 4.
 - **The loop and assessment workflow,** as the owner's clarification asks. LOOP step 2 ("Investigate flexibly") and LOOP, Provisional judgments and premise warrant, each now carry a Lean-first sentence.
 
 ## Wording added for clarity (no new obligation)
 
-- A, opening paragraph: linked mandatory documents bind for their tasks. If one seems to conflict with A, report the conflict instead of choosing silently.
-- A, Review guidelines, item 4: the existing Substantive Objection Standard P1 is listed beside the other P1s.
+- A, opening table: the standing of each cited document, as the old text gave it ("Follow the systematic research loop", "follow the configuration elimination loop", "read docs/catholic-case.md first", "See …" for the references).
+- A, Review guidelines, item 4: the existing Substantive Objection Standard P1 is listed beside the other P1s, and the claim-vs-type gaps of old step 8 are named under the existing "claims more than its source or theorem supports" P1, so `@codex review` sees them. Old step 8 already called them "most review P1s".
+- OPS: the analyst-formulation sentence before step 1 (from Logic first), the batch-generator pointer after step 5 (from Exploration and batch certification) and "(including the connectivity and placement gates)" in step 8 (true of `scripts/preflight.sh`).
+- Pointers outside the moved text now name OPS: `.github/pull_request_template.md`, `docs/proof-exploration.md` (step 8) and the `scripts/convert_to_module.py check` hint (step 5).
 - A, Permanent invariants: the condensed list states that the full wording in OPS governs.
 - `scripts/agent_service.py` docstring: a stale pointer to a nonexistent AGENTS.md section, "Local server experiment for the next workloop", now names "Local Lean preview service".
 

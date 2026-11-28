@@ -1,6 +1,6 @@
 # Agent operations
 
-This is the mandatory procedural reference named by [`AGENTS.md`](../AGENTS.md). Its rules bind like the contract itself for the tasks it covers: retrieval before research, the worker environment, formalizing a source reading or an argument, verifying and self-sweeping a change before review, generated shared files, a selected sense/rival comparison, naming records, and the full wording of the permanent invariants. It was moved out of `AGENTS.md` without change of rule (#2183); the research method itself is in the [systematic corpus loop](systematic-corpus-loop.md), and source ingestion of candidate ranges is in its [candidate section](systematic-corpus-loop.md#2-candidate-the-next-contiguous-source-range).
+This is the mandatory procedural reference named by [`AGENTS.md`](../AGENTS.md). Its rules bind like the contract itself for the tasks it covers: retrieval before research, the worker environment, formalizing a source reading or an argument, verifying and self-sweeping a change before review, generated shared files, a selected sense/rival comparison, naming records, and the full wording of the permanent invariants. It was moved out of `AGENTS.md` (#2183) with its wording unchanged apart from link formatting and the three pointers listed in the [shortening map](notes/agents-md-shortening-map.md#wording-added-for-clarity-no-new-obligation); the research method itself is in the [systematic corpus loop](systematic-corpus-loop.md), and source ingestion of candidate ranges is in its [candidate section](systematic-corpus-loop.md#2-candidate-the-next-contiguous-source-range).
 
 ## Retrieval before research
 
@@ -38,7 +38,7 @@ Before research, inspect `/progress` in the corpus explorer and the target's `/d
 
 ## One atomic work item
 
-Perform this loop for each philosophically substantive reading or argument encountered inside the current candidate range. For an analyst formulation under [Logic first](../AGENTS.md#logic-first-attribution-deferred-owner-direction-2026-11-05), step 1 and the claim and passage items of step 3 do not apply: label the formulation as an analyst formulation with attribution deferred, and apply the fidelity questions of step 4 to the working reconstruction it formalizes.
+Perform this loop for each philosophically substantive reading or argument encountered inside the current candidate range. Under [Logic first](../AGENTS.md#logic-first-attribution-deferred-owner-direction-2026-11-05), new formalizations need no new source, passage or claim records; label them as analyst formulations with attribution deferred.
 
 ### 1. Research from verified source evidence
 

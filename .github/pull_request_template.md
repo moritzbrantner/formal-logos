@@ -20,8 +20,8 @@ or behavior delivered instead. Do not manufacture a consumer. -->
 ## Premises, scope and claim/type check
 
 <!-- State retained assumptions/shared dependencies and conditional limits;
-label transcriptions. Include the AGENTS.md claim/type self-sweep for changed
-formal claims, intended premise effects, and the computed truth frontier-diff
+label transcriptions. Include the claim/type self-sweep (docs/agent-operations.md,
+step 8) for changed formal claims, intended premise effects, and the computed truth frontier-diff
 output or CI summary link when available. Non-proof work: intended no premise
 change, with the CI delta when available. Pending evidence stays pending. -->
 

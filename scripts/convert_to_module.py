@@ -218,7 +218,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"not a module: {graph.files[name].relative_to(graph.root)}", file=sys.stderr)
         if missing:
             print("write new Solutions and vocabulary files as modules: "
-                  "python3 scripts/convert_to_module.py convert <FILE> (AGENTS.md)", file=sys.stderr)
+                  "python3 scripts/convert_to_module.py convert <FILE> (docs/agent-operations.md, step 5)", file=sys.stderr)
             return 1
         return 0
     if args.files and args.max_level is not None:
