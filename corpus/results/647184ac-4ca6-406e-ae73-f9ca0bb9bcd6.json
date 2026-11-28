@@ -1,0 +1,11 @@
+{
+  "id": "647184ac-4ca6-406e-ae73-f9ca0bb9bcd6",
+  "label": "Own-nature carriage REQUIRES_LACK_1, from simplicity, seating, realization and transfer",
+  "argument_id": "639c3a65-3971-4089-90db-1bbb839aa086",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.ownCarriageFromUnity",
+  "comparator_config": "results/647184ac-4ca6-406e-ae73-f9ca0bb9bcd6/comparator.json",
+  "status": "solution-present",
+  "description": "Derivation (#2145 lane U): own-nature carriage as such from constitutive simplicity, seating, realization, ESSE and TRANSFER_1. A relocation of carriage into the transfer premise at simple roots (see unityTransferOfOwnCarriage). Establishes no premise."
+}

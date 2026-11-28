@@ -1,0 +1,11 @@
+{
+  "id": "04751700-9562-44a2-bd30-4b7771c2a305",
+  "label": "Own-nature carriage REQUIRES_LACK_1 at roots, from carriage LE",
+  "argument_id": "9e3f36cb-5d48-4959-b6ef-9cded505a00d",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.ownCarriageOfCarriage",
+  "comparator_config": "results/04751700-9562-44a2-bd30-4b7771c2a305/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate: carriage LE implies its own-nature restriction. Establishes no premise."
+}

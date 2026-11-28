@@ -47,6 +47,7 @@ meaning = "Fix an actual root r at w and a determination d that r lacks while so
 id = "Positive root essences, from carriage and the necessity direction of member grounding"
 label = "Positive ESSENCE_6 at roots, from carriage and member grounding's necessity direction"
 theorem = "positiveEssenceFromCarriage"
+strong_version_needed = { "682e6436-a44f-40d6-bc02-7cb5f4a2b754" = "Carriage restricted to the root's own nature (LE_own, 7c1db2e6) does not suffice: its conclusion, positive ESSENCE_6 at roots, concerns ESSENCE_6 conditions in any being's nature, not only in the root's own, so the step needs carriage of every ESSENCE_6 exclusion at the root (simple-unity-carriage lane U, #2145)." }
 comparator_theorems = ["carriageControls"]
 premises = ["682e6436-a44f-40d6-bc02-7cb5f4a2b754", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
 conclusion = "Every ESSENCE_6 condition on a root's profile holds at its admissible extensions"
