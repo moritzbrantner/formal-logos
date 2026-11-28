@@ -1,9 +1,14 @@
 {
   "id": "11dc5069-a46b-47b5-ba97-bc9cf00c4b28",
-  "label": "Being able to be without another has an accessible existence witness",
-  "paraphrase": "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction.",
+  "label": "Being able to be without another has an accessible existence witness (CAN_BE_WITHOUT_1)",
+  "paraphrase": "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction. Its consequent is CAN_BE_WITHOUT_1 (beingWithoutHasAccessibleWitness_iff); its antecedent keeps the undifferentiated relation of DEF-CAN-BE-WITHOUT, so it is the route's only passage into sense 1 (disambiguation d3808588). If being-without is read through another's power (CAN_BE_WITHOUT_2), it requires every contrast some power can bring about to be realized at an accessible world.",
   "lean_declaration": "TruthCore.Causality.CounterfactualDependence.BeingWithoutHasAccessibleWitness",
   "definition_ids": [
-    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "b93d877f-6055-493c-93d6-99cbd52ad4b7",
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4"
+  ],
+  "disambiguation_ids": [
+    "d3808588-cf71-4047-8417-d16156c04f47"
   ]
 }

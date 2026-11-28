@@ -10,14 +10,17 @@
   "inference_ids": [
     "41159fbd-2fd3-4c63-b194-7714e0eb4735"
   ],
-  "meaning": "Conditional support for the existing dependence-to-real-impossibility premise. If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. The three assumptions are explicit. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched.",
+  "meaning": "Re-presentation of the dependence-to-real-impossibility premise, not independent support for it (#2103). If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. With the selector a free parameter, soundness and coverage hold for some selector exactly when 000e1f65 holds with being-without read as accessible contrast, CAN_BE_WITHOUT_1 (Lean track_cover_iff_strict). So the argument derives 000e1f65 from its own accessibility reading and the one-way realization bridge 11dc5069; the counterfactual selection adds no constraint unless a selector is fixed independently. Its warrant for 000e1f65 is that of the accessibility reading plus 11dc5069. The frontier counts this verified derivation as proving 000e1f65 from open premises; that computed status records no further warrant. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched.",
   "definition_ids": [
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4",
     "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
     "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "b93d877f-6055-493c-93d6-99cbd52ad4b7",
     "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
   ],
   "disambiguation_ids": [
-    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb",
+    "d3808588-cf71-4047-8417-d16156c04f47"
   ],
   "strong_version_needed": {
     "06047f4c-ce98-4a33-a3f2-84fcf476d86e": "Full coverage is a consequent-independent selection policy: it is specified without knowing which effect is at issue. The weaker witness-preservation premise suffices for the conclusion and is used by the sibling argument (docs/notes/counterpossible-conservativity.md)."

@@ -1,7 +1,7 @@
 {
   "id": "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
-  "label": "Each grounded actual concretum has a root choice cell that withholds giving it being",
-  "paraphrase": "OPEN, analyst formulation. For each actual root g and actual concretum x it grounds at w, some cell of g's partition at the selected moment contains only histories that map to a world where g does not give x being. The cell may depend on x. The world map is shared with the accessibility premise.",
+  "label": "Each grounded actual concretum has a root choice cell that withholds (WITHHOLD_1) giving it being",
+  "paraphrase": "OPEN, analyst formulation. For each actual root g and actual concretum x it grounds at w, some cell of g's partition at the selected moment contains only histories that map to a world where g does not give x being. The cell may depend on x. The world map is shared with the accessibility premise. 'Withholds' is WITHHOLD_1, control over the whole cell (rootsHaveWithholdingCells_iff). With the branching frame and map unconstrained and at most one actual root, the discrete partition makes every witness of fbd0a6d3 a one-history cell, so this premise and 46a468b2 are jointly satisfiable exactly when fbd0a6d3 holds (cellsRepresentationIff, #2103). It adds a constraint beyond fbd0a6d3 only for an independently fixed partition and map.",
   "lean_declaration": "TruthCore.Causality.GivingChoice.RootsHaveWithholdingCells",
   "definition_ids": [
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
@@ -9,9 +9,11 @@
     "62dfa893-b633-4513-9790-8f9a0a3087e0",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+    "c54f0922-eb5c-4abd-9bde-6586e4127424",
+    "dba7c7df-b469-47e5-8130-1a6641e326b7"
   ],
   "disambiguation_ids": [
-    "623ddbf6-9683-5361-bae4-e348a00ec680"
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "419a65c2-f095-44c9-8459-06e72c77fbcd"
   ]
 }

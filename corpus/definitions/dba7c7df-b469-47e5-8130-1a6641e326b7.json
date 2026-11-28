@@ -1,0 +1,12 @@
+{
+  "id": "dba7c7df-b469-47e5-8130-1a6641e326b7",
+  "label": "WITHHOLD_1: every history in the root's choice cell maps to a world where it does not give x",
+  "term": "withholding giving, choice-cell sense",
+  "basis": "stipulative",
+  "definition": "WithholdsByCell F world g x k: every history in the choice cell of g represented by k, at the selected moment of a STIT branching frame, maps to a world where g does not give x being. It is agentive control over the cell (Cstit, definition c54f0922), not one history of nonproduction. It says nothing about accessibility of the mapped worlds or about g's presence there. Example: a partition whose cell for a refusal maps only to worlds without the gift. Non-example: a cell containing one history with the gift and one without.",
+  "lean_declaration": "TruthCore.Causality.GivingChoice.WithholdsByCell",
+  "definition_ids": [
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "note": "Analyst sense (#2090, #2103). rootsHaveWithholdingCells_iff shows the cell premise 0dd78706 is this sense for each actual root and grounded actual concretum (Iff.rfl). Distinct from WITHHOLD_2 (0772c968): passage to sense 2 needs the admissibility premise 46a468b2. A source stating that the first cause's choice includes withholding a particular effect would source it."
+}

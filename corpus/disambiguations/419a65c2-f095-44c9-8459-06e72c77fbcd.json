@@ -1,0 +1,25 @@
+{
+  "id": "419a65c2-f095-44c9-8459-06e72c77fbcd",
+  "label": "Withhold giving: STIT choice cell or accessible per-effect non-giving",
+  "term": "withholding giving (choice-cell control versus accessible non-giving)",
+  "term_label": "WITHHOLD",
+  "sense_definition_ids": [
+    "dba7c7df-b469-47e5-8130-1a6641e326b7",
+    "0772c968-5bd0-412f-ab83-cfc4f6bcc9c8"
+  ],
+  "senses": [
+    {
+      "id": "271a6878-a2dc-4426-9c93-96bec1342707",
+      "label": "WITHHOLD_1",
+      "definition_id": "dba7c7df-b469-47e5-8130-1a6641e326b7",
+      "lean_declaration": "TruthCore.Causality.GivingChoice.WithholdsByCell"
+    },
+    {
+      "id": "eb004a66-1c07-4ef7-9cfc-412b610a316e",
+      "label": "WITHHOLD_2",
+      "definition_id": "0772c968-5bd0-412f-ab83-cfc4f6bcc9c8",
+      "lean_declaration": "TruthCore.Causality.GivingChoice.WithholdsAtAccessible"
+    }
+  ],
+  "resolution": "The cell premise 0dd78706 uses WITHHOLD_1: agentive control over a whole choice cell of a STIT frame, with no claim about accessibility. Premise (a) fbd0a6d3 of the NAR route uses WITHHOLD_2: an accessible world where the root exists and does not give the recipient being, with no choice or control. Argument 19a0417f passes from sense 1 to sense 2 only through the admissibility premise 46a468b2, applied at the cell's representative; it does not carry the agentive content of sense 1 into premise (a). No argument passes from sense 2 to sense 1 for a given frame and map. For some representation the passage is available: with the branching frame and world map unconstrained and at most one actual root, the discrete partition turns each sense-2 witness into a one-history cell (cellsRepresentationIff). That is why sense 1 adds no constraint to premise (a) unless the partition and map are fixed independently. TOTAL_REFRAINING (6ce98992) is a separate, total notion: giving nothing at one world, not withholding one recipient."
+}

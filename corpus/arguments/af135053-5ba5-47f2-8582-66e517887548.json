@@ -10,6 +10,8 @@
   ],
   "meaning": "For the same frame, selector and origin, an accessible effect-present source-absence witness lies among the worlds selected by full coverage. The same witness satisfies the weaker premise. Full coverage is the sole premise.",
   "definition_ids": [
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4",
+    "b93d877f-6055-493c-93d6-99cbd52ad4b7",
     "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
   ],
   "strong_version_needed": {

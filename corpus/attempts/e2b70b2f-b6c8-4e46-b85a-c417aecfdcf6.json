@@ -9,7 +9,7 @@
   "date": "2026-11-26",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "The #468 intellectual and simple impersonal assignments share the structural maximum and necessary underived signature. At the same #1867 copy schedule they give the same complete represented trace and opposite root intellect and will. The trace identifies the copy/toggle schedule within that law class. The independently imposed attribute premises give an inhabited restriction where both attributes hold. See the actual-history section of docs/notes/physical-ground-468.md for matched explanatory alternatives and the provisional assessment. The model combines existing assignments with a schedule and has no rule making a source produce that schedule.",
+  "summary": "The #468 intellectual and simple impersonal assignments share the structural maximum and necessary underived signature. At the same #1867 copy schedule they give the same complete represented trace and opposite root intellect and will. The trace identifies the copy/toggle schedule within that law class. The independently imposed attribute premises give an inhabited restriction where both attributes hold. See the actual-history section of docs/notes/physical-ground-468.md for matched explanatory alternatives and the provisional assessment. The model combines existing assignments with a schedule and has no rule making a source produce that schedule.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2099: the represented history reads only the schedule, so non-identification of the root attributes holds by construction; statement 582769fa and relation 31a7d744 now say so and that the impersonal witness shows 180f5ad2 is needed for the attribute in this profile, not that it is false.",
   "blocker": "OPEN: same-source production of the particular actual order and an independently warranted domain restriction or permitted source-sensitive report that separates different attribute values on every tied fiber. A Boolean history alone represents neither exercise of intellect and will nor adequate ultimate explanation.",
   "evidence": [
     "38ebb0ba-2e44-44a2-8bb1-61617e0b5200",
@@ -31,6 +31,22 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2099"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2099"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2191"
     }
   ]
 }
