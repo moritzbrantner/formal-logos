@@ -3,7 +3,7 @@
   "label": "No normalized finitely additive set function invariant under all permutations",
   "input_statement_ids": [],
   "output_statement_id": "fb7d133e-f0ac-44bd-9ea7-792b079c352f",
-  "rule": "mathematical-proof",
+  "rule": "Mathematical proof in Lean with Mathlib",
   "meaning": "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []

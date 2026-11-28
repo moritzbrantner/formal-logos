@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Modal.Kripke
+public import TruthCore.Science.FineTuningInformation
 public import Mathlib.Probability.Distributions.Geometric
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 public import Mathlib.SetTheory.Cardinal.Arithmetic
@@ -15,12 +16,9 @@ possibility. Point support is used only on countable discrete spaces. -/
 
 namespace TruthCore.Modal.ProbabilityUnderdetermination
 open Set MeasureTheory
+open TruthCore.Science.FineTuningInformation.Plenitude (PointFullSupport InteriorRate)
 open scoped ENNReal Cardinal
 universe u v
-
-/-- Positive mass at every point, not the topological notion of support. -/
-def PointFullSupport {W : Type u} [MeasurableSpace W] (μ : Measure W) : Prop :=
-  ∀ x, 0 < μ {x}
 
 /-- The uniform-point-mass demand on a countably infinite carrier. -/
 def EqualPointMass {W : Type u} [MeasurableSpace W] (μ : Measure W) : Prop :=
@@ -49,8 +47,9 @@ def Exhaustion {W : Type u} (E : ℕ → Finset W) : Prop :=
 def HasDensity {W : Type u} (s : Set W) (E : ℕ → Finset W) (r : ℝ) : Prop :=
   ∀ ε : ℝ, 0 < ε → ∃ N : ℕ, ∀ n ≥ N, |frequency s (E n) - r| < ε
 
-/-- Initial finite set of a bijective enumeration. -/
-def prefix {W : Type u} (e : ℕ ≃ W) (n : ℕ) : Finset W :=
+/-- Initial finite set of a bijective enumeration. (`prefix` is a Lean
+keyword, so the declaration is named `enumPrefix`.) -/
+def enumPrefix {W : Type u} (e : ℕ ≃ W) (n : ℕ) : Finset W :=
   (Finset.range n).map e.toEmbedding
 
 /-- Truth event on the existing Kripke successor subtype. -/
@@ -66,12 +65,6 @@ def NoUniform : Prop :=
   ∀ (W : Type u) [Countable W] [Infinite W] [MeasurableSpace W]
     [MeasurableSingletonClass W] (μ : Measure W) [IsProbabilityMeasure μ],
     ¬ EqualPointMass μ
-
-def ArbitraryProbability : Prop :=
-  ∀ (W : Type u) [Countable W] [MeasurableSpace W] [MeasurableSingletonClass W]
-    (s : Set W) [Infinite s] [Infinite (sᶜ : Set W)] (p : ℝ≥0∞),
-    0 < p → p < 1 →
-    ∃ μ : Measure W, IsProbabilityMeasure μ ∧ PointFullSupport μ ∧ μ s = p
 
 def EqualCardinalityDifferent : Prop :=
   ∀ (W : Type u) [Countable W] [MeasurableSpace W] [MeasurableSingletonClass W]
@@ -90,8 +83,8 @@ def NoAllSubsetsPermutationMeasure : Prop :=
 
 def EnumerationDependence : Prop :=
   ∃ (s : Set ℕ) (e f : ℕ ≃ ℕ),
-    Exhaustion (prefix e) ∧ Exhaustion (prefix f) ∧
-    HasDensity s (prefix e) (1/2) ∧ HasDensity s (prefix f) (1/3)
+    Exhaustion (enumPrefix e) ∧ Exhaustion (enumPrefix f) ∧
+    HasDensity s (enumPrefix e) (1/2) ∧ HasDensity s (enumPrefix f) (1/3)
 
 def ContinuousControl : Prop :=
   IsProbabilityMeasure unitMeasure ∧ (∀ x : ℝ, unitMeasure {x} = 0) ∧
@@ -107,8 +100,9 @@ def ModalProbabilityFreedom : Prop :=
     [MeasurableSingletonClass {v // F.access w v}]
     [Infinite (accessibleEvent F V w φ)]
     [Infinite ((accessibleEvent F V w φ)ᶜ : Set {v // F.access w v})]
-    (p : ℝ≥0∞), 0 < p → p < 1 →
+    (p : InteriorRate),
     ∃ μ : Measure {v // F.access w v},
-      IsProbabilityMeasure μ ∧ PointFullSupport μ ∧ μ (accessibleEvent F V w φ) = p
+      IsProbabilityMeasure μ ∧ PointFullSupport μ ∧
+        μ.real (accessibleEvent F V w φ) = (p.val : ℝ)
 
 end TruthCore.Modal.ProbabilityUnderdetermination

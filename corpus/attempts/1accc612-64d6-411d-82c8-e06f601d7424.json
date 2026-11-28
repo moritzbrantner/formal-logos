@@ -5,29 +5,28 @@
   "statement_ids": [
     "8626f8a5-9531-5da7-9ebd-f901e74b1129",
     "796b415f-2de6-46b1-ae71-ee7fab6a5689",
-    "0114e877-ff0e-4993-bfc1-48c9f49f45a1",
     "2234ab77-e804-4d62-a47b-f6b33ee60c2e",
     "fb7d133e-f0ac-44bd-9ea7-792b079c352f",
     "a25f78a8-0d9a-4350-9801-b63772631c19",
     "cad430dd-8c03-42e1-8d33-29d3837694e0",
     "5b82cb80-34b3-4511-b4ce-f6d8e6e357f7",
-    "7d4d86dd-97c0-43f0-882a-687af5d675e5"
+    "7d4d86dd-97c0-43f0-882a-687af5d675e5",
+    "c3f76aea-ee54-471c-8a37-ef53eab821d6"
   ],
   "kind": "derivation",
-  "outcome": "blocked",
-  "summary": "Analyst derivation, attribution deferred. Reuses Kripke.Frame/Holds, Mathlib measures, existing finite FineTuningSelection and FineTuningEvidence boundaries. Candidate proof uses geometric mixtures and cardinal equality, a two-vs-three partition obstruction already under finite additivity, incompatible full enumeration limits, and restricted Lebesgue measure. Reject the leap from equal cardinality or modal access to equal probabilities; also reject the leap from absence of a universal uniform prior to impossibility of justified probabilistic inquiry. Positive rival: an independently motivated generative law, measurable geometry or observer-weighting kernel selects a measure without requiring all-permutation invariance.",
+  "outcome": "succeeded",
+  "summary": "Analyst derivation, attribution deferred. Reuses Kripke.Frame/Holds, Mathlib measures, existing finite FineTuningSelection and FineTuningEvidence boundaries. Proofs: no uniform point masses (constant zero sums to zero, constant nonzero to infinity); equal cardinality with unequal mass and modal freedom on a fixed Kripke frame both reuse the shared interior-mass lemma of #2143 (arbitraryInteriorMass, cb2b9ac7), which replaced this draft's duplicate geometric-mixture lemma; a two-vs-three partition obstruction already under finite additivity, incompatible full enumeration limits, and restricted Lebesgue measure. Reject the leap from equal cardinality or modal access to equal probabilities; also reject the leap from absence of a universal uniform prior to impossibility of justified probabilistic inquiry. Positive rival: an independently motivated generative law, measurable geometry or observer-weighting kernel selects a measure without requiring all-permutation invariance. Repair 2026-11-28: all seven remaining results build, bind and pass Comparator and NanoDa; the modal freedom statement now uses the shared InteriorRate and real-valued event mass. Scope: these are non-identification and impossibility-of-symmetric-measure results. No uniform or all-permutation-invariant probability exists on these carriers, but that is not the absence of every probability: point-positive non-uniform measures exist for every interior value.",
   "evidence": [
     "f2156f94-4599-4456-9daa-764618c72317",
-    "26975160-78e2-441b-9a75-72a124abad2a",
     "b1a3baef-5ec9-4558-9e10-1f14c65495e8",
     "c9ae92bb-f632-4163-9918-d2f55c34494b",
     "6b79e32d-4ae4-4b2e-987f-e4d594c1381e",
     "5a084d1b-b6e3-4fec-a788-2afb62f27251",
     "a1954608-e63e-4de4-a600-502b4a17b167",
     "052851f3-ed41-4082-bf9a-6d4a710df845",
+    "cb2b9ac7-8d8a-441b-9685-95a719346af3",
     "PR-2142"
   ],
-  "blocker": "No local Lean/Lake toolchain, checkout, corpus CLI or independent semantic reviewer available in the authoring runtime. Draft requires actual build, Comparator/NanoDa, binding, semantic challenge and computed frontier comparison. Physical/world-to-measure and actual designer bridges remain open.",
   "workers": [
     {
       "role": "author",
@@ -36,6 +35,15 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2142"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2142"
     }
-  ]
+  ],
+  "blocker": "Physical world-to-measure, observer-selection and actual designer bridges remain open; independent semantic challenge is pending."
 }

@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.modalProbabilityFreedom",
   "comparator_config": "results/052851f3-ed41-4082-bf9a-6d4a710df845/comparator.json",
   "status": "solution-present",
-  "description": "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are infinite, each strictly interior event probability is realized by a point-full-support measure on exactly that carrier. No change of frame or valuation is used. Draft proof candidate; verification required."
+  "description": "Instantiates the shared interior-mass lemma of #2143 on the accessible-world subtype of a fixed frame, with the formula truth event as the infinite event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability."
 }

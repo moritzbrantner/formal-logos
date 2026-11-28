@@ -3,7 +3,7 @@
   "label": "No all-subsets probability measure invariant under every permutation",
   "input_statement_ids": [],
   "output_statement_id": "a25f78a8-0d9a-4350-9801-b63772631c19",
-  "rule": "mathematical-proof",
+  "rule": "Mathematical proof in Lean with Mathlib",
   "meaning": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []

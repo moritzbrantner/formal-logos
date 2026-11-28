@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.noPermutationProbability",
   "comparator_config": "results/c9ae92bb-f632-4163-9918-d2f55c34494b/comparator.json",
   "status": "solution-present",
-  "description": "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required. Draft proof candidate; verification required."
+  "description": "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required."
 }

@@ -3,8 +3,8 @@
   "label": "Fixed modal accessibility and truth leave interior event probability arbitrary",
   "input_statement_ids": [],
   "output_statement_id": "7d4d86dd-97c0-43f0-882a-687af5d675e5",
-  "rule": "mathematical-proof",
-  "meaning": "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are infinite, each strictly interior event probability is realized by a point-full-support measure on exactly that carrier. No change of frame or valuation is used.",
+  "rule": "Mathematical proof in Lean with Mathlib",
+  "meaning": "Instantiates the shared interior-mass lemma of #2143 on the accessible-world subtype of a fixed frame, with the formula truth event as the infinite event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

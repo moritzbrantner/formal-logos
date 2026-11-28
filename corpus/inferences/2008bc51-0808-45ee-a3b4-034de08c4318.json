@@ -3,8 +3,8 @@
   "label": "Equal infinite cardinality does not determine equal probability",
   "input_statement_ids": [],
   "output_statement_id": "2234ab77-e804-4d62-a47b-f6b33ee60c2e",
-  "rule": "mathematical-proof",
-  "meaning": "On every countable carrier with measurable singletons and two infinite complementary events, the two subtypes have equal cardinality and there exists a point-full-support probability measure assigning them unequal masses.",
+  "rule": "Mathematical proof in Lean with Mathlib",
+  "meaning": "On every countable carrier with measurable singletons and two infinite complementary events, the two subtypes have equal cardinality, and the shared interior-mass lemma at one third gives a point-full-support probability measure assigning them unequal masses.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

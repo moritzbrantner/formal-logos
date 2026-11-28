@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.noAllSubsetsPermutationMeasure",
   "comparator_config": "results/6b79e32d-4ae4-4b2e-987f-e4d594c1381e/comparator.json",
   "status": "solution-present",
-  "description": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result. Draft proof candidate; verification required."
+  "description": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result."
 }

@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Modal.ProbabilityUnderdetermination
+public import TruthCore.Results.Science.FineTuningInformation.Solution
 import Mathlib.Tactic
 
 @[expose] public section
@@ -9,6 +10,8 @@ namespace TruthCore.Results.Modal.ProbabilityUnderdetermination
 open TruthCore.Modal
 open TruthCore.Modal.ProbabilityUnderdetermination
 open Set MeasureTheory ProbabilityTheory
+open TruthCore.Science.FineTuningInformation.Plenitude (PointFullSupport InteriorRate)
+open TruthCore.Results.Science.FineTuningInformation (arbitraryInteriorMass)
 open scoped ENNReal Cardinal
 universe u v
 
@@ -22,98 +25,18 @@ theorem noUniform : NoUniform.{u} := by
   · rw [ENNReal.tsum_const_eq_top_of_ne_zero hz] at hs
     simp at hs
 
-private noncomputable def natEquiv (W : Type u) [Countable W] [Infinite W] :
-    ℕ ≃ W :=
-  Classical.choice (Cardinal.lift_mk_eq'.mp (by
-    simp [Cardinal.mk_nat, Cardinal.mk_eq_aleph0 W]))
-
-private noncomputable def half : unitInterval :=
-  ⟨1/2, by constructor <;> norm_num⟩
-
-private noncomputable def geom : Measure ℕ := geometricMeasure half
-
-private theorem geom_mass_pos (n : ℕ) : 0 < geom {n} := by
-  have h0 : half ≠ 0 := by
-    intro h
-    have h' := congrArg (fun x : unitInterval => (x : ℝ)) h
-    norm_num [half] at h'
-  have h1 : half ≠ 1 := by
-    intro h
-    have h' := congrArg (fun x : unitInterval => (x : ℝ)) h
-    norm_num [half] at h'
-  rw [geom, geometricMeasure_singleton h0]
-  exact ENNReal.ofReal_pos.mpr (geometricMeasure_pos h0 h1 n)
-
-private theorem geom_univ : geom univ = 1 := by
-  unfold geom
-  exact measure_univ
-
-private theorem map_mass_pos {W : Type u} [MeasurableSpace W]
-    [MeasurableSingletonClass W] (f : ℕ → W) (x : W) (h : ∃ n, f n = x) :
-    0 < (geom.map f) {x} := by
-  obtain ⟨n, hn⟩ := h
-  rw [Measure.map_apply (measurable_of_countable f) (measurableSet_singleton x)]
-  apply lt_of_lt_of_le (geom_mass_pos n)
-  apply measure_mono
-  intro i hi
-  have hi' : i = n := by simpa using hi
-  simpa [hi', hn]
-
-theorem arbitraryProbability : ArbitraryProbability.{u} := by
-  intro W _ _ _ s _ _ p hp0 hp1
-  classical
-  let e := natEquiv s
-  let f := natEquiv (sᶜ : Set W)
-  let l : ℕ → W := fun n => (e n).val
-  let r : ℕ → W := fun n => (f n).val
-  let a := geom.map l
-  let b := geom.map r
-  have hs : MeasurableSet s := (Set.to_countable s).measurableSet
-  have ha : a univ = 1 := by
-    rw [a, Measure.map_apply (measurable_of_countable l) MeasurableSet.univ]
-    simpa using geom_univ
-  have hb : b univ = 1 := by
-    rw [b, Measure.map_apply (measurable_of_countable r) MeasurableSet.univ]
-    simpa using geom_univ
-  have hls : l ⁻¹' s = univ := by
-    ext n
-    simp only [mem_preimage, mem_univ, iff_true]
-    exact (e n).property
-  have hrs : r ⁻¹' s = ∅ := by
-    ext n
-    simp only [mem_preimage, mem_empty_iff_false, iff_false]
-    exact (f n).property
-  have has : a s = 1 := by
-    rw [a, Measure.map_apply (measurable_of_countable l) hs, hls, geom_univ]
-  have hbs : b s = 0 := by
-    rw [b, Measure.map_apply (measurable_of_countable r) hs, hrs, measure_empty]
-  refine ⟨p • a + (1-p) • b, ?_, ?_, ?_⟩
-  · constructor
-    simp only [Measure.add_apply, Measure.smul_apply, smul_eq_mul, ha, hb, mul_one]
-    rw [add_comm p, tsub_add_cancel_of_le hp1.le]
-  · intro x
-    simp only [Measure.add_apply, Measure.smul_apply, smul_eq_mul]
-    by_cases hx : x ∈ s
-    · have h : 0 < a {x} :=
-        map_mass_pos l x ⟨e.symm ⟨x, hx⟩, by simp [l]⟩
-      exact lt_of_lt_of_le (mul_pos hp0 h) le_self_add
-    · have h : 0 < b {x} :=
-        map_mass_pos r x ⟨f.symm ⟨x, hx⟩, by simp [r]⟩
-      have hq : 0 < (1-p : ℝ≥0∞) := tsub_pos_of_lt hp1
-      exact lt_of_lt_of_le (mul_pos hq h) le_add_self
-  · simp [Measure.add_apply, Measure.smul_apply, smul_eq_mul, has, hbs]
-
+/-- Reuses the shared interior-mass lemma of #2143 at probability one third. -/
 theorem equalCardinalityDifferent : EqualCardinalityDifferent.{u} := by
   intro W _ _ _ s _ _
   refine ⟨by rw [Cardinal.mk_eq_aleph0 s, Cardinal.mk_eq_aleph0 (sᶜ : Set W)], ?_⟩
-  obtain ⟨μ, hμ, hf, hp⟩ :=
-    arbitraryProbability W s (1/3) (by norm_num) (by norm_num)
-  letI : IsProbabilityMeasure μ := hμ
+  let third : InteriorRate := ⟨⟨1/3, by norm_num, by norm_num⟩, by norm_num, by norm_num⟩
+  obtain ⟨μ, hμ, hf, hp⟩ := arbitraryInteriorMass W s third
   refine ⟨μ, hμ, hf, ?_⟩
   intro he
-  have h := measure_add_measure_compl (μ := μ) (Set.to_countable s).measurableSet
-  rw [measure_univ, ← he, hp] at h
-  norm_num at h
+  have hs : MeasurableSet s := (Set.to_countable s).measurableSet
+  have h := measureReal_add_measureReal_compl (μ := μ) hs
+  rw [probReal_univ, measureReal_def, measureReal_def, ← he, ← measureReal_def, hp] at h
+  norm_num [third] at h
 
 /-- A bijection carrying even indices to multiples of three. The remaining
 indices are split between the two other residue classes. -/
@@ -122,49 +45,49 @@ def twoToThree : Equiv.Perm ℕ where
     else if n % 4 = 1 then 3*(n/4)+1 else 3*(n/4)+2
   invFun n := if n % 3 = 0 then 2*(n/3)
     else if n % 3 = 1 then 4*(n/3)+1 else 4*(n/3)+3
-  left_inv := by intro n; split_ifs <;> omega
-  right_inv := by intro n; split_ifs <;> omega
+  left_inv := by intro n; dsimp only; split_ifs <;> omega
+  right_inv := by intro n; dsimp only; split_ifs <;> omega
 
 theorem twoToThree_mod (n : ℕ) : n % 2 = 0 ↔ twoToThree n % 3 = 0 := by
   change n % 2 = 0 ↔ (if n % 2 = 0 then 3*(n/2)
     else if n % 4 = 1 then 3*(n/4)+1 else 3*(n/4)+2) % 3 = 0
   split_ifs <;> omega
 
-private def flip : Equiv.Perm ℕ where
+private def swapParity : Equiv.Perm ℕ where
   toFun n := if n % 2 = 0 then n+1 else n-1
   invFun n := if n % 2 = 0 then n+1 else n-1
-  left_inv := by intro n; split_ifs <;> omega
-  right_inv := by intro n; split_ifs <;> omega
+  left_inv := by intro n; dsimp only; split_ifs <;> omega
+  right_inv := by intro n; dsimp only; split_ifs <;> omega
 
-private def cycle : Equiv.Perm ℕ where
+private def cycleThree : Equiv.Perm ℕ where
   toFun n := if n % 3 = 2 then n-2 else n+1
   invFun n := if n % 3 = 0 then n+2 else n-1
-  left_inv := by intro n; split_ifs <;> omega
-  right_inv := by intro n; split_ifs <;> omega
+  left_inv := by intro n; dsimp only; split_ifs <;> omega
+  right_inv := by intro n; dsimp only; split_ifs <;> omega
 
 private def residue (k r : ℕ) : Set ℕ := {n | n % k = r}
 
 private theorem natAdditiveImpossible (m : Set ℕ → ℝ)
     (ha : NormalizedAdditive m) (hi : PermutationInvariant m) : False := by
-  have hf : flip ⁻¹' residue 2 1 = residue 2 0 := by
+  have hf : swapParity ⁻¹' residue 2 1 = residue 2 0 := by
     ext n
     change (if n % 2 = 0 then n+1 else n-1) % 2 = 1 ↔ n % 2 = 0
     split_ifs <;> omega
-  have hc1 : cycle ⁻¹' residue 3 1 = residue 3 0 := by
+  have hc1 : cycleThree ⁻¹' residue 3 1 = residue 3 0 := by
     ext n
     change (if n % 3 = 2 then n-2 else n+1) % 3 = 1 ↔ n % 3 = 0
     split_ifs <;> omega
-  have hc2 : cycle ⁻¹' residue 3 2 = residue 3 1 := by
+  have hc2 : cycleThree ⁻¹' residue 3 2 = residue 3 1 := by
     ext n
     change (if n % 3 = 2 then n-2 else n+1) % 3 = 2 ↔ n % 3 = 1
     split_ifs <;> omega
   have ht : twoToThree ⁻¹' residue 3 0 = residue 2 0 := by
     ext n
     exact (twoToThree_mod n).symm
-  have h01 := hi flip (residue 2 1)
+  have h01 := hi swapParity (residue 2 1)
   have h02 := hi twoToThree (residue 3 0)
-  have h03 := hi cycle (residue 3 1)
-  have h04 := hi cycle (residue 3 2)
+  have h03 := hi cycleThree (residue 3 1)
+  have h04 := hi cycleThree (residue 3 2)
   rw [hf] at h01
   rw [ht] at h02
   rw [hc1] at h03
@@ -178,7 +101,7 @@ private theorem natAdditiveImpossible (m : Set ℕ → ℝ)
   have hu2 : residue 2 0 ∪ residue 2 1 = univ := by
     ext n
     change n % 2 = 0 ∨ n % 2 = 1 ↔ True
-    omega
+    exact iff_of_true (by omega) trivial
   have hd3 : Disjoint (residue 3 0) (residue 3 1) := by
     apply Set.disjoint_left.mpr
     intro n h₁ h₂
@@ -194,7 +117,7 @@ private theorem natAdditiveImpossible (m : Set ℕ → ℝ)
   have hu3 : residue 3 0 ∪ residue 3 1 ∪ residue 3 2 = univ := by
     ext n
     change (n % 3 = 0 ∨ n % 3 = 1) ∨ n % 3 = 2 ↔ True
-    omega
+    exact iff_of_true (by omega) trivial
   have h2 := ha.2 _ _ hd2
   have h3 := ha.2 _ _ hd3
   have h4 := ha.2 _ _ hd4
@@ -208,7 +131,7 @@ theorem noPermutationProbability : NoPermutationProbability.{u} := by
   intro W _ m ha hi
   classical
   obtain ⟨e⟩ : Nonempty (W ≃ W × ℕ) := Cardinal.eq.mp (by
-    simpa [Cardinal.mk_nat] using (Cardinal.mk_mul_aleph0_eq (α := W)).symm)
+    simp)
   let g : W → ℕ := fun x => (e x).2
   let q : Set ℕ → ℝ := fun s => m (g ⁻¹' s)
   have hqa : NormalizedAdditive q := by
@@ -243,17 +166,17 @@ theorem noAllSubsetsPermutationMeasure : NoAllSubsetsPermutationMeasure.{u} := b
         ENNReal.toReal_add (measure_ne_top μ s) (measure_ne_top μ t)]
   · intro π s
     change (μ (π ⁻¹' s)).toReal = (μ s).toReal
-    rw [hinv π s]
+    exact congrArg ENNReal.toReal (hinv π s)
 
-theorem prefix_exhausts {W : Type u} (e : ℕ ≃ W) : Exhaustion (prefix e) := by
+theorem prefix_exhausts {W : Type u} (e : ℕ ≃ W) : Exhaustion (enumPrefix e) := by
   constructor
   · intro n m h x hx
-    simp only [prefix, Finset.mem_map, Finset.mem_range] at hx ⊢
+    simp only [enumPrefix, Finset.mem_map, Finset.mem_range] at hx ⊢
     obtain ⟨i, hi, he⟩ := hx
     exact ⟨i, hi.trans_le h, he⟩
   · intro x
     refine ⟨e.symm x + 1, ?_⟩
-    simp only [prefix, Finset.mem_map, Finset.mem_range]
+    simp only [enumPrefix, Finset.mem_map, Finset.mem_range]
     exact ⟨e.symm x, Nat.lt_succ_self _, e.apply_symm_apply x⟩
 
 private theorem countResidue (k n : ℕ) (hk : k = 2 ∨ k = 3) :
@@ -279,12 +202,12 @@ private theorem countResidue (k n : ℕ) (hk : k = 2 ∨ k = 3) :
 
 private theorem frequency_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k n : ℕ)
     (hk : k = 2 ∨ k = 3) (he : ∀ i, e i ∈ s ↔ i % k = 0) :
-    frequency s (prefix e n) = (((n+k-1)/k : ℕ) : ℝ) / n := by
+    frequency s (enumPrefix e n) = (((n+k-1)/k : ℕ) : ℝ) / n := by
   classical
-  have heq : ((prefix e n).filter (· ∈ s)) =
+  have heq : ((enumPrefix e n).filter (· ∈ s)) =
       ((Finset.range n).filter (fun i => i % k = 0)).map e.toEmbedding := by
     ext x
-    simp only [prefix, Finset.mem_filter, Finset.mem_map, Finset.mem_range]
+    simp only [enumPrefix, Finset.mem_filter, Finset.mem_map, Finset.mem_range]
     constructor
     · rintro ⟨⟨i, hi, rfl⟩, hx⟩
       exact ⟨i, ⟨hi, (he i).mp hx⟩, rfl⟩
@@ -292,11 +215,11 @@ private theorem frequency_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k n : ℕ)
       exact ⟨⟨i, hi, rfl⟩, (he i).mpr hm⟩
   unfold frequency
   rw [heq, Finset.card_map, countResidue k n hk]
-  simp [prefix]
+  simp [enumPrefix]
 
 private theorem density_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k : ℕ)
     (hk : k = 2 ∨ k = 3) (he : ∀ i, e i ∈ s ↔ i % k = 0) :
-    HasDensity s (prefix e) (1/(k : ℝ)) := by
+    HasDensity s (enumPrefix e) (1/(k : ℝ)) := by
   intro ε hε
   obtain ⟨N, hN⟩ := exists_nat_gt (1/ε : ℝ)
   refine ⟨N+1, ?_⟩
@@ -327,7 +250,7 @@ private theorem density_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k : ℕ)
       linarith
     calc
       _ = ((((n+k-1)/k : ℕ) : ℝ) - (n : ℝ)/k)/n := by
-        field_simp <;> ring
+        field_simp
       _ < 1/n := (div_lt_div_iff_of_pos_right hnR).mpr hbound
   rw [abs_of_nonneg (sub_nonneg.mpr hlow)]
   exact hupper.trans hsmall
@@ -348,10 +271,7 @@ theorem continuousControl : ContinuousControl := by
     simp
   · intro x
     rw [unitMeasure, Measure.restrict_apply (measurableSet_singleton x)]
-    apply le_antisymm _ (zero_le _)
-    calc
-      volume ({x} ∩ Icc (0 : ℝ) 1) ≤ volume {x} := measure_mono inter_subset_left
-      _ = 0 := Real.volume_singleton
+    exact measure_mono_null inter_subset_left Real.volume_singleton
   · intro t ht h1
     rw [unitMeasure, Measure.restrict_apply measurableSet_Icc]
     have heq : Icc (0 : ℝ) t ∩ Icc 0 1 = Icc 0 t :=
@@ -359,7 +279,7 @@ theorem continuousControl : ContinuousControl := by
     rw [heq, Real.volume_Icc, sub_zero]
 
 theorem modalProbabilityFreedom : ModalProbabilityFreedom.{u,v} := by
-  intro W Atom F V w φ _ _ _ _ _ p hp0 hp1
-  exact arbitraryProbability _ (accessibleEvent F V w φ) p hp0 hp1
+  intro W Atom F V w φ _ _ _ _ _ p
+  exact arbitraryInteriorMass _ (accessibleEvent F V w φ) p
 
 end TruthCore.Results.Modal.ProbabilityUnderdetermination

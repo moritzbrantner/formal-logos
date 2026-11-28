@@ -3,7 +3,7 @@
   "label": "No normalized uniform point masses on a countably infinite carrier",
   "input_statement_ids": [],
   "output_statement_id": "796b415f-2de6-46b1-ae71-ee7fab6a5689",
-  "rule": "mathematical-proof",
+  "rule": "Mathematical proof in Lean with Mathlib",
   "meaning": "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []

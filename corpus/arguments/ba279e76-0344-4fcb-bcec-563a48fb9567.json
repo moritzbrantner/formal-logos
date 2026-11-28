@@ -6,7 +6,7 @@
   "inference_ids": [
     "025ddf50-6c56-45d1-9782-f3623031ecd6"
   ],
-  "meaning": "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are infinite, each strictly interior event probability is realized by a point-full-support measure on exactly that carrier. No change of frame or valuation is used.",
+  "meaning": "Instantiates the shared interior-mass lemma of #2143 on the accessible-world subtype of a fixed frame, with the formula truth event as the infinite event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability.",
   "definition_ids": [
     "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
     "b44b707c-9e61-42af-9a14-79e9b6d082d4"

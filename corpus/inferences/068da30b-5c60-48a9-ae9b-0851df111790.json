@@ -3,7 +3,7 @@
   "label": "Two bijective enumerations give different limiting frequencies for the same event",
   "input_statement_ids": [],
   "output_statement_id": "cad430dd-8c03-42e1-8d33-29d3837694e0",
-  "rule": "mathematical-proof",
+  "rule": "Mathematical proof in Lean with Mathlib",
   "meaning": "There is a single set of naturals and two bijective enumerations whose initial finite sets exhaust the entire carrier, with limiting relative frequencies one half and one third, respectively. Limits use every sufficiently large prefix, not merely subsequences.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
