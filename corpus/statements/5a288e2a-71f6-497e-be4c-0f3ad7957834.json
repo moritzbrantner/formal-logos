@@ -1,0 +1,21 @@
+{
+  "id": "5a288e2a-71f6-497e-be4c-0f3ad7957834",
+  "label": "Numerical grounding and choice-partition controls for the invariant source",
+  "paraphrase": "Premise-free mathematical controls on the fixed chance-rival frame (ChanceRival is the first conjunct): for every positive p and q with p+q=1 some PMF on the two existing histories has full support and masses p (withholding) and q (giving); two full-support laws (1/8, 7/8 and 3/8, 5/8) share the strict ranking withholding-below-giving but differ (both also satisfy TiedOptimalLaw, which holds for every law because its quality is the constant 0, so it constrains nothing and is a stand-in that does not use the quality order of the optimal-output rival 78af5042); two laws on Bool with the same withholding mass are equal; two laws on Bool each giving its two points equal mass are equal, and one such full-support law exists; on three points, two full-support laws with equal mass on points 0 and 1 (a two-element orbit) differ at point 2. In a STIT frame over the same histories, with singleton choice cells the giver deliberatively sees to the giving at the giving history (Dstit) and its cell guarantees the withholding at the withholding history (Cstit), while with one indiscrete cell the giving occurs but its cell does not guarantee it (no Cstit). Diagnostic only: it does not show that a fixed complete essence permits variable intrinsic propensities, that some necessary nature grounds a particular law, or that intention guarantees sufficient reason.",
+  "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.DistributionGroundingControls",
+  "definition_ids": [
+    "0a36cead-b4fc-4248-a9f2-884edf61d89f",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f",
+    "b4bb7bb4-4e2d-437d-825e-79a029340e77",
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2",
+    "4f503422-a3dc-51f3-8e1d-a1065ef6038e",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87"
+  ]
+}
