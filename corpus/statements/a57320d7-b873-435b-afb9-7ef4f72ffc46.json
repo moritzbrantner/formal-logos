@@ -1,0 +1,15 @@
+{
+  "id": "a57320d7-b873-435b-afb9-7ef4f72ffc46",
+  "label": "Joint-absence and total-noncreation powers are independent as typed; both bridges are needed",
+  "paraphrase": "Analyst formulation, finite controls with GOD_4 read as the holder g and the possibility reading of PowerFor (y has at w a power for p when p holds at an accessible world where y exists). (1) On a three-world frame (no creature, c, d) the total-noncreation power, Euclidean access, monotone powers and 0050b6ed's proposition all hold. (2) On the replacement frame (g gives c at false and d at true) 0050b6ed's proposition, Euclidean access and monotone powers hold, the total-noncreation power fails, g gives something at every accessible world and #1897's ActualAbsenceByWithholding holds. (3) On a non-Euclidean frame (a sees b, e1, e2; each sees only itself; c absent only at e1, d only at e2) with g necessary at a, the total-noncreation power and monotone powers hold and 0050b6ed's proposition fails. (4) On the three-world frame with a non-monotone, maximally specific power the total-noncreation power and Euclidean access hold and 0050b6ed's proposition fails. So the two powers are independent as typed; only the bundle with Euclidean access and monotone powers entails 0050b6ed. Each model witnesses only its formal interpretation; the possibility reading has no causal content, the maximally specific power is an encoding artifact, and recipients are rigid (provenance individuation).",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.ActualAbsencePowerScopeControls",
+  "definition_ids": [
+    "578e81cd-d0fb-4921-9a02-7e250d5310cb",
+    "a7985f66-16b1-4f0f-bb7f-4988d2377790",
+    "bf7eddca-8291-4744-8470-379babcd7781",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807"
+  ],
+  "disambiguation_ids": [
+    "6ce98992-366e-4115-a0db-e240a7701e42"
+  ]
+}

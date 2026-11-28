@@ -1,0 +1,10 @@
+{
+  "id": "3612dd26-3fc2-402a-8a7c-b93a6d651f99",
+  "label": "Exact difference of the global and selected fusion calibrations (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ebb46b39-a10a-4ef3-bf53-8c91d111e488",
+  "rule": "Partition actual individuals by selected fusion scope",
+  "meaning": "The global policy applies to actual individuals in either scope. Conversely, an actual individual is either in SelectedFusionPart or outside it, so the corresponding conjunct supplies its concreteness. The partition uses classical excluded middle and zero background assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

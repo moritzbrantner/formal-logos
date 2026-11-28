@@ -1,0 +1,10 @@
+{
+  "id": "fc31cb49-a2ab-405e-866a-dc8fea114d81",
+  "label": "Test by ContingentGround.checks (96d25c42)",
+  "subject_kind": "result",
+  "subject_id": "5ba41f19-5896-5315-9f07-cd15c6a24884",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "note": "Omit the ban on contingent supporters of a necessary bearer. In switching at false, a and b exist necessarily and actual reflexivity holds. The rank on necessary-to-necessary edges can be constant because that union is empty. The supporter c exists only at false and supports a there. The supporter d exists only at true and supports b there. Neither necessary bearer is underived."
+}

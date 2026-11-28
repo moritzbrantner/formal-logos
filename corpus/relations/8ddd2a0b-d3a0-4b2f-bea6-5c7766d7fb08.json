@@ -1,0 +1,10 @@
+{
+  "id": "8ddd2a0b-d3a0-4b2f-bea6-5c7766d7fb08",
+  "label": "Test by PartMediatedSelfMotion.controls (079b53bf)",
+  "subject_kind": "result",
+  "subject_id": "3dfb5656-2eb9-4c7c-96de-9b3127293680",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "079b53bf-a222-5dfc-b8df-7419f9e98030",
+  "note": "Test the same-respect self-motion exclusion under the specified aggregate projection. The distinct motor and load form the displacement edge and satisfy component-level exclusion. Lifting both endpoints to whole creates a whole-to-whole displacement edge when WholeMoved assigns displacement to the whole."
+}

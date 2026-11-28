@@ -1,0 +1,14 @@
+{
+  "id": "a3cf255d-c910-461d-9bad-2c52d79fe894",
+  "label": "Every world violating no ESSENCE_5 truth is possible",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: world-level essence-grounded possibility. Every world v of the frame at which every ESSENCE_5 truth of every being holds (every φ such that it lies in the nature of some being that φ) is accessible from w. Whatever no nature excludes is possible. It is the world-level counterpart of the existing EssentialExclusionAccount (for the absence of one being) and an instance of the Finean view that essences are the source of necessity (navigation only). Lane E's EM (f6f956a1, #2174) is a different-grain counterpart over ESSENCE_6 profile conditions; no ESSENCE_5/ESSENCE_6 bridge is asserted. Powers-based accounts deny it (possibility needs a power, so a world no nature excludes can still be impossible). Humean recombination does not deny it (it gives at least as many possibilities). Modal primitivism denies only that possibility is grounded in essences, not necessarily this extension.",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.EssenceGroundedWorldPossibility",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

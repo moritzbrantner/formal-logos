@@ -31,3 +31,13 @@ premises = []
 conclusion = "Part-mediated self-motion populated boundary controls"
 rule = "finite populated countermodels"
 meaning = "Root-targeted non-entailment: internal animal self-motion is compatible with component no-self-motion but cannot transfer that constraint through aggregation. Motor, load, whole and two respects are explicit. Missing patient lifting and mistaken aggregate identification both fail with populated internal events."
+
+[[relation]]
+id = "132c3354-d8a7-42fa-8ef1-7ae7a9b5a3d2"
+label = "Test by PartMediatedSelfMotion.controls (079b53bf)"
+subject_kind = "result"
+subject_id = "3dfb5656-2eb9-4c7c-96de-9b3127293680"
+predicate = "tests"
+object_kind = "statement"
+object_id = "079b53bf-a222-5dfc-b8df-7419f9e98030"
+note = "Test the same-respect self-motion exclusion under the specified aggregate projection. The distinct motor and load form the displacement edge and satisfy component-level exclusion. Lifting both endpoints to whole creates a whole-to-whole displacement edge when WholeMoved assigns displacement to the whole."

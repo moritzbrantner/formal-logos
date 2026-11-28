@@ -1,0 +1,9 @@
+{
+  "id": "337b660c-ffd3-4316-af08-424ca641d6c9",
+  "label": "Possibly some concrete GOD_4 exists at the standpoint",
+  "term": "possibly a concrete GOD_4 exists (case instance)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPossiblyExistsAt",
+  "definition": "GodPossiblyExistsAt σ m w is PossibleExistence m.ontic.frame (GodConcreteExists σ m) w: some world accessible from w has some x that is GOD_4, concrete and existing there. It is the only premise of the route that supplies concreteness and GOD_4-hood.",
+  "note": "Possibility here is Kripke accessibility of the case profile's frame, not conceivability or Kantian real possibility. Open; the reverse possibility premise (an accessible world without a concrete GOD_4) is its recorded symmetric rival in NecessaryIfExistent."
+}

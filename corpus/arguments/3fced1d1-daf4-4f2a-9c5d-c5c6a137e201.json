@@ -1,0 +1,36 @@
+{
+  "id": "3fced1d1-daf4-4f2a-9c5d-c5c6a137e201",
+  "label": "An actual CONCRETE_6 object with no necessary parts witnesses CONTINGENCY_1",
+  "premise_statement_ids": [
+    "adb5020c-f115-5a26-a736-343ec2fc9d68",
+    "589bdaa6-ecff-5cb5-b458-fc01eab86458"
+  ],
+  "conclusion_statement_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "inference_ids": [
+    "9d75ea78-28bd-4158-87bb-25394fb6c2e1"
+  ],
+  "meaning": "The specified actual concrete object is its own part under the fixed reflexive partial order, so no necessary parts entails that the same object fails de re necessity. Classically some accessible world omits it; selected-world actuality supplies the other conjunct of ContingentAt. In composition with the existing L3 result c3073ba5, select that theorem's very sum on the same Ontic, world and order and supply its actuality and concreteness separately. No actuality of a fusion follows from its Sum2 specification, and no account of a proper component, substantial composition or causation is assumed.",
+  "definition_ids": [
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "069e3555-ca4a-5737-ae1a-8e2cb67e3be5"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NO_NECESSARY_PARTS_ORDINARY_CONTINGENCY_SELECTED",
+      "from": "50aed763-e509-408b-b274-de3056b72174",
+      "to": "85bbb43c-0bb3-454c-8a46-11d1de4808c8",
+      "role": "conclusion",
+      "statement_id": "c94b5446-e7e7-5b36-9bed-288959725526"
+    }
+  ]
+}

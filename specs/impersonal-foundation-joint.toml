@@ -1,0 +1,103 @@
+# #2145 Investigation 4 (Lane 4): joint coherence of a simple, necessary,
+# noncognitive, productive, finality-originating foundation. A cross-family
+# argument: the favouring that commitment (e) gives an actual root meets the
+# #2153 limitation results (horn A) and, once good-general, the cognition
+# criterion (horn B); then GOD_4 HAS_INTELLECT_1. Analyst formulations,
+# attribution deferred. See docs/notes/causal-perfection-transfer.md, section
+# "Joint coherence of a simple, necessary, noncognitive, finality-originating
+# foundation".
+
+[batch]
+vocab = "TruthCore.Causality.ImpersonalFoundationJoint"
+results = "TruthCore.Results.Causality.ImpersonalFoundationJoint"
+
+[[statement]]
+id = "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"
+label = "One admissible profile has one favouring, good-general if it has good-generality"
+lean = "OneFavouringRealization"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "847ddbe3-1701-455e-acd1-7d989a84c971", "071b24f0-ef72-4012-8c7d-ab3be3335961"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "OPEN analyst bridge, attribution deferred: every admissible intrinsic profile q (a set of real determinations a simple, unreceived, necessary source could jointly have) is realized by one favouring profile psi: every favouring determination in q is the determination that a favouring of the bearer is psi, and if q contains the good-generality determination, psi is good-general (for some scenario and candidates, at least one not a present input, it depends on betterness, read as value, with end-realization held fixed, BECAUSE_OF_GOODNESS_2). That an admissible profile has at most one favouring is an open reading of what a simple source's favouring is; it is not derived from the encoded simplicity of #2153 (no represented limiting principle), which a root with two favourings can keep, and a simple root may carry several other distinct determinations. It is a reading of the favouring tokens and of admissibility, not a theorem about them."
+
+[[statement]]
+id = "e2357adc-6946-47a0-b39b-8efe1805d214"
+label = "Good-generality is a pure perfection"
+lean = "GoodGeneralityIsPure"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "847ddbe3-1701-455e-acd1-7d989a84c971"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the good-generality determination (a favouring whose preference depends, for at least one pair, on value with end content held fixed; not a favouring fixed to one end content) is a pure perfection: an actuality involving no potency, limitation or reception (DEF-PURE-PERFECTION). It uses the same purity parameter as the #2153 premises, so no sense passage is involved. The Lean type is only Pure goodGen for one token; its content enters through the one-favouring realization bridge."
+
+[[statement]]
+id = "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245"
+label = "Every favouring determination of an actual root is good-general"
+lean = "ActualRootFavouringIsGoodGeneral"
+definitions = ["3aba5f19-f48d-50db-bc57-93ba2e99f845", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "Analyst formulation, attribution deferred: for every actual concrete root r at w and every favouring profile phi, if r has the real determination that a favouring of r is phi, then phi is good-general: for some scenario and candidates, at least one not a present input, phi depends on betterness with end-realization held fixed (BECAUSE_OF_GOODNESS_2). It does not say that any root has a favouring; a root whose favouring factors through its end content does not satisfy it."
+
+[[statement]]
+id = "980e6482-054d-4765-8487-c27ee77cd0ce"
+label = "Every actual root has a favouring determination"
+lean = "ActualRootsHaveOwnFavouring"
+definitions = ["3aba5f19-f48d-50db-bc57-93ba2e99f845", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"]
+disambiguations = ["0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: every actual concrete root r at w has, for some favouring profile phi, the real determination that a favouring of r is phi. It is the weakest form of commitment (e) of #2145 (the foundation originates objective finality) under the favouring senses ORIGINAL_FINALITY_1 and ORIGINAL_FINALITY_2: each includes an own favouring of the origin, but the finality conditions themselves are not part of this statement. It does not cover a root that originates finality only as an object of appetite, with no favouring of its own (the final-cause-as-object reading, a recorded rival)."
+
+[[statement]]
+id = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+label = "Whatever has a good-general favouring apprehends some content"
+lean = "GoodGeneralFavouringIsApprehension"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "07f3fb85-6036-4e42-8eb8-a18db846719f", "b28d7e04-694b-442b-a42b-65f39190956f", "3ece6dfe-c033-4546-b7d4-94ef48a235df"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "OPEN cognition criterion, analyst formulation, attribution deferred: every bearer x that has the real determination that a favouring of it is a good-general profile phi (for at least one pair of candidates, at least one not a present input, its favouring depends on their betterness, read as value, with end-realization held fixed) itself apprehends some content that is about some candidate. It is a direct assumption whose content is the thesis that responsiveness of favouring to the value of non-present candidates is cognition; it is stated without reference to persons and applies in the same way to rational exercise and to an impersonal good-general nature. At a root before production nothing is a present input, so there it rests on the value-dependence mark alone. The value reading is load-bearing: with lower action as the ranking, a least-action law meets the formal definition (CriterionTable row 5). The impersonal good-general rival affirms what the criterion denies: that a noncognitive favouring can depend on the value of non-present candidates. With About and Apprehends free, this criterion and the recognition bridge together amount to one thesis."
+
+[[statement]]
+id = "3a32d91c-23f3-403f-a0dd-a34a362f7b8e"
+label = "Every actual root apprehends some content through a good-general favouring"
+lean = "ActualRootsApprehendThroughGoodGeneralFavouring"
+definitions = ["abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "07f3fb85-6036-4e42-8eb8-a18db846719f", "3ece6dfe-c033-4546-b7d4-94ef48a235df"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "Analyst formulation, attribution deferred: every actual concrete root r at w has, for some favouring profile phi, the real determination that a favouring of r is phi with phi good-general, and r itself apprehends some content that is about some candidate. The conjunction does not say that the apprehension governs the favouring (BECAUSE_OF_GOODNESS_3)."
+
+[[statement]]
+id = "02f04027-2f35-43f9-b283-2030c718ea67"
+label = "Every GOD_4 apprehending through good-general favouring HAS_INTELLECT_1"
+lean = "GodGoodGeneralApprehensionIsIntellect"
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "071b24f0-ef72-4012-8c7d-ab3be3335961", "07f3fb85-6036-4e42-8eb8-a18db846719f", "3ece6dfe-c033-4546-b7d4-94ef48a235df"]
+disambiguations = ["8430c7dc-2972-4f47-87a9-ce4676533cdf"]
+paraphrase = "OPEN recognition bridge, analyst formulation, attribution deferred: every g that is GOD_4, has a good-general favouring determination and itself apprehends some content about some candidate satisfies the unary HAS_INTELLECT_1. The antecedent is existential: a favouring that depends on value for at least one pair of candidates in one scenario. It reads such apprehension as sufficient for intellect, not as required by it. It also carries the intellectual, as against sensory, grade of HAS_INTELLECT_1: dependence of favouring on the value of non-present candidates, with their end content held fixed, is read as grasping goodness under the aspect of goodness; nothing in the apprehension relation itself distinguishes the grades. With About and Apprehends free, it and the cognition criterion together amount to one thesis."
+
+[[argument]]
+id = "b6edd228-3ec6-4e42-b4c6-8c334a881c0b"
+label = "Actual-root favourings are good-general, from nonlimitation and one favouring"
+theorem = "actualRootFavouringIsGoodGeneral"
+comparator_theorems = ["favouringControls"]
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6", "0a9d3a40-4777-4352-a4b4-2126c0055924", "ee287fd3-3890-4739-8407-a27d7c81191d", "e2357adc-6946-47a0-b39b-8efe1805d214", "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"]
+conclusion = "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {BECAUSE_OF_GOODNESS = "BECAUSE_OF_GOODNESS_2"}
+rule = "Excluded middle on good-generality; one favouring makes a non-good-general favouring exclude the good-generality token; the structural L then gives a limiting principle that actual roots lack"
+meaning = "Fix an actual root r at w and a favouring determination favours phi of r. By excluded middle, phi is good-general or not. Suppose not. Any admissible profile containing r's actual profile and the good-generality token is realized by one favouring psi; favours phi is in it, so phi = psi, and the token makes psi good-general, a contradiction. So r's admissible actual profile (root-profile admissibility) excludes good-generality, which is pure and, by pure admissibility, admissible somewhere. The structural L bridge (a bearer whose admissible profile excludes an admissible pure determination has a represented limiting principle; its distinct simply prior being is the shared CausalityFrame's PriorSimply, PRIOR_1) gives r a limiting principle, which actual roots lack. No premise mentions an absence or its explanation: the excluding determination is the favouring itself, so the #2153 E premise (no unexplained absence at roots) is not used. The main theorem uses no axioms. The Comparator companion favouringControls (three Mathlib axioms; the #2153 two-being carrier with the Lane 2b profiles) gives a positive witness and, for each non-logical premise, a row where it fails, the others hold and a root with the D-directed favouring fails the conclusion; two rows for L show which of its inputs fails when the D-directed favouring is counted impure (RootPurity) or pure (joint compossibility). The assignments say nothing about what favouring, purity or admissibility metaphysically are."
+
+[[argument]]
+id = "cc00d109-daf9-4d8b-acd5-6391d14934f6"
+label = "Actual roots apprehend through good-general favouring, from finality and the criterion"
+theorem = "actualRootsApprehendThroughGoodGeneralFavouring"
+comparator_theorems = ["apprehensionControls", "criterionTable", "jointConfigurations"]
+premises = ["7fca65ec-8565-46fe-a5fe-bfdfcf0ed245", "980e6482-054d-4765-8487-c27ee77cd0ce", "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"]
+conclusion = "3a32d91c-23f3-403f-a0dd-a34a362f7b8e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {BECAUSE_OF_GOODNESS = "BECAUSE_OF_GOODNESS_2"}
+rule = "Take the root's own favouring; it is good-general; apply the cognition criterion"
+meaning = "Fix an actual root r at w. Commitment (e) in its weakest favouring form (under ORIGINAL_FINALITY_1 and _2) gives r a favouring determination favours phi. The previous step makes phi good-general, and the cognition criterion gives r an apprehended content about some candidate. The main theorem uses no axioms. Comparator companions (Mathlib axioms): apprehensionControls gives a positive witness and, for each premise, a row where it fails, the others hold and the conclusion fails; its last row is the standing good-general impersonal rival (good-tracking favouring, no apprehension, the criterion failing). criterionTable records how the formal definition classifies: the good-general nature and rational exercise (the same function) are good-general, witnessed without the counterpossible valueless scenario; the D-nature, determined will, proxy and chance are not; a comparator restricted to present inputs is not, whatever it tracks; if betterness is the end-realization ordering itself, nothing is; and with lower action as the ranking a toy least-action law is good-general in the formal sense, while with a value ranking under which its paths do not differ it is not, so the value reading of the ranking is load-bearing. jointConfigurations assembles on one carrier the necessary simple root (the #1892 FirstSourceFrame) with the D-directed, the good-general impersonal and the personal favouring, each with its finality sense and apprehension assignment, and the section 61 replacement omission profile on another carrier. These are structural surrogates, not metaphysical possibilities."
+
+[[argument]]
+id = "c5b14912-432d-484d-84ee-8dd361c9ef6d"
+label = "GOD_4 HAS_INTELLECT_1 from good-general apprehension at the root and finite reach"
+theorem = "godHasIntellectFromGoodGeneralApprehension"
+comparator_theorems = ["intellectStepControls"]
+premises = ["dc397705-d727-419e-92f9-65d44e1ff15d", "75974d26-9483-4e1b-81a9-693a90ee9d0f", "3a32d91c-23f3-403f-a0dd-a34a362f7b8e", "02f04027-2f35-43f9-b283-2030c718ea67"]
+conclusion = "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+senses = {BECAUSE_OF_GOODNESS = "BECAUSE_OF_GOODNESS_2"}
+rule = "Identify each GOD_4 with the actual root by finite grounding reach, apply the root-level apprehension, then the recognition bridge"
+meaning = "Some n is an actual concrete root at w. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n; since n has no actual concrete ground, the path is trivial and g = n (namedRootOfReach). The root-level premise gives n a good-general favouring and an apprehended content, and the recognition bridge gives g HAS_INTELLECT_1. Neither the q.14 immateriality premise nor every-pure-perfection (fe67d766) nor the #2153 E premise is used. The main theorem uses no axioms. The Comparator companion intellectStepControls (propext, Quot.sound; same carrier) gives a positive witness and, for three of the four premises, a row where it fails, the others hold and GOD_4 HAS_INTELLECT_1 fails: the D-directed root fails the root-level premise, GOD_4 naming the effect fails reach, and the recognition bridge fails without the HasIntellect predicate. Root existence holds on every assignment of this carrier."

@@ -1,0 +1,10 @@
+{
+  "id": "1611d4f5-d354-40a5-89cc-b1b75038d68d",
+  "label": "Test by Suárez's profile of at most one real-identity being",
+  "subject_kind": "argument",
+  "subject_id": "b7480e89-a3e2-4380-8553-9b8b52012540",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a576300f-4b01-45ae-902c-cfe3d0fbf2de",
+  "note": "The profile falsifies the inline at-most-one formula over real identity and the bridge OWN_BEING_2 => OWN_BEING_1; it does not model shared natures or the other premises of argument 07b1fac4 that yield a576300f."
+}

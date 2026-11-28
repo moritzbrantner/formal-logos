@@ -1,0 +1,29 @@
+{
+  "id": "588e1dfb-6a46-4550-bcf2-d463bd2eac4a",
+  "label": "Actual roots apprehend, from finality and the root criterion",
+  "premise_statement_ids": [
+    "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+    "980e6482-054d-4765-8487-c27ee77cd0ce",
+    "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8"
+  ],
+  "conclusion_statement_id": "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+  "inference_ids": [
+    "36936794-09f6-4faa-9b55-f7982fbd000a"
+  ],
+  "meaning": "Fix an actual root r at w. Commitment (e) in its weakest favouring form gives r a favouring determination phi; every favouring of an actual root is good-general, so phi is; the root cognition criterion then gives r an apprehended content about some candidate. The same composition as the existing route through the cognition criterion 3b40009e, with that criterion replaced by its restriction to actual roots, so the route from the conceptualist derivation reaches 3a32d91c without 3b40009e or d1fb6414. That route is a re-presentation of the same dispute, not additional evidence: the noncognitive imitability-exemplar rival (control row 2) holds every premise of the conceptualist derivation except the conceptualist premise and denies every apprehension at the root, so on the route's instances it denies both that premise and the root criterion; given the rest the root criterion is equivalent only to a weakened existential form, and the conceptualist premise, even restricted to the route, is strictly stronger; the instances the route uses (a non-real stand-in contained in a simple root, for a non-present candidate of a value-dependent pair with distinct stand-ins) are also instances of d1fb6414, and A4 denies apprehension of them under either premise; and the route shares lane C's five individuation premises with the route through d1fb6414. The main theorem uses no axioms.",
+  "term_senses": {
+    "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
+  },
+  "definition_ids": [
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "b28d7e04-694b-442b-a42b-65f39190956f"
+  ],
+  "disambiguation_ids": [
+    "0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5",
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}

@@ -7,5 +7,10 @@
     "5231af84-0f05-4623-b1b7-f570059f7bca",
     "d3a92973-548a-4acf-959d-e94c4d56dbfe",
     "e1b95906-8d38-59c3-abee-0ccc1c9d333b"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "3008c7db-0236-4b03-9da7-f41ea8d8cac1",
+    "missing_bridge": "Fix the candidate roster and q3a4 profile. Keep the readout at relay zero and take the incoming supplier list under test to be the list of the recipient at depth d. Calibrate the activity readout to the identified bearer at zero being in act as to esse. Separately calibrate the already identified links, including the known path from d to zero, to actual distinct-bearer causes in the same esse respect and warrant their transmission law. If the fresh readout survives a cut the relay-only account predicts will extinguish it, test cuts up through that index to find the least surviving cut. Under the single-feed law its index locates d. Isolate a candidate extra channel at that recipient. Independent evidence would have to identify its bearer c as distinct from the bearer at d and show that c directly supplies esse to that bearer. Establish the direct contribution at d independently of any upstream or downstream effects. Establish the act and CausesIn conditions for this candidate independently of the calibration of known links. Then a verified direct supplier absent from the list at d would challenge the list completeness used by the finite root audit.",
+    "blocker": "The checked relay experiment observes fresh token delivery by bearers that persist through the cuts. Calibration to the bearer being in act as to esse and to ActualEsseCause is missing. The threshold locates a feed position in the specified model, while an active position supplies neither a distinct bearer nor a direct edge to the recipient. A feed entering at d can change the readout at zero even if zero's direct list is complete. Survival gives neither an empty list nor roster-wide audit coverage, and failure at finitely many cuts leaves deeper feeds open."
+  }
 }

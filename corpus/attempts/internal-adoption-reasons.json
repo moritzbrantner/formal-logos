@@ -13,7 +13,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Reused the F6 existential reason predicate, the epistemic nihilism retorsion and its distinction between truth and available reasons, and the separate reflective-coherence policy boundary. The scope-specific denial removes reasons to adopt the target in that kind. In the two-kind witness, the designated target expresses a true denial of moral reasons and still has an epistemic reason to believe it. Global denial removes all represented reason kinds and conflicts with an F6 witness in its epistemic slice. Analyst formulations with attribution deferred. See docs/notes/self-undermining-views.md.",
+  "summary": "Reused the F6 existential reason predicate, the epistemic nihilism retorsion and its distinction between truth and available reasons, and the separate reflective-coherence policy boundary. The scope-specific denial removes reasons to adopt the target in that kind. In the two-kind witness, the designated target expresses a true denial of moral reasons and still has an epistemic reason to believe it. Global denial removes all represented reason kinds and conflicts with an F6 witness in its epistemic slice. Analyst formulations with attribution deferred. See docs/notes/self-undermining-views.md.\n\nCuration pass 2, lane D (#2103, 2026-11-27). bce3240f remains unplaced. The one-agent fixture satisfies NoInternalAdoptionReason for the moral reason kind and makes the moral-denial target true. The agent's epistemic reason for adopting that target falsifies NoInternalAdoptionReasonOfAnyKind. The inference from denial of all moral reasons to absence of an adoption reason of any kind is off the root path.",
   "blocker": "A truth-claim error theory needs a bridge to moral reason denial, and a moral ought needs a bridge to a moral reason. Applying the global result to a concrete theory needs adequate kind and target coverage; applying it downstream requires independently warranted F6 and a reason profile shared with the target argument.",
   "evidence": [
     "0c32687e-0e0f-45a8-a85f-9c324bc10728",
@@ -21,5 +21,15 @@
     "bce3240f-978c-43c7-a2cf-0faa5d14c68d",
     "c66ad93e-f5c3-4d14-b4c4-5db1218b5d38",
     "PR-1422"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2131"
+    }
   ]
 }

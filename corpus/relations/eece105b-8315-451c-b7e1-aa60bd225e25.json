@@ -1,0 +1,10 @@
+{
+  "id": "eece105b-8315-451c-b7e1-aa60bd225e25",
+  "label": "Test by SelectedAncestry.controls (b612735b)",
+  "subject_kind": "result",
+  "subject_id": "28a794d6-0e79-5abd-a5ce-b54ba38a1932",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b612735b-12a0-55a3-ac0c-3ce36f79e308",
+  "note": "Omit contingent grounding within the selected cone. The actual singleton is contingent and has no incoming ground, so its cone is well-founded but there is no necessary concretum in this two-world profile."
+}

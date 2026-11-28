@@ -1,0 +1,10 @@
+{
+  "id": "1b4442c0-aa05-4319-a850-4dcd946e9262",
+  "label": "Test by ModalGroundingActualAbsence.actualAbsenceControls (906f5c39)",
+  "subject_kind": "result",
+  "subject_id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+  "note": "Omit initiator presence for absence of the actual contingent roster. At true in creatureFrame only the existing contingent creature false holds the power. It is absent at the sole accessible world realizing the relevant absence."
+}

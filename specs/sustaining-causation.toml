@@ -46,6 +46,12 @@ paraphrase = "In every history of the model, whatever is IMMENSE_2 (INFINITE_1 a
 definitions = ["641c767b-4289-4d92-b900-da7ad603d282", "1335688a-d3f2-492e-9b71-c8062280fe16", "92c03350-6809-497d-b123-2ffb11c0e0c1", "DEF-INFINITE", "158301bc-9585-4145-be60-34f08c9f922c"]
 disambiguations = ["3fc3ee02-c3cc-4a61-9724-914d9d07b0dd", "DISAMB-IN-ACT", "DISAMB-INFINITY"]
 
+
+[statement.connection_plan]
+target_statement_id = "8bf775e9-34e0-48e5-bdd8-f48edd1040f7"
+missing_bridge = "On the same bearer g, history and giving relation, characterize the case meanings of place, containment and measure and establish their relevant exclusions independently. Specify the power and knowledge modes of presence separately. For immediacy, distinguish g's own giving from a temporal profile realized through an intermediate giver, using independent facts about the intervening cause. Use the checked temporal result for the presence-by-giving component. Compare the independently specified conditions against the case reading of Primitives.Immense on that very bearer, alongside the supplied infinity and creator conditions."
+blocker = "Primitives.Immense is a supplied predicate. Its extension can vary with the bearer, infinity, creator status and temporal presence and giving fixed. The existing narrowed transcription already assumes the application to that predicate. The place, containment, measure, power, knowledge and immediacy conditions still need an independent specification and a warranted interpretation of their role on the same bearer."
+
 [[statement]]
 id = "Whatever is IMMENSE_2 and present to all whenever they are is IMMENSE_1"
 lean = "PresentInfiniteCauseOfAllIsImmense"

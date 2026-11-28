@@ -1,0 +1,10 @@
+{
+  "id": "aad4ef9b-0ec7-4406-a564-e8b9799108fd",
+  "label": "Test by ComprehensionByMeasure.controls (7921f9c8)",
+  "subject_kind": "result",
+  "subject_id": "40ec77b1-c79e-4308-9830-4d5a35fe8cb2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7921f9c8-81f4-4af5-b945-d98787d12f42",
+  "note": "Omit the act-to-knowability lower bound. In lowKnowability, the INFINITE_1 bearer has top act and bottom knowability. The other three measure policies hold, and the other intellect reaches that bottom degree of knowability."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "727d203b-8008-4c79-9255-1d226dca59f5",
+  "label": "Test by ModalGroundingActualAbsence.actualAbsenceControls (a6906cab)",
+  "subject_kind": "result",
+  "subject_id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a6906cab-59c4-4938-b6d1-991369e8ffb0",
+  "note": "Omit concreteness of the actual-absence power holder. In theistFrame true alone holds that power and is present in the outcome world. The concrete predicate singles out false, which is contingent at the reading world true."
+}

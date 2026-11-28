@@ -1,0 +1,10 @@
+{
+  "id": "f10db25b-19ca-4817-bfe9-729a3f085281",
+  "label": "Test by BruteContingencyParity.b2SupportControls (608a262d)",
+  "subject_kind": "result",
+  "subject_id": "4c79358e-1872-41a5-8a34-7c57eaeec756",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Omit existence-reason coverage for beings contingent at the reading world true. The bruteFirst frame has no reason tokens admitted for the contingent mover's existence. The no-self and reason-to-cause clauses hold vacuously, and no distinct CAUSE_2 supplies the mover's esse."
+}

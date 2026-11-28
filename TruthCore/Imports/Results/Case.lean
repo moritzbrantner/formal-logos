@@ -16,6 +16,7 @@ public import TruthCore.Results.Case.Catholicism.AdoptedPotency.FromQuartaViaWit
 public import TruthCore.Results.Case.Catholicism.AdoptedPotency.FromQuartaViaWithoutTruthBridge.Solution
 public import TruthCore.Results.Case.Catholicism.AdoptedPotency.NecessaryClassicalGodCase.Solution
 public import TruthCore.Results.Case.Catholicism.AncestralEsseAttributes.Solution
+public import TruthCore.Results.Case.Catholicism.AttributeHubConnections.Solution
 public import TruthCore.Results.Case.Catholicism.AttributesFromEsse.Solution
 public import TruthCore.Results.Case.Catholicism.CausalFinitism.Solution
 public import TruthCore.Results.Case.Catholicism.CauseOfBeingHasBeing.Solution

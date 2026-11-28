@@ -1,0 +1,10 @@
+{
+  "id": "bf43d71c-b0a0-471b-8796-badbfe67b4e3",
+  "label": "The local calibration control tests universal actual concreteness",
+  "subject_kind": "result",
+  "subject_id": "c10c1536-846b-4445-a8e6-634718136d52",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0e02cd69-8fb0-4859-8287-937440c84b5b",
+  "note": "The same profile satisfies the local policy while its actual abstract candidate violates the global policy."
+}

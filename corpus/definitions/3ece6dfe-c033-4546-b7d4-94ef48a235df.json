@@ -1,0 +1,8 @@
+{
+  "id": "3ece6dfe-c033-4546-b7d4-94ef48a235df",
+  "label": "About a candidate: a content that represents a candidate outcome",
+  "term": "about a candidate (About c y)",
+  "basis": "stipulative",
+  "definition": "About c y: the content c represents the candidate outcome y, for example as better or worse than another candidate, or as to be produced. Examples: the thought that d would realize the recipient good; a plan whose requirement describes y. Non-examples: a content about the bearer itself only; a physical state that merely covaries with y. A declared primitive two-place relation between contents and candidates; it is not functional (a content may be about several candidates) and implies nothing about whether y is realized.",
+  "note": "Stipulative analyst notion (#2145 Investigation 4), attribution deferred. Lean has no declaration for it: it is the unconstrained parameter About : C → X → Prop of the cognition criterion and the recognition bridge. Because it and Apprehends are free, the criterion and the recognition bridge together amount to one thesis (good-general favouring at GOD_4 is intellect); the controls use the identity reading (a content named by a candidate)."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "97c4f504-4792-43c6-9f61-ae23df732d5f",
+  "label": "Nature as the respect in which a thing is actually what it is",
+  "term": "nature as the respect had in act",
+  "definition": "`ActualizationFrame.quiddity x`: the nature of x, represented as the respect in which x is actually what it is ('humanitas ... in actu', q.3 a.4 co.). It is the same notion as DEF-ESSENCE-THOMISTIC-NATURE, represented as a respect of the GradesFrame rather than a value of q.3 a.4's Principle sort; no law identifies the two representations. Respect identity is identity of content.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizationFrame.quiddity",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from ST I q.4 a.1 ad 3, q.3 a.4 co. and De ente capp.3-4 (Baur/Koch), read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

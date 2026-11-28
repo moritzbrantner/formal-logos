@@ -1,0 +1,14 @@
+{
+  "id": "69a5dcdc-a7c2-4cf6-b973-4d78320bf341",
+  "label": "A bearer with an impure real determination has LIMITED_ESSE_1",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every bearer that really has a determination which is not pure (one involving potency, limitation or reception) has limited esse in the primitive formal sense (LIMITATION_OF_ESSE_VERSUS_REPRESENTED_LIMITING_1). It mentions no absence and no excluded perfection.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.ImpureDeterminationLimitsEsse",
+  "definition_ids": [
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "57a59849-0854-494d-b3ef-34942dd11812",
+  "label": "Necessary concrete GOD_4 at the standpoint (de re)",
+  "term": "necessary concrete GOD_4 (de re)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.NecessaryGodConcreteAt",
+  "definition": "NecessaryGodConcreteAt σ m w: some x is GOD_4 under the case signature, concrete under the case profile, exists at w, and is NecessaryAt m.ontic w x, i.e. exists at every world accessible from w. De re over rigid candidate identity and accessibility-relative.",
+  "note": "No all-world existence, uniqueness, underivedness or classical attribute follows. Dropping IsGod gives the shared NecessaryConcreteAt."
+}

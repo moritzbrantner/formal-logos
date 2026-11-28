@@ -13,12 +13,22 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Under owner’s logic-first redirection (2026-11-05), deliver analyst configurations with attribution deferred. Prior consultation of full hash-verified Latin ST I q.85 a.2 [32022–32029] and Papineau Teleosemantics pp.95–120 is preserved with exact URLs/hashes/locators in docs/notes/intentionality-943.md; no new source/claim manifests are delivered. Investigate a stipulated qualified as-affected report restriction as a typed error-preservation core with all three single-deletion interpretations. Preserve a joint reductive causal/consumer/false-alarm witness and its per-se-operation variant without the body-sharing bridge. Rejected: physicalism entails report-only semantics, representing a property entails materially instantiating it, Papineau prohibits error, his hypothetical monkeys are empirical data, and error supplies the q.75 interference or body-sharing premises. No historical author is attributed the exact formal universals; arbitrary introspective infallibility and incorporeality are not conclusions. Remaining OPEN: noncircular natural specification and application of consumer functions, determinacy of human semantic content, positive Thomist species interpretation, embodiment/tokening/body-sharing bridges, consciousness, and all existing q.75 premises. No root closure. Precise evidence and strongest rival comparison are in docs/notes/intentionality-943.md.",
+  "summary": "Under owner’s logic-first redirection (2026-11-05), deliver analyst configurations with attribution deferred. Prior consultation of full hash-verified Latin ST I q.85 a.2 [32022–32029] and Papineau Teleosemantics pp.95–120 is preserved with exact URLs/hashes/locators in docs/notes/intentionality-943.md; no new source/claim manifests are delivered. Investigate a stipulated qualified as-affected report restriction as a typed error-preservation core with all three single-deletion interpretations. Preserve a joint reductive causal/consumer/false-alarm witness and its per-se-operation variant without the body-sharing bridge. Rejected: physicalism entails report-only semantics, representing a property entails materially instantiating it, Papineau prohibits error, his hypothetical monkeys are empirical data, and error supplies the q.75 interference or body-sharing premises. No historical author is attributed the exact formal universals; arbitrary introspective infallibility and incorporeality are not conclusions. Remaining OPEN: noncircular natural specification and application of consumer functions, determinacy of human semantic content, positive Thomist species interpretation, embodiment/tokening/body-sharing bridges, consciousness, and all existing q.75 premises. No root closure. Precise evidence and strongest rival comparison are in docs/notes/intentionality-943.md.\n\n2026-11-27, #2103 placement curation. Intentional error. 64465028 (unplaced): SomeError supplies a mental token and a situation where it occurs and its content is false. AffectionReportCorrect covers every occurrence of a mental token. ContentOnlyAffectionReport equates content truth and report truth for every mental token and situation. Instantiating both at the error witness yields true content there. Retain as a conditional incompatibility; no closure edge. 45ac104c, 2d5578c3, 2533cda3, c505fdc8, 29603427 (unplaced): The selected mental-kind, content and self-affection predicates belong to the internal carrier comparison. No same-bearer map to divine intellect.",
   "evidence": [
     "2533cda3-1a18-51f5-9880-af9e6af0f0e0",
     "64465028-3d58-5e13-90d4-8e2f405c119f",
     "2d5578c3-f6cb-532b-a594-6e0013e7603d",
     "45ac104c-2729-57bc-9fdd-8e1dbcd9022c",
     "PR-1031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2110"
+    }
   ]
 }

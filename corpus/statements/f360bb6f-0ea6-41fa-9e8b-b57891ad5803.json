@@ -13,5 +13,10 @@
     "a59fd0ac-f276-528d-8dc3-c3eddd331ac7",
     "508617ab-cf24-5f3b-a387-64b3991359ec",
     "b1640e51-d7d4-5a80-9992-29fa1ded8048"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "da3facd6-008e-5e76-92fa-677350c2dfdb",
+    "missing_bridge": "For the selected positive necessary root, show that holding at esse would give an incoming selected actual concrete ground and align its InAct and CanBe fields with the potency reading in the attribute route. Then use its lack of incoming ground to obtain PureAct at that root.",
+    "blocker": "The untimed holding predicate supplies neither the world-local grounding calibration nor alignment of adopted potency with the independently supplied InPotency of the root attribute endpoint."
+  }
 }

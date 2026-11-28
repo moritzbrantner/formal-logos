@@ -2,5 +2,10 @@
   "id": "7b3c4ab3-9453-4818-8791-4e63890dd84a",
   "label": "Occam’s razor and infinite regress: preference beyond every finite factor requires zero rival weight",
   "paraphrase": "Fix a finite hypothesis with positive real weight and an infinite regress hypothesis with nonnegative real weight. The finite weight is at least every positive finite real multiple of the infinite weight exactly when the infinite hypothesis weight is zero.",
-  "lean_declaration": "TruthCore.Causality.OccamRegress.UnboundedPreference"
+  "lean_declaration": "TruthCore.Causality.OccamRegress.UnboundedPreference",
+  "connection_plan": {
+    "target_statement_id": "e529c42f-f0a2-5ebf-9ae1-459e7f798d31",
+    "missing_bridge": "The zero-weight bridge to e529c42f: an application premise for one actual causal relation giving equal explanatory adequacy of a finite-ancestry account and an infinite-regress account of the same recipients and a defended prior assignment that gives the whole regress class zero weight, with a rule from that probabilistic preference to the deductive premise e529c42f. This theorem is the step showing that only zero rival weight yields a preference beyond every finite factor, so the bridge must supply exactly zero weight.",
+    "blocker": "No uniform discount over every admitted regress alternative is defended for an actual regress, and the corpus has no argument form from a probabilistic preference to a deductive premise (docs/notes/causal-finitism-367.md, Occam section)."
+  }
 }

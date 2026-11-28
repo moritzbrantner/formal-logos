@@ -11,5 +11,10 @@
   ],
   "disambiguation_ids": [
     "4eb21e18-3541-5b78-ab20-0040e4e987f4"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "72361c88-db53-5064-8845-37ff5abbca82",
+    "missing_bridge": "Supply actual attainment: the attaining world v of this statement's own witness pair is w0, and then access w0 w0 holds as reflexivity at w0 (2b20b5af-d653-56ba-8001-35903fb3d1ea), so the bound covers individuals existing at w0. Add a two-way contract that InAct x esse holds exactly for x existing at w0, and an explicit identification premise value = intensity w0 for 72361c88's value parameter.",
+    "blocker": "Nothing places the attaining pair at w0: the maximum may be attained only at a nonactual accessible world, so by itself it gives no actual greatest bearer. The two-way contract and the identification premise are not recorded."
+  }
 }

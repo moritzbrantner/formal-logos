@@ -10,5 +10,10 @@
   ],
   "disambiguation_ids": [
     "7181df76-d6ed-5226-a34b-08910ddbe6a0"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+    "missing_bridge": "Instantiate the stipulated G on the case Profile m as G v := some x is m.concrete, exists at v under m.ontic and satisfies the GOD_4 predicate, with the frame of m.ontic. Add a de dicto to de re bridge: one and the same rigid candidate satisfies G at every accessible world (for example a rigid GOD_4 predicate with at most one satisfier across those worlds). Box G at w then yields one x existing at every accessible world, and reflexivity at w (2b20b5af-d653-56ba-8001-35903fb3d1ea) gives its existence at w, which is NecessaryConcreteAt.",
+    "blocker": "G is a stipulated proposition with no case instance. Box G is de dicto, so without a rigidity or uniqueness premise different GOD_4 candidates may witness G at different worlds. The boxed conditional NecessaryIf is not stated for the case GOD_4 predicate. Targeting GodExists directly would be degenerate: GodExists IsGod is world-free, and the possibility premise alone already yields a GOD_4 candidate."
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "id": "6b466d9f-9564-46e2-985e-4e7ec2901653",
+  "label": "Rational appetite (favouring level): a favouring fixed by the bearer's apprehension state",
+  "term": "rational appetite, favouring-profile level (RationalAppetite a φ)",
+  "definition": "RationalAppetite a φ: the favouring profile φ is fixed by the apprehension state a (FixedBy φ a.state). An ApprehensionState gives, in each variation scenario, what the bearer apprehends of the candidates (the contents present to it as known). A bearer that apprehends nothing has a constant apprehension state (ConstantApprehension), so only a fixed favouring can be a rational appetite of it. Examples: rational exercise under a correctly apprehended good; a will with a fixed preference for D (Lane 2b's determined will), which also follows what it apprehends. Non-example: a favouring that differs between two scenarios in which the bearer apprehends the same.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AppetiteStandard.RationalAppetite",
+  "note": "Stipulative analyst notion (#2145 lane H3), attribution deferred. It is the favouring-profile counterpart of appetite following apprehension (DEF 44a0654e, sense 2 of disambiguation c40e9cab, a power-level notion); it does not type the power or an exercise. Whether the apprehension is of the universal ratio boni is not typed. See docs/notes/causal-perfection-transfer.md, section 'Natural or rational appetite? The purity premises and the object of an original source's favouring'."
+}

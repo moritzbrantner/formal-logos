@@ -1,0 +1,10 @@
+{
+  "id": "88b41dc1-d6ae-405e-91ab-91a37c63b5ff",
+  "label": "Test by UnderivedRootRoute.underivedRouteControls (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "eb7f5423-fec4-590a-97dc-73ff632c7f79",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "Omit the grounding requirement for actual contingent concreta from the underived-root bundle. The sole candidate exists at true and is absent at accessible false, with no ground anywhere. The other four nonlogical inputs hold at true, and this candidate is contingent."
+}

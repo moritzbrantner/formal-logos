@@ -6,5 +6,9 @@
   "inference_ids": [
     "9ee4cb71-b753-4fed-81f5-16045aecff24"
   ],
-  "meaning": "Check the two explicit Bool-profile assignments, including actual truth, inhabited alternatives and attitude-sensitive licensing. Conditional semantic calibration only; original mind-independence senses remain open."
+  "meaning": "Check the two explicit Bool-profile assignments, including actual truth, inhabited alternatives and attitude-sensitive licensing. Conditional semantic calibration only; original mind-independence senses remain open.",
+  "definition_ids": [
+    "33a61d37-01ea-4c9d-97b7-c27700e69ded",
+    "4f377045-355c-500f-b159-1f8e9e9fa863"
+  ]
 }

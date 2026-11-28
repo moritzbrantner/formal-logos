@@ -1,0 +1,12 @@
+{
+  "id": "e0010549-b46d-4aaa-8ea2-a2aa203fad2c",
+  "label": "Matter-form composition implies composition",
+  "term": "matter-form composition as a sufficient condition for composition",
+  "definition": "For each bearer in the supplied domain, if it satisfies the matter-form predicate then it satisfies the composition predicate.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.NamedRootStructuralAttributes.MatterFormIsComposite",
+  "definition_ids": [
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105"
+  ],
+  "note": "Analyst formulation of the matter-form inclusion in the existing two-kind premise. Both predicates remain parameters. The law places no requirement on the represented esse and essence maps."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+  "label": "What is its own being lacks no perfection of being, being in act in it formally or eminently",
+  "paraphrase": "Analyst formulation, attribution deferred: whatever is its own being lacks no perfection of being: each is in act in it in the shared frame's InAct (IN_ACT_4, mode of possession left open, so formally, virtually or eminently). It is the HAVING_EVERY_PERFECTION_1 side of DISAMB dc9c0a1b: it does not say that the bearer has each perfection as a real determination (Has, d164b1ff). ST I q.4 a.2 ad 3 states it ('nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens'). R-act2 makes at most this 'not lacking' a meaning postulate of subsistent esse, not real having. Open.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingLacksNoPerfectionOfBeingInAct",
+  "definition_ids": [
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168",
+    "5f851204-5991-5e16-87f1-e8b3ed729708"
+  ],
+  "disambiguation_ids": [
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "e6683b64-c9c4-4b5f-b54a-c1c027bf34ca",
+  "label": "Test by MetricGrimReaper.controls (a8c2ef8c)",
+  "subject_kind": "result",
+  "subject_id": "83fd4e6f-e390-4741-bce8-015154e6b5be",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "a8c2ef8c-3916-43ae-8d16-febf6f2d8a24",
+  "note": "In firstMoment, the sole bearer is present and contingent at accessible true at every positive time. Both spaced premises hold for each register frame because the nonnegative clock bounds each past and excludes an infinite descent with a fixed positive lower bound on slot lengths."
+}

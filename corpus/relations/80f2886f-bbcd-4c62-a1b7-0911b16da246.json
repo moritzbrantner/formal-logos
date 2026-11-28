@@ -1,0 +1,10 @@
+{
+  "id": "80f2886f-bbcd-4c62-a1b7-0911b16da246",
+  "label": "Test by ConcurrentActualization.controls (23e04ae5)",
+  "subject_kind": "result",
+  "subject_id": "955ef523-695d-4920-b88d-bf6e737e71e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa",
+  "note": "Assign only self-causes and no giving in the sustained history. The restriction to distinct causes holds vacuously. The unrestricted sustaining claim fails on a present bearer with a self-cause."
+}

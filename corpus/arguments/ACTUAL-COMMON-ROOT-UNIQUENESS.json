@@ -1,6 +1,6 @@
 {
   "id": "a161fd71-f467-5191-af63-75c14fd0c87b",
-  "label": "Some actual concrete root of the selected grounding…, from One actual concrete root at w directly…",
+  "label": "Direct coverage gives a unique root among existents classified as concrete by the selected profile",
   "legacy_id": "ACTUAL-COMMON-ROOT-UNIQUENESS",
   "premise_statement_ids": [
     "a6b46d2e-fb76-5123-8fbd-aca4cdc8ebd9"

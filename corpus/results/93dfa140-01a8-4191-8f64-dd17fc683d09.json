@@ -1,0 +1,11 @@
+{
+  "id": "93dfa140-01a8-4191-8f64-dd17fc683d09",
+  "label": "No unexplained absence at roots, from the root lack PSR and the sense bridge",
+  "argument_id": "c689901f-7468-474c-bf42-9c35c5c82ca3",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.noUnexplainedAbsenceFromPositiveLackReasons",
+  "comparator_config": "results/93dfa140-01a8-4191-8f64-dd17fc683d09/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w and a determination d that r lacks while some admissible profile contains r's determinations and d (case iii). The lack facts make lack r d hold at w; the PSR for root lack facts gives it an admitted reason (EXPLAINED_ABSENCE_1); the sense bridge makes the absence positively fixed (EXPLAINED_ABSENCE_2). Either no admissible profile adds d to r's determinations, against the hypothesis, or a determination of r requires the lack of a set inside that admissible profile, which the necessity direction of member grounding forbids (carriedClosureNotUnexplained). It is a relocation: E alone gives the bridge (positiveLackReasonsOfNoUnexplainedAbsence), so given the other three premises the bridge and E are equivalent, and the PSR premise is met cheaply in its own sense (InquiryScopeMap clause 3). The load is on the bridge, whose rationale is the one shared with carriage, member grounding and E. The main theorem uses no axioms. The Comparator companion lackReasonControls (three Mathlib axioms; the #2153 carrier, open family, source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other three hold and E fails: the rival whose lack of noesis has the necessary truths as admitted reasons (bridge fails), the base arena with no reasons for lacks (PSR fails), no lack fact represented (lack facts fail), and the lack of noesis carried by the pure a in a family admitting every pure profile (necessity direction fails). The rows are assignments of the stated relations, not models of explanation."
+}

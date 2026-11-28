@@ -1,0 +1,19 @@
+{
+  "id": "0c1a3ec8-f374-4669-9b79-d43ab70bc439",
+  "label": "The q.7 a.1 bridge moves the intensive content between its premises by the reading of limitation",
+  "paraphrase": "Premise-free, for every own-being predicate, reception relation, limitation predicate, real-determination relation and purity predicate. (1) If what is its own being is no recipient of esse (7338142d at Recipient := has its esse received somewhere), esse is limited only through reception (1304b462), and unlimited esse really has every pure perfection, then whatever is its own being really has every pure perfection: the locus-(b) composite, without d164b1ff or c4fb87a6. (2) On the measure reading of limitation (lacking some pure perfection), 'unlimited esse has every pure perfection' holds in every interpretation. So on the measure reading the intensive content sits in 1304b462 (only reception limits); on the role reading it sits in 'unlimited esse has every pure perfection'. The conclusion concerns real having (Has), not the formal-or-eminent 9a0a4951.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.Q7BridgeLoadMap",
+  "definition_ids": [
+    "f971eabf-d723-46c4-a34a-35a5af154abb",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "7fe2babc-88bd-41fe-946f-b86a0f1756da",
+  "label": "Positively fixed root absences, from reasons in natures and carriage (inference)",
+  "input_statement_ids": [
+    "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "output_statement_id": "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+  "rule": "An admitted reason requires an excluding ESSENCE_6 condition; carriage with member grounding's necessity direction puts it at every admissible extension",
+  "meaning": "Fix an actual root r at w and a determination d it lacks whose lack fact has an admitted reason (EXPLAINED_ABSENCE_1). The reason-essence thesis gives an ESSENCE_6 condition on r's profile failing at every profile containing r's determinations and d. Every admissible profile containing r's determinations is exclusion-free (necessity direction of member grounding), so carriage puts the condition there (positiveEssenceFromCarriage). Hence no admissible profile adds d to r's determinations: the absence is positively fixed by its first disjunct (EXPLAINED_ABSENCE_2). This is clause 7 of InquiryScopeMap registered as an argument. It gives the sense bridge a derivation that does not run through E; its load is carriage and the necessity direction, as on lane E's route. The main theorem uses no axioms. The Comparator companion factorizationControls (three Mathlib axioms) gives a positive witness and rows where the reason-essence thesis or carriage fails with the bridge failing; on this carrier no row drops the necessity direction alone (see its docstring).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

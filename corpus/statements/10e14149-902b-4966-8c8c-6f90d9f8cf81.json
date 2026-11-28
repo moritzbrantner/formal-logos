@@ -1,0 +1,14 @@
+{
+  "id": "10e14149-902b-4966-8c8c-6f90d9f8cf81",
+  "label": "Rigidity of concrete GOD_4 presence is persistence plus accessible uniqueness",
+  "paraphrase": "For every case signature, profile and standpoint w: concrete GOD_4 presence is rigid from w exactly when it persists from w and, whenever a concrete GOD_4 exists at w, every accessible world has at most one concrete GOD_4. No background premise.",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.RigidOverPersistsExact",
+  "definition_ids": [
+    "c03ce44d-f7e6-4eef-9082-304b40699395",
+    "a287fbf6-eef6-4588-8ea9-ecf8e44581e1",
+    "f896a82f-9d72-49f4-9c59-c7d15550bb78",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}
