@@ -1,0 +1,18 @@
+{
+  "id": "ec397a1a-da39-46e1-92c7-89678a7f3870",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer exceeds concrete NECESSARY_2: models",
+  "paraphrase": "Closed controls over two universally accessible Bool worlds and Bool beings, with presence x = true or w = false. (1) abstractDrop: only being true is concrete; every actual concrete being is NECESSARY_2 at every world, while the forward transfer fails, because the non-concrete being false is present at world false and absent at world true; and no actual concrete being is CONTINGENT_1 at any world, so the contingency node fails everywhere although the transfer fails. (2) concreteDrop: every being is concrete; every actual concrete being is NECESSARY_2 at world true, while the forward transfer fails at world false. So the transfer is strictly stronger than concrete necessitarianism, both in constraining non-concrete candidates and in constraining worlds other than the selected one, and its failure does not give the contingency node. Statements about these interpretations only.",
+  "lean_declaration": "TruthCore.Modal.ActualistContingencyRoute.Control.Strictness",
+  "definition_ids": [
+    "a3b39c76-f1cb-53e8-bf5e-9e64d75f02bf",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87"
+  ],
+  "disambiguation_ids": [
+    "fd336f80-973c-5b24-80c2-9f95b84abc89",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ]
+}

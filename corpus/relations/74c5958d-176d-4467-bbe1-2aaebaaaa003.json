@@ -1,10 +1,10 @@
 {
   "id": "74c5958d-176d-4467-bbe1-2aaebaaaa003",
-  "label": "The contingent bearer conditionally refutes global forward guarded universal transfer",
+  "label": "A CONTINGENT_1 bearer conditionally refutes VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer",
   "subject_kind": "argument",
   "subject_id": "cad42854-dea2-46e5-80d4-a6d89b216a6e",
   "predicate": "refutes",
   "object_kind": "statement",
   "object_id": "f084efde-c461-49d4-9f7d-902abc81b5f9",
-  "note": "Conditional on STMT-SOME-ACTUAL-CONTINGENT. The argument identifies a commitment of the transfer policy on the same profile. The contingency premise therefore still requires independent warrant."
+  "note": "Conditional on the OPEN node STMT-SOME-ACTUAL-CONTINGENT; does not count for closure while the node is open, and cannot defend the node itself (it rests on it). Its standing is refutation_support: it supports only this refutation of a rival, not a root route. It composes the strength order to 411e5817 with the existing refutation e1d0d14b."
 }
