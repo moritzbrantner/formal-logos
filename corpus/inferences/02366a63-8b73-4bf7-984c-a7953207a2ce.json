@@ -1,0 +1,10 @@
+{
+  "id": "02366a63-8b73-4bf7-984c-a7953207a2ce",
+  "label": "An inertial profile can also model a received act (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "5e88324f-0939-4237-b305-aebf745a36c2",
+  "rule": "Assign reception to the everlasting bearer and check the state rule",
+  "meaning": "The same candidate is everlasting in the populated history, has no strict giver there and receives esse according to the supplied dictionary. The two open theses can coexist in this interpretation.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

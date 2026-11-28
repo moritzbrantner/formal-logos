@@ -1,0 +1,10 @@
+{
+  "id": "c77be9ca-271d-45bd-9652-78633582f5ff",
+  "label": "The location countermodel tests the adjacent state premise",
+  "subject_kind": "result",
+  "subject_id": "51b3d932-cf5e-4907-9c7c-ff3679b31690",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "628aaedc-7e33-4d15-8606-d894cb3d755d",
+  "note": "Under no onset, no giving and the all-false inducer interpretation, the exposed history loses the bearer from date 0 to 1 even though the worked location contrast holds separately."
+}

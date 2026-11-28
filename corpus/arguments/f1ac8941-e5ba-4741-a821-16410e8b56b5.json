@@ -1,0 +1,19 @@
+{
+  "id": "f1ac8941-e5ba-4741-a821-16410e8b56b5",
+  "label": "A received bearer can survive with a protector present, no loss inducer and no strict giver at 1",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5a4ba734-fea3-4e3c-afd1-50f086c32f41",
+  "inference_ids": [
+    "ac24cbe3-8079-4dd5-9d4a-fbeafd9bd62c"
+  ],
+  "meaning": "At date 1 the model stipulates covariation between protector presence and inducer absence through a shared world index. Causal prevention is one interpretation of that covariation. In the surviving history, the received bearer has an inertial reason and lacks any strict giver at 1, so the productive bridge fails there.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

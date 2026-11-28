@@ -1,0 +1,10 @@
+{
+  "id": "9bcdbd89-528e-4e9a-b54c-a19e44de736f",
+  "label": "Fixed-role occupancy is an alternative to exact-provenance individuation",
+  "subject_kind": "statement",
+  "subject_id": "f530b408-cb58-4780-adb3-f2e96d5aa717",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "cccaf7ca-8900-4ddb-aa38-e0c0c1465456",
+  "note": "For the same replacement outputs, role occupancy counts the far backup producer's output as the effect and exact provenance excludes it. role_omits_witness checks the resulting failure of the same closest-absence selection to preserve a witness."
+}
