@@ -17,5 +17,8 @@
   ],
   "disambiguation_ids": [
     "12425707-e469-5574-b064-4f5e171cfb65"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The conclusion (a control or joint-satisfaction bundle) contains ExcludedMiddle itself as a component, filled by hEM (And.intro … hEM …). The weak version LocalLogic (ca432e24) is not that proposition and cannot fill the component."
+  }
 }

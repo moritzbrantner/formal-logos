@@ -18,5 +18,8 @@
   ],
   "disambiguation_ids": [
     "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `f.GoodIn x p` (in failureElimination); `TruthCore.Metaethics.GoodnessFormEnd.SurplusGood f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

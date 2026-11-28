@@ -35,5 +35,8 @@
     "7507d645-874d-5434-add8-2f49c2801d36",
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ExistsAt z ↑c` (in source_necessary_at); `∃ c, (TruthCore.Causality.WorldSourceRegress.actualGraph m w).edge c x` (in source). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -83,12 +83,12 @@
       "path": "corpus/arguments/AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD-VIA-FULL-DESCRIPTION.json",
       "status": "inspected",
       "classification": "bounded_inspection",
-      "finding": "For supplied m with maximality: genus at esse causes each distinct x having esse; actuality-to-being and the explicit every-perfection bridge give each instantiated perfection. Maximum-to-first-being and no-component yield RemoteFromAll at m. At-most-one identifies every supplied maximum with m. Apply hFull only in its sufficient-description-to-God direction, at that same m. No maximum existence and no God-to-maximum converse. Countermodels omit exactly the advertised perfections or no-component premise; no stronger scope is inferred. #1111: added required DISAMB-MAXIME-ENS navigation for the existing generic-perfection/maxime-ens vocabulary union; argument premises, inference IDs and theorem remain unchanged.",
+      "finding": "For supplied m with maximality: genus at esse causes each distinct x having esse; actuality-to-being and the explicit every-perfection bridge give each instantiated perfection. Maximum-to-first-being and no-component yield RemoteFromAll at m. At-most-one identifies every supplied maximum with m. Apply hFull only in its sufficient-description-to-God direction, at that same m. No maximum existence and no God-to-maximum converse. Countermodels omit exactly the advertised perfections or no-component premise; no stronger scope is inferred. #1111: added required DISAMB-MAXIME-ENS navigation for the existing generic-perfection/maxime-ens vocabulary union; argument premises, inference IDs and theorem remain unchanged. Re-inspected 2026-11-28 (#1517): only strong_version_needed reasons were added; premises, conclusion, inferences, meaning and term links unchanged. Re-inspected 2026-11-28 after independent review (#1517): only the wording of a strong_version_needed reason changed (call path stated).",
       "before": {
         "sha256": "4091629ae6d6b8f7999e962cc69735e858a6e205f314753627b48eb1cb889364",
         "lean_declaration": null
       },
-      "reviewed_sha256": "e3e5981110fb167114e049f601d6dee627d3cde717f2789490871f09c3a0279f"
+      "reviewed_sha256": "6b777f470a94efcb2af66aab5531012ca593d595ff5895c00afa33fcaf50d23d"
     },
     {
       "kind": "arguments",

@@ -44,5 +44,8 @@
     "06fc8d78-0723-5daa-9186-7a016125bb0b",
     "896d4cb9-3c62-5230-a499-f23feae9d204",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.NecessarilyUnderived.NecessarilyUnderived m R w` (in underived_of_union_wellFounded_and_excludedMiddle). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

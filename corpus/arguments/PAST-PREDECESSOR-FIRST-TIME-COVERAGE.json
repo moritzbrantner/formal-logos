@@ -12,5 +12,8 @@
   "meaning": "Exact old pointwise predecessor/first-time coverage under explicit excluded middle; neither ordering axioms nor temporal actuality or cardinal finiteness are smuggled in.",
   "definition_ids": [
     "de94687a-6789-5599-b38d-14bef31148fd"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ s, Before s t`; `TruthCore.Latin.Aquinas.SummaTheologiae.PastIsFinite Before now`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

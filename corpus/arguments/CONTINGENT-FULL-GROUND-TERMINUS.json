@@ -27,5 +27,8 @@
   ],
   "disambiguation_ids": [
     "e940ca85-8b6b-53ea-9c3a-4fd5693ad534"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ S, G S c`; `A.holds v r`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

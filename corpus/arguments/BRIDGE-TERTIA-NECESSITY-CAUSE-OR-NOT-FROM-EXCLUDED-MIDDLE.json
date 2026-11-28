@@ -15,5 +15,8 @@
   ],
   "disambiguation_ids": [
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Latin.Aquinas.SummaTheologiae.HasCauseOfNecessityAliunde CausesNecessityOf x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }
