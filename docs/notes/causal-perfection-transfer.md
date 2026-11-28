@@ -9594,6 +9594,354 @@ repaired in the following commit:
    carriage, because its other premise or its conclusion concerns conditions
    in any being's nature.
 
+## Intrinsic and extrinsic grounding of imitability modes (2026-11-28; provisional, #2145)
+
+### Question and overall provisional judgment
+
+**The restricted effect-grounded account fails under an explicit strict-priority
+bundle. Bare common-source identity also fails to explain a determinate ranking
+under an explicit completeness constraint. Neither result excludes primitive
+formal or dispositional differentiation, and both constrain a simple intellect
+on the same terms.** A4 now has a stronger, positively specified interpretation
+than an empty apprehension field: its necessary source has modes and a ranking
+when effects are absent, a source-nature truthmaker, positive explanatory paths,
+and a rank-sensitive productive exercise. Those properties are encoded and
+checked in Lean. Their metaphysical application remains open, especially the
+non-composing status and explanatory relevance of the intrinsic table and the
+coverage of the represented dependence relation. The personal interpretation
+has corresponding positive commitments, with a single cognitive exercise on
+the explanatory path. Neither interpretation is certified metaphysically
+possible by its finite model.
+
+This is a scoped continuation of [#2178](https://github.com/moritzbrantner/formal-logos/pull/2178),
+[#2180](https://github.com/moritzbrantner/formal-logos/pull/2180), and the
+simplicity/self-intellect investigations
+[#1879](https://github.com/moritzbrantner/formal-logos/pull/1879) and
+[#1892](https://github.com/moritzbrantner/formal-logos/pull/1892).
+The successor [attempt](../../corpus/attempts/b45aef67-a349-4a84-a239-e98530f11712.json) replaces the
+unperformed identity, truthmaker and productive-role tests in H1 only to the
+extent described below. It does not erase H1's historical findings or certify
+equal warrant from constructed structural parity. All new philosophical
+formulations are analyst reconstructions; historical attribution is deferred.
+
+The same target meanings are retained: recognition `d1fb6414`, cognition
+`3b40009e`, conceptualist non-real containment `cde7f1dd`, content `5a3a1432`,
+constitutive simplicity `f4180d0c`, no independent stand-in `65805e5a`, and no
+merely produced stand-in `69b9f887`. The new work does not prove a cognitive
+conclusion by renaming one of these bridges. The independent tests concern
+priority, realizer identity, symmetry, and modal sufficiency.
+
+### 1. What must distinguish the modes?
+
+There must be a difference relevant to their different specifications or rank.
+The mere statements that both belong to one source, are realized in one nature,
+or occur in one operation do not specify such a difference. This is an
+explanatory demand, not the assumption that every distinction is a constituent.
+
+[Identity and ranking laws](../../corpus/results/28f1b4f2-2468-4382-99ae-97498f1a98e0.json)
+separate three claims. First, constitutive simplicity equates all **real
+realizers**. It equates their modes only given an injective realizer map.
+Second, an irreflexive mode ranking cannot factor through that one realizer
+alone. The proof reuses the existing degree-only realization theorem from
+`AxiarchicGuidance`, rather than inventing another individuation lemma. Third,
+if a description is preserved by exchanging c and d, and the description
+exhausts the ranking's grounds in the stated symmetry-respecting sense, an
+asymmetric ranking cannot place c above d. Applying this last law requires the
+OPEN completeness premise `RankingRespectsDescriptionSymmetries`; common
+grounding does not entail it.
+
+The [matched initial controls](../../corpus/results/d77ef09e-07c2-4a9c-8190-a4e1e216909f.json)
+exhibit distinct modes with one realizer and one operation. Their maps are
+noninjective. Common source, common act, and uniform apprehension all preserve
+the c/d exchange. The explicit mode-sensitive values break it. Thus the bare
+claim that the source understands everything does not yet explain why these
+contents differ or why one candidate is better. The personal side needs
+determinate intentional content, just as A4 needs determinate formal or
+dispositional specification.
+
+This resolves the proposed identity objection at its logical step. If two modes
+are literally equal in the same type, substitution forbids contradictory
+predication of them. But equality of their images under a realizer map is not
+their literal equality. Declaring the map injective would close that gap; doing
+so would also collapse distinct contents realized in one simple intellectual
+act. Neither side may assume the extra premise only against its rival.
+
+### 2. Extrinsic grounding: actual effects, possible recipients, and a necessary basis
+
+The [priority application](../../corpus/results/7e026e27-520f-4b65-a031-5acc6a5342fe.json)
+uses four separately registered commitments at the same world:
+
+1. The selected fact-priority relation is asymmetric (`fb66f07f`).
+2. That same relation is transitive (`5cd0b154`).
+3. The mode or ranking fact explains the productive-exercise fact (`bbc8c9b5`).
+4. Whenever the source gives an effect being, that exercise fact is prior to
+   the existence fact of the same effect (`0f5b7197`).
+
+An effect-existence-to-mode edge then creates a forbidden cycle. The proof
+applies `PriorityOmission.constitutionNotPriorOfWholeFirst`. Asymmetry is the
+chosen strict-priority interpretation; irreflexivity plus transitivity would
+suffice. Populated companion controls retain actual distinct source and effect,
+giving, coherent existence facts and factivity while omitting each core premise
+in turn. They establish the formal need for the selected premises in that
+signature, not their truth in every metaphysical theory.
+
+The rationale for strict priority is independent of cognition: a productive
+explanation cannot obtain its relevant explanatory antecedent only from that
+very product if the order is genuinely prior and composable. Its application
+is contestable at a precise point. Efficient giving and fact grounding are
+different relations; asymmetry of each does not prove asymmetry of their
+union. The giving-to-fact-priority bridge is therefore retained. A mode's mere
+reference to an effect also need not make that effect its ground. Personal
+ideas whose content depends explanatorily on the effects they explain face
+exactly the same test.
+
+It would overstate the result to infer that **every extrinsic distinction**
+presupposes actual creatures. An independent necessary realm, a condition on
+possible recipients, or a relation founded in the source's essence can have
+modal availability without the recipients' actuality. The
+[availability control](../../corpus/results/422f9341-3541-4ae3-8f03-b985bca91667.json)
+represents two rigid possible recipients absent in one world and actual in
+another. Their distinct mode facts and ranked profile persist, with positive
+possibility-basis explanation edges; actual giving and the cycle premises are
+populated in the produced world. The worlds are complete alternatives, not
+times before and after creation. Reason-variation scenarios from #2178 remain
+a separate carrier.
+
+This basis is independent of actual effects **in the displayed graph**. It is
+not asserted to be an independently existing abstract entity, and is not an
+instance of `AxiarchicFoundation.Independent` merely because of that wording.
+An interpretation making it a second independent locus must answer
+`65805e5a`; one founded in source nature belongs to the intrinsic branch below.
+Calling it a possible-recipient relation without specifying a prior modal
+basis does no work. Conversely, a complete relational essence account need
+not reintroduce actual recipients as its grounds. The remaining demand is
+positive modal and productive relevance, not a prohibition of all relations.
+
+### 3. Intrinsic grounding and primitive formal distinctions
+
+The intrinsic alternatives divide by what their differentiating structure
+claims to be. Distinct real constituent powers or representations conflict
+with the selected constitutive simplicity. A bare realizer without additional
+mode-sensitive information cannot support the rank under realizer-only
+factorization. Primitive formal/dispositional differentiation supplies such
+information while denying that it introduces several real constituents.
+This is a definite extra commitment: a nontrivial intrinsic modal/value profile
+and laws relating it to production. It is not automatically composition, and
+calling it additional structure is not itself an objection to it.
+
+The positive warrant for taking that option seriously is its concrete
+explanatory proposal: distinct possible manifestations and their order are
+fixed by one nature's primitive profile, so they need neither an actual
+recipient nor a separate representation in a knower. The models expose this
+proposal's consequences and prevent its being rejected merely by literal
+identity or by an actual-effect cycle. They do not establish an uncontested
+metaphysical instance of non-composing differentiation, or show why this
+particular profile is its nature. A direct primitive remains a live option;
+there is no general requirement that every primitive receive a deeper proof.
+Its scope and compatibility with the intended strong simplicity nevertheless
+have to be defended.
+
+The terminology does not decide the case. A **formal distinction**, in the
+selected rival reading, is a mind-independent distinction of specification
+within one real nature without distinct real constituents. A **virtual
+distinction** can mean one power's ability to account for different possible
+effects; if that means only the undifferentiated power label, it fails the
+contrast test, whereas a determinate manifestation profile is the substantive
+structure A4 proposes. A **dispositional** reading supplies counterfactual
+manifestation conditions; multiple real powers face simplicity, but one power
+with a structured profile does not fall under that objection without another
+premise. These are interpretations of the exposed mode/value structure, not
+three independently verified metaphysical theories or historical attributions.
+Their common unresolved application is whether the specified differentiation
+is admissible without constitutive composition.
+
+Constitutive simplicity here is exactly at-most-one under `RealConstituent`,
+whose role and counterexamples were fixed in #1892/#2180. It is not a proof
+of `SIMPLE_4`, absence of every limiting principle, or a complete theory of
+essence/act identity. The word *aspect* in the inherited real-constituent
+definition cannot silently settle whether every intrinsic formality is a real
+constituent: its stated examples explicitly leave A4's claim under examination.
+A bridge counting all relevant mind-independent formalities as real
+constituents would exclude this model's intended A4 application, but needs an
+independent reason and a matched account of why intentional contents escape it.
+
+### 4. Restored matched accounts and exact limits
+
+[Positive source-grounding controls](../../corpus/results/c34e1b3e-082c-4275-8b32-b7f19c5b4de8.json)
+extend the SAME source, mode/stand-in indices and contingent-effect frame used
+by the initial comparison. They do not switch to unrelated ontologies to
+claim a common model. Both accounts share necessary source existence, the
+selected simplicity, distinct non-real contained modes, the same primitive
+value table, an effect-absent world, a sound and necessitating source-nature
+maker, positive nature-to-mode/ranking explanation paths, strict fact priority,
+and a rank-sensitive actual giving exercise. The existing priority theorem is
+applied to both accounts on that frame.
+
+The exclusive personal commitment is the represented cognitive exercise: one
+selected operation apprehends all modes, and its cognition fact contributes
+to their explanation. The exclusive impersonal commitment is no apprehension
+anywhere in the model and no path from the represented cognition fact into
+the modes or rank. These alternatives contradict one another on the same
+interpretation because the personal row has actual apprehension; neither is
+defined to follow from the shared causal or ranking structure.
+
+The restored clauses make more explicit than #2180's `appNone` assignment,
+but preserve their exact limits. The no-cognitive-path property concerns the
+sole cognition fact and transitive priority relation represented here. It
+does not establish that no unrepresented intellect or different kind of
+dependence matters. `natureMaker` is a specified interpretation of Making
+whose soundness and necessitation are proved; relevance is not independently
+derived. In fact, the nature/mode equalities in `holds` reduce definitionally
+for any supplied table; these clauses do not independently determine that
+table. Absence of cognition-to-mode/rank paths follows from false cognition
+and factivity. What the restoration adds is the explicitly selected positive
+source-nature graph, the discriminating table and rank-sensitive giving. The
+table's metaphysical placement as non-composing intrinsic structure and the
+graph's explanatory relevance remain disputed applications.
+
+The rank is a necessary condition of this selected giving exercise and a
+partial explanatory contributor. Flattening the table removes the giving
+exercise. That omission leaves the separate effect-existence field in place;
+it is a local test of the mechanism, not a complete alternative explanation
+of that effect. Nor does the model identify the Bool effect's form with c,
+prove that a maximizing policy selects c, or explain the contingent
+world-true exercise condition. These are exact missing bridges, not facts
+inferred from naming the relation productive.
+
+The [maker-contingency result](../../corpus/results/74ec4d5b-81cc-4626-a4bf-0e478f473ca2.json)
+provides a further reusable boundary: every world-immanent necessitating maker
+of a contingent fact is contingent. It reuses `PSRStrength.failure_transport`,
+without assuming a maker exists. The converse about necessary facts is false
+under the weak conditions: `RootClosure.necessaryFactAnyMaker`
+already exhibits why necessitation alone does not establish relevance.
+Likewise the existing [modal incompatibility](../../corpus/results/GROUNDING-NECESSITATION-INCOMPATIBLE.json)
+proves that a necessary basis plus a necessary implication to a contingent
+productive fact is inconsistent. Both matched models expressly deny global
+explanatory necessitation. A theory of free or nonnecessitating exercise is
+still needed on either side; necessary ranked possibilities alone do not
+give it.
+
+### 5. Goodness, intentionality, and the classical comparison
+
+The tables specify determinate possibilities and an asymmetric rank, while
+the inherited good-general tests read that rank as value. This separates two
+questions: whether a profile can be specified without apprehension, and what
+makes the profile **goodness** rather than a different ordering. The first is
+answered positively for the formal interpretation. The second is not answered
+by an ordered table, by an explanation edge, or by making the source apprehend
+the same table. A4 can take objective value as intrinsic primitive structure;
+the personal account can take it as intrinsic perfection intelligible in the
+essence. Neither description alone supplies the other's missing warrant.
+
+Nonintentional directedness and intentional apprehension also remain distinct
+claims. Structural correspondence, ranking-sensitive production and
+counterfactual guidance do not define the primitive Apprehends relation.
+#2178's guidance test discriminates responsive from fixed or respect-blind
+profiles, but the strongest A4 and personal profile pass together. The new
+positive grounding paths show exactly where the personal account places
+cognition and A4 omits it. Concluding that the latter paths really are
+intellectual would require a substantive cognition-exclusivity or content
+argument; replacing Apprehends by the desired structural role would merely
+change the question.
+
+The classical account has an intelligible positive proposal: one act can
+have multiple intentional objects without those objects being multiple real
+operations. Its model makes that act/content distinction explicit, rather
+than assuming that several objects imply several acts. This establishes the
+logical difference between content plurality and act plurality; it does not
+derive that an absolutely simple act has the requisite determinate contents,
+that the act is its essence in every relevant sense, or that its content is
+prior to the effects. Familiar discourse about understanding several things
+is not by itself a demonstrated instance of that stronger metaphysical
+unity. No claim about the number of physical or real representations in a
+human act is needed for the present conditional tests.
+
+The strongest discriminating opportunity is therefore a justified account of
+intentional unity and content that permits the personal case while ruling out
+the corresponding primitive noncognitive profile. The present identity,
+priority and symmetry results do not supply that asymmetry. They identify
+shared constraints. This is narrower than a verdict of equal overall warrant,
+and stronger than leaving the intrinsic/extrinsic options unanalyzed.
+
+### 6. Graph effect, contradictions, and indispensable open applications
+
+The new results have explicit `tests` connections to recognition, cognition,
+the source-of-differences rationale, constitutive simplicity, and the
+pure-perfection application. These are placed diagnostics, not support edges
+that establish those targets. The two generic extrinsic theorems have open
+inputs, so the placement policy also requires explicit connection plans on
+`7b9166b9` and `41350b46`: item/fact, giving/production, modal availability
+and relevance mappings to `69b9f887` remain unbuilt. Their `tests` links
+describe their diagnostic purpose; those links do not turn conditional
+library results into premise-free controls or into target derivations. The intellect destination remains
+`3a32d91c` through the existing `fad1a1ac` bridge to `29818edd`; this work
+does not add an apprehension premise to that route. For pure perfection,
+`fe67d766` and `d164b1ff` still require the relevant cognition/wisdom property
+to be a pure perfection, compossible with the SAME source and strong
+simplicity. #1879's primary-object bridges and #1892's objective-eminence
+fork are not discharged by a generic one-operation map or a value table.
+
+The refreshed baseline also includes [#2184](https://github.com/moritzbrantner/formal-logos/pull/2184),
+whose `SimpleUnityCarriage` results separate carriage in the root from carriage
+as such. Its new route to `fe67d766` uses the in-root purity of requirements
+(`d83785e2`); identity of a real seat does not supply that premise. The present
+realizer and symmetry tests preserve that distinction and do not discharge
+the in-root purity application or identify mode facts with real seats.
+
+The incompatible bundles are precise: strict composed priority with the
+three-edge production cycle; constitutive simplicity with distinct modes and
+injective real realization; an irreflexive nonempty rank factoring through
+one realizer alone; an asymmetric rank of a swapped pair with both
+description symmetry and explanatory completeness; necessary full
+sufficiency for a contingent exercise; and actual apprehension with its
+universal denial. Each contradiction is conditional. None uses the general
+claim that every distinction composes or that correspondence is intentional.
+
+The remaining indispensable applications are:
+
+- **Non-composition:** which intrinsic differentiations count as real
+  constituents or limiting principles, and why the rule treats both accounts
+  consistently. The result changes if primitive formal structure is shown to
+  compose while intentional content demonstrably does not, or vice versa.
+- **Explanatory completeness and relevance:** whether the selected source
+  nature and mode-sensitive profile really ground these specifications and
+  rank; whether the displayed dependence fragment covers all relevant mental
+  dependence; and whether the causal-to-fact-priority bridge applies.
+- **Objective value and determinacy:** what warrants the rank as goodness and
+  the mode specifications as possibilities. A bare common nature fails the
+  contrast test, but primitive structured nature and determinate intentional
+  content remain coexisting positive options.
+- **Cognitive discrimination:** an independent reason that the admissible
+  explanation requires apprehension, or a defended instance/principle of
+  mind-independent non-composing specification. Restating `d1fb6414`,
+  `3b40009e`, or `cde7f1dd` in the new vocabulary would add no warrant.
+- **Productive realization and contingency:** the candidate-to-effect-form
+  connection and the reason for the contingent exercise without global
+  necessitation. Neither matched interpretation is a complete selection
+  theory, and the issue is not peculiar to A4.
+
+These results exclude identifiable weaker accounts and sharpen the surviving
+strongest rival. They do **not** establish that A4 is a genuinely coherent
+metaphysical alternative, or that it is incoherent. Its status is a positively
+specified candidate whose decisive semantic applications remain open. The
+simple-intellect interpretation is subject to the same restriction. Further
+logical changes that merely duplicate the displayed tables or rename the
+recognition bridge would not resolve it; an independently warranted
+restriction or constructive metaphysical account of the surviving structure
+is the next discriminating evidence.
+
+### Verification and review scope
+
+The ordinary frozen Challenges precede the handwritten proofs. Prove-sweep
+closed the two generic extrinsic targets and, in its later separate run, the
+maker-omission certificate; the other finite/symmetry targets remained
+unresolved without errors. The finite finder could not represent
+`K.history.now` for the cycle theorem or `A.exist` for maker contingency;
+explicit omission controls were therefore selected. These search outcomes
+are tool-fragment limits, not philosophical evidence. Certification and the
+independent semantic challenge are recorded in the successor attempt and the
+delivery PR; only completed exact-revision checks count as passed.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)

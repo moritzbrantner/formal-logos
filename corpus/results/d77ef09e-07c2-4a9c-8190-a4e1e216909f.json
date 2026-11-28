@@ -1,0 +1,11 @@
+{
+  "id": "d77ef09e-07c2-4a9c-8190-a4e1e216909f",
+  "label": "Matched intrinsic plurality and one-act controls, checked",
+  "argument_id": "14b9e2c2-9d68-4f0c-ba5d-824c34c4388f",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityPlurality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityPlurality.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityPlurality.intrinsicPluralityControls",
+  "comparator_config": "results/d77ef09e-07c2-4a9c-8190-a4e1e216909f/comparator.json",
+  "status": "solution-present",
+  "description": "Checks the same initial nonempty structural bundle for both apprehension assignments and the omitted injectivity/factorization/completeness conditions. Explicitly adding one operation to both models does not infer cognition. Their constructed structural parity is not independent evidence for equal metaphysical warrant; the fuller restored-grounding certificate is assessed separately."
+}

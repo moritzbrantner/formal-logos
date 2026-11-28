@@ -1,0 +1,9 @@
+{
+  "id": "5a8bf165-162d-4255-9994-00affa41d9d5",
+  "label": "An actual recipient does not fact-ground the mode that explains its production",
+  "term": "exclusion of effect-grounded productive modes",
+  "basis": "stipulative",
+  "definition": "NoEffectGroundedGivingAt K A w source mode t says that for every effect to which source gives being at w,t, the fact A.exist effect does not explain mode at w. The relation is exactly the selected Arena.explains. It rules out that direction of priority, not all extrinsic specification, not a nonfactive reference to a merely possible effect, and not the possibility of a separate necessary extrinsic basis.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.NoEffectGroundedGivingAt",
+  "note": "A produced stand-in item and a fact explained by the existence of an effect are different types. Applying this result to NoMerelyProducedStandIn requires a further bridge; the registered connection is tests, not a proof of that premise."
+}

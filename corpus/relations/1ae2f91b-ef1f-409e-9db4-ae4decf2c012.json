@@ -1,0 +1,10 @@
+{
+  "id": "1ae2f91b-ef1f-409e-9db4-ae4decf2c012",
+  "label": "Positive mode grounding tests the cognition criterion",
+  "subject_kind": "result",
+  "subject_id": "c34e1b3e-082c-4275-8b32-b7f19c5b4de8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+  "note": "Ranking-sensitive production occurs in the represented impersonal model without Apprehends. This is an interpretation countermodel, not a metaphysically established counterexample to the criterion."
+}

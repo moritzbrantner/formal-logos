@@ -1,0 +1,11 @@
+{
+  "id": "7e026e27-520f-4b65-a031-5acc6a5342fe",
+  "label": "Effect-grounded productive modes are excluded by strict explanatory priority",
+  "argument_id": "3a3de771-afc7-40bf-b649-f429eeb00e62",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityGrounding.noEffectGroundedGiving",
+  "comparator_config": "results/7e026e27-520f-4b65-a031-5acc6a5342fe/comparator.json",
+  "status": "solution-present",
+  "description": "Applies existing PriorityOmission.constitutionNotPriorOfWholeFirst in the SAME fact relation. The causal-to-fact bridge and relevance are explicit. This is not a proof that every extrinsic distinction is effect-grounded, nor a restatement of the recognition bridge: no apprehension predicate occurs. Its value is a conditional exclusion that binds personal effect-grounded ideas equally. Asymmetry is retained as the chosen strict-priority semantics although irreflexivity plus transitivity suffices."
+}

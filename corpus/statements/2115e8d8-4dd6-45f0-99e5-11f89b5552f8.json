@@ -1,0 +1,10 @@
+{
+  "id": "2115e8d8-4dd6-45f0-99e5-11f89b5552f8",
+  "label": "A maker necessitates its fact at accessible worlds where that maker exists",
+  "paraphrase": "OPEN existing MakerNecessitation A M: M w b f entails that f holds at every world accessible from w in which that SAME b exists. It does not require b to be necessary or the fact to be true without b. It supplies no relevance condition on its own.",
+  "lean_declaration": "TruthCore.Explanation.TruthmakerTheories.MakerNecessitation",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "aab6fdee-e29d-58d1-b7d7-baee6d81f73e"
+  ]
+}

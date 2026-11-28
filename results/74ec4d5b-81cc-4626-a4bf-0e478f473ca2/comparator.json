@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityGrounding.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ImitabilityGrounding.makersOfContingentFactAreContingent",
+    "TruthCore.Results.Causality.ImitabilityGrounding.makerControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
