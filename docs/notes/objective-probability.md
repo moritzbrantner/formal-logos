@@ -120,9 +120,11 @@ supplies (b), and the symmetric fork cannot supply it.
   adoption (deliberatively: it is not historically necessary). The actual
   sample is `true`, but the agent sees to neither the sample nor its contrary.
   Rationally choosing a law is not necessarily choosing its sample.
-- **General STIT lemma.** In every frame, if an agent sees to some
-  proposition at a history and the same cell contains a history where an effect
-  fails, the agent does not see to the effect. The STIT vocabulary has no plan
+- **General STIT lemma.** In every frame, if the agent's cell at a history
+  contains a history where an effect fails, the agent does not see to the
+  effect. No hypothesis about seeing to a law is needed: the slice's form with a
+  Dstit hypothesis on the law follows from it, and the law hypothesis does no
+  work. The STIT vocabulary has no plan
   or governing relation.
 
 Placement: `tests` `2f9a99cc`, which concludes argument `9203e79c`: each

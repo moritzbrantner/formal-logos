@@ -285,11 +285,12 @@ def RealizationSampleControls : Prop :=
   (∀ v, emptied.performs v () ↔ varying.performs v ()) ∧
   (∀ v x, emptied.output v () x ↔ varying.output v () x) ∧
   RealizedOutputs varying ∧ ¬ RealizedOutputs emptied ∧
-  -- general STIT: seeing to a law, with a history in the same cell where
-  -- the effect fails, excludes seeing to the effect
+  -- general STIT: a history in the same cell where the effect fails excludes
+  -- seeing to the effect, whatever else the agent sees to (no law hypothesis
+  -- is needed: the weakest form)
   (∀ (M H A : Type) (F : BranchingFrame M H A) (m : M) (a : A) (h k : F.Through m)
-    (law effect : F.Through m → Prop),
-    Dstit a h law → (F.choice m a).r h k → ¬ effect k → ¬ Cstit a h effect) ∧
+    (effect : F.Through m → Prop),
+    (F.choice m a).r h k → ¬ effect k → ¬ Cstit a h effect) ∧
   Dstit () (lawHistory true true) LawAdopted ∧
   SampleTrue (lawHistory true true) ∧
   ¬ Cstit () (lawHistory true true) SampleTrue ∧

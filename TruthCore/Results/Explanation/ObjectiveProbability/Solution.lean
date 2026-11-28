@@ -222,8 +222,8 @@ theorem favoring_mixture (π : PMF Bool) :
     ENNReal.toReal_mul, ENNReal.toReal_mul, h1, h0]
   linear_combination (1 / 4 : ℝ) * hπ
 
-theorem stit_law_not_effect (M H A : Type) (F : BranchingFrame M H A) (m : M) (a : A)
-    (h k : F.Through m) (law effect : F.Through m → Prop) (_ : Dstit a h law)
+theorem stit_cellmate_not_effect (M H A : Type) (F : BranchingFrame M H A) (m : M) (a : A)
+    (h k : F.Through m) (effect : F.Through m → Prop)
     (hk : (F.choice m a).r h k) (hnot : ¬ effect k) : ¬ Cstit a h effect :=
   fun hc => hnot (hc k hk)
 
@@ -407,6 +407,6 @@ theorem realizationSampleControls : RealizationSampleControls := by
   refine ⟨fun μ hμ => ⟨outputLaw_support_matches varying (fun _ _ => Iff.rfl) μ hμ,
       outputLaw_support_matches emptied (fun _ _ => Iff.rfl) μ hμ⟩,
     rfl, fun _ _ => Iff.rfl, fun _ => Iff.rfl, fun _ _ => Iff.rfl,
-    varying_realized, emptied_not_realized, stit_law_not_effect, lawAdopted_dstit, rfl, sample_not_settled⟩
+    varying_realized, emptied_not_realized, stit_cellmate_not_effect, lawAdopted_dstit, rfl, sample_not_settled⟩
 
 end TruthCore.Results.Explanation.ObjectiveProbability
