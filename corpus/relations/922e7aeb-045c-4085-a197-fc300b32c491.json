@@ -1,0 +1,10 @@
+{
+  "id": "922e7aeb-045c-4085-a197-fc300b32c491",
+  "label": "The received-act model tests distinct concurrent actualization",
+  "subject_kind": "result",
+  "subject_id": "b6e57eb0-e45a-4c00-9a3e-29164165d8e8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "note": "The witness is received and present, but every strict giver is absent throughout its populated history. In this interpretation it therefore has no distinct concurrent giver."
+}
