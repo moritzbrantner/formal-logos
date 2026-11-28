@@ -7,8 +7,8 @@ public import TruthCore.Modal.ActualistDomains
 `BoxAllToAllBox`) imposed at every world of the contingency route's Ontic profile.
 In a fixed-domain classical quantified modal logic this transfer is the
 converse-Barcan pattern; on this varying-domain profile the library equates it
-with increasing domains. It is a necessitist commitment, not an actualist one:
-actualists reject it because of contingent existents. Both sides read presence
+with increasing domains. It is a necessitist commitment: contingentists reject
+it because of contingent existents. Both sides read presence
 and accessibility from the same Ontic profile with rigid candidate identity and
 total valuation predicates.
 
