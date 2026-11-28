@@ -357,11 +357,6 @@ pub fn report_for_root(
     } else {
         None
     };
-    let library_candidates = if identifier {
-        Vec::new()
-    } else {
-        super::proof_search::library_candidates(root, corpus, &query, &results, &cited, limit)
-    };
     let mut proof_section = String::new();
     if !results.is_empty() {
         proof_section.push_str(&format!(
@@ -415,30 +410,7 @@ pub fn report_for_root(
     } else if results.is_empty() && !matches.is_empty() && limit > 0 {
         proof_section.push_str(" The displayed investigations cite no registered Lean results.");
     }
-    if !library_candidates.is_empty() {
-        proof_section.push_str(
-            "\n\nExisting Lean theorem candidates (source matches, not equivalence or verification claims)",
-        );
-        for candidate in &library_candidates {
-            proof_section.push_str(&format!(
-                "\n{} · {}:{}\n{}",
-                string(candidate, "name"),
-                string(candidate, "path"),
-                candidate["line"],
-                string(candidate, "signature"),
-            ));
-            if let Some(ids) = candidate["registered_result_ids"].as_array()
-                && !ids.is_empty()
-            {
-                proof_section.push_str(&format!(
-                    "\nRegistered result IDs: {}",
-                    candidate["registered_result_ids"]
-                ));
-            }
-        }
-    }
     text.insert_str(text.find('\n').unwrap_or(text.len()), &proof_section);
-    report["lean_library_candidates"] = json!(library_candidates);
     report["lean_results"] = json!(results);
     report["cited_lean_results"] = json!(cited);
     if identifier {

@@ -1,5 +1,5 @@
 //! Retrieve registered Lean results independently of research notes.
-use super::retrieval::{LeanSource, Query, expanded_identifiers, qualified_declarations};
+use super::retrieval::{LeanSource, Query, qualified_declarations};
 use crate::{
     Corpus, Record,
     context::{comparator_config, module_path},
@@ -241,33 +241,6 @@ pub(super) fn library_declaration(root: &Path, query: &str) -> Option<Value> {
     Some(json!({"name":name,"path":path,"line":line,"source":source}))
 }
 
-/// Include reusable implementations that are not already displayed as a result.
-pub(super) fn library_candidates(
-    root: &Path,
-    corpus: &Corpus,
-    query: &Query,
-    shown: &[Value],
-    cited: &[Value],
-    limit: usize,
-) -> Vec<Value> {
-    let excluded = shown
-        .iter()
-        .chain(cited)
-        .filter_map(|entry| entry["theorem"].as_str().map(str::to_owned))
-        .collect();
-    let mut candidates = LeanSource::new(root).theorem_candidates(query, &excluded, limit);
-    for candidate in &mut candidates {
-        let name = candidate["name"].as_str().unwrap_or_default();
-        let ids: Vec<_> = corpus
-            .records_by_id("results")
-            .filter(|(_, record)| field(record, "theorem") == name)
-            .map(|(id, _)| id)
-            .collect();
-        candidate["registered_result_ids"] = json!(ids);
-    }
-    candidates
-}
-
 /// Prefer an exact formal identifier. For ordinary questions search the theorem
 /// names and registered argument/conclusion labels. Read Lean only for the
 /// selected witnesses. Notes and attempts never enter the candidate set.
@@ -303,20 +276,20 @@ pub(super) fn find(
     let db = Connection::open_in_memory()?;
     db.execute_batch(
         "CREATE VIRTUAL TABLE proofs USING fts5(
-        id UNINDEXED, name, argument, conclusion_label, paraphrase, description, tokenize='porter unicode61'
+        id UNINDEXED, name, argument, conclusion_label, paraphrase, tokenize='porter unicode61'
     )",
     )?;
-    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5,?6)")?;
+    let mut insert = db.prepare("INSERT INTO proofs VALUES (?1,?2,?3,?4,?5)")?;
     for (id, result) in corpus.records_by_id("results") {
         let Some(argument) = corpus.get("arguments", field(result, "argument_id")) else {
             continue;
         };
         let conclusion = corpus.get("statements", field(argument, "conclusion_statement_id"));
-        let name = expanded_identifiers(&format!(
+        let name = format!(
             "{} {}",
             field(result, "theorem"),
             field(result, "legacy_id")
-        ));
+        );
         insert.execute(params![
             id,
             name,
@@ -324,13 +297,12 @@ pub(super) fn find(
             conclusion.map(|s| field(s, "label")).unwrap_or_default(),
             conclusion
                 .map(|s| field(s, "paraphrase"))
-                .unwrap_or_default(),
-            field(result, "description")
+                .unwrap_or_default()
         ])?;
     }
     let mut ranked = db.prepare(
-        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase || ' ' || description
-        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1,0.5), id",
+        "SELECT id, name || ' ' || argument || ' ' || conclusion_label || ' ' || paraphrase
+        FROM proofs WHERE proofs MATCH ?1 ORDER BY bm25(proofs,0,2,2,2,1), id",
     )?;
     let mut rows = ranked.query([terms])?;
     let mut hits = Vec::new();
