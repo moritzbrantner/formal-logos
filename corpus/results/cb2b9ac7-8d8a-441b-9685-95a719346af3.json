@@ -1,11 +1,11 @@
 {
   "id": "cb2b9ac7-8d8a-441b-9685-95a719346af3",
-  "label": "Transport of the product control gives every interior mass on countable carriers",
+  "label": "Pushforward of the product control gives every interior mass on countable carriers",
   "argument_id": "78f10e01-dca5-4a77-b4ce-dc1a88fbaca9",
   "challenge_module": "TruthCore.Results.Science.FineTuningInformation.Challenge",
   "solution_module": "TruthCore.Results.Science.FineTuningInformation.Solution",
   "theorem": "TruthCore.Results.Science.FineTuningInformation.arbitraryInteriorMass",
   "comparator_config": "results/cb2b9ac7-8d8a-441b-9685-95a719346af3/comparator.json",
   "status": "solution-present",
-  "description": "A bijection from Bool x Nat sends the true fiber onto the event and the false fiber onto its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p."
+  "description": "Surjections from Nat onto the nonempty event and onto its nonempty complement give a surjection from Bool x Nat sending the true fiber into the event and the false fiber into its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p."
 }

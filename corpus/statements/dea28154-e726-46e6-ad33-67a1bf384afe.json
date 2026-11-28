@@ -3,9 +3,15 @@
   "label": "Positive observer-cell weights realize every interior conditional likelihood",
   "paraphrase": "Unit weights on the two observer cells of an existing three-cell sampling row recover its observer-conditioned likelihood; when the other-observer cell has positive mass, suitable positive weights give every strictly interior rational likelihood.",
   "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.ObserverWeightUnderdetermination",
+  "definition_ids": [
+    "6e31917c-7434-4135-8511-34220182aba1"
+  ],
+  "disambiguation_ids": [
+    "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"
+  ],
   "connection_plan": {
     "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
-    "missing_bridge": "An independently warranted observer-weighting or record-yield rule that fixes the observer-conditioned likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4.",
+    "missing_bridge": "An independently warranted observer-weighting or record-yield rule that fixes the observer-conditioned likelihood used in the fine-tuning comparison, then an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4.",
     "blocker": "The control shows only that unconstrained positive weights do not fix the likelihood; it does not show that any admissible weighting rule is unavailable."
   }
 }

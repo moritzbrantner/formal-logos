@@ -6,5 +6,8 @@
   "inference_ids": [
     "a159b012-e6b4-4304-bbf2-9043b8b381f2"
   ],
-  "meaning": "Unit weights give the existing likelihood. With positive evidence and other-observer masses, the weights p/w0 and (1-p)/w1 give weighted likelihood p for each interior rational p."
+  "meaning": "Unit weights give the existing likelihood. With positive evidence and other-observer masses, the weights p/w0 and (1-p)/w1 give weighted likelihood p for each interior rational p.",
+  "definition_ids": [
+    "6e31917c-7434-4135-8511-34220182aba1"
+  ]
 }

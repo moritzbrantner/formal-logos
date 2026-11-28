@@ -27,6 +27,7 @@ results namespace so that the generated Challenge freezes them. -/
 
 open Set
 open TruthCore.Science.FineTuningInformation.Plenitude
+open TruthCore.Logic.CarrierProbability
 
 universe u
 
@@ -39,10 +40,10 @@ theorem cutoffUnderdetermination : CutoffUnderdetermination := by
 theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := by
   sorry
 
-/-- Transport the product control along a bijection `Bool × ℕ ≃ W` that sends
-the true fiber onto `s` and the false fiber onto its complement. One
-construction therefore serves every countable carrier with an infinite event
-and infinite complement; no second mixture construction is needed. -/
+/-- Push the product control forward along a surjection `Bool × ℕ → W` that
+sends the true fiber onto `s` and the false fiber onto its complement. One
+construction therefore serves every countable carrier with a nonempty event
+and nonempty complement; no second mixture construction is needed. -/
 theorem arbitraryInteriorMass : ArbitraryInteriorMass.{u} := by
   sorry
 

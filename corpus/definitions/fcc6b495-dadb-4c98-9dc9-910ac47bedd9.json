@@ -1,0 +1,9 @@
+{
+  "id": "fcc6b495-dadb-4c98-9dc9-910ac47bedd9",
+  "label": "Plenitude scope data",
+  "term": "Plenitude scope data",
+  "definition": "The tuple of supplied metaphysically possible type profile, supplied physically reachable type profile, realized roster and type map. It is the same for every compared rate and omits the order of the instance index.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the plenitude controls (#2143); no source attribution or physical application is assumed.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.scopeData"
+}
