@@ -1,0 +1,9 @@
+{
+  "id": "127126f2-a1e6-4789-8fe0-e3d04898b78a",
+  "label": "Selected operations have intrinsic real realizers",
+  "term": "operation-to-constitution realization bridge",
+  "basis": "stipulative",
+  "definition": "For every operation selected by OperationAt at the fixed bearer and exercise, its supplied complete immediate realizer is a real constituent of that bearer. The primitive realize map names the actuality of the operation itself, not an external object, remote cause or faculty that may support several operations. A real intrinsic operation in its bearer motivates the application; a product outside its producer or an operation of a different bearer does not establish it. The realizer is not required to differ from the whole nature. No injection, existence of an operation, or subject simplicity is built in.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.IntrinsicOperationRealizersAt",
+  "note": "Analyst formulation, attribution deferred. OPEN sufficient membership bridge for applying constitutive simplicity to operations. Reuses real constituency d6912ecb-aed2-411a-913e-0dab9106d910 and the role/realizer distinction 75d4dd78-c070-4961-8130-6b0d248863c3. Several operations imply composition only with faithful individuation and matching exercise; merely having several objects does not supply these premises."
+}

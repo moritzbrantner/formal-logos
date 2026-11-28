@@ -1,0 +1,18 @@
+{
+  "id": "3cac1436-1006-4ede-902e-ef7c3dbc8d4f",
+  "label": "Constitution from posterior specifications, guarded contribution and coverage",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "fc3c4096-d1d1-4652-a89f-0a000e802b2e",
+  "inference_ids": [
+    "ab9ba5ea-d5ed-4c7e-971c-78adc86a392e"
+  ],
+  "meaning": "A distinct eligible realizer counted as a constituent would reverse a strict priority chain back to the same target. PriorityOmission excludes that reversal, so the realizer equals the whole. Coverage then carries this identity to any two real constituents. The whole is explicitly exempt from strict self-priority. This new guarded item-to-fact application retains all interpretation bridges as conditional inputs and does not infer simplicity from absence of a reverse edge alone.",
+  "definition_ids": [
+    "0d66d995-d9df-43ab-97a8-93e1439dbb37",
+    "5bead611-8fba-4ed8-90f9-c35d44f396f1",
+    "855583da-620c-4c3e-9fa6-c00db8c8f348",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "fe123142-31a9-49b5-840b-716bd6a0a98f"
+  ]
+}

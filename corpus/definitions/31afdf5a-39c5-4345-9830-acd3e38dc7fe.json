@@ -1,0 +1,22 @@
+{
+  "id": "31afdf5a-39c5-4345-9830-acd3e38dc7fe",
+  "label": "Operation-object incidence without a constituency inference",
+  "term": "object of an operation",
+  "basis": "stipulative",
+  "definition": "ObjectOf Concerns o c wraps the declared primitive binary relation that operation o concerns object c. Both compared terms may be objects of one comparison, while the subject's faculty and the comparison's real occurrence are different roles. An object may be nonactual. Incidence has no built-in structure and implies neither apprehension, correctness, existence, real constituency nor explanatory priority. Control.objects specializes incidence to membership in an arbitrary supplied object set. The same object profile may belong to numerically distinct repeated operations.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.ObjectOf",
+  "note": "Analyst formulation, attribution deferred. This is a primitive semantic boundary, not a definition of cognition. To read incidence as actual apprehension or to infer intrinsic constituency needs an explicit further bridge; no such implication is used in the operation-unity law.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "The supplied relation Concerns relates an operation token to an object it concerns; the object need not be an actual external being.",
+    "examples": [
+      "Both compared terms are objects of one comparison."
+    ],
+    "exclusions": [
+      "The bearer's faculty or the operation's real occurrence is not automatically an object of that operation."
+    ],
+    "open_obligations": [
+      "No structural properties are imposed. Apprehension, correctness, existence, constituency and explanatory priority require separate interpretation bridges."
+    ]
+  }
+}

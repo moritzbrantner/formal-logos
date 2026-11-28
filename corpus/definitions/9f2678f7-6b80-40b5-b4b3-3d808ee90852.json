@@ -1,0 +1,9 @@
+{
+  "id": "9f2678f7-6b80-40b5-b4b3-3d808ee90852",
+  "label": "Operation selected at an actual bearer and one exercise",
+  "term": "operation occurrence, bearer, and exercise",
+  "basis": "stipulative",
+  "definition": "OperationAt K w occurs bearer exercise b e o is the conjunction that b exists at w in the shared CausalityFrame, o occurs at w, bearer(o)=b and exercise(o)=e. occurs, bearer and exercise are declared primitive assignments: occurrence of an operation, its own bearer, and the index of the occurrence relevant to identity. A comparison performed by one bearer at a selected occasion illustrates it. Merely the bearer existing, another bearer performing the operation, or a repeat at a different exercise does not suffice. The exercise index is not identified with the frame moment, which is on the effect side of giving being.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.OperationAt",
+  "note": "Analyst formulation, attribution deferred. The conjunction defines the scope relative to its primitive assignments; it does not define event identity or certify that one episode contains one operation. A temporal interpretation suits repeated ordinary operations. Adequacy of a non-temporal index for eternal activity remains OPEN. Shared CausalityFrame existence is reused; no new causal or grounding relation is added."
+}
