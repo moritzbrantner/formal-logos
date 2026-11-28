@@ -1,0 +1,11 @@
+{
+  "id": "15d89a59-2725-410a-853c-b27d4c1b4f5e",
+  "label": "More such package and mode of possession: degree-indexed induction controls, checked",
+  "argument_id": "49c048dd-0ff9-4927-aa29-46da997f4a03",
+  "challenge_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Causality.MoreSuchSenseCollapse.Solution",
+  "theorem": "TruthCore.Results.Causality.MoreSuchSenseCollapse.ordinaryControls",
+  "comparator_config": "results/15d89a59-2725-410a-853c-b27d4c1b4f5e/comparator.json",
+  "status": "solution-present",
+  "description": "One finite interpretation with the respect fixed by degree. It shows that the formal possession gap needs a degree-indexed respect (or the threshold quality 'being hot'), that the ordinary-comparative gap and the failure of the MORE_3 reading of 'more such' need only the respect of having some heat, that a stipulated MORE_4 reading of 'more such' holds in the same case, that the formal reading of 'nothing moves except as in act' fails at the degree-indexed respect where its inclusive reading holds, and that with MORE_3 as the frame comparative the member of the package that fails is the exceeding step at inclusive act while possession, reception and the formal bearer hold. A structural surrogate; it is not evidence that a premise is false of reality."
+}

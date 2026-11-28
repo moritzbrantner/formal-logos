@@ -6,23 +6,39 @@ results = "TruthCore.Results.Causality.OccamRegress"
 id = "Occam’s razor and finite or infinite regress: equal likelihood preserves positive prior odds"
 lean = "EqualLikelihoodOdds"
 paraphrase = "At a fixed common positive likelihood for the same observation, positive prior weights on a finite hypothesis and an infinite regress hypothesis give positive comparison posteriors whose odds are exactly their prior odds. Every positive real odds ratio is realized by normalized positive priors, including odds favoring either rival."
+[statement.connection_plan]
+target_statement_id = "e529c42f-f0a2-5ebf-9ae1-459e7f798d31"
+missing_bridge = "Once an argument from a zero-weight prior assignment to e529c42f exists, this theorem is an undercutting test of its prior-assignment premise, to be linked by tests: at a common positive likelihood the posterior odds equal the prior odds, so the evidence does no work and the support stands or falls with the prior assignment alone."
+blocker = "No Occam support argument for e529c42f exists yet, so there is no root-path prior-assignment premise for this result to test; a tests link now would place nothing honestly."
 
 [[statement]]
 id = "Occam’s razor and infinite regress: preference beyond every finite factor requires zero rival weight"
 lean = "UnboundedPreference"
 paraphrase = "Fix a finite hypothesis with positive real weight and an infinite regress hypothesis with nonnegative real weight. The finite weight is at least every positive finite real multiple of the infinite weight exactly when the infinite hypothesis weight is zero."
+[statement.connection_plan]
+target_statement_id = "e529c42f-f0a2-5ebf-9ae1-459e7f798d31"
+missing_bridge = "The zero-weight bridge to e529c42f: an application premise for one actual causal relation giving equal explanatory adequacy of a finite-ancestry account and an infinite-regress account of the same recipients and a defended prior assignment that gives the whole regress class zero weight, with a rule from that probabilistic preference to the deductive premise e529c42f. This theorem is the step showing that only zero rival weight yields a preference beyond every finite factor, so the bridge must supply exactly zero weight."
+blocker = "No uniform discount over every admitted regress alternative is defended for an actual regress, and the corpus has no argument form from a probabilistic preference to a deductive premise (docs/notes/causal-finitism-367.md, Occam section)."
 
 [[statement]]
 id = "ef01a8ff-f4a3-4297-9484-402f8f2270d6"
 label = "Occam’s razor and infinite regress: uniform prefix discounts force zero hypothesis weight"
 lean = "UniformPrefixDiscount"
 paraphrase = "Suppose a nonnegative whole-hypothesis weight is bounded above by each of its prefix weights, the initial prefix weight is at most one, and each extension has weight at most a fixed fraction q of the previous prefix weight, with 0 ≤ q < 1. The whole-hypothesis weight is zero."
+[statement.connection_plan]
+target_statement_id = "e529c42f-f0a2-5ebf-9ae1-459e7f798d31"
+missing_bridge = "The zero-weight bridge to e529c42f: an application premise for one actual causal relation giving equal explanatory adequacy of a finite-ancestry account and an infinite-regress account of the same recipients and a defended prior assignment that gives the whole regress class zero weight, with a rule from that probabilistic preference to the deductive premise e529c42f. This theorem is the route to that zero weight: uniformly discounted depth events containing every admitted regress alternative in one prior model force it."
+blocker = "No uniform discount over every admitted regress alternative is defended for an actual regress, and the corpus has no argument form from a probabilistic preference to a deductive premise (docs/notes/causal-finitism-367.md, Occam section)."
 
 [[statement]]
 id = "e9b5b688-7a85-4fff-861c-b717fad30074"
 label = "Occam’s razor and infinite regress: one shared law allows positive hypothesis weight"
 lean = "SharedLawCharge"
 paraphrase = "For each one-time charge c in (0,1], a prefix-weight profile has weight one at the empty prefix, c at the first step, and stays at c through all further steps. A whole-hypothesis weight of c satisfies every prefix bound. No uniform factor below one bounds every extension."
+[statement.connection_plan]
+target_statement_id = "e529c42f-f0a2-5ebf-9ae1-459e7f798d31"
+missing_bridge = "Once an argument from a zero-weight prior assignment to e529c42f exists, this theorem is an undercutting test of its prior-assignment premise, to be linked by tests: a single charge for a shared generating law gives the regress positive weight at every depth, so a zero-weight assignment must exclude law-generated regresses or show the law inapplicable to the actual series."
+blocker = "No Occam support argument for e529c42f exists yet, so there is no root-path prior-assignment premise for this result to test; a tests link now would place nothing honestly."
 
 [[argument]]
 id = "Calculate finite and infinite regress odds at a common positive likelihood"

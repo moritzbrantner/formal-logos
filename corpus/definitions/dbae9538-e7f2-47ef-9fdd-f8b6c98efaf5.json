@@ -1,0 +1,9 @@
+{
+  "id": "dbae9538-e7f2-47ef-9fdd-f8b6c98efaf5",
+  "label": "Capacity of a nature: the nature n admits the perfection d",
+  "term": "capacity of a nature to admit a perfection",
+  "definition": "`CapacityFrame.Admits n d`, explicitly primitive: the nature n admits the perfection d, the 'capacitas naturae recipientis' of De ente cap.4. Distinguishing conditions: it is a relation between contents, not a reception of esse; both the reception account and the essence-only account of finitude use it. No structural property is assumed.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.CapacityFrame.Admits",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from ST I q.4 a.1 ad 3, q.3 a.4 co. and De ente capp.3-4 (Baur/Koch), read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "f539bba2-1418-4a82-96d9-d55d973b6ae9",
+  "label": "The composition step is real otherness plus reception, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f2871bf1-63f2-4045-bee5-af0a35e56b29",
+  "inference_ids": [
+    "7ff53ce1-2d0f-45b2-bae2-6bfebc1bb10b"
+  ],
+  "meaning": "Premise-free load map of the composition step: content form = real-otherness form plus real otherness of non-own beings; at-most-one real identity with an esse-tantum real-identity being gives real otherness (existential, near the GOD_4 conclusion); so does the non-existential bridge OWN_BEING_2 => OWN_BEING_1. Formally immediate.",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "87f9e331-d75e-41c5-994f-125c4969deb5",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5"
+  ],
+  "disambiguation_ids": [
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "a409105e-8389-46ce-b14b-bebbc2864198"
+  ],
+  "sense_mixing_control": true
+}

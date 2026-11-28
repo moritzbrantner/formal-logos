@@ -1,0 +1,9 @@
+{
+  "id": "f971eabf-d723-46c4-a34a-35a5af154abb",
+  "label": "Measure reading of limitation: x lacks some pure perfection",
+  "term": "measure reading of limitation of esse",
+  "definition": "`LimitedByMeasure Has Pure x`: x lacks some pure perfection as a real determination (∃ d, Pure d ∧ ¬ Has x d), the 'finite in formal perfection' reading of LIMITED_ESSE_1. Distinguishing conditions: the role reading (contraction by a receiver) is not defined by it; on this reading 'unlimited esse has every pure perfection' is analytic, and 'limitation only through reception' (1304b462) carries the content.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.LimitedByMeasure",
+  "note": "Stipulative analyst definition, attribution deferred; it makes explicit the measure reading distinguished in esse-root-leaves.md (rows on 7de89edb and 1304b462) and ST I q.7 a.1-2, read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

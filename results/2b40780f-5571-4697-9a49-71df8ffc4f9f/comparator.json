@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.HoldingFirstMover.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingFirstMover.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.HoldingFirstMover.firstMoverOfFirstUnheldHolder",
+    "TruthCore.Results.Causality.HoldingFirstMover.firstUnheldHolder_iff_reading",
+    "TruthCore.Results.Causality.HoldingFirstMover.controls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

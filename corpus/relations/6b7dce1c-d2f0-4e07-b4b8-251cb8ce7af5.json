@@ -1,0 +1,11 @@
+{
+  "id": "6b7dce1c-d2f0-4e07-b4b8-251cb8ce7af5",
+  "label": "The cognition criterion strengthens its restriction to actual roots",
+  "subject_kind": "statement",
+  "subject_id": "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8",
+  "verification_result_id": "83b91c73-7f8e-49e9-b890-c4c261709347",
+  "note": "Same Has, favours, good, fitOf, Present, About and Apprehends parameters; the weak version quantifies only over actual roots of the profile m at w. No strictness control is registered."
+}

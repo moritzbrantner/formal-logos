@@ -11,5 +11,10 @@
   ],
   "disambiguation_ids": [
     "34ddfede-ff4d-59ad-9882-4bcb490df9bb"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "5e002319-3828-4de8-96bc-98ebf34072d7",
+    "missing_bridge": "Register a universally quantified instance statement: for every profile m and world w, ActualGroundingWF m w implies ActualConcreteGroundingAcyclicAt m w. Register it as instance_of_schema of the structural schema 984860c8-c973-5ef7-b51f-af0abb263937, as the six domain transfers already are, through a verified result whose Comparator configuration lists the instance theorem and the schema's no-cycle clause.",
+    "blocker": "No such instance statement or registering result exists. The case application (the instantiation result acaa3dff) reuses the package's no-cycle law only through a Lean import, which is not a corpus edge. Even once registered, instance_of_schema is a registration, not a placement edge, so the package result stays a general law with its case use recorded beside it."
+  }
 }

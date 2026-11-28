@@ -1,0 +1,9 @@
+{
+  "id": "0a2bf1a0-bfc5-45d7-966a-a28919b6e847",
+  "label": "PERFECTION_OF_BEING_2: intensive reading, a perfection of esse itself that the act of being includes",
+  "term": "intensive reading of perfection of being",
+  "definition": "`IntensiveEsseFrame.OfEsse d`: d is a perfection of esse itself, a way of being that the act of being includes, so that subsistent esse includes it ('ipsum esse Dei includit in se vitam et sapientiam', ST I q.4 a.2 ad 3). Explicitly primitive. Distinguishing conditions: it is stronger than the thin reading (PERFECTION_OF_BEING_1) and, on the stated interfaces, is not implied by reception of esse in essence (R-act₁): the controls of ModeOfBeingMiddleTerm satisfy reception and the purity interfaces while it fails on the thin reading. That is non-entailment from the vocabulary alone, since R-act₁ and those interfaces never mention OfEsse. The candidate bridge is the q.7 a.1 family (ReceptionLimitation): unreceived esse is unlimited, so it includes every pure perfection. OPEN: a criterion for which determinations are perfections of esse beyond ad 3's examples.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.IntensiveEsseFrame.OfEsse",
+  "note": "Stipulative analyst primitive, attribution deferred; navigated from I q.4 a.2 ad 3 and I q.4 a.1 ad 3 (materialized SCTA witnesses)."
+}

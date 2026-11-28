@@ -1,0 +1,11 @@
+{
+  "id": "3d67e5ca-9619-4dba-8383-6cd27f93d4f3",
+  "label": "Root profiles admissible, from exclusion-free admissibility and root purity",
+  "argument_id": "1ba3ed2a-79b9-41ec-b356-5284f492281d",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.rootProfilesAdmissibleOfExclusionFreeAdmissibility",
+  "comparator_config": "results/3d67e5ca-9619-4dba-8383-6cd27f93d4f3/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w. Every real determination of r is pure (strict pure actuality at roots), so by the purity premise no member of r's profile requires the lack of any subset of it, and the sufficiency direction makes the profile admissible. The #2153 anchoring family (finite profiles of natural numbers) is member-grounded when every determination requires the lack of every infinite set, but no requirement relation gives it the sufficiency direction together with the purity premise while every determination is pure (Lean-only anchorFamilyGrounding). The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), a root profile containing the nonpure limiter and noesis keeps the sufficiency direction and the purity premise but fails root purity and admissibility, and the all-pure root profile in the triple family is inadmissible while the sufficiency direction fails (no requirement relation) or the purity premise fails (noesis requiring the joint lack of a and b)."
+}

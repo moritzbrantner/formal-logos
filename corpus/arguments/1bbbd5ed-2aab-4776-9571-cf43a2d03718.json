@@ -1,0 +1,20 @@
+{
+  "id": "1bbbd5ed-2aab-4776-9571-cf43a2d03718",
+  "label": "The mode-of-being premise pair is equivalent to its composite, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "04c75ec4-ff41-48b4-9012-c0857d7ad3a6",
+  "inference_ids": [
+    "a89018d9-65ea-4fb8-9188-aa597ab18d1f"
+  ],
+  "meaning": "Forward: from a mode of being of an actual perfection and the total-cause premise, the total cause causes the perfection. Backward: take 'mode of being' to be 'had in act'; the mode premise is then trivial and the total-cause premise is the composite. Premise-free: the equivalence of the pair, existentially closed over the primitive, with the composite. It is an instance of a general fact about middle-term decompositions; that the decomposition shifts rather than lightens this load is a judgment resting on the absence of any independent fixing of the primitive beyond the act-of-being thesis.",
+  "definition_ids": [
+    "5cbd5a0a-9055-4b69-af39-bd0bff1279fd",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "42f8b601-09d6-5ad0-af5f-27af30b95166",
+    "09542185-eb41-5874-8fd3-fe40ea68aeb4"
+  ],
+  "disambiguation_ids": [
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
+  ]
+}

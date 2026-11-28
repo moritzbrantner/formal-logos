@@ -1,0 +1,10 @@
+{
+  "id": "1c66ee49-5521-48d5-9001-700c5b14ddbd",
+  "label": "Aquinas, ST I q.4 a.2 ad 3: no perfection of being is lacking to subsistent being",
+  "statement_id": "9a0a4951-dad6-4d3c-a6c1-f84b7ab492f4",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.4 a.2 ad 3: tamen ipsum esse Dei includit in se vitam et sapientiam; quia nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens",
+  "interpretation": "The reason clause ('quia nulla de perfectionibus essendi potest deesse ei quod est ipsum esse subsistens') is general: none of the perfections of being can be lacking to whatever is subsistent being itself. 'Ipsum esse subsistens' is read as the primitive OwnBeing, 'perfectiones essendi' as the primitive OfBeing over respects, and 'not lacking' as being in act in the perfection formally or eminently (the frame's mode-open InAct). That is the HAVING_EVERY_PERFECTION_1 side of DISAMB dc9c0a1b. The same article satisfies 'not lacking' through eminent preexistence (first proof) and 'ut unum' (ad 1), so the passage does not settle real having as a determination (d164b1ff), which is recorded only as supported, with a gap note. The passage says the perfection cannot be lacking; the statement says only that it is not lacking. The application to life and wisdom is kept to the supports relation on c4fb87a6.",
+  "attribution": "The passage states that none of the perfections of being can be lacking to that which is subsistent being itself, which, with 'not lacking' read as being in act formally or eminently, is the premise: whatever is its own being lacks no perfection of being.",
+  "status": "formalized"
+}

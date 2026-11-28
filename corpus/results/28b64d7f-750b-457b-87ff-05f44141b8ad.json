@@ -1,0 +1,11 @@
+{
+  "id": "28b64d7f-750b-457b-87ff-05f44141b8ad",
+  "label": "Mirror fork for necessitarians; contrast gap of invariant sources",
+  "argument_id": "eb4c5437-eaba-4cc4-bc95-6590d7c5ed21",
+  "challenge_module": "TruthCore.Results.Modal.MirrorCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Modal.MirrorCollapse.Solution",
+  "theorem": "TruthCore.Results.Modal.MirrorCollapse.mirrorFork",
+  "comparator_config": "results/28b64d7f-750b-457b-87ff-05f44141b8ad/comparator.json",
+  "status": "solution-present",
+  "description": "Certificate, placed diagnostic for c94b5446. Establishes no premise."
+}

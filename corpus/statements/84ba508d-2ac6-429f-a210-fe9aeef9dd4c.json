@@ -1,0 +1,21 @@
+{
+  "id": "84ba508d-2ac6-429f-a210-fe9aeef9dd4c",
+  "label": "More such package and mode of possession: induction-shaped controls",
+  "paraphrase": "Closed finite interpretation; statements about it only. Two beings (a source, read as the coil, and a recipient, read as the workpiece) and two respects (being and heat); the source causes the recipient's heat and nothing else is caused; both have being formally, only the recipient is formally hot, the source has heat virtually (IN_ACT_2, as a power to produce it); the recipient's heat is received in and limited by the recipient. With a stipulated comparative on which the recipient is hotter (not MORE_3, which needs both comparands to have the respect formally; heat is read as the threshold quality being hot, which the coil lacks formally): the formal possession gap 25b67649, inclusive (IN_ACT_3) distinct-cause possession 2c0b9bd7, the four reception premises a9036c3c, cdb79aa6, 39a4c28c and d0b76fb9, and the formal more-such bearer c11369aa hold; the inclusive exceeding step 7030af77, 'more such' d5a94eb1 and formal possession 26632e48 fail. With the eminent comparative on the same causes, acts and reception (the source exceeds by eminence): inclusive possession, the reception premises checked, the inclusive exceeding step, 'more such' and the inclusive more-such bearer hold, and the formal more-such bearer fails. Encoding artifacts, disclosed: reception and limitation coincide; the respect of being is caused by nothing; the eminent comparative is stipulated as the source exceeding the recipient in heat, not derived from any measure. It witnesses which member of the package fails under each comparative in this one interpretation; it is not evidence that a premise is false of reality.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.Control.Controls",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "f7833666-c764-5624-a766-708949d9feee",
+    "115f23e3-2a19-5dcb-bc7f-96408004f110",
+    "5766de66-8a37-5b04-aa65-9eec53319f50",
+    "cf4875cb-6baf-5bf5-8590-84a21777c66c",
+    "245797e9-e5e9-5296-8d34-2138cc6b7ae6"
+  ],
+  "disambiguation_ids": [
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811"
+  ]
+}
