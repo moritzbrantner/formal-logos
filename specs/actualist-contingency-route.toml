@@ -1,0 +1,112 @@
+# Lane F application of the actualist domain library to the contingency node.
+# The forward guarded transfer (VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4,
+# the converse-Barcan pattern) is a necessitist rival of the node, which
+# contingentists reject. It strictly strengthens the recorded rival concrete
+# necessitarianism (411e5817) at every world; its refutation composes the
+# existing refutation e1d0d14b with that strength order.
+[batch]
+vocab = "TruthCore.Modal.ActualistContingencyRoute"
+results = "TruthCore.Results.Modal.ActualistContingencyRoute"
+
+[[statement]]
+id = "f084efde-c461-49d4-9f7d-902abc81b5f9"
+label = "The route validates VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer at every world"
+lean = "RouteForwardTransfer"
+paraphrase = "Rival domain policy on the route's Ontic profile, analyst formulation, attribution deferred: a necessitist commitment (the guarded converse-Barcan pattern), which contingentists reject. For every world u and total world-indexed predicate P, if every existing candidate at each world accessible from u satisfies P there, then each candidate existing at u satisfies P at every world accessible from u. Both guards use the same rigid candidate roster and the supplied world-relative existence field. On this profile it is equivalent to increasing domains, and it strictly strengthens concrete necessitarianism (411e5817) at every world."
+definitions = ["DEF-BOX-ALL-TO-ALL-BOX", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-DOMAIN-PERSISTENCE-AND-NECESSITY"]
+
+[[statement]]
+id = "9cdae436-0192-4ad7-b56a-4937e22c8c12"
+label = "Not every world of the route validates VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer"
+lean = "NoRouteForwardTransfer"
+paraphrase = "Not every world/predicate instance of the supplied Ontic profile satisfies the forward transfer from a box of existence-guarded universal quantification to an existence-guarded universal quantification of a box; at least one instance fails (classically; the Lean type is the bare negation of the universally quantified policy). It does not say that the transfer fails at every world or for every predicate."
+definitions = ["DEF-BOX-ALL-TO-ALL-BOX", "DEF-KANT-ONTOLOGICAL-MODEL"]
+disambiguations = ["DISAMB-DOMAIN-PERSISTENCE-AND-NECESSITY"]
+
+[[statement]]
+id = "ec397a1a-da39-46e1-92c7-89678a7f3870"
+label = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer exceeds concrete NECESSARY_2: models"
+lean = "Control.Strictness"
+paraphrase = "Closed controls over two universally accessible Bool worlds and Bool beings, with presence x = true or w = false. (1) abstractDrop: only being true is concrete; every actual concrete being is NECESSARY_2 at every world, while the forward transfer fails: in the countermodel, the instance at world false fails, because the non-concrete being false is present at world false and absent at world true (the Lean type certifies only that not every instance holds); and no actual concrete being is CONTINGENT_1 at any world, so the contingency node fails everywhere although the transfer fails. (2) concreteDrop: every being is concrete; every actual concrete being is NECESSARY_2 at world true, while the forward transfer fails: in the countermodel, the instance at world false fails (the Lean type certifies only that not every instance holds). So the transfer is strictly stronger than concrete necessitarianism, both in constraining non-concrete candidates and in constraining worlds other than the selected one, and its failure does not give the contingency node. Statements about these interpretations only."
+definitions = ["DEF-BOX-ALL-TO-ALL-BOX", "DEF-KANT-ONTOLOGICAL-MODEL", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "1b8baf77-84fa-5513-a138-7fa14840dd87"]
+disambiguations = ["DISAMB-DOMAIN-PERSISTENCE-AND-NECESSITY", "35fa7162-6cb3-52e1-ac5b-66afc318c74f", "83264cf5-01fe-52fc-9a00-eeb024f6496e"]
+
+[[argument]]
+id = "90796d44-3980-452b-bb8a-3b79f06bc844"
+label = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer gives concrete NECESSARY_2 at each world"
+theorem = "transferGivesConcreteNecessary"
+premises = ["f084efde-c461-49d4-9f7d-902abc81b5f9"]
+conclusion = "STMT-ALL-ACTUAL-CONCRETE-NECESSARY"
+weakening = true
+sense_bridges = [
+  { term = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY", from = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4", to = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_6", statement_id = "STMT-ALL-ACTUAL-CONCRETE-NECESSARY", role = "conclusion" },
+]
+axioms = []
+rule = "Actualist domain correspondence, then instantiation at the selected world and its concrete members"
+meaning = "boxAllToAllBox_iff (certificate e6a55f69) turns the transfer on the route's Ontic into increasing domains; applied along each edge from the selected world, every concrete candidate existing there exists at every accessible world, so it is NECESSARY_2. Registered as a strength order (the transfer strengthens concrete necessitarianism at every world); strictness is witnessed by Control.Strictness. Conditional consequence only; neither version is established."
+
+[[argument]]
+id = "cad42854-dea2-46e5-80d4-a6d89b216a6e"
+label = "A CONTINGENT_1 bearer refutes VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer on the route"
+theorem = "forwardTransferFails"
+premises = ["STMT-SOME-ACTUAL-CONTINGENT"]
+conclusion = "9cdae436-0192-4ad7-b56a-4937e22c8c12"
+strong_version_needed = { "STMT-SOME-ACTUAL-CONTINGENT" = "The refutation uses the node's absence across an accessible edge. The weak version (56f68b40, some concrete candidate exists at the selected world) supplies no such absence: the one-world omission model oneWorld of the contingency-node controls satisfies it and, with its one being present at its one world, has increasing domains." }
+axioms = []
+rule = "Composition: the strength order to concrete necessitarianism, then the existing refutation of concrete necessitarianism"
+meaning = "Suppose the transfer. transferGivesConcreteNecessary gives concrete necessitarianism at the selected world, and the existing refutation notEveryNecessary (argument e1d0d14b) refutes that from the contingency node's witness. The argument is exactly that composition (invariant 17) and adds no logical content beyond it; it records that the stronger necessitist rival falls with 411e5817. The only open premise is the route's existing contingency node."
+description = "Composes the strength order from the transfer to concrete necessitarianism with the existing refutation of concrete necessitarianism (e1d0d14b). One actual contingent bearer suffices to refute the global forward transfer policy. The refutation is conditional on the route's contingency premise and supports only that refutation, not the route."
+
+[[argument]]
+id = "17a0acb5-5bdf-476f-a0d8-e9d30bd448a9"
+label = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer exceeds concrete NECESSARY_2, checked"
+theorem = "controls"
+premises = []
+conclusion = "ec397a1a-da39-46e1-92c7-89678a7f3870"
+sense_mixing_control = true
+axioms = []
+rule = "Explicit two-world interpretations checked by case analysis"
+meaning = "Control.Strictness on abstractDrop and concreteDrop: the weak version holds (at every world, respectively at world true) and the forward transfer fails, through the library's correspondence with increasing domains. On abstractDrop the contingency node fails at every world, by the existing notEveryNecessary. Model-witnessed strictness only; no interpretation is claimed metaphysically possible."
+
+[[relation]]
+id = "58eec194-97eb-4b6a-a400-d8e39231c752"
+label = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer rivals the CONTINGENT_1 node"
+subject_kind = "statement"
+subject_id = "f084efde-c461-49d4-9f7d-902abc81b5f9"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "STMT-SOME-ACTUAL-CONTINGENT"
+note = "Necessitist rival, analyst formulation, attribution deferred. Mechanism: on this profile the transfer is exactly increasing domains (boxAllToAllBox_iff), so membership in ExistsAt persists along every edge and no actual concrete being is absent at an accessible world, against the node. Positive account: necessitism (for navigation only: Williamson, Modal Logic as Metaphysics, 2013: necessarily everything is necessarily something), reading ExistsAt as the unrestricted quantifier domain. Independent justification: in classical quantified modal logic with unrestricted universal instantiation, necessitation and K, the converse Barcan formula, of which this transfer is the guarded pattern, is derivable, and it is valid exactly on increasing domains, so keeping that logic unrestricted commits one to the rival; Williamson adds an abductive case from the simplicity and strength of that logic and the argument that the proposition that x does not exist would itself require x. Contingentists reject the transfer because of contingent existents (Williamson's necessitism/contingentism labels; some self-described actualists, e.g. Linsky and Zalta, accept the Barcan and converse Barcan formulas). It strictly strengthens the recorded rival 411e5817 (concrete necessitarianism) at every world (transferGivesConcreteNecessary; strictness by Control.Strictness). Under its own reading the necessitist replaces contingent existence with contingent concreteness, which this profile's world-independent concrete predicate cannot express; that bridge is open."
+
+[[relation]]
+id = "74c5958d-176d-4467-bbe1-2aaebaaaa003"
+label = "A CONTINGENT_1 bearer conditionally refutes VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer"
+subject_kind = "argument"
+subject_id = "cad42854-dea2-46e5-80d4-a6d89b216a6e"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "f084efde-c461-49d4-9f7d-902abc81b5f9"
+note = "Conditional on the OPEN node STMT-SOME-ACTUAL-CONTINGENT; does not count for closure while the node is open, and cannot defend the node itself (it rests on it). Its standing is refutation_support: it supports only this refutation of a rival, not a root route. It composes the strength order to 411e5817 with the existing refutation e1d0d14b."
+
+[[relation]]
+id = "d759c812-98b8-4a17-b715-c39965c3777e"
+label = "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer strengthens concrete NECESSARY_2"
+subject_kind = "statement"
+subject_id = "f084efde-c461-49d4-9f7d-902abc81b5f9"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "STMT-ALL-ACTUAL-CONCRETE-NECESSARY"
+verification_result_id = "3e206a06-9b9f-4769-83a8-47e94b4e17c6"
+strictness_result_id = "b441a75c-b426-46be-b414-f008f31be7a7"
+note = "Same Profile, Ontic, frame and ExistsAt, for every selected world. The strong version makes every candidate's membership persist along every edge from every world; the weak one only the concrete members of the selected world. Control.Strictness: abstractDrop satisfies the weak version at every world while a non-concrete candidate breaks the transfer; concreteDrop satisfies it at world true while a concrete being absent from world true breaks it. No certified difference (strength_comparison) is recorded yet."
+
+[[relation]]
+id = "3a969d57-230f-46e7-b521-d136ac0da58b"
+label = "Test by VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 strictness models"
+subject_kind = "result"
+subject_id = "b441a75c-b426-46be-b414-f008f31be7a7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "STMT-SOME-ACTUAL-CONTINGENT"
+note = "Tests whether refuting the necessitist transfer bears on the contingency node: on abstractDrop the transfer fails while the node fails at every world, so the transfer's failure gives the node no support (unlike the failure of its exact contradictory 411e5817, which gives the node classically). The same models show that the transfer strictly strengthens concrete necessitarianism (the weak version holds and the transfer fails)."
