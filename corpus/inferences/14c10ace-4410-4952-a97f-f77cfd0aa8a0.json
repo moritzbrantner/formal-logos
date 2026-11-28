@@ -1,0 +1,10 @@
+{
+  "id": "14c10ace-4410-4952-a97f-f77cfd0aa8a0",
+  "label": "Pushforward of the product control gives every interior mass on countable carriers (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
+  "rule": "Push the Bernoulli-geometric product forward along a fiber-preserving surjection",
+  "meaning": "Surjections from Nat onto the nonempty event and onto its nonempty complement give a surjection from Bool x Nat sending the true fiber into the event and the false fiber into its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
