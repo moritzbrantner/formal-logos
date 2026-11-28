@@ -75,6 +75,7 @@
     "06fb4f51-ff5f-5c5e-b947-844f20de4174"
   ],
   "strong_version_needed": {
-    "d7741cdc-881b-5bda-85ce-d70223162f78": "The existing proof uses the distinct-esse implies composition half to derive represented identity in RootNonlimitationFromCompositionKinds, then the matter-form half in ofNonlimitation. The matter-form inclusion alone cannot play both roles in that proof."
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The existing proof uses the distinct-esse implies composition half to derive represented identity in RootNonlimitationFromCompositionKinds, then the matter-form half in ofNonlimitation. The matter-form inclusion alone cannot play both roles in that proof.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

@@ -21,5 +21,8 @@
     "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "aee7e4c7-819b-5905-b363-813c06b7e92c"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, G.edge y x` (in no_sources_iff_headless). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

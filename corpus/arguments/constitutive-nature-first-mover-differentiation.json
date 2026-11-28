@@ -32,5 +32,8 @@
     "2eef7e66-376a-57e0-81de-9757a1ae1e14",
     "852f282b-a69b-52f3-9d61-e7acadf0d8a7",
     "efedeffa-2bfa-569a-93d8-d4f682817086"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InAct f r`; `InAct g r`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

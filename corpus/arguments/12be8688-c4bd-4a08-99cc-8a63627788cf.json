@@ -34,5 +34,8 @@
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `y = g` (in universalCauseIsFirstOfPriorityDependence), an identity question about a prior being and a universal cause (y = g), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

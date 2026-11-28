@@ -11,6 +11,7 @@ paraphrase = "Every actual esse gift is eligible under the rule that its distinc
 [[argument]]
 id = "Certify an identity ancestor by pair checks along a mediated esse path"
 theorem = "finiteIdentityQueries"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in finiteIdentityQueries), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["hiddenGiverAtIdentity"]
 premises = ["3d01134d-0b03-4469-a81a-a18d6e179fa0", "74231a5c-5cc1-4714-a715-b5408e076c42", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "Finite pair checks identify an actual identity ancestor under the reception restriction"

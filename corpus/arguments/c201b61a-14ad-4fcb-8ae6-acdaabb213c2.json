@@ -25,5 +25,8 @@
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ w, MoreIn r w z`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

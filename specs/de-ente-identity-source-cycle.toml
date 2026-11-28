@@ -14,6 +14,7 @@ meaning = "Apply actual identity-bearer uniqueness to any two members of the sam
 [[argument]]
 id = "Excluding a return through the shared identity ancestor gives a common first giver"
 theorem = "commonSourceOfNoIdentityReturn"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in commonSourceOfNoIdentityReturn), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["noIdentityReturnOfCommonSource", "commonSourceWithEndlessBranch"]
 premises = ["3d01134d-0b03-4469-a81a-a18d6e179fa0", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "78cffb8e-da95-4459-8058-45e0953cdde8", "41c858ee-07ee-41db-9693-b5fef6154efe", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "c35b1a5c-6405-449b-993b-8196b2457e08"

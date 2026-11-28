@@ -53,6 +53,7 @@ paraphrase = "OPEN containment-recognition bridge, analyst formulation, attribut
 id = "e3c662b6-2695-4e25-8d12-7ba34d790f17"
 label = "Good-general favouring is apprehension, from individuation of non-present candidates"
 theorem = "goodGeneralFavouringIsApprehensionOfIndividuation"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Produces b (stand b v)`; `TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v)`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["axiarchicControls", "criterionDoesNotGiveRecognition"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "633d5c29-a594-4c1a-b3f6-2b899a0e65ed", "3ca01752-0d5d-4140-be03-68150a17aefb", "65805e5a-818a-49a0-ae3c-eba95724500f", "69b9f887-582a-479c-924b-e7328f3930b4", "d1fb6414-976e-4833-908d-17787cca2502"]
 conclusion = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"

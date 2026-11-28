@@ -6,6 +6,7 @@ disambiguations = ["DISAMB-NECESSARY"]
 [[argument]]
 id = "An accessible successor from the no-dead-end frame condition"
 theorem = "successorWithoutDeadEnds"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Case.Catholicism.StageOne.NecessaryIndividual.AccessibleSuccessor F w`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-ACCESSIBILITY-NO-DEAD-END", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-ACCESSIBLE-SUCCESSOR"
 rule = "Apply excluded middle to successor existence and contradict the no-dead-end condition in the negative case"

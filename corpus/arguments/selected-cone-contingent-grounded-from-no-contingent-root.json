@@ -31,5 +31,8 @@
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "7507d645-874d-5434-add8-2f49c2801d36",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, TruthCore.Causality.CogitoNecessaryConcrete.ActualConcreteGround m w y x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

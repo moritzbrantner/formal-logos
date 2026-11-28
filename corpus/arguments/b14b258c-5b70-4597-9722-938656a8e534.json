@@ -36,6 +36,7 @@
     "ee069ef5-6459-4e92-aeea-ab8c64068c54"
   ],
   "strong_version_needed": {
-    "7f26189b-7def-4a16-84ab-6369065ced51": "Carriage in the root constrains only conditions of the root's own nature. With the weaker XN (b2d6ac16) the excluding condition may lie in another being's nature, which carriage in the root does not reach, so the conclusion does not follow."
+    "7f26189b-7def-4a16-84ab-6369065ced51": "Carriage in the root constrains only conditions of the root's own nature. With the weaker XN (b2d6ac16) the excluding condition may lie in another being's nature, which carriage in the root does not reach, so the conclusion does not follow.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `HasAt w r k`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

@@ -5,6 +5,7 @@ results = "TruthCore.Results.Causality.UniversalGivingPriority"
 [[argument]]
 id = "Intellectual universal causes are first from actual priority relata and esse dependence"
 theorem = "universalCauseIsFirstOfPriorityDependence"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to `y = g` (in universalCauseIsFirstOfPriorityDependence), an identity question about a prior being and a universal cause (y = g), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "57c5ed67-f9fa-55bb-9b3e-3c00643b21e9",
   "0436de86-6579-53f2-9ff5-2111ba44ebae",

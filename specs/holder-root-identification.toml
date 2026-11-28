@@ -66,6 +66,7 @@ disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "e5417243-d6f3-4776-9
 id = "Holders of the joint-absence power are actual roots, from initiator presence and NAR"
 label = "Holders of the joint-absence power are actual roots, from P2', P3', presence and NAR"
 theorem = "holdersAreActualRoots"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v y` (in holder_necessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 axioms = []
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "906f5c39-2a63-4dc2-955d-a00cfd8a976b", "a6906cab-59c4-4938-b6d1-991369e8ffb0", "Whatever has power for the actual contingents' joint absence exists at w", "Every NECESSARY_2 actual concretum is an actual root of the selected grounding relation"]
 conclusion = "Whatever has power for the actual contingents' joint absence is an actual root"

@@ -29,6 +29,7 @@ meaning = "For a bearer whose represented esse is its essence, the cause-to-rece
 [[argument]]
 id = "Underived identity ancestry gives each actual esse bearer a finite root audit"
 theorem = "auditsOfIdentityAncestry"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in auditsOfIdentityAncestry), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["externalSupplyWithoutIdentityReceipt"]
 premises = [
   "Each actual bearer whose esse is its essence has no actual cause of its esse",
@@ -63,6 +64,7 @@ definitions = [
 [[argument]]
 id = "Finite acyclic identity ancestry gives each actual esse bearer a finite root audit"
 theorem = "auditsOfFiniteAcyclicIdentityAncestry"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf y = p.essenceOf y` (in auditsOfFiniteAcyclicIdentityAncestry), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["closedOfFiniteAcyclicIdentityAncestry", "finiteAcyclicIdentityAncestryAllowsSupply"]
 premises = [
   "Each actual esse bearer has finitely many actual identity ancestors",

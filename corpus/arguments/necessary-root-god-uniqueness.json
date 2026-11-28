@@ -64,5 +64,8 @@
     "002f42cb-3015-5644-80b3-d408538394e6",
     "205a39c3-915d-5fe4-8076-a9ff91329e08",
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

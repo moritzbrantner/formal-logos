@@ -45,6 +45,7 @@
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
   ],
   "strong_version_needed": {
-    "47e323f2-3405-5caf-a192-201eb1e02f76": "The weak version STMT-ACTUAL-GROUNDING-WF with excluded middle also gives the cut, but STMT-ACTUAL-GROUNDING-WF is so far derived only from the cut itself (ACTUAL-GROUNDING-WF-FROM-BORROWING-CUT); using it would close a two-cycle and only restate the recorded equivalence. The strong rank version is used to give a non-circular route (ATTEMPT-ROUND3-COGITO-BASE-REJECTED-EDGES)."
+    "47e323f2-3405-5caf-a192-201eb1e02f76": "The weak version STMT-ACTUAL-GROUNDING-WF with excluded middle also gives the cut, but STMT-ACTUAL-GROUNDING-WF is so far derived only from the cut itself (ACTUAL-GROUNDING-WF-FROM-BORROWING-CUT); using it would close a two-cycle and only restate the recorded equivalence. The strong rank version is used to give a non-circular route (ATTEMPT-ROUND3-COGITO-BASE-REJECTED-EDGES).",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Acc (TruthCore.Causality.ConcreteExistentialSupply.graph m w).edge parent` (in borrowingEscapeWFEquivalence); `Acc (TruthCore.Causality.ConcreteExistentialSupply.graph m w).edge initial` (in borrowingEscapeWFEquivalence). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

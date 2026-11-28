@@ -61,6 +61,7 @@ disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY
 [[argument]]
 id = "A necessary concrete power-holder, by Aristotelian modality and Pruss's possibility"
 theorem = "prussActualAbsenceNecessaryPowerHolder"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt u y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "95bf8780-0e3c-49ba-b636-2274e2997a30", "906f5c39-2a63-4dc2-955d-a00cfd8a976b", "a6906cab-59c4-4938-b6d1-991369e8ffb0", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"]
 conclusion = "b90ee2de-8ae5-438b-bea4-e3158889c3e7"
 rule = "Ground the non-actual possibility, locate the holder in its world, reductio on the holder's contingency"
