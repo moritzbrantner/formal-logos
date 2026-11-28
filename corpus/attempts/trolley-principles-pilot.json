@@ -1,0 +1,49 @@
+{
+  "id": "2b7c1f3e-6a2d-4f7e-9d59-3c8e1a4b7d21",
+  "label": "Trolley pilot: principles against the triad and loop, and senses of wholly good for Rowe",
+  "date": "2026-11-28",
+  "statement_ids": [
+    "9b14d253-e29a-4041-88eb-d45c8de9ac53",
+    "bf07f454-d164-4a4f-9e31-151add2f731a",
+    "5a5bd4a6-4224-4350-8d60-8adb59623cf1",
+    "98bb5913-4800-4b92-87c1-c5906db623f6",
+    "0738e9bb-e60c-470e-b90f-b89d1adede12",
+    "2101b99a-8df7-43ad-ba05-a6c1d7d995bd",
+    "e7e973ae-e5c2-4d37-877b-6b1b61006be3",
+    "0a95a3c3-5899-5350-9fef-6e88e79819e8"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Typed trolley frame (causal graphs, death counts, plans, object classification) with six principles as Lean definitions; every verdict is computed by reachability. Given the verdicts, lives-only act consequentialism is excluded by the footbridge/transplant verdicts (one formal case, two labels) and the KILLS_1 no-killing deontology by the switch verdict; the stipulated KILLS_2 reading escapes. Double effect on its causal and on its intention reading of condition 3, the causal MEANS_1 principle and a Thomson-style redirection principle each entail the common triad and are jointly satisfiable with all case facts. They split on the loop, a malicious switcher, closeness and an evil object, where no verdict's warrant is assessed, so they stand at parity. Loop: the causal reading and the means principle forbid it through condition 3 (MEANS_1), not intention; the intention reading permits it only on Kamm's plan reading and then needs a closeness criterion; redirection permits it on causal structure. Rowe: with the comparison Better free, WHOLLY_GOOD_1 plus the outcome bridge only relocates STMT-ROWE-PERMISSION-CONSTRAINT (bundle equivalent to a strengthened constraint, control 6; recorded as near-transcription, closure unchanged); WHOLLY_GOOD_2 relocates a constraint-qualified condition, and Rowe's argument survives wherever a constraint-free prevention exists; the WHOLLY_GOOD_3 model is a structural surrogate that omits the classical permission rule. Revised after the independent semantic challenge (6 P1, 11 P2 addressed). Details in docs/notes/trolley-principles.md.",
+  "blocker": "Verdicts remain prima facie premises; their degree of sharing, debunking evidence, loop survey data and Thomson's later rejection of the switch verdict are unread. Better has no typed content; the classical permission rule (ST I q.2 a.3 ad 1) is not yet encoded on Rowe's signature. Transfer from human intervening to divine permitting is owned by #1456 and the bearer bridge by #1735. The frame does not separate footbridge from transplant, has no separate impact event, and fixes condition 1 by stipulation.",
+  "evidence": [
+    "25d44735-9972-498b-b3f3-38965ddc3ddc",
+    "2e3e94d7-3961-4870-8cb0-dd657002cc06",
+    "316d64bb-25f5-4346-815e-301007784bd5",
+    "422f0218-f943-484f-9f81-22ee43bf83b3",
+    "47070f56-a96b-4169-9733-c57586c137d5",
+    "493b468a-4fa9-4eaa-8886-df09239533e8",
+    "54bab0b2-0c52-4259-9d39-f2aac9e10790",
+    "68891c25-6c76-40d4-a32c-521793000a38",
+    "706dd253-2984-4a0c-8c01-d64dfb6e59e8",
+    "9fe0b751-eb66-4a84-84f5-23f5a2c4cc44",
+    "ad707145-fe12-478a-943a-046f57456a81",
+    "b3409a29-ebe7-468a-8db1-27f21355285f",
+    "ca6dbcfa-ebd4-4dfb-941e-cfaa891c06d1",
+    "caa04ea1-ce1a-4fd7-8bac-678636bb1a97",
+    "cc5463f5-6a65-470f-ab03-07b2f467b513",
+    "d2844b91-0ac0-4df3-9ef7-3be200ebfa86",
+    "d2ca0059-964d-4c96-9439-69a80b99c99e",
+    "e2df53e6-6634-4edf-bacd-8c733317c0ee",
+    "e9f05987-bb06-42e4-85f6-abfeb3d6ebc7"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5.5",
+      "effort": "high",
+      "date": "2026-11-28"
+    }
+  ]
+}

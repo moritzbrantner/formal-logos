@@ -1,0 +1,9 @@
+{
+  "id": "c094090d-0572-4a8a-9add-c993cae6e079",
+  "label": "KILLS_2: the intervention reaches the one's harm by a path avoiding redirection",
+  "term": "kills (stipulated: introduces a new threat)",
+  "definition": "KillsByNewThreat c: the intervention reaches the one's harm by a causal path that never passes through the redirection of the threat already facing the five, so the agent introduces a new threat to the one. This is a stipulated technical relation, not ordinary killing: in ordinary use, and in the usual description of the bystander case, diverting the trolley kills the one (KILLS_1).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.KillsByNewThreat",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

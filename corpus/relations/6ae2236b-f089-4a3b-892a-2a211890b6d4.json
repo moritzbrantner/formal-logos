@@ -1,0 +1,10 @@
+{
+  "id": "6ae2236b-f089-4a3b-892a-2a211890b6d4",
+  "label": "Goodness-sense controls test the outcome-sense derivation",
+  "subject_kind": "argument",
+  "subject_id": "6647f768-bcb9-49c0-beaf-913238a4783e",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "fab6fff2-69ae-42a0-93dc-ec9efbd23fb6",
+  "note": "Without the outcome bridge WHOLLY_GOOD_1 does not yield the constraint; with Better free the bundle is equivalent to a strengthened constraint."
+}

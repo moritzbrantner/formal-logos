@@ -1,0 +1,9 @@
+{
+  "id": "d57f6eee-5f19-4b6d-b742-8e263c14b542",
+  "label": "Proportionality: intervening costs strictly fewer lives than refraining",
+  "term": "proportionate reason (lives)",
+  "definition": "Proportionate c: the death count of intervening is strictly smaller than that of refraining.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.Proportionate",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

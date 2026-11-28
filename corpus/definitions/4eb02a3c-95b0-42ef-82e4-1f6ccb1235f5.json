@@ -1,0 +1,9 @@
+{
+  "id": "4eb02a3c-95b0-42ef-82e4-1f6ccb1235f5",
+  "label": "Absolute no-killing deontology (KILLS_1): intervening is permissible iff it does not kill",
+  "term": "absolute no-killing deontology",
+  "definition": "CausalNoKilling c: intervening is permissible exactly when it does not kill in sense KILLS_1. Letting the five die is not evaluated.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.CausalNoKilling",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

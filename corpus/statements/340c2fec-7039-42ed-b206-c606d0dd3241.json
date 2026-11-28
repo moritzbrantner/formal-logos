@@ -1,0 +1,14 @@
+{
+  "id": "340c2fec-7039-42ed-b206-c606d0dd3241",
+  "label": "Unblocked preventable events would be strictly better prevented",
+  "paraphrase": "Analyst formulation, attribution deferred. OPEN outcome bridge: when a preventable event has no blocking cost in Rowe's sense (no unavoidable greater-good loss or equal/worse evil), preventing it is strictly better overall than permitting it. It fails if several individually lesser costs can jointly outweigh the suffering.",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.UnblockedPreventionBetter",
+  "definition_ids": [
+    "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open.",
+    "blocker": "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+  }
+}

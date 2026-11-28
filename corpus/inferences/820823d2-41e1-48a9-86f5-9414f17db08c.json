@@ -1,0 +1,15 @@
+{
+  "id": "820823d2-41e1-48a9-86f5-9414f17db08c",
+  "label": "Common triad verdicts, from double effect on its intention reading (inference)",
+  "input_statement_ids": [
+    "523a9cd1-9fd6-4eef-a1b3-a45c4cbed176",
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "6434b71f-c311-401c-8aeb-6a267f1baaee",
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1"
+  ],
+  "output_statement_id": "9b14d253-e29a-4041-88eb-d45c8de9ac53",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Switch: harm not planned. Footbridge and transplant: harm planned (INTENDS_1), so impermissible. The footbridge verdict here depends on the plan fact, not the causal structure.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

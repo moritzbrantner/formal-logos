@@ -1,0 +1,19 @@
+{
+  "id": "4ec84eef-2cbb-43a4-891a-9224e5b786e8",
+  "label": "Causal no-killing deontology (KILLS_1) governs trolley permissibility",
+  "paraphrase": "Analyst formulation, attribution deferred. For each trolley scenario, intervening is permissible exactly when it does not kill in sense KILLS_1 (no causal path from the intervention to the one's harm).",
+  "lean_declaration": "TruthCore.Ethics.Trolley.CausalNoKillingGoverns",
+  "definition_ids": [
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "4eb02a3c-95b0-42ef-82e4-1f6ccb1235f5",
+    "56fb94ef-7af4-4e41-b87a-204f57a1a015"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "The trolley results bear on GOD_4 exists only through Rowe's evidential core. TruthCore.Ethics.TrolleyRowe states senses of Rowe's WhollyGood; its WHOLLY_GOOD_2 constraint clause reuses the double-effect case vocabulary of this frame, but no verdict, Governs or principle statement here is an input to it. Missing: an argument that the verdicts warrant WHOLLY_GOOD_1 or WHOLLY_GOOD_2 (or neither) as the standard for divine permitting, and the bearer bridge of STMT-ROWE-NO-THEISTIC-BEING, whose plan targets GOD_4 exists.",
+    "blocker": "The verdicts are prima facie inputs over a supplied permissibility assignment for human intervening. No record transfers them to divine permission, which issue #1456 owns (permission versus intention), and the bridge from the case GOD_4 bearer to Rowe's WhollyGood on a shared carrier is unbuilt (issue #1735)."
+  }
+}

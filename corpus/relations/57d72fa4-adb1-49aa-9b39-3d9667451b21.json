@@ -1,0 +1,10 @@
+{
+  "id": "57d72fa4-adb1-49aa-9b39-3d9667451b21",
+  "label": "Causal no-killing (KILLS_1) as rival to causal-reading double effect",
+  "subject_kind": "statement",
+  "subject_id": "4ec84eef-2cbb-43a4-891a-9224e5b786e8",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "0738e9bb-e60c-470e-b90f-b89d1adede12",
+  "note": "Absolute doing/allowing rival on KILLS_1."
+}

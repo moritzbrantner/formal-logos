@@ -1,0 +1,24 @@
+{
+  "id": "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d",
+  "label": "Strictly better prevention: a supplied comparison of preventing with permitting an event",
+  "term": "strictly better prevention (supplied comparison)",
+  "definition": "PreventionWays.Better b e: preventing e is strictly better overall than permitting it. A supplied primitive: no axiology, aggregation rule or link to Rowe's costs is built in. Because it is free, arguments through it relocate rather than derive Rowe's constraint.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.PreventionWays.Better",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Whether preventing the event e is strictly better, all things considered, than permitting it, for the preventer b; a supplied comparison over the Rowe signature.",
+    "examples": [
+      "Preventing a fawn's intense suffering at no cost to any good would be strictly better than permitting it."
+    ],
+    "exclusions": [
+      "A mere difference in lives saved without an overall comparison.",
+      "Rowe's blocking cost itself: the link between the two is the open outcome bridge."
+    ],
+    "open_obligations": [
+      "The axiology and aggregation rule (whether several lesser costs can jointly outweigh a suffering) are unspecified.",
+      "No relation to Rowe's Cost, GreaterGood or EqualOrWorseEvil fields is assumed; the outcome bridge supplies one direction as an open premise."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "fab6fff2-69ae-42a0-93dc-ec9efbd23fb6",
+  "label": "Rowe's permission constraint relocated into WHOLLY_GOOD_1 and the outcome bridge",
+  "premise_statement_ids": [
+    "4775c880-f331-4b33-aed3-c6f2fe5aa08d",
+    "340c2fec-7039-42ed-b206-c606d0dd3241"
+  ],
+  "conclusion_statement_id": "0a95a3c3-5899-5350-9fef-6e88e79819e8",
+  "inference_ids": [
+    "bd07f392-2084-4813-b812-98fe20bb4f9a"
+  ],
+  "meaning": "Near-transcription (assembly): relocates Rowe's permission constraint into an axiological bridge and a deontic standard over the free comparison Better. With Better free the premise bundle is satisfiable exactly when a strengthened constraint holds (goodness-sense control 6), so this adds no warrant to Rowe's premise (2).",
+  "definition_ids": [
+    "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d",
+    "06d6f1ae-bf4d-5b57-b722-44b068427820",
+    "4121dd26-3ee8-53b4-a73f-5453e5308764",
+    "086f1ece-8e43-5363-97cd-2d165e7dc3ed",
+    "3e77cec9-1728-578b-958b-5876f572ce42",
+    "b32b898d-3ad6-4132-9815-ac8897f2193c"
+  ],
+  "disambiguation_ids": [
+    "51142f83-40ad-50a3-83be-a6062eee1256",
+    "008747c9-744a-581c-adad-570e834abb4e",
+    "a9f886f9-c7ee-4680-8e88-91bd15fe0cc9"
+  ]
+}

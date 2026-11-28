@@ -1,0 +1,13 @@
+{
+  "id": "9ad31a82-a142-424b-8cac-bda799734b26",
+  "label": "Lives-only act consequentialism fails, from the footbridge verdict (inference)",
+  "input_statement_ids": [
+    "6434b71f-c311-401c-8aeb-6a267f1baaee",
+    "2101b99a-8df7-43ad-ba05-a6c1d7d995bd"
+  ],
+  "output_statement_id": "bf07f454-d164-4a4f-9e31-151add2f731a",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Contrapositive of the act-consequentialist footbridge derivation: whoever holds the footbridge verdict on these facts rejects act consequentialism as the governing principle. Conditional on the open prima facie verdict.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
