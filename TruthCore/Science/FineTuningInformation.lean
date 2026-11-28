@@ -5,6 +5,7 @@ public import Mathlib.Probability.Distributions.Geometric
 public import Mathlib.MeasureTheory.Measure.Prod
 public import TruthCore.Logic.EpistemicAccuracy.BayesianRefinement
 public import TruthCore.Logic.FiniteInformation
+public import TruthCore.Logic.CarrierProbability
 public import TruthCore.Science.FineTuningEvidence
 public import TruthCore.Science.Identifiability
 
@@ -100,6 +101,7 @@ instantiation or probability. No cosmological application is assumed. -/
 namespace Plenitude
 
 open Set
+open TruthCore.Logic.CarrierProbability
 
 abbrev Universe := Bool × ℕ
 
@@ -122,24 +124,22 @@ noncomputable def observationLaw (p : unitInterval) : Measure Universe :=
 
 def fineEvent : Set Universe := ({true} : Set Bool) ×ˢ (Set.univ : Set ℕ)
 
-abbrev InteriorRate := {p : unitInterval // 0 < (p : ℝ) ∧ (p : ℝ) < 1}
-
 /-- The entire roster, type assignment and both possibility profiles are
 unchanged across the compared observational models. A caller may stipulate
-both profiles are univ; this is not a modal-realizability theorem. -/
+both profiles are univ; this is not a modal-realizability theorem. The value
+ignores the rate, so these data are constant across the compared models. The
+order of the instance index (used by `geometricMeasure`) is not part of these
+data. -/
 def scopeData (possible reachable : Set Bool) (_ : InteriorRate) :
     Set Bool × Set Bool × Set Universe × (Universe → Bool) :=
   (possible, reachable, roster, Prod.fst)
 
-/-- Finite exhaustion by two disjoint type slices. Different positive
+/-- Stage n of the rate-(a, b) cutoff: the first a(n+1) instances of the
+true type and the first b(n+1) instances of the false type. Different positive
 rates enumerate the same entire roster. There is no claim that these are
 physical cosmological time cutoffs. -/
-def slice (a b n : ℕ) (tag : Bool) : Finset ℕ :=
-  Finset.range ((if tag then a else b) * (n + 1))
-
-def cutoffLikelihood (a b n : ℕ) : ℚ :=
-  (↑(slice a b n true).card : ℚ) /
-    (↑(slice a b n true).card + ↑(slice a b n false).card)
+def cutoffStage (a b n : ℕ) : Finset Universe :=
+  ({true} ×ˢ Finset.range (a * (n + 1))) ∪ ({false} ×ˢ Finset.range (b * (n + 1)))
 
 /-- Reweight the two observer cells of the existing Sampling model. Common
 normalization cancels on conditioning on observerhood. Weights can model
@@ -158,7 +158,14 @@ def RepeatedTypes : Prop :=
 
 /-- Proper countably additive measures with positive singleton mass and any
 interior report probability, on exactly the same population and type map.
-Even the complete supplied ontology profile does not identify the likelihood. -/
+The third conjunct holds because `scopeData` is constant in the rate while the
+report probability is not: a constant function does not determine a
+nonconstant one. It records that the supplied scope data (possibility
+profiles, roster and type map) carry no information about the rate. Those data
+omit the order of the instance index. A rival that also reads that order, for
+example natural density along the interleaved enumeration of Bool × ℕ, returns
+1/2; `CutoffUnderdetermination` shows that other exhaustive orders return other
+values. -/
 def ObservationalUnderdetermination : Prop :=
   RepeatedTypes ∧
   (∀ p : InteriorRate, IsProbabilityMeasure (observationLaw p.val) ∧
@@ -168,14 +175,15 @@ def ObservationalUnderdetermination : Prop :=
     ¬ Identifiability.Identifies (scopeData possible reachable)
       (fun p : InteriorRate => (observationLaw p.val).real fineEvent))
 
-/-- Both finite slices are nested and exhaustive, but their uniform relative
-type count has an arbitrary positive rational rate a/(a+b), already at every
-stage. Exact constancy is stronger here than convergence of the ratios. -/
+/-- For positive a and b the rate-(a, b) stages exhaust the roster, and the
+relative frequency of the true type is a/(a+b) at every stage, hence also in
+the limit. As a and b range over positive naturals, a/(a+b) ranges over
+exactly the rationals strictly between zero and one. -/
 def CutoffUnderdetermination : Prop :=
   ∀ a b : ℕ, 0 < a → 0 < b →
-    (∀ n m : ℕ, n ≤ m → ∀ tag, slice a b n tag ⊆ slice a b m tag) ∧
-    (∀ tag k, k ∈ slice a b k tag) ∧
-    (∀ n, cutoffLikelihood a b n = (a : ℚ) / ((a : ℚ) + b))
+    Exhaustion (cutoffStage a b) ∧
+    (∀ n, frequency fineEvent (cutoffStage a b n) = (a : ℝ) / ((a : ℝ) + b)) ∧
+    HasDensity fineEvent (cutoffStage a b) ((a : ℝ) / ((a : ℝ) + b))
 
 /-- With both observer cells nonempty in mass, merely varying the positive
 relative sampling weights realizes every interior rational conditional
@@ -185,24 +193,19 @@ def ObserverWeightUnderdetermination : Prop :=
   (∀ s : Sampling, 0 < s.weight 1 → ∀ p : ℚ, 0 < p → p < 1 →
     ∃ r t : ℚ, 0 < r ∧ 0 < t ∧ weightedLikelihood s r t = p)
 
-/-- Positive mass at every point of a measurable space. This is pointwise
-positivity of a (here discrete) measure, not the topological support of an
-atomless measure. -/
-def PointFullSupport {W : Type*} [MeasurableSpace W] (μ : Measure W) : Prop :=
-  ∀ x, 0 < μ {x}
-
 universe u
 
 /-- The shared interior-mass statement. On every countable carrier with
-measurable singletons, an event that is infinite and has an infinite
+measurable singletons, an event that is nonempty and has a nonempty
 complement receives every strictly interior probability from some normalized
-measure with positive mass at every point. The carrier, the event and its
-cardinality data are fixed before the measure is chosen. This is a
-non-identification statement about bare carriers and partitions; it does not
-say that no probability on the carrier is warranted. -/
+measure with positive mass at every point. Finite and infinite carriers are
+both covered; infinity is not needed for this non-identification. It matters
+only for the separate absence of a uniform default (on a finite carrier the
+normalized counting measure is available). This does not say that no
+probability on the carrier is warranted. -/
 def ArbitraryInteriorMass : Prop :=
   ∀ (W : Type u) [Countable W] [MeasurableSpace W] [MeasurableSingletonClass W]
-    (s : Set W) [Infinite s] [Infinite (sᶜ : Set W)] (p : InteriorRate),
+    (s : Set W) [Nonempty s] [Nonempty (sᶜ : Set W)] (p : InteriorRate),
     ∃ μ : Measure W, IsProbabilityMeasure μ ∧ PointFullSupport μ ∧
       μ.real s = (p.val : ℝ)
 

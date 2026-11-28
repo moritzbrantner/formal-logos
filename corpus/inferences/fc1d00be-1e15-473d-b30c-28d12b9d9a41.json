@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "b945e56e-b327-4737-9ba2-62e2e721e9e0",
   "rule": "Count the two finite type slices at each stage",
-  "meaning": "For positive a and b the stage-n slices are initial segments of lengths a(n+1) and b(n+1); they are nested, index k appears by stage k, and the relative count of the first slice is a/(a+b) at every stage.",
+  "meaning": "For positive a and b the stage-n set is the union of initial segments of lengths a(n+1) and b(n+1) in the two type fibers. The stages are nested, the instance with index k appears by stage k, and the true-type frequency is a/(a+b) at every stage, so its limit is a/(a+b).",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

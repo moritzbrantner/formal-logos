@@ -1,9 +1,9 @@
 {
   "id": "5c03a3af-49c0-4fc1-916a-59f38e39352c",
-  "label": "Limiting frequency along a selected exhaustion",
+  "label": "PROBABILITY_ASSIGNMENT_3: limiting frequency along a selected exhaustion",
   "term": "Limiting frequency along a selected exhaustion",
-  "definition": "For every positive real epsilon the frequency is within epsilon of the limit for all indices above some natural threshold. This is not set cardinality or an intrinsic probability measure.",
+  "definition": "Mathlib's Filter.Tendsto of the finite relative frequencies along the selected exhaustion, at atTop, into the neighbourhood filter of the limit. This is not set cardinality or an intrinsic probability measure.",
   "basis": "stipulative",
-  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
-  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.HasDensity"
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Logic.CarrierProbability.HasDensity"
 }

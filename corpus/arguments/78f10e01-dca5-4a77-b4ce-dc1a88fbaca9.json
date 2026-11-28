@@ -6,8 +6,10 @@
   "inference_ids": [
     "14c10ace-4410-4952-a97f-f77cfd0aa8a0"
   ],
-  "meaning": "A bijection from Bool x Nat sends the true fiber onto the event and the false fiber onto its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p.",
+  "meaning": "Surjections from Nat onto the nonempty event and onto its nonempty complement give a surjection from Bool x Nat sending the true fiber into the event and the false fiber into its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p.",
   "definition_ids": [
-    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec",
+    "b1e17aae-ec07-4319-b63f-e0de329f91b2"
   ]
 }

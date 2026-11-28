@@ -4,6 +4,6 @@
   "term": "Increasing finite exhaustion",
   "definition": "A monotone sequence of finite subsets containing each carrier member at some stage. No sampling law or geometric order is assumed.",
   "basis": "stipulative",
-  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
-  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.Exhaustion"
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Logic.CarrierProbability.Exhaustion"
 }

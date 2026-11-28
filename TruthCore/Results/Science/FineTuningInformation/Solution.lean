@@ -128,6 +128,7 @@ section Plenitude
 
 open Set
 open TruthCore.Science.FineTuningInformation.Plenitude
+open TruthCore.Logic.CarrierProbability
 
 universe u
 
@@ -188,26 +189,54 @@ theorem observationalUnderdetermination : ObservationalUnderdetermination := by
     simp only [fine_probability] at he
     norm_num [lo, hi] at he
 
+private theorem cutoff_frequency (a b n : ℕ) (ha : 0 < a) (hb : 0 < b) :
+    frequency fineEvent (cutoffStage a b n) = (a : ℝ) / ((a : ℝ) + b) := by
+  classical
+  have hfilter : (cutoffStage a b n).filter (· ∈ fineEvent) =
+      ({true} ×ˢ Finset.range (a * (n + 1)) : Finset Universe) := by
+    ext ⟨t, k⟩
+    cases t <;> simp [cutoffStage, fineEvent]
+  have hdisj : Disjoint ({true} ×ˢ Finset.range (a * (n + 1)) : Finset Universe)
+      ({false} ×ˢ Finset.range (b * (n + 1))) := by
+    rw [Finset.disjoint_left]
+    rintro ⟨t, k⟩ h₁ h₂
+    simp only [Finset.mem_product, Finset.mem_singleton] at h₁ h₂
+    rw [h₁.1] at h₂
+    exact Bool.noConfusion h₂.1
+  have hcard : (cutoffStage a b n).card = a * (n + 1) + b * (n + 1) := by
+    rw [cutoffStage, Finset.card_union_of_disjoint hdisj]
+    simp
+  unfold frequency
+  rw [Finset.filter_congr_decidable, hfilter, hcard]
+  have hA : 0 < (a : ℝ) := by exact_mod_cast ha
+  have hB : 0 < (b : ℝ) := by exact_mod_cast hb
+  have hN : 0 < (n : ℝ) + 1 := by positivity
+  simp only [Finset.card_product, Finset.card_singleton, Finset.card_range, one_mul,
+    Nat.cast_add, Nat.cast_mul, Nat.cast_one]
+  rw [← add_mul]
+  field_simp
+
 theorem cutoffUnderdetermination : CutoffUnderdetermination := by
   intro a b ha hb
-  refine ⟨?_, ?_, ?_⟩
-  · intro n m h tag k hk
-    simp only [slice, Finset.mem_range] at hk ⊢
-    exact lt_of_lt_of_le hk (Nat.mul_le_mul_left _ (Nat.add_le_add_right h 1))
-  · intro tag k
-    have ht : 1 ≤ (if tag then a else b) := by
-      cases tag <;> simp <;> omega
-    have hx := Nat.mul_le_mul_right (k + 1) ht
-    simp only [slice, Finset.mem_range]
-    exact lt_of_lt_of_le (Nat.lt_succ_self k) (by simpa using hx)
-  · intro n
-    have hA : 0 < (a : ℚ) := by exact_mod_cast ha
-    have hB : 0 < (b : ℚ) := by exact_mod_cast hb
-    have hN : 0 < (n : ℚ) + 1 := by positivity
-    have hSum : 0 < (a : ℚ) + b := add_pos hA hB
-    simp [cutoffLikelihood, slice, Nat.cast_mul, Nat.cast_add]
-    rw [← add_mul]
-    field_simp [ne_of_gt hN, ne_of_gt hSum]
+  refine ⟨⟨?_, ?_⟩, fun n => cutoff_frequency a b n ha hb, ?_⟩
+  · intro n m h u hu
+    rcases u with ⟨t, k⟩
+    have hmono : ∀ c : ℕ, c * (n + 1) ≤ c * (m + 1) := fun c =>
+      Nat.mul_le_mul_left _ (Nat.add_le_add_right h 1)
+    cases t <;> simp only [cutoffStage, Finset.mem_union, Finset.mem_product,
+      Finset.mem_singleton, Finset.mem_range] at hu ⊢ <;> simp at hu ⊢
+    · exact lt_of_lt_of_le hu (hmono b)
+    · exact lt_of_lt_of_le hu (hmono a)
+  · rintro ⟨t, k⟩
+    refine ⟨k, ?_⟩
+    have hk : ∀ c : ℕ, 0 < c → k < c * (k + 1) := fun c hc =>
+      lt_of_lt_of_le (Nat.lt_succ_self k) (Nat.le_mul_of_pos_left _ hc)
+    cases t <;> simp [cutoffStage, hk a ha, hk b hb]
+  · have h : (fun n => frequency fineEvent (cutoffStage a b n)) =
+        fun _ => (a : ℝ) / ((a : ℝ) + b) := funext fun n => cutoff_frequency a b n ha hb
+    unfold HasDensity
+    rw [h]
+    exact tendsto_const_nhds
 
 theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := by
   constructor
@@ -223,15 +252,16 @@ theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := b
     have hsum : p + (1-p) = 1 := by ring
     rw [weightedLikelihood, hx, hy, hsum, div_one]
 
-/-- Transport the product control along a bijection `Bool × ℕ ≃ W` that sends
-the true fiber onto `s` and the false fiber onto its complement. One
-construction therefore serves every countable carrier with an infinite event
-and infinite complement; no second mixture construction is needed. -/
+/-- Push the product control forward along a surjection `Bool × ℕ → W` that
+sends the true fiber onto `s` and the false fiber onto its complement. One
+construction therefore serves every countable carrier with a nonempty event
+and nonempty complement; no second mixture construction is needed. -/
 theorem arbitraryInteriorMass : ArbitraryInteriorMass.{u} := by
   intro W _ _ _ s _ _ p
   classical
-  obtain ⟨e⟩ : Nonempty (ℕ ≃ s) := nonempty_equiv_of_countable
-  obtain ⟨f⟩ : Nonempty (ℕ ≃ (sᶜ : Set W)) := nonempty_equiv_of_countable
+  obtain ⟨e, he⟩ : ∃ e : ℕ → s, Function.Surjective e := exists_surjective_nat _
+  obtain ⟨f, hf⟩ : ∃ f : ℕ → (sᶜ : Set W), Function.Surjective f :=
+    exists_surjective_nat _
   let g : Universe → W := fun u => if u.1 then (e u.2 : W) else (f u.2 : W)
   have hg : Measurable g := measurable_of_countable g
   have hpre : g ⁻¹' s = fineEvent := by
@@ -246,8 +276,10 @@ theorem arbitraryInteriorMass : ArbitraryInteriorMass.{u} := by
   have hsurj : ∀ x : W, ∃ u, g u = x := by
     intro x
     by_cases hx : x ∈ s
-    · exact ⟨(true, e.symm ⟨x, hx⟩), by simp [g]⟩
-    · exact ⟨(false, f.symm ⟨x, hx⟩), by simp [g]⟩
+    · obtain ⟨n, hn⟩ := he ⟨x, hx⟩
+      exact ⟨(true, n), by simp [g, hn]⟩
+    · obtain ⟨n, hn⟩ := hf ⟨x, hx⟩
+      exact ⟨(false, n), by simp [g, hn]⟩
   have hprob : IsProbabilityMeasure (observationLaw p.val) := by
     unfold observationLaw
     infer_instance

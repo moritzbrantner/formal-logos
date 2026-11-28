@@ -508,9 +508,15 @@ Comparator and NanoDa: `observationalUnderdetermination` (22182838),
 `cutoffUnderdetermination` (0a2dec46), `observerWeightUnderdetermination`
 (757378ea) and the shared `arbitraryInteriorMass` (cb2b9ac7). Each conclusion
 carries a connection plan to GOD_4 (8626f8a5) naming the missing calibrated
-measure or observer rule. Findings and limits are in attempt
+measure or observer rule, followed by an independently warranted designer
+inference that is not yet built. No fine-tuning node is currently on a root
+path. Generic vocabulary (pointwise positive measure, interior rate, relative
+frequency, exhaustion, density as Mathlib `Tendsto`, finitely additive set
+function) lives in the neutral `Logic.CarrierProbability` module, shared with
+#2142. The four senses of "probability" used here are kept apart by the
+probability-assignment disambiguation (4d54ff26). Findings, limits and the
+independent review record are in attempt
 [`103e8d13`](../../corpus/attempts/103e8d13-9372-436c-af8a-c11200270711.json).
-Independent semantic challenge is still required.
 
 **Fixed meanings.** The supplied metaphysically possible type profile is not
 the set of outputs allowed by physical dynamics; physical reachability does
@@ -523,12 +529,12 @@ distinguishes two residual observations *among observers*, not existence
 versus nonexistence of an observer. No source ontology or actual cosmology
 is encoded by these labels.
 
-**Three proposed formal controls.**
+**Formal controls.**
 
 - `ObservationalUnderdetermination`: the fixed realized roster is
   Bool × Nat, with each type repeated via an injection from Nat. On that
-  exact roster, reuse the Mathlib Bernoulli report law from the existing
-  `modelPrior` constructor as a *sampling* law, not a prior over design vs
+  exact roster, use Mathlib's Bernoulli law (the constructor behind
+  `modelPrior`) directly as a *sampling* law, not a prior over design vs
   naturalism, and take its product with the same geometric(1/2) law over
   instance indices. For an interior real p, each singleton (true,n) has
   mass p·2^(-n-1), each (false,n) has mass (1-p)·2^(-n-1), and the entire
@@ -538,11 +544,21 @@ is encoded by these labels.
   1/100 or 99/100 to witness failure of identification. Both profiles can
   be stipulated equal to univ. These are rival laws on one population,
   not a claim that both are licensed by an already fixed physical dynamics.
+  The non-identification conjunct is trivial in form: the scope data do
+  not depend on p, and a constant function does not determine a
+  nonconstant one. Its content is the modeling claim that these data carry
+  no information about p. They omit the order of the instance index, which
+  `geometricMeasure` itself uses. A rival that reads that order, such as
+  natural density along the interleaved enumeration of Bool × Nat, returns
+  1/2; the cutoff control shows that other exhaustive orders return other
+  values.
 - `CutoffUnderdetermination`: for positive naturals a,b, at stage n retain
-  the first a(n+1) true and b(n+1) false instances. Each slice is a finite
-  set, the sequence is nested, and each index appears by its own stage.
-  Uniformly counting the retained centers gives a/(a+b) at every stage,
-  hence also at the limit. The same infinite roster gives 1/100 or 99/100
+  the first a(n+1) true and b(n+1) false instances. The stages form an
+  `Exhaustion` of the roster (nested finite sets, each instance present by
+  its own stage), the shared `frequency` of the true type is a/(a+b) at
+  every stage, and `HasDensity` holds with that limit. As a and b range over
+  positive naturals, a/(a+b) ranges over exactly the rationals strictly
+  between zero and one. The same infinite roster gives 1/100 or 99/100
   by interchanging (1,99) and (99,1), without a single instance being omitted
   forever. This is not a physical time-slicing prescription or a claim that
   all physically justified cutoffs differ.
@@ -557,11 +573,16 @@ is encoded by these labels.
   other cell is absent, this construction fails, correctly respecting #1381
   screening-off.
 
-`arbitraryInteriorMass` transports the product control along a bijection
+`arbitraryInteriorMass` pushes the product control forward along a surjection
 from Bool × Nat that sends the true fiber onto a given event and the false
-fiber onto its complement. On every countable carrier with an infinite event
-and infinite complement, each interior event probability therefore has a
-normalized measure with positive mass at every point. This is the one copy of
+fiber onto its complement. On every countable carrier with a nonempty event
+and nonempty complement, each interior event probability therefore has a
+normalized measure with positive mass at every point. Infinity does no work
+in this lemma: a finite carrier gives the same non-identification. Infinity
+matters only for the separate absence of a uniform default
+(`NoUniform` in #2142): on a finite carrier the normalized counting measure
+is available, and on a countably infinite one no measure has equal point
+masses. This is the one copy of
 the interior-mass lemma; the modal-carrier follow-up (#2142) reuses it for a
 fixed Kripke frame's accessible worlds. It shows that a carrier and its
 partition do not fix a probability, not that no probability is warranted.
@@ -657,7 +678,8 @@ only if the rival claims to settle that specified contrast.
 No root premise is claimed discharged. No historical source attribution,
 metaphysical necessity, actual physical generation, actual observer
 reference class, or designer likelihood has been proved by these controls.
-The two corollaries stay unregistered because both follow directly from the
-scope data being constant across the compared measures. Reopen on a failed elaboration, semantic mismatch, physically justified
+The two corollaries stay unregistered because, like the registered
+non-identification conjunct, both follow directly from the scope data being
+constant across the compared measures. Reopen on a failed elaboration, semantic mismatch, physically justified
 restricted class that identifies a prediction, calibrated selection
 kernel, or a discriminating same-evidence design likelihood.

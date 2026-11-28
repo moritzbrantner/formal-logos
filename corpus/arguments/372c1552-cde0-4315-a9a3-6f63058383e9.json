@@ -6,5 +6,11 @@
   "inference_ids": [
     "fc1d00be-1e15-473d-b30c-28d12b9d9a41"
   ],
-  "meaning": "For positive a and b the stage-n slices are initial segments of lengths a(n+1) and b(n+1); they are nested, index k appears by stage k, and the relative count of the first slice is a/(a+b) at every stage."
+  "meaning": "For positive a and b the stage-n set is the union of initial segments of lengths a(n+1) and b(n+1) in the two type fibers. The stages are nested, the instance with index k appears by stage k, and the true-type frequency is a/(a+b) at every stage, so its limit is a/(a+b).",
+  "definition_ids": [
+    "0f153481-5415-4940-9a22-e91fe5a80005",
+    "189cfe30-cb3f-43c8-be97-f212d8773a74",
+    "5c03a3af-49c0-4fc1-916a-59f38e39352c",
+    "cb975bcc-de7f-4d49-9738-1b988400b6dd"
+  ]
 }

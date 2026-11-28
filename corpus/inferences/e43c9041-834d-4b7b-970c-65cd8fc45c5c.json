@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "2db2a6c0-6815-470c-a77f-6a548a2285aa",
   "rule": "Evaluate Bernoulli-geometric product measures and apply the identifiability criterion",
-  "meaning": "The roster Bool x Nat repeats each type through an injection from Nat. For interior p the product of a Bernoulli(p) report law and a geometric(1/2) index law is a probability with positive point masses and true-fiber mass p. Rates 1/100 and 99/100 share all scope data but differ in that mass, so the scope data do not identify it.",
+  "meaning": "The roster Bool x Nat repeats each type through an injection from Nat. For interior p the product of a Bernoulli(p) report law and a geometric(1/2) index law is a probability with positive point masses and true-fiber mass p. The scope data do not depend on p, so rates 1/100 and 99/100 share them but differ in that mass, and the scope data do not identify it.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }
