@@ -1,0 +1,17 @@
+{
+  "id": "3181065b-bc8b-4d5e-8cc2-c700d37c053d",
+  "label": "Exact difference of desirable-insofar-as-perfect over its forward half",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "81d52dff-84d2-43a9-8db5-9420138d3037",
+  "inference_ids": [
+    "7f88391a-0273-41ec-94a3-a6ad50968c4f"
+  ],
+  "meaning": "Premise-free equivalence certificate: on every carrier, the biconditional holds exactly when its forward half and its backward half both hold. The backward half is therefore the exact content the biconditional adds to its forward half. No half is asserted.",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

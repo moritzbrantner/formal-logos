@@ -1,0 +1,11 @@
+{
+  "id": "c7ace51f-7bb6-4590-b04a-93f7ef10de50",
+  "label": "Experience-machine comparison of experientialism and q.5 desirability checked",
+  "argument_id": "19b4aafd-0c0a-4e7b-a319-578abef6e5fa",
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem": "TruthCore.Results.Ethics.ExperienceMachine.experienceMachineComparison",
+  "comparator_config": "results/c7ace51f-7bb6-4590-b04a-93f7ef10de50/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free comparison. The exact price of holding q.5's desirability biconditional together with experientialism is that perfection supervenes on experience; so the coherence of the machine case (same profile, a perfection one life has and the other lacks), not its verdict, already makes the two contraries. Given the case, the biconditional with respect dominance predicts the stay-out verdict and experientialism with the transfer bridge forbids it. Experientialism conflicts with each half of the biconditional only together with the case: with the forward half it makes the machine life desirable in the respect it lacks, with the backward half it makes the real life not desirable in the respect it has. Conjunct 8 is the re-presentation probe for the refutation result. Nothing here establishes any premise or the verdict."
+}

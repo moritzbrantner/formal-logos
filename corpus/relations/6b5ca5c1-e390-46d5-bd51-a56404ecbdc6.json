@@ -1,0 +1,10 @@
+{
+  "id": "6b5ca5c1-e390-46d5-bd51-a56404ecbdc6",
+  "label": "Test by the experience-machine joint models of desirable-insofar-as-perfect",
+  "subject_kind": "argument",
+  "subject_id": "00e2d085-f158-4050-b981-13c094dc03fb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "note": "Joint model of the biconditional with the case and the stay-out verdict (row 1); models of each half without the other that also give the verdict (rows 4 and 5)."
+}

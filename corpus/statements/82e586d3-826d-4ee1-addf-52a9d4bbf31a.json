@@ -1,0 +1,16 @@
+{
+  "id": "82e586d3-826d-4ee1-addf-52a9d4bbf31a",
+  "label": "Experientialism and q.5's desirability biconditional conflict where perfection outruns experience",
+  "paraphrase": "Premise-free comparison over arbitrary types and relations, PERFECT_1 throughout. (1) Experientialism holds exactly when some valuation of profiles fixes desirability in every respect. (2) Exact price: a desirability relation satisfying both q.5's biconditional (desirable in p exactly when perfect in p) and experientialism exists exactly when perfection supervenes on the experiential profile. (3) If two lives share a profile and one is perfect in a respect p in which the other is not (and in every respect the other is), the biconditional and experientialism are not jointly true. (4) The biconditional, those perfection facts and respect dominance give the stay-out verdict. (5) Experientialism, same experience and the transfer bridge exclude the stay-out verdict. (6) The biconditional is the conjunction of its forward half (perfect implies desirable) and backward half (desirable implies perfect). (7) Under experientialism and the case facts, the forward half makes the machine life desirable in the respect it lacks, and the backward half makes the real life not desirable in the respect it has. (8) Re-presentation probe: some same-profile pair with the stay-out verdict and the transfer bridge exists exactly when experientialism fails.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperienceMachineComparison",
+  "definition_ids": [
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

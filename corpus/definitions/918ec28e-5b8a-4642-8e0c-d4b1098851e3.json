@@ -1,0 +1,9 @@
+{
+  "id": "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+  "label": "Better for its subject: one life is better for the person living it than another",
+  "term": "better for its subject (Lean parameter `BetterFor : Being → Being → Prop`)",
+  "definition": "`BetterFor x y`: the life x is better for the person living it than the life y, the person-level (prudential, welfare) comparison that a choice between lives such as the experience machine elicits. In Lean it is a parameter; the stay-out verdict is the instance `BetterFor real machine`.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.StayOutVerdict",
+  "note": "Analyst primitive, attribution deferred. It is distinct from q.5's DesirableIn (DEF-DESIRABLE-IN-A-PERFECTION), which is per bearer and per perfection, and from GOOD_QUA_ROLE_HUMAN_GOOD_GOOD_2 (Aristotle's human good as activity over a complete life). It is related to DesirableIn only by the explicit transfer statements: the bridge 'betterness requires a respect difference' (an argument premise) and respect dominance (used only inside the comparison result). No ordering properties (transitivity, asymmetry, completeness) are assumed, and degrees of betterness within one respect are not represented."
+}

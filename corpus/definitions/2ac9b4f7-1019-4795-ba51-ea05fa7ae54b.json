@@ -1,0 +1,9 @@
+{
+  "id": "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+  "label": "Experiential profile of a life: how the life is from the inside",
+  "term": "experiential profile (Lean parameter `experience : Being → Profile`)",
+  "definition": "`experience x` is the experiential profile of the bearer x, a person living a life: the whole of how that life is from the inside, its felt quality and the apparent contents of its experiences. Two lives have the same profile when they are indistinguishable from the inside. In Lean `experience` is a parameter into an unspecified type `Profile`; nothing is assumed about profiles except that two bearers can share one.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperientialismReading",
+  "note": "Analyst primitive for the experience-machine test, attribution deferred. Distinguishing conditions: a profile is fixed by inner character alone, so a real achievement and a perfectly simulated one with the same felt course give the same profile; it is not the set of perfections actually had (PerfectIn, Has) and it is not desirability. Open semantic obligations: whether profiles are individuated by phenomenal character only or also by intentional content (on the latter, a machine life could differ in profile from the real one, and the case's same-experience premise would fail); no examples beyond the stipulated finite carrier of ExperienceMachineControls are given."
+}

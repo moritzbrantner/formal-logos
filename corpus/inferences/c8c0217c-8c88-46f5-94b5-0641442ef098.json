@@ -1,0 +1,12 @@
+{
+  "id": "c8c0217c-8c88-46f5-94b5-0641442ef098",
+  "label": "Desirable-insofar-as-perfect gives its forward half (inference)",
+  "input_statement_ids": [
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+  ],
+  "output_statement_id": "7391aaac-7447-459f-b869-d3c7db4c1c36",
+  "rule": "right-to-left direction of a biconditional",
+  "meaning": "Strength registration (not a route step): the per-perfection biconditional 'desirable in p exactly when perfect in p' gives its forward half 'perfect in p implies desirable in p'. Controls rows 3 and 4 satisfy the forward half and not the biconditional.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

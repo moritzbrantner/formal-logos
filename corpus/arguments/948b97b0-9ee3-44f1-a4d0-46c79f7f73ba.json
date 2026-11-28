@@ -1,0 +1,20 @@
+{
+  "id": "948b97b0-9ee3-44f1-a4d0-46c79f7f73ba",
+  "label": "Experientialism fails, from the stay-out verdict on two same-profile lives",
+  "premise_statement_ids": [
+    "c94b13c5-e51e-47b1-a2a4-3dd8b9e9158e",
+    "2c6ab1a6-5314-4b52-9716-3f4330e35ec1",
+    "0f73882f-e343-41db-b69c-944d3e6478ff"
+  ],
+  "conclusion_statement_id": "1cf40389-fd37-41fb-9b97-26bd82442c1e",
+  "inference_ids": [
+    "635c8859-ae11-4898-bae3-829e9eb61731"
+  ],
+  "meaning": "If the real life and the machine life share an experiential profile, the real life is better for its subject, and betterness requires a respect in which the better life is desirable and the other is not, then some respect separates two same-profile lives, so experientialism fails for that desirability relation. Its argument refutes the recorded rival experientialism. All three premises are OPEN; the refutation counts for nothing in the frontier until they are established, and even then it would defeat only this rival, not the partial-experientialist and restricted models that also give the verdict (controls rows 4 and 5).",
+  "definition_ids": [
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "51f00c0a-80e0-45f6-8f38-bd503af9f455",
+  "label": "Exact difference of desirable-insofar-as-perfect over its backward half (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f5c23139-9785-4b93-b40e-e8724d086e27",
+  "rule": "split a pointwise biconditional into its two directions",
+  "meaning": "Premise-free equivalence certificate: on every carrier, the biconditional holds exactly when its backward half and its forward half both hold. The forward half is therefore the exact content the biconditional adds to its backward half. No half is asserted.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

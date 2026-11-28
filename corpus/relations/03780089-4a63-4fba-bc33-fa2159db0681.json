@@ -1,0 +1,10 @@
+{
+  "id": "03780089-4a63-4fba-bc33-fa2159db0681",
+  "label": "Test by the forward exact difference of desirable-insofar-as-perfect",
+  "subject_kind": "argument",
+  "subject_id": "3181065b-bc8b-4d5e-8cc2-c700d37c053d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "note": "Certifies the backward half as the exact content the biconditional adds to its forward half."
+}

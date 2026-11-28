@@ -1,0 +1,12 @@
+{
+  "id": "39364840-21f8-49aa-b138-77c73259166c",
+  "label": "Experientialism fails, from the stay-out verdict on two same-profile lives",
+  "argument_id": "948b97b0-9ee3-44f1-a4d0-46c79f7f73ba",
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem": "TruthCore.Results.Ethics.ExperienceMachine.experientialismFailsFromStayOut",
+  "comparator_config": "results/39364840-21f8-49aa-b138-77c73259166c/comparator.json",
+  "status": "solution-present",
+  "description": "Near-transcription (instantiation): conjunct 8 of the experience-machine comparison certifies that the premise bundle, with the two lives and the betterness relation existentially closed, is equivalent to the conclusion. The stay-out verdict with the transfer bridge is exactly a counterexample to experientialism, so the result adds no inferential content; its evidential weight lies entirely in the verdict, the bridge and the same-profile stipulation, all OPEN. Each premise is needed: controls row 2 omits the verdict, row 6 the bridge, and row 2's real/drab pair the same profile.",
+  "transcription": "instantiation"
+}

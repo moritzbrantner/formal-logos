@@ -1,0 +1,37 @@
+{
+  "id": "29a7258c-a73f-4f4b-8f91-c2c35222d3f3",
+  "label": "Experience machine as a test of desirable-insofar-as-perfect",
+  "statement_ids": [
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+    "ff35f485-9ac3-5160-b338-b1dfcdf3b0b5",
+    "202c82fb-ae91-415e-99cd-378b37615349",
+    "2c6ab1a6-5314-4b52-9716-3f4330e35ec1",
+    "0f73882f-e343-41db-b69c-944d3e6478ff",
+    "c94b13c5-e51e-47b1-a2a4-3dd8b9e9158e",
+    "7391aaac-7447-459f-b869-d3c7db4c1c36",
+    "9c2cd0fb-503f-49d6-a693-865c24393058"
+  ],
+  "date": "2026-11-28",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Exhibit-map lane 2. Recorded experientialism (desirability in each respect factors through the experiential profile, Mathlib Function.FactorsThrough) as alternative_to 060e7a1a. Premise-free comparison: q.5's biconditional and experientialism are jointly satisfiable exactly when perfection supervenes on experience, so the coherence of the machine case (same profile, a perfection one life lacks) already makes them contraries; with respect dominance the biconditional predicts the stay-out verdict, and with the transfer bridge experientialism forbids it. Experientialism conflicts with neither half alone (hedonism with the backward half, presentational experientialism with the forward half: controls rows 2 and 3). The refutation of experientialism from same experience, the verdict and the bridge is declared a near-transcription: comparison conjunct 8 proves the premise bundle, existentially closed over lives and betterness, equivalent to its conclusion, so the evidential weight is the verdict's. The verdict also holds in a partial-experientialist model denying the backward half and in a restricted model denying the forward half (rows 4 and 5): it supports the existential core 'some real perfection makes a desirability difference with experience fixed', not either half universally. The two halves are registered as weak versions with certified exact differences. The case does not bear on ff35f485, which no encoding here uses. Strongest objection recorded: status-quo bias / reversed machine (De Brigard 2010, Weijers 2014, unread), targeting the verdict premise; it would undercut the verdict, not rebut q.5. frontier-diff: no change. See docs/notes/experience-machine.md.",
+  "evidence": [
+    "39364840-21f8-49aa-b138-77c73259166c",
+    "c7ace51f-7bb6-4590-b04a-93f7ef10de50",
+    "0a48ac7e-872f-4a1b-9656-39ddfd0304c6",
+    "68d2ed4e-ca47-435f-81d5-77d569a7f347",
+    "4276866b-f9e3-4cc4-9ea5-f4b9411fcf15",
+    "af8859a4-d87f-4a25-989b-823f48100573",
+    "aa54797d-5f45-4eb9-991a-9609456b7429"
+  ],
+  "blocker": "The case-based support is conditional on three OPEN inputs: the stay-out verdict (contested by unread reversed-machine data), the transfer bridge from person-level betterness to q.5 per-perfection desirability, and the same-profile stipulation (fails if profiles are individuated by content). Next tests: read the debunking data; a degree-valued bridge; record a composite welfare rival to the backward half if its warrant is read; add strong_version_needed to a5a50fe3 (outside this batch's ownership).",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
+    }
+  ]
+}

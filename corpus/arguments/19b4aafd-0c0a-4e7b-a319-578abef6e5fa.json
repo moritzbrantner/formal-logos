@@ -1,0 +1,20 @@
+{
+  "id": "19b4aafd-0c0a-4e7b-a319-578abef6e5fa",
+  "label": "Experience-machine comparison of experientialism and q.5 desirability checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "82e586d3-826d-4ee1-addf-52a9d4bbf31a",
+  "inference_ids": [
+    "b61d5bd3-d5e0-48e9-a9b0-eeec36337bb6"
+  ],
+  "meaning": "Premise-free comparison. The exact price of holding q.5's desirability biconditional together with experientialism is that perfection supervenes on experience; so the coherence of the machine case (same profile, a perfection one life has and the other lacks), not its verdict, already makes the two contraries. Given the case, the biconditional with respect dominance predicts the stay-out verdict and experientialism with the transfer bridge forbids it. Experientialism conflicts with each half of the biconditional only together with the case: with the forward half it makes the machine life desirable in the respect it lacks, with the backward half it makes the real life not desirable in the respect it has. Conjunct 8 is the re-presentation probe for the refutation result. Nothing here establishes any premise or the verdict.",
+  "definition_ids": [
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

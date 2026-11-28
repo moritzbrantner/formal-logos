@@ -1,0 +1,12 @@
+{
+  "id": "4276866b-f9e3-4cc4-9ea5-f4b9411fcf15",
+  "label": "Desirable-insofar-as-perfect gives its backward half",
+  "argument_id": "811339bb-848e-48a9-81f9-7d8824bd3153",
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem": "TruthCore.Results.Ethics.ExperienceMachine.desirableOnlyIfPerfectOfInsofar",
+  "comparator_config": "results/4276866b-f9e3-4cc4-9ea5-f4b9411fcf15/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription by instantiation (AGENTS.md invariant 16), registered as a strength order: the proof takes one direction of the premise's biconditional at each bearer and perfection, so it closes its conclusion only when the premise is closed.",
+  "transcription": "instantiation"
+}

@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Results.Ethics.AgencyNeutrality.Solution
+public import TruthCore.Results.Ethics.ExperienceMachine.Solution
 public import TruthCore.Results.Ethics.HardCaseGoods.Solution
 public import TruthCore.Results.Ethics.HardCaseTyped.Solution
 public import TruthCore.Results.Ethics.MoralAccessFibers.Solution

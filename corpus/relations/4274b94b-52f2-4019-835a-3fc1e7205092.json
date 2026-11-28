@@ -1,0 +1,37 @@
+{
+  "id": "4274b94b-52f2-4019-835a-3fc1e7205092",
+  "label": "Desirable-insofar-as-perfect over its backward half, with the forward half as exact delta",
+  "subject_kind": "statement",
+  "subject_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "predicate": "strength_comparison",
+  "object_kind": "statement",
+  "object_id": "9c2cd0fb-503f-49d6-a693-865c24393058",
+  "comparison_spec": "TruthCore.Ethics.ExperienceMachine.backwardComparison",
+  "delta_statement_id": "7391aaac-7447-459f-b869-d3c7db4c1c36",
+  "background_statement_ids": [],
+  "evidence_result_ids": {
+    "equivalence": "aa54797d-5f45-4eb9-991a-9609456b7429",
+    "implication": "4276866b-f9e3-4cc4-9ea5-f4b9411fcf15"
+  },
+  "statement_parameter_indices": {
+    "stronger": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "weaker": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "delta": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "note": "No background: on the same Being, Perfection, DesirableIn and PerfectIn the biconditional is exactly its backward half plus its forward half. The delta is the forward half, to which Aquinas' stated reason bears."
+}

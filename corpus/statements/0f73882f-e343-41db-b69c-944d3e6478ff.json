@@ -1,0 +1,10 @@
+{
+  "id": "0f73882f-e343-41db-b69c-944d3e6478ff",
+  "label": "Betterness for a subject requires a respect desirable in the better life and not in the other",
+  "paraphrase": "OPEN analyst transfer bridge from person-level welfare to the per-perfection reading of q.5: whenever one life is better for its subject than another, there is a respect p in which the first is desirable (q.5 DesirableIn) and the second is not. It identifies the respects that ground person-level betterness with q.5's respects of desirability, and it excludes betterness by degree within a respect both lives share.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.BetterRequiresRespectDifference",
+  "definition_ids": [
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784"
+  ]
+}

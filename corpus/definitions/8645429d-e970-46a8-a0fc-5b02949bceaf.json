@@ -1,0 +1,9 @@
+{
+  "id": "8645429d-e970-46a8-a0fc-5b02949bceaf",
+  "label": "Experientialism: desirability in every respect factors through the experiential profile",
+  "term": "experientialism (the experience requirement; Lean `ExperientialismReading`)",
+  "definition": "Experientialism holds that a bearer's desirability in each respect is fixed by its experiential profile: bearers with the same profile are desirable in exactly the same respects. Formally the map x ↦ DesirableIn x factors through `experience` (Mathlib `Function.FactorsThrough`); equivalently (experientialism_iff_factor) some valuation of profiles fixes desirability in every respect. Hedonism proper, on which only pleasantness counts, is one such valuation.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperientialismReading",
+  "note": "Analyst formulation of the mental-state theory of welfare applied to q.5 desirability for lives of experiencing subjects; attribution deferred. Unread leads for its positive warrant: J. S. Mill, Utilitarianism ch. 4 (happiness the only thing desirable as an end); the 'experience requirement' in the welfare literature (e.g. L. W. Sumner, Welfare, Happiness and Ethics; R. Crisp, Reasons and the Good). It is a thesis about which respects of desirability a profile fixes, not about how desirable any profile is. Applied to bearers without experience that share one empty profile it would make them desirable in the same respects; the rival is intended only for lives of experiencing subjects, a restriction the generic Lean definition does not enforce."
+}

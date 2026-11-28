@@ -1,0 +1,12 @@
+{
+  "id": "68d2ed4e-ca47-435f-81d5-77d569a7f347",
+  "label": "Desirable-insofar-as-perfect gives its forward half",
+  "argument_id": "c5a4cf7c-9992-45c7-ad62-91f5aa500606",
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem": "TruthCore.Results.Ethics.ExperienceMachine.perfectMakesDesirableOfInsofar",
+  "comparator_config": "results/68d2ed4e-ca47-435f-81d5-77d569a7f347/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription by instantiation (AGENTS.md invariant 16), registered as a strength order: the proof takes one direction of the premise's biconditional at each bearer and perfection, so it closes its conclusion only when the premise is closed.",
+  "transcription": "instantiation"
+}

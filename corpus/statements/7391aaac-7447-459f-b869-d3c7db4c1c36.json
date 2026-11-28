@@ -1,0 +1,18 @@
+{
+  "id": "7391aaac-7447-459f-b869-d3c7db4c1c36",
+  "label": "Whatever is PERFECT_1 in a respect is desirable in that respect",
+  "paraphrase": "Forward half of 'each thing is desirable insofar as it is perfect', analyst weak version: for every bearer x and perfection p, if x is perfect in p (PERFECT_1) then x is desirable in p. Aquinas' stated reason in ST I q.5 a.1 co. (omnia appetunt suam perfectionem) bears on this half (see the Lean doc of DesirableInsofarAsPerfectReading); no new source claim is made.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.PerfectMakesDesirableReading",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ],
+  "connection_plan": {
+    "target_statement_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+    "missing_bridge": "The q.5 argument a5a50fe3 needs the biconditional (comparison conjunct 6: it is exactly this forward half together with the backward half). A route using the forward half alone would need either the backward half from another argument, or a q.5 conclusion weakened to 'whatever actually has a perfection is GOOD_1 in it' with its own downstream consumer.",
+    "blocker": "No downstream consumer of the one-directional goodness conclusion exists, and the backward half has no argument."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ee618fc8-b411-41b0-b2a1-15c421c5b2c1",
+  "label": "Experience-machine joint models for the perfectionist, hedonist and mixed accounts",
+  "paraphrase": "Finite controls on three lives (real, machine, drab) and four goods (achievement, friendship, knowledge, pleasure); real and machine share the rich profile, the machine life actually has only felt pleasure, the drab life only knowledge. PerfectIn is actual possession; betterness is strict respect dominance of the model's desirability (both transfer statements hold by construction) except in row 6. (1) Desirability as actual possession: the q.5 biconditional, q.5's perfect-in-act reading (trivially, since PerfectIn is Has), the case facts, the transfer statements and the stay-out verdict hold; experientialism fails. (2) Hedonist desirability (pleasure only, as presented): experientialism, the case facts and the transfer statements hold and the stay-out verdict fails; the backward half holds and the forward half fails; the real life dominates the drab life, whose profile differs. (3) Presentational experientialism (desirable in every presented good): experientialism and the forward half hold; the backward half, the biconditional and the stay-out verdict fail. (4) Partial experientialism (possession, plus friendship when presented): the forward half and the stay-out verdict hold; the backward half and experientialism fail. (5) Restricted (possession except knowledge): the backward half and the stay-out verdict hold; the forward half and experientialism fail. (6) With hedonist desirability and a betterness relating only real to machine, experientialism, same experience and the verdict hold and the transfer bridge fails. Statements about this finite interpretation only.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperienceMachineControls",
+  "definition_ids": [
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

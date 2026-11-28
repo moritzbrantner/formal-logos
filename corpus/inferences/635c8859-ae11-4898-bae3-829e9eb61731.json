@@ -1,0 +1,14 @@
+{
+  "id": "635c8859-ae11-4898-bae3-829e9eb61731",
+  "label": "Experientialism fails, from the stay-out verdict on two same-profile lives (inference)",
+  "input_statement_ids": [
+    "c94b13c5-e51e-47b1-a2a4-3dd8b9e9158e",
+    "2c6ab1a6-5314-4b52-9716-3f4330e35ec1",
+    "0f73882f-e343-41db-b69c-944d3e6478ff"
+  ],
+  "output_statement_id": "1cf40389-fd37-41fb-9b97-26bd82442c1e",
+  "rule": "The transfer bridge gives a respect of difference; experientialism at the shared profile excludes it",
+  "meaning": "If the real life and the machine life share an experiential profile, the real life is better for its subject, and betterness requires a respect in which the better life is desirable and the other is not, then some respect separates two same-profile lives, so experientialism fails for that desirability relation. Its argument refutes the recorded rival experientialism. All three premises are OPEN; the refutation counts for nothing in the frontier until they are established, and even then it would defeat only this rival, not the partial-experientialist and restricted models that also give the verdict (controls rows 4 and 5).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

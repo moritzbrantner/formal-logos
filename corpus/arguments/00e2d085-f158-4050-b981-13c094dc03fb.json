@@ -1,0 +1,20 @@
+{
+  "id": "00e2d085-f158-4050-b981-13c094dc03fb",
+  "label": "Experience-machine joint models and controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "ee618fc8-b411-41b0-b2a1-15c421c5b2c1",
+  "inference_ids": [
+    "16028a02-ae43-456f-83de-b5db2fe1bf3e"
+  ],
+  "meaning": "Joint models on one finite carrier for each side: q.5's biconditional with the stay-out verdict (row 1), and experientialism with the case facts and indifference between the two lives (rows 2 and 3). Rows 4 and 5 show that the stay-out verdict is also satisfied by a model that denies the backward half (partial experientialism) and by one that denies the forward half (restricted), so the verdict discriminates experientialism from both halves' common core but certifies neither half universally. Row 2 also shows that hedonism proper is compatible with the backward half. Omission controls for the refutation: row 2 (no verdict), row 6 (no bridge), row 2's real/drab pair (different profiles). The betterness relation is set to strict respect dominance, so the transfer statements hold by construction there; models witness satisfiability of these finite interpretations only and refute no position.",
+  "definition_ids": [
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "918ec28e-5b8a-4642-8e0c-d4b1098851e3",
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

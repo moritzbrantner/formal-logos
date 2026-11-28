@@ -1,0 +1,12 @@
+{
+  "id": "aba802ba-9edd-4375-b4aa-6f47b41976c7",
+  "label": "Desirable-insofar-as-perfect strengthens its forward half",
+  "subject_kind": "statement",
+  "subject_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "7391aaac-7447-459f-b869-d3c7db4c1c36",
+  "verification_result_id": "68d2ed4e-ca47-435f-81d5-77d569a7f347",
+  "strictness_result_id": "0a48ac7e-872f-4a1b-9656-39ddfd0304c6",
+  "note": "Same Being, Perfection, DesirableIn and PerfectIn. The controls (rows 3 and 4) satisfy the forward half and not the biconditional. The added content is the backward half (comparison conjunct 6)."
+}

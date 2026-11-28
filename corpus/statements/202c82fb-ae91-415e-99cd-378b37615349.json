@@ -1,0 +1,11 @@
+{
+  "id": "202c82fb-ae91-415e-99cd-378b37615349",
+  "label": "Experientialism: desirability in each respect is fixed by the bearer's experiential profile",
+  "paraphrase": "Recorded rival, analyst formulation, attribution deferred: for lives of experiencing subjects, a bearer's desirability (q.5 DesirableIn) in each respect is fixed by its experiential profile, so two bearers with the same profile are desirable in exactly the same respects (the map x to DesirableIn x factors through the profile). Equivalently, some valuation of profiles fixes desirability in every respect. It says nothing about how desirable any profile is; hedonism proper is one valuation. The generic Lean definition does not restrict the bearers to experiencing subjects.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperientialismReading",
+  "definition_ids": [
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "661ad6ef-309b-5334-b770-bfbf173a6784"
+  ]
+}

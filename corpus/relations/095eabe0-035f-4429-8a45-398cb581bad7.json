@@ -1,0 +1,10 @@
+{
+  "id": "095eabe0-035f-4429-8a45-398cb581bad7",
+  "label": "Stay-out refutation of experientialism",
+  "subject_kind": "argument",
+  "subject_id": "948b97b0-9ee3-44f1-a4d0-46c79f7f73ba",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "202c82fb-ae91-415e-99cd-378b37615349",
+  "note": "Conditional refutation: it counts only when same experience, the stay-out verdict and the transfer bridge are established, and none is. The result is a near-transcription (comparison conjunct 8): the verdict is exactly a counterexample, so the refutation's weight is the verdict's. The status-quo-bias and reversed-machine debunking evidence bears on the verdict premise (docs/notes/experience-machine.md)."
+}

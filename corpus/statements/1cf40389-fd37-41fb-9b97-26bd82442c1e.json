@@ -1,0 +1,11 @@
+{
+  "id": "1cf40389-fd37-41fb-9b97-26bd82442c1e",
+  "label": "Experientialism fails: two bearers with one experiential profile differ in desirability",
+  "paraphrase": "The negation of experientialism for the given profile map and desirability relation: it is not the case that bearers with the same experiential profile are desirable in exactly the same respects. It does not say which bearers or respects witness the failure.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.ExperientialismFails",
+  "definition_ids": [
+    "8645429d-e970-46a8-a0fc-5b02949bceaf",
+    "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b",
+    "661ad6ef-309b-5334-b770-bfbf173a6784"
+  ]
+}

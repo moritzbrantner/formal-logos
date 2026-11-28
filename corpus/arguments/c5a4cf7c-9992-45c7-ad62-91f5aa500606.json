@@ -1,0 +1,22 @@
+{
+  "id": "c5a4cf7c-9992-45c7-ad62-91f5aa500606",
+  "label": "Desirable-insofar-as-perfect gives its forward half",
+  "premise_statement_ids": [
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+  ],
+  "conclusion_statement_id": "7391aaac-7447-459f-b869-d3c7db4c1c36",
+  "inference_ids": [
+    "c8c0217c-8c88-46f5-94b5-0641442ef098"
+  ],
+  "meaning": "Strength registration (not a route step): the per-perfection biconditional 'desirable in p exactly when perfect in p' gives its forward half 'perfect in p implies desirable in p'. Controls rows 3 and 4 satisfy the forward half and not the biconditional.",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ],
+  "strong_version_needed": {
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642": "The biconditional is the strong version of this strength registration, not a premise asserted for a route."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "f5c23139-9785-4b93-b40e-e8724d086e27",
+  "label": "Desirable-insofar-as-perfect is exactly its backward half plus its forward half",
+  "paraphrase": "For all types and relations DesirableIn and PerfectIn (PERFECT_1), the per-perfection biconditional is equivalent to the conjunction of its backward half (desirable implies perfect) and its forward half (perfect implies desirable). Equivalence certificate of the strength comparison of the biconditional with its backward half; a premise-free comparison of encodings, not an assertion of either half.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.BackwardExactDifference",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ]
+}

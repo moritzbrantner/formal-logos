@@ -1,0 +1,22 @@
+{
+  "id": "811339bb-848e-48a9-81f9-7d8824bd3153",
+  "label": "Desirable-insofar-as-perfect gives its backward half",
+  "premise_statement_ids": [
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+  ],
+  "conclusion_statement_id": "9c2cd0fb-503f-49d6-a693-865c24393058",
+  "inference_ids": [
+    "ce160add-3afc-4316-aebf-c7ecfbfcba81"
+  ],
+  "meaning": "Strength registration (not a route step): the per-perfection biconditional gives its backward half 'desirable in p implies perfect in p'. Controls rows 2 and 5 satisfy the backward half and not the biconditional.",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ],
+  "strong_version_needed": {
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642": "The biconditional is the strong version of this strength registration, not a premise asserted for a route."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "aa54797d-5f45-4eb9-991a-9609456b7429",
+  "label": "Exact difference of desirable-insofar-as-perfect over its backward half",
+  "argument_id": "b6090496-676f-4365-8f8c-b2d8af153ba0",
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem": "TruthCore.Results.Ethics.ExperienceMachine.backwardExactDifference",
+  "comparator_config": "results/aa54797d-5f45-4eb9-991a-9609456b7429/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free equivalence certificate: on every carrier, the biconditional holds exactly when its backward half and its forward half both hold. The forward half is therefore the exact content the biconditional adds to its backward half. No half is asserted."
+}

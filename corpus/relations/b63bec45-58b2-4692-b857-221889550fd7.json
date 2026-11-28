@@ -1,0 +1,10 @@
+{
+  "id": "b63bec45-58b2-4692-b857-221889550fd7",
+  "label": "Experientialism is an alternative to desirable-insofar-as-perfect",
+  "subject_kind": "statement",
+  "subject_id": "202c82fb-ae91-415e-99cd-378b37615349",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "note": "Positive rival account of what fixes desirability for lives of experiencing subjects: the experiential profile rather than perfection. Target: 060e7a1a's per-perfection biconditional as a whole; experientialism is compatible with each half alone (controls rows 2 and 3). Mechanism: comparison conjunct 3, given two lives with one profile differing in a perfection, the biconditional and experientialism are not jointly true; conjunct 2 gives the exact price (perfection supervenes on experience). Independent warrant offered for the rival (unread leads): the experience requirement, that what makes no difference to how a life is from the inside cannot make it go better for its subject (Mill, Utilitarianism ch. 4; Sumner; Crisp). The conflict holds only when 060e7a1a's DesirableIn is applied to lives of experiencing subjects."
+}

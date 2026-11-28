@@ -1,0 +1,12 @@
+{
+  "id": "ce160add-3afc-4316-aebf-c7ecfbfcba81",
+  "label": "Desirable-insofar-as-perfect gives its backward half (inference)",
+  "input_statement_ids": [
+    "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+  ],
+  "output_statement_id": "9c2cd0fb-503f-49d6-a693-865c24393058",
+  "rule": "left-to-right direction of a biconditional",
+  "meaning": "Strength registration (not a route step): the per-perfection biconditional gives its backward half 'desirable in p implies perfect in p'. Controls rows 2 and 5 satisfy the backward half and not the biconditional.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

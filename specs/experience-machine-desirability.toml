@@ -1,0 +1,285 @@
+# Exhibit-map lane 2 (2026-11-28): the experience machine as a test of ST I
+# q.5 a.1's "each thing is desirable insofar as it is perfect"
+# (STMT-DESIRABLE-INSOFAR-AS-PERFECT, 060e7a1a). Experientialism is recorded as
+# a positive rival; the stay-out verdict refutes it only conditionally, and the
+# refutation is a near-transcription (the verdict is exactly a counterexample).
+# The two halves of the q.5 biconditional are registered as weak versions.
+# Analyst formulations, attribution deferred. See docs/notes/experience-machine.md.
+
+[batch]
+vocab = "TruthCore.Ethics.ExperienceMachine"
+results = "TruthCore.Results.Ethics.ExperienceMachine"
+
+[[statement]]
+id = "Experientialism: desirability in each respect is fixed by the bearer's experiential profile"
+lean = "ExperientialismReading"
+definitions = ["8645429d-e970-46a8-a0fc-5b02949bceaf", "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b", "661ad6ef-309b-5334-b770-bfbf173a6784"]
+paraphrase = "Recorded rival, analyst formulation, attribution deferred: for lives of experiencing subjects, a bearer's desirability (q.5 DesirableIn) in each respect is fixed by its experiential profile, so two bearers with the same profile are desirable in exactly the same respects (the map x to DesirableIn x factors through the profile). Equivalently, some valuation of profiles fixes desirability in every respect. It says nothing about how desirable any profile is; hedonism proper is one valuation. The generic Lean definition does not restrict the bearers to experiencing subjects."
+
+[[statement]]
+id = "Experientialism fails: two bearers with one experiential profile differ in desirability"
+lean = "ExperientialismFails"
+definitions = ["8645429d-e970-46a8-a0fc-5b02949bceaf", "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b", "661ad6ef-309b-5334-b770-bfbf173a6784"]
+paraphrase = "The negation of experientialism for the given profile map and desirability relation: it is not the case that bearers with the same experiential profile are desirable in exactly the same respects. It does not say which bearers or respects witness the failure."
+
+[[statement]]
+id = "The real life and the machine life have the same experiential profile"
+lean = "SameExperience"
+definitions = ["2ac9b4f7-1019-4795-ba51-ea05fa7ae54b"]
+paraphrase = "OPEN case stipulation, analyst formulation after the experience-machine thought experiment (attribution deferred): the two lives compared, a real life and a life plugged into the machine, are indistinguishable from the inside: the profile map gives them the same value. It is the coherence of the case on a phenomenal individuation of profiles; on an individuation by intentional content it could fail."
+
+[[statement]]
+id = "Stay-out verdict: the real life is better for its subject than the machine life"
+lean = "StayOutVerdict"
+definitions = ["918ec28e-5b8a-4642-8e0c-d4b1098851e3"]
+paraphrase = "OPEN case verdict, analyst formulation (attribution deferred): the real life is better for the person living it than the machine life (BetterFor real machine). It is treated as unread prima facie case data on the same footing as the status-quo-bias and reversed-machine debunking evidence recorded in docs/notes/experience-machine.md; neither has been read here."
+
+[[statement]]
+id = "Betterness for a subject requires a respect desirable in the better life and not in the other"
+lean = "BetterRequiresRespectDifference"
+definitions = ["918ec28e-5b8a-4642-8e0c-d4b1098851e3", "661ad6ef-309b-5334-b770-bfbf173a6784"]
+paraphrase = "OPEN analyst transfer bridge from person-level welfare to the per-perfection reading of q.5: whenever one life is better for its subject than another, there is a respect p in which the first is desirable (q.5 DesirableIn) and the second is not. It identifies the respects that ground person-level betterness with q.5's respects of desirability, and it excludes betterness by degree within a respect both lives share."
+
+[[statement]]
+id = "Experientialism and q.5's desirability biconditional conflict where perfection outruns experience"
+lean = "ExperienceMachineComparison"
+definitions = ["8645429d-e970-46a8-a0fc-5b02949bceaf", "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b", "918ec28e-5b8a-4642-8e0c-d4b1098851e3", "661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "Premise-free comparison over arbitrary types and relations, PERFECT_1 throughout. (1) Experientialism holds exactly when some valuation of profiles fixes desirability in every respect. (2) Exact price: a desirability relation satisfying both q.5's biconditional (desirable in p exactly when perfect in p) and experientialism exists exactly when perfection supervenes on the experiential profile. (3) If two lives share a profile and one is perfect in a respect p in which the other is not (and in every respect the other is), the biconditional and experientialism are not jointly true. (4) The biconditional, those perfection facts and respect dominance give the stay-out verdict. (5) Experientialism, same experience and the transfer bridge exclude the stay-out verdict. (6) The biconditional is the conjunction of its forward half (perfect implies desirable) and backward half (desirable implies perfect). (7) Under experientialism and the case facts, the forward half makes the machine life desirable in the respect it lacks, and the backward half makes the real life not desirable in the respect it has. (8) Re-presentation probe: some same-profile pair with the stay-out verdict and the transfer bridge exists exactly when experientialism fails."
+
+[[statement]]
+id = "Experience-machine joint models for the perfectionist, hedonist and mixed accounts"
+lean = "ExperienceMachineControls"
+definitions = ["8645429d-e970-46a8-a0fc-5b02949bceaf", "2ac9b4f7-1019-4795-ba51-ea05fa7ae54b", "918ec28e-5b8a-4642-8e0c-d4b1098851e3", "661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "Finite controls on three lives (real, machine, drab) and four goods (achievement, friendship, knowledge, pleasure); real and machine share the rich profile, the machine life actually has only felt pleasure, the drab life only knowledge. PerfectIn is actual possession; betterness is strict respect dominance of the model's desirability (both transfer statements hold by construction) except in row 6. (1) Desirability as actual possession: the q.5 biconditional, q.5's perfect-in-act reading (trivially, since PerfectIn is Has), the case facts, the transfer statements and the stay-out verdict hold; experientialism fails. (2) Hedonist desirability (pleasure only, as presented): experientialism, the case facts and the transfer statements hold and the stay-out verdict fails; the backward half holds and the forward half fails; the real life dominates the drab life, whose profile differs. (3) Presentational experientialism (desirable in every presented good): experientialism and the forward half hold; the backward half, the biconditional and the stay-out verdict fail. (4) Partial experientialism (possession, plus friendship when presented): the forward half and the stay-out verdict hold; the backward half and experientialism fail. (5) Restricted (possession except knowledge): the backward half and the stay-out verdict hold; the forward half and experientialism fail. (6) With hedonist desirability and a betterness relating only real to machine, experientialism, same experience and the verdict hold and the transfer bridge fails. Statements about this finite interpretation only."
+
+[[statement]]
+id = "Whatever is PERFECT_1 in a respect is desirable in that respect"
+lean = "PerfectMakesDesirableReading"
+definitions = ["661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "Forward half of 'each thing is desirable insofar as it is perfect', analyst weak version: for every bearer x and perfection p, if x is perfect in p (PERFECT_1) then x is desirable in p. Aquinas' stated reason in ST I q.5 a.1 co. (omnia appetunt suam perfectionem) bears on this half (see the Lean doc of DesirableInsofarAsPerfectReading); no new source claim is made."
+
+[statement.connection_plan]
+target_statement_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+missing_bridge = "The q.5 argument a5a50fe3 needs the biconditional (comparison conjunct 6: it is exactly this forward half together with the backward half). A route using the forward half alone would need either the backward half from another argument, or a q.5 conclusion weakened to 'whatever actually has a perfection is GOOD_1 in it' with its own downstream consumer."
+blocker = "No downstream consumer of the one-directional goodness conclusion exists, and the backward half has no argument."
+
+[[statement]]
+id = "Whatever is desirable in a respect is PERFECT_1 in that respect"
+lean = "DesirableOnlyIfPerfectReading"
+definitions = ["661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "Backward half of 'each thing is desirable insofar as it is perfect', analyst weak version: for every bearer x and perfection p, if x is desirable in p then x is perfect in p (PERFECT_1). In ST I q.5 a.1 co. this half rests on the reading of secundum quod as a biconditional, not on the stated reason."
+
+[statement.connection_plan]
+target_statement_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+missing_bridge = "The q.5 argument a5a50fe3 needs the biconditional (comparison conjunct 6). An independent argument for this backward half, for example from the object of appetite in ST I q.80 a.1, would together with the forward half give the premise; none is built."
+blocker = "The experience-machine verdict does not discriminate this half (controls rows 4 and 5), and no other argument for it is recorded."
+
+[[argument]]
+id = "Experientialism fails, from the stay-out verdict on two same-profile lives"
+theorem = "experientialismFailsFromStayOut"
+premises = ["The real life and the machine life have the same experiential profile", "Stay-out verdict: the real life is better for its subject than the machine life", "Betterness for a subject requires a respect desirable in the better life and not in the other"]
+conclusion = "Experientialism fails: two bearers with one experiential profile differ in desirability"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+comparator_theorems = []
+rule = "The transfer bridge gives a respect of difference; experientialism at the shared profile excludes it"
+meaning = "If the real life and the machine life share an experiential profile, the real life is better for its subject, and betterness requires a respect in which the better life is desirable and the other is not, then some respect separates two same-profile lives, so experientialism fails for that desirability relation. Its argument refutes the recorded rival experientialism. All three premises are OPEN; the refutation counts for nothing in the frontier until they are established, and even then it would defeat only this rival, not the partial-experientialist and restricted models that also give the verdict (controls rows 4 and 5)."
+description = "Near-transcription (instantiation): conjunct 8 of the experience-machine comparison certifies that the premise bundle, with the two lives and the betterness relation existentially closed, is equivalent to the conclusion. The stay-out verdict with the transfer bridge is exactly a counterexample to experientialism, so the result adds no inferential content; its evidential weight lies entirely in the verdict, the bridge and the same-profile stipulation, all OPEN. Each premise is needed: controls row 2 omits the verdict, row 6 the bridge, and row 2's real/drab pair the same profile."
+transcription = "instantiation"
+
+[[argument]]
+id = "Desirable-insofar-as-perfect gives its forward half"
+theorem = "perfectMakesDesirableOfInsofar"
+premises = ["060e7a1a-6c3d-5c8f-b67b-2d0a78044642"]
+conclusion = "Whatever is PERFECT_1 in a respect is desirable in that respect"
+axioms = []
+strong_version_needed = {"060e7a1a-6c3d-5c8f-b67b-2d0a78044642" = "The biconditional is the strong version of this strength registration, not a premise asserted for a route."}
+rule = "right-to-left direction of a biconditional"
+meaning = "Strength registration (not a route step): the per-perfection biconditional 'desirable in p exactly when perfect in p' gives its forward half 'perfect in p implies desirable in p'. Controls rows 3 and 4 satisfy the forward half and not the biconditional."
+description = "Transcription by instantiation (AGENTS.md invariant 16), registered as a strength order: the proof takes one direction of the premise's biconditional at each bearer and perfection, so it closes its conclusion only when the premise is closed."
+transcription = "instantiation"
+
+[[argument]]
+id = "Desirable-insofar-as-perfect gives its backward half"
+theorem = "desirableOnlyIfPerfectOfInsofar"
+premises = ["060e7a1a-6c3d-5c8f-b67b-2d0a78044642"]
+conclusion = "Whatever is desirable in a respect is PERFECT_1 in that respect"
+axioms = []
+strong_version_needed = {"060e7a1a-6c3d-5c8f-b67b-2d0a78044642" = "The biconditional is the strong version of this strength registration, not a premise asserted for a route."}
+rule = "left-to-right direction of a biconditional"
+meaning = "Strength registration (not a route step): the per-perfection biconditional gives its backward half 'desirable in p implies perfect in p'. Controls rows 2 and 5 satisfy the backward half and not the biconditional."
+description = "Transcription by instantiation (AGENTS.md invariant 16), registered as a strength order: the proof takes one direction of the premise's biconditional at each bearer and perfection, so it closes its conclusion only when the premise is closed."
+transcription = "instantiation"
+
+[[argument]]
+id = "Experience-machine comparison of experientialism and q.5 desirability checked"
+theorem = "experienceMachineComparison"
+premises = []
+conclusion = "Experientialism and q.5's desirability biconditional conflict where perfection outruns experience"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Function.factorsThrough_iff, extensionality and case analysis"
+meaning = "Premise-free comparison. The exact price of holding q.5's desirability biconditional together with experientialism is that perfection supervenes on experience; so the coherence of the machine case (same profile, a perfection one life has and the other lacks), not its verdict, already makes the two contraries. Given the case, the biconditional with respect dominance predicts the stay-out verdict and experientialism with the transfer bridge forbids it. Experientialism conflicts with each half of the biconditional only together with the case: with the forward half it makes the machine life desirable in the respect it lacks, with the backward half it makes the real life not desirable in the respect it has. Conjunct 8 is the re-presentation probe for the refutation result. Nothing here establishes any premise or the verdict."
+
+[[argument]]
+id = "Experience-machine joint models and controls checked"
+theorem = "experienceMachineControls"
+premises = []
+conclusion = "Experience-machine joint models for the perfectionist, hedonist and mixed accounts"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Explicit finite interpretations, checked by decide"
+meaning = "Joint models on one finite carrier for each side: q.5's biconditional with the stay-out verdict (row 1), and experientialism with the case facts and indifference between the two lives (rows 2 and 3). Rows 4 and 5 show that the stay-out verdict is also satisfied by a model that denies the backward half (partial experientialism) and by one that denies the forward half (restricted), so the verdict discriminates experientialism from both halves' common core but certifies neither half universally. Row 2 also shows that hedonism proper is compatible with the backward half. Omission controls for the refutation: row 2 (no verdict), row 6 (no bridge), row 2's real/drab pair (different profiles). The betterness relation is set to strict respect dominance, so the transfer statements hold by construction there; models witness satisfiability of these finite interpretations only and refute no position."
+
+[[relation]]
+id = "Experientialism is an alternative to desirable-insofar-as-perfect"
+subject_kind = "statement"
+subject_id = "Experientialism: desirability in each respect is fixed by the bearer's experiential profile"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+note = "Positive rival account of what fixes desirability for lives of experiencing subjects: the experiential profile rather than perfection. Target: 060e7a1a's per-perfection biconditional as a whole; experientialism is compatible with each half alone (controls rows 2 and 3). Mechanism: comparison conjunct 3, given two lives with one profile differing in a perfection, the biconditional and experientialism are not jointly true; conjunct 2 gives the exact price (perfection supervenes on experience). Independent warrant offered for the rival (unread leads): the experience requirement, that what makes no difference to how a life is from the inside cannot make it go better for its subject (Mill, Utilitarianism ch. 4; Sumner; Crisp). The conflict holds only when 060e7a1a's DesirableIn is applied to lives of experiencing subjects."
+
+[[relation]]
+id = "Stay-out refutation of experientialism"
+subject_kind = "argument"
+subject_id = "Experientialism fails, from the stay-out verdict on two same-profile lives"
+predicate = "refutes"
+object_kind = "statement"
+object_id = "Experientialism: desirability in each respect is fixed by the bearer's experiential profile"
+note = "Conditional refutation: it counts only when same experience, the stay-out verdict and the transfer bridge are established, and none is. The result is a near-transcription (comparison conjunct 8): the verdict is exactly a counterexample, so the refutation's weight is the verdict's. The status-quo-bias and reversed-machine debunking evidence bears on the verdict premise (docs/notes/experience-machine.md)."
+
+[[relation]]
+id = "Desirable-insofar-as-perfect strengthens its forward half"
+subject_kind = "statement"
+subject_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whatever is PERFECT_1 in a respect is desirable in that respect"
+verification_result_id = "Desirable-insofar-as-perfect gives its forward half"
+strictness_result_id = "Experience-machine joint models and controls checked"
+note = "Same Being, Perfection, DesirableIn and PerfectIn. The controls (rows 3 and 4) satisfy the forward half and not the biconditional. The added content is the backward half (comparison conjunct 6)."
+
+[[relation]]
+id = "Desirable-insofar-as-perfect strengthens its backward half"
+subject_kind = "statement"
+subject_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Whatever is desirable in a respect is PERFECT_1 in that respect"
+verification_result_id = "Desirable-insofar-as-perfect gives its backward half"
+strictness_result_id = "Experience-machine joint models and controls checked"
+note = "Same Being, Perfection, DesirableIn and PerfectIn. The controls (rows 2 and 5) satisfy the backward half and not the biconditional. The added content is the forward half (comparison conjunct 6)."
+
+[[relation]]
+id = "Test by the experience-machine comparison of desirable-insofar-as-perfect"
+subject_kind = "argument"
+subject_id = "Experience-machine comparison of experientialism and q.5 desirability checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+note = "Exact price of combining the biconditional with experientialism, its prediction of the stay-out verdict under respect dominance, and its split into forward and backward halves."
+
+[[relation]]
+id = "Test by the experience-machine comparison of experientialism"
+subject_kind = "argument"
+subject_id = "Experience-machine comparison of experientialism and q.5 desirability checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Experientialism: desirability in each respect is fixed by the bearer's experiential profile"
+note = "Positive form of experientialism, its contrariety with the biconditional under the case, and its prohibition of the stay-out verdict under the transfer bridge."
+
+[[relation]]
+id = "Test by the experience-machine joint models of desirable-insofar-as-perfect"
+subject_kind = "argument"
+subject_id = "Experience-machine joint models and controls checked"
+predicate = "tests"
+object_kind = "statement"
+object_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+note = "Joint model of the biconditional with the case and the stay-out verdict (row 1); models of each half without the other that also give the verdict (rows 4 and 5)."
+
+[[relation]]
+id = "Test by the experience-machine omission controls of the stay-out refutation"
+subject_kind = "argument"
+subject_id = "Experience-machine joint models and controls checked"
+predicate = "tests"
+object_kind = "argument"
+object_id = "Experientialism fails, from the stay-out verdict on two same-profile lives"
+note = "Joint model of the three premises with experientialism failing (row 1); omission of the verdict (row 2), of the bridge (row 6) and of same experience (row 2, real and drab)."
+
+[[statement]]
+id = "Desirable-insofar-as-perfect is exactly its forward half plus its backward half"
+lean = "ForwardExactDifference"
+definitions = ["661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "For all types and relations DesirableIn and PerfectIn (PERFECT_1), the per-perfection biconditional 'desirable in p exactly when perfect in p' is equivalent to the conjunction of its forward half (perfect implies desirable) and its backward half (desirable implies perfect). Equivalence certificate of the strength comparison of the biconditional with its forward half; a premise-free comparison of encodings, not an assertion of either half."
+
+[[statement]]
+id = "Desirable-insofar-as-perfect is exactly its backward half plus its forward half"
+lean = "BackwardExactDifference"
+definitions = ["661ad6ef-309b-5334-b770-bfbf173a6784", "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"]
+disambiguations = ["b4099355-0e3b-510a-9398-8ef97b4881b1"]
+paraphrase = "For all types and relations DesirableIn and PerfectIn (PERFECT_1), the per-perfection biconditional is equivalent to the conjunction of its backward half (desirable implies perfect) and its forward half (perfect implies desirable). Equivalence certificate of the strength comparison of the biconditional with its backward half; a premise-free comparison of encodings, not an assertion of either half."
+
+[[argument]]
+id = "Exact difference of desirable-insofar-as-perfect over its forward half"
+theorem = "forwardExactDifference"
+premises = []
+conclusion = "Desirable-insofar-as-perfect is exactly its forward half plus its backward half"
+axioms = []
+rule = "split a pointwise biconditional into its two directions"
+meaning = "Premise-free equivalence certificate: on every carrier, the biconditional holds exactly when its forward half and its backward half both hold. The backward half is therefore the exact content the biconditional adds to its forward half. No half is asserted."
+
+[[argument]]
+id = "Exact difference of desirable-insofar-as-perfect over its backward half"
+theorem = "backwardExactDifference"
+premises = []
+conclusion = "Desirable-insofar-as-perfect is exactly its backward half plus its forward half"
+axioms = []
+rule = "split a pointwise biconditional into its two directions"
+meaning = "Premise-free equivalence certificate: on every carrier, the biconditional holds exactly when its backward half and its forward half both hold. The forward half is therefore the exact content the biconditional adds to its backward half. No half is asserted."
+
+[[relation]]
+id = "Desirable-insofar-as-perfect over its forward half, with the backward half as exact delta"
+subject_kind = "statement"
+subject_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Whatever is PERFECT_1 in a respect is desirable in that respect"
+comparison_spec = "forwardComparison"
+delta_statement_id = "Whatever is desirable in a respect is PERFECT_1 in that respect"
+evidence_result_ids = {implication = "Desirable-insofar-as-perfect gives its forward half", equivalence = "Exact difference of desirable-insofar-as-perfect over its forward half"}
+statement_parameter_indices = {stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3]}
+note = "No background: on the same Being, Perfection, DesirableIn and PerfectIn the biconditional is exactly its forward half plus its backward half. The delta is the backward half, which the experience-machine verdict does not discriminate (controls rows 4 and 5)."
+
+[[relation]]
+id = "Desirable-insofar-as-perfect over its backward half, with the forward half as exact delta"
+subject_kind = "statement"
+subject_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Whatever is desirable in a respect is PERFECT_1 in that respect"
+comparison_spec = "backwardComparison"
+delta_statement_id = "Whatever is PERFECT_1 in a respect is desirable in that respect"
+evidence_result_ids = {implication = "Desirable-insofar-as-perfect gives its backward half", equivalence = "Exact difference of desirable-insofar-as-perfect over its backward half"}
+statement_parameter_indices = {stronger = [0, 1, 2, 3], weaker = [0, 1, 2, 3], delta = [0, 1, 2, 3]}
+note = "No background: on the same Being, Perfection, DesirableIn and PerfectIn the biconditional is exactly its backward half plus its forward half. The delta is the forward half, to which Aquinas' stated reason bears."
+
+[[relation]]
+id = "Test by the forward exact difference of desirable-insofar-as-perfect"
+subject_kind = "argument"
+subject_id = "Exact difference of desirable-insofar-as-perfect over its forward half"
+predicate = "tests"
+object_kind = "statement"
+object_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+note = "Certifies the backward half as the exact content the biconditional adds to its forward half."
+
+[[relation]]
+id = "Test by the backward exact difference of desirable-insofar-as-perfect"
+subject_kind = "argument"
+subject_id = "Exact difference of desirable-insofar-as-perfect over its backward half"
+predicate = "tests"
+object_kind = "statement"
+object_id = "060e7a1a-6c3d-5c8f-b67b-2d0a78044642"
+note = "Certifies the forward half as the exact content the biconditional adds to its backward half."

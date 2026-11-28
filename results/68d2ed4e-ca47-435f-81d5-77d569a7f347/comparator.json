@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Ethics.ExperienceMachine.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.ExperienceMachine.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ethics.ExperienceMachine.perfectMakesDesirableOfInsofar"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

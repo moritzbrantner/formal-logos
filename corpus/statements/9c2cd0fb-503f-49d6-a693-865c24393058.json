@@ -1,0 +1,18 @@
+{
+  "id": "9c2cd0fb-503f-49d6-a693-865c24393058",
+  "label": "Whatever is desirable in a respect is PERFECT_1 in that respect",
+  "paraphrase": "Backward half of 'each thing is desirable insofar as it is perfect', analyst weak version: for every bearer x and perfection p, if x is desirable in p then x is perfect in p (PERFECT_1). In ST I q.5 a.1 co. this half rests on the reading of secundum quod as a biconditional, not on the stated reason.",
+  "lean_declaration": "TruthCore.Ethics.ExperienceMachine.DesirableOnlyIfPerfectReading",
+  "definition_ids": [
+    "661ad6ef-309b-5334-b770-bfbf173a6784",
+    "bf9ced33-dbd9-5921-99ef-e1e92fa7e063"
+  ],
+  "disambiguation_ids": [
+    "b4099355-0e3b-510a-9398-8ef97b4881b1"
+  ],
+  "connection_plan": {
+    "target_statement_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+    "missing_bridge": "The q.5 argument a5a50fe3 needs the biconditional (comparison conjunct 6). An independent argument for this backward half, for example from the object of appetite in ST I q.80 a.1, would together with the forward half give the premise; none is built.",
+    "blocker": "The experience-machine verdict does not discriminate this half (controls rows 4 and 5), and no other argument for it is recorded."
+  }
+}
