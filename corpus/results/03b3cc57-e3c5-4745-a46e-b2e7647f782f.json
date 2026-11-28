@@ -1,0 +1,11 @@
+{
+  "id": "03b3cc57-e3c5-4745-a46e-b2e7647f782f",
+  "label": "An inertia reason carries its own earlier actuality witness",
+  "argument_id": "a0989442-3431-41d3-8a66-4bba8cabb3ec",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.inertialReasonRequiresActuality",
+  "comparator_config": "results/03b3cc57-e3c5-4745-a46e-b2e7647f782f/comparator.json",
+  "status": "solution-present",
+  "description": "Unpack the earlier-date reason, use the existing interval theorem to derive later presence, and witness actuality from earlier presence alone. The law and reason are hypotheses inside the universally quantified result."
+}

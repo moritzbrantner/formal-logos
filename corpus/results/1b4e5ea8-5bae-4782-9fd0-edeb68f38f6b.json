@@ -1,0 +1,11 @@
+{
+  "id": "1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b",
+  "label": "A received bearer can survive with a protector present, no loss inducer and no strict giver at 1",
+  "argument_id": "f1ac8941-e5ba-4741-a821-16410e8b56b5",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.externalProtectionCompatible",
+  "comparator_config": "results/1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b/comparator.json",
+  "status": "solution-present",
+  "description": "At date 1 the model stipulates covariation between protector presence and inducer absence through a shared world index. Causal prevention is one interpretation of that covariation. In the surviving history, the received bearer has an inertial reason and lacks any strict giver at 1, so the productive bridge fails there."
+}
