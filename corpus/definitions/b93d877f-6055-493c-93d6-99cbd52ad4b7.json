@@ -1,0 +1,12 @@
+{
+  "id": "b93d877f-6055-493c-93d6-99cbd52ad4b7",
+  "label": "CAN_BE_WITHOUT_1: some accessible world of the shared ontology has x and lacks y",
+  "term": "being able to be without another, unindexed accessible contrast",
+  "basis": "stipulative",
+  "definition": "AccessibleContrast f w x y: some world accessible from w in the shared ontology of the causal frame has x existing and y absent. The accessibility is the frame's one relation (definition 88302e83). The sense names no agent whose power could bring the contrast about. Example: in a frame whose accessible worlds include one where the sun exists and the lit air does not, the sun can be without the lit air in this sense. Non-example: if no accessible world has the lit air without the sun, the lit air cannot be without the sun in this sense, whatever some further power could bring about.",
+  "lean_declaration": "TruthCore.Causality.CounterfactualDependence.AccessibleContrast",
+  "definition_ids": [
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4"
+  ],
+  "note": "Analyst sense for the counterfactual-dependence route (#2052, #2103). Which real possibility the frame accessibility represents, for example possibility in the order of the beings' own natures and causes, is OPEN and not encoded by the type. Distinct from CAN_BE_WITHOUT_2 (d027c6f8), which is indexed to a being's power. A pinned passage stating that a being can or cannot be without another in the order of nature would source it."
+}
