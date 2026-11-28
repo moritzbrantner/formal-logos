@@ -28,20 +28,23 @@
     "PR-2180",
     "PR-2184",
     "PR-1879",
-    "PR-1892"
+    "PR-1892",
+    "PR-2192"
   ],
   "workers": [
     {
       "role": "author",
       "provider": "openai",
       "model": "gpt-6-astra-pro",
-      "date": "2026-11-28"
+      "date": "2026-11-28",
+      "pr": "PR-2192"
     },
     {
       "role": "review",
       "provider": "openai",
       "model": "gpt-6-astra-pro",
-      "date": "2026-11-28"
+      "date": "2026-11-28",
+      "pr": "PR-2192"
     }
   ],
   "current_assessment": {
@@ -61,10 +64,10 @@
     "assessment": "Proper actualizing co-principles have a limited independent rationale as a sufficient diagnostic of constituency. To exclude selected proper realizers by explanatory posteriority requires a necessary contribution bridge in the same world, target actuality and relation; to infer simplicity also requires coverage of every real constituent. Local operation unity additionally requires intrinsic realization and complete token individuation at the same bearer and exercise. Arbitrary object incidence alone supplies none of these bridges, and repeated acts can share their object profile. Literal identity permits substitution within a fixed predicate or relation; common realization preserves formal indices without independently justifying formal distinction or a value order. Cognition can explain intentional presence conditional on independently warranted cognition, while A4 may make modes dependent on its nature without making them mind-dependent. No demonstrated simplicity advantage follows from these criteria alone. This is not equal overall warrant, an A4 coherence proof or a defeat of classical intellect. Recognition d1fb6414, cognition 3b40009e, actual-root apprehension, and pure-perfection applications remain open; #2184 in-root purity is not supplied.",
     "next_test": "Seek a source-level account that independently establishes the complete immediate actuality, guarded proper-constituent contribution and exhaustive constituent coverage, with a discriminating reason its counterpart cannot satisfy the same conditions. Preserve the distinction between the source actuality, operation actuality, external object existence and intentional presence. A further equivalent recognition principle or another matched finite interpretation does not establish those applications.",
     "note": "docs/notes/causal-perfection-transfer.md#constituency-intentional-unity-and-formal-determinations-2026-11-28-provisional",
-    "reviewed_revision": "e794cc28343b7722f597fab2d0441168b720b39b",
+    "reviewed_revision": "85b08ecce3fe3ef631160590c77f5f1b3ca99de3",
     "review": "accepted_qualified",
-    "publication": "unpublished",
-    "evidence": "Fresh independent semantic challenge read the complete proposed outcome at 5683e3de14bdf04e494987b9c7615311b6092b9f, with no P1/P2 findings, preserving the limits on universal constituency coverage, complete-act individuation, model interpretation and comparative warrant. A targeted confirmation carried that acceptance to e794cc28343b7722f597fab2d0441168b720b39b after the author clarified substitution for a fixed predicate/relation while allowing different predicates of one foundation. Focused Lean build, all four affected theorem bindings, Comparator and independent NanoDa verification passed on the delivered formal inputs. Repository preflight passed against 65f59ec046bb5a55adc4807e26f80e39aecc4963; computed frontier-diff reported no change. Final prove-sweep reported four unresolved targets, zero errors and no likely transcriptions. The three freeze commits preceded the Solution commit; hand proof drafting preceded the available-tool prove-sweep because the environment initially lacked the toolchain. The explicit Nat binder repair preserved the frozen intended countable interpretation. Hosted CI and PR publication are separate from this local evidence.",
+    "publication": "published",
+    "evidence": "Fresh independent semantic challenge read the complete proposed outcome at 5683e3de14bdf04e494987b9c7615311b6092b9f, with no P1/P2 findings, preserving the limits on universal constituency coverage, complete-act individuation, model interpretation and comparative warrant. A targeted confirmation carried that acceptance to e794cc28343b7722f597fab2d0441168b720b39b after the author clarified substitution for a fixed predicate/relation while allowing different predicates of one foundation. Focused Lean build, all four affected theorem bindings, Comparator and independent NanoDa verification passed on the delivered formal inputs. Repository preflight passed against 65f59ec046bb5a55adc4807e26f80e39aecc4963; computed frontier-diff reported no change. Final prove-sweep reported four unresolved targets, zero errors and no likely transcriptions. The three freeze commits preceded the Solution commit; hand proof drafting preceded the available-tool prove-sweep because the environment initially lacked the toolchain. The explicit Nat binder repair preserved the frozen intended countable interpretation. Hosted CI and PR publication are separate from this local evidence. Publication through the connected GitHub API preserves all ten local commit trees and the frozen-Challenge sequence. Public reviewed revision 85b08ecce3fe3ef631160590c77f5f1b3ca99de3 and accepted local e794cc28343b7722f597fab2d0441168b720b39b have identical tree e3f1354b373076c57b708b41f92d94f01b3050c5 and empty diff; the independent reviewer confirmed that qualified acceptance carries to that public revision. Initial public head e5795559ff3fed24035165a3210fd577ccfb5af9 has tree eecefdc4073b17e427cb451613068be77ac69f3f, identical to locally integrated c045913913f7c4f55c1be08f1f3f38652992104c. The merged main b82d5b70fa622a2d2fd117c15fe9708e4da03ccd changed none of the new theorem statements, proof bodies or their used definitions; the focused build and full repository preflight passed again, and the computed frontier-diff again reported no change. Existing binding and independent-kernel evidence is retained for those unchanged formal inputs. The bounded automated countermodel command timed out after 60 seconds without a reported result; no non-entailment or minimality was inferred from it. PR #2192 publishes the reviewed bounded investigation; hosted CI and current-head code review remain separate integration gates.",
     "supersedes": "Scoped continuation, not replacement, of b45aef67-a349-4a84-a239-e98530f11712: supplies a guarded constituency criterion, explicit coverage obligation and local act-individuation diagnostics for its next test. It retains that attempt's conclusions and unresolved source-level realization. It investigates the ordinary-one-act question in 0d8b9153-ad65-48a3-be6a-478612f0e2a1 without claiming a simple human-act instance. No other lane or prior source finding is superseded."
   }
 }
