@@ -1,0 +1,41 @@
+{
+  "id": "82832441-1450-4b68-a714-1b70e46b7406",
+  "label": "Constituency and intentional unity under one criterion for simple intellect and formal modes",
+  "statement_ids": [
+    "d1fb6414-976e-4833-908d-17787cca2502",
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+    "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+    "d83785e2-f572-4eb8-9098-0785da0e174d"
+  ],
+  "date": "2026-11-28",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "User-selected continuation of #2187, #2180 and #2184. Supplies conditional guarded-constituency and local operation-individuation laws, countable priority omissions, arbitrary-object and repeated-operation controls, and an application to both existing restored source accounts. The criterion fixes one explanandum and relation, exempts whole-nature self-realization, and makes constituent coverage explicit. The linked note compares ordinary acts, natural powers, relational properties and strong formal distinction, and reconnects the results to simplicity, recognition, cognition and pure perfection. Existing realizer-identity/ranking laws are reused. The proposed assessment finds no demonstrated simplicity advantage from these criteria alone; source-level realization and the completeness of the proposed criteria remain open. Formal verification and independent semantic challenge are pending at this draft revision.",
+  "blocker": "The intended metaphysical discrimination is unresolved: neither account has established complete-immediate-actuality individuation and exhaustive constituent coverage at the source, or a reason the counterpart cannot meet the same criteria. Exact-input formal verification and independent semantic challenge of the proposed delivery are still in progress.",
+  "evidence": [
+    "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a",
+    "b1da92ca-e297-434d-a9cf-8312e23e4420",
+    "1b46fbae-427e-40ee-aa4c-1ff883e0045f",
+    "dce2992b-13d9-47ca-9881-fd196e7fc0a7",
+    "28f1b4f2-2468-4382-99ae-97498f1a98e0",
+    "c34e1b3e-082c-4275-8b32-b7f19c5b4de8",
+    "PR-2187",
+    "PR-2180",
+    "PR-2184",
+    "PR-1879",
+    "PR-1892"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "openai",
+      "model": "gpt-6-astra-pro",
+      "date": "2026-11-28"
+    }
+  ]
+}

@@ -9942,6 +9942,280 @@ are tool-fragment limits, not philosophical evidence. Certification and the
 independent semantic challenge are recorded in the successor attempt and the
 delivery PR; only completed exact-revision checks count as passed.
 
+## Constituency, intentional unity and formal determinations (2026-11-28, provisional)
+
+This investigation follows [#2187](https://github.com/moritzbrantner/formal-logos/pull/2187),
+[#2180](https://github.com/moritzbrantner/formal-logos/pull/2180) and
+[#2184](https://github.com/moritzbrantner/formal-logos/pull/2184). Its
+[attempt](../../corpus/attempts/82832441-1450-4b68-a714-1b70e46b7406.json)
+records the delivered revision and verification/review status. The question is
+whether a defensible constituency criterion distinguishes multiple objects of
+one intellectual act from A4's mind-independent formal determinations. The
+criteria below are analyst formulations, not attributed historical premises.
+
+**Proposed assessment.** The useful distinction is between proper grounds
+constituting an actuality and specifications or objects dependent on that
+actuality. It concerns explanatory direction and the exact fact explained;
+it is not a privilege of cognition. This gives a reason why object plurality
+alone does not establish composition, and also permits A4 to make the same
+reply when its modes are derivative specifications of one nature. Neither
+account thereby establishes the completeness or non-composition of that
+nature. These tests do not establish equal overall warrant, defeat A4, or
+discharge recognition `d1fb6414`, cognition `3b40009e` or pure perfection.
+
+### 1. A neutral criterion of constituency
+
+A real, intrinsic, proper co-principle whose actuality helps constitute the
+very actuality being explained is sufficient evidence of constituency.
+"Proper" excludes the entire actuality itself. Matter/form and distinct
+actualizing powers motivate this criterion: a whole or operation is actual
+through its constituting factors. The criterion does not require temporal
+priority, detachability or separate existence; inseparable factors can still
+be constituents. Neither an irredundant conjunction of truths nor two
+non-synonymous predicates establishes corresponding real co-principles.
+
+This is a sufficient diagnostic, not an exhaustive definition. To infer the
+absence of constituents from the absence of such priority requires a second,
+stronger **coverage** commitment: every proper real constituent relevant to
+this actuality would contribute in the selected constitutive-priority
+relation. That commitment is defensible for an account explicitly analyzing
+constitution through actualizing factors. It is not established for every
+theory of composition, and it cannot be imposed on a formal-distinction
+account merely because its determinations are intrinsic.
+
+This preserves the earlier [composition and unity investigation](composition-causal-scope.md#positive-argument-what-diversity-contributes-and-what-still-needs-defense):
+an inventory of factors is not yet their obtaining as this unified actuality.
+Necessary covariance also leaves the direction of explanation undecided;
+whole-first accounts can accept covariance and reverse the proposed priority.
+The rationale for the selected direction comes from the actualizing role
+assigned to a proper co-principle, not from covariance or object counting.
+Constitutive explanation does not thereby become efficient production by a
+second concrete being. The earlier [whole-first](worldwise-composite-ground.md)
+and [Plotinian need](plotinian-composition-unity.md) investigations retain
+their distinct priority and causal-bridge obligations.
+
+Keep three explananda separate: the subject's actuality, its operation's
+actuality, and a particular object's being apprehended. A power can depend
+on its subject and explain an operation without explaining that subject's
+whole actuality. An external object can explain the correctness of cognition
+without being part of the knower. The object itself is also distinct from
+the fact of its intentional presence. Treating all these arrows as one
+unqualified dependence claim manufactures a cycle.
+
+The formal application therefore retains one selected `Arena.explains`
+relation, one world and one target fact. If that target is strictly prior to
+the eligible specification facts, those facts cannot be strict prior grounds
+of the **same** target. This reuses
+`PriorityOmission.priorExcludesSelfAndPosterior`. To obtain a statement about
+real constituents, a separate guarded bridge says that an eligible realizer
+counted as a real constituent and different from the whole contributes prior
+to that target. The guard preserves the existing definition's allowance that
+the whole nature is its own sole real constituent. Only with coverage of all
+real constituents by those eligible realizers does the argument reach
+`ConstitutivelySimple`. Without coverage it excludes only the specified
+proper realizers; unrepresented constituents remain possible.
+
+These bridges are open metaphysical applications. The logical theorem does
+not establish that an actual intellect or A4 nature satisfies them, and no
+primitive is renamed to make the desired conclusion true. In particular,
+absence of reverse priority alone is not proof of metaphysical simplicity.
+
+### 2. What individuates an act?
+
+The candidate principle identifies an operation token by its **complete
+immediate actuality**, within the selected bearer and exercise. This is not
+identity of the bearer, its remote source, its faculty or its objects. The
+same subject can repeat an act directed at the same objects. One occurrence
+can concern several objects. Calling a coordinated episode "one" does not
+show that it contains only one operation.
+
+The formal act-individuation condition is explicit extensionality of a
+complete operation description; it is not inferred from a constant
+realization map. The application reuses #2187's injective-realizer collapse
+law for the operations selected at a fixed bearer and exercise. Realizer
+membership and faithfulness of that description remain separate hypotheses.
+The object-of relation contributes no injectivity assumption. Its cardinality
+therefore cannot by itself establish the number of acts or constituents.
+
+An ordinary occasion can help individuate a repeated operation, but temporal
+individuation does not automatically extend to an eternal act. At a simple
+source the application requires an account of one complete immediate
+actuality, including its determinate cognitive or productive specification.
+Neither the subject's numerical identity nor a bare assertion that it has one
+act supplies that account. The same condition is available to an impersonal
+operation; it introduces no apprehension predicate by definition.
+
+### 3. The three plurality questions
+
+**Plurality in the subject.** If two determinations are distinct proper real
+co-principles constituting the source, they conflict with the agreed
+constitutive simplicity. Cognitive representations and noncognitive powers
+receive the same treatment. The application must establish their status as
+proper actualizers; intrinsic predicability alone is insufficient.
+
+**Plurality in the operation.** Several operation tokens do not follow from
+several objects, and several operations do not establish composition of the
+subject without an operation-to-constituent bridge. A faithful complete
+immediate-realizer description and real-constituent membership provide an
+explicit route for that inference. Repeated exercises and distinct
+descriptions of one exercise must not be conflated.
+
+**Plurality in the objects.** Distinct termini of one operation can be
+distinguished by what is apprehended or specified without being distinct
+proper actualizers of that operation. Nevertheless the operation must be
+determinate enough to concern these objects. This leaves a real question:
+does its determinacy consist in proper factors, or belong to its whole
+actuality? An intentional interpretation owes an answer; an unapprehended
+mode-sensitive manifestation profile is A4's proposed answer to the same
+question.
+
+These are diagnostic branches, not a claimed exhaustive or exclusive
+ontology. A theory can have plurality at more than one level. No deduction
+here selects a preferred branch from an unstated coverage disjunction.
+
+### 4. Calibration and the strongest standing alternatives
+
+An ordinary comparison apprehends terms in their relation. It motivates
+distinguishing an act from its objects, but it does not show that the
+cognitive occurrence lacks intrinsic representations, capacities or other
+constituents. It also does not demonstrate exhaustive distinct knowledge of
+arbitrarily many objects through one simple act. Those are specific stronger
+claims requiring further warrant. The scope distinction matters to the
+classical comparison, not just to A4.
+
+Natural causal powers and relational properties supply the corresponding
+limited rationale on the impersonal side. One power's manifestations can
+vary with recipient conditions; one subject can be taller than one person
+and shorter than another without tall and short constituents. These cases
+undercut the rule "different relational roles imply different source parts".
+They do not establish that all source-level possibilities or their values
+are available without recipients. A4 must still supply a determinate prior
+basis for possible-recipient conditions. #2187's result excludes grounding
+productive modes in the very actual effects they explain under its stated
+priority bridges; it does not exclude every relation to a possible effect.
+
+The strongest formal-distinction account holds that different formal
+contents are one concrete reality without being forms informing a substrate
+or parts jointly actualizing it. Its proposed difference is neither mere
+synonymy nor a plurality of additional actualities. The burden is to defend
+that interpretation, not merely label its modes "formal". Conversely,
+rejecting it requires a reason that these determinations must be proper
+co-principles. Defining every intrinsic distinction as composition would
+apply to intellect, will and goodness on the classical side as well.
+
+The existing [identity and ranking laws](../../corpus/results/28f1b4f2-2468-4382-99ae-97498f1a98e0.json)
+already settle the logical identity point. Numerical equality in one type
+permits substitution; unequal predicates of literally identical terms are
+inconsistent. Equality of real realizers is different: a noninjective map
+can realize distinct formal roles in one nature. Different roles must retain
+their formal or relational indices. Bare common realization cannot by itself
+explain an asymmetric value order. This is the same demand for intentional
+contents and A4 modes; the present work does not duplicate those laws.
+
+A further constraint applies to the intellectual explanation itself. If a
+comparison is said to generate mode distinctions, those same distinctions
+cannot also be its strict prior constitutive grounds in the same explanation.
+An account may instead ground possibility in the essence and intentional
+presence in apprehension, preserving two different explananda. It must make
+that distinction explicit; cognition does not automatically explain the
+possibility profile merely by apprehending it.
+
+For primary-source navigation, the relevant loci are Aquinas,
+[*ST* I q.15 a.2, body and replies](https://www.newadvent.org/summa/1015.htm#article2),
+[*ST* I q.85 a.4](https://www.newadvent.org/summa/1085.htm#article4),
+Scotus, [*Ordinatio* I d.8 p.1 q.4, nn.193–194 and 213–217](https://www.logicmuseum.com/wiki/Authors/Duns_Scotus/Ordinatio/Ordinatio_I/D8/Q4),
+and [I d.35, nn.7–8, 21, 25 and 27–32](https://www.logicmuseum.com/wiki/Authors/Duns_Scotus/Ordinatio/Ordinatio_I/D35).
+These passages were consulted to calibrate the alternatives; no new theorem
+is attributed to an author, no historical claim record is added, and a
+Scotist account of divine intellection is not attributed to A4.
+
+### 5. Formal consequences and omission tests
+
+The [posterior-constitution law](../../corpus/results/697e2177-62a3-4c3c-b7c3-c4032f2bcf7a.json)
+has two conclusions. Strict priority, posteriority of the selected
+specifications and the guarded constituent-to-priority bridge exclude
+selected real realizers distinct from the whole. Coverage then extends
+that conclusion to all real constituents. The argument allows nonempty
+finite explanation chains; transitivity converts them into the priority
+edge needed by the reused no-cycle result. It asserts neither that an
+actual intellect has these properties nor that there exists a constituent.
+
+The [priority controls](../../corpus/results/1b46fbae-427e-40ee-aa4c-1ff883e0045f.json)
+populate the interpretation and independently omit coverage, contribution
+and posteriority. A constituent left outside the realization map defeats
+the conclusion when coverage is omitted. Covered real constituents can
+coexist with posterior specification facts if the item-to-fact bridge is
+omitted. Reversing the priority order gives a nonvacuous proper constituent
+contributing to the target while posteriority fails. A separate case allows
+the target to explain a specification that explains a different operation
+fact, without a cycle. These controls concern countably many specification
+facts, distinguished from both source and effect existence facts; they are
+not further finite personal/impersonal duplicates.
+
+The same result applies the law to both of #2187's restored source-based
+interpretations, using their positive nature-to-mode explanation paths.
+Their realization maps already identify every realizer with the whole.
+Consequently the proper-realizer guard has no instances and simplicity
+already holds. This is a check of equal application, not independent support
+for either nature's simplicity. The omission cases expose what that
+application alone leaves untested.
+
+The [local operation-unity law](../../corpus/results/b1da92ca-e297-434d-a9cf-8312e23e4420.json)
+uses simplicity, intrinsic membership of operation realizers and faithful
+individuation by bearer, exercise and complete immediate realizer to show
+at most one operation at a fixed bearer and exercise. The
+[operation controls](../../corpus/results/dce2992b-13d9-47ca-9881-fd196e7fc0a7.json)
+allow an arbitrary object carrier and selected object set. They also give
+repeated operations with identical object profiles and omission cases for
+individuation, intrinsic membership and simplicity. One operation is
+compatible with a composite subject as well. The `ObjectOf` relation records
+incidence only: these are not proofs of correct apprehension or of the
+metaphysical possibility of a simple cognitive act. The complete-profile
+premise states the disputed adequacy of individuation; its name does not
+supply that warrant. The attempt records the verification and review of
+these exact results.
+
+### 6. Explanatory advantage and route consequences
+
+Conditional on independently warranted source-level cognition, the classical
+account gives an intelligible explanation of the intentional-presence facts:
+they depend on apprehension. This explains why the objects as apprehended
+need not be prior actualizers of the act. It does not prove that the act
+lacks all intrinsic constituents or derive cognition from simplicity.
+
+A4 can employ the same priority principle without intentionality. Its modes
+can depend on its nature while remaining independent of cognition. A mode's
+being mind-independent does not make it independent of its own source.
+If those modes are derivative specifications, the reverse-constitution
+objection fails for them too. If they are proper actualizing factors, the
+simplicity objection applies. The same fork applies to the classical account.
+
+The resulting judgment is **no demonstrated simplicity advantage from these
+criteria alone**. This is neither global metaphysical parity nor a finding
+that cognition has no explanatory value. It preserves A4 as a substantive
+candidate with unresolved source-level realization, and preserves the
+classical account's corresponding unity obligation. The strong principles
+needed to make object plurality compose were not independently defended by
+the ordinary cases. The weaker direction-sensitive criterion has the limited
+rationale stated above; its universal applicability remains open.
+
+The results are diagnostics for `f4180d0c`, `d1fb6414` and `3b40009e` and for
+the applications to `fe67d766` and `d164b1ff`. They are not new derivations of
+the actual-root apprehension conclusion `3a32d91c` or its intellect consumer
+`29818edd`. #1879's primary-object account and #1892's objective-eminence
+alternative remain relevant applications, not corollaries of generic act
+unity. #2184's carriage in the root remains distinct from carriage as such;
+its in-root purity premise `d83785e2` is not supplied by common real identity
+or by the constituency test.
+
+The next potentially discriminating evidence is a source-level argument
+establishing the complete immediate actuality and constituent coverage for
+one account, together with a reason the counterpart cannot satisfy the same
+conditions. Repeating a matched finite interpretation, counting objects,
+or restating the recognition criterion does not supply that evidence. This
+bounded investigation resolves the inference and coverage questions; it
+leaves those substantive realization and cognition applications open.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
