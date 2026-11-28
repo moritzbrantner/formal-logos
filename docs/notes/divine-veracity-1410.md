@@ -1495,9 +1495,10 @@ The target is `GodAssentAccurate` (7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad).
 The calibration fixes the existing individuated attitude relation, the
 world/content semantics and a content-to-legacy-proposition report before
 matching any assent. Each legacy assent (DOXASTIC_BELIEF_1) must be covered
-by an independently assented content with that report, such that truth of that
-content at actuality implies its report. A second clause calibrates each independently assented
-content of the same bearer to its accessibility box (DOXASTIC_BELIEF_2).
+by a content assented under the supplied relation, with that report, such that
+truth of that content at actuality implies its report. A second clause
+calibrates each content the same bearer assents to under that relation to its
+accessibility box (DOXASTIC_BELIEF_2).
 The proof uses the same content in both clauses. If the supplied alternatives
 include actuality, evaluating the box there and disquoting yields the legacy
 proposition. The existing sincerity route consumes the resulting assent
@@ -1509,11 +1510,33 @@ self-edge would make the assent true. In the reverse direction, the predicate
 `fun w => access actual w ∨ p` is believed and agrees with the assented
 proposition at actuality whenever that conditional holds. Lean checks the
 equivalence in `unrestrictedRepresentationIff`. The old theorem remains a
-structural boundary. The corpus route uses `FixedAssentCalibration`, which can
-fail through lack of an independently assented matching content or failure of
-the given box to support that content. It does not manufacture a truth
-condition suited to accessibility. The representation is one-way from legacy
-assent. Recovery of exact content identity from a legacy Prop remains open.
+structural boundary. The corpus route uses `FixedAssentCalibration`, which
+can fail, for given parameters, through lack of a matching assented content or
+failure of the given box to support that content. The representation is one-way
+from legacy assent. Recovery of exact content identity from a legacy Prop
+remains open.
+
+**Re-presentation boundary (#2103 challenge, 2026-11-28).** Fixing the
+interpretation, report and assent relation within one application does not pin
+them: they are theorem parameters absent from the conclusion, and no record
+identifies them with an independently interpreted content theory or makes the
+assent relation independent of the legacy assent. For a fixed context with
+actual access, some content type, interpretation, report and assent relation
+satisfy the calibration exactly when `GodAssentAccurate` holds
+(`fixedContentRepresentationIff`). The witness is disquotational: Prop
+contents true at a world exactly when they hold, the identity report, and
+assent identified with the legacy assent. A world-constant content makes the
+second clause equivalent to the truth of each assent; the invariant-content
+control already admits such contents. This is the defect
+`unrestrictedRepresentationIff` diagnoses, one level up. So `88e2451e`
+re-presents accuracy, and the DOXASTIC_BELIEF_1 to DOXASTIC_BELIEF_2 bridge
+carries no warrant beyond it. The frontier's computed closure of `7dd8a624`
+through it records no further warrant. The calibration would discriminate
+only with the content theory and assent relation pinned to an independently
+interpreted theory shared with another route, for example the
+DivineVeracityContent1410 interpretation of the assertion route, together with
+a requirement that the assented contents be contingent or the assent relation
+independent of the legacy assent.
 
 The three fixed-content controls use the same two-world interpretation. In
 the positive case, the standpoint designates the world where the selected

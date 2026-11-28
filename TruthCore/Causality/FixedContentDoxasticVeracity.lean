@@ -3,9 +3,13 @@ module
 public import TruthCore.Causality.DoxasticVeracity
 public import TruthCore.Causality.DivineVeracityContent1410
 
-/-! The content interpretation, report and individuated assent are independently
-supplied. The calibration concerns their agreement with the two belief readings
-on each actual legacy assent, using a single content witness. -/
+/-! The content interpretation, report and individuated assent are supplied as
+parameters. The calibration concerns their agreement with the two belief readings
+on each actual legacy assent, using a single content witness. Nothing here pins
+them to an independently interpreted content theory or makes the assent relation
+independent of the legacy assent; with them unpinned the calibration is
+satisfiable exactly when divine assent is accurate
+(`fixedContentRepresentationIff`, #2103). -/
 
 @[expose] public section
 namespace TruthCore.Causality.FixedContentDoxasticVeracity

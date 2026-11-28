@@ -2,36 +2,40 @@
 vocab = "TruthCore.Causality.CounterfactualDependence"
 results = "TruthCore.Results.Causality.CounterfactualDependence"
 definitions = ["DEF-DEPENDS-FOR-BEING", "DEF-CAN-BE-WITHOUT", "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
-disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb", "d3808588-cf71-4047-8417-d16156c04f47"]
 
 [[statement]]
 id = "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361"
 label = "Selected absence tracks DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1"
 lean = "DependenceTracksSelectedAbsence"
-definitions = ["DEF-DEPENDS-FOR-BEING", "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
-paraphrase = "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty."
+definitions = ["DEF-DEPENDS-FOR-BEING", "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c", "88302e83-898f-4308-8e8c-a8d1daa97ef4"]
+disambiguations = ["d3808588-cf71-4047-8417-d16156c04f47"]
+paraphrase = "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty. With the selector left free, this premise and coverage (06047f4c), or this premise and witness preservation (31bcb75e), hold for some selector exactly when 000e1f65 holds with being-without read as CAN_BE_WITHOUT_1, accessible contrast (Lean track_cover_iff_strict, track_preserve_iff_strict, #2103). The selection then adds no constraint of its own; it would add one only if fixed independently, for example as a closest-world or intervention selector."
 
 [[statement]]
 id = "The selector covers every accessible absence world"
 lean = "CoversAccessibleAbsence"
-definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
-paraphrase = "OPEN coverage assumption at the supplied origin: for every candidate source y and every world accessible from the origin in the shared ontology where y is absent, that world is in the selection for y's absence."
+definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c", "88302e83-898f-4308-8e8c-a8d1daa97ef4"]
+disambiguations = ["d3808588-cf71-4047-8417-d16156c04f47"]
+paraphrase = "OPEN coverage assumption at the supplied origin: for every candidate source y and every world accessible from the origin in the shared ontology where y is absent, that world is in the selection for y's absence. Jointly with soundness 2bdb0be1 and a free selector it is equivalent to 000e1f65 read as CAN_BE_WITHOUT_1 (track_cover_iff_strict, #2103)."
 
 [[statement]]
-id = "Being able to be without another has an accessible existence witness"
+id = "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"
+label = "Being able to be without another has an accessible existence witness (CAN_BE_WITHOUT_1)"
 lean = "BeingWithoutHasAccessibleWitness"
-definitions = ["DEF-CAN-BE-WITHOUT"]
-paraphrase = "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction."
+definitions = ["DEF-CAN-BE-WITHOUT", "b93d877f-6055-493c-93d6-99cbd52ad4b7", "88302e83-898f-4308-8e8c-a8d1daa97ef4"]
+disambiguations = ["d3808588-cf71-4047-8417-d16156c04f47"]
+paraphrase = "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction. Its consequent is CAN_BE_WITHOUT_1 (beingWithoutHasAccessibleWitness_iff); its antecedent keeps the undifferentiated relation of DEF-CAN-BE-WITHOUT, so it is the route's only passage into sense 1 (disambiguation d3808588). If being-without is read through another's power (CAN_BE_WITHOUT_2), it requires every contrast some power can bring about to be realized at an accessible world."
 
 [[argument]]
 id = "18a75892-5c49-409a-b297-5cbb7a644222"
 label = "Accessible absence coverage rules out being without a source of dependence"
 theorem = "dependence_excludes_being_without"
-premises = ["2bdb0be1-85dc-45a6-a8d0-c45fe46bb361", "The selector covers every accessible absence world", "Being able to be without another has an accessible existence witness"]
+premises = ["2bdb0be1-85dc-45a6-a8d0-c45fe46bb361", "The selector covers every accessible absence world", "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"]
 conclusion = "STMT-DEPENDENCE-EXCLUDES-BEING-WITHOUT"
 strong_version_needed = {"The selector covers every accessible absence world" = "Full coverage is a consequent-independent selection policy: it is specified without knowing which effect is at issue. The weaker witness-preservation premise suffices for the conclusion and is used by the sibling argument (docs/notes/counterpossible-conservativity.md)."}
 # The sense is selected by the linked definition and tagged frame projection.
 # The optional bind-time constant check expects EffectDependsOnEfficientCause;
 # this inference uses DependsForBeing without the distinct efficient-cause law.
 rule = "A being-without witness would be selected by coverage and excluded by dependence soundness"
-meaning = "Conditional support for the existing dependence-to-real-impossibility premise. If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. The three assumptions are explicit. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched."
+meaning = "Re-presentation of the dependence-to-real-impossibility premise, not independent support for it (#2103). If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. With the selector a free parameter, soundness and coverage hold for some selector exactly when 000e1f65 holds with being-without read as accessible contrast, CAN_BE_WITHOUT_1 (Lean track_cover_iff_strict). So the argument derives 000e1f65 from its own accessibility reading and the one-way realization bridge 11dc5069; the counterfactual selection adds no constraint unless a selector is fixed independently. Its warrant for 000e1f65 is that of the accessibility reading plus 11dc5069. The frontier counts this verified derivation as proving 000e1f65 from open premises; that computed status records no further warrant. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched."

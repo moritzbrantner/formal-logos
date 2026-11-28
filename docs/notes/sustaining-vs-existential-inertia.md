@@ -399,8 +399,9 @@ independent question: it is the crux.
     second thesis bundled in `40a97664` (ConcurrentActualization module
     doc), which the rival denies.
   - The thesis that creation taken passively is a relation in the creature to
-    the creator as principle of its being (ST I q.45 a.3). It is **not read
-    here**, so it is recorded as a lead with no weight. On a relational
+    the creator as principle of its being (ST I q.45 a.3). It was not yet
+    read when this section was written, so here it is only a lead with no
+    weight; §6 reads it (passage `fb7bd7bb`) and reports the outcome. On a relational
     reading it would at most give that the term of the relation is present,
     not that it gives. That would bear on the co-presence bridge `ffcb81fb`,
     not on `40a97664`.
@@ -641,7 +642,8 @@ Objection Standard, applied to both).
   - *Unread material that would strengthen it:* Metaph. Δ15 1021a21–26 and
     Aquinas, In V Metaph. lect. 17, divide relations by action according to
     time (having acted, having been acted on). It was not read and carries no
-    weight here.
+    weight here. De potentia q.3 a.3 ad 6 (sonship remaining after generation,
+    reported in #1802) is a further unread lead with no weight.
 - *Sustaining reply:*
   - *Mechanism:* a relation to a cause of being, as against a cause of
     becoming, holds only while the cause acts (q.104 a.1).
@@ -736,8 +738,9 @@ changes given one of the horizontal tests above.
 
 The claim-vs-type table for every new record is in the PR body. No source
 claim is added. Schmid, Feser and q.104/q.3 are cited only through records
-already read and pinned or recorded in the corpus; §5 cites ST I q.45 a.3 and
-Physics III.3 (in definition `ac8dbcaa`) as unread leads with no weight. No
+already read and pinned or recorded in the corpus. §5 cites ST I q.45 a.3 as
+an unread lead; §6 has since read it (passage `fb7bd7bb`). Physics III.3 (in
+definition `ac8dbcaa`) remains an unread lead with no weight. No
 objection above is
 presented as evidence unless its target, mechanism and independent
 justification are named. The diachronic persistence-power account and the
@@ -749,7 +752,14 @@ of them are reported with locators and are not attributed as statements.
 De ente c.4, the PSR variants, Metaph. Δ15 and In V Metaph. lect. 17 are
 named only as unread leads or next tests, with no weight.
 That filiation lasts after the begetting is marked as ordinary use, not as
-text.
+text. #1802 cites De potentia q.3 a.3 co. and ad 6, reporting that Aquinas
+there uses sonship after generation as his own illustration of a real
+relation that remains when the agent no longer changes the effect, while the
+same article affirms continuing divine making through the illumination
+comparison. #1802 also reports that De potentia q.5 a.3
+ad 5–6 distinguishes the eternity of divine action from its order to a
+particular effect. Neither passage is pinned or read here; both are leads
+with no weight until a witness is read.
 
 ## 7. Why an entire populated history obtains: the replaceable-anchor test (#1801, 2026-11-19)
 

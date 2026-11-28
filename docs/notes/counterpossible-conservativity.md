@@ -215,6 +215,41 @@ world, where neither being exists. The weaker policy holds and full coverage
 fails on that selector. This comparison makes no soundness claim for that
 selector.
 
+**Re-presentation boundary (#2103 challenge, 2026-11-28).** Both arguments
+take the selector as a free parameter, and no record fixes it. With the
+selector existentially quantified, soundness and full coverage hold for some
+selector exactly when `000e1f65` holds with being-without read as accessible
+contrast (`track_cover_iff_strict`); the same holds for soundness and witness
+preservation (`track_preserve_iff_strict`). The converse takes the selector
+that returns the accessible antecedent worlds. So each argument derives
+`000e1f65` from its own accessibility reading and the one-way realization
+bridge `11dc5069`, which maps being-without into that reading
+(`beingWithoutHasAccessibleWitness_iff`). The counterfactual selection adds no
+constraint unless a selector is fixed independently, for example the
+closest-world or intervention selector, and the omission model above shows the
+closest-world selector can fail coverage. The two results therefore add no
+warrant for `000e1f65` beyond the accessibility reading and `11dc5069`.
+The frontier nevertheless counts them as verified non-transcription
+derivations, so `000e1f65` is computed as proved from the three open
+premises, and rule (d) closure above it can pass through them. That computed
+status records no further warrant; no existing record field marks a
+re-presentation so that the frontier would not count it.
+
+Which possibility the frame accessibility represents is a separate question.
+Disambiguation `d3808588` separates CAN_BE_WITHOUT_1, the unindexed accessible
+contrast the route uses, from CAN_BE_WITHOUT_2, being without through another
+being's power. The route uses one accessibility relation throughout
+(definition `88302e83`). If it is read as possibility in the order of the
+beings' natures and causes, `11dc5069` is plausible only for being-without read
+the same way, and `000e1f65` is then a natural-order impossibility. If
+being-without is read through another's power, `11dc5069` requires every
+contrast some power can bring about to be realized at an accessible world, and
+with that requirement the selection premises deny that any power can bring
+about the effect without its source. Whether a first cause can conserve an effect without its secondary
+cause is the obvious test for that second reading. SCG III c. 99 and ST III
+q. 77 a. 1 are unread leads for Aquinas's view on it; neither passage has been
+materialized or read here, and nothing is attributed to them.
+
 `SustainingRemovalTest` compares an actual effect and agent, with a supplied
 giving-of-being edge at the designated moment, to a supplied outcome where
 both are absent. The theorem equates passing this test with the corresponding
