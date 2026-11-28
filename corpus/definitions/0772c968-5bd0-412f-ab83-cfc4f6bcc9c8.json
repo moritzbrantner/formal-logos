@@ -1,0 +1,9 @@
+{
+  "id": "0772c968-5bd0-412f-ab83-cfc4f6bcc9c8",
+  "label": "WITHHOLD_2: at some accessible world the giver exists and does not give x being",
+  "term": "withholding giving, accessible per-effect sense",
+  "basis": "stipulative",
+  "definition": "WithholdsAtAccessible F w g x: some world accessible from w has g existing and g not giving x being. No choice, control, agency or setup is part of this sense. Example: an accessible world where the source exists and that recipient is absent or given being by something else. Non-example: g gives x being at every accessible world where g exists (FixedTowardAt's second clause).",
+  "lean_declaration": "TruthCore.Causality.GivingChoice.WithholdsAtAccessible",
+  "note": "Analyst sense (#2090, #2103). actualRootsWithholdEachGrounded_iff shows premise (a) fbd0a6d3 is this sense for each actual root and grounded actual concretum (Iff.rfl). It is per-effect: different recipients may use different worlds. Distinct from WITHHOLD_1 (dba7c7df) and from total refraining (disambiguation 6ce98992), which concerns giving nothing at one world. A source stating that the first cause could have not given this effect being would source it."
+}

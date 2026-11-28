@@ -10,7 +10,7 @@
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Issue #2057. Independent review rejected the unrestricted per-assent world predicate. Lean now checks why that interface is only the conditional from actual self-access to accuracy for the given assent. The replacement fixes content semantics, an independently supplied individuated assent relation and the legacy report. Calibration links the two belief senses and the actual edge supplies the exact accuracy node consumed by the sincerity route. The same interpreted contingent content witnesses positive application and failure of accuracy when actuality is outside the KD45 profile. Accurate assent confined to an everywhere-true content survives in that same nonreflexive pointed frame. The actual-access and calibration warrants, and preference-independent authority, remain open. The existing probability, knowledge and Moore results retain their scopes. See docs/notes/divine-veracity-1410.md#actual-access-and-represented-divine-assent-2057 for the provisional assessment and reopening conditions.",
+  "summary": "Issue #2057. Independent review rejected the unrestricted per-assent world predicate. Lean now checks why that interface is only the conditional from actual self-access to accuracy for the given assent. The replacement takes content semantics, an individuated assent relation and the legacy report as parameters held fixed within one application; no record pins them, and the type does not make the assent relation independent of the legacy assent (narrowed after challenge #2103). Calibration links the two belief senses and the actual edge supplies the exact accuracy node consumed by the sincerity route. The same interpreted contingent content witnesses positive application and failure of accuracy when actuality is outside the KD45 profile. Accurate assent confined to an everywhere-true content survives in that same nonreflexive pointed frame. The actual-access and calibration warrants, and preference-independent authority, remain open. The existing probability, knowledge and Moore results retain their scopes. See docs/notes/divine-veracity-1410.md#actual-access-and-represented-divine-assent-2057 for the provisional assessment and reopening conditions.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2102. Confirmed in Lean: for a fixed context with actual access, some content type, interpretation, report and assent relation satisfy FixedAssentCalibration exactly when 7dd8a624 holds (fixedContentRepresentationIff; disquotational Prop contents, identity report, assent identified with the legacy assent). Result 88e2451e therefore re-presents GodAssentAccurate, the defect unrestrictedRepresentationIff diagnoses for the superseded interface, and the DOXASTIC_BELIEF sense bridge carries no warrant beyond it. It would discriminate only with the content theory and assent relation pinned to an independently interpreted theory and a contingency or independence requirement. The repository has no record field that stops this verified derivation from counting, so 7dd8a624 stays computed as proved (reported as a tooling gap).",
   "evidence": [
     "88e2451e-323d-43da-a598-42454b0d8261",
     "0bc37341-bc5c-4d44-946f-b44a97458991",
@@ -40,6 +40,21 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2102"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2102"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
     }
   ]
 }

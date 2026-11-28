@@ -1,13 +1,14 @@
 {
   "id": "46a468b2-8132-4ef4-bd31-6e8292013f3b",
   "label": "Actual root choice histories map to accessible worlds retaining the same root",
-  "paraphrase": "OPEN, analyst formulation. For every actual root g of the selected grounding relation at w, each history through the selected decision moment maps to a world accessible from w where g exists. The map need not cover every accessible world or fix the setup.",
+  "paraphrase": "OPEN, analyst formulation. For every actual root g of the selected grounding relation at w, each history through the selected decision moment maps to a world accessible from w where g exists. The map need not cover every accessible world or fix the setup. In argument 19a0417f it is the only passage from WITHHOLD_1 (cell control) to WITHHOLD_2 (accessible non-giving), used at the cell's representative. With the branching frame and map unconstrained and at most one actual root, it and 0dd78706 are jointly satisfiable by some representation exactly when fbd0a6d3 holds (Lean cellsRepresentationIff, #2103), so together they re-present fbd0a6d3 unless the partition and map are fixed independently.",
   "lean_declaration": "TruthCore.Causality.GivingChoice.RootHistoriesAdmissible",
   "definition_ids": [
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109"
   ],
   "disambiguation_ids": [
-    "623ddbf6-9683-5361-bae4-e348a00ec680"
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "419a65c2-f095-44c9-8459-06e72c77fbcd"
   ]
 }
