@@ -1,0 +1,10 @@
+{
+  "id": "3e5b5317-6429-4fa3-8e64-81acabef88a6",
+  "label": "Every actual root has some real determination",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred (ESSE): every actual concrete root r at w has at least one real determination at w, for example its being. Used only to give a simple root's one constituent something it realizes.",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RootsHaveSomeDetermination",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ]
+}

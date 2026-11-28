@@ -1,0 +1,11 @@
+{
+  "id": "10d4577c-8eec-407f-b2d7-3375b474a844",
+  "label": "Carriage strengthens own-nature carriage",
+  "subject_kind": "statement",
+  "subject_id": "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+  "verification_result_id": "04751700-9562-44a2-bd30-4b7771c2a305",
+  "note": "Same root, profile, admissible family, ESSENCE_6 relation and REQUIRES_LACK_1 relation. The strong version constrains conditions in any being's nature on the root's profile, the weak one only conditions in the root's own nature. No strictness result and no certified difference are registered."
+}

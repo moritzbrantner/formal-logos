@@ -1,0 +1,11 @@
+{
+  "id": "774deb89-046e-4b81-96b7-5d0c0a4e83ef",
+  "label": "Own-nature exclusion strengthens essential exclusion of root absences",
+  "subject_kind": "statement",
+  "subject_id": "7f26189b-7def-4a16-84ab-6369065ced51",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+  "verification_result_id": "5b7d0d9a-16ea-433d-909c-cad58a9fed90",
+  "note": "Same root, profile and ESSENCE_6 relation. The strong version requires the excluding condition to lie in the root's own nature, the weak one in some being's nature. No strictness result and no certified difference are registered."
+}
