@@ -1,0 +1,11 @@
+{
+  "id": "6a139110-c78e-4102-832a-8eddd903e96c",
+  "label": "Act consequentialism fails, from the footbridge verdict",
+  "argument_id": "8f6ead0a-2945-44d4-b23e-1cc36f0f3238",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.footbridgeVerdictExcludesAC",
+  "comparator_config": "results/6a139110-c78e-4102-832a-8eddd903e96c/comparator.json",
+  "status": "solution-present",
+  "description": "Contrapositive of the act-consequentialist footbridge derivation: whoever holds the footbridge verdict on these facts rejects act consequentialism as the governing principle. Conditional on the open prima facie verdict."
+}

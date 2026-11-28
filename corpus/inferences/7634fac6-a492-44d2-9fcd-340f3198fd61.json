@@ -1,0 +1,15 @@
+{
+  "id": "7634fac6-a492-44d2-9fcd-340f3198fd61",
+  "label": "Common triad verdicts, from the redirection principle (inference)",
+  "input_statement_ids": [
+    "0b8c141f-66a2-4d47-89e6-66029f8050fa",
+    "38949d8d-6903-4815-bcff-1b96e5301c68",
+    "985c26da-60e2-4d9e-ae73-3f13ab52a8a7",
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b"
+  ],
+  "output_statement_id": "d97508fd-110c-4989-abc1-f7660a9bf33f",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Switch: the harm lies only downstream of redirecting the threat. Footbridge and transplant: the intervention reaches the harm directly (KILLS_2).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

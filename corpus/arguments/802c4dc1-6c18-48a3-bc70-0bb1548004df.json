@@ -1,0 +1,22 @@
+{
+  "id": "802c4dc1-6c18-48a3-bc70-0bb1548004df",
+  "label": "Switching the trolley is impermissible, from causal no-killing (KILLS_1)",
+  "premise_statement_ids": [
+    "ad6b7c8e-ad18-46e1-a838-6f092ab99dcf",
+    "38949d8d-6903-4815-bcff-1b96e5301c68"
+  ],
+  "conclusion_statement_id": "2be99038-f2e0-4b28-8066-f309f9b4f96e",
+  "inference_ids": [
+    "c3c1f8d3-8152-4c44-ba2d-7e9f8f422ef8"
+  ],
+  "meaning": "In the switch graph the intervention reaches the one's harm (KILLS_1), so the absolute causal no-killing deontology forbids switching.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "4eb02a3c-95b0-42ef-82e4-1f6ccb1235f5",
+    "56fb94ef-7af4-4e41-b87a-204f57a1a015"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee"
+  ]
+}

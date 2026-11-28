@@ -1,0 +1,10 @@
+{
+  "id": "ad2f69de-9836-496b-b3b7-eea3c253e777",
+  "label": "Goodness-sense controls test the outcome-sense derivation",
+  "subject_kind": "argument",
+  "subject_id": "03137af9-34eb-4cef-af34-6bb1cc23b6dc",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "50c70f91-a935-4ce3-9b15-c0c79ca9e2cd",
+  "note": "Without the outcome bridge WHOLLY_GOOD_1 does not yield the constraint."
+}

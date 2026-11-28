@@ -1,0 +1,11 @@
+{
+  "id": "c0e9afb1-b06b-43d1-9d07-15ca7ae71ee1",
+  "label": "Act consequentialism fails, from the transplant verdict",
+  "argument_id": "fcd63ab2-2bd2-41ff-91ff-7e4854ace878",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.transplantVerdictExcludesAC",
+  "comparator_config": "results/c0e9afb1-b06b-43d1-9d07-15ca7ae71ee1/comparator.json",
+  "status": "solution-present",
+  "description": "Contrapositive of the act-consequentialist transplant derivation; an independent case datum against the same principle. Conditional on the open prima facie verdict."
+}

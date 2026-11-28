@@ -1,0 +1,13 @@
+{
+  "id": "3eb6d86e-1431-4a5e-b3db-8fe01ff555e3",
+  "label": "Harvesting the transplant patient is permissible, from act consequentialism (inference)",
+  "input_statement_ids": [
+    "9daccfcd-e3d9-4221-bd45-4e581ff403bb",
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b"
+  ],
+  "output_statement_id": "b03a6a39-ac4c-4d5f-bda4-516c92d90c66",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Act consequentialism compares only deaths: one versus five makes harvesting permissible.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

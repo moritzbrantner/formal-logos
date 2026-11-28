@@ -1,0 +1,24 @@
+{
+  "id": "03137af9-34eb-4cef-af34-6bb1cc23b6dc",
+  "label": "Wholly-good sense controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "a2567f42-be74-483b-99ea-237e23ccb293",
+  "inference_ids": [
+    "723759b9-565f-470c-ac13-e95a3d3fe493"
+  ],
+  "meaning": "Compares WHOLLY_GOOD_1, WHOLLY_GOOD_2 and WHOLLY_GOOD_3 on one cost-free Rowe signature; see the statement. Models of non-entailment and a general easy-rescue lemma; no premise is established.",
+  "definition_ids": [
+    "171949d3-2123-4e19-be0f-ffdcfab188c4",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "45620acb-803e-4f02-965e-4e8de5ec4c82",
+    "48a22b44-e7ae-4a4f-9a67-e27cc0b32826",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "b32b898d-3ad6-4132-9815-ac8897f2193c"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "a9f886f9-c7ee-4680-8e88-91bd15fe0cc9",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ],
+  "sense_mixing_control": true
+}

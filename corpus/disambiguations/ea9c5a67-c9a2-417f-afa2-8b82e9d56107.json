@@ -1,0 +1,25 @@
+{
+  "id": "ea9c5a67-c9a2-417f-afa2-8b82e9d56107",
+  "label": "Means: causal necessity versus planned means",
+  "term": "means",
+  "term_label": "MEANS",
+  "resolution": "MEANS_1 is causal: every path from intervention to saving passes through the harm. MEANS_2 adds that the harm is in the plan. Classical double effect and the means principle use MEANS_1; intention-only double effect uses MEANS_2. The loop separates them: its harm is a MEANS_1 but, with a plan that omits it, not a MEANS_2.",
+  "sense_definition_ids": [
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d"
+  ],
+  "senses": [
+    {
+      "id": "5b7d8ed5-9182-4761-a47f-f35e92eaf903",
+      "label": "MEANS_1",
+      "definition_id": "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+      "lean_declaration": "TruthCore.Ethics.Trolley.HarmIsCausalMeans"
+    },
+    {
+      "id": "f9168d24-e118-41a3-81f6-fdc84fc3c533",
+      "label": "MEANS_2",
+      "definition_id": "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+      "lean_declaration": "TruthCore.Ethics.Trolley.HarmIsPlannedMeans"
+    }
+  ]
+}

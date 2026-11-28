@@ -1,0 +1,25 @@
+{
+  "id": "63369e84-f651-42b5-bfef-409c3872f917",
+  "label": "Intends: plan inclusion versus known necessary means",
+  "term": "intends",
+  "term_label": "INTENDS",
+  "resolution": "INTENDS_1 reads intention from the supplied plan; INTENDS_2 counts every known necessary causal means as intended and so coincides with MEANS_1. Double-effect condition 2 uses INTENDS_1 throughout. On the loop the senses split: the harm is intended in INTENDS_2 and not in INTENDS_1.",
+  "sense_definition_ids": [
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "91ec4b43-0d3b-4b69-8d83-5e76adbebd0b"
+  ],
+  "senses": [
+    {
+      "id": "2e355982-73e3-4331-93db-5a861bcd0f0b",
+      "label": "INTENDS_1",
+      "definition_id": "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+      "lean_declaration": "TruthCore.Ethics.Trolley.PlansHarm"
+    },
+    {
+      "id": "bba90274-2352-4fbc-a1c7-363fd066df4e",
+      "label": "INTENDS_2",
+      "definition_id": "91ec4b43-0d3b-4b69-8d83-5e76adbebd0b",
+      "lean_declaration": "TruthCore.Ethics.Trolley.IntendsHarmAsKnownMeans"
+    }
+  ]
+}

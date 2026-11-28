@@ -1,0 +1,14 @@
+{
+  "id": "3deedff3-adaa-4c96-a6fd-9b4a4bfbce87",
+  "label": "Unblocked preventable events would be strictly better prevented",
+  "paraphrase": "Analyst formulation, attribution deferred. OPEN outcome bridge: when a preventable event has no blocking cost in Rowe's sense (no unavoidable greater-good loss or equal/worse evil), preventing it is strictly better overall than permitting it. It fails if several individually lesser costs can jointly outweigh the suffering.",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.UnblockedPreventionBetter",
+  "definition_ids": [
+    "171949d3-2123-4e19-be0f-ffdcfab188c4"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING). Under WHOLLY_GOOD_1 with the outcome bridge, STMT-ROWE-PERMISSION-CONSTRAINT follows; under WHOLLY_GOOD_2 only the constraint-qualified permission condition follows, so Rowe's core would additionally need that some constraint-free way of preventing the suffering exists; under WHOLLY_GOOD_3 neither follows.",
+    "blocker": "No warranted identification of Rowe's WhollyGood with any of the three senses for the case bearer exists. The outcome bridge is open (several individually lesser costs may jointly outweigh a suffering), divine permission versus intention is owned by issue #1456, and the bearer bridge by issue #1735."
+  }
+}

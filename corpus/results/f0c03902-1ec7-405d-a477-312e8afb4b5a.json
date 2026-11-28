@@ -1,0 +1,11 @@
+{
+  "id": "f0c03902-1ec7-405d-a477-312e8afb4b5a",
+  "label": "Trolley joint models",
+  "argument_id": "6db4a1d5-d408-495a-8027-95d3c7a99e7c",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.jointModels",
+  "comparator_config": "results/f0c03902-1ec7-405d-a477-312e8afb4b5a/comparator.json",
+  "status": "solution-present",
+  "description": "Nonvacuity: on the four stated case descriptions, assigning permissibility by each principle yields a model of that principle, all case facts and the common triad; classical double effect and the means principle with loop impermissible, intention-only double effect and redirection with loop permissible. Models of consistency only."
+}

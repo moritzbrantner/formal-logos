@@ -1,0 +1,10 @@
+{
+  "id": "2c654d57-ee13-42d2-bb18-f3ec3c1a56f1",
+  "label": "Transplant verdict refutes act consequentialism",
+  "subject_kind": "argument",
+  "subject_id": "fcd63ab2-2bd2-41ff-91ff-7e4854ace878",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "9daccfcd-e3d9-4221-bd45-4e581ff403bb",
+  "note": "Conditional refutation: rests on the open prima facie transplant verdict."
+}

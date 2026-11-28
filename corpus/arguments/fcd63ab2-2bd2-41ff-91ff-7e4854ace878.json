@@ -1,0 +1,18 @@
+{
+  "id": "fcd63ab2-2bd2-41ff-91ff-7e4854ace878",
+  "label": "Act consequentialism fails, from the transplant verdict",
+  "premise_statement_ids": [
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b",
+    "78d70965-a2e4-4e13-b224-bf6b9fc9c733"
+  ],
+  "conclusion_statement_id": "686872ca-9ec1-477c-bb8d-64f44f60c774",
+  "inference_ids": [
+    "91d10c05-daf3-4bce-a60c-0a8d7df29444"
+  ],
+  "meaning": "Contrapositive of the act-consequentialist transplant derivation; an independent case datum against the same principle. Conditional on the open prima facie verdict.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59"
+  ]
+}

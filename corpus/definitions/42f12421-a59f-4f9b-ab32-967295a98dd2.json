@@ -1,0 +1,9 @@
+{
+  "id": "42f12421-a59f-4f9b-ab32-967295a98dd2",
+  "label": "Intention-only double effect: condition 3 read as MEANS_2",
+  "term": "doctrine of double effect (intention-only)",
+  "definition": "IntentionDoubleEffect c: as classical double effect, but condition 3 forbids only a harm that is a planned means (MEANS_2). Since MEANS_2 includes the plan, condition 3 is then implied by condition 2.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.IntentionDoubleEffect",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

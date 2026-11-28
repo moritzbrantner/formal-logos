@@ -1,0 +1,25 @@
+{
+  "id": "bc18c879-5247-410e-aa43-8c02d8d3fa00",
+  "label": "Switching in Thomson's loop is permissible, from intention-only double effect",
+  "premise_statement_ids": [
+    "e613d871-5573-4355-9618-180265710433",
+    "9ecc088e-f2dc-4214-a33b-74226e7dd6ca"
+  ],
+  "conclusion_statement_id": "5890a01e-b4fe-483b-91a8-179b2b1d3f02",
+  "inference_ids": [
+    "0df12824-67dc-482e-aa3d-9de6cead547e"
+  ],
+  "meaning": "With the plan omitting the harm, neither INTENDS_1 nor MEANS_2 holds; proportionality holds.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}

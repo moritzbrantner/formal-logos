@@ -1,0 +1,11 @@
+{
+  "id": "c2d764a3-009c-4062-8258-cbdaca7178ea",
+  "label": "Wholly-good sense controls",
+  "argument_id": "03137af9-34eb-4cef-af34-6bb1cc23b6dc",
+  "challenge_module": "TruthCore.Results.Ethics.TrolleyRowe.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.TrolleyRowe.Solution",
+  "theorem": "TruthCore.Results.Ethics.TrolleyRowe.controls",
+  "comparator_config": "results/c2d764a3-009c-4062-8258-cbdaca7178ea/comparator.json",
+  "status": "solution-present",
+  "description": "Compares WHOLLY_GOOD_1, WHOLLY_GOOD_2 and WHOLLY_GOOD_3 on one cost-free Rowe signature; see the statement. Models of non-entailment and a general easy-rescue lemma; no premise is established."
+}

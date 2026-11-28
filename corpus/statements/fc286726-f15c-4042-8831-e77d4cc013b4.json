@@ -1,0 +1,27 @@
+{
+  "id": "fc286726-f15c-4042-8831-e77d4cc013b4",
+  "label": "Trolley joint models: four principles fit the triad, split on the loop",
+  "paraphrase": "Analyst formulation, attribution deferred. Each of classical double effect, the means principle, intention-only double effect and the redirection principle governs some assignment satisfying all four case descriptions and the common triad verdicts; the first two make the loop impermissible, the last two permissible.",
+  "lean_declaration": "TruthCore.Ethics.Trolley.TriadJointModels",
+  "definition_ids": [
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "f198218e-601d-4d5d-8a6a-120c2f22d7a1",
+    "db7d724e-63af-44f1-9e52-ebf218ec1a06",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "c094090d-0572-4a8a-9add-c993cae6e079",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28"
+  ],
+  "disambiguation_ids": [
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107",
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee",
+    "63369e84-f651-42b5-bfef-409c3872f917"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "The trolley verdict data bear on GOD_4 exists only through Rowe's evidential core. They separate an outcome-minimizing standard (act consequentialism) from a constraint-respecting one (double effect, means, redirection) for human agents. TruthCore.Ethics.TrolleyRowe turns these into the senses WHOLLY_GOOD_1 and WHOLLY_GOOD_2 of Rowe's WhollyGood: the first, with an outcome bridge, yields STMT-ROWE-PERMISSION-CONSTRAINT, a premise of STMT-ROWE-NO-THEISTIC-BEING, whose own plan targets GOD_4 exists. Still missing: an argument that the goodness predicated of the case's GOD_4 bearer in Rowe's signature has, or lacks, the constraint structure these verdicts track, applied to divine permitting rather than human intervening.",
+    "blocker": "The verdicts are prima facie human data over a supplied permissibility assignment for intervening. No record transfers them to divine permission, which issue #1456 owns (permission versus intention), and the bearer bridge from the case GOD_4 to Rowe's WhollyGood on a shared carrier is unbuilt (issue #1735)."
+  }
+}

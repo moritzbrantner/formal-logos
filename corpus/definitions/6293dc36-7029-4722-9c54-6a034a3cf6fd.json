@@ -1,0 +1,9 @@
+{
+  "id": "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+  "label": "Classical double effect: object not evil, harm not planned, not a MEANS_1, proportionate",
+  "term": "doctrine of double effect (classical)",
+  "definition": "DoubleEffect c: the supplied object classification is not evil (condition 1), the harm is not intended in sense INTENDS_1 (condition 2), the harm is not a means in sense MEANS_1 (condition 3), and intervening costs strictly fewer lives (condition 4).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.DoubleEffect",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

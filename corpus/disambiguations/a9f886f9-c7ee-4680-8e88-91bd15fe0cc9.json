@@ -1,0 +1,32 @@
+{
+  "id": "a9f886f9-c7ee-4680-8e88-91bd15fe0cc9",
+  "label": "Wholly good: outcome minimizer, constraint-respecting rescuer, ontological goodness",
+  "term": "wholly good",
+  "term_label": "WHOLLY_GOOD",
+  "resolution": "Rowe's WhollyGood field is opaque. WHOLLY_GOOD_1 and WHOLLY_GOOD_2 constrain it by a standard for permitting preventable events; WHOLLY_GOOD_3 reads it as the case's ontological goodness plus good-willing, which says nothing about permitting. outcomeSenseYieldsPermissionConstraint uses WHOLLY_GOOD_1, constraintSenseYieldsQualifiedConstraint uses WHOLLY_GOOD_2, and the goodness-sense controls compare all three without passing from one to another.",
+  "sense_definition_ids": [
+    "b32b898d-3ad6-4132-9815-ac8897f2193c",
+    "45620acb-803e-4f02-965e-4e8de5ec4c82",
+    "48a22b44-e7ae-4a4f-9a67-e27cc0b32826"
+  ],
+  "senses": [
+    {
+      "id": "03080aa2-c800-43f1-b68b-074ee06c6c35",
+      "label": "WHOLLY_GOOD_1",
+      "definition_id": "b32b898d-3ad6-4132-9815-ac8897f2193c",
+      "lean_declaration": "TruthCore.Ethics.TrolleyRowe.OutcomeStandard"
+    },
+    {
+      "id": "4330db72-8d23-4aa9-b2a2-42fc4f2d9fee",
+      "label": "WHOLLY_GOOD_2",
+      "definition_id": "45620acb-803e-4f02-965e-4e8de5ec4c82",
+      "lean_declaration": "TruthCore.Ethics.TrolleyRowe.ConstraintStandard"
+    },
+    {
+      "id": "fb479121-39b8-4efd-8cc6-faad6a2b1ea4",
+      "label": "WHOLLY_GOOD_3",
+      "definition_id": "48a22b44-e7ae-4a4f-9a67-e27cc0b32826",
+      "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveBridge.DivineWillsGoodForAllExisting"
+    }
+  ]
+}

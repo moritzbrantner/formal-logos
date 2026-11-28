@@ -1,0 +1,11 @@
+{
+  "id": "37a66f42-d281-48dc-968e-3cd12e7ced27",
+  "label": "Rowe's permission constraint, from WHOLLY_GOOD_1 and the outcome bridge",
+  "argument_id": "50c70f91-a935-4ce3-9b15-c0c79ca9e2cd",
+  "challenge_module": "TruthCore.Results.Ethics.TrolleyRowe.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.TrolleyRowe.Solution",
+  "theorem": "TruthCore.Results.Ethics.TrolleyRowe.outcomeSenseYieldsPermissionConstraint",
+  "comparator_config": "results/37a66f42-d281-48dc-968e-3cd12e7ced27/comparator.json",
+  "status": "solution-present",
+  "description": "If a wholly good omniscient being permitted an occurring preventable intense suffering with no blocking cost, the outcome bridge makes preventing strictly better, which WHOLLY_GOOD_1 excludes. A support option for Rowe's premise (2) conditional on both open premises; omniscience and intensity are not used."
+}

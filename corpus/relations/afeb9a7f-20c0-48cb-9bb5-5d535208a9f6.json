@@ -1,0 +1,10 @@
+{
+  "id": "afeb9a7f-20c0-48cb-9bb5-5d535208a9f6",
+  "label": "Trolley joint models test the double-effect triad",
+  "subject_kind": "argument",
+  "subject_id": "6db4a1d5-d408-495a-8027-95d3c7a99e7c",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "f13aaf32-7ea7-48b0-8956-107761bcefd0",
+  "note": "The premises of the double-effect triad derivation are jointly satisfiable on the stated case descriptions."
+}

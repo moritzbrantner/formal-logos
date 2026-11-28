@@ -1,0 +1,9 @@
+{
+  "id": "f198218e-601d-4d5d-8a6a-120c2f22d7a1",
+  "label": "Kantian MEANS_1 principle: no harm as a MEANS_1, and a proportionate rescue",
+  "term": "means principle",
+  "definition": "MeansPrinciple c: intervening is permissible exactly when the one's harm is not a causal means (MEANS_1) to the saving and intervening costs strictly fewer lives. Plans and object classification play no role.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.MeansPrinciple",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

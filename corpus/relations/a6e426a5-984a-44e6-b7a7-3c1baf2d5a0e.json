@@ -1,0 +1,10 @@
+{
+  "id": "a6e426a5-984a-44e6-b7a7-3c1baf2d5a0e",
+  "label": "Switching in Thomson's loop is impermissible: rival verdict",
+  "subject_kind": "statement",
+  "subject_id": "250ad604-0f1f-4dbf-a09c-5df47be60a1f",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "5890a01e-b4fe-483b-91a8-179b2b1d3f02",
+  "note": "Rival loop verdict: classical double effect and the means principle forbid switching in the loop."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "db7d724e-63af-44f1-9e52-ebf218ec1a06",
+  "label": "Redirection principle: harm only downstream of redirecting the threat, proportionate rescue",
+  "term": "redirection principle (Thomson/Kamm-style)",
+  "definition": "Redirection c: intervening is permissible exactly when it does not kill in sense KILLS_2 (the harm arises only downstream of redirecting the existing threat) and costs strictly fewer lives.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.Redirection",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

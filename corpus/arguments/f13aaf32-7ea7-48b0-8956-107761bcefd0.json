@@ -1,0 +1,27 @@
+{
+  "id": "f13aaf32-7ea7-48b0-8956-107761bcefd0",
+  "label": "Common triad verdicts, from classical double effect",
+  "premise_statement_ids": [
+    "95e73e76-a4b6-447f-be51-320c2f65285f",
+    "38949d8d-6903-4815-bcff-1b96e5301c68",
+    "985c26da-60e2-4d9e-ae73-3f13ab52a8a7",
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b"
+  ],
+  "conclusion_statement_id": "d97508fd-110c-4989-abc1-f7660a9bf33f",
+  "inference_ids": [
+    "c447868c-0210-413b-82d0-cf9f9435998d"
+  ],
+  "meaning": "Switch: harm off the rescue path, not planned, proportionate, so permissible. Footbridge and transplant: harm is a MEANS_1 (and planned), so impermissible. Computed from the causal graphs by reachability.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}

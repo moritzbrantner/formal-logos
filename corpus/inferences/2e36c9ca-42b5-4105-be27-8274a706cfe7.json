@@ -1,0 +1,13 @@
+{
+  "id": "2e36c9ca-42b5-4105-be27-8274a706cfe7",
+  "label": "Rowe's permission constraint, from WHOLLY_GOOD_1 and the outcome bridge (inference)",
+  "input_statement_ids": [
+    "0b90c1c0-afb8-4bef-b0d1-cd9bc48010dd",
+    "3deedff3-adaa-4c96-a6fd-9b4a4bfbce87"
+  ],
+  "output_statement_id": "0a95a3c3-5899-5350-9fef-6e88e79819e8",
+  "rule": "Contraposition through the outcome bridge",
+  "meaning": "If a wholly good omniscient being permitted an occurring preventable intense suffering with no blocking cost, the outcome bridge makes preventing strictly better, which WHOLLY_GOOD_1 excludes. A support option for Rowe's premise (2) conditional on both open premises; omniscience and intensity are not used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

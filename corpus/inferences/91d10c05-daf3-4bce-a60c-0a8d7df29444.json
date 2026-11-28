@@ -1,0 +1,13 @@
+{
+  "id": "91d10c05-daf3-4bce-a60c-0a8d7df29444",
+  "label": "Act consequentialism fails, from the transplant verdict (inference)",
+  "input_statement_ids": [
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b",
+    "78d70965-a2e4-4e13-b224-bf6b9fc9c733"
+  ],
+  "output_statement_id": "686872ca-9ec1-477c-bb8d-64f44f60c774",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Contrapositive of the act-consequentialist transplant derivation; an independent case datum against the same principle. Conditional on the open prima facie verdict.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

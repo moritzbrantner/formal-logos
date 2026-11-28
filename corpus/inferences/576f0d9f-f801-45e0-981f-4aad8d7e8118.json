@@ -1,0 +1,13 @@
+{
+  "id": "576f0d9f-f801-45e0-981f-4aad8d7e8118",
+  "label": "Constraint-qualified permission, from WHOLLY_GOOD_2 and the outcome bridge (inference)",
+  "input_statement_ids": [
+    "1a44a6cb-464c-4c36-9cac-5465cd0925b9",
+    "3deedff3-adaa-4c96-a6fd-9b4a4bfbce87"
+  ],
+  "output_statement_id": "53ab254f-8126-4a8c-92dc-d3605f95fcf7",
+  "rule": "Case analysis and contraposition through the outcome bridge",
+  "meaning": "Either preventing is not strictly better, whence (by the bridge) a blocking cost exists, or every way of preventing is constraint-blocked. Doing/allowing and double effect add a blocker to Rowe's list; they do not remove the rescue duty.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

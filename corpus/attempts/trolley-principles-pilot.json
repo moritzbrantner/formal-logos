@@ -1,0 +1,49 @@
+{
+  "id": "2b7c1f3e-6a2d-4f7e-9d59-3c8e1a4b7d21",
+  "label": "Trolley pilot: principles against the triad and loop, and senses of wholly good for Rowe",
+  "date": "2026-11-28",
+  "statement_ids": [
+    "d97508fd-110c-4989-abc1-f7660a9bf33f",
+    "686872ca-9ec1-477c-bb8d-64f44f60c774",
+    "5890a01e-b4fe-483b-91a8-179b2b1d3f02",
+    "250ad604-0f1f-4dbf-a09c-5df47be60a1f",
+    "95e73e76-a4b6-447f-be51-320c2f65285f",
+    "8f4bd39f-3a38-41c6-abaf-27af0fc2afd7",
+    "53ab254f-8126-4a8c-92dc-d3605f95fcf7",
+    "0a95a3c3-5899-5350-9fef-6e88e79819e8"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Typed trolley frame (causal graphs, death counts, plans, object classification) with six principles as Lean definitions; every verdict is computed by reachability. Act consequentialism is excluded by the footbridge and by the transplant verdict (two conditional refutations sharing the verdict-warrant dependency); the KILLS_1 no-killing deontology by the switch verdict; the KILLS_2 reading escapes. Classical double effect, intention-only double effect, the Kantian MEANS_1 principle and the redirection principle each entail the common triad and are jointly satisfiable with all case facts. Loop: classical double effect and the means principle forbid it through causal condition 3 (MEANS_1), not intention; intention-only double effect permits it only on Kamm's plan reading and is then exposed to closeness (control 2); redirection permits it on causal structure and ignores intention (malicious switcher, control 3). Rowe: WHOLLY_GOOD_1 with the open outcome bridge yields STMT-ROWE-PERMISSION-CONSTRAINT (new conditional support option); WHOLLY_GOOD_2 yields only a constraint-qualified condition, with easy rescue retained; WHOLLY_GOOD_3 (ontological goodness plus good-willing) yields neither. Best surviving rival to classical double effect at matching scope: the redirection principle, price: intention irrelevant to permissibility. Details in docs/notes/trolley-principles.md.",
+  "blocker": "Verdicts remain prima facie premises; the debunking objection's evidence and the loop verdict's warrant are unassessed. Transfer from human intervening to divine permitting is owned by #1456, and the bearer bridge from the case GOD_4 to Rowe's WhollyGood by #1735. The outcome bridge is open (aggregation of lesser costs). The frame does not separate footbridge from transplant.",
+  "evidence": [
+    "a3387294-8d4c-4618-b9e4-dc8084d38817",
+    "d9ab765c-dd80-4b5a-8b76-581d63204796",
+    "6a139110-c78e-4102-832a-8eddd903e96c",
+    "c0e9afb1-b06b-43d1-9d07-15ca7ae71ee1",
+    "1e08e693-c1df-4d6b-bf3b-bbb0d81ec56c",
+    "05960026-c504-406c-a561-4e3d5b68d07c",
+    "5d6fc7cf-c700-4592-a490-dc020d213af5",
+    "582038c5-59d0-4535-8b77-b0251c8d3cc9",
+    "16b82954-9d3c-408a-b047-f2325c01cc71",
+    "53454ddf-86a6-4c17-bb7f-814eaab479c8",
+    "e7426681-82b3-4d87-8639-50f9d78a5c91",
+    "af193408-3ace-4f0c-b969-0f773a556c28",
+    "da9cbd4c-8c5b-42cf-a09f-a2f237d4cb66",
+    "0a098a4e-3b5a-4086-8b85-706fb293b5b6",
+    "f0c03902-1ec7-405d-a477-312e8afb4b5a",
+    "8c596da7-02f3-49e7-ab25-7679b13c40e2",
+    "37a66f42-d281-48dc-968e-3cd12e7ced27",
+    "90ef5314-bde0-4098-9ced-86afde933c76",
+    "c2d764a3-009c-4062-8258-cbdaca7178ea"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5.5",
+      "effort": "high",
+      "date": "2026-11-28"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "20872eac-105d-4dc1-9bf3-ad3a68875552",
+  "label": "Switching in Thomson's loop is impermissible, from classical double effect (inference)",
+  "input_statement_ids": [
+    "95e73e76-a4b6-447f-be51-320c2f65285f",
+    "9ecc088e-f2dc-4214-a33b-74226e7dd6ca"
+  ],
+  "output_statement_id": "250ad604-0f1f-4dbf-a09c-5df47be60a1f",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "In the loop every path to the saving passes through the one's harm (MEANS_1), so classical condition 3 fails although the plan omits the harm.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

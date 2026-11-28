@@ -1,0 +1,18 @@
+{
+  "id": "69983def-a00d-4e3f-9e29-248144c0524d",
+  "label": "Harvesting the transplant patient is permissible, from act consequentialism",
+  "premise_statement_ids": [
+    "9daccfcd-e3d9-4221-bd45-4e581ff403bb",
+    "3edb50cb-15a4-4fa4-99b7-bd206528e82b"
+  ],
+  "conclusion_statement_id": "b03a6a39-ac4c-4d5f-bda4-516c92d90c66",
+  "inference_ids": [
+    "3eb6d86e-1431-4a5e-b3db-8fe01ff555e3"
+  ],
+  "meaning": "Act consequentialism compares only deaths: one versus five makes harvesting permissible.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59"
+  ]
+}

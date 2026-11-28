@@ -1,0 +1,11 @@
+{
+  "id": "582038c5-59d0-4535-8b77-b0251c8d3cc9",
+  "label": "Common triad verdicts, from intention-only double effect",
+  "argument_id": "8973f55e-3574-4c75-9d00-06c32bcab4c7",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.intentionDoubleEffectTriad",
+  "comparator_config": "results/582038c5-59d0-4535-8b77-b0251c8d3cc9/comparator.json",
+  "status": "solution-present",
+  "description": "Switch: harm not planned. Footbridge and transplant: harm planned (INTENDS_1), so impermissible. The footbridge verdict here depends on the plan fact, not the causal structure."
+}

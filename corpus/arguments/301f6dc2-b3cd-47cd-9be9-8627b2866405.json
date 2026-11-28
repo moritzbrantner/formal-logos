@@ -1,0 +1,25 @@
+{
+  "id": "301f6dc2-b3cd-47cd-9be9-8627b2866405",
+  "label": "Switching in Thomson's loop is impermissible, from classical double effect",
+  "premise_statement_ids": [
+    "95e73e76-a4b6-447f-be51-320c2f65285f",
+    "9ecc088e-f2dc-4214-a33b-74226e7dd6ca"
+  ],
+  "conclusion_statement_id": "250ad604-0f1f-4dbf-a09c-5df47be60a1f",
+  "inference_ids": [
+    "20872eac-105d-4dc1-9bf3-ad3a68875552"
+  ],
+  "meaning": "In the loop every path to the saving passes through the one's harm (MEANS_1), so classical condition 3 fails although the plan omits the harm.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}
