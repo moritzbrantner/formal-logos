@@ -1,0 +1,41 @@
+{
+  "id": "b14b258c-5b70-4597-9722-938656a8e534",
+  "label": "Every pure perfection at roots, from own-nature carriage and purity REQUIRES_LACK_2",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7f26189b-7def-4a16-84ab-6369065ced51",
+    "a48bdc1a-2d93-407e-b39f-9f5b91836199",
+    "d83785e2-f572-4eb8-9098-0785da0e174d",
+    "3b39e0ba-eb4a-5708-90d0-c2706094d43c",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"
+  ],
+  "conclusion_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "inference_ids": [
+    "0c96cbe1-3122-4b85-903f-4359128a3d40"
+  ],
+  "meaning": "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If it lacks k, a condition of r's own nature fails at every profile containing r's determinations and k (own-nature exclusion). r's profile is admissible (0a9d3a40) and pure (3b39e0ba), and k occurs in some admissible profile (ee287fd3), so joint compossibility (500d0e2d) makes the profile with k added admissible. Its members are pure, so by the purity of requirements in the root no determination of r requires, in r, the lack of some of them, and own-nature carriage in the root gives the condition there: a contradiction. This route uses neither carriage as such (LE), nor the requirement sense bridge, nor member grounding, nor E. With ownCarriageInFromUnity its load is the unity premises with the in-root transfer, and the purity of requirements in the root; on the #2153 carrier the simple source that lacks noesis by a clause of its one nature meets every other premise and fails exactly that purity premise (simpleUnityCarriageMap, clauses 3 and 12). The main theorem uses no axioms.",
+  "definition_ids": [
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "b5ac268c-7497-5780-a154-3f84c34ac709",
+    "956247e3-ca78-5f54-a8b1-6e725735c754"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "567c3e74-9514-52d9-b3b6-f5a3af078784",
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ],
+  "strong_version_needed": {
+    "7f26189b-7def-4a16-84ab-6369065ced51": "Carriage in the root constrains only conditions of the root's own nature. With the weaker XN (b2d6ac16) the excluding condition may lie in another being's nature, which carriage in the root does not reach, so the conclusion does not follow."
+  }
+}

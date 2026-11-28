@@ -1,0 +1,14 @@
+{
+  "id": "0222f88f-9ccc-439f-af10-8ec27283c402",
+  "label": "No unexplained absence at roots, from own-nature exclusion and own-nature carriage (inference)",
+  "input_statement_ids": [
+    "7f26189b-7def-4a16-84ab-6369065ced51",
+    "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "output_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "rule": "An excluding condition of the root's own nature fails at the admissible extension, which own-nature carriage with member grounding's necessity direction forbids",
+  "meaning": "Fix an actual root r at w and a determination d it lacks while an admissible q contains its determinations and d. A condition of r's own nature fails at every profile containing r's determinations and d, so at q. The necessity direction of member grounding makes q exclusion-free, so no determination of r requires, as such, a lack within q, and own-nature carriage gives the condition at q: a contradiction. It is the own-nature counterpart of route 915d06fd and connects the unity derivations to E. It uses neither N nor EM. The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

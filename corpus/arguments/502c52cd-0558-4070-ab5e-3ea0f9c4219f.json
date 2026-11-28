@@ -1,0 +1,28 @@
+{
+  "id": "502c52cd-0558-4070-ab5e-3ea0f9c4219f",
+  "label": "TRANSFER_1 at simple roots, from own-nature carriage REQUIRES_LACK_1 and realization",
+  "premise_statement_ids": [
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "cae68373-f6a2-43b5-9fa3-9a63da4cf13b",
+    "7c1db2e6-00f3-4fd4-b4da-9e489de5981d"
+  ],
+  "conclusion_statement_id": "b100d7ae-6dcb-42bb-87d3-7f2dbd1146c3",
+  "inference_ids": [
+    "1f988c8e-1e47-49d7-94ad-21aa66382f19"
+  ],
+  "meaning": "Fix an actual root r, a condition C seated in a real constituent k of r, and an admissible q containing r's determinations in which no determination realized by k requires, as such, the lack of members of q. Every determination t of r is realized by some real constituent (REAL), which simplicity identifies with k; so no determination of r requires such a lack, and own-nature carriage gives C at q. With ownCarriageFromUnity: under simplicity, SEAT, REAL and ESSE, TRANSFER_1 and own-nature carriage as such are equivalent. The unity argument therefore relocates carriage into the transfer premise and gives it no independent warrant at a simple root. The main theorem uses no axioms.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "588792ba-6354-4439-b4d7-bc640983c8f2",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "968526e1-42a7-4e28-9221-b426f560d1ee",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "d6912ecb-aed2-411a-913e-0dab9106d910"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ]
+}

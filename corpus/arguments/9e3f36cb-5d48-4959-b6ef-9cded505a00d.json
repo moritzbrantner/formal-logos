@@ -1,0 +1,23 @@
+{
+  "id": "9e3f36cb-5d48-4959-b6ef-9cded505a00d",
+  "label": "Own-nature carriage REQUIRES_LACK_1 at roots, from carriage LE",
+  "premise_statement_ids": [
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+  ],
+  "conclusion_statement_id": "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+  "inference_ids": [
+    "65936928-108e-4589-a97d-10483dfcfe51"
+  ],
+  "meaning": "LE holds for conditions in any being's nature on a root's profile; take that being to be the root. It certifies the strength order. No axioms.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ]
+}

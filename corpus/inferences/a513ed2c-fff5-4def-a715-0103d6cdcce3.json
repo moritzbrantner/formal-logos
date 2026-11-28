@@ -1,0 +1,16 @@
+{
+  "id": "a513ed2c-fff5-4def-a715-0103d6cdcce3",
+  "label": "Own-nature carriage REQUIRES_LACK_1, from simplicity, seating, realization and transfer (inference)",
+  "input_statement_ids": [
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "900c2f06-1e30-4bc0-b3d8-f6f70eec63c8",
+    "cae68373-f6a2-43b5-9fa3-9a63da4cf13b",
+    "3e5b5317-6429-4fa3-8e64-81acabef88a6",
+    "b100d7ae-6dcb-42bb-87d3-7f2dbd1146c3"
+  ],
+  "output_statement_id": "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+  "rule": "Simplicity identifies the seat of a condition with the constituent that realizes the root's determination; transfer then gives the condition",
+  "meaning": "Fix an actual root r, a condition C of its own nature and an admissible q containing its determinations in which no determination of r requires, as such, the lack of members of q. SEAT puts C in a real constituent k of r. ESSE gives r a determination, and REAL gives it a real constituent that realizes it. Constitutive simplicity identifies that constituent with k, so the seat realizes a determination of r, and TRANSFER_1 gives C at q. Simplicity does work here: with two constituents, a clause seated in one that realizes nothing satisfies every other premise while own-nature carriage fails (simpleUnityCarriageMap, clause 5). It is idle on the reading on which every real constituent realizes a determination (clause 1). The converse unityTransferOfOwnCarriage shows that at a simple root the load is the transfer premise: given simplicity and REAL, TRANSFER_1 and own-nature carriage are equivalent. The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

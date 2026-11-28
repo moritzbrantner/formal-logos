@@ -1,0 +1,9 @@
+{
+  "id": "588792ba-6354-4439-b4d7-bc640983c8f2",
+  "label": "Seated in: a condition of a being's own nature belongs to what one of its constituents is",
+  "term": "seated in (SeatedIn Ess Seat x C k)",
+  "definition": "SeatedIn Ess Seat x C k: the ESSENCE_6 condition C on x's profile lies in x's own nature (Ess x x C) and belongs to what x's constituent k is (Seat x C k, a declared primitive). The constituent k is where the condition is in x, its content being part of what k is. Examples: a triangle's having exactly three sides belongs to what its form is; in a simple being, every condition of its nature belongs to what its one nature is. Non-examples: a condition in another being's nature about x's profile (not own); a negation considered as an item, which is not a real constituent (DEF d6912ecb). Distinguishing conditions: it is not requiring a lack (it relates a condition to a constituent, not a determination to a set of determinations), and it is not realization (it does not say which determinations k is the reality of). Structural properties: none encoded.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.SeatedIn",
+  "note": "Stipulative analyst notion for #2145 lane U, attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Carriage from the unity of a simple root'."
+}

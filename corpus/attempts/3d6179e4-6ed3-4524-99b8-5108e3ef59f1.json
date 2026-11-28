@@ -1,0 +1,70 @@
+{
+  "id": "3d6179e4-6ed3-4524-99b8-5108e3ef59f1",
+  "label": "Carriage from the unity of a simple root: relocation for LE, in-root carriage and a route around it",
+  "date": "2026-11-28",
+  "statement_ids": [
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+    "9281317d-1f0a-4522-b91c-58cc07652e92",
+    "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+    "a48bdc1a-2d93-407e-b39f-9f5b91836199",
+    "b100d7ae-6dcb-42bb-87d3-7f2dbd1146c3",
+    "90e0d179-a066-493f-b86f-701374c43dd1",
+    "c5396a7f-5084-498f-8c52-28455ea500b8",
+    "d83785e2-f572-4eb8-9098-0785da0e174d",
+    "900c2f06-1e30-4bc0-b3d8-f6f70eec63c8",
+    "cae68373-f6a2-43b5-9fa3-9a63da4cf13b",
+    "3e5b5317-6429-4fa3-8e64-81acabef88a6",
+    "7f26189b-7def-4a16-84ab-6369065ced51",
+    "dfadd56d-79af-4323-a978-dc6ef3c1e2b1"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "#2145 lane U (owner-selected 2026-11-28). Tested whether carriage LE (682e6436) at a pure root follows from the unity of a simple being. Own-nature carriage as such (LE_own 7c1db2e6) follows from constitutive simplicity (f4180d0c), seating (900c2f06), realization (cae68373), ESSE (3e5b5317) and TRANSFER_1 (b100d7ae) [ownCarriageFromUnity 647184ac]; simplicity does work there (certificate clause 5: a clause seated in a constituent that realizes nothing) but is idle when every constituent realizes a determination (clause 1). At a simple root TRANSFER_1 and LE_own are equivalent [unityTransferOfOwnCarriage 039dc01d], so unity is a relocation for LE. What unity gives is carriage in the root (REQUIRES_LACK_2, new DISAMB ee069ef5) [ownCarriageInFromUnity 2fc6dc5d], from the in-root transfer whose rationale is the identity thesis; the passage to carriage as such is the explicit bridge c5396a7f [ownCarriageFromCarriageIn 5d3cf89d]. A simple source lacking noesis by a clause of its one nature meets every unity premise and carriage in the root while LE, the bridge and E fail (clause 3); under the necessity direction on the open family no requirement relation rescues LE for it, and being, which a thinking effect shares, cannot require the lack of noesis as such (clause 4). With fine-grained 'this nature' determinations the bridge is near-analytic and the rival pays 0c8631bd or strict purity (clause 10). New route every pure perfection (fe67d766) from own-nature exclusion (7f26189b), carriage in the root, the in-root purity of requirements (d83785e2), strict purity, admissible profiles, pure occurrence and joint compossibility [everyPureFromCarriageIn 2b98650a], with no LE, bridge, MG or E; on the carrier the rival fails only the in-root purity premise (clause 12). The in-root premise follows from 0c8631bd with the bridge [691986b0]. E from own-nature exclusion, LE_own and MG [5761c221]. Strength orders: LE strengthens LE_own [04751700]; XN_own strengthens XN [5b7d0d9a]. Classical root passes every unity premise (clause 2); on lane E's selection carrier the unity premises, LE_own, MG and E hold and N fails (clause 11, realization at the actual world only). Unity has no bearing on MG (clause 9). Certificate simpleUnityCarriageMap [0cceac72].",
+  "blocker": "LE at a pure root keeps no warrant beyond its own: the unity transfer is equivalent to own-nature carriage at a simple root, and the shared 'positive grounds' rationale is met in re by a simple rival. The new route around LE rests on the in-root purity of requirements (d83785e2), which faces the same reference-class structure as LE (every observed requirer of a pure lack is a limited realization) and is denied by the Plotinian line. Strongest standing rival: the constitutively simple impersonal eminent source that lacks noesis by a clause of its one nature; under unity it must deny the in-root purity of requirements (Plotinian), the identity thesis (negative content of its one reality belonging to no determination as realized), SEAT (moving the clause to H1's non-real items), or own-nature exclusion (primitivism). Untested: realization indexed by world with a world-invariant constituent (classical selection and relation of reason); univocal versus analogical typing of root determinations.",
+  "evidence": [
+    "647184ac-4ca6-406e-ae73-f9ca0bb9bcd6",
+    "039dc01d-60f2-4fdd-aabf-1f9bf606de21",
+    "2fc6dc5d-d6d2-463f-89fa-125adb074358",
+    "5d3cf89d-3e2c-4901-aba5-1c46d3f74511",
+    "5761c221-553a-497f-a624-cfcaffa42db8",
+    "2b98650a-7385-4cd1-8363-c6e79b2f9cc3",
+    "691986b0-1ec2-4c43-9353-799ffbb3f96f",
+    "04751700-9562-44a2-bd30-4b7771c2a305",
+    "5b7d0d9a-16ea-433d-909c-cad58a9fed90",
+    "0cceac72-afe1-40cb-995c-4b12b158978d"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-28",
+    "statement_ids": [
+      "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+      "9281317d-1f0a-4522-b91c-58cc07652e92",
+      "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+      "b100d7ae-6dcb-42bb-87d3-7f2dbd1146c3",
+      "c5396a7f-5084-498f-8c52-28455ea500b8",
+      "d83785e2-f572-4eb8-9098-0785da0e174d"
+    ],
+    "scope": "Carriage LE and the routes to E and to every pure perfection, tested against the unity of a constitutively simple root (#2145 lane U), applied to the impersonal root that lacks noesis by a clause of its nature and to the classical root on the same carrier. Scoped to a simple rival whose lack of noesis is case (iii), and to the typed premises of SimpleUnityCarriage.",
+    "assessment": "The unity of a simple root gives LE no independent warrant: at a simple root, the transfer premise needed for carriage as such is equivalent to own-nature carriage (unityTransferOfOwnCarriage with ownCarriageFromUnity), a relocation and the fifth angle on E/LE. Simplicity does real work only in identifying the seat of a condition with the reality of the root's determinations, and is idle on the reading that every real constituent realizes a determination. What unity does give, from premises a simple rival can grant, is carriage in the root (REQUIRES_LACK_2): the rival's lack of noesis has a positive ground in re, its one nature, so the 'negative facts have positive grounds' rationale no longer warrants LE beyond the sense bridge c5396a7f, which fails for determination types the root shares with thinkers (certified under the necessity direction) and is near-analytic for fine-grained 'this nature' determinations, where the rival pays 0c8631bd or strict purity. A new support option for every pure perfection (2b98650a) bypasses LE, the bridge, the necessity direction and E; its distinctive load is the in-root purity of requirements, which shares 0c8631bd's rationale and the Plotinian crux and faces the same reference-class structure, so it is of comparable, not greater, strength. Its effect is to discriminate the rival's options: a simple rival that grants seating and the identity thesis can no longer lack noesis by an uncarried clause and must deny the in-root purity of requirements (Plotinian), with an internal tension if it keeps 0c8631bd on its stated rationale. LE's judgment is unchanged (open; conditional support of low to moderate strength); the necessity direction is unaffected. Nothing is established; formal validity is unchanged by this judgment.",
+    "next_test": "World-indexed realization with a world-invariant constituent (SIMPLE_4's subject/accident clause as its own sense) against the classical root's real selection and an impersonal permissive root's chance outcome; whether the Plotinian line denies the in-root purity of requirements or the purity of noesis; univocal versus analogical typing of root determinations; whether NonRealContainmentIsApprehension (cde7f1dd) reaches a negative clause contained in a simple nature; strong_version_needed for LE on 44890767, a2560bca, a567c327, d25cad7b (coordinator).",
+    "note": "docs/notes/causal-perfection-transfer.md#carriage-from-the-unity-of-a-simple-root-2026-11-28-provisional-2145",
+    "reviewed_revision": "e813ee5c93807fb4aeeba021b808baaeb94bd995",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Branch research/u-unity-carriage (#2145 lane U), no PR. Not yet challenged; the independent semantic challenge is pending (coordinator). Ten results pass bind-check, Comparator and NanoDa locally.",
+    "supersedes": "None. It adds to, and does not revise, lane E's assessment of E and LE in attempt 0c181f3b and H2's in attempt 44f1b30b."
+  }
+}
