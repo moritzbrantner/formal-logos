@@ -37,12 +37,14 @@ theorem ownCarriageFromUnity {W B D K : Type} (m : Profile W B) (w : W)
     RootOwnEssentialConditionsCarried m w Admissible Ess HasAt RequiresLack := by
   sorry
 
-/-- The relocation converse: at a simple root, own-nature carriage gives
-TRANSFER_1 back, given only REAL. A determination of `r` is realized by some
+/-- The relocation converse, one direction only: at a simple root, own-nature
+carriage gives TRANSFER_1 back, given only simplicity and REAL. A determination of `r` is realized by some
 real constituent, which simplicity identifies with the seat; so "no
 determination realized by the seat requires a lack within `q`" already says
-"no determination of `r` does". With `ownCarriageFromUnity`, under simplicity,
-SEAT, REAL and ESSE, TRANSFER_1 and own-nature carriage are equivalent. -/
+"no determination of `r` does". The other direction, `ownCarriageFromUnity`, also
+needs SEAT and ESSE (certificate clauses 6 and 8), so TRANSFER_1 and own-nature
+carriage are equivalent only under all four of simplicity, SEAT, REAL and
+ESSE. -/
 theorem unityTransferOfOwnCarriage {W B D K : Type} (m : Profile W B) (w : W)
     (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
     (HasAt : W → B → D → Prop) (RealConstituent : B → K → Prop)

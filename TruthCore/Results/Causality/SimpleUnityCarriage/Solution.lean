@@ -47,12 +47,14 @@ theorem ownCarriageFromUnity {W B D K : Type} (m : Profile W B) (w : W)
   subst hkk
   exact hT r hr C k₀ hk hseat ⟨t₀, ht₀, hreal₀⟩ q hq hsub (fun t ht _ S hS => hfree t ht S hS)
 
-/-- The relocation converse: at a simple root, own-nature carriage gives
-TRANSFER_1 back, given only REAL. A determination of `r` is realized by some
+/-- The relocation converse, one direction only: at a simple root, own-nature
+carriage gives TRANSFER_1 back, given only simplicity and REAL. A determination of `r` is realized by some
 real constituent, which simplicity identifies with the seat; so "no
 determination realized by the seat requires a lack within `q`" already says
-"no determination of `r` does". With `ownCarriageFromUnity`, under simplicity,
-SEAT, REAL and ESSE, TRANSFER_1 and own-nature carriage are equivalent. -/
+"no determination of `r` does". The other direction, `ownCarriageFromUnity`, also
+needs SEAT and ESSE (certificate clauses 6 and 8), so TRANSFER_1 and own-nature
+carriage are equivalent only under all four of simplicity, SEAT, REAL and
+ESSE. -/
 theorem unityTransferOfOwnCarriage {W B D K : Type} (m : Profile W B) (w : W)
     (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
     (HasAt : W → B → D → Prop) (RealConstituent : B → K → Prop)
@@ -704,9 +706,10 @@ theorem fineInRootRow :
   · intro h
     exact hnoesis (h true rootTrue _ (by simp [natPureStrict]))
 
-/-- Lean-only (relocation in sense 2): at a simple root, carriage in the root
-gives TRANSFER_2 back, given REAL. With `ownCarriageInFromUnity`, under
-simplicity, SEAT, REAL and ESSE, TRANSFER_2 and LE_in are equivalent. -/
+/-- Lean-only (relocation in sense 2), one direction only: carriage in the root
+gives TRANSFER_2 back, given simplicity and REAL. The other direction,
+`ownCarriageInFromUnity`, also needs SEAT and ESSE, so TRANSFER_2 and LE_in are
+equivalent only under all four of simplicity, SEAT, REAL and ESSE. -/
 theorem unityTransferInOfOwnCarriageIn {W B D K : Type} (m : Profile W B) (w : W)
     (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
     (HasAt : W → B → D → Prop) (RealConstituent : B → K → Prop)

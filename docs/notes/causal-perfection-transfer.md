@@ -9299,17 +9299,20 @@ premise holding and LE_own failing.
 
 ### B. The relocation: at a simple root TRANSFER_1 is own-nature carriage
 
-`unityTransferOfOwnCarriage` [`039dc01d`]: S, REAL and LE_own give TRANSFER_1.
-Together with part A, given S, SEAT, REAL and ESSE, **TRANSFER_1 and LE_own are
-equivalent**. The unity argument therefore gives LE no warrant of its own at a
+`unityTransferOfOwnCarriage` [`039dc01d`] is one direction only: S and REAL
+with LE_own give TRANSFER_1. The other direction, `ownCarriageFromUnity` (part
+A), needs SEAT and ESSE as well; clauses 6 and 8 show that without either,
+TRANSFER_1 holds while LE_own fails. So only under all four of S, SEAT, REAL
+and ESSE are **TRANSFER_1 and LE_own equivalent**. The unity argument therefore gives LE no warrant of its own at a
 simple root. Whatever warrant TRANSFER_1 has there is LE_own's. Its general
 form (over all beings) would need an inductive base, and every base case
 (a triangle's form, a finite power) carries its exclusions by impure realized
 determinations. Lane E's reference-class objection applies to it unchanged.
 
 The same holds in sense 2. The Lean-only `unityTransferInOfOwnCarriageIn` gives
-TRANSFER_2 from S, REAL and LE_in, so under S, SEAT, REAL and ESSE,
-**TRANSFER_2 and LE_in are equivalent** at a simple root as well. Unity gives
+TRANSFER_2 from S, REAL and LE_in (one direction); `ownCarriageInFromUnity`
+gives the other with SEAT and ESSE as well. So under all four of S, SEAT, REAL
+and ESSE, **TRANSFER_2 and LE_in are equivalent** as well. Unity gives
 LE_in only through the identity-thesis rationale for TRANSFER_2 (part C), not
 by a derivation that avoids relocation.
 
@@ -9497,11 +9500,13 @@ thesis, and it ranks none of the rows.
 ### Assessment, standing rival and graph effect
 
 **What changed.**
-- LE gets no independent warrant from unity. At a simple root, the unity
-  argument's transfer premise is equivalent to own-nature carriage (B). This
+- LE gets no independent warrant from unity. Under S, SEAT, REAL and ESSE,
+  the unity argument's transfer premise is equivalent to own-nature carriage;
+  the direction from carriage to transfer needs only S and REAL (B). This
   is the fifth angle on E/LE, and it relocates.
 - Unity gives **carriage in the root** through the identity-thesis rationale
-  for TRANSFER_2, which is itself equivalent to LE_in at a simple root (B, C).
+  for TRANSFER_2, which is itself equivalent to LE_in under S, SEAT, REAL and
+  ESSE (B, C).
   It also gives a new support option for every pure perfection
   (`2b98650a`) that bypasses LE, the bridge, MG and E. Its distinctive load
   is the in-root purity of requirements. That premise shares `0c8631bd`'s

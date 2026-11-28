@@ -56,8 +56,9 @@ the other; the passage from 2 to 1 at actual roots is the explicit open bridge
   root.
 
 The results module derives own-nature carriage from simplicity and these
-premises in each sense, shows that at a simple root TRANSFER_1 and own-nature
-carriage are equivalent (the relocation), derives E from own-nature exclusion,
+premises in each sense, shows that own-nature carriage gives TRANSFER_1 back
+given simplicity and REAL alone, so that under simplicity, SEAT, REAL and ESSE
+the two are equivalent (the relocation), derives E from own-nature exclusion,
 own-nature carriage and member grounding, derives every pure perfection at the
 roots from carriage in the root and the purity of requirements in the root
 (`RootPureRequiresNoPureLackIn`) without carriage as such, the sense bridge or

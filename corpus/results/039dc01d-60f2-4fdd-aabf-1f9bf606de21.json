@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.unityTransferOfOwnCarriage",
   "comparator_config": "results/039dc01d-60f2-4fdd-aabf-1f9bf606de21/comparator.json",
   "status": "solution-present",
-  "description": "Relocation converse (#2145 lane U): own-nature carriage as such gives TRANSFER_1 at simple roots. Establishes no premise."
+  "description": "One-directional relocation lemma (#2145 lane U): own-nature carriage as such gives TRANSFER_1 given simplicity and REAL. The equivalence with TRANSFER_1 needs, for the other direction (ownCarriageFromUnity), SEAT and ESSE as well. Establishes no premise."
 }
