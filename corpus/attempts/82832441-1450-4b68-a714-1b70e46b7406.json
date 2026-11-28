@@ -15,8 +15,8 @@
   "date": "2026-11-28",
   "kind": "derivation",
   "outcome": "blocked",
-  "summary": "User-selected continuation of #2187, #2180 and #2184. Supplies conditional guarded-constituency and local operation-individuation laws, countable priority omissions, arbitrary-object and repeated-operation controls, and an application to both existing restored source accounts. The criterion fixes one explanandum and relation, exempts whole-nature self-realization, and makes constituent coverage explicit. The linked note compares ordinary acts, natural powers, relational properties and strong formal distinction, and reconnects the results to simplicity, recognition, cognition and pure perfection. Existing realizer-identity/ranking laws are reused. The proposed assessment finds no demonstrated simplicity advantage from these criteria alone; source-level realization and the completeness of the proposed criteria remain open. Formal verification and independent semantic challenge are pending at this draft revision.",
-  "blocker": "The intended metaphysical discrimination is unresolved: neither account has established complete-immediate-actuality individuation and exhaustive constituent coverage at the source, or a reason the counterpart cannot meet the same criteria. Exact-input formal verification and independent semantic challenge of the proposed delivery are still in progress.",
+  "summary": "User-selected continuation of #2187, #2180 and #2184. Verified guarded posterior-constitution and local operation-unity laws, countable priority omission tests, arbitrary-object and repeated-operation controls, and equal application to both existing restored source accounts. The criterion fixes one explanandum and relation, exempts whole-nature self-realization, and makes constituent coverage explicit. The synthesis calibrates its limited warrant against ordinary acts, natural powers, relational properties and strong formal distinction, and reconnects the findings to simplicity, recognition, cognition and pure perfection. Existing realizer-identity/ranking laws are reused. Independent semantic challenge accepted the bounded synthesis with qualifications. The attempted metaphysical discrimination remains unresolved: these criteria alone demonstrate no simplicity advantage, not equal overall warrant or metaphysical coherence of either account.",
+  "blocker": "The metaphysical application still needs independently defended complete-immediate-actuality individuation, the necessary proper-constituent-to-priority bridge, and exhaustive constituent coverage at the source. Neither account has shown that it meets these conditions while the counterpart cannot. Conditional consequences and populated controls are verified; no recognition, cognition or pure-perfection premise is discharged.",
   "evidence": [
     "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a",
     "b1da92ca-e297-434d-a9cf-8312e23e4420",
@@ -36,6 +36,35 @@
       "provider": "openai",
       "model": "gpt-6-astra-pro",
       "date": "2026-11-28"
+    },
+    {
+      "role": "review",
+      "provider": "openai",
+      "model": "gpt-6-astra-pro",
+      "date": "2026-11-28"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-28",
+    "statement_ids": [
+      "d1fb6414-976e-4833-908d-17787cca2502",
+      "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+      "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+      "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+      "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96",
+      "d83785e2-f572-4eb8-9098-0785da0e174d"
+    ],
+    "scope": "Constituency and intentional-unity continuation of #2187, #2180 and #2184: whether plurality in a subject, its operation and its objects distinguishes simple intellect from mind-independent formal modes under the same criterion.",
+    "assessment": "Proper actualizing co-principles have a limited independent rationale as a sufficient diagnostic of constituency. To exclude selected proper realizers by explanatory posteriority requires a necessary contribution bridge in the same world, target actuality and relation; to infer simplicity also requires coverage of every real constituent. Local operation unity additionally requires intrinsic realization and complete token individuation at the same bearer and exercise. Arbitrary object incidence alone supplies none of these bridges, and repeated acts can share their object profile. Literal identity permits substitution within a fixed predicate or relation; common realization preserves formal indices without independently justifying formal distinction or a value order. Cognition can explain intentional presence conditional on independently warranted cognition, while A4 may make modes dependent on its nature without making them mind-dependent. No demonstrated simplicity advantage follows from these criteria alone. This is not equal overall warrant, an A4 coherence proof or a defeat of classical intellect. Recognition d1fb6414, cognition 3b40009e, actual-root apprehension, and pure-perfection applications remain open; #2184 in-root purity is not supplied.",
+    "next_test": "Seek a source-level account that independently establishes the complete immediate actuality, guarded proper-constituent contribution and exhaustive constituent coverage, with a discriminating reason its counterpart cannot satisfy the same conditions. Preserve the distinction between the source actuality, operation actuality, external object existence and intentional presence. A further equivalent recognition principle or another matched finite interpretation does not establish those applications.",
+    "note": "docs/notes/causal-perfection-transfer.md#constituency-intentional-unity-and-formal-determinations-2026-11-28-provisional",
+    "reviewed_revision": "e794cc28343b7722f597fab2d0441168b720b39b",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Fresh independent semantic challenge read the complete proposed outcome at 5683e3de14bdf04e494987b9c7615311b6092b9f, with no P1/P2 findings, preserving the limits on universal constituency coverage, complete-act individuation, model interpretation and comparative warrant. A targeted confirmation carried that acceptance to e794cc28343b7722f597fab2d0441168b720b39b after the author clarified substitution for a fixed predicate/relation while allowing different predicates of one foundation. Focused Lean build, all four affected theorem bindings, Comparator and independent NanoDa verification passed on the delivered formal inputs. Repository preflight passed against 65f59ec046bb5a55adc4807e26f80e39aecc4963; computed frontier-diff reported no change. Final prove-sweep reported four unresolved targets, zero errors and no likely transcriptions. The three freeze commits preceded the Solution commit; hand proof drafting preceded the available-tool prove-sweep because the environment initially lacked the toolchain. The explicit Nat binder repair preserved the frozen intended countable interpretation. Hosted CI and PR publication are separate from this local evidence.",
+    "supersedes": "Scoped continuation, not replacement, of b45aef67-a349-4a84-a239-e98530f11712: supplies a guarded constituency criterion, explicit coverage obligation and local act-individuation diagnostics for its next test. It retains that attempt's conclusions and unresolved source-level realization. It investigates the ordinary-one-act question in 0d8b9153-ad65-48a3-be6a-478612f0e2a1 without claiming a simple human-act instance. No other lane or prior source finding is superseded."
+  }
 }
