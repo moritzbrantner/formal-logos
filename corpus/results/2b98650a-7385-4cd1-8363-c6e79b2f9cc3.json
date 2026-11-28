@@ -1,0 +1,11 @@
+{
+  "id": "2b98650a-7385-4cd1-8363-c6e79b2f9cc3",
+  "label": "Every pure perfection at roots, from own-nature carriage and purity REQUIRES_LACK_2",
+  "argument_id": "b14b258c-5b70-4597-9722-938656a8e534",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.everyPureFromCarriageIn",
+  "comparator_config": "results/2b98650a-7385-4cd1-8363-c6e79b2f9cc3/comparator.json",
+  "status": "solution-present",
+  "description": "Derivation (#2145 lane U): every pure perfection at the actual roots from own-nature exclusion, carriage in the root, the purity of requirements in the root, strict purity, admissibility of root profiles, admissibility of each pure determination and joint compossibility. Establishes no premise."
+}

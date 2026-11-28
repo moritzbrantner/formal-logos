@@ -1,0 +1,15 @@
+{
+  "id": "7f26189b-7def-4a16-84ab-6369065ced51",
+  "label": "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred (XN_own): for every actual concrete root r at w and every determination d that r lacks at w, some ESSENCE_6 condition in r's own nature fails at every set of determinations containing r's real determinations together with d. It strengthens essential exclusion of root absences (b2d6ac16) by requiring the excluding nature to be the root's own. Its rationale: a root has no actual concrete ground, so a nature that excludes what it lacks is its own. A necessary lack that no nature grounds (modal primitivism or brutalism) denies it; a bare negative clause in the root's own nature satisfies it.",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RootLacksExcludedByOwnNature",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}
