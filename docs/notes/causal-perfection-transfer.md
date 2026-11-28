@@ -9380,6 +9380,8 @@ that denies the bridge keeps `0c8631bd` and denies the in-root premise.
 
 Clause 12 checks the route on the carrier:
 - The classical source meets every premise and has every pure determination.
+  Its in-root requirement relation is empty, so it meets the in-root purity
+  premise vacuously.
 - The rival source meets every non-logical premise except the in-root purity
   of requirements, and lacks noesis.
 
