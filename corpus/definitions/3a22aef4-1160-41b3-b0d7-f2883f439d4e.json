@@ -1,0 +1,9 @@
+{
+  "id": "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
+  "label": "Pointwise positive measure",
+  "term": "Pointwise positive measure",
+  "definition": "Every singleton has strictly positive measure. The Lean definition applies to any measure; the controls use it only on countable carriers with measurable singletons, where every subset is measurable. This is not the topological support of an atomless measure.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Logic.CarrierProbability.PointFullSupport"
+}
