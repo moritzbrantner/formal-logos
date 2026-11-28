@@ -1,0 +1,12 @@
+{
+  "id": "a365e5c6-b451-4d13-9ec8-0ab946c59ef6",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer to concrete NECESSARY_2 (inference)",
+  "input_statement_ids": [
+    "f084efde-c461-49d4-9f7d-902abc81b5f9"
+  ],
+  "output_statement_id": "411e5817-a28a-5d3c-a115-c43b2ffdf64f",
+  "rule": "Actualist domain correspondence, then instantiation at the selected world and its concrete members",
+  "meaning": "boxAllToAllBox_iff (certificate e6a55f69) turns the transfer on the route's Ontic into increasing domains; applied along each edge from the selected world, every concrete candidate existing there exists at every accessible world, so it is NECESSARY_2. Registered as a strength order (the transfer strengthens concrete necessitarianism at every world); strictness is witnessed by Control.Strictness. Conditional consequence only; neither version is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

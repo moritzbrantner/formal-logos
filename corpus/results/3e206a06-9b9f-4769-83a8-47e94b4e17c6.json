@@ -1,0 +1,11 @@
+{
+  "id": "3e206a06-9b9f-4769-83a8-47e94b4e17c6",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer gives concrete NECESSARY_2 at each world",
+  "argument_id": "90796d44-3980-452b-bb8a-3b79f06bc844",
+  "challenge_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Solution",
+  "theorem": "TruthCore.Results.Modal.ActualistContingencyRoute.transferGivesConcreteNecessary",
+  "comparator_config": "results/3e206a06-9b9f-4769-83a8-47e94b4e17c6/comparator.json",
+  "status": "solution-present",
+  "description": "boxAllToAllBox_iff (certificate e6a55f69) turns the transfer on the route's Ontic into increasing domains; applied along each edge from the selected world, every concrete candidate existing there exists at every accessible world, so it is NECESSARY_2. Registered as a strength order (the transfer strengthens concrete necessitarianism at every world); strictness is witnessed by Control.Strictness. Conditional consequence only; neither version is established."
+}
