@@ -1,0 +1,25 @@
+{
+  "id": "272cdba1-f0f4-4301-ad90-5bace59e25f5",
+  "label": "Wholly-good sense controls: relocation, easy rescue and a WHOLLY_GOOD_3 surrogate",
+  "paraphrase": "Analyst formulation, attribution deferred. (1) With the outcome bridge, a WHOLLY_GOOD_2 being that is omniscient and omnipotent can face unblocked preventable suffering whose only supplied way of prevention has the footbridge structure, so WHOLLY_GOOD_2 does not relocate Rowe's simplified constraint; omnipotence does not constrain the supplied ways in this model. (2) Under the qualified condition, one constraint-free way of preventing restores Rowe's blocking-cost requirement. (3) Structural surrogate: Rowe's WhollyGood read by the two stage-2 goodness predicates (supreme goodness and willing some good to every existing being) is satisfiable with an omniscient omnipotent bearer and failure of the constraint; the witness makes every relation true, the same construction works on any signature (an observation, not separately certified), and the classical permission rule is omitted, so this says nothing about GOD_4. (4) WHOLLY_GOOD_1 without the outcome bridge does not yield the constraint (empty Better). (5) The constraint clause classifies switch, side-effect and harmless ways as constraint-free and footbridge, transplant and loop ways as violating. (6) With Better free, the WHOLLY_GOOD_1 premise bundle holds for some Better exactly when Rowe's constraint without its omniscience and intensity antecedents holds.",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.GoodnessSenseControls",
+  "definition_ids": [
+    "b32b898d-3ad6-4132-9815-ac8897f2193c",
+    "45620acb-803e-4f02-965e-4e8de5ec4c82",
+    "48a22b44-e7ae-4a4f-9a67-e27cc0b32826",
+    "171949d3-2123-4e19-be0f-ffdcfab188c4",
+    "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28"
+  ],
+  "disambiguation_ids": [
+    "a9f886f9-c7ee-4680-8e88-91bd15fe0cc9",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107",
+    "63369e84-f651-42b5-bfef-409c3872f917"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open.",
+    "blocker": "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+  }
+}

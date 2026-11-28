@@ -1,0 +1,9 @@
+{
+  "id": "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+  "label": "INTENDS_1: the agent's plan includes the one's harm",
+  "term": "intends (plan inclusion)",
+  "definition": "PlansHarm c: the supplied plan of the case includes the one's harm, as end or as means. Plans are case inputs (Kamm's 'in order to'); acting merely because a harm will occur does not put it in the plan.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.PlansHarm",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

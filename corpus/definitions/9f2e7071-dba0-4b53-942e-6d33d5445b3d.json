@@ -1,0 +1,9 @@
+{
+  "id": "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+  "label": "MEANS_2: the harm is in the plan and contributes causally to the saving",
+  "term": "means (planned)",
+  "definition": "HarmIsPlannedMeans c: the agent's plan includes the one's harm and some causal path leads from the harm to the survival of the five. It requires the plan, and it does not entail MEANS_1: another path to the saving may avoid the harm.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.HarmIsPlannedMeans",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

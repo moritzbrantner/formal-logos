@@ -1,0 +1,25 @@
+{
+  "id": "5cb34a6a-5146-4e02-899c-e7852835ce9e",
+  "label": "Common triad verdicts, from the redirection principle",
+  "premise_statement_ids": [
+    "db653ae6-974e-403f-a6d6-7dd57782e801",
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "6434b71f-c311-401c-8aeb-6a267f1baaee",
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1"
+  ],
+  "conclusion_statement_id": "9b14d253-e29a-4041-88eb-d45c8de9ac53",
+  "inference_ids": [
+    "cbc086db-8dde-4d4f-a499-64a96442f9ed"
+  ],
+  "meaning": "Switch: the harm lies only downstream of redirecting the threat. Footbridge and transplant: the intervention reaches the harm directly (KILLS_2).",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "c094090d-0572-4a8a-9add-c993cae6e079",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542",
+    "db7d724e-63af-44f1-9e52-ebf218ec1a06"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee"
+  ]
+}

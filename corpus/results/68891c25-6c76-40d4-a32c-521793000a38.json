@@ -1,0 +1,11 @@
+{
+  "id": "68891c25-6c76-40d4-a32c-521793000a38",
+  "label": "Common triad verdicts, from the redirection principle",
+  "argument_id": "5cb34a6a-5146-4e02-899c-e7852835ce9e",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.redirectionTriad",
+  "comparator_config": "results/68891c25-6c76-40d4-a32c-521793000a38/comparator.json",
+  "status": "solution-present",
+  "description": "Switch: the harm lies only downstream of redirecting the threat. Footbridge and transplant: the intervention reaches the harm directly (KILLS_2)."
+}

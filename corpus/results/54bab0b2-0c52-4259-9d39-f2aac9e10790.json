@@ -1,0 +1,12 @@
+{
+  "id": "54bab0b2-0c52-4259-9d39-f2aac9e10790",
+  "label": "Constraint-qualified permission relocated into WHOLLY_GOOD_2 and the outcome bridge",
+  "argument_id": "493de2f2-181f-413f-9425-d7d2ef32611d",
+  "challenge_module": "TruthCore.Results.Ethics.TrolleyRowe.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.TrolleyRowe.Solution",
+  "theorem": "TruthCore.Results.Ethics.TrolleyRowe.constraintSenseYieldsQualifiedConstraint",
+  "comparator_config": "results/54bab0b2-0c52-4259-9d39-f2aac9e10790/comparator.json",
+  "status": "solution-present",
+  "description": "Near-transcription (assembly): relocates the constraint-qualified condition into the outcome bridge and the WHOLLY_GOOD_2 standard over the free comparison Better. It records that a constraint clause adds a blocker to Rowe's list without removing the rescue duty; it adds no warrant.",
+  "transcription": "assembly"
+}
