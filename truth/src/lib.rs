@@ -48,6 +48,7 @@ pub mod territory;
 pub mod thickness;
 mod transcription;
 pub mod tree;
+pub mod type_lints;
 pub mod unused_premises;
 pub mod workers;
 

@@ -123,12 +123,12 @@ impl<'a> Inputs<'a> {
     }
 }
 
-/// The exporter description without what `context` does not show
+/// The exporter description without what `context` and `type-lints` do not use
 /// (wrappers, core heads, senses, expression contracts).
 fn slim(described: &Value) -> Value {
     fn item(value: &Value) -> Value {
         let mut out = Obj::new();
-        for key in ["name", "prop", "head", "type"] {
+        for key in ["name", "prop", "head", "type", "reaches"] {
             if let Some(field) = value.get(key) {
                 out.insert(key.into(), field.clone());
             }
@@ -161,10 +161,28 @@ pub fn write(
 ) -> Result<(PathBuf, usize), String> {
     let path = cache_path(root);
     let inputs = Inputs::new(root);
-    let (mut entries, mut hashes) = match load(root) {
-        Ok(Some(cache)) => (cache.entries, cache.inputs),
-        _ => (Obj::new(), Obj::new()),
+    let (mut entries, mut hashes, mut kinds) = match load(root) {
+        Ok(Some(cache)) => (cache.entries, cache.inputs, cache.tracked_kinds),
+        _ => (Obj::new(), Obj::new(), Obj::new()),
     };
+    // Constant kinds for `type-lints`. A scoped run imports fewer modules, so
+    // its `missing` never replaces a kind an earlier run saw. The run's
+    // tracked set is the key set of its `tracked_kinds`: kinds of constants no
+    // longer tracked are pruned, and each entry written records the set's
+    // digest, so a later change of the set leaves the entry's `reaches`
+    // unchecked rather than wrong.
+    let run_kinds = described
+        .iter()
+        .find_map(|entry| entry.get("tracked_kinds").and_then(Value::as_object));
+    let run_digest = run_kinds.map(|run| tracked_digest(run.keys().map(String::as_str)));
+    if let Some(run) = run_kinds {
+        kinds.retain(|name, _| run.contains_key(name));
+        for (name, kind) in run {
+            if kind != "missing" || !kinds.contains_key(name) {
+                kinds.insert(name.clone(), kind.clone());
+            }
+        }
+    }
     let lookup: HashMap<&str, &Value> = described
         .iter()
         .filter(|entry| entry.get("error").is_none())
@@ -187,11 +205,12 @@ pub fn write(
         if solution.is_empty() {
             continue;
         }
-        entries.insert(
-            id.to_owned(),
-            json!({"theorem": theorem, "solution_module": solution,
-                   "input_digest": inputs.digest(solution), "description": slim(description)}),
-        );
+        let mut entry = json!({"theorem": theorem, "solution_module": solution,
+               "input_digest": inputs.digest(solution), "description": slim(description)});
+        if let Some(digest) = &run_digest {
+            entry["tracked_digest"] = json!(digest);
+        }
+        entries.insert(id.to_owned(), entry);
         written += 1;
     }
     for (file, hash) in inputs.files.borrow().iter() {
@@ -202,6 +221,7 @@ pub fn write(
         "note": "written by `truth bind-check` after running scripts/BindTypes.lean; read by `truth context`; not verification evidence",
         "inputs": hashes,
         "results": entries,
+        "tracked_kinds": kinds,
     });
     if let Some(parent) = path.parent() {
         fs::create_dir_all(parent).map_err(|error| format!("{}: {error}", parent.display()))?;
@@ -216,10 +236,22 @@ pub fn write(
     Ok((path, written))
 }
 
+/// The digest of a tracked-constant set (order-insensitive), as recorded per
+/// cache entry under `tracked_digest`.
+pub fn tracked_digest<'n>(names: impl Iterator<Item = &'n str>) -> String {
+    let mut sorted: Vec<&str> = names.collect();
+    sorted.sort_unstable();
+    sorted.dedup();
+    format!("sha256:{}", sha256_hex(sorted.join("\n").as_bytes()))
+}
+
 /// A loaded cache.
 pub struct Cache {
     entries: Obj,
     inputs: Obj,
+    /// The kind of each tracked constant (`scripts/BindTypes.lean`,
+    /// `tracked_kinds`) as last seen; advisory, not keyed by input digests.
+    pub tracked_kinds: Obj,
 }
 
 /// The cache of `root`: `None` when absent, an error when unreadable.
@@ -238,6 +270,7 @@ pub fn load(root: &Path) -> Result<Option<Cache>, String> {
     Ok(Some(Cache {
         entries: object("results").ok_or("no results object")?,
         inputs: object("inputs").unwrap_or_default(),
+        tracked_kinds: object("tracked_kinds").unwrap_or_default(),
     }))
 }
 
@@ -250,6 +283,14 @@ pub enum Lookup {
 }
 
 impl Cache {
+    /// The tracked-constant digest recorded with a result's entry, if any.
+    pub fn tracked_digest_of(&self, result: &str) -> Option<&str> {
+        self.entries
+            .get(result)
+            .and_then(|entry| entry.get("tracked_digest"))
+            .and_then(Value::as_str)
+    }
+
     pub fn lookup(&self, inputs: &Inputs, result: &Obj) -> Lookup {
         let id = result.get("id").and_then(Value::as_str).unwrap_or_default();
         let Some(entry) = self.entries.get(id) else {

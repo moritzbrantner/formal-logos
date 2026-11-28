@@ -147,6 +147,19 @@ jobs:
       - name: Bind argument records to result theorem types
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth bind-check
+      # Metadata lints over the elaborated types bind-check just cached (#2103):
+      # whole-argument tests that do not certify a registered logical premise, and
+      # linked definitions the statement's bound type does not reach. Advisory: it
+      # reports findings new since the base and never fails the job.
+      - name: Report type metadata lints
+        if: needs.comparator-plan.outputs.lean == 'true' && github.event_name == 'pull_request'
+        run: |
+          {
+            echo "### Type metadata lints (\`truth type-lints --base HEAD^1\`, warnings)"
+            echo '```text'
+            target/release/truth type-lints --base HEAD^1 2>&1 || true
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
       # The formal status of every definition (#1652 L3): Lean recomputes
       # corpus/definition-status.json. A fresh entry that disagrees with Lean
       # fails; stale entries fail only once corpus/definition-status-config.json

@@ -59,6 +59,7 @@ mod synthesis;
 mod territory;
 mod thickness;
 mod tree;
+mod type_lints;
 mod unused_premises;
 mod workers;
 
@@ -111,6 +112,7 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] strength-report [--output FILE] [--build-input | --check-input]
        truth [--root PATH] [--json] unused-premises [--strict] [--exemptions FILE] [--frontier-root STATEMENT]
              [--bind-json FILE] [--usage-json FILE]
+       truth [--root PATH] [--json] type-lints [--base REV]
        truth [--root PATH] [--json] lean-reuse --review [--usage-json FILE]
        truth [--root PATH] [--json] tree STATEMENT [--down N] [--up N] [--budget N]
              [--materialize-edge KEY]
@@ -200,6 +202,7 @@ pub const COMMANDS: &[Command] = &[
     strength::COMPARISONS,
     strength::REPORT,
     unused_premises::COMMAND,
+    type_lints::COMMAND,
     lean_reuse::COMMAND,
     attribution_check::COMMAND,
     tree::COMMAND,

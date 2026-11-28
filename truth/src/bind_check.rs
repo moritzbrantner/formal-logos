@@ -379,6 +379,12 @@ pub fn tool_input_with(
             list(&mut sense_constants.iter()),
             list(&mut sense_theorems.iter()),
         ));
+        // `reaches` for the metadata lints (`truth type-lints`), recorded in
+        // the elaborated-type cache; binding ignores it.
+        out.push_str(&format!(
+            ", \"tracked_constants\": {}",
+            list(&mut crate::type_lints::tracked_constants(corpus).iter()),
+        ));
     }
     if !contract_theorems.is_empty() {
         out.push_str(&format!(

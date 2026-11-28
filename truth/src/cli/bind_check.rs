@@ -156,7 +156,11 @@ fn scope(
 
 /// Python `changed_paths`: paths changed from `base` to `head`, or to the
 /// working tree (tracked edits plus untracked, non-ignored files).
-fn changed_paths(root: &Path, base: &str, head: Option<&str>) -> Result<Vec<String>, Failure> {
+pub(super) fn changed_paths(
+    root: &Path,
+    base: &str,
+    head: Option<&str>,
+) -> Result<Vec<String>, Failure> {
     let git = |arguments: &[&str]| -> Result<Vec<String>, Failure> {
         let output = Process::new("git")
             .args(arguments)
@@ -200,7 +204,7 @@ fn changed_paths(root: &Path, base: &str, head: Option<&str>) -> Result<Vec<Stri
 
 /// `affected_results.select(root, changed)`, which stays Python: the mode
 /// (`full` or `subset`) and the selected result IDs.
-fn affected(root: &Path, changed: &[String]) -> Result<(String, Vec<String>), Failure> {
+pub(super) fn affected(root: &Path, changed: &[String]) -> Result<(String, Vec<String>), Failure> {
     const SELECT: &str = "import json, sys\n\
         from pathlib import Path\n\
         sys.path.insert(0, sys.argv[1])\n\
