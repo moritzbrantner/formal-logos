@@ -12,7 +12,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Analyst finite normalized observer-conditioned model; selection and designer-calibration omissions separately reverse Bayes-factor direction. Nonvacuity and prior-odds control. Interpretation, calibration and theological bridges remain open. See docs/notes/fine-tuning-selection.md for rejected readings and exact boundaries. #2050: Equal observer-conditioned binary likelihoods give zero mutual information at any interior prior. The screened pair has identical certain fine reports despite unequal comparison weights; observing observerhood before selection distinguishes the same pair. The calibrated pair has positive fine-report information. Under the coherent interior Bayesian update profile, the Brier and Shannon zero conditions agree. Independent Astra review accepted the information-theoretic comparison and rejected the proposed teleonomy edge. The fixed Boolean filter did not exercise heritability or local advantage. The retained statements carry an explicit open connection plan to GOD_4.",
+  "summary": "Analyst finite normalized observer-conditioned model; selection and designer-calibration omissions separately reverse Bayes-factor direction. Nonvacuity and prior-odds control. Interpretation, calibration and theological bridges remain open. See docs/notes/fine-tuning-selection.md for rejected readings and exact boundaries. #2050: Equal observer-conditioned binary likelihoods give zero mutual information at any interior prior. The screened pair has identical certain fine reports despite unequal comparison weights; observing observerhood before selection distinguishes the same pair. The calibrated pair has positive fine-report information. Under the coherent interior Bayesian update profile, the Brier and Shannon zero conditions agree. Independent Astra review accepted the information-theoretic comparison and rejected the proposed teleonomy edge. The fixed Boolean filter did not exercise heritability or local advantage. The retained statements carry an explicit open connection plan to GOD_4.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2101: no finding.",
   "evidence": [
     "8bd85a69-2977-4e16-b4cd-5f0c1723e232",
     "237e878c-e671-46b0-a10c-25890ec8d90d",
@@ -38,6 +38,14 @@
       "model": "gpt-6.2-sol",
       "effort": "high",
       "date": "2026-11-26",
+      "pr": "PR-2101"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
       "pr": "PR-2101"
     }
   ],
