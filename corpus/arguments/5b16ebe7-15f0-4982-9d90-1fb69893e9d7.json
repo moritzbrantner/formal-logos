@@ -38,5 +38,8 @@
   "disambiguation_ids": [
     "8430c7dc-2972-4f47-87a9-ce4676533cdf",
     "4c3751a6-6b32-47f2-89c4-d094dabe5613"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Produces r (stand r y)` (in containedOfLoci); `Produces r (stand r x)` (in containedOfLoci). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

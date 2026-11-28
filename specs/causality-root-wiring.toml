@@ -34,6 +34,7 @@ meaning = "Some concrete candidate exists at w, by the existing Round 4 capacity
 id = "ACTUALITY-ONLY-INSOFAR-AS-BEING-FROM-MEINONGIAN-REFUTATION"
 definitions = ["DEF-ACT", "DEF-ESSE", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "actualityOnlyInsofarAsBeingFromRefutation"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InAct x esse`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-NO-ACTUALITY-WITHOUT-BEING"]
 conclusion = "STMT-ACTUALITY-ONLY-INSOFAR-AS-BEING"
 rule = "Excluded middle on InAct x esse, reductio against the negated existential"
@@ -51,6 +52,7 @@ meaning = "Nothing is in act and in potency in the same respect (the Prima Via p
 id = "MOVED-ONLY-AS-IN-POTENCY-FROM-ASHARITE-REFUTATION"
 definitions = ["DEF-MOTION-AS-REDUCTION", "DEF-POTENCY", "DEF-RESPECT", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "movedOnlyAsInPotencyFromAshariteRefutation"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InPotency x r`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-NO-MOVED-WITHOUT-POTENCY"]
 conclusion = "STMT-NOTHING-MOVED-EXCEPT-AS-IN-POTENCY"
 rule = "Excluded middle on InPotency x r, reductio against the negated existential"
@@ -60,6 +62,7 @@ meaning = "Whatever is moved in a respect is in potency in that respect, from th
 id = "MOVED-ONLY-AS-IN-POTENCY-FROM-COUNTERTUPLE-REFUTATION"
 definitions = ["DEF-MOTION-AS-REDUCTION", "DEF-POTENCY", "DEF-RESPECT", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "movedOnlyAsInPotencyFromCountertupleRefutation"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InPotency x r`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-NO-ACTUAL-MOVED-NOT-POTENT-COUNTERTUPLE"]
 conclusion = "STMT-NOTHING-MOVED-EXCEPT-AS-IN-POTENCY"
 rule = "Excluded middle on InPotency x r, reductio against the negated existential"
@@ -69,6 +72,7 @@ meaning = "Whatever is moved in a respect is in potency in that respect, from th
 id = "PER-SE-MOVER-LINK-FROM-OCCASIONALIST-REFUTATION"
 definitions = ["DEF-PER-SE-EFFICIENT-CAUSE-LINK", "DEF-PER-SE-ORDERED-SERIES", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "perSeMoverLinkFromOccasionalistRefutation"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `CausesAsCaused y x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-NO-OCCASIONALIST-MOVER-LINK-WITHOUT-CAUSE"]
 conclusion = "STMT-PER-SE-MOVER-LINK-IS-PER-SE-CAUSE-LINK"
 rule = "Excluded middle on CausesAsCaused y x, reductio against the negated existential"
@@ -78,6 +82,7 @@ meaning = "Every per se mover link is a per se cause link, from the conclusion o
 id = "COGITO-THOUGHT-OCCURS-FROM-RETORSION"
 definitions = ["DEF-PERFORMED-DOUBT-OF-THOUGHT", "DEF-SELF-EVIDENT-MARKING", "DEF-THOUGHT-OCCURRENCE"]
 theorem = "thoughtOccursFromRetorsion"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ e, Occurs e`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-COGITO-DOUBT-IS-PERFORMED", "STMT-COGITO-PERFORMED-DOUBT-OF-THOUGHT-SELF-REFUTING"]
 conclusion = "STMT-COGITO-THOUGHT-OCCURS"
 rule = "Existential elimination, universal instantiation, excluded middle"

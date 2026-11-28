@@ -175,6 +175,7 @@ meaning = "Derives the esse contract through the OPEN Eleatic principle (every e
 id = "EXISTING-IN-ACT-AT-FROM-MERE-POSSIBILITY"
 definitions = ["DEF-ACT", "DEF-COGITO-ESSE-PROFILE", "DEF-ESSE", "DEF-EXISTING-IN-ACT-AT", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-MERELY-POSSIBLE-CANDIDATE", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "existingInActAtFromMerePossibility"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InAct x esse`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-LACKING-ESSE-IS-MERELY-POSSIBLE", "STMT-MERELY-POSSIBLE-DOES-NOT-EXIST-AT"]
 conclusion = "STMT-EXISTING-IN-ACT-AT"
 rule = "Proof by cases (excluded middle), modus tollens"

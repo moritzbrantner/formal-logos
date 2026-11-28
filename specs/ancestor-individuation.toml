@@ -24,6 +24,7 @@ definitions = ["1dff2d68-1348-5e7e-8ee7-248af63c8c53"]
 [[argument]]
 id = "Full ancestor identity and well-foundedness force comparability by ancestry"
 theorem = "comparability"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `R a b`; `R b a`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 axioms = []
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "25697a6f-d4f8-55c4-9e12-2d6b6710c119", "A bearer is numerically identified by all its nonempty-path ancestors"]
 conclusion = "Every two distinct bearers are comparable by nonempty paths in the selected graph"

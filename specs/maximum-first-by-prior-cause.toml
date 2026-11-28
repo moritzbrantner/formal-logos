@@ -22,6 +22,7 @@ disambiguations = ["1795a62e-f78b-5f5b-94e7-9e7490824811", "00e0d443-eb39-56a3-9
 [[argument]]
 id = "Maximal in being is first being, from prior causes of being and no distinct cause"
 theorem = "maximumInBeingIsFirstBeingOfPriorCause"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to `y = m` (in maximumInBeingIsFirstBeingOfPriorCause), an identity question about a prior cause and a maximum (y = m), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["70e98bb5-a96d-5d69-870d-e6bd0df2b813", "18561596-1269-53ff-8505-c56e4348e335", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "eaa4c679-98a3-5e82-95ff-18bd1177ce74"
 axioms = []

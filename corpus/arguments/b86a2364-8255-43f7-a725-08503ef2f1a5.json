@@ -41,5 +41,8 @@
     "06fb4f51-ff5f-5c5e-b947-844f20de4174",
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
     "b1640e51-d7d4-5a80-9992-29fa1ded8048"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `φ s x y`; `v.better s x y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

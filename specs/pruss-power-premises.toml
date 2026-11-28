@@ -151,6 +151,7 @@ description = "The transfer applied to the route with Pruss's own premise (#1887
 id = "A necessary concrete varying giver, from Pruss's grounding with initiator presence and a difference in giving"
 label = "A necessary concrete varying giver, from Pruss's grounding and P2-delta"
 theorem = "actualAbsenceHolderIsNecessaryVaryingGiver"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt u y` (in prussActualAbsenceNecessaryPowerHolder). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "95bf8780-0e3c-49ba-b636-2274e2997a30", "A power for the actual contingent concreta's joint absence issues where its holder exists and gives otherwise", "a6906cab-59c4-4938-b6d1-991369e8ffb0", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"]
 conclusion = "Some necessary concrete holder of a power for the actual contingent concreta's joint absence varies its giving"
 rule = "Weaken P2-delta to P2-prime, apply the route with Pruss's premise, then apply P2-delta to its holder"
@@ -191,6 +192,7 @@ description = "A second support option for the transfer's conclusion: the distri
 id = "A necessary concrete being with power for w's obtaining at a world lacking the actual contingents, by Pruss's direction"
 label = "A necessary concrete holder of a power for w obtaining, by Pruss's own direction"
 theorem = "prussDirectionNecessaryHolder"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt u' y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-ACCESSIBILITY-SYMMETRIC", "18e5bd4e-8178-468e-b867-fbaf9c5988ad", "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174", "At each accessible world lacking the actual contingent concreta, some being has a power for w's obtaining", "A power, at a world lacking the actual contingent concreta, for w's obtaining issues where its holder exists", "Holders, at a world lacking the actual contingent concreta, of a power for w's obtaining are concrete"]
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_8", to = "NECESSARY_2", statement_id = "Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining", role = "conclusion"}]
 conclusion = "Some necessary concrete being at w has, at a world lacking the actual contingent concreta, power for w obtaining"
@@ -213,6 +215,7 @@ transcription = "assembly"
 id = "The stage-one node, from POWER_OVER_ESSE_1 over each actual contingent and a concrete foundational being"
 label = "The stage-one node, by the distributive powers at a concrete foundational being"
 theorem = "powerOverEachGivesNecessaryConcrete"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt u f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "Some holder of a power for the actual contingent concreta's joint absence has POWER_OVER_ESSE_1 over each", "c5da5e62-a9cd-4142-8d3a-a96f86548e88"]
 conclusion = "STMT-NECESSARY-CONCRETE-AT"
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT", role = "conclusion"}]

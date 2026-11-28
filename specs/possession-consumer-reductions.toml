@@ -6,6 +6,7 @@ results = "TruthCore.Results.Case.Catholicism.PossessionConsumerReductions"
 id = "d0c022f8-c53d-4c0f-917a-e16bb75ca9a5"
 label = "MOTION_1 actuality from distinct causal possession"
 theorem = "nothingMovesExceptInAct"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to `y = x` (in nothingMovesExceptInAct), an identity question about a mover and the moved (y = x), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-MOVER-CAUSES-WHAT-IT-MOVES-TO", "Whatever causes a perfection in another thing has it", "STMT-SELF-MOVER-MOVES-BY-A-DISTINCT-PART", "STMT-WHOLE-IN-ACT-THROUGH-ITS-PART"]
 conclusion = "STMT-NOTHING-MOVES-EXCEPT-AS-IN-ACT"
 axioms = []
@@ -17,6 +18,7 @@ meaning = "Analyst formulation, attribution deferred. Distinct movers cause the 
 id = "c201b61a-14ad-4fcb-8ae6-acdaabb213c2"
 label = "Grades maximum from distinct causal possession"
 theorem = "gradesHaveAMaximum"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ w, MoreIn r w z`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-MORE-SUCH-HAS-THE-PERFECTION", "Whatever causes a perfection in another thing has it", "STMT-EXCEEDED-PERFECTION-IS-CAUSED", "STMT-NO-INFINITE-REGRESS-OF-CAUSES-OF-A-PERFECTION", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-GRADES-HAVE-A-MAXIMUM"
 axioms = []

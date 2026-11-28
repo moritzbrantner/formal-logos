@@ -10,6 +10,7 @@ results = "TruthCore.Results.Causality.NecessarySenseClassicalConverse"
 [[argument]]
 id = "NECESSARY_2 box K root node from the NECESSARY_3 tertia via node and excluded middle"
 theorem = "tertiaViaToBoxK"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v n`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["tertiaViaIffBoxK"]
 premises = ["32a2f51c-a630-56a0-acc3-800637c18253", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "cdf897a8-5490-561a-b9d2-507486a3f192"

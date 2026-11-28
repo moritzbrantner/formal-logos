@@ -84,5 +84,8 @@
       "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
     }
   ],
-  "legacy_id": "CATHOLICISM-FROM-MAXIME-ENS-CAUSING-ALL"
+  "legacy_id": "CATHOLICISM-FROM-MAXIME-ENS-CAUSING-ALL",
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m' = m` (in godExistsFromMaximeEnsCausingAll), an identity question about two maxima (m' = m), before any is shown to be GOD_4, where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

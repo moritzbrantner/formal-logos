@@ -82,6 +82,7 @@ disambiguations = ["DISAMB-NECESSARY", "DISAMB-PURE-ACT-STRICTNESS", "DISAMB-POT
 [[argument]]
 id = "First Way mover is necessary, from PURE_ACT_5, firstness and POTENCY_1-or-cause"
 theorem = "firstMoverNecessaryByPotencyOrCause"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w is in POTENCY_1 or has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
 conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
 rule = "Reductio on contingency by cases, then excluded middle at each accessible world"
@@ -91,6 +92,7 @@ description = "Same-witness conditional result: the First Way's own first mover 
 [[argument]]
 id = "First Way mover is necessary, from firstness and a distinct esse-cause"
 theorem = "firstMoverNecessaryByEsseCause"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w has a distinct CAUSE_2 of its esse", "ee74c678-0a06-47d3-9c76-27ff798e9a01"]
 conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
 rule = "Reductio on contingency, then excluded middle at each accessible world"
@@ -110,6 +112,7 @@ description = "Support for B2 from the modal bridge B6, the existing selected-wo
 [[argument]]
 id = "First Way mover is necessary, from simplicity and distinct esse for contingents"
 theorem = "firstMoverNecessaryByEsseIdentity"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-SIMPLE", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w has esse distinct from its essence"]
 conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
 rule = "Contraposition of B6 at the first mover, then excluded middle"
@@ -119,6 +122,7 @@ description = "Same-witness conditional result, essence-esse route: the First Wa
 [[argument]]
 id = "First Way mover is necessary, from PURE_ACT_5 and POTENCY_1 for possible nonexistence"
 theorem = "firstMoverNecessaryByPotency"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "Every being contingent at w is in POTENCY_1 in some respect"]
 conclusion = "Some first mover moved by none is PURE_ACT_5, exists at w and at every accessible world"
 rule = "Reductio on contingency against pure act, then excluded middle"
@@ -128,6 +132,7 @@ description = "Same-witness conditional result, potency route: pure act and B4 g
 [[argument]]
 id = "First Way mover is a necessary actual first root, from the grounding closure"
 theorem = "firstMoverNecessaryFirstRoot"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-THERE-IS-A-FIRST-UNMOVED-MOVER", "Whatever moves something exists at the reading world w", "Whatever moves something is CONCRETE_6", "STMT-FIRST-UNMOVED-MOVER-IS-FIRST-BEING", "STMT-FIRST-UNMOVED-MOVER-IS-PURE-ACT", "STMT-EVERY-CONTINGENT-GROUNDED-AT", "STMT-ACTUAL-GROUNDING-IS-SIMPLE-PRIORITY", "No actual concretum grounds itself under the selected grounding at w"]
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-EVERY-CONTINGENT-GROUNDED-AT"}]
 conclusion = "Some first mover moved by none is an actual root at w, necessary, first in being and PURE_ACT_5"

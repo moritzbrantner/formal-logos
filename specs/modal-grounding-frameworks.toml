@@ -128,6 +128,7 @@ disambiguations = ["DISAMB-KANT-CONTINGENCY", "DISAMB-CONCRETE-ABSTRACT-CRITERIA
 [[argument]]
 id = "Foundational beings are necessary at w, from power grounding"
 theorem = "pgpFoundationalNecessary"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "20d5fecd-950e-42f8-8dc9-3014491ff6ae"]
 conclusion = "Every being foundational at w exists at every world accessible from w"
 sense_bridges = [{term = "POSSIBLE_NOT_TO_BE", from = "POSSIBLE_NOT_TO_BE_2", to = "POSSIBLE_NOT_TO_BE_1", statement_id = "20d5fecd-950e-42f8-8dc9-3014491ff6ae"}]
@@ -138,6 +139,7 @@ description = "PGP's verdict 'necessary' on the foundational case, stated direct
 [[argument]]
 id = "Foundational beings are necessary at w, from esse distinct from essence in contingents"
 theorem = "esseIdentityFoundationalNecessary"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "96971e31-4782-4478-95b8-b6863a6a9412"]
 conclusion = "Every being foundational at w exists at every world accessible from w"
 rule = "Reductio on possible absence by B6"
@@ -177,7 +179,7 @@ description = "The standing rival's verdict 'possibly absent', with its exact co
 [[argument]]
 id = "A necessary concrete power-holder for no contingent concretum, by Aristotelian modality"
 theorem = "prussNecessaryPowerHolder"
-strong_version_needed = { "62b4a40a-919e-5da4-998c-131c386b7361" = "Historical global-frame interface. Sibling result 316fa523-efe7-49c1-839e-6faa96ba6ae9 uses selected-world Euclidean access, retaining the same global power content." }
+strong_version_needed = { "62b4a40a-919e-5da4-998c-131c386b7361" = "Historical global-frame interface. Sibling result 316fa523-efe7-49c1-839e-6faa96ba6ae9 uses selected-world Euclidean access, retaining the same global power content.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt u y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-EUCLIDEAN-FRAME", "94393b5b-8950-4a52-aef1-50cd09232e64", "A power for there being no contingent concretum issues in a world where its holder exists", "Whatever has at w a power for there being no contingent concretum is concrete", "0dc833c1-3b2f-4769-a09e-531f0da12455", "Some concrete being is CONTINGENCY_1 at w"]
 conclusion = "Some necessary concrete being at w has a power for there being no contingent concretum"
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "Some necessary concrete being at w has a power for there being no contingent concretum", role = "conclusion"}]
