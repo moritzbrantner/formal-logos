@@ -1,0 +1,9 @@
+{
+  "id": "6e31917c-7434-4135-8511-34220182aba1",
+  "label": "PROBABILITY_ASSIGNMENT_4: likelihood among observers after positive cell reweighting",
+  "term": "Observer-cell weighted likelihood",
+  "definition": "For a three-cell sampling row and positive weights r and t on its evidence and other-observer cells, the evidence-cell mass times r divided by the sum of both reweighted observer-cell masses. Unit weights give the existing observer-conditioned likelihood. Weights are not thereby calibrated counts or physical probabilities.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the plenitude controls (#2143); no source attribution or physical application is assumed.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.weightedLikelihood"
+}

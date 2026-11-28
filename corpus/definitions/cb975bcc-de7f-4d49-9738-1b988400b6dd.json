@@ -1,0 +1,9 @@
+{
+  "id": "cb975bcc-de7f-4d49-9738-1b988400b6dd",
+  "label": "Finite relative frequency of an event",
+  "term": "Finite relative frequency of an event",
+  "definition": "Number of members of the finite set satisfying the event divided by its total cardinality as a real number. The empty-sample value is Lean's total division and irrelevant to the limits here.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Logic.CarrierProbability.frequency"
+}

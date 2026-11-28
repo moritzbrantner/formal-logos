@@ -1,0 +1,9 @@
+{
+  "id": "b1e17aae-ec07-4319-b63f-e0de329f91b2",
+  "label": "Strictly interior probability value",
+  "term": "Strictly interior probability value",
+  "definition": "A member of Mathlib's unit interval strictly between zero and one.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Logic.CarrierProbability.InteriorRate"
+}

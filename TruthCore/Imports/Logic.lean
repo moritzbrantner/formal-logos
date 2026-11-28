@@ -7,6 +7,7 @@ public import TruthCore.Logic.AdaptivePrediction
 public import TruthCore.Logic.AssertionRetorsion
 public import TruthCore.Logic.AtomismIndependence
 public import TruthCore.Logic.BeliefReasonWitness
+public import TruthCore.Logic.CarrierProbability
 public import TruthCore.Logic.CaseNonContradiction
 public import TruthCore.Logic.CertifiedCorrection
 public import TruthCore.Logic.CogitoConcrete
