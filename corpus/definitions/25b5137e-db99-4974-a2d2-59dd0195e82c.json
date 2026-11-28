@@ -1,0 +1,9 @@
+{
+  "id": "25b5137e-db99-4974-a2d2-59dd0195e82c",
+  "label": "Stationary law of a Markov kernel",
+  "term": "stationary law of a Markov kernel",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.Stationary",
+  "definition": "A PMF is stationary for a kernel when one step of the kernel (PMF.bind) returns the same PMF.",
+  "note": "Stationarity is not convergence: an iterated law can fail to approach the unique stationary one."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "7d0ac706-c578-4277-a5bc-d462c1087868",
+  "label": "Test by realization and sample controls of per-effect direction",
+  "subject_kind": "result",
+  "subject_id": "cf8e0adc-91ac-49b1-929f-bbc21fbab807",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2f9a99cc-6cd4-4253-a112-e31dad6cd686",
+  "note": "Tests the step to per-effect direction (conclusion of argument 9203e79c): if a giver's choice settled only a law, seeing to the law's adoption is compatible with seeing to neither the particular effect nor its contrary, and a law's support matching the outputs does not establish causal realization. Per-effect direction then needs the premises of 9203e79c to bear on each effect, not on a law. The STIT model has no plan or governing vocabulary, so it tests this only at the level of seeing-to. It neither supports nor refutes the statement."
+}

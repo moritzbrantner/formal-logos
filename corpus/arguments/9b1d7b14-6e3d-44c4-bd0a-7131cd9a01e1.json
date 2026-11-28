@@ -1,0 +1,25 @@
+{
+  "id": "9b1d7b14-6e3d-44c4-bd0a-7131cd9a01e1",
+  "label": "Law fork under the contingent-fact PSR, applied alike to laws and adoptions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
+  "inference_ids": [
+    "1495ab84-1ec4-4dc9-8e17-8ae86b6f8236"
+  ],
+  "meaning": "Premise-free. If the tracked value differs at an accessible world, the tracking fact holds at a and fails there, so it is contingent and the contingent-fact PSR supplies an admitted reason; if it is constant, the fact holds at every accessible world and is not contingent. When the operating law is the adopted law, the same variation makes both tracking facts contingent. The matched model computes the masses 3/4 and 1/4, the positive likelihood of every record, the PSR failure without a reason, and an admitted base reason holding at the rival context.",
+  "definition_ids": [
+    "0a36cead-b4fc-4248-a9f2-884edf61d89f",
+    "32ab2937-0d02-452d-86cf-0113c6d50ed7",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "7ec53aa6-58ba-4a82-b55d-ad53435f03cb",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "c9574404-a0e5-4a88-a24f-60b87e41d226",
+    "d84f1b39-397f-4b80-b3b6-4201e37d3100"
+  ],
+  "disambiguation_ids": [
+    "a236004c-7bef-5ecb-a3b6-7ab5b25ce654",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265",
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

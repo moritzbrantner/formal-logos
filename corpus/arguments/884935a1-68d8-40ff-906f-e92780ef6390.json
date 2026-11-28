@@ -1,0 +1,15 @@
+{
+  "id": "884935a1-68d8-40ff-906f-e92780ef6390",
+  "label": "Law determination controls checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "1a78611f-1f13-4f04-9633-41e9d00fa099",
+  "inference_ids": [
+    "6c2a1cb6-0c46-4a97-a476-4cff45b41cd5"
+  ],
+  "meaning": "Premise-free. Invariance under a one-orbit permutation set makes the law constant, so normalization fixes it as uniform; explicit orbit laws give a continuum of invariant laws for two orbits; the binary stationarity equation is the real form of one bind step, from which uniqueness for positive switching, existence by an explicit law, and stationarity of every law for zero switching follow; the flip kernel moves each point mass to the other; mixtures preserve pointwise invariance, are injective when binary components differ, collapse by bind_const when they coincide, and for the 3/4 and 1/4 components give 1/4 + t/2.",
+  "definition_ids": [
+    "0a465487-4d9a-4b41-80d7-687e71ff9b31",
+    "25b5137e-db99-4974-a2d2-59dd0195e82c",
+    "a69282f2-e1ac-4ee6-a792-973cafd91e13"
+  ]
+}

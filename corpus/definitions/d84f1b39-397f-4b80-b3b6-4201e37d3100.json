@@ -1,0 +1,9 @@
+{
+  "id": "d84f1b39-397f-4b80-b3b6-4201e37d3100",
+  "label": "Fact tracking a selected value",
+  "term": "fact tracking a selected value",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.TracksValue",
+  "definition": "A fact of a PSRStrength arena holds at a world exactly when the selected value there (an operating law, or a selector's adopted content) equals its value at the designated actual world.",
+  "note": "A semantic application bridge: the fact is the obtaining of this value, not the existence of a mathematical object, and no reification of probability as a concrete being."
+}

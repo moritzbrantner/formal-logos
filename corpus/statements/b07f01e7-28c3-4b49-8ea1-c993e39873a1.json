@@ -1,0 +1,23 @@
+{
+  "id": "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
+  "label": "Law fork under the contingent-fact PSR, applied alike to laws and adoptions",
+  "paraphrase": "Premise-free consequences of the PSRStrength arena definitions. (1) For every arena, world a, fact f and selected value sel (a law, or any other content) such that f holds at a world exactly when sel there equals sel at a: if the contingent-fact PSR holds at a, then either sel is the same at every world accessible from a, or it differs at some accessible world and f has an admitted reason at a. (2) If sel is the same at every accessible world, f is not contingent at a. (3) If an operating law and a selector's adopted law coincide at every world, with facts tracking each, the contingent-fact PSR holds at a and the law differs at some accessible world, then both the law fact and the adoption fact have admitted reasons at a. (4) In a two-context model with the same finite record and the same credence the physical laws differ (3/4 and 1/4 at true), and neither gives the record zero independent-trial likelihood; the actual-law fact is contingent; with no admitted reason the contingent-fact PSR fails at the actual context, and with the everywhere-true base fact admitted as its reason the PSR holds there but that reason does not fix the law. A fact-PSR application, not the existence-PSR bridge 608a262d. It does not establish the contingent-fact PSR, that any actual law is contingent or necessary, or that an admitted reason is an intentional exercise.",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.LawSelectionFork",
+  "definition_ids": [
+    "d84f1b39-397f-4b80-b3b6-4201e37d3100",
+    "c9574404-a0e5-4a88-a24f-60b87e41d226",
+    "32ab2937-0d02-452d-86cf-0113c6d50ed7",
+    "7ec53aa6-58ba-4a82-b55d-ad53435f03cb",
+    "0a36cead-b4fc-4248-a9f2-884edf61d89f",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ],
+  "connection_plan": {
+    "target_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "missing_bridge": "Two joint premises: (a) the root's law or content fact is contingent, which puts it on the fork's second branch (for content, the existing open premise fbd0a6d3: every actual root withholds its giving of each grounded actual concretum at some accessible world); AND (b) at the actual root the only admissible reason for such a contingent fact is an intentional exercise of a rational power of that root. (a) alone yields only an admitted reason, which need not fix the law or be intentional (clause 4).",
+    "blocker": "No recorded premise supplies (b). The fork is symmetric: an adopted law is a contingent fact needing its own admitted reason (clause 3), and a necessary law and a necessary adoption alike escape the contingent-fact PSR (clause 2), so (b) cannot be read off the fork."
+  }
+}

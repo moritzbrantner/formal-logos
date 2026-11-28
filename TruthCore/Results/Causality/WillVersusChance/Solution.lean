@@ -2,6 +2,9 @@ module
 
 public import TruthCore.Causality.WillVersusChance
 public import TruthCore.Results.Modal.PrussPowerPremises.Solution
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.FinCases
+import Mathlib.Tactic.NormNum
 
 /-! Choice versus chance at a necessary, patientless source (stage two,
 `66aecdd7`): intellect and one power make every giving willed, and so make the
@@ -278,5 +281,114 @@ theorem willVersusChanceControls : Controls :=
   ⟨laws, theistNonvacuity, chanceRival, intellectualChancer, chanceCoreDeletions,
     omissionsIntellectRoute, omissionsHolderWill, omissionsThetaFive, omissionsGodWill,
     dnpStrictness, senseModels⟩
+
+open scoped ENNReal
+open TruthCore.Explanation.BinaryLaw
+
+theorem binaryLaw_exists (p q : ℝ≥0∞) (hp : 0 < p) (hq : 0 < q) (hs : p + q = 1) :
+    ∃ μ : PMF Bool, (∀ b, 0 < μ b) ∧ μ true = p ∧ μ false = q := by
+  refine ⟨binaryLaw p q hs, ?_, binaryLaw_true p q hs, binaryLaw_false p q hs⟩
+  intro b
+  cases b
+  · rw [binaryLaw_false]; exact hq
+  · rw [binaryLaw_true]; exact hp
+
+theorem binary_unique_of_symmetry (μ ν : PMF Bool)
+    (hμ : μ true = μ false) (hν : ν true = ν false) : μ = ν := by
+  have sμ := binary_real_sum μ
+  have sν := binary_real_sum ν
+  rw [← hμ] at sμ
+  rw [← hν] at sν
+  have ht : (μ true).toReal = (ν true).toReal := by linarith
+  apply binary_unique_of_mass
+  simpa only [ENNReal.ofReal_toReal (μ.apply_ne_top true),
+    ENNReal.ofReal_toReal (ν.apply_ne_top true)] using congrArg ENNReal.ofReal ht
+
+private theorem eighths_normalized (a b : ℝ≥0∞) (h : a + b = 8) :
+    a / 8 + b / 8 = 1 := by
+  rw [← ENNReal.add_div, h]
+  exact ENNReal.div_self (by norm_num) (by norm_num)
+
+private theorem eighths_pos (a : ℝ≥0∞) (h : a ≠ 0) : 0 < a / 8 :=
+  ENNReal.div_pos h (by norm_num)
+
+private theorem eighths_lt (a b : ℝ≥0∞) (h : a < b) : a / 8 < b / 8 :=
+  (ENNReal.div_lt_div_iff_left (by norm_num) (by norm_num)).mpr h
+
+theorem allTiedOptimal (μ : PMF Bool) : TiedOptimalLaw μ := by
+  intro b _
+  refine ⟨Set.mem_univ b, ⟨⟨b, Set.mem_univ b, rfl⟩, ?_⟩⟩
+  rintro _ ⟨x, _, rfl⟩
+  exact le_rfl
+
+theorem sameRankingDifferentLaw :
+    ∃ μ ν : PMF Bool, (∀ b, 0 < μ b ∧ 0 < ν b) ∧
+      μ true < μ false ∧ ν true < ν false ∧ μ true ≠ ν true ∧
+      TiedOptimalLaw μ ∧ TiedOptimalLaw ν := by
+  obtain ⟨μ, hμ, htμ, hfμ⟩ :=
+    binaryLaw_exists (1 / 8) (7 / 8) (eighths_pos 1 (by norm_num))
+      (eighths_pos 7 (by norm_num)) (eighths_normalized 1 7 (by norm_num))
+  obtain ⟨ν, hν, htν, hfν⟩ :=
+    binaryLaw_exists (3 / 8) (5 / 8) (eighths_pos 3 (by norm_num))
+      (eighths_pos 5 (by norm_num)) (eighths_normalized 3 5 (by norm_num))
+  refine ⟨μ, ν, fun b => ⟨hμ b, hν b⟩, ?_, ?_, ?_, allTiedOptimal μ, allTiedOptimal ν⟩
+  · rw [htμ, hfμ]
+    exact eighths_lt 1 7 (by norm_num)
+  · rw [htν, hfν]
+    exact eighths_lt 3 5 (by norm_num)
+  · rw [htμ, htν]
+    exact ne_of_lt (eighths_lt 1 3 (by norm_num))
+
+theorem symmetricLawExists :
+    ∃ μ : PMF Bool, (∀ b, 0 < μ b) ∧ μ true = μ false := by
+  obtain ⟨μ, hμ, ht, hf⟩ :=
+    binaryLaw_exists (4 / 8) (4 / 8) (eighths_pos 4 (by norm_num))
+      (eighths_pos 4 (by norm_num)) (eighths_normalized 4 4 (by norm_num))
+  exact ⟨μ, hμ, ht.trans hf.symm⟩
+
+private theorem orbit_normalized (a b : ℝ≥0∞) (h : a + a + b = 8) :
+    a / 8 + a / 8 + b / 8 = 1 := by
+  rw [← ENNReal.add_div, ← ENNReal.add_div, h]
+  exact ENNReal.div_self (by norm_num) (by norm_num)
+
+theorem samePartialSymmetryDifferentLaw :
+    ∃ μ ν : PMF (Fin 3), (∀ i, 0 < μ i ∧ 0 < ν i) ∧
+      μ 0 = μ 1 ∧ ν 0 = ν 1 ∧ μ 2 ≠ ν 2 := by
+  let μ := twoOrbitLaw (1 / 8) (6 / 8) (orbit_normalized 1 6 (by norm_num))
+  let ν := twoOrbitLaw (2 / 8) (4 / 8) (orbit_normalized 2 4 (by norm_num))
+  refine ⟨μ, ν, ?_, ?_, ?_, ?_⟩
+  · intro i
+    fin_cases i <;> simp [μ, ν, twoOrbitLaw, PMF.ofFintype_apply]
+  · simp [μ, twoOrbitLaw, PMF.ofFintype_apply]
+  · simp [ν, twoOrbitLaw, PMF.ofFintype_apply]
+  · change (6 : ℝ≥0∞) / 8 ≠ 4 / 8
+    exact ne_of_gt (eighths_lt 4 6 (by norm_num))
+
+theorem choicePartitionControl :
+    TruthCore.Modal.STIT.Dstit () (lawHistory true false) (lawCreates true) ∧
+    TruthCore.Modal.STIT.Cstit () (lawHistory true true) (fun h => ¬ lawCreates true h) ∧
+    lawCreates false (lawHistory false false) ∧
+    ¬ TruthCore.Modal.STIT.Cstit () (lawHistory false false) (lawCreates false) := by
+  have hcreate : TruthCore.Modal.STIT.Cstit () (lawHistory true false) (lawCreates true) := by
+    intro k hk
+    have hv : false = k.val := hk
+    exact ⟨(), rfl, rfl, hv.symm⟩
+  have hwithhold : TruthCore.Modal.STIT.Cstit () (lawHistory true true)
+      (fun h => ¬ lawCreates true h) := by
+    intro k hk
+    have hv : true = k.val := hk
+    rintro ⟨_, _, _, hc⟩
+    exact Bool.noConfusion (hv.trans hc)
+  refine ⟨⟨hcreate, ?_⟩, hwithhold, ⟨(), rfl, rfl, rfl⟩, ?_⟩
+  · intro h
+    exact hwithhold (lawHistory true true) rfl (h (lawHistory true true))
+  · intro h
+    obtain ⟨_, _, _, hc⟩ := h (lawHistory false true) rfl
+    exact Bool.noConfusion hc
+
+theorem distributionGroundingControls : DistributionGroundingControls :=
+  ⟨chanceRival, binaryLaw_exists, sameRankingDifferentLaw, binary_unique_of_mass,
+    binary_unique_of_symmetry, symmetricLawExists, samePartialSymmetryDifferentLaw,
+    choicePartitionControl⟩
 
 end TruthCore.Results.Causality.WillVersusChance

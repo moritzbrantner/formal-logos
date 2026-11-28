@@ -1,0 +1,13 @@
+{
+  "id": "769cc04f-2560-4292-ba73-f613272a82b4",
+  "label": "Support does not settle realization; adopting a law does not settle its sample",
+  "paraphrase": "Premise-free finite models. (1) For every full-support PMF on the two world labels, the support of its image law on effects is exactly the set of outputs of the act both in #462's varying output profile (a necessary source whose sole act yields effect some w at world w) and in the emptied profile, which has the same frame, existence table, source, act and output table but no causal edges. Only the varying profile realizes its outputs causally (RealizedOutputs). (2) In a one-agent STIT frame over histories (adopted, sample) whose choice cells are fixed by the adoption coordinate, the agent deliberatively sees to the adoption at the history (true, true): adoption holds throughout its cell and is not historically necessary. The sample there is true, but the agent sees to neither the sample nor its contrary. (3) In every STIT frame, if the agent's choice cell at a history contains a history where an effect fails, the agent does not see to the effect at that history; this needs no hypothesis about what else the agent sees to, so seeing to a law does no work in it (the slice's form with a Dstit hypothesis on the law is a weakening). The STIT vocabulary has no plan or governing relation. The emptied profile is a structural independence control, not a countermodel to an actual intrinsically productive disposition; nothing is established about any actual source, plan or law.",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.RealizationSampleControls",
+  "definition_ids": [
+    "b08fddc6-584e-4e39-897d-7758b92e0e95",
+    "e36a3cf1-be2c-51a0-bb55-f388c115e11d",
+    "d3b970fa-abdd-553e-baa9-0a337fa24c26",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ]
+}

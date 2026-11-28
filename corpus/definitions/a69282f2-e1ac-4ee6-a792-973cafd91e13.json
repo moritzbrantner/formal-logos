@@ -1,0 +1,9 @@
+{
+  "id": "a69282f2-e1ac-4ee6-a792-973cafd91e13",
+  "label": "Permutation set acting with one orbit",
+  "term": "permutation set acting with one orbit",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.ActsTransitively",
+  "definition": "For any two outcomes, some permutation in the set carries the first to the second.",
+  "note": "Stated for an arbitrary set of permutations, not only a group; the uniqueness theorem needs nothing more."
+}

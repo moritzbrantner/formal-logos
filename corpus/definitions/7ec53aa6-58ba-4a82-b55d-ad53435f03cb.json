@@ -1,0 +1,9 @@
+{
+  "id": "7ec53aa6-58ba-4a82-b55d-ad53435f03cb",
+  "label": "Independent trial record likelihood",
+  "term": "independent trial record likelihood",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.iidLikelihood",
+  "definition": "The product of singleton PMF masses for an ordered finite record, including empty product one.",
+  "note": "Only under explicitly stationary independent trial assumptions; no inference of those assumptions from frequencies."
+}

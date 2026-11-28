@@ -14,6 +14,7 @@ public import TruthCore.Explanation.AnselmUltimateSource
 public import TruthCore.Explanation.AutonomousGroundConcrete
 public import TruthCore.Explanation.AutonomousGroundNecessity
 public import TruthCore.Explanation.BCCFDerivative
+public import TruthCore.Explanation.BinaryLaw
 public import TruthCore.Explanation.BorrowedExercise
 public import TruthCore.Explanation.BruteContingencyParity
 public import TruthCore.Explanation.CompleteResponseParity
@@ -55,6 +56,7 @@ public import TruthCore.Explanation.NecessaryFactBoundary
 public import TruthCore.Explanation.NecessaryUltimateSource
 public import TruthCore.Explanation.NoBruteExistence
 public import TruthCore.Explanation.NoFoundationLawChaos
+public import TruthCore.Explanation.ObjectiveProbability
 public import TruthCore.Explanation.OrderingCardinality
 public import TruthCore.Explanation.PSRLaterAxes
 public import TruthCore.Explanation.PSRSelfApplication
