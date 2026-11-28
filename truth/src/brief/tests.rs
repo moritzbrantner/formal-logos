@@ -2116,6 +2116,45 @@ end TruthCore.Results.Causality.ContingentAncestry
 }
 
 #[test]
+fn library_candidates_skip_comment_prose_and_keep_assignments_inside_types() {
+    let root = fixture("question-library-comments");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let path = "TruthCore/Results/Fixture/Comments/Solution.lean";
+    write(
+        &root,
+        path,
+        r#"namespace TruthCore.Results.Fixture.Comments
+/-- The bridge gives common nature, and the imported
+theorem gives identity bridge. Conditional on the OPEN bridge. -/
+theorem uniqueIdentityBridge (h : Preserved (G := G) s) (x : C)
+    (q : Q { x with a := 1 }) : let y := x; IdentityBridge s y := by
+  exact h -- := not a signature
+/- outer /- inner -/
+theorem phantomIdentityBridge : True := by
+  trivial
+-/
+end TruthCore.Results.Fixture.Comments
+"#,
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) =
+        super::assessment_search::report_for_root(&root, &corpus, "identity bridge", 5).unwrap();
+    let candidates = report["lean_library_candidates"].as_array().unwrap();
+    assert_eq!(candidates.len(), 1, "{candidates:?}");
+    assert_eq!(
+        candidates[0]["name"],
+        "TruthCore.Results.Fixture.Comments.uniqueIdentityBridge"
+    );
+    assert_eq!(
+        candidates[0]["signature"],
+        "theorem uniqueIdentityBridge (h : Preserved (G := G) s) (x : C)\n    \
+         (q : Q { x with a := 1 }) : let y := x; IdentityBridge s y"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
 fn contingent_descent_retrieves_the_existing_necessary_ancestor_implementation() {
     let root = fixture("question-real-contingent-ancestry");
     std::fs::remove_dir_all(root.join("docs")).unwrap();

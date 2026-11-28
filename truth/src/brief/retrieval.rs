@@ -1127,18 +1127,109 @@ fn theorem_header(lines: &[&str], start: usize) -> Option<String> {
         return None;
     }
     let mut signature = String::new();
+    let mut scan = AssignmentScan::default();
     for (offset, line) in lines[start..].iter().enumerate() {
         if offset > 0 && !line.starts_with(char::is_whitespace) {
             break;
         }
-        if let Some((head, _)) = line.split_once(":=") {
-            signature.push_str(head.trim_end());
+        if let Some(at) = scan.proof_assignment(line) {
+            signature.push_str(line[..at].trim_end());
             break;
         }
         signature.push_str(line);
         signature.push('\n');
     }
     Some(signature.trim_end().to_owned())
+}
+
+/// Finds the declaration-level `:=` that starts a proof. An assignment inside
+/// brackets (named arguments, structure instances or updates) or one that
+/// belongs to a `let`/`have` in the statement is part of the type.
+#[derive(Default)]
+struct AssignmentScan {
+    depth: usize,
+    pending_bindings: usize,
+}
+
+impl AssignmentScan {
+    /// Byte offset of the proof assignment in `line`, if it occurs there.
+    fn proof_assignment(&mut self, line: &str) -> Option<usize> {
+        let mut chars = line.char_indices().peekable();
+        let mut previous_ident = false;
+        while let Some((at, ch)) = chars.next() {
+            match ch {
+                '-' if chars.peek().is_some_and(|&(_, next)| next == '-') => return None,
+                '(' | '[' | '{' | '⟨' | '⦃' => self.depth += 1,
+                ')' | ']' | '}' | '⟩' | '⦄' => self.depth = self.depth.saturating_sub(1),
+                ':' if chars.peek().is_some_and(|&(_, next)| next == '=') => {
+                    chars.next();
+                    if self.depth == 0 {
+                        if self.pending_bindings == 0 {
+                            return Some(at);
+                        }
+                        self.pending_bindings -= 1;
+                    }
+                }
+                c if is_identifier_char(c) && !previous_ident => {
+                    let rest = &line[at..];
+                    let end = rest
+                        .find(|c: char| !is_identifier_char(c))
+                        .unwrap_or(rest.len());
+                    if self.depth == 0 && matches!(&rest[..end], "let" | "have") {
+                        self.pending_bindings += 1;
+                    }
+                    while chars.peek().is_some_and(|&(i, _)| i < at + end) {
+                        chars.next();
+                    }
+                }
+                _ => {}
+            }
+            previous_ident = is_identifier_char(ch);
+        }
+        None
+    }
+}
+
+fn is_identifier_char(c: char) -> bool {
+    c.is_alphanumeric() || matches!(c, '_' | '.' | '\'' | '!' | '?')
+}
+
+/// For each line, whether it starts inside a (possibly nested) block comment.
+/// Indexed declaration names found there are prose, not declarations.
+fn lines_in_block_comment(lines: &[&str]) -> Vec<bool> {
+    let mut depth = 0usize;
+    let mut in_string = false;
+    let mut out = Vec::with_capacity(lines.len());
+    for line in lines {
+        out.push(depth > 0);
+        let mut chars = line.chars().peekable();
+        while let Some(ch) = chars.next() {
+            if in_string {
+                match ch {
+                    '\\' => {
+                        chars.next();
+                    }
+                    '"' => in_string = false,
+                    _ => {}
+                }
+                continue;
+            }
+            match (ch, chars.peek().copied()) {
+                ('/', Some('-')) => {
+                    chars.next();
+                    depth += 1;
+                }
+                ('-', Some('/')) if depth > 0 => {
+                    chars.next();
+                    depth -= 1;
+                }
+                ('-', Some('-')) if depth == 0 => break,
+                ('"', _) if depth == 0 => in_string = true,
+                _ => {}
+            }
+        }
+    }
+    out
 }
 
 fn adjacent_doc(lines: &[&str], start: usize) -> String {
@@ -1248,7 +1339,11 @@ impl LeanSource {
                 continue;
             };
             let lines: Vec<_> = text.lines().collect();
+            let commented = lines_in_block_comment(&lines);
             for (name, start) in declarations {
+                if commented[start] {
+                    continue;
+                }
                 let Some(signature) = theorem_header(&lines, start) else {
                     continue;
                 };
