@@ -1,0 +1,10 @@
+{
+  "id": "bbc8c9b5-2772-4701-ab67-5c3d84426749",
+  "label": "The selected mode or ranking fact explains the productive exercise",
+  "paraphrase": "OPEN relevance premise: the selected mode/ranking fact explains the selected productive-exercise fact at the chosen world in Arena.explains. A label, a correspondence table or the availability of possibilities alone does not establish the edge.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.ModeExplainsProductionAt",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "aa0323d7-985c-40d3-b377-8fd00eacaebf"
+  ]
+}

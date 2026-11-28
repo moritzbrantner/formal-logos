@@ -168,6 +168,8 @@ public import TruthCore.Causality.HolderRootIdentification
 public import TruthCore.Causality.HoldingFirstMover
 public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
+public import TruthCore.Causality.ImitabilityGrounding
+public import TruthCore.Causality.ImitabilityPlurality
 public import TruthCore.Causality.ImpersonalFoundationJoint
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper

@@ -1,0 +1,11 @@
+{
+  "id": "0f5b7197-c3f2-46ea-ab5d-68e5d7d5a15c",
+  "label": "The productive exercise is prior to each recipient existence fact",
+  "paraphrase": "OPEN bridge: for every effect to which the SAME source gives being at the chosen world and moment in K, the selected production fact explains that effect's existence fact in A. No facts about other frame fields are asserted. Strict esse-giving is the intended interpretation; fact-priority is an additional constraint, not its definition.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.GivingExercisePriorityAt",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "aa0323d7-985c-40d3-b377-8fd00eacaebf"
+  ]
+}

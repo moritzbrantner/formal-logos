@@ -1,0 +1,19 @@
+{
+  "id": "56b73ddc-dc1a-44f1-8eae-21eca97fd515",
+  "label": "Effect-absent possibilities and populated productive grounding, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "39fa3e04-1e9d-4668-b812-cda597ade170",
+  "inference_ids": [
+    "0815b2df-fa14-4859-ada1-e1340aa7bfdc"
+  ],
+  "meaning": "Checks the positive possibility-basis model, actual giving and the modal limits of its explanation relation. The contrast is with an actual-effect-dependent account; necessary extrinsic and intrinsic interpretations remain open. Modes are rigid fact specifications, not claimed real constituents. Analytical reason-variation scenarios are distinct from alternative complete worlds; no temporal before-creation claim is inferred.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "96f1dfe9-ff9f-41a1-aeec-37746dde1256",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "aa0323d7-985c-40d3-b377-8fd00eacaebf",
+    "fe123142-31a9-49b5-840b-716bd6a0a98f"
+  ]
+}

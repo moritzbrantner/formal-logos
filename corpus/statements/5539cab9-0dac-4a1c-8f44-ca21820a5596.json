@@ -1,0 +1,11 @@
+{
+  "id": "5539cab9-0dac-4a1c-8f44-ca21820a5596",
+  "label": "Identity, realizer factorization and symmetry limits on intrinsic plurality",
+  "paraphrase": "Three universal conditional laws. A constitutively simple bearer with all mode realizers real has a subsingleton mode carrier IF its realizer map is injective. An irreflexive ranking of those modes is empty IF it factors through that realizer alone. An asymmetric ranking cannot rank an exchanged pair IF the selected description preserves the exchange and ranking respects all description-preserving permutations. Neither injectivity, factorization nor explanatory completeness is inferred from common grounding. The same laws apply to formal modes and contents of one intellectual act.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityPlurality.IdentityAndRankingLaws",
+  "definition_ids": [
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "1998c3ed-fae1-4a32-a68d-1518c456d1ea",
+    "75d4dd78-c070-4961-8130-6b0d248863c3"
+  ]
+}

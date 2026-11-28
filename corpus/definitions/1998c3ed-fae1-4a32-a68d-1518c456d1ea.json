@@ -1,0 +1,9 @@
+{
+  "id": "1998c3ed-fae1-4a32-a68d-1518c456d1ea",
+  "label": "A selected description preserves exchanges and its ranking respects those symmetries",
+  "term": "description-preserving permutation and explanatory completeness of a ranking basis",
+  "basis": "stipulative",
+  "definition": "PreservesDescription description sigma says description (sigma c) = description c for each mode c, where sigma is a bijective permutation. RankingRespectsDescriptionSymmetries description rank says every such permutation preserves rank in both directions. This second predicate is an explicit OPEN completeness/invariance constraint: it is appropriate only if the supplied description exhausts the differentiating grounds relevant to the ranking. Sharing one bearer does not imply it. A constant source description preserves an exchange of two modes; a differing value description need not. Apprehension by the same subject is also only a constant description when further intentional content is omitted.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityPlurality.RankingRespectsDescriptionSymmetries",
+  "note": "These selected data are not declared to include every metaphysical fact. A primitive formal or dispositional value structure can reject completeness of the bare-source description without rejecting the symmetry principle for its fuller description. The same test applies to objects of a simple intellect."
+}
