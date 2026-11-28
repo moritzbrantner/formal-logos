@@ -1,0 +1,32 @@
+{
+  "id": "00629e1b-15f2-486c-923d-26c61eaeea5b",
+  "label": "In-root purity of requirements, from purity REQUIRES_LACK_1 and the sense bridge",
+  "premise_statement_ids": [
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
+    "c5396a7f-5084-498f-8c52-28455ea500b8"
+  ],
+  "conclusion_statement_id": "d83785e2-f572-4eb8-9098-0785da0e174d",
+  "inference_ids": [
+    "8fba8ad9-e480-40c8-8cb6-423c9fab3a2d"
+  ],
+  "meaning": "Fix an actual root r, a pure determination t of r and a set S of pure determinations. If t required, in r, the lack of S, then by the sense bridge t would require the lack of S as such, which the purity of requirements (0c8631bd) excludes. So the in-root purity premise is no stronger than 0c8631bd together with the bridge. It does not show the converse: a rival that denies the bridge can keep 0c8631bd and deny the in-root premise (simpleUnityCarriageMap, clause 3). No axioms.",
+  "definition_ids": [
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ],
+  "sense_bridges": [
+    {
+      "term": "REQUIRES_LACK",
+      "from": "f2edc5e5-a770-4939-9f71-52dba25c3086",
+      "to": "b86b5ed9-bc29-4d74-927c-021b30ad3d37",
+      "statement_id": "c5396a7f-5084-498f-8c52-28455ea500b8",
+      "role": "premise"
+    }
+  ]
+}

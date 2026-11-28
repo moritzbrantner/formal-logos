@@ -1,0 +1,15 @@
+{
+  "id": "c5396a7f-5084-498f-8c52-28455ea500b8",
+  "label": "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1",
+  "paraphrase": "OPEN sense bridge, analyst formulation, attribution deferred: for every actual concrete root r at w, every determination t that r has and every set S, if t requires the lack of S in r (REQUIRES_LACK_2) then t requires the lack of S as such, in every bearer (REQUIRES_LACK_1). It passes from requirement in the bearer to requirement as such. On the intended meaning of REQUIRES_LACK_1 (what a determination requires as such, no bearer of it violates), it fails for a determination that the root shares with a bearer having the excluded items: whatever the root's nature excludes in it, the shared determination as such does not. On the #2153 carrier the source's being, which the thinking effect shares, cannot require the lack of noesis as such under the necessity direction, because the effect's profile is admissible (simpleUnityCarriageMap, clause 4); in clause 3 the bridge fails for that being. It is near-analytic for a determination that only bearers of the root's nature have (clause 10), and there the dispute moves to the purity of requirements (0c8631bd) or to strict purity at roots (3b39e0ba).",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RootRequirementsInHoldAsSuch",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"
+  ],
+  "disambiguation_ids": [
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ]
+}
