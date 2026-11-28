@@ -1,0 +1,24 @@
+{
+  "id": "a4da59c9-5ce0-4007-98d5-690997b12570",
+  "label": "The inquiry PSR family is blind to necessary root facts and reaches E only through a sense bridge",
+  "paraphrase": "Certificate, analyst formulations. (1) For any two reason relations that agree on targets contingent at the world of evaluation, the contingent-fact PSR, NoBrute, the #756 bridges TrackingBridge, SupportCoverage, EvidenceBridge and GlobalDefeat, the skeptical-alternative presupposition NoBruteEvidenceAlternative, ReasonIndependent and IrreflexiveContingent hold of one exactly when they hold of the other; FactPSR does not (allNecessary with its reasons removed). (2) No brute-evidence alternative exists for a hypothesis true at every accessible world, and the contingent-fact PSR at every accessible world gives the skeptical presupposition. (3) Admitting every true necessary fact as a reason for every true necessary fact agrees with the original reasons on contingent targets; with excluded middle it meets FactPSR wherever the contingent-fact PSR held and turns GlobalDefeat into its unrestricted form; it keeps factivity, necessitation, distribution under the conjunct law, contingent irreflexivity and reason independence. (3b) The why-stance forms of BruteContingencyParity, which clause 1 does not cover because they bind every accepted fact a stance requires a reason why for, necessary ones included: under the same extension, with excluded middle, the contingent-fact PSR and a stance accepting only facts true at w, WhyHonors and ExcludesUnreasonedAcceptance (for every o) hold, so such a stance's demand for a reason why a root lacks d is met by an admitted reason. (4) With excluded middle, factive reasons not modally coextensive with any target (WorkIndependent at every reason) give each explained necessary truth a contingent reason; with FactPSR they are inconsistent at a world with a true fact and no contingent fact. (5) On the profile's frame, with lack facts represented and N, every lack of an actual root is necessary at w and not contingent. (6) On the profile's frame, with lack facts represented, essence-grounded modality, positive essences and the contingent-fact PSR, an unexplained absence at an actual root is a contingent lack with an admitted reason. (7) The reason-essence thesis, carriage and the necessity direction of member grounding give the sense bridge. (8) Support for root lacks that is profile-sound never supports an unexplained absence, and profile-sound support of every absence of an actual root gives E. (9) If only impure determinations require lacks and an actual root's determinations are pure, a positively fixed absence at that root is fixed by admissibility (case i or ii). (10) On the #2153 carrier, a source with profile {esse, a, b} at both worlds in the arena that admits necessary truths as reasons for necessary truths meets N, the lack facts, FactPSR at both worlds with factive, distributing, contingently irreflexive and independent reasons, every condition of (1) and the unrestricted GlobalDefeat at the actual world, with support from the observed event for its lack of noesis; the necessity direction holds for the open family; E and the sense bridge fail. (11) The same carrier with no reason for any lack meets every contingent-scoped condition of (1), and the PSR for root lack facts and FactPSR fail. Structural assignments only: not models of inquiry, evidence, essence or explanation.",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.InquiryScopeMap",
+  "definition_ids": [
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "02c59c61-4cd1-5698-9338-e4a37ebf71f4",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9",
+    "a61d3807-50e9-595e-9011-9123fd606a4b",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

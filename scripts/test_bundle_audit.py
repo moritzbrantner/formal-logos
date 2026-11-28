@@ -19,9 +19,13 @@ class BundleAuditTest(unittest.TestCase):
 
     def test_all_specialization_and_consumer_scope(self):
         audit = bundle_audit.check(audit=json.loads(bundle_audit.AUDITS[1].read_text()))
-        self.assertEqual(len(audit['records']), 153)
-        self.assertTrue({legacy_uuid('definition', 'DEF-INDEPENDENT-POTENCY'), legacy_uuid('disambiguation', 'DISAMB-POTENCY')} <=
-                        {row['id'] for row in audit['records']})
+        self.assertEqual(len(audit['records']), 154)
+        expected_records = {
+            legacy_uuid('definition', 'DEF-INDEPENDENT-POTENCY'),
+            legacy_uuid('disambiguation', 'DISAMB-POTENCY'),
+            '24693bb9-472f-440b-829d-1ebc3ac009b6',  # represented esse map
+        }
+        self.assertTrue(expected_records <= {row['id'] for row in audit['records']})
         self.assertEqual(sum(row['kind'] == 'results' for row in audit['records']), 5)
         missing = copy.deepcopy(audit)
         missing['consumer_result_ids'].pop()

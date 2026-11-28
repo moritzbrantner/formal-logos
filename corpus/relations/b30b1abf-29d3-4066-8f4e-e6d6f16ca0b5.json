@@ -1,0 +1,10 @@
+{
+  "id": "b30b1abf-29d3-4066-8f4e-e6d6f16ca0b5",
+  "label": "Controlled dependence laws test the operative-plan premise",
+  "subject_kind": "result",
+  "subject_id": "b5fe7a87-05d6-47f5-9dd5-a2ffe11815f4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4be0f774-2c0a-4691-9088-6e790940960a",
+  "note": "Gives one candidate criterion separating a governing plan from a merely agreeing one, under the interpretation that a merely foreseen plan is matched by a fixed profile, and shows that it does not supply the plan's apprehension or its primitive SpecifiesGiving."
+}

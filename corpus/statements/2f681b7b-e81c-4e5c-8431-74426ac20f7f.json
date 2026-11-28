@@ -1,0 +1,18 @@
+{
+  "id": "2f681b7b-e81c-4e5c-8431-74426ac20f7f",
+  "label": "Possibly some concrete GOD_4 exists at the standpoint",
+  "paraphrase": "Some world accessible from the standpoint w of the case profile's frame has some being that is GOD_4 under the case signature, concrete under the case profile, and exists there. Possibility is accessibility in the profile's frame, not conceivability.",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPossiblyExistsAt",
+  "definition_ids": [
+    "337b660c-ffd3-4316-af08-424ca641d6c9",
+    "539443e8-0f99-4cb9-925f-fb522d3cc042",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9",
+    "6f7a4ccc-10de-52fb-af44-41dcb793d8c9",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "7181df76-d6ed-5226-a34b-08910ddbe6a0"
+  ]
+}

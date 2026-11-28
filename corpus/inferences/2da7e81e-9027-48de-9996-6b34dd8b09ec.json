@@ -1,0 +1,14 @@
+{
+  "id": "2da7e81e-9027-48de-9996-6b34dd8b09ec",
+  "label": "GOD_4 joint-absence power from total noncreation, Euclidean access, monotone powers (inference)",
+  "input_statement_ids": [
+    "a8dedf3f-8890-460f-b50c-47f06198bdac",
+    "62b4a40a-919e-5da4-998c-131c386b7361",
+    "6fdd3f60-5c3d-4251-8d91-bdceb7e2f419"
+  ],
+  "output_statement_id": "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+  "rule": "At an accessible world with no contingent concretum, each concretum contingent at w is absent (Euclidean access); transfer the power along that entailment",
+  "meaning": "Let g be GOD_4: it exists at w and has a power for no contingent concretum. At an accessible v with no contingent concretum, a concretum x contingent at w and present at v would be contingent at v, because the world u from w where x is absent is accessible from v (Euclidean). So the actual contingents are jointly absent at every accessible total-absence world, and monotonicity transfers g's power. Constructive and zero-axiom.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,23 @@
+# The necessary-root bundle d6549981 (NecessaryRootIsMaximumAt) as a support
+# option for the root-route premise 5a594b1e (AtMostOneMaximeEns). Curation
+# pass 2 of #2103: the two verified producers of d6549981 (6b75bdf8, 6971850e)
+# had no consumer. Analyst formulation, attribution deferred.
+
+[batch]
+vocab = "TruthCore.Causality.NecessaryConcreteRouteBridge"
+results = "TruthCore.Results.Causality.NecessaryRootUniqueMaximum"
+
+[[argument]]
+id = "At most one maximum in being, from the necessary root identified with every maximum"
+theorem = "atMostOneMaximumOfNecessaryRoot"
+premises = ["d6549981-ba9d-53ac-9e0f-f578f3947d82"]
+conclusion = "5a594b1e-09b6-592c-862d-473874a6c49c"
+axioms = []
+definitions = ["a2a8de58-42e0-5481-b7fb-848ae8602036"]
+disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "c529e8d3-43e3-53a8-a82f-3955e9815265"]
+sense_bridges = [
+  { term = "NECESSARY", from = "NECESSARY_2", to = "NECESSARY_4", statement_id = "d6549981-ba9d-53ac-9e0f-f578f3947d82" },
+  { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_1", to = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2", statement_id = "d6549981-ba9d-53ac-9e0f-f578f3947d82" },
+]
+rule = "Identify each of two maxima in being with the one necessary root the premise supplies"
+meaning = "The premise d6549981 supplies one n that is an actual root of the selected relation at w, exists at every world accessible from w (NECESSARY_2), is necessary per se in the tertia via's modal reading (NECESSARY_4), and is identical with every y that is maximal in being under the same InAct, MoreIn and esse (IsMaximumIn, MAXIME_ENS_1). Given maxima x and y, the identity clause gives x = n and y = n, so x = y. That is AtMostOneMaximeEns for the same InAct, MoreIn and esse. Only the identity clause is used. Its standalone form, that some n equals every maximum, is equivalent to the conclusion on an inhabited carrier and is not a separate corpus statement, so no weaker non-circular premise is available. The step does not pass between the two NECESSARY senses or the two grounding senses: the premise carries both about the same witness, from its upstream derivation (isNecessaryOfNecessaryAt, and rootness defined as having no actual concrete ground), and the proof discards those clauses. Scope: InAct and MoreIn are not world-indexed; the bridge module reads them at w, and the conclusion is about those same predicates. The argument adds a support option for 5a594b1e whose warrant runs through the necessary-root route and the tertia via convergence (the population, restricted well-foundedness and contingent-grounding premises of either producer, 6b75bdf8 globally at w or 6971850e on one selected ancestry cone, with excluded middle, the necessity-cause bridge d29cebca, d9fad785, 79281639 and 3c468121, all upstream of d6549981). It shares d9fad785 with the genus-causation support ef122ccf and replaces that argument's d5a94eb1 (a cause of a quality is more such) with the necessary-root premises. It does not assert that anything is maximal in being."

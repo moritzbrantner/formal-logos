@@ -1,0 +1,34 @@
+{
+  "id": "8ce71fb8-b484-4273-8dca-fc9830b48d72",
+  "label": "A CONTINGENT_1 CONCRETE_AND_ABSTRACT_6 being, from the MIRROR_2 mirror image",
+  "premise_statement_ids": [
+    "a3cf255d-c910-461d-9bad-2c52d79fe894",
+    "598e90cb-7609-40c6-a9b5-e781e7298507",
+    "6a3db88a-98b9-4103-9d66-25ca03e34570",
+    "314f6b15-5743-4894-8b4f-b8fe3e692022",
+    "9331a979-7ca4-4047-b25f-54657d7c282a"
+  ],
+  "conclusion_statement_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "inference_ids": [
+    "76fcd210-23d8-4ea8-9f0c-6220ca4959f2"
+  ],
+  "meaning": "The mirror is taken in sense MIRROR_2 (CPT conjugation, Lean type CPTConjugation; term_senses MIRROR = MIRROR_2); MIRROR_1 (spatial reflection P) is a distinct type no premise uses. The CPT image τ.image w satisfies every essential truth (the actual world does, and the CPT map preserves those it satisfies), so it is accessible from w. Handedness at τ.image w is the opposite of handedness at w. The individual x exists at w and exists at τ.image w only if handedness there is w's, so x is absent at τ.image w: some actual concrete being is CONTINGENT_1 at w. The chirality premise is local to the CPT image; the earlier global form (x exists only at worlds sharing w's handedness) was stronger than the molecular example supports and is not used. The main theorem uses no axioms. The load is a possibility premise: under essence grounding necessity at w (the source of factivity), essence-grounded possibility and factivity, preservation is equivalent to the accessibility of the mirror image (Lean-only pres_iff_mirrorPossible), so the warrant for preservation is exactly the warrant for 'the mirror world is possible'. A concrete necessitarian who grounds possibility in essences must deny one of the five premises: a nature containing orientation, reversed handedness at the CPT image (by relationalism about global orientation, which rejects a global handedness feature, or by identity with the whole CPT image, which additionally needs charge conjugation and time reversal identified away), a brute impossibility not excluded by any nature, an actual world violating an essential truth, or that any actual concrete being is excluded from the CPT image (haecceitism about mirrored individuals, here identity across reflection and charge conjugation, so existence as antimatter). The warrant for that exclusion, under sortal essentialism, is the kind change by charge conjugation, which applies to achiral material beings too; chirality is the premise's formal shape, not its warrant. The Comparator companion mirrorControls (propext only) gives a positive row and, for each premise, a row where it alone fails, the other four hold and the conclusion fails. Rows 6-10 drop one premise and keep the conclusion; rows 6 and 9 do so only on frames where essence does not ground necessity, so they do not show that preservation carries less than the mirror's possibility. In the MIRROR_1 sense (plain reflection P), preservation would be doubtful on dispositional essentialism (the weak interaction is not reflection-invariant: option 1 at creaturely natures); this is why the argument is registered for MIRROR_2 only. The generic Lean-only contingentFromMirrorImage holds for any world map. The argument applies equally to a personal necessitarian and an impersonal one. Structural assignments only; the Lean-only notCollapsedFromMirror gives the full-collapse form (185ce448) from the first four premises alone.",
+  "definition_ids": [
+    "3fc924f3-6226-41ae-8032-f63ea44f27a9",
+    "7147bcb5-56be-414e-8079-46db23329fd9",
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e"
+  ],
+  "term_senses": {
+    "MIRROR": "ac9a1a86-4614-4d9a-bb6d-8d28b013354f"
+  }
+}

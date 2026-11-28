@@ -1,0 +1,9 @@
+{
+  "id": "3ca01752-0d5d-4140-be03-68150a17aefb",
+  "label": "No favouring determination favours a candidate over itself",
+  "paraphrase": "OPEN analyst premise, attribution deferred: for every bearer b, every favouring determination of b with profile phi, every scenario s and every candidate x, phi does not favour x over x at s. It is weaker than the asymmetry (net favouring) assumed by the #2163 outcome-independent favouring standard.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.FavouringIrreflexive",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"
+  ]
+}

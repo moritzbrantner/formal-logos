@@ -1,0 +1,10 @@
+{
+  "id": "a65a69d4-46ab-4e3a-b76a-28c60ff18d7d",
+  "label": "Rigidity is persistence plus accessible uniqueness of concrete GOD_4 (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "10e14149-902b-4966-8c8c-6f90d9f8cf81",
+  "rule": "Prove both directions of the biconditional",
+  "meaning": "Premise-free certified difference (#1598). Rigidity gives persistence (persists_of_rigid) and accessible uniqueness: any two concrete GOD_4 at an accessible world both equal the one at w. Conversely, persistence puts the concrete GOD_4 x at w at every accessible world where some concrete GOD_4 y exists, where x is again a concrete GOD_4. The difference then identifies y with x.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

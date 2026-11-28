@@ -1,0 +1,10 @@
+{
+  "id": "836522f5-b971-4ecd-8510-a2a72d1de111",
+  "label": "Matched four-account table under determination, by computation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "2fd35c12-7f85-44ac-96ac-31dc63aa1053",
+  "rule": "Apply the projection boundary at the nature level and relocation at the exercise level of each finite frame",
+  "meaning": "Each account is one accountFrame over the four outcomes. The nature level is invariant, so by law 3 it explains exactly the outcomes outside the account's scope; by law 4 it selects only in the one-outcome scope. The exercise level's cell is the actual outcome, so it selects; with a second outcome in scope, law 6 gives Dstit of its cell and the nature level's failure to see to it.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

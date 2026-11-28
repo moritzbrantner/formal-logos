@@ -1,0 +1,10 @@
+{
+  "id": "acce9ff7-78ac-415b-ba72-ca0f5aa265f1",
+  "label": "A source with only being against the q.7 a.1 bridge: controls, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "6694d214-277c-4db8-81dc-a8c99c45cce2",
+  "rule": "Explicit finite profile over Bool, checked by decision",
+  "meaning": "One source with only being, read with the role and the measure reading of limitation: each reading makes a different premise of the q.7 a.1 bridge fail. A structural surrogate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

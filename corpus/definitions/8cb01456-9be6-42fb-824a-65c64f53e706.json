@@ -1,0 +1,9 @@
+{
+  "id": "8cb01456-9be6-42fb-824a-65c64f53e706",
+  "label": "Natural appetite (favouring level): a favouring fixed by the bearer's natural state",
+  "term": "natural appetite, favouring-profile level (NaturalAppetite n φ)",
+  "definition": "NaturalAppetite n φ: the favouring profile φ is fixed by the natural state n (FixedBy φ n.state). A NaturalState gives, in each variation scenario, the bearer's non-apprehensive state: the response of its form or nature to the candidates, such as a power directed to manifestations, a mode in which it is imitable, or an end-directed tendency. It is intended to contain nothing the bearer apprehends; the Lean type does not enforce that. NaturalState and ApprehensionState are distinct Lean structures. Examples: a heavy body's tendency downward; Lane 2b's D-directed generative nature, fixed by a state that records only end-realization; the imitability-exemplar rival (A4), fixed by a state that records the candidates' full content. Non-example: a will that follows what it apprehends, when its natural state plays no role. The two modes are not exclusive in Lean: a favouring is fixed by both states when they are correlated in the scenario space.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AppetiteStandard.NaturalAppetite",
+  "note": "Stipulative analyst notion (#2145 lane H3), attribution deferred. It is the favouring-profile counterpart of NATURAL_APPETITE_1 (DEF 678b9306, inclination following a thing's own natural form) in disambiguation c40e9cab; that record's sense concerns the inclination, this one the favouring profile, typed by what fixes it. Determination to one end is the separate notion NaturalStateAdUnum (DEF e69e3826), not part of this definition. See docs/notes/causal-perfection-transfer.md, section 'Natural or rational appetite? The purity premises and the object of an original source's favouring'."
+}

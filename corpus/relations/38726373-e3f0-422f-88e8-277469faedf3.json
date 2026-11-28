@@ -1,0 +1,10 @@
+{
+  "id": "38726373-e3f0-422f-88e8-277469faedf3",
+  "label": "Test by CogitoSubject.nonSubstantialBearerModel (3b3664d6)",
+  "subject_kind": "result",
+  "subject_id": "960bfe08-9259-5125-8322-59ced63e25e0",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "3b3664d6-613c-57eb-b149-5b74389f8e48",
+  "note": "The sole Unit episode occurs and the sole Unit subject bears it. This witnesses both registered premises, ThoughtOccurs and EveryThoughtHasSubject, in one populated interpretation. The independently assigned Substance predicate has empty extension."
+}

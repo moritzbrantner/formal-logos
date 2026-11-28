@@ -8,5 +8,6 @@
   "claim_ids": [
     "6311aef8-4a6a-553c-b4cc-87f2a66ed42b"
   ],
-  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading"
+  "lean_declaration": "TruthCore.Latin.Aquinas.SummaTheologiae.ActualityOnlyInsofarAsBeingReading",
+  "note": "Accepted definition with a contested gloss. The declaration encodes only the dependence reading (R-dep: nothing has actuality except insofar as it is). The gloss 'esse is the actuality of all things, even of forms' is the source's (q.4 a.1 ad 3). Read strongly, it is an act-of-being thesis: R-act1 (8c64b036, esse received and limited) or R-act2 (254ee26f, intensive esse). Those readings are contested by the quantifier view and are not certified by this declaration (docs/notes/mode-of-being-subsistent-esse.md)."
 }

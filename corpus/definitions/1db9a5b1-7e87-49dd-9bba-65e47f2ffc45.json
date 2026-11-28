@@ -1,0 +1,9 @@
+{
+  "id": "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+  "label": "Essential exclusion: an ESSENCE_6 condition fails wherever the lacked item joins the profile",
+  "term": "essential exclusion of a determination (EssentiallyExcludes)",
+  "definition": "EssentiallyExcludes Ess Has x k: there are a being y and an ESSENCE_6 condition C with Ess y x C (it lies in the nature of y that x's profile satisfies C) such that C fails at every set of determinations that contains all of x's real determinations together with k. A nature excludes k given what x has. A bare negative clause 'lacks k' is such a condition, and so is an admissibility condition that excludes k.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.EssentiallyExcludes",
+  "note": "Stipulated for #2145 lane H2. It reuses ESSENCE_6 (8e1ba83c) and adds no primitive. It is an existential over conditions: one condition must exclude k at every extension, which is stronger than a different condition failing at each extension (what essence-grounded modality with necessity of root absences would give). It says nothing about whether the excluding condition is carried by a determination; that is carriage (682e6436)."
+}

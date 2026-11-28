@@ -1,0 +1,11 @@
+{
+  "id": "f3a50206-a3bc-4104-8212-99c2fe44a84d",
+  "label": "CREATURE_1 reception from R-act1 and CREATURE_1 not being its own being, checked",
+  "argument_id": "a476da53-25ef-46a4-9b46-6c75faccba11",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.creatureReceptionFromActOfBeing",
+  "comparator_config": "results/f3a50206-a3bc-4104-8212-99c2fe44a84d/comparator.json",
+  "status": "solution-present",
+  "description": "A creature is not its own being, so by R-act1 its esse is received in some principle. A further support option for the creature-reception leaf of the esse-root routes, alongside its q.7 a.2 support; through the first derivation it rests on the two unde bridges."
+}

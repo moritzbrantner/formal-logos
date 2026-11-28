@@ -1,0 +1,23 @@
+{
+  "id": "10db1848-8313-4802-94ba-488da3a6f63a",
+  "label": "Reasons for root absences lie in natures, from ESSENCE_6 exclusion of root absences",
+  "premise_statement_ids": [
+    "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2"
+  ],
+  "conclusion_statement_id": "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+  "inference_ids": [
+    "c89715c4-6333-446e-85c3-022b7ee9f0e9"
+  ],
+  "meaning": "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. Given the PSR for root lack facts and the lack facts the converse holds, so the two are then equivalent. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment.",
+  "definition_ids": [
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}

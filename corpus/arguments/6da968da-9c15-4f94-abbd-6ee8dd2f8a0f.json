@@ -1,0 +1,27 @@
+{
+  "id": "6da968da-9c15-4f94-abbd-6ee8dd2f8a0f",
+  "label": "Thinker-local anti-brute-root closes the contingent horn of the Cogito fork",
+  "premise_statement_ids": [
+    "7e9ca71a-643f-5bbc-8622-80144bd05480",
+    "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae"
+  ],
+  "conclusion_statement_id": "da31142e-34bd-579d-82a7-9b3745d534e6",
+  "inference_ids": [
+    "184288ac-e204-43f4-b72c-e28243a34890"
+  ],
+  "meaning": "On one profile m, world w and occurrence data. The fork 7e9ca71a gives either a necessary concrete ground-ancestor of some bearer of an occurring thought, or a ground-ancestor x of such a bearer that is concrete, exists at w, is contingent at w and has no actual concrete ground at w. The thinker-local anti-brute-root principle f8dafcc7 gives every such contingent ancestor an actual concrete ground at w, which contradicts the second horn. So the first horn holds. No excluded middle is used in this step; it enters the fork's own derivations. The fork is a derived statement (from the Cogito premises, thinker-local accessibility and excluded middle) and f8dafcc7 is an open premise. The step separates the existing necessary-ancestor route into the fork and its anti-brute-root step, with the same senses (thinker-local ancestry, accessibility-relative de re necessity).",
+  "definition_ids": [
+    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "ce8ccc1a-4f9a-5904-a10c-548778d79b66",
+    "c0cbef1c-060a-54d4-bb49-8d59da40caf3"
+  ],
+  "disambiguation_ids": [
+    "7507d645-874d-5434-add8-2f49c2801d36",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "8c07547d-832e-4d78-85e8-f33e0149131d",
+  "label": "The subsistent-esse pair is equivalent to: what is its own being has every pure perfection",
+  "paraphrase": "Analyst formulation, attribution deferred. For any own-being predicate, real-determination relation and purity predicate: the pair d164b1ff and c4fb87a6, existentially closed over the primitive OfBeing, is equivalent to the composite: what is its own being has every pure perfection. This is an instance of a general logical fact about two-premise decompositions and certifies nothing about warrant by itself. In every registered consumer (7d8bbdcb, 95c04a6d, ff74a7ac) OfBeing occurs only in these two premises, and no fixing of it independent of the intensive reading is on file, so the pair carries the composite's load; which member carries it depends on the reading of perfection of being (thin or intensive). It asserts neither premise.",
+  "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.OwnBeingPairIffEveryPure",
+  "definition_ids": [
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "5f851204-5991-5e16-87f1-e8b3ed729708",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ],
+  "disambiguation_ids": [
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "1795a62e-f78b-5f5b-94e7-9e7490824811",
+    "62ca3d65-8dd4-4187-abe1-a928b3045f12"
+  ]
+}

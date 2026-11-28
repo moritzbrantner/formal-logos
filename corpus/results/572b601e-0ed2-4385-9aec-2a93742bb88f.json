@@ -1,0 +1,11 @@
+{
+  "id": "572b601e-0ed2-4385-9aec-2a93742bb88f",
+  "label": "Rigidity is persistence plus accessible uniqueness of concrete GOD_4",
+  "argument_id": "8b9ead6a-e413-49c2-8cdd-c4bd9e357531",
+  "challenge_module": "TruthCore.Results.Modal.ModalOntologicalCase.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalOntologicalCase.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalOntologicalCase.rigidOverPersistsExact",
+  "comparator_config": "results/572b601e-0ed2-4385-9aec-2a93742bb88f/comparator.json",
+  "status": "solution-present",
+  "description": "Certified difference: rigidity of concrete GOD_4 presence is exactly persistence together with accessible uniqueness when a concrete GOD_4 exists at the standpoint."
+}

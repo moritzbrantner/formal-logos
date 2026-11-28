@@ -1,0 +1,99 @@
+import TruthCore.Causality.PossibiliaContent
+import TruthCore.Results.Causality.AxiarchicFoundation.Solution
+
+namespace TruthCore.Results.Causality.PossibiliaContent
+
+open TruthCore.Causality.PossibiliaContent
+open TruthCore.Causality.BruteFoundationBoundary (Profile)
+open TruthCore.Causality.NecessaryRootFork (ActualRoot)
+open TruthCore.Causality.AxiarchicFoundation
+open TruthCore.Causality.ImpersonalFoundationJoint
+  (GoodGeneral GoodGeneralFavouringIsApprehension ActualRootFavouringIsGoodGeneral
+    ActualRootsHaveOwnFavouring ActualRootsApprehendThroughGoodGeneralFavouring)
+open TruthCore.Causality.IntentionalExemplarExtension.ObjectiveEminence (ConstitutivelySimple)
+open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Results.Causality.AxiarchicFoundation (favouredIndividuated)
+
+/-! ## The shared demand, derived -/
+
+/-! ## The root criterion from conceptualism about non-real being -/
+
+/-- The root cognition criterion, derived. An actual root `r` has a good-general
+favouring. Roots are constitutively simple and no candidate is a present input,
+so (`simpleBearerHasNonRealStandIn`) some candidate's stand-in is in `r` without
+being a real constituent of it. The conceptualist premise makes `r` apprehend it,
+and the content premise makes it about its candidate. -/
+theorem simpleRootGoodGeneralFavouringIsApprehension {W B D S X Z C : Type}
+    (m : Profile W B) (w : W) (Has : B → D → Prop)
+    (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (stand : B → X → C) (rel : B → TruthCore.Causality.GoodFavouring.Profile S X → S → C → C → Prop)
+    (Contains Produces RealConstituent : B → C → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (hEM : ExcludedMiddle)
+    (hReal : FavouringRealizedOnItems Has favours stand rel)
+    (hIrr : FavouringIrreflexive Has favours)
+    (hOwn : NoIndependentStandIn Has favours Present stand Contains Produces)
+    (hNotMade : NoMerelyProducedStandIn Has favours Present stand Contains Produces)
+    (hSimple : RootsConstitutivelySimple m w RealConstituent)
+    (hNoPresent : NoPresentCandidates Present)
+    (hNRA : NonRealContainmentIsApprehension Contains RealConstituent Apprehends)
+    (hAbout : NonRealStandInIsAbout Has favours Present stand Contains RealConstituent About) :
+    RootGoodGeneralFavouringIsApprehension m w Has favours good fitOf Present About Apprehends := by
+  sorry
+
+/-- Strength order: the cognition criterion implies its restriction to actual
+roots. -/
+theorem rootCriterionOfCriterion {W B D S X Z C : Type}
+    (m : Profile W B) (w : W) (Has : B → D → Prop)
+    (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (hCriterion : GoodGeneralFavouringIsApprehension Has favours good fitOf Present About
+      Apprehends) :
+    RootGoodGeneralFavouringIsApprehension m w Has favours good fitOf Present About Apprehends := by
+  sorry
+
+/-- The root criterion in place of the cognition criterion: commitment (e) in
+its weakest favouring form and the good-generality of root favouring give every
+actual root apprehension through good-general favouring. -/
+theorem actualRootsApprehendFromRootCriterion {W B D S X Z C : Type}
+    (m : Profile W B) (w : W) (Has : B → D → Prop)
+    (favours : TruthCore.Causality.GoodFavouring.Profile S X → D)
+    (good : S → X → X → Prop) (fitOf : S → Z) (Present : S → X → Prop)
+    (About : C → X → Prop) (Apprehends : B → C → Prop)
+    (hGeneral : ActualRootFavouringIsGoodGeneral m w Has favours good fitOf Present)
+    (hFavouring : ActualRootsHaveOwnFavouring m w Has favours)
+    (hRootCriterion : RootGoodGeneralFavouringIsApprehension m w Has favours good fitOf Present
+      About Apprehends) :
+    ActualRootsApprehendThroughGoodGeneralFavouring m w Has favours good fitOf Present About
+      Apprehends := by
+  sorry
+
+/-! ## Lean-only: relocation probe
+
+Given the other premises, the root criterion is equivalent to the weakened
+existential form `NonRealStandInYieldsApprehension` (some apprehended content
+about some candidate, not the stand-in itself). The conceptualist premise, even
+restricted to the route, is strictly stronger than the root criterion given them
+(`rootCriterionWithoutConceptualism`). -/
+
+/-! ## Controls -/
+
+open TruthCore.Causality.PossibiliaContent.Control
+open TruthCore.Causality.AxiarchicFoundation.Control
+open TruthCore.Causality.SelectionScope (Outcome)
+open TruthCore.Causality.GoodFavouring.Model (Scenario fits better fitOrder)
+open TruthCore.Causality.ImpersonalFoundationJoint.Control (Det favTok hasSrc personalSrc noInputs)
+open TruthCore.Causality.IntentionalExemplarExtension.Control (rootProfile)
+
+/-- One carrier, five rows (see `PossibiliaControls`). -/
+theorem possibiliaControls : PossibiliaControls := by
+  sorry
+
+/-- Relocation probe (see `RootCriterionWithoutConceptualism`). -/
+theorem rootCriterionWithoutConceptualism : RootCriterionWithoutConceptualism := by
+  sorry
+
+end TruthCore.Results.Causality.PossibiliaContent
+

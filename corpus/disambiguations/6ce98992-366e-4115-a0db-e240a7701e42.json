@@ -1,0 +1,25 @@
+{
+  "id": "6ce98992-366e-4115-a0db-e240a7701e42",
+  "label": "Total refraining: giving-level refraining versus world-level total noncreation",
+  "term": "total refraining",
+  "sense_definition_ids": [
+    "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4",
+    "6ecf24d5-5001-4571-937c-2632ac8c2c66"
+  ],
+  "resolution": "'Could have refrained from creating' has two typed readings here. TOTAL_REFRAINING_1 is giving-level: at some accessible world where the source exists it gives nothing (WithholdsAllAt); it is what a necessarily productive source lacks (omission-scope table). TOTAL_REFRAINING_2 is world-level total noncreation: no concrete being is contingent at the world (NoContingentConcreteIn); it is the content of the GOD_4 total-noncreation power a8dedf3f and of control 2 of the joint-absence scope controls. Neither entails the other without bridges: a source may give only necessary concreta, and contingent concreta may be brute or otherwise caused. No step passes between the senses: the omission table uses sense 1, the 0050b6ed support option uses sense 2, and control 2 of its scope controls states giving-level productivity (NecessarilyGivesSomeAt) separately from the failure of sense 2.",
+  "term_label": "TOTAL_REFRAINING",
+  "senses": [
+    {
+      "id": "091b7aea-17e1-4e38-b862-29cdc78d84e8",
+      "label": "TOTAL_REFRAINING_1",
+      "definition_id": "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4",
+      "lean_declaration": "TruthCore.Causality.SelectionScope.WithholdsAllAt"
+    },
+    {
+      "id": "2047943e-4e03-4e3c-a56b-a0d7a23838ab",
+      "label": "TOTAL_REFRAINING_2",
+      "definition_id": "6ecf24d5-5001-4571-937c-2632ac8c2c66",
+      "lean_declaration": "TruthCore.Modal.ModalGrounding.NoContingentConcreteIn"
+    }
+  ]
+}

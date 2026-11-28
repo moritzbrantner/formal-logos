@@ -1,0 +1,11 @@
+{
+  "id": "f856b295-6f8f-40e8-aa64-236b3ab9aa85",
+  "label": "What could lack being could lack each act it has",
+  "paraphrase": "OPEN analyst premise, attribution deferred: if x could lack its act as to being (CanLack x esse, definition 56b438a0) and x is in act in respect r, then x could lack its act in r. Strongest support: 7067553d, nothing has actuality except insofar as it is; if x could be without being, it could be without whatever act it has. The premise fixes a uniform reading of the primitive CanLack: 'could be without the act, including by not being'. On a rival reading for respects other than esse, 'could exist while lacking the act', it fails for the essential acts of a contingent thing (a contingent thing that cannot exist without an essential property), so the two readings of CanLack must not be mixed; 'could lack being' is coherent only on the inclusive reading. It takes no stand on which things could lack being.",
+  "lean_declaration": "TruthCore.Causality.HoldingFirstMover.LackableBeingLacksEveryAct",
+  "definition_ids": [
+    "56b438a0-7fcc-4dd5-916b-1d2e2162310b",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}
