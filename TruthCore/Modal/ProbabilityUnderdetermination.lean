@@ -1,7 +1,7 @@
 module
 
 public import TruthCore.Modal.Kripke
-public import TruthCore.Science.FineTuningInformation
+public import TruthCore.Logic.CarrierProbability
 public import Mathlib.Probability.Distributions.Geometric
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 public import Mathlib.SetTheory.Cardinal.Arithmetic
@@ -10,13 +10,16 @@ public import Mathlib.Data.Finset.Card
 /-! Analyst mathematics, attribution deferred. World populations, valuations,
 accessibility, measures and enumeration orders are different inputs. None of
 these constructions asserts that the mathematical carrier exhausts metaphysical
-possibility. Point support is used only on countable discrete spaces. -/
+possibility. Point support is used only on countable discrete spaces. The
+generic carrier-probability vocabulary (pointwise positive measures, interior
+rates, finitely additive set functions, frequencies, exhaustions and Mathlib
+`Tendsto` densities) is shared from `Logic.CarrierProbability`. -/
 
 @[expose] public section
 
 namespace TruthCore.Modal.ProbabilityUnderdetermination
 open Set MeasureTheory
-open TruthCore.Science.FineTuningInformation.Plenitude (PointFullSupport InteriorRate)
+open TruthCore.Logic.CarrierProbability
 open scoped ENNReal Cardinal
 universe u v
 
@@ -24,28 +27,10 @@ universe u v
 def EqualPointMass {W : Type u} [MeasurableSpace W] (μ : Measure W) : Prop :=
   ∃ c : ℝ≥0∞, ∀ x, μ {x} = c
 
-/-- A normalized finitely additive real set function on the entire power set.
-Nonnegativity is not needed for the impossibility result. -/
-def NormalizedAdditive {W : Type u} (m : Set W → ℝ) : Prop :=
-  m univ = 1 ∧ ∀ s t : Set W, Disjoint s t → m (s ∪ t) = m s + m t
-
 /-- Invariance under every bijection of the carrier, not merely under a
 specified group of measurable or geometric symmetries. -/
 def PermutationInvariant {W : Type u} {A : Type v} (m : Set W → A) : Prop :=
   ∀ (e : Equiv.Perm W) (s : Set W), m (e ⁻¹' s) = m s
-
-/-- Relative frequency on a finite sample of distinct points. -/
-noncomputable def frequency {W : Type u} (s : Set W) (t : Finset W) : ℝ := by
-  classical
-  exact ((t.filter (· ∈ s)).card : ℝ) / t.card
-
-/-- Finite sets exhaust the whole carrier, with no multiplicities. -/
-def Exhaustion {W : Type u} (E : ℕ → Finset W) : Prop :=
-  Monotone E ∧ ∀ x, ∃ n, x ∈ E n
-
-/-- The ordinary epsilon definition of the limiting frequency along E. -/
-def HasDensity {W : Type u} (s : Set W) (E : ℕ → Finset W) (r : ℝ) : Prop :=
-  ∀ ε : ℝ, 0 < ε → ∃ N : ℕ, ∀ n ≥ N, |frequency s (E n) - r| < ε
 
 /-- Initial finite set of a bijective enumeration. (`prefix` is a Lean
 keyword, so the declaration is named `enumPrefix`.) -/
@@ -91,15 +76,18 @@ def ContinuousControl : Prop :=
     ∀ t : ℝ, 0 ≤ t → t ≤ 1 → unitMeasure (Icc 0 t) = ENNReal.ofReal t
 
 /-- The frame, valuation, origin and formula are fixed before the probability
-is chosen. The carrier of the probability is precisely the accessible worlds. -/
+is chosen. The carrier of the probability is precisely the accessible worlds.
+Both truth classes need only be nonempty; the draft's infinite classes are a
+special case. This is the shared interior-mass statement at the accessible-world
+subtype. -/
 def ModalProbabilityFreedom : Prop :=
   ∀ (W : Type u) (Atom : Type v) (F : Frame W) (V : Valuation W Atom)
     (w : W) (φ : Formula Atom)
     [Countable {v // F.access w v}]
     [MeasurableSpace {v // F.access w v}]
     [MeasurableSingletonClass {v // F.access w v}]
-    [Infinite (accessibleEvent F V w φ)]
-    [Infinite ((accessibleEvent F V w φ)ᶜ : Set {v // F.access w v})]
+    [Nonempty (accessibleEvent F V w φ)]
+    [Nonempty ((accessibleEvent F V w φ)ᶜ : Set {v // F.access w v})]
     (p : InteriorRate),
     ∃ μ : Measure {v // F.access w v},
       IsProbabilityMeasure μ ∧ PointFullSupport μ ∧

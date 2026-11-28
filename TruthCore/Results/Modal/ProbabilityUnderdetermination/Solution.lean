@@ -10,7 +10,8 @@ namespace TruthCore.Results.Modal.ProbabilityUnderdetermination
 open TruthCore.Modal
 open TruthCore.Modal.ProbabilityUnderdetermination
 open Set MeasureTheory ProbabilityTheory
-open TruthCore.Science.FineTuningInformation.Plenitude (PointFullSupport InteriorRate)
+open TruthCore.Logic.CarrierProbability
+open TruthCore.Science.FineTuningInformation.Plenitude (ArbitraryInteriorMass)
 open TruthCore.Results.Science.FineTuningInformation (arbitraryInteriorMass)
 open scoped ENNReal Cardinal
 universe u v
@@ -220,6 +221,7 @@ private theorem frequency_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k n : ℕ)
 private theorem density_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k : ℕ)
     (hk : k = 2 ∨ k = 3) (he : ∀ i, e i ∈ s ↔ i % k = 0) :
     HasDensity s (enumPrefix e) (1/(k : ℝ)) := by
+  rw [HasDensity, Metric.tendsto_atTop]
   intro ε hε
   obtain ⟨N, hN⟩ := exists_nat_gt (1/ε : ℝ)
   refine ⟨N+1, ?_⟩
@@ -252,7 +254,7 @@ private theorem density_residue (s : Set ℕ) (e : ℕ ≃ ℕ) (k : ℕ)
       _ = ((((n+k-1)/k : ℕ) : ℝ) - (n : ℝ)/k)/n := by
         field_simp
       _ < 1/n := (div_lt_div_iff_of_pos_right hnR).mpr hbound
-  rw [abs_of_nonneg (sub_nonneg.mpr hlow)]
+  rw [Real.dist_eq, abs_of_nonneg (sub_nonneg.mpr hlow)]
   exact hupper.trans hsmall
 
 theorem enumerationDependence : EnumerationDependence := by
@@ -278,8 +280,11 @@ theorem continuousControl : ContinuousControl := by
       inter_eq_left.mpr (fun _ hx => ⟨hx.1, hx.2.trans h1⟩)
     rw [heq, Real.volume_Icc, sub_zero]
 
-theorem modalProbabilityFreedom : ModalProbabilityFreedom.{u,v} := by
+/-- Corollary: instantiate the shared interior-mass statement at the
+accessible-world subtype, with the formula's truth event as the event. -/
+theorem modalProbabilityFreedom (hMass : ArbitraryInteriorMass.{u}) :
+    ModalProbabilityFreedom.{u,v} := by
   intro W Atom F V w φ _ _ _ _ _ p
-  exact arbitraryInteriorMass _ (accessibleEvent F V w φ) p
+  exact hMass _ (accessibleEvent F V w φ) p
 
 end TruthCore.Results.Modal.ProbabilityUnderdetermination

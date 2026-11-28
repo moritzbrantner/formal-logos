@@ -11,11 +11,12 @@ id = "796b415f-2de6-46b1-ae71-ee7fab6a5689"
 label = "No normalized uniform point masses on a countably infinite carrier"
 lean = "NoUniform"
 paraphrase = "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity."
-definitions = ["bc045e1b-1265-4b4f-9aa3-4142a5cf4368"]
+definitions = ["bc045e1b-1265-4b4f-9aa3-4142a5cf4368", "41d1ffc6-c326-4422-a5ff-03336ff964ec"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[statement]]
@@ -23,11 +24,12 @@ id = "2234ab77-e804-4d62-a47b-f6b33ee60c2e"
 label = "Equal infinite cardinality does not determine equal probability"
 lean = "EqualCardinalityDifferent"
 paraphrase = "On every countable carrier with measurable singletons and two infinite complementary events, the two subtypes have equal cardinality and there exists a point-full-support probability measure assigning them unequal masses."
-definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e"]
+definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e", "41d1ffc6-c326-4422-a5ff-03336ff964ec"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[statement]]
@@ -36,10 +38,11 @@ label = "No normalized finitely additive set function invariant under all permut
 lean = "NoPermutationProbability"
 paraphrase = "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required."
 definitions = ["75aec723-335c-4012-887c-745871b5e580", "79abfef0-cda2-419f-9845-4e66c0f1e265"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[statement]]
@@ -47,11 +50,12 @@ id = "a25f78a8-0d9a-4350-9801-b63772631c19"
 label = "No all-subsets probability measure invariant under every permutation"
 lean = "NoAllSubsetsPermutationMeasure"
 paraphrase = "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result."
-definitions = ["75aec723-335c-4012-887c-745871b5e580", "79abfef0-cda2-419f-9845-4e66c0f1e265"]
+definitions = ["41d1ffc6-c326-4422-a5ff-03336ff964ec", "79abfef0-cda2-419f-9845-4e66c0f1e265"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[statement]]
@@ -60,10 +64,11 @@ label = "Two bijective enumerations give different limiting frequencies for the 
 lean = "EnumerationDependence"
 paraphrase = "There is a single set of naturals and two bijective enumerations whose initial finite sets exhaust the entire carrier, with limiting relative frequencies one half and one third, respectively. Limits use every sufficiently large prefix, not merely subsequences."
 definitions = ["cb975bcc-de7f-4d49-9738-1b988400b6dd", "0f153481-5415-4940-9a22-e91fe5a80005", "5c03a3af-49c0-4fc1-916a-59f38e39352c"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[statement]]
@@ -71,23 +76,25 @@ id = "5b82cb80-34b3-4511-b4ce-f6d8e6e357f7"
 label = "Continuous probability with zero point masses and variable interval masses"
 lean = "ContinuousControl"
 paraphrase = "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one."
-definitions = ["1a0352cf-bd05-4c45-bf6c-c495a3347fec"]
+definitions = ["1a0352cf-bd05-4c45-bf6c-c495a3347fec", "41d1ffc6-c326-4422-a5ff-03336ff964ec"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
-blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
+missing_bridge = "A physically warranted continuous parameter measure, with its own geometry, for the parameters used in the fine-tuning comparison, then an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
+blocker = "This is a positive control: it shows that a measurable geometry, unlike cardinality, does supply a normalized probability with zero point masses on a continuum. It does not show that any physical parameter space carries this geometry or a warranted measure, and it derives no designer likelihood or designer."
 
 [[statement]]
 id = "7d4d86dd-97c0-43f0-882a-687af5d675e5"
-label = "Fixed modal accessibility and truth leave interior event probability arbitrary"
+label = "Fixed modal accessibility and truth admit every interior event probability"
 lean = "ModalProbabilityFreedom"
-paraphrase = "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are infinite, each strictly interior real event probability is realized by a point-full-support probability measure on exactly that carrier. No change of frame or valuation is used, and no probability is thereby shown unavailable."
-definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e", "b44b707c-9e61-42af-9a14-79e9b6d082d4"]
+paraphrase = "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are nonempty, each strictly interior real event probability is realized by a point-full-support probability measure on exactly that carrier. No change of frame or valuation is used, and no probability is thereby shown unavailable."
+definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e", "b44b707c-9e61-42af-9a14-79e9b6d082d4", "b1e17aae-ec07-4319-b63f-e0de329f91b2", "41d1ffc6-c326-4422-a5ff-03336ff964ec"]
+disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
 [statement.connection_plan]
 target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
-missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness."
+missing_bridge = "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4."
 blocker = "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
 
 [[argument]]
@@ -152,10 +159,11 @@ meaning = "Lebesgue measure restricted to the closed unit interval is a probabil
 
 [[argument]]
 id = "ba279e76-0344-4fcb-bcec-563a48fb9567"
-label = "Fixed modal accessibility and truth leave interior event probability arbitrary"
+label = "Fixed modal accessibility and truth admit every interior event probability"
 theorem = "modalProbabilityFreedom"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
-premises = []
+premises = ["c3f76aea-ee54-471c-8a37-ef53eab821d6"]
 conclusion = "7d4d86dd-97c0-43f0-882a-687af5d675e5"
 rule = "Mathematical proof in Lean with Mathlib"
-meaning = "Instantiates the shared interior-mass lemma of #2143 on the accessible-world subtype of a fixed frame, with the formula truth event as the infinite event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability."
+meaning = "Corollary of the shared interior-mass statement (c3f76aea): instantiate it at the accessible-world subtype of a fixed frame, with the formula truth event as the event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability."
+description = "Corollary: a direct instance of the shared interior-mass statement at the accessible-world subtype, adding the Kripke typing and no new mathematics. Restated from the never-compiled draft: for a probability measure, p : ENNReal with 0 < p < 1 and measure s = p is equivalent to an InteriorRate p with real measure s = p, so the value form is unchanged; the hypotheses were weakened from infinite to nonempty truth classes, so the new statement implies the draft's."

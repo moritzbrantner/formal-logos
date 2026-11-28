@@ -4,12 +4,15 @@
   "paraphrase": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result.",
   "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.NoAllSubsetsPermutationMeasure",
   "definition_ids": [
-    "75aec723-335c-4012-887c-745871b5e580",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec",
     "79abfef0-cda2-419f-9845-4e66c0f1e265"
+  ],
+  "disambiguation_ids": [
+    "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"
   ],
   "connection_plan": {
     "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
-    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted actual designer inference and identification with the same GOD_4 witness.",
+    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4.",
     "blocker": "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
   }
 }

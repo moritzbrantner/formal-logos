@@ -1,11 +1,11 @@
 {
   "id": "052851f3-ed41-4082-bf9a-6d4a710df845",
-  "label": "Fixed modal accessibility and truth leave interior event probability arbitrary",
+  "label": "Fixed modal accessibility and truth admit every interior event probability",
   "argument_id": "ba279e76-0344-4fcb-bcec-563a48fb9567",
   "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
   "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
   "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.modalProbabilityFreedom",
   "comparator_config": "results/052851f3-ed41-4082-bf9a-6d4a710df845/comparator.json",
   "status": "solution-present",
-  "description": "Instantiates the shared interior-mass lemma of #2143 on the accessible-world subtype of a fixed frame, with the formula truth event as the infinite event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability."
+  "description": "Corollary: a direct instance of the shared interior-mass statement at the accessible-world subtype, adding the Kripke typing and no new mathematics. Restated from the never-compiled draft: for a probability measure, p : ENNReal with 0 < p < 1 and measure s = p is equivalent to an InteriorRate p with real measure s = p, so the value form is unchanged; the hypotheses were weakened from infinite to nonempty truth classes, so the new statement implies the draft's."
 }

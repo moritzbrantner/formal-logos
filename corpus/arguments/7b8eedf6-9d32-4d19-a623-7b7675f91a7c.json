@@ -8,6 +8,7 @@
   ],
   "meaning": "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one.",
   "definition_ids": [
-    "1a0352cf-bd05-4c45-bf6c-c495a3347fec"
+    "1a0352cf-bd05-4c45-bf6c-c495a3347fec",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec"
   ]
 }

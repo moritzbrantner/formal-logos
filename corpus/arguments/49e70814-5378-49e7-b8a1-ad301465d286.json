@@ -8,6 +8,7 @@
   ],
   "meaning": "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity.",
   "definition_ids": [
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec",
     "bc045e1b-1265-4b4f-9aa3-4142a5cf4368"
   ]
 }

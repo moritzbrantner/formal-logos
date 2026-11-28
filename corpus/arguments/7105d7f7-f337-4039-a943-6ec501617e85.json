@@ -8,6 +8,7 @@
   ],
   "meaning": "On every countable carrier with measurable singletons and two infinite complementary events, the two subtypes have equal cardinality, and the shared interior-mass lemma at one third gives a point-full-support probability measure assigning them unequal masses.",
   "definition_ids": [
-    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec"
   ]
 }

@@ -599,6 +599,22 @@ a theorem that adequate causal explanations must necessitate their effects.
 It neither rules out a stochastic explanation nor equates a numerical
 likelihood with a complete history or its actuality.
 
+**Symmetry of the normalizability point (#2142).** The modal-carrier controls
+(`Modal.ProbabilityUnderdetermination`, attempt
+[`1accc612`](../../corpus/attempts/1accc612-64d6-411d-82c8-e06f601d7424.json))
+show that no probability on a countably infinite carrier has equal point
+masses, and that no normalized finitely additive set function on an infinite
+carrier is invariant under every permutation. These results are the formal
+core of the normalizability objection to indifference priors over unbounded
+or countably infinite ranges, and they bind design likelihoods in the same
+way as naturalistic ones. A design hypothesis that assigns equal point masses
+over a countably infinite range, or a probability invariant under every
+permutation of an infinite range, has no normalized assignment to use; like
+any rival, it needs a warranted non-uniform measure. Translation invariance on
+a continuous unbounded range is a further case not formalized here. Neither
+result shows that no probability is available: point-positive non-uniform
+measures exist for every interior value.
+
 **Positive explanatory work, matched scope.** Existential coverage has genuine
 value: a populated ensemble containing at least one observer-bearing member
 answers whether such a member exists, and a generator with warranted
