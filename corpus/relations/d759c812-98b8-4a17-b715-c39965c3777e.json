@@ -1,0 +1,12 @@
+{
+  "id": "d759c812-98b8-4a17-b715-c39965c3777e",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer strengthens concrete NECESSARY_2",
+  "subject_kind": "statement",
+  "subject_id": "f084efde-c461-49d4-9f7d-902abc81b5f9",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "411e5817-a28a-5d3c-a115-c43b2ffdf64f",
+  "verification_result_id": "3e206a06-9b9f-4769-83a8-47e94b4e17c6",
+  "strictness_result_id": "b441a75c-b426-46be-b414-f008f31be7a7",
+  "note": "Same Profile, Ontic, frame and ExistsAt, for every selected world. The strong version makes every candidate's membership persist along every edge from every world; the weak one only the concrete members of the selected world. Control.Strictness: abstractDrop satisfies the weak version at every world while a non-concrete candidate breaks the transfer; concreteDrop satisfies it at world true while a concrete being absent from world true breaks it. No certified difference (strength_comparison) is recorded yet."
+}
