@@ -1,0 +1,10 @@
+{
+  "id": "522cbd85-e213-4fcf-8754-69a4cbc0e456",
+  "label": "Borrowed decomposition tests CCR",
+  "subject_kind": "result",
+  "subject_id": "3f3cc37b-1f9f-4231-a8f9-9b06c287921d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "aca3baa1-9be6-4720-a53d-22050e638561",
+  "note": "Tests whether borrowed reality with the localized bridge is independent support for CCR: under explicit excluded middle CCR is equivalent to their conjunction, so that route is a reformulation until either conjunct gains support not routed through CCR."
+}
