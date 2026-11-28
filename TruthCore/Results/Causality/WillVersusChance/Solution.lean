@@ -16,7 +16,6 @@ reconstructions; attribution deferred. -/
 
 @[expose] public section
 
-
 namespace TruthCore.Results.Causality.WillVersusChance
 open TruthCore.Causality.WillVersusChance
 open TruthCore.Causality.WillVersusChance.Model
@@ -283,41 +282,21 @@ theorem willVersusChanceControls : Controls :=
     omissionsIntellectRoute, omissionsHolderWill, omissionsThetaFive, omissionsGodWill,
     dnpStrictness, senseModels⟩
 
-
 open scoped ENNReal
+open TruthCore.Explanation.BinaryLaw
 
 theorem binaryLaw_exists (p q : ℝ≥0∞) (hp : 0 < p) (hq : 0 < q) (hs : p + q = 1) :
     ∃ μ : PMF Bool, (∀ b, 0 < μ b) ∧ μ true = p ∧ μ false = q := by
-  refine ⟨binaryLaw p q hs, ?_, ?_, ?_⟩
-  · intro b
-    cases b <;> simp [binaryLaw, PMF.ofFintype_apply, hp, hq]
-  · simp [binaryLaw, PMF.ofFintype_apply]
-  · simp [binaryLaw, PMF.ofFintype_apply]
-
-private theorem binarySum (μ : PMF Bool) : μ true + μ false = 1 := by
-  simpa only [tsum_fintype, Fintype.sum_bool] using μ.tsum_coe
-
-private theorem binaryRealSum (μ : PMF Bool) :
-    (μ true).toReal + (μ false).toReal = 1 := by
-  have h := congrArg ENNReal.toReal (binarySum μ)
-  simpa only [ENNReal.toReal_add (μ.apply_ne_top true) (μ.apply_ne_top false),
-    ENNReal.toReal_one] using h
-
-theorem binary_unique_of_mass (μ ν : PMF Bool) (h : μ true = ν true) : μ = ν := by
-  apply PMF.ext
+  refine ⟨binaryLaw p q hs, ?_, binaryLaw_true p q hs, binaryLaw_false p q hs⟩
   intro b
   cases b
-  · have ht := congrArg ENNReal.toReal h
-    have hf : (μ false).toReal = (ν false).toReal := by
-      linarith [binaryRealSum μ, binaryRealSum ν]
-    simpa only [ENNReal.ofReal_toReal (μ.apply_ne_top false),
-      ENNReal.ofReal_toReal (ν.apply_ne_top false)] using congrArg ENNReal.ofReal hf
-  · exact h
+  · rw [binaryLaw_false]; exact hq
+  · rw [binaryLaw_true]; exact hp
 
 theorem binary_unique_of_symmetry (μ ν : PMF Bool)
     (hμ : μ true = μ false) (hν : ν true = ν false) : μ = ν := by
-  have sμ := binaryRealSum μ
-  have sν := binaryRealSum ν
+  have sμ := binary_real_sum μ
+  have sν := binary_real_sum ν
   rw [← hμ] at sμ
   rw [← hν] at sν
   have ht : (μ true).toReal = (ν true).toReal := by linarith
@@ -379,8 +358,7 @@ theorem samePartialSymmetryDifferentLaw :
   let ν := twoOrbitLaw (2 / 8) (4 / 8) (orbit_normalized 2 4 (by norm_num))
   refine ⟨μ, ν, ?_, ?_, ?_, ?_⟩
   · intro i
-    fin_cases i <;> simp [μ, ν, twoOrbitLaw, PMF.ofFintype_apply] <;>
-      constructor <;> exact eighths_pos _ (by norm_num)
+    fin_cases i <;> simp [μ, ν, twoOrbitLaw, PMF.ofFintype_apply]
   · simp [μ, twoOrbitLaw, PMF.ofFintype_apply]
   · simp [ν, twoOrbitLaw, PMF.ofFintype_apply]
   · change (6 : ℝ≥0∞) / 8 ≠ 4 / 8

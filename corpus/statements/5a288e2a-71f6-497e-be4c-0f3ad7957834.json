@@ -1,7 +1,7 @@
 {
   "id": "5a288e2a-71f6-497e-be4c-0f3ad7957834",
   "label": "Numerical grounding and choice-partition controls for the invariant source",
-  "paraphrase": "On the fixed ChanceRival history frame, every positive normalized binary pair completes the qualitative description; positive support, strict probability ranking and tied optimality do not uniquely determine the law. A singleton calibration or complete binary exchange symmetry uniquely determines it; one two-element orbit and a singleton do not. Identical histories can support either effective STIT control of creation and withholding or indiscrete cells without that control. These are diagnostic mathematical controls, not a proof that a fixed complete essence permits variable intrinsic propensities or that intention guarantees sufficient reason.",
+  "paraphrase": "Premise-free mathematical controls on the fixed chance-rival frame (ChanceRival is the first conjunct): for every positive p and q with p+q=1 some PMF on the two existing histories has full support and masses p (withholding) and q (giving); two full-support laws (1/8, 7/8 and 3/8, 5/8) share the strict ranking withholding-below-giving and the tied-optimal output set (every output has the same quality) but differ; two laws on Bool with the same withholding mass are equal; two laws on Bool each giving its two points equal mass are equal, and one such full-support law exists; on three points, two full-support laws with equal mass on points 0 and 1 (a two-element orbit) differ at point 2. In a STIT frame over the same histories, singleton choice cells let the giver see to the giving and see to the withholding, while with one indiscrete cell the giving occurs but is not seen to. Diagnostic only: it does not show that a fixed complete essence permits variable intrinsic propensities, that some necessary nature grounds a particular law, or that intention guarantees sufficient reason.",
   "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.DistributionGroundingControls",
   "definition_ids": [
     "0a36cead-b4fc-4248-a9f2-884edf61d89f",
@@ -17,10 +17,5 @@
   ],
   "disambiguation_ids": [
     "c18f084e-bb0a-4edd-84d6-fdd1bb2ede87"
-  ],
-  "connection_plan": {
-    "target_statement_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
-    "missing_bridge": "Show that the source's complete nature grounds a particular objective law or that its non-rational powers cannot ground such a law, instead of inferring this from qualitative variation.",
-    "blocker": "Qualitative invariance is compatible with numerically fixed stochastic laws; underdetermination of the description does not refute a uniquely grounded complete law."
-  }
+  ]
 }

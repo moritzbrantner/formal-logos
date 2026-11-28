@@ -1,9 +1,9 @@
 {
   "id": "0a36cead-b4fc-4248-a9f2-884edf61d89f",
-  "label": "Numerical propensity law on giving histories",
+  "label": "Normalized law on a two-point outcome space",
   "basis": "stipulative",
-  "lean_declaration": "TruthCore.Causality.WillVersusChance.Model.binaryLaw",
-  "definition": "A Mathlib PMF on the existing Boolean giving/withholding histories. A binary law assigns masses p and q with p+q=1; the full-support controls require p,q>0. The three-point law assigns p,p,q with 2p+q=1.",
-  "note": "The numbers are supplied rather than inferred from accessibility, invariant intrinsic setup, or causal power. Objective causal applicability is a separate commitment.",
-  "term": "normalized law on giving histories (binaryLaw)"
+  "lean_declaration": "TruthCore.Explanation.BinaryLaw.binaryLaw",
+  "definition": "A Mathlib PMF on Bool with supplied mass p at true and q at false, where p+q=1 (the full-support controls also require p,q>0). Each use fixes what the two points are: the will-versus-chance controls read them as the existing withholding (true) and giving (false) histories of the fixed giver theistG; the objective-probability diagnostics read them as two physical outcomes.",
+  "note": "Purely mathematical: the numbers are supplied, not inferred from accessibility, an invariant intrinsic set-up or a causal power, and a PMF is neither a propensity nor a measure over metaphysical worlds. Objective causal applicability is a separate commitment of each use.",
+  "term": "normalized binary law (binaryLaw)"
 }

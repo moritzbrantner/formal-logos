@@ -200,3 +200,39 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "6e4b519b-e766-4dbe-a046-aab8082cb484"
 note = "Tests the converse strength implication in the registered interpretation. Same frame and agency overlay. The strong version constrains every being at w with the same set-up at the withholding world; the weak one only beings whose set-up is invariant at w. The controls' three-world model satisfies the weak version while the strong one fails for a chancy being whose set-up varies at a third world."
+
+# ------------------------------------------- numerical grounding (#2144)
+# Quantitative completion of the chance rival. The law is the shared
+# TruthCore.Explanation.BinaryLaw.binaryLaw, read on theistG's histories.
+# Note: docs/notes/will-versus-chance.md, "Quantitative grounding of the
+# chance rival"; attempt 7659a30b.
+
+[[statement]]
+id = "5a288e2a-71f6-497e-be4c-0f3ad7957834"
+label = "Numerical grounding and choice-partition controls for the invariant source"
+lean = "Model.DistributionGroundingControls"
+paraphrase = "Premise-free mathematical controls on the fixed chance-rival frame (ChanceRival is the first conjunct): for every positive p and q with p+q=1 some PMF on the two existing histories has full support and masses p (withholding) and q (giving); two full-support laws (1/8, 7/8 and 3/8, 5/8) share the strict ranking withholding-below-giving and the tied-optimal output set (every output has the same quality) but differ; two laws on Bool with the same withholding mass are equal; two laws on Bool each giving its two points equal mass are equal, and one such full-support law exists; on three points, two full-support laws with equal mass on points 0 and 1 (a two-element orbit) differ at point 2. In a STIT frame over the same histories, singleton choice cells let the giver see to the giving and see to the withholding, while with one indiscrete cell the giving occurs but is not seen to. Diagnostic only: it does not show that a fixed complete essence permits variable intrinsic propensities, that some necessary nature grounds a particular law, or that intention guarantees sufficient reason."
+definitions = ["0a36cead-b4fc-4248-a9f2-884edf61d89f", "b8061228-9131-40f2-83bd-cb7d719bd0a0", "69d8aef9-b0d4-461d-9a48-ef0bb4fbd56f", "b4bb7bb4-4e2d-437d-825e-79a029340e77", "582f44c3-7778-4806-b385-e1eff852ac5e", "62dfa893-b633-4513-9790-8f9a0a3087e0", "a2840d96-8bdc-4e6a-a9a3-376a9505ec7c", "fdeb7757-10db-4fa7-91a4-6c15ee5100d2", "4f503422-a3dc-51f3-8e1d-a1065ef6038e", "c54f0922-eb5c-4abd-9bde-6586e4127424"]
+disambiguations = ["c18f084e-bb0a-4edd-84d6-fdd1bb2ede87"]
+
+[[argument]]
+id = "f01b1cfe-3378-4bb0-8fa7-d3d8fa0d2ba0"
+label = "Numerical grounding and choice-partition controls for the invariant source"
+theorem = "distributionGroundingControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "5a288e2a-71f6-497e-be4c-0f3ad7957834"
+rule = "PMF normalization, finite calibration and STIT choice partitions"
+meaning = "Premise-free. Normalization gives every positive binary pair a full-support law; explicit eighths give two laws with the same support, strict ranking and tied optima; normalization makes one mass (or full exchange symmetry) fix a binary law; explicit eighths on three points give two laws with the same two-element-orbit symmetry and different singleton mass; two STIT partitions of the same histories separate seeing to the giving and withholding from their mere occurrence. Model-witnessed separations and finite calculations only; no premise is established."
+description = "Quantitative completion of the chance rival at the invariant source. The qualitative description (histories, support, strict ranking, tied optimality) leaves the binary law open; one calibrated mass or full exchange symmetry fixes it, a two-element orbit with a singleton does not. Identical histories admit STIT cells with or without the giver's seeing to the giving. Diagnostic controls, not a proof that a fixed complete essence permits variable intrinsic propensities, that a necessary nature grounds or cannot ground a particular law, or that intention guarantees sufficient reason. Not a transcription; establishes no premise."
+
+[[relation]]
+id = "d7e2d77d-ebb1-4607-9534-7d344dba558a"
+label = "Test by numerical grounding controls of DNP_inv"
+subject_kind = "result"
+subject_id = "725538ae-ef24-4c5f-bca9-7bab754ba1aa"
+predicate = "tests"
+object_kind = "statement"
+object_id = "55892476-1e99-444b-a6bd-5430b0f115c4"
+note = "Tests the scope of the invariant-setup exclusion: qualitative chance variation alone does not identify a quantitative law, and a stronger calibration or full symmetry can determine the law without making effects deterministic. It neither supports nor refutes DNP_inv."

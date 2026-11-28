@@ -6,7 +6,7 @@ public import TruthCore.Case.Catholicism.StageTwo
 public import TruthCore.Logic.ExcludedMiddle
 public import TruthCore.Modal.STIT
 public import TruthCore.Modal.OptimalCreationChoice
-public import Mathlib.Probability.ProbabilityMassFunction.Constructions
+public import TruthCore.Explanation.BinaryLaw
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Data.Fin.VecNotation
 
@@ -843,7 +843,6 @@ def Controls : Prop :=
     OmissionsIntellectRoute ∧ OmissionsHolderWill ∧ OmissionsThetaFive ∧ OmissionsGodWill ∧
     DNPStrictness ∧ SenseModels
 
-
 /-! ## Numerical completion of the chance rival
 
 The PMFs below complete a fixed qualitative description. They do not
@@ -851,12 +850,11 @@ identify accessibility with positive probability, or assign an objective
 propensity to the foundation by definition. -/
 
 open scoped ENNReal
+open TruthCore.Explanation.BinaryLaw (binaryLaw)
 
-/-- A normalized binary law; true is the withholding history of theistG. -/
-noncomputable def binaryLaw (p q : ℝ≥0∞) (h : p + q = 1) : PMF Bool :=
-  PMF.ofFintype (fun b => if b then p else q) (by
-    rw [Fintype.sum_bool]
-    simpa using h)
+/-! The shared `TruthCore.Explanation.BinaryLaw.binaryLaw` is read here on the
+existing giving histories: `true` is the withholding history of `theistG`,
+`false` the giving history. -/
 
 /-- Equal mass in one orbit, with a possibly different singleton mass. -/
 noncomputable def twoOrbitLaw (p q : ℝ≥0∞) (h : p + p + q = 1) : PMF (Fin 3) :=

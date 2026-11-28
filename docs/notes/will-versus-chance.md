@@ -2135,8 +2135,11 @@ ultimate constitution; prior accepted continuations keep their scope.
 
 [Research attempt](../../corpus/attempts/7659a30b-f2c1-4023-b8ee-c30c76172c9d.json) · [Proposed result](../../corpus/results/725538ae-ef24-4c5f-bca9-7bab754ba1aa.json).
 Targets DNP_inv (55892476-1e99-444b-a6bd-5430b0f115c4) and the optimal-output rival (78af5042-9b4e-41a4-bb76-ad4d1973e25a).
-This is a draft diagnostic; no root premise is discharged. The required Lean,
-binding, Comparator, NanoDa, frontier and independent review gates remain open.
+A diagnostic placed by a `tests` relation on DNP_inv; no root premise is
+discharged. The binary law is the shared `TruthCore.Explanation.BinaryLaw.binaryLaw`
+(also used by the objective-probability diagnostics of #2151); here its two points are theistG's
+withholding (`true`) and giving (`false`) histories. Independent semantic review
+is pending.
 
 **Matched completions.** Reuse theistG and simpleChancy: the same invariant
 necessary giver, the same two possible histories (giving c and withholding c),
