@@ -6,6 +6,7 @@
   "challenge_module": "TruthCore.Results.Mereology.SoulUnityIndependence.Challenge",
   "solution_module": "TruthCore.Results.Mereology.SoulUnityIndependence.Solution",
   "theorem": "TruthCore.Results.Mereology.SoulUnityIndependence.soulUnityIndependence",
+  "description": "Two pairs of finite scenarios agree on every relation of the restricted material/behavioral signature (membership, life, integration, self-maintenance, continuity) and both show the turnover profile. In the first pair, substantial unity and soul-as-form differ; in the second, unity agrees and soul-as-form differs. `SubstantialUnity` and `SoulAsForm` are fields of `Scenario` that no axiom ties to the observational fields, so these countermodels exist by construction. The result shows only that this signature builds in no entailment from turnover to unity, or from unity to soul-as-form. It does not test a proposed bridge from life to unity or from unity to soul-as-form, and it is not evidence against either bridge. Stating those bridges as typed premises and comparing which models they exclude is the open work of #329.",
   "comparator_config": "results/MEREO-005-SOUL-UNITY-INDEPENDENCE/comparator.json",
   "status": "solution-present"
 }
