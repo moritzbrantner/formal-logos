@@ -9942,12 +9942,26 @@ are tool-fragment limits, not philosophical evidence. Certification and the
 independent semantic challenge are recorded in the successor attempt and the
 delivery PR; only completed exact-revision checks count as passed.
 
+## Effect-local perfection-as-mode: findings persisted from #1789 (2026-11-19; recorded 2026-11-28)
+
+These findings were posted as comments on issue #1789 on 2026-11-19 and are recorded in attempt [`8a110952`](../../corpus/attempts/8a110952-0313-4faa-b0f0-3b654ed1768b.json). A standalone JavaScript relation evaluator checked them. **No Lean, Comparator or corpus result certifies them, and no premise status changes.**
+
+- **Weakening.** In the conditional derivation of `b26c10a0` (`universalCauseTransfers`), the global premise `791fa216` can be replaced by the constructive classification `EffectLocalEsseOrMode`. The classification applies to a distinct effect `x` of a universal esse cause `c`: if `CausesIn c x esse` and `InAct x r`, then `r = esse ∨ ModeOfBeing x r`. The `esse` branch is closed by the antecedent. This avoids deciding `r = esse`, which the existing zero-axiom Comparator would forbid. Exhaustive two-being, two-respect enumeration found no counterexample, and it found 20,944 assignments that separate this condition from the global and effect-local `InAct → ModeOfBeing` forms.
+- **Sense discriminator.** On one shared assignment (root, producer, recipient; esse, skill, power to produce skill) both the classification and the transfer hold under the formal reading of `DISAMB-IN-ACT`. Both fail under the inclusive formal-or-virtual reading, at the producer's virtual skill. That reading needs a different-respect virtual-power adapter.
+- **Concurrence control.** The current q.105 a.5 reading `CreatedAgentIsAppliedToActByGodReading` gives only that the created agent is moved in some respect. Even with `MoverCausesWhatItMovesTo`, a nonvacuous model satisfies every encoded input while `2f6b9eff` and `b26c10a0` fail at (root, recipient, skill). This is an entailment failure of the present encodings, not a critique of Aquinas's argument. The secondary-only rival in [shared-background tests](#shared-background-tests-and-surviving-rival) survives this bridge.
+
+**Next tests.**
+1. Compile `EffectLocalEsseOrMode` as a formal-actuality sibling: a zero-axiom transfer theorem plus a `decide` separator.
+2. State the inclusive virtual-power adapter as an open conditional bridge with its distinct respect index.
+3. Test a typed, non-God-indexed application/concurrence bridge for `2f6b9eff`, with the intermediary and the respect fixed.
+
 ## Research attempts citing this note
 
 - [Batch certification of eight exploration maps deriving eight bare root-path premises from deeper…](../../corpus/attempts/round2-perfection-primacy.json)
 - [Cartesian causal adequacy compared with q.4 a.2 preexistence and the cause-of-perfection premises](../../corpus/attempts/59336904-26c1-4562-a276-d7c4252ffb23.json)
 - [Distinguish grounding by the selected recipient from immanent life at the ultimate source](../../corpus/attempts/05c967c9-61b1-4090-b0dd-6556f974f46e.json)
 - [Does the actual self-knowing source affirm its own possessed goodness?](../../corpus/attempts/3648a6d9-446e-4afd-a319-294a358a065b.json)
+- [Effect-local esse-or-mode weakening of perfection-as-mode for perfection transfer (#1789)](../../corpus/attempts/8a110952-0313-4faa-b0f0-3b654ed1768b.json)
 - [Immanent primary-object route to subsistent self-understanding](../../corpus/attempts/8e3a7c52-90f4-4a72-a88d-61321ef294bc.json)
 - [Locate the generator's work in the onset of a new individual at division](../../corpus/attempts/f78f9ad3-617f-4238-9e5d-c565a718740c.json)
 - [Read issue354,related/dossier/previous unreceived-esse attempt and InfinityEternity.lean…](../../corpus/attempts/subsistent-infinity-reception-audit-20261031.json)
