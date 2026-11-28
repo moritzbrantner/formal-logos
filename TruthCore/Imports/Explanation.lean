@@ -41,6 +41,7 @@ public import TruthCore.Explanation.HistorySelection
 public import TruthCore.Explanation.InducerFreePersistence
 public import TruthCore.Explanation.InertialActuality
 public import TruthCore.Explanation.InertialReceiverNature
+public import TruthCore.Explanation.InquiryClosure
 public import TruthCore.Explanation.IntrinsicReasonBoundary
 public import TruthCore.Explanation.JointCondition
 public import TruthCore.Explanation.JointContingencyLocalization

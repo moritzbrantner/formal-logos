@@ -1,0 +1,11 @@
+{
+  "id": "8347cd06-cde4-431a-b42b-6c8616934be7",
+  "label": "Root-starting composition gives a direct common root from finite ancestry",
+  "argument_id": "1b9475eb-ef39-4f51-9f10-ed4ed7e83642",
+  "challenge_module": "TruthCore.Results.Causality.RootGroundComposition.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootGroundComposition.Solution",
+  "theorem": "TruthCore.Results.Causality.RootGroundComposition.directRootOfAncestry",
+  "comparator_config": "results/8347cd06-cde4-431a-b42b-6c8616934be7/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiate the source graph at ConcreteExistentialSupply.graph m w, whose nodes and edges are the actual concrete endpoints and the selected grounds at w. Its supplied source is an actual root: any actual concrete ground of it would give an incoming edge. For any actual recipient, the finite path supplied by the ancestry premise either is empty, is one edge, or extends a compressed path by one edge. In the final case apply the explicit root-starting composition premise. The empty case gives identity and requires no self-edge. The uniqueness field of the ancestry bundle is redundant: a different source would have to take a nonempty first step on its path to the supplied root, contradicting its sourcehood. Neither global transitivity nor well-foundedness is required. The existing mediated-chain control has the ancestry premise and lacks direct common grounding, so the composition premise fails there. The result supplies one selected grounding edge per distinct recipient that exists at w and is classified as concrete by the selected profile. The companion converse derives composition from direct coverage alone, so under finite common ancestry the two propositions are equivalent. This exposes the exact commitment for direct coverage and supplies no independent warrant for it."
+}

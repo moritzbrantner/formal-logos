@@ -1,0 +1,10 @@
+{
+  "id": "821fac05-0e07-49e5-9bf8-499ff999f72f",
+  "label": "Test by ActualAncestralSource.mediatedChain (98138853)",
+  "subject_kind": "result",
+  "subject_id": "1e652b87-fba4-4653-801e-1911fbd4b957",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "98138853-8873-4d7a-81a7-b8d88d266520",
+  "note": "On chainG at false, d, g and c are actual concreta. The unique root d reaches g by one grounding edge and c by the path through g. This jointly witnesses unique actual root and universal access by finite grounding paths."
+}

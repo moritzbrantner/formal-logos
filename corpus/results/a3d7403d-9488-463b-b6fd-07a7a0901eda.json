@@ -1,0 +1,11 @@
+{
+  "id": "a3d7403d-9488-463b-b6fd-07a7a0901eda",
+  "label": "Inquiry PSR scope map at roots: blind to necessary facts, bridged to E",
+  "argument_id": "e49dfdd6-0eb5-46c4-a707-05b6d61fb9f8",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.inquiryScopeMap",
+  "comparator_config": "results/a3d7403d-9488-463b-b6fd-07a7a0901eda/comparator.json",
+  "status": "solution-present",
+  "description": "Diagnostic certificate (#2145 lane H2): what the inquiry PSR family reaches at a root and what would carry it to E. Establishes no premise."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ed12f2b9-7d93-4ca5-a9ab-f8d028e7d1b6",
+  "label": "Test by ExplanatoryAdequacy.core (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "94ae21f5-ec46-575f-90f2-dec9ce70c27a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the target in the four-condition account core. In necessitarian the target holds at every accessible world. Its account is reason-closed at world 0, and foundation and the requirement on reasons for contingent members hold vacuously on that account."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "39427676-044b-468c-955f-a36355baf737",
+  "label": "A root without represented limitation HAS_INTELLECT_1 and HAS_WILL_1",
+  "argument_id": "8d3ae3df-5acc-402c-9ff7-c5ba61472fc5",
+  "challenge_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution",
+  "theorem": "TruthCore.Results.Causality.NamedRootStructuralAttributes.rootIntellectWillOfNonlimitation",
+  "comparator_config": "results/39427676-044b-468c-955f-a36355baf737/comparator.json",
+  "status": "solution-present",
+  "description": "The supplied existential gives one actual root n at w, necessary from w, without the represented limitation horns. Noncomposition is the first exclusion. Excluded middle applied to represented esse and essence equality supplies their equality using the second exclusion. Excluded middle applied to each prior bearer's identity with n supplies firstness using the third exclusion. The matter-form inclusion and noncomposition give no matter-form composition. Component exclusion at a first being gives remoteness. The immaterial-to-intellect law gives capacity of n, and the intellect-to-will law gives n will. Each attribute is retained on that same witness. This is the structural tail of RootIntellectWill.ofNonlimitation, with just the half of the older composition-kinds premise that its proof applies."
+}

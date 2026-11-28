@@ -1,0 +1,10 @@
+{
+  "id": "6bbae3bc-790d-4ed4-acaa-482951d12150",
+  "label": "Test by AtomisticCausalSource.consistency (f60704c5)",
+  "subject_kind": "result",
+  "subject_id": "7f286661-bedc-518c-8b26-b04025028784",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "f60704c5-e5e3-521a-82e0-f0c8f4b32cc0",
+  "note": "In the populated two-object identity-parthood fixture, the sole incoming edge is from origin to effect. Any two incoming complete causes of the same effect coincide, supplying the sole registered premise UniqueCausePerEffect on that graph."
+}

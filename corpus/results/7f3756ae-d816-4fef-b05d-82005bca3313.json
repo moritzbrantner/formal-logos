@@ -1,0 +1,12 @@
+{
+  "id": "7f3756ae-d816-4fef-b05d-82005bca3313",
+  "label": "The global concreteness calibration in profile form",
+  "argument_id": "d139c62e-11db-4b50-99b4-1b993b391ab5",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.profileCalibrationOfExisting",
+  "comparator_config": "results/7f3756ae-d816-4fef-b05d-82005bca3313/comparator.json",
+  "status": "solution-present",
+  "description": "Use the identical global calibration on m.ontic and m.concrete. This packages the parameters for the strength checker.",
+  "transcription": "instantiation"
+}

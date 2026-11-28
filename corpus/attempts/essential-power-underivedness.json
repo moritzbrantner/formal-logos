@@ -9,11 +9,29 @@
   ],
   "kind": "reading",
   "outcome": "succeeded",
-  "summary": "External grounding of possession supports dependence in the selected power. Inseparability of a power from its bearer does not determine explanatory direction. A constitutive argument would need the externally grounded actuality to partly ground the bearer's existence and partial grounding to compose. Existing power and exercise controls are scope anchors, not proofs of that lift. See docs/notes/borrowed-exercise-741.md.",
+  "summary": "External grounding of possession supports dependence in the selected power. Inseparability of a power from its bearer does not determine explanatory direction. A constitutive argument would need the externally grounded actuality to partly ground the bearer's existence and partial grounding to compose. Existing power and exercise controls are scope anchors, not proofs of that lift. See docs/notes/borrowed-exercise-741.md.\n\nCuration pass 2, lane D batch 4 (#2103, 2026-11-27). a268b937 remains unplaced. Both tests select world `false` and bearer `.source`. In the first profile the bridge `∀ y, m.supportsEsse false y .source → m.transmitsPower false y .source` fails at `y = .conserver`, whose esse support exists without transmission of that power. In the second profile `UnborrowedPowerAt m false .source ∧ NecessaryAt m.ontic false .source ∧ ¬ ExternallySupportedAt m false .source` holds, while `.conserver` is a proper part. The implication from those three conditions to `¬ Composite m .source` fails. Both exact formulas are off path.",
   "evidence": [
     "a268b937-edc1-5f68-b996-9f3489809979",
     "c76bf027-aabc-5332-a267-3b12e261c0ab",
     "PR-1409"
   ],
-  "blocker": "Defend the constitutive premise for the selected power and map the resulting dependence to the root route's selected existential grounding relation."
+  "blocker": "Defend the constitutive premise for the selected power and map the resulting dependence to the root route's selected existential grounding relation.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2146"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2146"
+    }
+  ]
 }

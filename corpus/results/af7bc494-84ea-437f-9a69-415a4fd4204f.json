@@ -1,0 +1,11 @@
+{
+  "id": "af7bc494-84ea-437f-9a69-415a4fd4204f",
+  "label": "Relation-of-reason account: cost, decrees under N, joint model",
+  "argument_id": "24ce7cbb-70e2-4171-bad9-c43d1078e3c9",
+  "challenge_module": "TruthCore.Results.Modal.MirrorCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Modal.MirrorCollapse.Solution",
+  "theorem": "TruthCore.Results.Modal.MirrorCollapse.relationOfReason",
+  "comparator_config": "results/af7bc494-84ea-437f-9a69-415a4fd4204f/comparator.json",
+  "status": "solution-present",
+  "description": "Certificate, placed diagnostic. Establishes no premise. It answers whether the personal case's own profile premises force modal collapse: on the stated carrier they do not, given the relation-of-reason account; collapse needs a further premise (strict sufficiency of the intrinsic act, a real decree at every accessible world under N, or a necessitating PSR)."
+}

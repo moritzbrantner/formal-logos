@@ -1,0 +1,21 @@
+{
+  "id": "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600",
+  "label": "A source with only being against the q.7 a.1 bridge: controls, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "6694d214-277c-4db8-81dc-a8c99c45cce2",
+  "inference_ids": [
+    "acce9ff7-78ac-415b-ba72-ca0f5aa265f1"
+  ],
+  "meaning": "One source with only being, read with the role and the measure reading of limitation: each reading makes a different premise of the q.7 a.1 bridge fail. A structural surrogate.",
+  "definition_ids": [
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "f971eabf-d723-46c4-a34a-35a5af154abb"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

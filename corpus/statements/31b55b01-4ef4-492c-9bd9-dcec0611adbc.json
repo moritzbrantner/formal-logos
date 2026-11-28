@@ -1,0 +1,17 @@
+{
+  "id": "31b55b01-4ef4-492c-9bd9-dcec0611adbc",
+  "label": "Whatever causes a quality in another thing is MORE_3 more such than it, by measured degree",
+  "paraphrase": "Analyst formulation, attribution deferred: the ordinary-comparative (MORE_3) reading of 'more such' d5a94eb1. Every c, distinct from x, that causes x's being r (CAUSE_2) is more r than x on the ordinary comparative: both have r formally and c's measured degree of r (a supplied measure deg) is strictly higher, as the cause of another's heat is hotter. It is the reading on which d5a94eb1's paraphrase gives its example; whether Posterior Analytics I.2 means it is not claimed. The eminent reading (MORE_4) is a different statement. Open.",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.OrdinaryMoreSuch",
+  "definition_ids": [
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+    "a5bda545-3e76-5240-808d-25f897a07be5",
+    "00bd3c0c-010a-559c-a2a0-b4fbf49cbaf1"
+  ],
+  "disambiguation_ids": [
+    "cdb0de59-5015-4fa6-986c-4cd1527dd2b3",
+    "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
+    "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
+  ]
+}

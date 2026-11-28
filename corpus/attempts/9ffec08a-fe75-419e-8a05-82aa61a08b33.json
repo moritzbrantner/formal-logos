@@ -10,11 +10,21 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Analyst finite animal-parts encoding, attribution deferred. Motor and load are distinct proper components of a whole in one displacement event. Component no-self-motion coexists with internal organism motion. Patient lifting retains a distinct internal motor; aggregate lifting creates a whole self-link. Populated omission controls show internal coordination alone supplies neither raw-component nor aggregate distinct whole-mover coverage. Rejected: transferring component irreflexivity through aggregation, or inferring an external agent from a distinct internal motor. Full details and source-reuse boundaries in docs/notes/motion-mover-fork.md, Part-mediated follow-up.",
+  "summary": "Analyst finite animal-parts encoding, attribution deferred. Motor and load are distinct proper components of a whole in one displacement event. Component no-self-motion coexists with internal organism motion. Patient lifting retains a distinct internal motor; aggregate lifting creates a whole self-link. Populated omission controls show internal coordination alone supplies neither raw-component nor aggregate distinct whole-mover coverage. Rejected: transferring component irreflexivity through aggregation, or inferring an external agent from a distinct internal motor. Full details and source-reuse boundaries in docs/notes/motion-mover-fork.md, Part-mediated follow-up.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 3dfb5656 tests 079b53bf. Test the same-respect self-motion exclusion under the specified aggregate projection. The distinct motor and load form the displacement edge and satisfy component-level exclusion. Lifting both endpoints to whole creates a whole-to-whole displacement edge when WholeMoved assigns displacement to the whole.",
   "evidence": [
     "8149955b-51e4-4738-96e9-7d58a8a65b10",
     "3dfb5656-2eb9-4c7c-96de-9b3127293680",
     "PR-1269"
   ],
-  "blocker": "Universal root application still requires selecting and justifying the root relation and coverage of relevant events. Local patient lifting is OPEN; no applicability or anti-self-motion premise truth is discharged."
+  "blocker": "Universal root application still requires selecting and justifying the root relation and coverage of relevant events. Local patient lifting is OPEN; no applicability or anti-self-motion premise truth is discharged.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2133"
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+{
+  "id": "ba4c790a-3ba7-40cd-ac82-de40b2880b89",
+  "label": "Essential exclusion of root absences strengthens the reason-essence thesis",
+  "subject_kind": "statement",
+  "subject_id": "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+  "verification_result_id": "3452ca1e-e829-4656-8e4f-b30881894c25",
+  "note": "Same root, profile and ESSENCE_6 relation; the weak version adds an arena and a lack map and restricts the exclusion to absences with an admitted reason. Row 2 of lackReasonEssenceControls satisfies the weak version vacuously and fails the strong one. The PSR for root lack facts and the lack facts together with the weak version give the strong one. No certified difference is registered."
+}

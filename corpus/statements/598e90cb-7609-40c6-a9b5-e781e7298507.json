@@ -1,0 +1,12 @@
+{
+  "id": "598e90cb-7609-40c6-a9b5-e781e7298507",
+  "label": "Every ESSENCE_5 truth holds at the actual world",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: factivity of ESSENCE_5 at the actual world. For every being x and world-proposition φ, if it lies in the nature of x that φ, then φ holds at w. What lies in a nature is true. It follows from 'essence grounds necessity' (EssenceGroundsNecessity) on a frame reflexive at w.",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.EssentialTruthsHoldAt",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

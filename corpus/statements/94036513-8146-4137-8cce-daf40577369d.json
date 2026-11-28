@@ -1,0 +1,23 @@
+{
+  "id": "94036513-8146-4137-8cce-daf40577369d",
+  "label": "Second unde, real-otherness form: a nature actual through a really other esse receives it",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the weaker sibling of 89d82643, reading q.3 a.4's 'ad essentiam quae est aliud ab ipso' as real otherness. For every x: if x's nature is actual in x through esse, is other in content than being itself, and x's esse is not really identical with its essence (OWN_BEING_2 fails), then x's esse is received in its nature (RECEPTION_OF_ESSE_1). With real otherness of whatever is not esse tantum it gives back 89d82643 (compositionStepUnbundled). Suárez's profile satisfies it vacuously.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.ActualizedRealOtherQuiddityReceivesEsse",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "87f9e331-d75e-41c5-994f-125c4969deb5",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"
+  ],
+  "connection_plan": {
+    "target_statement_id": "29e71e43-1d34-5008-8811-897fbddda209",
+    "missing_bridge": "Real otherness of whatever is not esse tantum (NonOwnBeingsHaveRealOtherness), so that this sibling with the first unde and the nature in act gives CREATURE_1 reception. Its registered route is De ente stage (b): 860eae63 to a576300f (at most one actual being whose esse is its essence), plus a real-identity being that is esse tantum.",
+    "blocker": "Real otherness via stage (b) rests on stage (b)'s premises read on OWN_BEING_2, 75b5b027 (two real-identity beings share one nature), f13d1cdd (no added difference) and 38ed105c (no matter), which together amount to the bridge OWN_BEING_2 => OWN_BEING_1 (RealIdentityIsEsseTantum). The source states f13d1cdd and 38ed105c of esse tantum (OWN_BEING_1). On a real-identity account of creatures such as Suárez's, material creatures falsify 38ed105c on OWN_BEING_2 and plausibly f13d1cdd, while 75b5b027 holds for two humans and fails only across species. Support through stage (b)'s existential form would also presuppose a real-identity being that is esse tantum, close to the GOD_4 conclusion. Stage (b) shares 7fcfcee8 and 14325c83 with the reception cluster."
+  }
+}

@@ -271,6 +271,8 @@ pub struct Args {
     pub countermodel: CountermodelArgs,
     pub without: Vec<String>,
     pub compare_premises: bool,
+    /// `--gate` (`orphans --base REV`): fail on new unplaced results.
+    pub gate: bool,
     pub sweep: SweepArgs,
     pub discover: DiscoverArgs,
     /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
@@ -397,6 +399,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         countermodel: CountermodelArgs::default(),
         without: Vec::new(),
         compare_premises: false,
+        gate: false,
         sweep: SweepArgs::default(),
         discover: DiscoverArgs::default(),
         modules: Vec::new(),
@@ -604,6 +607,7 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.without.push(value.to_owned());
             }
             "--compare-premises" => parsed.compare_premises = true,
+            "--gate" => parsed.gate = true,
             "--open" => {
                 parsed.workers.flags = true;
                 parsed.workers.open = true;

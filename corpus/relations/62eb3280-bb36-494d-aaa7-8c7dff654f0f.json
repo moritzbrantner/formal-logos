@@ -1,0 +1,10 @@
+{
+  "id": "62eb3280-bb36-494d-aaa7-8c7dff654f0f",
+  "label": "Test by NecessaryRootFork.necessaryRootControls (82cfaf26)",
+  "subject_kind": "result",
+  "subject_id": "90dbcc69-9ce5-5e02-bf52-8d5593c00c31",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Omit actual grounding well-foundedness from the nonnecessary-root principle. The Nat successor grounds at true give each actual contingent candidate a predecessor in the grounding relation. No candidate is necessary or an actual root."
+}

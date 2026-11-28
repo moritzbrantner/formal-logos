@@ -1,0 +1,31 @@
+{
+  "id": "5649f573-fdcb-4167-8b20-94e4fbf0d839",
+  "label": "Fixed-content calibration and actual access yield divine assent accuracy",
+  "premise_statement_ids": [
+    "104b8748-db76-44a4-917e-108fb8ce1720",
+    "aba394e1-845d-441d-9cfb-24b71fe8da0a"
+  ],
+  "conclusion_statement_id": "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad",
+  "inference_ids": [
+    "747817e6-21bc-46f3-9c5e-f66986c37de1"
+  ],
+  "meaning": "Keep the content, its supplied world interpretation, its report, and the bearer fixed. The calibration links the actual legacy assent to independently assented content and then to its box. The actual edge gives the content's truth at actuality. Disquotation and the matching report recover the original proposition.",
+  "definition_ids": [
+    "9851b8f8-9a75-4d46-b197-5c6d9b4f5f07",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "f2c09ae8-848d-5a3b-ab79-92c2b01d414c",
+    "eb1125b6-816b-4e58-bc27-e810399be48d"
+  ],
+  "disambiguation_ids": [
+    "cb5875d9-bf4e-4584-bfea-04e50925fb20"
+  ],
+  "sense_bridges": [
+    {
+      "term": "DOXASTIC_BELIEF",
+      "from": "059c4046-d05e-4ad5-a42d-7374d0a90554",
+      "to": "61e9ed8a-cd00-44bf-9a3e-c5cfaaf54c9b",
+      "statement_id": "104b8748-db76-44a4-917e-108fb8ce1720",
+      "role": "premise"
+    }
+  ]
+}

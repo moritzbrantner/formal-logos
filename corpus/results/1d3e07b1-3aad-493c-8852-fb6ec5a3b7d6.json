@@ -1,0 +1,11 @@
+{
+  "id": "1d3e07b1-3aad-493c-8852-fb6ec5a3b7d6",
+  "label": "Test occurrence identification under truthful selective disclosure",
+  "argument_id": "49202ada-d9bb-4a22-855f-bfd57d8edfdb",
+  "challenge_module": "TruthCore.Results.History.DisclosureIdentification.Challenge",
+  "solution_module": "TruthCore.Results.History.DisclosureIdentification.Solution",
+  "theorem": "TruthCore.Results.History.DisclosureIdentification.boundary",
+  "comparator_config": "results/1d3e07b1-3aad-493c-8852-fb6ec5a3b7d6/comparator.json",
+  "status": "solution-present",
+  "description": "Reuses the archive absence lemma and the earlier populated three-event case. Applying the proposition identification criterion to the same event across two histories separates the truth of disclosed entries from recoverability of omitted events. The control supplies no actual-history, recipient uptake, normative, source-attribution or metaphysical possibility premise."
+}

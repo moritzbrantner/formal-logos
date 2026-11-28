@@ -40,5 +40,10 @@
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "5323527f-56a2-5d11-8a76-5b25461a61b4"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745",
+    "missing_bridge": "This plan covers the esse/essence identity only: SelectedActualIdentity f p, i.e. p in act at esse with esse equal to essence. Identify the same-witness ancestor n with the q44 route's selected p on one shared profile, for example through the selected-root uniqueness of 91b085c4-f1c7-5ada-9848-8e7dc753313a, of which n is an instance as an actual concrete root necessary at w. Take n's esse/essence identity in that profile, and take n being in act at esse from the existing ExistingInActAt contract (0436de86-6579-53f2-9ff5-2111ba44ebae).",
+    "blocker": "No uniqueness premise is part of the occurrence route, and the q44 route states the identity for its own selected p and profile, not for this occurrence profile and supporter relation R. The plan supplies nothing beyond that identity: none of the other conjuncts of the classical-God root (esse maximum, perfection, firstness, matter/form exclusion, remoteness, naming)."
+  }
 }

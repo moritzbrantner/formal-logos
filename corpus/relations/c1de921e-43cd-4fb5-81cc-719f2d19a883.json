@@ -1,0 +1,10 @@
+{
+  "id": "c1de921e-43cd-4fb5-81cc-719f2d19a883",
+  "label": "Test by Countermodels.checks (938650b0)",
+  "subject_kind": "result",
+  "subject_id": "c81e1a75-82d0-5dff-99ac-4316a0eeba6e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "938650b0-ff50-5c60-8b70-5b7dc600eaaf",
+  "note": "Test symmetry in the reflexive transitive pockets frame. For either choice of the paired flag, root accesses left and left accesses only itself. This omitted reverse edge witnesses the failure of global symmetry."
+}

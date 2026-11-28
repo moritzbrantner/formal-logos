@@ -12,5 +12,10 @@
   "disambiguation_ids": [
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
     "623ddbf6-9683-5361-bae4-e348a00ec680"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "c51a07a1-4cdb-4b5f-b1ec-ebd8237f834e",
+    "missing_bridge": "Two bridges at the same world w: (1) from no infinite PRIOR_4 descent among actual concreta to some actual concretum that is first in being (none other is PRIOR_4 to it), which needs a classical minimal element, a nonempty set of actual concreta, and that whatever is PRIOR_4 to an actual concretum is itself an actual concretum; (2) from that first in being to the claim that every first mover moved by none is first in being, i.e. identification of the first unmoved mover with the bearer supplied by (1).",
+    "blocker": "Bridge (2) is the same-bearer obstacle (#1926 findings): well-foundedness gives some first in being, not that the first mover is it. No warrant for that identification is on file (docs/notes/one-dependence-order.md, 'Connection plan for 522506d1')."
+  }
 }

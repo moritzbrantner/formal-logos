@@ -1,0 +1,10 @@
+{
+  "id": "89b21e5f-347e-4e57-a01a-c4f4988535a6",
+  "label": "R-act2 is purity as perfection of being read as perfection of esse (PERFECTION_OF_BEING_2)",
+  "subject_kind": "statement",
+  "subject_id": "254ee26f-01d5-4359-bdde-5779b6e80533",
+  "predicate": "logically_equivalent_to",
+  "object_kind": "statement",
+  "object_id": "c4fb87a6-047d-5f3d-b3e3-8dc0c4bbc946",
+  "note": "Same proposition over any carrier of determinations when c4fb87a6's OfBeing is read as PERFECTION_OF_BEING_2 (OfBeing := IntensiveEsseFrame.OfEsse; DISAMB 62ca3d65). Evidence: intensiveEsseIffPurePertainsToEsse (Iff.rfl), a Comparator companion of the controls result of specs/mode-of-being-middle-term.toml. It is a sense identification, not a derivation, and adds no warrant to either."
+}

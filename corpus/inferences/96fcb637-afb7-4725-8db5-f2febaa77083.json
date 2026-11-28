@@ -1,0 +1,10 @@
+{
+  "id": "96fcb637-afb7-4725-8db5-f2febaa77083",
+  "label": "Carried closure separates positive ESSENCE_6 at roots from carriage (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "76b1b9d6-3c9a-43d5-aaf5-a545a9162edb",
+  "rule": "Finite check (row 3 of carriageControls)",
+  "meaning": "With the closure 'lacks noesis' carried by the pure a, carriage holds and positivity fails: the strengthening of carriage by positivity is strict. A structural interpretation only. In the same assignment the necessity direction of member grounding and the purity of requirements fail (shown in carriageControls row 3, not in this result's own type). At a root such a carrier is blocked by 0c8631bd with 3b39e0ba; the necessity direction instead sends the absence to case (i) or (ii).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

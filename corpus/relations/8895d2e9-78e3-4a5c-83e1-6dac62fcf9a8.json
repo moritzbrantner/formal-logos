@@ -1,0 +1,10 @@
+{
+  "id": "8895d2e9-78e3-4a5c-83e1-6dac62fcf9a8",
+  "label": "Test by ModalGrounding.controls (62b4a40a)",
+  "subject_kind": "result",
+  "subject_id": "ef54f023-8184-406a-9b0c-caa2df7415b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "62b4a40a-919e-5da4-998c-131c386b7361",
+  "note": "Omit Euclidean access. In nonEuclidean at a, the power holder true is present at a and at the contingent-free accessible world b, which accesses only itself. That holder is absent at c, also accessible from a, so the required origin-relative necessity fails."
+}

@@ -245,3 +245,129 @@ fn an_unreadable_base_revision_is_a_revision_error() {
         assert_eq!(error["error"]["code"], "revision_error", "{command}");
     }
 }
+
+/// The placement gate (`orphans --base REV --gate`) reads the base from Git:
+/// HEAD's result reaches ROOT, so nothing is judged unplaced; a new verified
+/// result in the working tree whose conclusion reaches nothing fails it
+/// (exit 1, in text and in `--json`) until its conclusion records a
+/// connection plan to a root-path statement.
+#[test]
+fn the_placement_gate_fails_on_new_unplaced_results() {
+    let directory = TempDir::new("placement");
+    let root = directory.0.as_path();
+    fixture(root);
+    let gate = truth(root, &["orphans", "--base", "BASE", "--gate"]);
+    assert_eq!(gate["passed"], true);
+    assert_eq!(gate["judged_state_counts"]["reaching"], 1);
+    assert_eq!(gate["backlog_count"], 0);
+
+    const NEW: &str = "55555555-5555-4555-8555-555555555555";
+    const NEW_ARGUMENT: &str = "77777777-7777-4777-8777-777777777777";
+    write(
+        root,
+        "corpus/statements/new.json",
+        &format!(r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW"}}"#),
+    );
+    write(
+        root,
+        "corpus/arguments/new.json",
+        &format!(
+            r#"{{"id": "{NEW_ARGUMENT}", "label": "NEW, from A", "premise_statement_ids": ["{A}"],
+                "conclusion_statement_id": "{NEW}", "inference_ids": ["INF"], "meaning": "m"}}"#
+        ),
+    );
+    write(
+        root,
+        "corpus/results/new.json",
+        &format!(
+            r#"{{"id": "88888888-8888-4888-8888-888888888888", "label": "NEW, from A",
+                "argument_id": "{NEW_ARGUMENT}", "status": "verified", "theorem": "Y.t",
+                "challenge_module": "Y.Challenge", "solution_module": "Y.Solution",
+                "comparator_config": "c.json"}}"#
+        ),
+    );
+    let run = |json: bool| {
+        let mut command = Command::new(BINARY);
+        if json {
+            command.arg("--json");
+        }
+        command
+            .arg("--root")
+            .arg(root)
+            .args([
+                "--frontier-root",
+                "ROOT",
+                "orphans",
+                "--base",
+                "BASE",
+                "--gate",
+            ])
+            .output()
+            .unwrap()
+    };
+    let output = run(false);
+    assert_eq!(output.status.code(), Some(1));
+    let text = String::from_utf8_lossy(&output.stdout);
+    assert!(text.contains(": FAILED"), "{text}");
+    assert!(
+        text.contains("  NEW [55555555] (result NEW, from A [88888888]; new result)"),
+        "{text}"
+    );
+    assert!(text.contains("Contrived edges and tautological bridges are not acceptable"));
+    let output = run(true);
+    assert_eq!(output.status.code(), Some(1));
+    let error: Value = serde_json::from_slice(&output.stderr).unwrap();
+    assert_eq!(error["error"]["code"], "placement_gate");
+    assert_eq!(error["error"]["passed"], false);
+    assert_eq!(
+        error["error"]["offending"][0]["conclusion_statement_id"],
+        NEW
+    );
+    assert_eq!(error["error"]["offending"][0]["change"], "new");
+
+    write(
+        root,
+        "corpus/statements/new.json",
+        &format!(
+            r#"{{"id": "{NEW}", "label": "NEW", "paraphrase": "NEW", "connection_plan": {{
+                "target_statement_id": "{A}", "missing_bridge": "NEW implies A.",
+                "blocker": "No shared vocabulary yet."}}}}"#
+        ),
+    );
+    let gate = truth(root, &["orphans", "--base", "BASE", "--gate"]);
+    assert_eq!(gate["passed"], true);
+    assert_eq!(gate["judged_state_counts"]["planned"], 1);
+
+    let output = run_args(root, &["orphans", "--base", "NO-SUCH-REVISION", "--gate"]);
+    assert_eq!(output.status.code(), Some(1));
+    let error: Value = serde_json::from_slice(&output.stderr).unwrap();
+    assert_eq!(error["error"]["code"], "revision_error");
+
+    for (args, message) in [
+        (&["orphans", "--gate"][..], "--gate requires --base REV"),
+        (
+            &["orphans", "--base", "BASE", "--all"][..],
+            "--base and --by/--senses/--all are alternatives",
+        ),
+        (
+            &["connectivity", "--base", "BASE", "--gate"][..],
+            "--gate applies only to orphans --base",
+        ),
+    ] {
+        let output = run_args(root, args);
+        assert_eq!(output.status.code(), Some(2), "{args:?}");
+        let error: Value = serde_json::from_slice(&output.stderr).unwrap();
+        assert_eq!(error["error"]["code"], "usage", "{args:?}");
+        assert_eq!(error["error"]["message"], message, "{args:?}");
+    }
+}
+
+/// `truth --json --root ROOT ARGS...`, whatever its exit code.
+fn run_args(root: &Path, args: &[&str]) -> std::process::Output {
+    Command::new(BINARY)
+        .args(["--json", "--root"])
+        .arg(root)
+        .args(args)
+        .output()
+        .unwrap()
+}

@@ -1,0 +1,19 @@
+{
+  "id": "a544ac3e-9448-44e8-8c5c-c780a535694e",
+  "label": "Pure determinations admissible, from exclusion-free admissibility and pure requirements",
+  "premise_statement_ids": [
+    "63e88cef-e95b-4350-a0e2-4107e51caa90",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+  ],
+  "conclusion_statement_id": "ee287fd3-3890-4739-8407-a27d7c81191d",
+  "inference_ids": [
+    "4bff6eec-946b-4357-885b-43f9f3f58cca"
+  ],
+  "meaning": "For a pure k, its singleton consists of pure determinations, so by the purity premise k does not require the lack of any subset of it; the sufficiency direction makes the singleton admissible, so k occurs in an admissible profile. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the family that admits no profile containing noesis fails the sufficiency direction with no requirement relation, and fails the purity premise when noesis requires its own lack; pure admissibility fails in both. A family in which noesis requires the presence of an impure articulation (the articulation objection's form) is a further option that neither premise pair accommodates; there pure admissibility holds and joint compossibility fails (Lean-only presenceRequirement).",
+  "definition_ids": [
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780"
+  ]
+}

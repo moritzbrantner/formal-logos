@@ -14,7 +14,7 @@
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Built a single nonempty four-being interpretation with two universal worlds, two necessary uncaused roots and a positive common instrument/effect/per-se link. Existing simplicity and pure-act proofs are imported and applied to actual source-premise assignments; q3a4 cause-dichotomy/no-self-cause have actual distinct-esse witnesses. Registered exact first-way, Q11, act/perfection and PSR evaluations in one explicit combined model profile. Common-nature and differentiation-in-act exclude this very model via imported uniqueness theorems; own-essence/esse identity and shared represented acts do not supply either. Source q3a3/a7/q11a3 materialized/read. Compendium I12–15 newly twice-pinned/materialized/read supplies a no-differentiae/no-subject multiplication argument, with its application/exhaustiveness still open against primitive individuation/different essences. Rejected opaque Simple/God flags, mixing witnesses, claiming full genus–difference simplicity, treating intrinsic tokens as explanatory adequacy, and claiming formal satisfiability as metaphysical possibility. Exact source/proof/type boundaries and the next decisive premise are in docs/notes/necessary-simple-plurality.md. Root premise delta zero.",
+  "summary": "Built a single nonempty four-being interpretation with two universal worlds, two necessary uncaused roots and a positive common instrument/effect/per-se link. Existing simplicity and pure-act proofs are imported and applied to actual source-premise assignments; q3a4 cause-dichotomy/no-self-cause have actual distinct-esse witnesses. Registered exact first-way, Q11, act/perfection and PSR evaluations in one explicit combined model profile. Common-nature and differentiation-in-act exclude this very model via imported uniqueness theorems; own-essence/esse identity and shared represented acts do not supply either. Source q3a3/a7/q11a3 materialized/read. Compendium I12–15 newly twice-pinned/materialized/read supplies a no-differentiae/no-subject multiplication argument, with its application/exhaustiveness still open against primitive individuation/different essences. Rejected opaque Simple/God flags, mixing witnesses, claiming full genus–difference simplicity, treating intrinsic tokens as explanatory adequacy, and claiming formal satisfiability as metaphysical possibility. Exact source/proof/type boundaries and the next decisive premise are in docs/notes/necessary-simple-plurality.md. Root premise delta zero.\n\nCuration pass 2, lane D (#2103, 2026-11-27). fc997d75 tests 0730d46f. Omit a common nature value for the supplied Q11 predicate. In the four-bearer fixture, root selects left and right, with distinct essence values. Their supposita each equal their own nature, and the suppositum map is injective. The predicate is the parameter of the uniqueness argument. fc997d75 tests 034eb68f. Omit differentiation in represented act between distinct first movers. Left and right are distinct and each moves the common instrument in drive without being moved. Each is in act in all three modeled respects. Equality or distinctness is decidable on the four-bearer carrier. fc997d75 tests 3e2366b5. Witness firstness of the first movers, act priority over potency and same-respect exclusion together. All four bearers are present at both worlds. Left and right have rank zero and no represented potency, and the common instrument is moved in drive and in potency there. fc997d75 tests f36f6291. Witness the simplicity argument's five premises on four present bearers. Left and right both move the common instrument and neither is moved. Rank-based component priority has no component below either root, and the dependent instrument and effect have actual composition and motion.",
   "evidence": [
     "fc997d75-6ab1-518a-9ccc-b4f2a9d036bc",
     "f3769c05-4c4f-585d-b0af-0c703f54e973",
@@ -23,5 +23,15 @@
     "841e7c81-2137-511c-ba18-29620f7a1b16",
     "b9733ed5-3b36-5e9d-a8ba-9a256dac8d3a",
     "PR-681"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2127"
+    }
   ]
 }

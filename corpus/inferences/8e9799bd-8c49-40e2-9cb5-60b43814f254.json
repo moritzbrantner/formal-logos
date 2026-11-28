@@ -1,0 +1,13 @@
+{
+  "id": "8e9799bd-8c49-40e2-9cb5-60b43814f254",
+  "label": "Universal-source preexistence from universal transfer and universal-source possession (inference)",
+  "input_statement_ids": [
+    "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+    "66252c05-49e7-4505-9644-e8f8ed823f1d"
+  ],
+  "output_statement_id": "60176223-d091-4002-a09d-024677fc948c",
+  "rule": "Universal-scope transfer, then universal-source possession",
+  "meaning": "Let c be a universal cause of being, x another thing whose being c causes, and r a perfection x has. Universal-scope transfer b26c10a0 gives that c causes x's being r; universal-source possession gives that c has r. It is the universal-scope counterpart of e8a3eb51 (preexistence from unrestricted transfer f8ba2429 and cause-of-being possession d0fc96b7): no nonuniversal transfer 10cd24ed is used. Conditional consequence only; both premises stay open.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

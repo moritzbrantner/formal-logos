@@ -1,0 +1,10 @@
+{
+  "id": "6e93602d-8605-463a-ac08-b01b5e527b1a",
+  "label": "Test by BruteContingencyParity.b2SupportControls (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "4c79358e-1872-41a5-8a34-7c57eaeec756",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "Omit selected-world concrete contingent grounding. In bruteFirst at true the mover is contingent and concrete, but grounds are absent. The ground-to-esse-cause bridge holds vacuously and the mover lacks a distinct CAUSE_2 of esse."
+}

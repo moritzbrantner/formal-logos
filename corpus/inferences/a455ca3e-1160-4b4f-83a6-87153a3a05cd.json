@@ -1,0 +1,12 @@
+{
+  "id": "a455ca3e-1160-4b4f-83a6-87153a3a05cd",
+  "label": "Q.4 a.2 preexistence entails its universal-source restriction (inference)",
+  "input_statement_ids": [
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+  ],
+  "output_statement_id": "60176223-d091-4002-a09d-024677fc948c",
+  "rule": "Drop the universality and distinctness antecedents",
+  "meaning": "Strength order registration: preexistence for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "7eb097c6-b81f-4b9c-9bb1-eda2677759de",
+  "label": "Test by PSRStrength.strengthMap (0a8e600a)",
+  "subject_kind": "result",
+  "subject_id": "9d1bdcc3-732f-5188-bfb2-5b913322b1c8",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "0a8e600a-168c-57c8-bb4b-d41593af4d0c",
+  "note": "In causeOnly, all Nat bearers exist at false and are absent at accessible true. Each bearer n that exists and is contingent at false has n + 1 as its existing cause there. This witnesses the argument's global causal coverage premise with a populated selected world false."
+}

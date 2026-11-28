@@ -1,0 +1,10 @@
+{
+  "id": "486408f4-5e9e-4dad-86d3-2c9c3944c0ba",
+  "label": "Test by NecessaryRootFork.necessaryRootControls (56f68b40)",
+  "subject_kind": "result",
+  "subject_id": "90dbcc69-9ce5-5e02-bf52-8d5593c00c31",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "56f68b40-9737-59a0-8cac-5610980a1547",
+  "note": "Omit inhabitedness from the nonnecessary-root principle. The Unit candidate is absent at the sole world, actual grounding is well-founded, and no necessary concretum exists there. No candidate can witness a nonnecessary actual root."
+}

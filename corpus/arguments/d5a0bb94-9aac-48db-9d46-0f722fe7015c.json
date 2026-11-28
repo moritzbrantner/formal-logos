@@ -1,0 +1,19 @@
+{
+  "id": "d5a0bb94-9aac-48db-9d46-0f722fe7015c",
+  "label": "Modal ontological case controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "87a7fd12-9831-41d2-b7ab-4ad8baeff378",
+  "inference_ids": [
+    "ef183ad2-7d96-4305-9165-12d275eaeb91"
+  ],
+  "meaning": "Premise-free finite models at standpoint false of two-world, two-candidate profiles with universal access (reflexive and Euclidean), every candidate GOD_4 and concrete (category-constant). onlyHere omits the boxed conditional, nobody omits possibility, swapped omits persistence; each keeps the other four premises and falsifies both conclusions. fixedOne satisfies all five premises and both conclusions (one candidate at both worlds, the other nowhere). fixedPlusVisitor satisfies the GOD_4 conclusion and persistence and falsifies rigidity. fixedPlusLocal satisfies the GOD_4 conclusion and NecessaryConcreteAt and falsifies persistence, so the conclusion entails neither bridge sibling. Models witness only their formal interpretation.",
+  "definition_ids": [
+    "337b660c-ffd3-4316-af08-424ca641d6c9",
+    "539443e8-0f99-4cb9-925f-fb522d3cc042",
+    "57a59849-0854-494d-b3ef-34942dd11812",
+    "a09a6897-aec8-45f2-8cfe-5ae7bab3b8d4",
+    "a287fbf6-eef6-4588-8ea9-ecf8e44581e1",
+    "c03ce44d-f7e6-4eef-9082-304b40699395",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9"
+  ]
+}

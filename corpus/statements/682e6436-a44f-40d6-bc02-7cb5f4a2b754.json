@@ -1,0 +1,16 @@
+{
+  "id": "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+  "label": "ESSENCE_6 exclusions at a root are carried by what its determinations require",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: essential exclusions at a root are carried by its determinations. For every actual concrete root r at w, every ESSENCE_6 condition on r's profile holds of every admissible intrinsic profile q that contains all of r's real determinations and in which no real determination of r requires the lack of some members of q. Equivalently (classically), such a condition can fail at an admissible extension only where some determination of r requires a lack within it. A closure determination ('being such as to have nothing beyond these') counts as a carrier; a negative clause in a nature that no determination carries does not. It is weaker than positivity of root essences, which drops the requirement hypothesis.",
+  "lean_declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsCarried",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

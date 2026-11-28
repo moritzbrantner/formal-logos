@@ -1,0 +1,22 @@
+{
+  "id": "ef59020f-fc98-42a4-8779-cd039d3c8997",
+  "label": "Carriage of ESSENCE_6 exclusions at roots, from positive ESSENCE_6 at roots",
+  "premise_statement_ids": [
+    "61a0b3e6-b115-4533-9148-82b17b149616"
+  ],
+  "conclusion_statement_id": "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+  "inference_ids": [
+    "f641d9ea-f6bd-41b7-b304-558aacba7be5"
+  ],
+  "meaning": "Positivity gives every ESSENCE_6 condition on an actual root's profile at every admissible extension of that profile, so in particular at every such extension in which no root determination requires a lack. It certifies the strength order of the two premises. The main theorem uses no axioms. In the Comparator companion carriageControls, row 3 (the closure carried by the pure a, every pure profile admissible) satisfies carriage and fails positivity, so the order is strict on that assignment.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

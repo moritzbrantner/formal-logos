@@ -102,3 +102,63 @@ object_kind = "statement"
 object_id = "In every possible history, each moment with a contingent thing present has a metrically finite past"
 verification_result_id = "Begun populated pasts give metrically finite populated pasts"
 note = "Linear time, any real clock. Strict: MetricGrimReaper control 2 (positive reals) has metrically finite, beginningless populated pasts."
+
+[[relation]]
+id = "f1f2b163-b724-417e-8f29-9bd62208a7e3"
+label = "Test by MetricGrimReaper.controls (37d4e072)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "37d4e072-212b-4b99-a4ff-bf10d94d5a52"
+note = "Omit co-possible adjacent pieces along spaced descents. The integer pivot history is populated at accessible world 1 and has no lower time bound. With silent registers no station issues, so adjacent pieces fail and the patchwork conditional holds vacuously."
+
+[[relation]]
+id = "536960f5-88e5-434f-aead-8d061a1d805d"
+label = "Test by MetricGrimReaper.controls (bb7b476c)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bb7b476c-4774-4860-a31f-f068aa362f18"
+note = "Omit patchwork along spaced descents. On the populated integer pivot history the pivot registers realize adjacent pieces in accessible worlds, each with its own issue station. No one world glues the whole spaced descent, and the populated past has no lower bound."
+
+[[relation]]
+id = "c6977b13-c12f-4722-b48b-22f9dc01856a"
+label = "Test by MetricGrimReaper.controls (a8c2ef8c)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a8c2ef8c-3916-43ae-8d16-febf6f2d8a24"
+note = "In firstMoment, the sole bearer is present and contingent at accessible true at every positive time. Both spaced premises hold for each register frame because the nonnegative clock bounds each past and excludes an infinite descent with a fixed positive lower bound on slot lengths."
+
+[[relation]]
+id = "0afe8874-d484-449e-9d9e-f63b849158ed"
+label = "Test by MetricGrimReaper.controls (8072fc5a)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8072fc5a-fbc6-43f6-8b71-15e85f36ab20"
+note = "In openBelow at true, the occupied positive real clock admits a coinitial descent by halving but no infinite descent with a fixed positive lower bound on slot length. With silent registers the coinitial local-pieces clause fails, while the weaker spaced clause holds."
+
+[[relation]]
+id = "8a9d6738-4c6f-4c92-9dcb-021c82e214b5"
+label = "Test by MetricGrimReaper.controls (0158110b)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0158110b-12b7-402e-ae1f-0788a8dbfedc"
+note = "In openBelow, accessible true is populated by contingent concreta on the positive reals. The real-valued clock is bounded below by zero, while the earlier moments below any populated time have no first moment. This separates the stronger begun-past claim from metric finitude."
+
+[[relation]]
+id = "61870455-0171-4547-803d-361db4cd58e4"
+label = "Test by MetricGrimReaper.controls (fce4ac74)"
+subject_kind = "result"
+subject_id = "83fd4e6f-e390-4741-bce8-015154e6b5be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fce4ac74-26df-4e97-909d-34865b6463dc"
+note = "In firstMoment, zero is the first clock moment, so every populated past is begun. The sole bearer is present and contingent at accessible true at time 1. Repeated halving gives an infinite descent through positive moments below 1, so the populated past at 1 fails foundedness."

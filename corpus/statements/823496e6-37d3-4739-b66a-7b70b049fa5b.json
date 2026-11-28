@@ -1,0 +1,16 @@
+{
+  "id": "823496e6-37d3-4739-b66a-7b70b049fa5b",
+  "label": "Late deterministic law changes preserve the prefix observation law and split the successor law",
+  "paraphrase": "For any record cutoff n and switch date k at or after n, the copy and delayed-toggle schedules have the same exact observation law for the finite trace through n. The observation of their state at the successor of k has different laws. These are per-schedule point masses, without weights over the two schedules, and the result is conditional on that supplied pair of alternatives.",
+  "lean_declaration": "TruthCore.Science.HistoryObservationLaws.ScheduleBoundary",
+  "definition_ids": [
+    "10d0fb41-49a3-404f-898f-caabd0d0324e",
+    "58d12f26-3402-5f67-b768-3c71f3381894",
+    "ec03adb4-2382-4c92-9795-5bf4fc2b4a04"
+  ],
+  "connection_plan": {
+    "target_statement_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+    "missing_bridge": "Apply the delayed-switch comparison to the law-reliability objection to the brute-contingency rival of the local existence PSR.",
+    "blocker": "No warranted bridge connects a missing #312 existence reason to scope-ground absence and then to the admission of both delayed-switch histories at fixed evidence. The loss of an exact old-record forecast does not establish the epistemic-warrant bridge."
+  }
+}

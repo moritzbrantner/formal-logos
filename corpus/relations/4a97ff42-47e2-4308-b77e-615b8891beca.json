@@ -1,0 +1,10 @@
+{
+  "id": "4a97ff42-47e2-4308-b77e-615b8891beca",
+  "label": "Test by SubjectFocalRoles.controls (9bbbe1ef)",
+  "subject_kind": "result",
+  "subject_id": "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9bbbe1ef-d07b-4baa-87e1-05cb3ff488aa",
+  "note": "Omit the subject-to-productive-cause bridge. Keep the two selected creatures secondary in subject0 under common and set CausesIn to the empty relation. The common-center and creature premises hold and neither accident has the required cause from subject0."
+}

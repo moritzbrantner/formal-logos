@@ -1,0 +1,16 @@
+{
+  "id": "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8",
+  "label": "Every actual root that has a good-general favouring apprehends some content",
+  "paraphrase": "OPEN root cognition criterion, analyst formulation, attribution deferred: every actual concrete root r at w that has the real determination that a favouring of r is a good-general profile phi (for at least one scenario and pair of candidates, at least one not a present input, the favouring depends on betterness, read as value, with end-realization held fixed; BECAUSE_OF_GOODNESS_2) itself apprehends some content about some candidate. It is the cognition criterion 3b40009e restricted to actual roots, so the criterion strengthens it. It does not say that the apprehension governs the favouring (BECAUSE_OF_GOODNESS_3), nor that the apprehended content is a stand-in.",
+  "lean_declaration": "TruthCore.Causality.PossibiliaContent.RootGoodGeneralFavouringIsApprehension",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}

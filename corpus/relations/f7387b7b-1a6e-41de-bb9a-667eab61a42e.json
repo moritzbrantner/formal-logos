@@ -1,0 +1,10 @@
+{
+  "id": "f7387b7b-1a6e-41de-bb9a-667eab61a42e",
+  "label": "The begun-or-homogeneous omission control tests the homogeneous restriction",
+  "subject_kind": "result",
+  "subject_id": "f5e33f03-e5fd-41e5-8050-000436c7c192",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "eb928359-9871-4964-b274-3a82648b58a1",
+  "note": "Comparator companion controls, part 2: in the unmarked eternal history with no giving, the coverage premise holds because false is homogeneous, the begun restriction holds vacuously, and the homogeneous restriction and 40a97664 fail."
+}

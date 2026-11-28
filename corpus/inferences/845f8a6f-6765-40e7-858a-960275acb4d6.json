@@ -1,0 +1,10 @@
+{
+  "id": "845f8a6f-6765-40e7-858a-960275acb4d6",
+  "label": "Controlled dependence laws, from the definitions (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "09edfa92-b685-4547-ade1-9389077b637f",
+  "rule": "A profile equal at the witness scenario cannot both favour and not favour; transport equalities along the control",
+  "meaning": "Laws 1 and 2: the witness scenario agrees on the control (or the profile is fixed), so the profile favours x over y there too. Law 3 rewrites the profile by the tracked feature. Law 4: the witness scenario agrees on the control, so g's verdict there equals its positive verdict at s. Law 5 rewrites both sides by tracking. Law 6 rewrites both profiles. Law 7: Meets reads only Requirement, so the plan standard is unchanged by definitional unfolding. Law 8: the favouring verdicts read only the favouring of the actual content.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

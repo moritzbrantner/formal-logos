@@ -52,3 +52,13 @@ object_id = "Selection preserves accessible effect-present source-absence witnes
 verification_result_id = "Full accessible absence coverage entails witness preservation"
 strictness_result_id = "Three-world strictness model for accessible absence coverage"
 note = "For the same frame, origin and selector, keeping every accessible source-absence world entails keeping at least one accessible effect-present source-absence witness whenever one exists for the pair. The fixed three-world strictness model retains all such witnesses while omitting the accessible near world, where neither being exists."
+
+[[relation]]
+id = "fd576ad0-cdc0-480c-aa06-96a912f3bcfd"
+label = "Test by CounterfactualWitnessCoverage.witness_coverage_strictness (06047f4c)"
+subject_kind = "result"
+subject_id = "19c36016-c875-470e-9d66-fc24c86fb018"
+predicate = "tests"
+object_kind = "statement"
+object_id = "06047f4c-ce98-4a33-a3f2-84fcf476d86e"
+note = "With skipEmptyWorld at actual, the accessible near world is excluded although the supplied agent is absent there. Neither bearer exists at near, so removing it loses no effect-present source-absence witness. The weaker preservation premise holds while full coverage fails."

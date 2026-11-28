@@ -1,0 +1,11 @@
+{
+  "id": "a82ffbcd-37b5-4a58-be8d-a53cd3cc5c9f",
+  "label": "Check the selected recipient population omission",
+  "argument_id": "6590363c-241f-4acc-b14b-bf7c053a0fe2",
+  "challenge_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UnlocatedRootNecessity.Solution",
+  "theorem": "TruthCore.Results.Causality.UnlocatedRootNecessity.emptyPopulationOmission",
+  "comparator_config": "results/a82ffbcd-37b5-4a58-be8d-a53cd3cc5c9f/comparator.json",
+  "status": "solution-present",
+  "description": "The only candidate satisfies the concreteness classifier and fails ExistsAt. There are no actual concrete recipients, no actual contingent concreta and no actual necessary concrete witness. Universal assertions over the empty recipient subtype give neither a witness nor its pointwise premises."
+}

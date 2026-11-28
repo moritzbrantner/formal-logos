@@ -1,0 +1,17 @@
+{
+  "id": "c5e2244b-2f34-420e-9792-2a7060f8461c",
+  "label": "A necessary CONCRETE_6 individual from the locally calibrated fusion (inference)",
+  "input_statement_ids": [
+    "523917cf-d978-5a15-87fc-61186d7e59de",
+    "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+    "76667657-a3ed-565a-b9fe-26f4eac81272",
+    "b699ecfb-08f7-5864-a671-1205c8f5792f",
+    "21265cfa-522d-5151-9435-b4e8f55c0c0f",
+    "00c40c6f-b55e-4393-ad9d-24f8fc16df3f"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Selected-sum reductio with local actual and concrete part policies",
+  "meaning": "Deny any actual NECESSARY_2 concretum. A necessary part of the chosen actual sum or of any of its actual causes would exist by the local actual-part policy and be concrete by the local calibration, contradicting the denial. The actual sum therefore gets a cause with actual endpoints. Its cause has no necessary parts, so it belongs to the selected fusion family. The upper-bound clause makes the cause a part of the sum, hence they overlap, contradicting causal nonoverlap. The conclusion does not identify the concrete necessary witness with the selected sum or its cause. The actual Sum2 premise explicitly fixes its family by the no-necessary-parts predicate.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

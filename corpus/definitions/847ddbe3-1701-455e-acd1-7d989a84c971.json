@@ -1,0 +1,8 @@
+{
+  "id": "847ddbe3-1701-455e-acd1-7d989a84c971",
+  "label": "Good-generality (the token): a favouring that depends on value for at least one pair",
+  "term": "good-generality (the determination token goodGen : D)",
+  "basis": "stipulative",
+  "definition": "goodGen is one real determination of the supplied carrier D, intended as a favouring whose preference, for at least one pair of candidates in at least one scenario, depends on their value with their end content held fixed, at least one of them not a present input. It is existential: it does not say that the favouring follows value for every candidate. Nothing in Lean fixes this reading; the token is an unconstrained element of D, and its content enters only through OneFavouringRealization (an admissible profile containing it is realized by a good-general favouring).",
+  "note": "Stipulative analyst notion (#2145 Investigation 4), attribution deferred. Compare the classical contrast between an appetite determined to one end and an appetite for the good as such (ST I q.19 a.4, navigation only). Whether it is a pure perfection is the separate open premise GoodGeneralityIsPure; whether it is cognitive is the separate open criterion GoodGeneralFavouringIsApprehension."
+}

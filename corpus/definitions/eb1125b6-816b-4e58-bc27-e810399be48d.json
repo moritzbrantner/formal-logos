@@ -1,0 +1,9 @@
+{
+  "id": "eb1125b6-816b-4e58-bc27-e810399be48d",
+  "label": "DOXASTIC_BELIEF_2: truth at every belief-accessible alternative",
+  "term": "relational doxastic belief",
+  "basis": "stipulative",
+  "definition": "Believes c a p w holds when the world predicate p is true at every alternative accessible to a from w in the supplied belief frame.",
+  "lean_declaration": "TruthCore.Logic.Doxastic.Believes",
+  "note": "Uses the existing Kripke box on a world predicate. Access, truth at the actual world, and entitlement have separate conditions."
+}

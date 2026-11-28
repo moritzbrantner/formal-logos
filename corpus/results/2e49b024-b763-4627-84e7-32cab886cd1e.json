@@ -1,0 +1,11 @@
+{
+  "id": "2e49b024-b763-4627-84e7-32cab886cd1e",
+  "label": "Global part existence restricts to the selected fusion scope",
+  "argument_id": "6d5c7f3e-9699-4093-b02c-96b78e49a673",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.partsExistOfGlobal",
+  "comparator_config": "results/2e49b024-b763-4627-84e7-32cab886cd1e/comparator.json",
+  "status": "solution-present",
+  "description": "Apply global part existence to the actual sum in the first case and the actual causal bearer in the second case, using the same order."
+}

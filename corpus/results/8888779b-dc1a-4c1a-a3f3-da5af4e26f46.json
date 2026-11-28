@@ -1,0 +1,11 @@
+{
+  "id": "8888779b-dc1a-4c1a-a3f3-da5af4e26f46",
+  "label": "Compare prefix and successor observation laws across a delayed switch",
+  "argument_id": "6f5a709e-e397-4ca1-b87a-39bc2e905eae",
+  "challenge_module": "TruthCore.Results.Science.HistoryObservationLaws.Challenge",
+  "solution_module": "TruthCore.Results.Science.HistoryObservationLaws.Solution",
+  "theorem": "TruthCore.Results.Science.HistoryObservationLaws.scheduleBoundary",
+  "comparator_config": "results/8888779b-dc1a-4c1a-a3f3-da5af4e26f46/comparator.json",
+  "status": "solution-present",
+  "description": "NoFoundationLawChaos.lawSwitch supplies the two complete paths, equal all-true prefix conditions and opposite states at the switching successor. The same deterministic experiment wrapper yields equal prefix laws and different successor laws. Agreement of the exact old-record observation laws is compatible with distinct transition rules and possible prospective discrimination within the supplied class. No inference from absence of explanation to the admission of this pair or the admission of any richer class is encoded."
+}

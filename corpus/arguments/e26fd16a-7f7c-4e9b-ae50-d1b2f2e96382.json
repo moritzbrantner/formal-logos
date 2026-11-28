@@ -1,0 +1,18 @@
+{
+  "id": "e26fd16a-7f7c-4e9b-ae50-d1b2f2e96382",
+  "label": "Controlled dependence laws, from the definitions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "09edfa92-b685-4547-ade1-9389077b637f",
+  "inference_ids": [
+    "845f8a6f-6765-40e7-858a-960275acb4d6"
+  ],
+  "meaning": "Laws 1 and 2: the witness scenario agrees on the control (or the profile is fixed), so the profile favours x over y there too. Law 3 rewrites the profile by the tracked feature. Law 4: the witness scenario agrees on the control, so g's verdict there equals its positive verdict at s. Law 5 rewrites both sides by tracking. Law 6 rewrites both profiles. Law 7: Meets reads only Requirement, so the plan standard is unchanged by definitional unfolding. Law 8: the favouring verdicts read only the favouring of the actual content.",
+  "definition_ids": [
+    "45541b02-ec42-4bae-9d45-4c67d2902004",
+    "9d8bad2a-91f9-45f7-a181-b9c39a55cdcb",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d7647a08-08a0-489e-ad49-a2f475aa3801",
+  "label": "Test by K.Countermodels.checks (2b20b5af)",
+  "subject_kind": "result",
+  "subject_id": "a827a9da-e552-5315-ac60-10fdc7db5fb8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+  "note": "In `fork false`, `.root` accesses the two terminal worlds and has no self-loop. Full-predicate collapse holds at both successors, so the boxed collapse claim holds at `.root`, where collapse itself fails. This is a test of the selected-world reflexivity used to infer truth from its box."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "c48266c2-ba78-41c2-8860-61273abf0ef8",
+  "label": "EXPLAINED_ABSENCE_3: an absence excluded by admissibility (case i or ii)",
+  "term": "absence excluded by admissibility (EXPLAINED_ABSENCE_3)",
+  "definition": "AbsenceExcludedByAdmissibility Admissible Has x k: no admissible profile contains all of x's real determinations together with k, so the admissibility constraints, alone or with x's positive profile, exclude k (case i or ii of #2153). For a lacked k it is the negation of UnexplainedAbsence (a5452da9). It is the sense of 'no unexplained absence at roots' (9281317d), and it is the first disjunct of a positively fixed absence (04c93d61), so it gives EXPLAINED_ABSENCE_2 outright; the converse needs the necessity direction of member grounding (89c988d9).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.AbsenceExcludedByAdmissibility",
+  "note": "Stipulated for #2145 lane H2 so that the sense of E has a Lean declaration of its own rather than its complement UnexplainedAbsence; a statement asserting an unexplained absence keeps the definition a5452da9 and is not thereby tagged as 'explained'. It introduces no primitive; it reuses HasCompatibleExtension and ActualProfile."
+}

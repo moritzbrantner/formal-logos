@@ -1,0 +1,10 @@
+{
+  "id": "c59ac352-c168-4540-bf44-e87c14b68431",
+  "label": "Test by NecessarySimplePlurality.jointControl (0730d46f)",
+  "subject_kind": "result",
+  "subject_id": "fc997d75-6ab1-518a-9ccc-b4f2a9d036bc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0730d46f-4604-5750-9a64-de664f064b31",
+  "note": "Omit a common nature value for the supplied Q11 predicate. In the four-bearer fixture, root selects left and right, with distinct essence values. Their supposita each equal their own nature, and the suppositum map is injective. The predicate is the parameter of the uniqueness argument."
+}

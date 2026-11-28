@@ -1,0 +1,9 @@
+{
+  "id": "b4a7f37e-83d4-4e5f-bb24-b2a72cd85ca6",
+  "label": "MORE_4: eminent comparative, x has r virtually and surpasses y in the mode of having r",
+  "term": "more and less in a perfection, eminent comparative",
+  "definition": "`EminentComparative A Surpasses r x y`: x has r virtually (IN_ACT_2, `A.InActVirtually`) and surpasses y in the mode of having r (`Surpasses r x y`). `Surpasses` is an explicitly primitive parameter, read 'x's way of having r is higher than y's'. Distinguishing conditions: it does not require x to have r formally or to a higher measured degree (contrast MORE_3), and it requires more than the primitive MoreIn's bare comparison (MORE_1) by requiring virtual possession. OPEN semantic obligations: no record specifies Surpasses at an arbitrary perfection r; the only recorded order of this kind is the order by approach to a primary at being (DISAMB-ORDER-OF-BEING, ApproachToPrimaryReading), on which 'more such' is certified only with the primary as cause (STMT-ATTRIBUTION-ORDER-RESTRICTS-CAUSE-MORE-SUCH). Descartes' eminent containment ('differs in quality but suffices to take its place', Second Replies, Definition IV) is a candidate specification that is not encoded here.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.EminentComparative",
+  "note": "Stipulative analyst definition, attribution deferred; declared so that the ordinary and eminent readings of 'more such' are distinct Lean types. It settles nothing about eminence: Surpasses is primitive and unconstrained. Introduced for the causal possession assessment (docs/notes/causal-possession-bottleneck.md)."
+}

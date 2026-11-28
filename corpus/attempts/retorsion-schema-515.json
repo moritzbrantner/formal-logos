@@ -14,7 +14,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Research half of #515: the first two global-underminer instances of one retorsion schema. Schema: #516's performed-denial retorsion (LOGIC-PERFORMED-DENIAL-RETORSION); #515 adds only the presupposition link (TruthCore.Alternatives.Retorsion.PresuppositionLink: every performance is, through a token, an occurring episode of the denied sort). Superseded approach: a separate typed Underminer schema module written before #516 merged; dropped to avoid a competing schema, since #516's theorem is its special case once the link is an instance hypothesis. Eleatic instance: episodes are being-respect pairs occurring when the being is moved in that respect; the token of an opining is the opiner in the respect of the opinion; the link is definitionally OpiningIsBeingMovedReading (eleatic_link_iff). Registered instance_of_schema; the instance's Comparator config lists both its theorem and noAccurateDenial, whose Solution its Challenge imports. ELEATIC-THESIS-SELF-REFUTING is unchanged: re-proving it through a schema lemma failed Comparator ('challenge and solution theorem statements do not match'), because its frozen Challenge imports only ActPotencyRegress; adding only the import passed. McTaggart: one bounded attempt; he escapes at the link, not the logic: his § 511 answer (ATTEMPT-MCTAGGART-NOE-II-RETORSION-REPLY) denies the change link outright and, with the open bridge STMT-MOTION-IS-A-CHANGE, the Eleatic link; the opinionGate model satisfies his 1908 bundle, the 1927 answer, the bridge and both held theses while both links fail; #516's StaticEpisodeControl is included. Rejected: registering McTaggart as instance_of_schema (the instance fails) and a refutes relation for the Eleatic instance (its link is open, #391). Frontier delta: none.",
+  "summary": "Research half of #515: the first two global-underminer instances of one retorsion schema. Schema: #516's performed-denial retorsion (LOGIC-PERFORMED-DENIAL-RETORSION); #515 adds only the presupposition link (TruthCore.Alternatives.Retorsion.PresuppositionLink: every performance is, through a token, an occurring episode of the denied sort). Superseded approach: a separate typed Underminer schema module written before #516 merged; dropped to avoid a competing schema, since #516's theorem is its special case once the link is an instance hypothesis. Eleatic instance: episodes are being-respect pairs occurring when the being is moved in that respect; the token of an opining is the opiner in the respect of the opinion; the link is definitionally OpiningIsBeingMovedReading (eleatic_link_iff). Registered instance_of_schema; the instance's Comparator config lists both its theorem and noAccurateDenial, whose Solution its Challenge imports. ELEATIC-THESIS-SELF-REFUTING is unchanged: re-proving it through a schema lemma failed Comparator ('challenge and solution theorem statements do not match'), because its frozen Challenge imports only ActPotencyRegress; adding only the import passed. McTaggart: one bounded attempt; he escapes at the link, not the logic: his § 511 answer (ATTEMPT-MCTAGGART-NOE-II-RETORSION-REPLY) denies the change link outright and, with the open bridge STMT-MOTION-IS-A-CHANGE, the Eleatic link; the opinionGate model satisfies his 1908 bundle, the 1927 answer, the bridge and both held theses while both links fail; #516's StaticEpisodeControl is included. Rejected: registering McTaggart as instance_of_schema (the instance fails) and a refutes relation for the Eleatic instance (its link is open, #391). Frontier delta: none.\n\n2026-11-27, #2103 placement curation. Retorsion and time. 4f30bed3, 5bd4c021, a965c08c, 62a1a744 (unplaced): Retorsion template or verdict on the selected change bundle. Event change, A-series and actual MOTION_1 require separate interpretation.",
   "evidence": [
     "bfda68fd-6fd2-5a26-afe5-1ac99eb01ba3",
     "3fab8a6b-ed9a-5851-b6a0-656bd076278a",
@@ -23,5 +23,15 @@
     "4c059ee9-0a2b-50a2-9a18-abe873b55aa1",
     "4d2237a9-2157-552a-a435-fdb9e58274e0",
     "PR-540"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2110"
+    }
   ]
 }

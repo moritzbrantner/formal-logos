@@ -1,0 +1,14 @@
+{
+  "id": "5a8d97c1-f925-4376-9547-7ce97331f820",
+  "label": "Positive exclusion brings a LIMITING_PRINCIPLE_2, from joint compossibility (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "c78c77da-91b0-5928-bd5f-ba670a6f3660",
+    "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"
+  ],
+  "output_statement_id": "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+  "rule": "Excluded middle on the limiting principle; otherwise purity of the whole profile and joint compossibility give a compatible completion",
+  "meaning": "Fix a bearer x whose real-determination profile is admissible, and a pure k that occurs in some admissible profile while no admissible profile contains x's determinations and k. By excluded middle x has a represented limiting principle or not. If not, the open RootPurity bridge makes every determination of x pure. Joint compossibility then makes x's profile with k added admissible. That profile contains x's determinations and k, contradicting the exclusion. So x has a represented limiting principle. The L bridge in the structural sense is thereby derived from two premises that mention no absence. The main theorem uses no axioms. In the Comparator companion structuralControls (three Mathlib axioms), the joint-conflict row keeps the RootPurity bridge and fails joint compossibility and the conclusion, and the finite-mode row with a noncomposite source keeps joint compossibility and fails the RootPurity bridge and the conclusion.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

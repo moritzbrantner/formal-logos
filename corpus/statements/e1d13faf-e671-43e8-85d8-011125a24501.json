@@ -1,0 +1,19 @@
+{
+  "id": "e1d13faf-e671-43e8-85d8-011125a24501",
+  "label": "Good-favouring table: good-bounded profiles leave ties open; only good-trackers depend on goodness",
+  "paraphrase": "Analyst formulation on one finite carrier: the four outcomes of the selection-scope model (total omission, D-realizing c and d, unfit z), its exercise frame with histories c and d and actual outcome c, and four scenarios (actual: c and d realize D and are tied; reversal: same physical provisions, D realized by c and z; valueless: D-realization as actual, nothing better than anything; cBetter: D-realization as actual and c better than d). Profiles: chance (no favouring), proxy (favours the physical provision type of c and d), D-nature and determined will (both defined as favouring D-realization), good-general nature and rational exercise (both defined as favouring what is better), and two controls, perverse (favours z over c in actual) and bias (D-realization plus c over d in actual). Which account each profile represents is an interpretive assignment; rows 2, 3 and the shared verdicts of each pair in row 7 hold by construction, since the standard reads only the profile in the content scenario. (1) Realization of D in the actual scenario is Fit. (2) With the actual scenario as content, proxy, D-nature, determined will, good-general and rational each explain c rather than z and c rather than omission, none explains c rather than d, none selects c; chance explains no contrast. (3) With cBetter as content, good-general and rational favour c over every other realized outcome; D-nature and proxy do not favour c over d. (4) The outcome re-description selects at every history and is not outcome-independent, and no outcome-independent content with asymmetric favouring selects at every history. (5) For c rather than z at actual, D-nature, good-general and rational depend on D-realization (BECAUSE_OF_GOODNESS_1, witness reversal); the proxy favours c over z without that dependence; chance lacks it. (6) For c rather than z at actual, good-general and rational depend on betterness with D-realization fixed (BECAUSE_OF_GOODNESS_2, witness valueless); D-nature favours c over z and c is better, yet D-nature, determined will, proxy and chance lack that dependence. (7) Good-general equals rational and D-nature equals determined will as functions. (8) Controls: perverse favours z over c while c is better and does not depend on goodness for z over c; bias selects c in actual (it is not good-bounded) and does not depend on goodness for c over d. (9) For c over z at actual: D-nature has ORIGINAL_FINALITY_1 and lacks ORIGINAL_FINALITY_2; good-general has ORIGINAL_FINALITY_2; proxy lacks ORIGINAL_FINALITY_1. The valueless scenario varies goodness at fixed D-realization and is counterpossible if goodness facts are necessary. Finite structural surrogates; no intellect, apprehension, chance measure or simplicity is typed.",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.GoodFavouringTable",
+  "definition_ids": [
+    "aaaad7b2-fd1c-49ad-ac0b-666763ef96df",
+    "45541b02-ec42-4bae-9d45-4c67d2902004",
+    "bcb40191-d34f-4958-9ac8-f6a7192c8191",
+    "da7e9520-18d1-4514-8490-186e7b29a56d",
+    "f35499f9-5905-4eb9-bc10-f40bfadc0b31",
+    "188efb7f-0b64-4a54-a462-f053a5cd84e6"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "59b60fe6-1bfe-512f-a90c-17416218bba4",
+    "0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5"
+  ]
+}
