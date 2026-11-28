@@ -24,5 +24,8 @@
   "disambiguation_ids": [
     "1795a62e-f78b-5f5b-94e7-9e7490824811",
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m = p` (in eq_of_isMaximumIn), an identity question about a maximum and the primary (m = p), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

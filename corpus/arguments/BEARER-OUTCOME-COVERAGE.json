@@ -26,5 +26,8 @@
   "disambiguation_ids": [
     "f83e9a34-7994-5eb1-8431-50776f097f58",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Substance t` (in bearerOutcome); `TruthCore.Causality.BearerRegress.SupportCycleBelow m R w b` (in bearerOutcome). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

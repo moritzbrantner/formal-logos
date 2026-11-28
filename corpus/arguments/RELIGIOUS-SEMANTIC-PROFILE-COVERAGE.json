@@ -17,5 +17,8 @@
   ],
   "disambiguation_ids": [
     "972577ea-4155-59ec-9f20-0399367c7de5"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `P.TrueIn true s`; `P.TrueIn false s`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

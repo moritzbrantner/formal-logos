@@ -44,5 +44,8 @@
     "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
     "1efd1154-f697-5442-9b14-7ce8f1215f23",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.NonlimitingConcreteExistence.controlProfile.ontic.ExistsAt u c` (in sameIndividual); `TruthCore.Causality.NonlimitingConcreteExistence.PossibleAbsence TruthCore.Causality.NonlimitingConcreteExiste` (in separate). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

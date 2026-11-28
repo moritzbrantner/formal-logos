@@ -27,5 +27,8 @@
     "63d4170f-a2c8-5582-ad66-0aa7734e288d",
     "35f7bb2c-9506-5ce6-8676-05da4e761177",
     "05392ecb-bde5-5fff-8c64-ab61c20bc96a"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `f.Overdetermines e x` (in allBased); `f.AmongOrRealizedBy (f.PriorPhysical x) e` (in based_of_not_overdetermines). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }
