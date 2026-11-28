@@ -1,0 +1,11 @@
+{
+  "id": "f2156f94-4599-4456-9daa-764618c72317",
+  "label": "No normalized uniform point masses on a countably infinite carrier",
+  "argument_id": "49e70814-5378-49e7-b8a1-ad301465d286",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.noUniform",
+  "comparator_config": "results/f2156f94-4599-4456-9daa-764618c72317/comparator.json",
+  "status": "solution-present",
+  "description": "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity."
+}

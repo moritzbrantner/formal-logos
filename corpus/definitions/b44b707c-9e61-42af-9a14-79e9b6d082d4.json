@@ -1,0 +1,9 @@
+{
+  "id": "b44b707c-9e61-42af-9a14-79e9b6d082d4",
+  "label": "Formula truth event among accessible worlds",
+  "term": "Formula truth event among accessible worlds",
+  "definition": "Uses the existing Frame.access and Holds. The carrier is the subtype of successors at a selected world; membership is truth of the fixed formula there. Interpreting access as actual metaphysical possibility remains an open semantic bridge.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the selected investigation; no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.accessibleEvent"
+}

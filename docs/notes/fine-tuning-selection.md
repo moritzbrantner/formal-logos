@@ -581,8 +581,8 @@ normalized measure with positive mass at every point. Infinity does no work
 in this lemma: a finite carrier gives the same non-identification. Infinity
 matters only for the separate absence of a uniform default
 (`NoUniform` in #2142): on a finite carrier the normalized counting measure
-is available, and on a countably infinite one no measure has equal point
-masses. This is the one copy of
+is available, and on a countably infinite carrier with measurable singletons
+no probability measure has equal point masses. This is the one copy of
 the interior-mass lemma; the modal-carrier follow-up (#2142) reuses it for a
 fixed Kripke frame's accessible worlds. It shows that a carrier and its
 partition do not fix a probability, not that no probability is warranted.
@@ -598,6 +598,36 @@ information dependence and the specific contrast *which likelihood?*, not
 a theorem that adequate causal explanations must necessitate their effects.
 It neither rules out a stochastic explanation nor equates a numerical
 likelihood with a complete history or its actuality.
+
+**Symmetry of the normalizability point (#2142).** The modal-carrier controls
+(`Modal.ProbabilityUnderdetermination`, attempt
+[`1accc612`](../../corpus/attempts/1accc612-64d6-411d-82c8-e06f601d7424.json))
+show two things under explicit measurability hypotheses. First, on a
+countably infinite carrier with measurable singletons, no probability measure
+has equal point masses (`NoUniform`). Second, on an infinite carrier, no
+normalized finitely additive real set function defined on every subset is
+invariant under every permutation (`NoPermutationProbability`). In particular,
+no probability measure for which every subset is measurable has that
+invariance (`NoAllSubsetsPermutationMeasure`). The measurability hypotheses
+are essential. On an uncountable carrier, the countable/co-countable
+probability measure gives mass 0 to countable sets and 1 to co-countable
+ones. It is normalized and invariant under every permutation, but its
+sigma-algebra does not contain every subset. These results are the formal
+core of the normalizability objection to indifference priors over countably
+infinite ranges, and they bind design likelihoods in the same way as
+naturalistic ones, within the same limits. A design hypothesis has no
+normalized assignment to use if it assigns either
+- equal point masses over a countably infinite range with measurable
+  singletons; or
+- a probability on every subset of an infinite range that is invariant under
+  every permutation.
+
+Like any rival, it then needs a warranted non-uniform measure. A symmetric
+assignment on a restricted sigma-algebra, such as the countable/co-countable
+measure, is not excluded by these theorems on either side. Translation
+invariance on a continuous unbounded range is a further case not formalized
+here. Neither result shows that no probability is available: point-positive
+non-uniform measures exist for every interior value.
 
 **Positive explanatory work, matched scope.** Existential coverage has genuine
 value: a populated ensemble containing at least one observer-bearing member

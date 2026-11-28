@@ -1,0 +1,18 @@
+{
+  "id": "5b82cb80-34b3-4511-b4ce-f6d8e6e357f7",
+  "label": "Continuous probability with zero point masses and variable interval masses",
+  "paraphrase": "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.ContinuousControl",
+  "definition_ids": [
+    "1a0352cf-bd05-4c45-bf6c-c495a3347fec",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec"
+  ],
+  "disambiguation_ids": [
+    "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "A physically warranted continuous parameter measure, with its own geometry, for the parameters used in the fine-tuning comparison, then an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4.",
+    "blocker": "This is a positive control: it shows that a measurable geometry, unlike cardinality, does supply a normalized probability with zero point masses on a continuum. It does not show that any physical parameter space carries this geometry or a warranted measure, and it derives no designer likelihood or designer."
+  }
+}

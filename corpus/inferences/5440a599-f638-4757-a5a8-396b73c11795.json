@@ -1,0 +1,10 @@
+{
+  "id": "5440a599-f638-4757-a5a8-396b73c11795",
+  "label": "Continuous probability with zero point masses and variable interval masses",
+  "input_statement_ids": [],
+  "output_statement_id": "5b82cb80-34b3-4511-b4ce-f6d8e6e357f7",
+  "rule": "Mathematical proof in Lean with Mathlib",
+  "meaning": "Lebesgue measure restricted to the closed unit interval is a probability on the real line, has zero mass on every singleton, and assigns the interval from zero to t its length for t between zero and one.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

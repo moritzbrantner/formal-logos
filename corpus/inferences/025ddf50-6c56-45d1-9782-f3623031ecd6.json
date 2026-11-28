@@ -1,0 +1,12 @@
+{
+  "id": "025ddf50-6c56-45d1-9782-f3623031ecd6",
+  "label": "Fixed modal accessibility and truth admit every interior event probability",
+  "input_statement_ids": [
+    "c3f76aea-ee54-471c-8a37-ef53eab821d6"
+  ],
+  "output_statement_id": "7d4d86dd-97c0-43f0-882a-687af5d675e5",
+  "rule": "Mathematical proof in Lean with Mathlib",
+  "meaning": "Corollary of the shared interior-mass statement (c3f76aea): instantiate it at the accessible-world subtype of a fixed frame, with the formula truth event as the event. Frame, valuation, origin and formula are fixed before the measure is chosen; access does not select a probability.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

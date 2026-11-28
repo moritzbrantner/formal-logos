@@ -1,0 +1,20 @@
+{
+  "id": "7d4d86dd-97c0-43f0-882a-687af5d675e5",
+  "label": "Fixed modal accessibility and truth admit every interior event probability",
+  "paraphrase": "For a fixed Kripke frame, valuation, origin and formula, when its accessible carrier is countable with measurable singletons and both truth classes are nonempty, each strictly interior real event probability is realized by a point-full-support probability measure on exactly that carrier. No change of frame or valuation is used, and no probability is thereby shown unavailable.",
+  "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.ModalProbabilityFreedom",
+  "definition_ids": [
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
+    "b44b707c-9e61-42af-9a14-79e9b6d082d4",
+    "b1e17aae-ec07-4319-b63f-e0de329f91b2",
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec"
+  ],
+  "disambiguation_ids": [
+    "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Connect the existing FineTuningSelection and FineTuningEvidence likelihood comparison to a calibrated physical sampling measure and an observer-selection rule, then to an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4.",
+    "blocker": "The mathematical controls show that bare carrier, truth partition and access do not calibrate a probability. They do not derive any physical prior, designer likelihood or actual designer. The existing fine-tuning connection remains open."
+  }
+}

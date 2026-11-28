@@ -1,0 +1,14 @@
+{
+  "id": "49e70814-5378-49e7-b8a1-ad301465d286",
+  "label": "No normalized uniform point masses on a countably infinite carrier",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "796b415f-2de6-46b1-ae71-ee7fab6a5689",
+  "inference_ids": [
+    "9df61e79-42ff-407a-8e17-c960d31c9a21"
+  ],
+  "meaning": "Every Mathlib probability on a countably infinite carrier with measurable singletons has unequal singleton weights somewhere; a constant zero weight sums to zero and a nonzero constant sums to infinity.",
+  "definition_ids": [
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec",
+    "bc045e1b-1265-4b4f-9aa3-4142a5cf4368"
+  ]
+}

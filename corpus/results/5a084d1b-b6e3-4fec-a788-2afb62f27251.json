@@ -1,0 +1,11 @@
+{
+  "id": "5a084d1b-b6e3-4fec-a788-2afb62f27251",
+  "label": "Two bijective enumerations give different limiting frequencies for the same event",
+  "argument_id": "33f16a7a-f823-435a-b12f-5d025b82033f",
+  "challenge_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ProbabilityUnderdetermination.Solution",
+  "theorem": "TruthCore.Results.Modal.ProbabilityUnderdetermination.enumerationDependence",
+  "comparator_config": "results/5a084d1b-b6e3-4fec-a788-2afb62f27251/comparator.json",
+  "status": "solution-present",
+  "description": "There is a single set of naturals and two bijective enumerations whose initial finite sets exhaust the entire carrier, with limiting relative frequencies one half and one third, respectively. Limits use every sufficiently large prefix, not merely subsequences."
+}
