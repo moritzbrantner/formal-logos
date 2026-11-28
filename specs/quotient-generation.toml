@@ -92,6 +92,7 @@ sense_bridges = [{term = "CONCRETE_AND_ABSTRACT", from = "CONCRETE_AND_ABSTRACT_
 [[argument]]
 id = "Quotient inertness from classification and owner causal commitment"
 theorem = "inert"
+strong_version_needed = { "e27489c3-7419-5123-8476-386633e62532" = "Both conjuncts are used: ho.1 (a power-bearer is concrete) and ho.2 (a causer is concrete), to exclude both power and outgoing causation for each value. Each weak version, PowerRequiresConcreteAt (61b6e188) and CausersRequireConcreteAt (bc2af29f), is only one conjunct." }
 premises = ["Fixed quotient values have no esse in re", "STMT-CAUSAL-POWER-AND-ACTIVITY-REQUIRE-CONCRETENESS"]
 conclusion = "Fixed quotient values lack selected-world power and productive activity"
 rule = "Same-bearer classification and two independent contradictions"

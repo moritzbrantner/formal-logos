@@ -23,5 +23,8 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "205a39c3-915d-5fe4-8076-a9ff91329e08",
     "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
-  ]
+  ],
+  "strong_version_needed": {
+    "0628359b-4a71-5c67-a84b-0fd80104aceb": "The proof uses the converse direction (Iff.mpr): from InPotency y r' and ActualizedQuaPotential y r' it concludes MovedIn y r'. Both weak versions, MovedOnlyAsInPotencyReading (4be9a4ac) and NoMovedWithoutPotency (6948dde0), state only that being moved requires potency and supply no such converse."
+  }
 }

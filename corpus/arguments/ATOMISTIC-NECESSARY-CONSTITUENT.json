@@ -44,6 +44,8 @@
     "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
   ],
   "strong_version_needed": {
-    "b699ecfb-08f7-5864-a671-1205c8f5792f": "The old source-consumer needs actuality of a causer of its selected actualGraph source, whose identity is obtained from the atomistic source theorem. The new weak policy concerns a separately supplied spacetime whole and does not constrain that source without an additional identification. Frozen interface retained; no claim that both endpoints or every unrelated edge are minimal."
+    "b699ecfb-08f7-5864-a671-1205c8f5792f": "The old source-consumer needs actuality of a causer of its selected actualGraph source, whose identity is obtained from the atomistic source theorem. The new weak policy concerns a separately supplied spacetime whole and does not constrain that source without an additional identification. Frozen interface retained; no claim that both endpoints or every unrelated edge are minimal.",
+    "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e": "hParts is applied to the parts of the causal source s obtained from AtomisticCausalSource.source (hParts s.val p …). This argument has no fusion sum, and the weak version SelectedFusionPartsExistAt (3423b8ec) covers only the parts of one selected sum and of its existing causes.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ c, (TruthCore.Causality.WorldSourceRegress.actualGraph m w).edge c x` (in source); `∃ p ≤ ↑s, TruthCore.German.Kant.CosmologicalInference.NecessaryAt m w p` (in sourceHasNecessaryPart). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

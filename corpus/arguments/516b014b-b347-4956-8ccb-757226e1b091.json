@@ -26,5 +26,8 @@
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "bedfab81-905c-5d1a-b834-e20b8007b3da",
     "7507d645-874d-5434-add8-2f49c2801d36"
-  ]
+  ],
+  "strong_version_needed": {
+    "fce4ac74-26df-4e97-909d-34865b6463dc": "The proof descends by Acc induction along strictly earlier grounding moments (descend t (hPast v hwv x t …)). BegunAt t (PopulatedPastsBegun, 0158110b) gives only a minimal moment at or below t, which does not stop an infinite descending sequence of earlier moments (continuous time with a first moment; BegunComingToBe Control.zeno)."
+  }
 }

@@ -149,6 +149,7 @@ meaning = "New non-transcription conditional derivation. Let x be in act in r an
 [[argument]]
 id = "The esse instance of holding from the timed strong concurrent actualization"
 theorem = "lackableBeingHeldOfTimed"
+strong_version_needed = { "76d2cc96-14a0-48bc-bd0b-a5c0ca853265" = "The proof uses the giver's distinctness, g ≠ x, which HeldMotion (MOTION_3) requires (intro z : … → z ≠ x → …). The weak version ConcurrentlyActualized (40a97664) supplies a giver g with no claim that g ≠ x." }
 premises = ["76d2cc96-14a0-48bc-bd0b-a5c0ca853265", "At one moment, presence, received esse and giving being read the holding vocabulary at esse"]
 conclusion = "Whatever is in act as to being and could lack being is MOTION_3 held in being by another"
 senses = {MOTION = "MOTION_3"}

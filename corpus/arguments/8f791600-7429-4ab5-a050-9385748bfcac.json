@@ -42,5 +42,8 @@
       "statement_id": "69a66a93-eec1-4e81-8d68-efef9fb97144",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "e27489c3-7419-5123-8476-386633e62532": "Both conjuncts are used: ho.1 (a power-bearer is concrete) and ho.2 (a causer is concrete), to exclude both power and outgoing causation for each value. Each weak version, PowerRequiresConcreteAt (61b6e188) and CausersRequireConcreteAt (bc2af29f), is only one conjunct."
+  }
 }

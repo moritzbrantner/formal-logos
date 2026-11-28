@@ -50,5 +50,8 @@
       "to": "9f9108e2-3cc3-45dd-be1d-d8fdaaced708",
       "statement_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "The proof transfers full well-foundedness of actual concrete grounding (wf_of_subtype hWF) into the graded no-infinite-ascent conclusion. The weak versions do not give it: ConeWellFounded (1b1e3f09) covers one cone, ActualGroundingAsymmetric (39f7c63d) only two-cycles, WholeRosterNotTrapped (5c898d24) only the whole roster, and closed-collection rootedness (aca3baa1) admits a rooted infinite descending chain (ClosedEsseSource RootedInfiniteControl)."
+  }
 }

@@ -5,6 +5,7 @@ results = "TruthCore.Results.Causality.UnderivedConcreteness"
 [[argument]]
 id = "Selected-world calibration gives an underived CONCRETE_6 witness"
 theorem = "underivedConcreteOfCalibration"
+strong_version_needed = { "0e02cd69-8fb0-4859-8287-937440c84b5b" = "The calibration is applied to the arbitrary existing witness n supplied by NecessarilyUnderived. The weak version SelectedActualFusionPartsConcreteAt (00c40c6f) covers only parts of one selected fusion sum (on a part order B lacks here), and no premise places n among them." }
 comparator_theorems = ["jointlySatisfied", "calibrationOmission"]
 premises = ["STMT-NECESSARILY-UNDERIVED", "0e02cd69-8fb0-4859-8287-937440c84b5b"]
 conclusion = "STMT-NECESSARY-CONCRETE-UNDERIVED-AT"

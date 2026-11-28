@@ -11,5 +11,8 @@
   "inference_ids": [
     "670ec31e-444a-53fa-b858-71d97a1c21ba"
   ],
-  "meaning": "ST I q.2 a.3 co., quinta via, first half: natural bodies act for an end, not by chance but from intention (tending). The Comparator config also verifies necessityModel (the chance-or-intention dichotomy is needed: regular best outcomes, not by chance, with no tending, the formal skeleton of a selection or material-necessity account) and chanceModel (the no-chance premise is needed)."
+  "meaning": "ST I q.2 a.3 co., quinta via, first half: natural bodies act for an end, not by chance but from intention (tending). The Comparator config also verifies necessityModel (the chance-or-intention dichotomy is needed: regular best outcomes, not by chance, with no tending, the formal skeleton of a selection or material-necessity account) and chanceModel (the no-chance premise is needed).",
+  "strong_version_needed": {
+    "658814de-ffeb-5824-afdd-2797e5cdad42": "The universal conjunct hObs.2 is applied to an arbitrary natural body x (intro x hx), and the conclusion holds for every natural body. The weak version SomeNaturalBodiesActRegularlyForTheBestReading (fa37dde9) gives regular attainment of the best for one natural body only."
+  }
 }

@@ -25,5 +25,10 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "1795a62e-f78b-5f5b-94e7-9e7490824811"
-  ]
+  ],
+  "strong_version_needed": {
+    "f8ba2429-b4f1-5712-a4d3-798213963d34": "Applied to an arbitrary distinct cause of being c of x (hTransfer c x r hc hx, after c ≠ x), with no claim that c causes all in its genus. UniversalCauseTransfersPerfections (b26c10a0) covers only universal causes, and ResidualPerfectionTransfer (5a4afaa5) only nonuniversal causes and self-effects, so neither weak version alone covers it.",
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d": "The proof applies the premise at a respect other than esse (respect r: an arbitrary perfection r caused in another), to conclude that the cause is more r. The weak version CauseOfBeingIsMoreInBeing (cffad050) covers causing esse only.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `c = x` (in preexistFromCausalTransfer), an identity question about a cause and its effect (c = x), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

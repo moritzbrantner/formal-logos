@@ -19,5 +19,8 @@
   ],
   "disambiguation_ids": [
     "7507d645-874d-5434-add8-2f49c2801d36"
-  ]
+  ],
+  "strong_version_needed": {
+    "b62deb46-c451-5971-a569-cc5c0f44a398": "The proof takes one individual x present at every accessible world (de re) and contradicts the contingency of that same x. The weak version DeDicto (7570cdf8) only says that something or other is present at each accessible world, which is consistent with every individual being contingent."
+  }
 }

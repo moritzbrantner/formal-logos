@@ -157,6 +157,7 @@ meaning = "The selected governing predicate is the teaching-inclusive criterion 
 id = "COMMISSION-NAMED-COVERAGE-FROM-BOUNDS"
 definitions = ["DEF-CHURCH-VISIBLE-AUTHORITATIVE-SOCIETY", "DEF-COMMISSION-EVENT-AND-GOVERNING-POWER", "DEF-COMMISSION-GOVERNANCE-CALIBRATION", "DEF-COMMISSION-REPORT-POWERS", "DEF-FOUNDED-BY-GOD-THROUGH-ENVOY", "DEF-SELF-EVIDENT-MARKING", "DEF-TEACHING-INCLUSIVE-GOVERNING-POWER"]
 theorem = "namedGovernanceCoverageFromBounds"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `governing TruthCore.Case.Catholicism.StageThree.Commissions.Power.teach`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "STMT-TABLE-GOVERNING-IS-SELECTED", "STMT-SELECTED-GOVERNING-WITHIN-TABLE-OR-TEACHING"]
 conclusion = "STMT-COMMISSION-NAMED-GOVERNANCE-CRITERIA-COVER"
 rule = "Excluded middle, proof by cases, composition with COMMISSION-TEACHING-INCLUSIVE-FROM-BOUNDS"
@@ -165,6 +166,7 @@ meaning = "Named governance coverage (narrow or teaching-inclusive criterion) wi
 [[argument]]
 id = "CHURCH-INSTITUTION-LINK-FROM-TEACHING-GRANT"
 theorem = "institutionLinkFromTeachingGrant"
+strong_version_needed = { "820771a7-1173-510f-88ec-445b203fb1fd" = "The proof uses the second conjunct hTeachCommission (E.Gave .teach → CommissionedToTeach), returned in the conclusion. The weak version GoverningEventInstitutionLink (14f227c8) gives only the founded-in-mandate link and nothing about the teaching commission." }
 premises = ["STMT-CHURCH-FOUNDED-IN-COMMISSIONED-APOSTLES", "STMT-SELECTED-GOVERNING-WITHIN-TABLE-OR-TEACHING", "STMT-TEACHING-GRANT-FOUNDS-IN-MANDATE"]
 conclusion = "STMT-CHURCH-INSTITUTION-LINK-FOR-SELECTED-GOVERNANCE"
 rule = "Universal generalization, conjunction elimination, proof by cases"

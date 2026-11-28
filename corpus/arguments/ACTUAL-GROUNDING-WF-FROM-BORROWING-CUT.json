@@ -39,5 +39,9 @@
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "9403807f-f7d4-5ce8-a8ba-ca53ed932959",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "e27ea8e3-b61d-55a4-aea3-25adf8ff6c2d": "The conclusion is well-foundedness of actual concrete grounding, obtained from the Escape ↔ WF equivalence (borrowingEscapeWFEquivalence), which needs Escape for every nonempty subset. The weak version WholeRosterNotTrapped (5c898d24) constrains only the whole roster Set.univ.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Acc (TruthCore.Causality.ConcreteExistentialSupply.graph m w).edge parent` (in borrowingEscapeWFEquivalence); `Acc (TruthCore.Causality.ConcreteExistentialSupply.graph m w).edge initial` (in borrowingEscapeWFEquivalence). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

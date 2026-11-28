@@ -27,5 +27,8 @@
     "4bd8469b-0101-5628-b94d-daa4264972d5",
     "0f180711-5550-55b5-9da8-699215d6d95e",
     "87582d70-e56a-5e51-9377-84b6655b1b68"
-  ]
+  ],
+  "strong_version_needed": {
+    "820771a7-1173-510f-88ec-445b203fb1fd": "The proof uses the second conjunct hTeachCommission (E.Gave .teach → CommissionedToTeach), returned in the conclusion. The weak version GoverningEventInstitutionLink (14f227c8) gives only the founded-in-mandate link and nothing about the teaching commission."
+  }
 }

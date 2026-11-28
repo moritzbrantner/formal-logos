@@ -21,5 +21,8 @@
   "disambiguation_ids": [
     "bedfab81-905c-5d1a-b834-e20b8007b3da",
     "81c233d4-01b4-528c-8bbd-7da228443ffe"
-  ]
+  ],
+  "strong_version_needed": {
+    "37e9e7a0-2385-5e08-9ef9-f793b5ceb936": "The proof uses irreflexivity of the full transitive closure (no loop of any length) to make TransGen cause a strict order, so a finite ancestry is well-founded. The weak version NoMutualCauseReading (c3ace4b2) excludes only two-cycles between distinct beings: a three-cycle with finite ancestry satisfies it and has an infinite descending per se series."
+  }
 }

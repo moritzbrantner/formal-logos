@@ -77,5 +77,10 @@
       "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
       "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "dc397705-d727-419e-92f9-65d44e1ff15d": "The proof extracts an actual root n (obtain ⟨n, hn⟩ := hRoot). The weak version WholeRosterNotTrapped (5c898d24) holds vacuously for an empty actual roster. It yields a root only together with an actual-population premise (InhabitedConcreteAt) and excluded middle (WholeRosterRootEquivalence.equivalence), and this argument lacks the population premise.",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3": "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `d = n` (in maximumEqualsActualRootAtBeing), an identity question about a maximum and an actual root (d = n), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

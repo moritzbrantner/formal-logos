@@ -82,5 +82,9 @@
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "06fb4f51-ff5f-5c5e-b947-844f20de4174"
-  ]
+  ],
+  "strong_version_needed": {
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in RootNonlimitationFromCompositionKinds.necessaryRootWithoutLimitingPrinciple), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -134,6 +134,7 @@ disambiguations = ["478d0c3a-dcde-4d8d-ad71-e88150ce772f"]
 [[argument]]
 id = "Thin F6 is incompatible with global epistemic nihilism"
 theorem = "f6ExcludesNihilism"
+strong_version_needed = { "f56b2ee7-c69e-5e3b-85b0-e671d907ba58" = "The proof extracts a witness ⟨a, p, hReason⟩ of an epistemic reason, directly or through the lemma it passes the premise to. The weak version GlobalNormativeNihilismExcluded (b30a1925) only denies that there are no reasons of any kind, over a kind-indexed reason relation. It supplies no witness and is satisfied by reasons of a non-epistemic kind alone." }
 premises = ["STMT-THERE-ARE-EPISTEMIC-REASONS"]
 conclusion = "Thin global epistemic nihilism fails"
 rule = "Witness instantiation against the universal denial"

@@ -138,6 +138,7 @@ meaning = "What is hotter is hot, through degrees: if x is more r than y, x's de
 id = "GRADES-AT-BEING-FROM-NO-INFINITE-ASCENT"
 definitions = ["DEF-ACT", "DEF-ESSE", "DEF-GRADES-TO-MAXIMUM-AT-BEING", "DEF-MAXIME-ENS", "DEF-MORE-IN", "DEF-NO-INFINITE-ASCENT-IN-BEING", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "gradesAtBeingFromNoInfiniteAscent"
+strong_version_needed = { "7dfa068a-9974-5fcd-ba23-fac4dee2fc70" = "Well-founded induction over every being in act as to being (hWF.induction) climbs to a maximum in esse. This theorem has no Profile or world, and the beings climbed through are not known to be actual or necessary concreta. Both weak versions (78945dde among necessary concreta, c18faab2 among actual concreta at a selected world) restrict the order to such concreta.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, MoreIn esse y x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-NO-INFINITE-ASCENT-IN-BEING", "STMT-MORE-SUCH-HAS-THE-PERFECTION", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-GRADES-TO-MAXIMUM-AT-BEING"
 rule = "Well-founded induction with excluded middle"
@@ -187,6 +188,7 @@ meaning = "If some bearer of the selected perfection is at its greatest represen
 id = "GREATEST-DEGREE-CAUSES-FROM-ORDERED-PRIMARY"
 definitions = ["DEF-BEING-ANALOGICAL", "DEF-CAUSE-OF-PERFECTION", "DEF-CREATURE", "DEF-GENUS-BROAD", "DEF-GREATEST-DEGREE-IN-A-PERFECTION", "DEF-MORE-IN", "DEF-ORDER-BY-APPROACH-TO-A-PRIMARY", "DEF-SELF-EVIDENT-MARKING", "DEF-STRICT-PRIMACY"]
 theorem = "greatestCausesFromOrderedPrimary"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to `m = p` (in greatestCausesFromOrderedPrimary), an identity question about a greatest-degree bearer and the primary (m = p), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-BEING-GRADED-BY-APPROACH-TO-A-PRIMARY", "STMT-NOTHING-ELSE-REACHES-THE-PRIMARY", "STMT-CREATURES-ORDERED-TO-PRIMARY-AS-CAUSE", "STMT-OTHERS-THAN-PRIMARY-ARE-CREATURES", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-GREATEST-DEGREE-IN-GENUS-CAUSES-ALL-IN-GENUS"
 rule = "Excluded middle on identity with the primary; strict order; instantiation"
@@ -195,6 +197,7 @@ meaning = "With degrees read as approach to a primary: a greatest-degree bearer 
 [[argument]]
 id = "GREATEST-DEGREE-CAUSES-FROM-MAXIMAL-PRINCIPLE"
 theorem = "greatestCausesFromMaximalPrinciple"
+strong_version_needed = { "d9fad785-40ab-555a-a1c1-5e39c9d50497" = "The genus principle is applied at the calibration frame's selected perfection f.selected (hMax f.selected m …), which is an arbitrary perfection of the degree frame, not being. The weak version MaximumInBeingCausesAllBeingsReading (da09703b) is the principle for the respect esse only. Instantiating its esse parameter with f.selected would read an arbitrary perfection as being." }
 premises = ["STMT-MAXIMUM-IN-GENUS-CAUSES-ALL-IN-GENUS", "STMT-MORE-SUCH-HAS-THE-PERFECTION", "STMT-MORE-IN-MATCHES-STRICT-REPRESENTED-DEGREE"]
 conclusion = "STMT-GREATEST-DEGREE-IN-GENUS-CAUSES-ALL-IN-GENUS"
 rule = "Greatest implies maximal under calibration; instantiation of the maximal principle"
@@ -204,6 +207,7 @@ meaning = "In a calibration frame, a greatest-degree bearer is maximal: anything
 id = "MAXIMUM-IN-GENUS-FROM-GREATEST-IN-EVERY-GENUS"
 definitions = ["DEF-CAUSE-OF-PERFECTION", "DEF-GENUS-BROAD", "DEF-GREATEST-DEGREE-IN-A-PERFECTION", "DEF-MAXIMUM-CALIBRATION-PROFILE", "DEF-MAXIMUM-IN-A-PERFECTION", "DEF-MORE-IN", "DEF-PER-RESPECT-DEGREE-FAMILY", "DEF-SELF-EVIDENT-MARKING"]
 theorem = "maximumInGenusFromGreatestEveryGenus"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `deg r z ≤ deg r m`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-GREATEST-DEGREE-CAUSES-ALL-IN-EVERY-GENUS", "STMT-DEGREE-EXCESS-AMONG-BEARERS-IS-MORE-IN", "STMT-BEARER-DEGREES-DIRECTED-IN-EVERY-GENUS", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-MAXIMUM-IN-GENUS-CAUSES-ALL-IN-GENUS"
 rule = "Directed upper bound, excluded middle on the order, transitivity, instantiation"
@@ -221,6 +225,7 @@ meaning = "Truth said of things goes with intelligibility (q.16 a.1, a.3), and i
 id = "APPROACH-TO-PRIMARY-FROM-DEGREE-MEASURE"
 definitions = ["DEF-ACT", "DEF-BEING-ANALOGICAL", "DEF-ESSE", "DEF-MAXIMUM-CALIBRATION-PROFILE", "DEF-MORE-IN", "DEF-ORDER-BY-APPROACH-TO-A-PRIMARY", "DEF-SELF-EVIDENT-MARKING", "DEF-STRICT-PRIMACY"]
 theorem = "approachToPrimaryFromDegreeMeasure"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to `x = p` (in approachToPrimaryFromDegreeMeasure), an identity question about a bearer and the degree primary (x = p), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-MORE-IN-MATCHES-DEGREE-EVERYWHERE", "STMT-DEGREE-AS-MUCH-AS-APPROACH", "STMT-NOTHING-ELSE-REACHES-THE-PRIMARY", "STMT-MORE-SUCH-HAS-THE-PERFECTION", "STMT-GRADES-FOUND-IN-BEING", "STMT-EXCLUDED-MIDDLE"]
 conclusion = "STMT-BEING-GRADED-BY-APPROACH-TO-A-PRIMARY"
 rule = "Transport of strict order; excluded middle on identity with the primary; modus ponens"

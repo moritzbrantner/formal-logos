@@ -6,6 +6,7 @@ results = "TruthCore.Results.Logic.ActualGroundingAcyclicity"
 [[argument]]
 id = "Actual grounding well-foundedness gives selected-world acyclicity"
 theorem = "actualGroundingAcyclicOfWF"
+strong_version_needed = { "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The conclusion is that actual concrete grounding has no cycles of any length (noCycles_of_wellFounded). The weak versions do not exclude them: ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, ConeWellFounded (1b1e3f09) constrains one selected cone, WholeRosterNotTrapped (5c898d24) only the whole roster, and closed-collection rootedness (aca3baa1) admits a cycle fed by a root (ClosedEsseSource RootedCycleControl)." }
 premises = ["STMT-ACTUAL-GROUNDING-WF"]
 conclusion = "5e002319-3828-4de8-96bc-98ebf34072d7"
 axioms = []

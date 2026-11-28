@@ -32,5 +32,9 @@
     "7507d645-874d-5434-add8-2f49c2801d36",
     "16ea77ae-4ec7-59e4-8474-10f04efb5ddf",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "3a2bb5f9-70c1-5f3f-9798-ac250deffa90": "Through ancestryRootForkWithRoot, the proof does Acc induction along the full ActualConcreteGround relation below the bearer (SelectedAncestry.rootForkOfAccessibility) to reach an ancestor with no actual concrete ground at all. The weak version ThinkingBearerPredecessorAccessible (debcd4e1) gives accessibility only for descent through distinct thinking predecessors and allows infinite descending chains of nonthinking grounds, so it yields no such root.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in rootForkOfAccessibility); `TruthCore.German.Kant.CosmologicalInference.ContingentAt m.ontic w x` (in rootForkOfAccessibility). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -109,6 +109,7 @@ connection_plan = { target_statement_id = "0e02cd69-8fb0-4859-8287-937440c84b5b"
 [[argument]]
 id = "The global concreteness calibration in profile form"
 theorem = "profileCalibrationOfExisting"
+strong_version_needed = { "0e02cd69-8fb0-4859-8287-937440c84b5b" = "The conclusion is the global calibration itself in profile form (ProfileExistentConcreteAt unfolds to it). The local version SelectedActualFusionPartsConcreteAt (00c40c6f) covers only the parts of a selected sum; calibrationExactDifference shows the global form also needs OutsideFusionActualConcreteAt." }
 premises = ["0e02cd69-8fb0-4859-8287-937440c84b5b"]
 conclusion = "Actual existents on the supplied profile are CONCRETE_6"
 rule = "Definitional instantiation on the supplied profile"

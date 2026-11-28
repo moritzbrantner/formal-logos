@@ -11,5 +11,8 @@
   "meaning": "The agent and content supplied by thin F6 contradict the universal absence of epistemic reasons for the same reason relation. This uses F6 as a premise. The canonical self-undermining theorem by itself leaves nihilism formally satisfiable.",
   "definition_ids": [
     "dcbd9590-2c87-5550-a69c-b4af6e272fa4"
-  ]
+  ],
+  "strong_version_needed": {
+    "f56b2ee7-c69e-5e3b-85b0-e671d907ba58": "The proof extracts a witness ⟨a, p, hReason⟩ of an epistemic reason, directly or through the lemma it passes the premise to. The weak version GlobalNormativeNihilismExcluded (b30a1925) only denies that there are no reasons of any kind, over a kind-indexed reason relation. It supplies no witness and is satisfied by reasons of a non-epistemic kind alone."
+  }
 }

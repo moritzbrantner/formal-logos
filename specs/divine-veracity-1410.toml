@@ -135,6 +135,7 @@ meaning = "Classically assume not-p; truth-completeness gives assent to not-p, c
 [[argument]]
 id = "Actual completeness and consistent assent yield accuracy"
 theorem = "accuracyFromCompleteConsistent"
+strong_version_needed = { "293d7219-a085-4fdd-b645-039c87485b0b" = "Applied to ¬p, where p is any content God believes (hp : V.Believes g p), to derive accuracy of every assent. The weak version GodCounterAssertionComplete (e2ca9054) covers only negations of asserted contents (needs V.Asserts g p), which no premise supplies for a merely believed p." }
 premises = ["Veracity GodTruthComplete", "Veracity GodAssentConsistent"]
 conclusion = "Veracity GodAssentAccurate"
 axioms = ["propext", "Classical.choice", "Quot.sound"]

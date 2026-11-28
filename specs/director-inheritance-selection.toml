@@ -21,6 +21,7 @@ meaning = "Sole-premise weakening of the existing every-distinct-mover policy to
 [[argument]]
 id = "Intelligent UNMOVED_2 director reduction from same-end mover selection"
 theorem = "fromSelection"
+strong_version_needed = { "1e47e6db-da06-5a40-9ccf-fbd1f929c596" = "The proof applies the premise to the selected mover g', given only that g' is moved in some respect r'' (from excluded middle on ∃ r'', MovedIn g' r''). No premise relates r'' to g' moving f in r'. The weak version SecondMoversMoveAsMovedInRelevantRespectReading (96da1d33) requires RelevantTo g' f r' r''.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ r, MovedIn f r`; `∃ r'', MovedIn g' r''`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "5588083c-55e5-57ce-91ff-67db25fe80fc",
   "1e47e6db-da06-5a40-9ccf-fbd1f929c596",

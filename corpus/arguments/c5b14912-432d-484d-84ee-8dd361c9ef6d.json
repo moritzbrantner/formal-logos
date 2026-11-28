@@ -32,5 +32,8 @@
   ],
   "term_senses": {
     "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
+  },
+  "strong_version_needed": {
+    "dc397705-d727-419e-92f9-65d44e1ff15d": "The proof extracts an actual root n (obtain ⟨n, hn⟩ := hRoot). The weak version WholeRosterNotTrapped (5c898d24) holds vacuously for an empty actual roster. It yields a root only together with an actual-population premise (InhabitedConcreteAt) and excluded middle (WholeRosterRootEquivalence.equivalence), and this argument lacks the population premise."
   }
 }

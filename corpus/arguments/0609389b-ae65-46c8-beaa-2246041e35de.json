@@ -28,5 +28,9 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "54f33165-05df-5205-807a-04154b5fd6ad"
-  ]
+  ],
+  "strong_version_needed": {
+    "b4987085-f7b0-4031-a795-364873d3c216": "Composition is applied by Q44SourceSupply.causeOfChain along an arbitrary finite chain of actual esse causes (TransGen ActualEsseCause), at every link. The weak version PerSeComposition (7648194d) composes only when the later link is per se (PerSeActualEsseCause … AsCaused). This theorem has no AsCaused relation and no premise makes the chain links per se.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m = n` (in maximalCausesFromIdentityAscent), an identity question about a maximum and the common esse source (m = n), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -6,6 +6,7 @@ disambiguations = ["508617ab-cf24-5f3b-a387-64b3991359ec"]
 [[argument]]
 id = "POTENCY_1 under privation from unactualized capacity and capable-subject lack"
 theorem = "capacityUnderPrivation"
+strong_version_needed = { "c85e8ef5-3dc4-502d-90f8-da1429e33fd8" = "The proof uses both directions of the biconditional: .mp (InPotency → CanBe ∧ ¬ InAct for arbitrary x, r) and .mpr (CanBe ∧ ¬ InAct → InPotency). None of the weak versions supplies the converse, and AnalysisOnMoved (d93acdf0) gives the forward direction only for moved things." }
 premises = ["c85e8ef5-3dc4-502d-90f8-da1429e33fd8", "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"]
 conclusion = "3c0b7bb3-1526-55a9-b71e-0d5fb3148782"
 rule = "Substitute equivalent privation and lack of act under the retained capacity hypothesis"
@@ -16,6 +17,7 @@ comparator_theorems = ["adoptedEquivalence"]
 [[argument]]
 id = "Privation on capable subjects from the two POTENCY_1 analyses"
 theorem = "lackInCapable"
+strong_version_needed = { "c85e8ef5-3dc4-502d-90f8-da1429e33fd8" = "The proof uses both directions of the biconditional: .mp (InPotency → ¬ InAct) and .mpr (CanBe ∧ ¬ InAct → InPotency). None of the weak versions supplies the converse .mpr: NoActAndPotencyInSameRespect (f6003a4c) and NotActAndPotencyInSameRespectReading (c6d6379b) only exclude act and potency together, and AnalysisOnMoved (d93acdf0) only analyses potency of moved things." }
 premises = ["c85e8ef5-3dc4-502d-90f8-da1429e33fd8", "3c0b7bb3-1526-55a9-b71e-0d5fb3148782"]
 conclusion = "7c3da33e-7ead-54f8-aace-ed3cf3a7bb02"
 rule = "Under the capacity hypothesis pass in each direction through the same potency instance"

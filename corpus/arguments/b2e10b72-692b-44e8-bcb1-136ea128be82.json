@@ -26,5 +26,8 @@
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "2e3e5bfd-2e1a-5766-933d-79a7824c6249"
-  ]
+  ],
+  "strong_version_needed": {
+    "658814de-ffeb-5824-afdd-2797e5cdad42": "The conclusion is the universal teleology bundle (Universal …), which contains the strong premise itself as a component (⟨hLack, hObs, …⟩). The weak version cannot fill that slot; WitnessLocalTeleology.weaken is the separate step to the witness-local bundle."
+  }
 }

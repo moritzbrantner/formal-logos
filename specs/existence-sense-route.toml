@@ -11,6 +11,7 @@ definitions = ["DEF-NECESSARY-IN-SENSE", "DEF-KANT-MODAL-NECESSITY"]
 [[argument]]
 id = "Root box K already entails actualist K"
 theorem = "boxKToActualistK"
+strong_version_needed = { "cdf897a8-5490-561a-b9d2-507486a3f192" = "The proof uses the root n's own existence at every accessible world (hn : BoxExistsAt) to build the actualist-K node. NecessaryRootDeDictoK (0efe7b16) gives only that something exists at each accessible world, not n. NecessaryRootTertiaVia (32a2f51c) gives only ¬◇¬(n exists), which yields existence at each world only by double-negation elimination; this zero-axiom result (permitted_axioms []) has no excluded-middle premise." }
 definitions = ["DEF-KANT-MODAL-NECESSITY", "DEF-NECESSARY-IN-SENSE", "5bd704bb-4915-4657-9801-022247312147"]
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_2", to = "NECESSARY_12", statement_id = "STMT-NECESSARY-ROOT-ACTUALIST-K", role = "conclusion"}]
 premises = ["STMT-NECESSARY-ROOT-BOX-K"]

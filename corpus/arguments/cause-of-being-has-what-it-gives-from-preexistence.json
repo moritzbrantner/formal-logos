@@ -21,6 +21,7 @@
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
   ],
   "strong_version_needed": {
-    "67aa5b5c-694b-50a1-90e5-d843234db924": "The derivation applies the premise at every respect r that a cause of being causes in its effect, not only at esse, so the weak version (whatever has its being caused is in act as to being) does not suffice."
+    "67aa5b5c-694b-50a1-90e5-d843234db924": "The derivation applies the premise at every respect r that a cause of being causes in its effect, not only at esse, so the weak version (whatever has its being caused is in act as to being) does not suffice.",
+    "64498e7e-7f10-54a0-9ec0-c65e6076de1f": "Applied to an arbitrary cause c of x's being and an arbitrary perfection r (hPre c x r hBeing hx). None of the weak versions covers that case. CauseOfABeingHasBeing (4a5a43a5) is only the respect esse, UniversalSourcePreexistence (60176223) only universal causes with distinct effects, and WholeEffectContainmentInTotalCause (4643a655) only total causes."
   }
 }

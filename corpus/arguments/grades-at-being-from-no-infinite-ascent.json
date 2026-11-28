@@ -24,5 +24,9 @@
   "disambiguation_ids": [
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
-  ]
+  ],
+  "strong_version_needed": {
+    "7dfa068a-9974-5fcd-ba23-fac4dee2fc70": "Well-founded induction over every being in act as to being (hWF.induction) climbs to a maximum in esse. This theorem has no Profile or world, and the beings climbed through are not known to be actual or necessary concreta. Both weak versions (78945dde among necessary concreta, c18faab2 among actual concreta at a selected world) restrict the order to such concreta.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, MoreIn esse y x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

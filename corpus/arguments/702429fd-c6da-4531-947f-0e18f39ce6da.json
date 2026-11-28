@@ -28,5 +28,8 @@
       "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
       "statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e": "The proof uses the witness's concreteness (hc : m.concrete x), e.g. to place it among the actual concreta or in the concrete subtype ontic. The weak version NecessaryBeing m.ontic w (c778a6ca; backing result necessaryBearer drops the concreteness conjunct) gives only an existing necessary individual, possibly not concrete."
+  }
 }

@@ -27,5 +27,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "7507d645-874d-5434-add8-2f49c2801d36"
-  ]
+  ],
+  "strong_version_needed": {
+    "fce4ac74-26df-4e97-909d-34865b6463dc": "The conclusion PossiblyFoundedComingToBe contains the founded-past conjunct Acc (<) t, supplied directly by hPast v hwv x t …. The weak version PopulatedPastsBegun (0158110b) gives only BegunAt t, a strictly weaker condition: BegunComingToBe Control.zeno has a first moment with an infinite descent below a later moment."
+  }
 }

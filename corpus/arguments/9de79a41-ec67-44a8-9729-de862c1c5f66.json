@@ -71,6 +71,8 @@
     }
   ],
   "strong_version_needed": {
-    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "Not needed for this endpoint. This interface is retained for comparison with its original proof path; the weak version, the closed-collection condition (registered strengthens, strict by ClosedGroundingRoots Control.limitGrounder), suffices: ClosedGroundingRoots.underivedFromNecessityOfCoverageClosed proves the same endpoint from the same premises with it in place of well-founded actual grounding. That reduction establishes none of the remaining premises."
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "Not needed for this endpoint. This interface is retained for comparison with its original proof path; the weak version, the closed-collection condition (registered strengthens, strict by ClosedGroundingRoots Control.limitGrounder), suffices: ClosedGroundingRoots.underivedFromNecessityOfCoverageClosed proves the same endpoint from the same premises with it in place of well-founded actual grounding. That reduction establishes none of the remaining premises.",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e": "The proof uses the witness's concreteness (hc : m.concrete x), e.g. to place it among the actual concreta or in the concrete subtype ontic. The weak version NecessaryBeing m.ontic w (c778a6ca; backing result necessaryBearer drops the concreteness conjunct) gives only an existing necessary individual, possibly not concrete.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.NecessaryConcreteUnderived.NecessaryConcreteUnderivedAt m w`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

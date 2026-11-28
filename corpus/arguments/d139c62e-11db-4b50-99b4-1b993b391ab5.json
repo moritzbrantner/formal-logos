@@ -17,5 +17,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
-  ]
+  ],
+  "strong_version_needed": {
+    "0e02cd69-8fb0-4859-8287-937440c84b5b": "The conclusion is the global calibration itself in profile form (ProfileExistentConcreteAt unfolds to it). The local version SelectedActualFusionPartsConcreteAt (00c40c6f) covers only the parts of a selected sum; calibrationExactDifference shows the global form also needs OutsideFusionActualConcreteAt."
+  }
 }
