@@ -289,10 +289,16 @@ former admits both the all-zero and all-one Boolean assignments and does not
 select existence; the latter selects the positive assignment, conditional on L,
 without any concrete root. Neither interpretation follows from `Profile.grounds`
 alone. Disambiguation `acb74cb3-033a-4f48-be16-9f593972ffb9` now records the two
-readings as senses of the supply edge: SUPPLY_EDGE_1, partial co-ground
-(`ConcreteRootAccess.PartialCoGround`), and SUPPLY_EDGE_2, sufficient supply
-(`ConcreteRootAccess.SufficientSupply`). They exclude each other constructively
-and cover every actual edge under explicit excluded middle. The eight certified
+readings as senses of the supply edge, each on a modal-covariation proxy:
+SUPPLY_EDGE_1, partial co-ground (`ConcreteRootAccess.PartialCoGround`), and
+SUPPLY_EDGE_2, sufficient supply (`ConcreteRootAccess.SufficientSupply`). The
+proxies exclude each other constructively and cover every actual edge under
+explicit excluded middle, but only by construction. They mis-sort two cases: a
+sufficient supplier of a contingent effect (a free sustaining cause, or a
+necessary agent with a contingent effect) falls under SUPPLY_EDGE_1, and a
+partial contributor to a recipient that exists wherever it does (any NECESSARY_2
+recipient) falls under SUPPLY_EDGE_2. Neither label may be reused to classify
+such a case; the horns below rest on CONCRETE_6, not on the proxy. The eight certified
 results quantify over the neutral edge and hold on either sense.
 
 **Classification under CONCRETE_6 (post-merge challenge, 2026-11-28).** Every
