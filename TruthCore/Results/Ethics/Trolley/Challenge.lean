@@ -12,6 +12,8 @@ open TruthCore.Ethics.Trolley
 
 /-! ### Principle values on the four cases -/
 
+/-! ### Reading a governed assignment -/
+
 /-! ### Advertised results -/
 
 /-- Act consequentialism with the footbridge facts makes pushing permissible. -/

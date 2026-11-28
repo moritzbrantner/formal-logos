@@ -1,0 +1,11 @@
+{
+  "id": "316d64bb-25f5-4346-815e-301007784bd5",
+  "label": "Wholly-good sense controls",
+  "argument_id": "6647f768-bcb9-49c0-beaf-913238a4783e",
+  "challenge_module": "TruthCore.Results.Ethics.TrolleyRowe.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.TrolleyRowe.Solution",
+  "theorem": "TruthCore.Results.Ethics.TrolleyRowe.controls",
+  "comparator_config": "results/316d64bb-25f5-4346-815e-301007784bd5/comparator.json",
+  "status": "solution-present",
+  "description": "Compares WHOLLY_GOOD_1, WHOLLY_GOOD_2 and a WHOLLY_GOOD_3 surrogate on one cost-free Rowe signature, with the relocation equivalence; see the statement. Models of non-entailment with disclosed artifacts and a general easy-rescue lemma; no premise is established."
+}

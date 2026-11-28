@@ -1,0 +1,10 @@
+{
+  "id": "4feed869-d24d-4923-94d7-eafccb38f2a8",
+  "label": "Trolley controls test footbridge facts",
+  "subject_kind": "argument",
+  "subject_id": "6ccd9c54-4307-4935-87d3-b07e9d48faff",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6434b71f-c311-401c-8aeb-6a267f1baaee",
+  "note": "With plan, numbers and object fixed, moving the harm off the rescue path flips the causal-reading double-effect and causal means verdicts; those footbridge verdicts depend on the means/side-effect fact."
+}

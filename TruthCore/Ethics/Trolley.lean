@@ -15,18 +15,25 @@ verdict is correct. `Relation.ReflTransGen` (Mathlib) supplies causal paths.
 
 Senses (see the corpus disambiguations):
 * KILLS_1 `KillsCausally`: the intervention starts a causal path to the one's
-  lethal harm. KILLS_2 `KillsByNewThreat`: that path does not run through the
-  redirection of the threat already facing the five.
+  lethal harm; diverting counts as killing, as in ordinary use. KILLS_2
+  `KillsByNewThreat` is a stipulated technical relation, not ordinary killing:
+  that path does not run through the redirection of the threat already facing
+  the five (the agent introduces a new threat).
 * MEANS_1 `HarmIsCausalMeans`: every causal path from the intervention to the
   saving of the five passes through the one's harm. MEANS_2
-  `HarmIsPlannedMeans`: the plan includes the harm and the harm contributes
-  causally to the saving.
+  `HarmIsPlannedMeans`: the plan includes the harm and some causal path leads
+  from the harm to the saving. MEANS_2 does not entail MEANS_1.
 * INTENDS_1 `PlansHarm`: the agent's plan includes the harm (as end or means).
   The plan is a supplied case fact, not derived from the graph. INTENDS_2
   `IntendsHarmAsKnownMeans`: whatever is known to be a necessary causal means to
   the chosen end is intended; on this reading it coincides with MEANS_1.
-* PERMISSIBLE_1: the supplied permissibility assignment `P : Scenario → Prop`
-  for intervening; a principle governs it when it fixes `P` scenario by scenario.
+Permissibility is a supplied assignment `P : Scenario → Prop` for intervening;
+a principle governs it when it fixes `P` scenario by scenario.
+
+Condition 1 of double effect (`objectNotEvil`) is a supplied classification, true
+in all four scenario descriptions; only control (11) varies it. The frame does
+not separate footbridge from transplant (the same `Case`), and has no separate
+impact and death events, so plan inclusion of the harm is a stipulation.
 -/
 
 @[expose] public section
@@ -97,7 +104,7 @@ instance (c : Case) : Decidable (Proportionate c) := inferInstanceAs (Decidable 
 
 /-! ### Principles: when is intervening permissible? -/
 
-/-- Act consequentialism (lives): intervening is permissible iff it costs no more
+/-- Lives-only act consequentialism: intervening is permissible iff it costs no more
 lives than refraining. -/
 def ActConsequentialist (c : Case) : Prop := c.deathsIfIntervene ≤ c.deathsIfRefrain
 
@@ -106,21 +113,25 @@ instance (c : Case) : Decidable (ActConsequentialist c) := inferInstanceAs (Deci
 /-- Absolute no-killing deontology with KILLS_1. -/
 def CausalNoKilling (c : Case) : Prop := ¬ KillsCausally c
 
-/-- Classical double effect, four conditions: object not evil; harm not intended
-(INTENDS_1); harm not a means in MEANS_1; proportionate reason. -/
+/-- Double effect, causal reading of condition 3: object not evil; harm not
+intended (INTENDS_1); harm not a means in MEANS_1; proportionate reason. Neither
+this nor the intention reading below is privileged as "the" classical doctrine. -/
 def DoubleEffect (c : Case) : Prop :=
   c.objectNotEvil = true ∧ ¬ PlansHarm c ∧ ¬ HarmIsCausalMeans c ∧ Proportionate c
 
-/-- Intention-only double effect: condition 3 read as MEANS_2 (planned means). -/
+/-- Double effect, intention reading of condition 3: the harm is not a planned
+means (MEANS_2). On this reading condition 3 is implied by condition 2. -/
 def IntentionDoubleEffect (c : Case) : Prop :=
   c.objectNotEvil = true ∧ ¬ PlansHarm c ∧ ¬ HarmIsPlannedMeans c ∧ Proportionate c
 
-/-- Kantian means principle as a constraint on rescue: no harm as a MEANS_1, and
-the rescue is proportionate. -/
+/-- Causal means principle, one Kantian-inspired reading: no harm as a MEANS_1,
+and the rescue is proportionate. It omits the formula of humanity's reference to
+maxims, using someone merely as a means, and consent. -/
 def MeansPrinciple (c : Case) : Prop := ¬ HarmIsCausalMeans c ∧ Proportionate c
 
-/-- Thomson/Kamm-style redirection principle: the harm may come only downstream of
-redirecting the existing threat (no KILLS_2), and the rescue is proportionate. -/
+/-- Thomson-style redirection principle: the harm may come only downstream of
+redirecting the existing threat (no KILLS_2), and the rescue is proportionate.
+Kamm's Principle of Permissible Harm is a different, more detailed principle. -/
 def Redirection (c : Case) : Prop := ¬ KillsByNewThreat c ∧ Proportionate c
 
 /-! ### Concrete case descriptions -/
@@ -189,8 +200,9 @@ def loopCase : Case where
 
 /-! ### Variants used only by the controls -/
 
-/-- Footbridge structure with a plan that omits the harm (the closeness problem:
-intending only the bystander's impact, not his lethal harm). -/
+/-- Footbridge structure with a plan that omits the harm. This models the
+closeness problem: the agent is said to intend only the impact, and the frame,
+having no separate impact event, then leaves `harmOne` out of the plan. -/
 def footbridgeNarrowPlan : Case := { footbridgeCase with plan := fun e => e != .harmOne && e != .redirect }
 
 /-- Side-effect footbridge: a dropped weight stops the trolley and its fall also
@@ -211,6 +223,9 @@ def sideEffectFootbridge : Case where
 
 /-- Switch structure with a malicious plan that wants the one dead. -/
 def plannedSideEffect : Case := { switchCase with plan := fun _ => true }
+
+/-- Switch structure with an act classified as evil by its object. -/
+def switchEvilObject : Case := { switchCase with objectNotEvil := false }
 
 /-- Switch structure with five on the side track and one ahead. -/
 def switchReversed : Case := { switchCase with deathsIfIntervene := 5, deathsIfRefrain := 1 }
@@ -283,14 +298,20 @@ def TriadJointModels : Prop :=
 
 /-- Which case fact each verdict depends on (single-feature variants). -/
 def TrolleyControls : Prop :=
-  -- (1) causal means: same death counts, object and no planned harm; harm moved off
-  -- the rescue path flips double effect and the means principle, not consequentialism.
-  (DoubleEffect sideEffectFootbridge ∧ ¬ DoubleEffect footbridgeCase ∧
-    MeansPrinciple sideEffectFootbridge ∧ ¬ MeansPrinciple footbridgeCase ∧
-    ActConsequentialist sideEffectFootbridge ∧ ActConsequentialist footbridgeCase) ∧
-  -- (2) closeness: footbridge with the harm left out of the plan; classical double
-  -- effect still forbids (causal condition 3), intention-only double effect permits.
-  (¬ DoubleEffect footbridgeNarrowPlan ∧ IntentionDoubleEffect footbridgeNarrowPlan) ∧
+  -- (1) causal path only: the side-effect footbridge and the narrow-plan footbridge
+  -- have the same plan, death counts and object; the harm is off the rescue path in
+  -- the first and on it in the second. This flips the causal reading of double
+  -- effect and the means principle, not the intention reading or consequentialism.
+  (sideEffectFootbridge.plan = footbridgeNarrowPlan.plan ∧
+    DoubleEffect sideEffectFootbridge ∧ ¬ DoubleEffect footbridgeNarrowPlan ∧
+    MeansPrinciple sideEffectFootbridge ∧ ¬ MeansPrinciple footbridgeNarrowPlan ∧
+    IntentionDoubleEffect sideEffectFootbridge ∧ IntentionDoubleEffect footbridgeNarrowPlan ∧
+    ActConsequentialist sideEffectFootbridge ∧ ActConsequentialist footbridgeNarrowPlan) ∧
+  -- (2) closeness: footbridge with the harm left out of the plan; the causal
+  -- reading still forbids (condition 3), the intention reading permits, and the
+  -- redirection principle forbids (KILLS_2).
+  (¬ DoubleEffect footbridgeNarrowPlan ∧ IntentionDoubleEffect footbridgeNarrowPlan ∧
+    ¬ Redirection footbridgeNarrowPlan) ∧
   -- (3) intention: switch structure with a malicious plan; double effect forbids,
   -- the means and redirection principles permit.
   (¬ DoubleEffect plannedSideEffect ∧ ¬ IntentionDoubleEffect plannedSideEffect ∧
@@ -312,11 +333,17 @@ def TrolleyControls : Prop :=
   -- (8) the frame does not separate footbridge from transplant.
   (footbridgeCase.edge = transplantCase.edge ∧ footbridgeCase.plan = transplantCase.plan) ∧
   -- (9) the governing principle is needed: the case facts alone do not entail
-  -- the common triad.
+  -- the common triad (witnessed trivially by the empty assignment).
   (∃ F P, SwitchFacts F ∧ FootbridgeFacts F ∧ TransplantFacts F ∧ LoopFacts F ∧
     ¬ CommonTriadVerdicts P) ∧
-  -- (10) the INTENDS senses split exactly on the loop.
+  -- (10) the INTENDS senses split on the loop and agree on the other three cases.
   (IntendsHarmAsKnownMeans loopCase ∧ ¬ PlansHarm loopCase ∧
-    ¬ IntendsHarmAsKnownMeans switchCase ∧ ¬ PlansHarm switchCase)
+    ¬ IntendsHarmAsKnownMeans switchCase ∧ ¬ PlansHarm switchCase ∧
+    IntendsHarmAsKnownMeans footbridgeCase ∧ PlansHarm footbridgeCase ∧
+    IntendsHarmAsKnownMeans transplantCase ∧ PlansHarm transplantCase) ∧
+  -- (11) condition 1: an evil object on the switch structure defeats both readings
+  -- of double effect, not the means or redirection principles.
+  (¬ DoubleEffect switchEvilObject ∧ ¬ IntentionDoubleEffect switchEvilObject ∧
+    MeansPrinciple switchEvilObject ∧ Redirection switchEvilObject)
 
 end TruthCore.Ethics.Trolley

@@ -3,7 +3,7 @@
   "label": "Means: causal necessity versus planned means",
   "term": "means",
   "term_label": "MEANS",
-  "resolution": "MEANS_1 is causal: every path from intervention to saving passes through the harm. MEANS_2 adds that the harm is in the plan. Classical double effect and the means principle use MEANS_1; intention-only double effect uses MEANS_2. The loop separates them: its harm is a MEANS_1 but, with a plan that omits it, not a MEANS_2.",
+  "resolution": "MEANS_1 is causal: every path from intervention to saving passes through the harm. MEANS_2 requires that the harm is in the plan and that some path leads from it to the saving; it does not entail MEANS_1. The causal reading of double effect and the causal means principle use MEANS_1; the intention reading of double effect uses MEANS_2. The two readings of condition 3 are recorded as equal alternatives; the intention reading is defended by some as the traditional one (unread lead). The loop separates them: its harm is a MEANS_1 but, with a plan that omits it, not a MEANS_2.",
   "sense_definition_ids": [
     "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
     "9f2e7071-dba0-4b53-942e-6d33d5445b3d"

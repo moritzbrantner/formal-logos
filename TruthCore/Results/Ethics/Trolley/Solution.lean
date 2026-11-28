@@ -234,10 +234,14 @@ theorem jointModels : TriadJointModels := by
       rfl, rfl, rfl, rfl, ⟨rd_switch, rd_footbridge, rd_transplant⟩, rd_loop⟩⟩
 
 theorem controls : TrolleyControls := by
-  refine ⟨⟨⟨rfl, by decide, sideEffect_notMeans, by decide⟩, de_footbridge,
-      ⟨sideEffect_notMeans, by decide⟩, mp_footbridge, by decide, by decide⟩,
+  refine ⟨⟨by funext e; cases e <;> rfl, ⟨rfl, by decide, sideEffect_notMeans, by decide⟩,
+      fun h => h.2.2.1 (chainMeans _ rfl),
+      ⟨sideEffect_notMeans, by decide⟩, fun h => h.1 (chainMeans _ rfl),
+      ⟨rfl, by decide, fun h => absurd h.1 (by decide), by decide⟩,
+      ⟨rfl, by decide, fun h => absurd h.1 (by decide), by decide⟩, by decide, by decide⟩,
     ⟨fun h => h.2.2.1 (chainMeans _ rfl),
-      ⟨rfl, by decide, fun h => absurd h.1 (by decide), by decide⟩⟩,
+      ⟨rfl, by decide, fun h => absurd h.1 (by decide), by decide⟩,
+      fun h => h.1 (chainNewThreat _ rfl)⟩,
     ⟨fun h => h.2.1 rfl, fun h => h.2.1 rfl,
       ⟨switch_notMeans _ rfl, by decide⟩, ⟨switch_notNewThreat _ rfl, by decide⟩⟩,
     ⟨fun h => absurd h.2.2.2 (by decide), fun h => absurd h.2 (by decide),
@@ -249,6 +253,9 @@ theorem controls : TrolleyControls := by
     fun _ h => h.1,
     ⟨rfl, rfl⟩,
     ⟨actualCases, fun _ => False, rfl, rfl, rfl, rfl, fun h => h.1⟩,
-    ⟨loop_means _ rfl, by decide, switch_notMeans _ rfl, by decide⟩⟩
+    ⟨loop_means _ rfl, by decide, switch_notMeans _ rfl, by decide,
+      chainMeans _ rfl, rfl, chainMeans _ rfl, rfl⟩,
+    ⟨fun h => absurd h.1 (by decide), fun h => absurd h.1 (by decide),
+      ⟨switch_notMeans _ rfl, by decide⟩, ⟨switch_notNewThreat _ rfl, by decide⟩⟩⟩
 
 end TruthCore.Results.Ethics.Trolley

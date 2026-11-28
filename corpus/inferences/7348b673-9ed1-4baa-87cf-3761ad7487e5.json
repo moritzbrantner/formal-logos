@@ -1,0 +1,13 @@
+{
+  "id": "7348b673-9ed1-4baa-87cf-3761ad7487e5",
+  "label": "Switching in Thomson's loop is permissible, from double effect on its intention reading (inference)",
+  "input_statement_ids": [
+    "523a9cd1-9fd6-4eef-a1b3-a45c4cbed176",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "output_statement_id": "5a5bd4a6-4224-4350-8d60-8adb59623cf1",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "With the plan omitting the harm, neither INTENDS_1 nor MEANS_2 holds; proportionality holds.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

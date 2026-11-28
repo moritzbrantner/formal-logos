@@ -1,0 +1,22 @@
+{
+  "id": "523a9cd1-9fd6-4eef-a1b3-a45c4cbed176",
+  "label": "Double effect, intention reading (MEANS_2, INTENDS_1), governs trolley permissibility",
+  "paraphrase": "Analyst formulation, attribution deferred. For each trolley scenario, intervening is permissible exactly when the object is not evil, the harm is not planned (INTENDS_1), the harm is not a planned means (MEANS_2), and strictly fewer die. Its footbridge and transplant verdicts rest on the stipulated plan facts.",
+  "lean_declaration": "TruthCore.Ethics.Trolley.IntentionDoubleEffectGoverns",
+  "definition_ids": [
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107",
+    "63369e84-f651-42b5-bfef-409c3872f917"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "The trolley results bear on GOD_4 exists only through Rowe's evidential core. TruthCore.Ethics.TrolleyRowe states senses of Rowe's WhollyGood; its WHOLLY_GOOD_2 constraint clause reuses the double-effect case vocabulary of this frame, but no verdict, Governs or principle statement here is an input to it. Missing: an argument that the verdicts warrant WHOLLY_GOOD_1 or WHOLLY_GOOD_2 (or neither) as the standard for divine permitting, and the bearer bridge of STMT-ROWE-NO-THEISTIC-BEING, whose plan targets GOD_4 exists.",
+    "blocker": "The verdicts are prima facie inputs over a supplied permissibility assignment for human intervening. No record transfers them to divine permission, which issue #1456 owns (permission versus intention), and the bridge from the case GOD_4 bearer to Rowe's WhollyGood on a shared carrier is unbuilt (issue #1735)."
+  }
+}

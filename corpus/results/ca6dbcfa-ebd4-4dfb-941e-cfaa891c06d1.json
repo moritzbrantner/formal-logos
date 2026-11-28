@@ -1,0 +1,11 @@
+{
+  "id": "ca6dbcfa-ebd4-4dfb-941e-cfaa891c06d1",
+  "label": "Lives-only act consequentialism fails, from the transplant verdict",
+  "argument_id": "a7d5b225-96cb-44f9-a285-d2a21ed98209",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.transplantVerdictExcludesAC",
+  "comparator_config": "results/ca6dbcfa-ebd4-4dfb-941e-cfaa891c06d1/comparator.json",
+  "status": "solution-present",
+  "description": "Contrapositive of the act-consequentialist transplant derivation. In this frame transplant and footbridge are one formal case with two verdicts, not independent data; they share defeaters such as personal force and using a person. Conditional on the open prima facie verdict."
+}

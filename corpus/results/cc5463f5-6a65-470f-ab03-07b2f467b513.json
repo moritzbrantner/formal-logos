@@ -1,0 +1,11 @@
+{
+  "id": "cc5463f5-6a65-470f-ab03-07b2f467b513",
+  "label": "Switching in Thomson's loop is permissible, from the redirection principle",
+  "argument_id": "ec7318b4-f63a-431f-b5dc-12b33c42bb2e",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.redirectionLoop",
+  "comparator_config": "results/cc5463f5-6a65-470f-ab03-07b2f467b513/comparator.json",
+  "status": "solution-present",
+  "description": "The loop harm lies only downstream of redirecting the threat (no KILLS_2); proportionality holds."
+}

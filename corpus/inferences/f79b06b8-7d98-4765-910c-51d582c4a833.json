@@ -1,0 +1,13 @@
+{
+  "id": "f79b06b8-7d98-4765-910c-51d582c4a833",
+  "label": "Causal no-killing (KILLS_1) fails, from the switch verdict (inference)",
+  "input_statement_ids": [
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "567693b5-c750-4d8c-bed6-298728e74106"
+  ],
+  "output_statement_id": "96bad715-d4ba-4fb6-986d-35b097f0b85e",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Whoever holds the switch verdict on these facts rejects the KILLS_1 no-killing deontology. Conditional on the open prima facie verdict; the KILLS_2 reading escapes this test.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

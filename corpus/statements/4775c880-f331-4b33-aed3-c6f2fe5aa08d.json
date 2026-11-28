@@ -1,0 +1,18 @@
+{
+  "id": "4775c880-f331-4b33-aed3-c6f2fe5aa08d",
+  "label": "Rowe's WhollyGood satisfies the outcome-minimizing standard (WHOLLY_GOOD_1)",
+  "paraphrase": "Analyst formulation, attribution deferred. Every Rowe-wholly-good being, for each occurring event it can prevent, is such that preventing it would not be strictly better than permitting it. The comparison is a supplied primitive.",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.OutcomeStandard",
+  "definition_ids": [
+    "b32b898d-3ad6-4132-9815-ac8897f2193c",
+    "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d"
+  ],
+  "disambiguation_ids": [
+    "a9f886f9-c7ee-4680-8e88-91bd15fe0cc9"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open.",
+    "blocker": "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+  }
+}

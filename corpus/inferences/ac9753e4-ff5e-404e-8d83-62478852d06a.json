@@ -1,0 +1,13 @@
+{
+  "id": "ac9753e4-ff5e-404e-8d83-62478852d06a",
+  "label": "Harvesting the transplant patient is permissible, from lives-only act consequentialism (inference)",
+  "input_statement_ids": [
+    "874bf22e-8265-4dd6-98df-3fce6d74470d",
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1"
+  ],
+  "output_statement_id": "93bfe348-f780-4d18-b895-7f2c11ee624a",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Act consequentialism compares only deaths: one versus five makes harvesting permissible. The transplant description is the same formal case as the footbridge.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

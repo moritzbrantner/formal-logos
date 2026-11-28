@@ -1,0 +1,11 @@
+{
+  "id": "422f0218-f943-484f-9f81-22ee43bf83b3",
+  "label": "Harvesting the transplant patient is permissible, from lives-only act consequentialism",
+  "argument_id": "5bd42338-64a3-4ec8-8439-2a222536d341",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.acTransplant",
+  "comparator_config": "results/422f0218-f943-484f-9f81-22ee43bf83b3/comparator.json",
+  "status": "solution-present",
+  "description": "Act consequentialism compares only deaths: one versus five makes harvesting permissible. The transplant description is the same formal case as the footbridge."
+}

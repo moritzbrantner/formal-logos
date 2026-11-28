@@ -1,0 +1,13 @@
+{
+  "id": "2cb9fb0e-130f-41b5-b8e4-7e0034911586",
+  "label": "Constraint-qualified permission relocated into WHOLLY_GOOD_2 and the outcome bridge (inference)",
+  "input_statement_ids": [
+    "6d54e61c-a2fe-4d0b-89ed-367a8e1f93c0",
+    "340c2fec-7039-42ed-b206-c606d0dd3241"
+  ],
+  "output_statement_id": "e7e973ae-e5c2-4d37-877b-6b1b61006be3",
+  "rule": "Case analysis and contraposition through the outcome bridge",
+  "meaning": "Near-transcription (assembly): relocates the constraint-qualified condition into the outcome bridge and the WHOLLY_GOOD_2 standard over the free comparison Better. It records that a constraint clause adds a blocker to Rowe's list without removing the rescue duty; it adds no warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

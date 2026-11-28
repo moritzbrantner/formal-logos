@@ -1,7 +1,7 @@
 {
   "id": "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59",
-  "label": "Act consequentialism (lives): intervening is permissible iff it costs no more lives",
-  "term": "act consequentialism (lives)",
+  "label": "Lives-only act consequentialism: intervening is permissible iff it costs no more lives",
+  "term": "act consequentialism (lives only)",
   "definition": "ActConsequentialist c: intervening is permissible exactly when its death count does not exceed that of refraining. Only deaths are counted; ties are permitted.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Ethics.Trolley.ActConsequentialist",

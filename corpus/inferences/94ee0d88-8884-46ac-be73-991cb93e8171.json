@@ -1,0 +1,13 @@
+{
+  "id": "94ee0d88-8884-46ac-be73-991cb93e8171",
+  "label": "Switching the trolley is impermissible, from causal no-killing (KILLS_1) (inference)",
+  "input_statement_ids": [
+    "4ec84eef-2cbb-43a4-891a-9224e5b786e8",
+    "067d271e-c17c-48fb-bb5a-252453202a9f"
+  ],
+  "output_statement_id": "74bfa002-8797-4d15-bccb-85aa3d1bd7dc",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "In the switch graph the intervention reaches the one's harm (KILLS_1), so the absolute causal no-killing deontology forbids switching.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

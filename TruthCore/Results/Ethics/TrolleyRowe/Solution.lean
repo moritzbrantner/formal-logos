@@ -60,7 +60,7 @@ theorem harmless_notMeans : ¬ HarmIsCausalMeans harmlessRescue := by
   exact hAvoid (Relation.ReflTransGen.single ⟨rfl, by decide⟩)
 
 theorem controls : GoodnessSenseControls := by
-  refine ⟨?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
   · refine ⟨costFreeSig, ⟨fun _ _ w => w = footbridgeCase, fun _ _ => True⟩,
       fun _ _ _ _ => trivial, ?_, costFree_theistic, costFree_noConstraint⟩
     intro _ _ _ _ _
@@ -74,7 +74,7 @@ theorem controls : GoodnessSenseControls := by
     · obtain ⟨w, hw, hn⟩ := hw
       exact absurd (h.2 w hw) hn
   · refine ⟨costFreeSig, Unit, fun _ _ => True, fun _ _ => True, fun _ _ _ => True,
-      fun _ _ _ => True, (), ?_, ?_, costFree_theistic, costFree_noConstraint⟩
+      fun _ _ _ => True, (), ⟨?_, ?_⟩, costFree_theistic, costFree_noConstraint⟩
     · intro _ _
       exact ⟨trivial, fun _ _ _ _ => trivial⟩
     · intro _ _ _ _
@@ -95,5 +95,13 @@ theorem controls : GoodnessSenseControls := by
       · exact absurd h (by decide)
       · exact absurd h (by decide)
       · exact harmless_notMeans h
+  · intro s Way
+    constructor
+    · rintro ⟨_, hO, hB⟩ b e hG hOcc hC
+      exact Classical.byContradiction fun hNo => hO b e hG hOcc hC (hB b e hC hNo)
+    · intro h
+      refine ⟨fun b e => ¬ BlockingCost s b e, ?_, fun _ _ _ hNo => hNo⟩
+      intro b e hG hOcc hC hNo
+      exact hNo (h b e hG hOcc hC)
 
 end TruthCore.Results.Ethics.TrolleyRowe

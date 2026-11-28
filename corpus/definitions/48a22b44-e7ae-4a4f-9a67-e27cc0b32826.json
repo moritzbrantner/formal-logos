@@ -1,9 +1,9 @@
 {
   "id": "48a22b44-e7ae-4a4f-9a67-e27cc0b32826",
   "label": "WHOLLY_GOOD_3: ontologically supreme good that wills some good to every existing being",
-  "term": "wholly good (ontological goodness and good-willing)",
-  "definition": "Rowe's WhollyGood read as the bearer predicate of GodIsSupremelyGood and DivineWillsGoodForAllExisting on a shared carrier: good in respect of being, cause of every perfection of others, and willing some good to every being in act. No standard for permitting is included.",
+  "term": "wholly good (two stage-2 goodness predicates only)",
+  "definition": "OntologicalGoodnessSense: Rowe's WhollyGood read as the bearer predicate of both GodIsSupremelyGood and DivineWillsGoodForAllExisting on a shared carrier: good in respect of being, cause of every perfection of others, and willing some good to every being in act. No standard for permitting and no link from Rowe's events to the beings willed good is included, so this is not the classical-theist account, which also has a permission rule (ST I q.2 a.3 ad 1, recorded in the corpus).",
   "basis": "stipulative",
-  "lean_declaration": "TruthCore.Case.Catholicism.DivineLoveBridge.DivineWillsGoodForAllExisting",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.OntologicalGoodnessSense",
   "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
 }

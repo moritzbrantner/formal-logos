@@ -3,7 +3,7 @@
   "label": "Kills: causal initiation versus a new threat",
   "term": "kills",
   "term_label": "KILLS",
-  "resolution": "KILLS_1 counts any causal path from the intervention to the one's harm, so diverting the trolley kills. KILLS_2 counts only a path that avoids the redirection of the existing threat, so diverting does not kill but pushing and harvesting do. The causal no-killing deontology uses KILLS_1; the redirection principle uses KILLS_2. No argument passes between them; the controls certify that the switch separates them.",
+  "resolution": "KILLS_1 counts any causal path from the intervention to the one's harm, so diverting the trolley kills, as in ordinary use. KILLS_2 is a stipulated technical relation, not ordinary killing: only a path that avoids the redirection of the existing threat counts, so diverting is excluded while pushing and harvesting are included. The causal no-killing deontology uses KILLS_1; the redirection principle uses KILLS_2. No argument passes between them; the controls certify that the switch separates them.",
   "sense_definition_ids": [
     "56fb94ef-7af4-4e41-b87a-204f57a1a015",
     "c094090d-0572-4a8a-9add-c993cae6e079"

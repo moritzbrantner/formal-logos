@@ -1,0 +1,27 @@
+{
+  "id": "b77fdfd2-ab63-437e-be63-ee1ca5820c60",
+  "label": "Common triad verdicts, from double effect on its intention reading",
+  "premise_statement_ids": [
+    "523a9cd1-9fd6-4eef-a1b3-a45c4cbed176",
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "6434b71f-c311-401c-8aeb-6a267f1baaee",
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1"
+  ],
+  "conclusion_statement_id": "9b14d253-e29a-4041-88eb-d45c8de9ac53",
+  "inference_ids": [
+    "820823d2-41e1-48a9-86f5-9414f17db08c"
+  ],
+  "meaning": "Switch: harm not planned. Footbridge and transplant: harm planned (INTENDS_1), so impermissible. The footbridge verdict here depends on the plan fact, not the causal structure.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}

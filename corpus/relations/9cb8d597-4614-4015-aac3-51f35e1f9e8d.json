@@ -1,0 +1,10 @@
+{
+  "id": "9cb8d597-4614-4015-aac3-51f35e1f9e8d",
+  "label": "Harvesting the transplant patient is permissible: rival verdict",
+  "subject_kind": "statement",
+  "subject_id": "93bfe348-f780-4d18-b895-7f2c11ee624a",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "cfe2a5c6-6f09-454c-ba07-9f9c16e9c460",
+  "note": "Rival verdict: lives-only act consequentialism permits harvesting."
+}

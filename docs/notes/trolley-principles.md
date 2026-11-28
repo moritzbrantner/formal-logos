@@ -1,9 +1,10 @@
 # Trolley principles and the senses of "wholly good"
 
 Owner direction (2026-11-28): use concrete thought experiments as tests of
-implicit principles. This note records the trolley pilot. All formulations are
-the analyst's; attribution is deferred (AGENTS.md, "Logic first"). Philosophy-lab
-exhibit texts were used for orientation only. Records:
+implicit principles. This note records the trolley pilot, revised after an
+independent semantic challenge. All formulations are the analyst's; attribution
+is deferred (AGENTS.md, "Logic first"). Philosophy-lab exhibit texts were used
+for orientation only. Records:
 [specs/trolley-principles.toml](../../specs/trolley-principles.toml),
 [specs/trolley-rowe-goodness.toml](../../specs/trolley-rowe-goodness.toml),
 [attempt](../../corpus/attempts/trolley-principles-pilot.json).
@@ -14,130 +15,161 @@ exhibit texts were used for orientation only. Records:
 five event kinds (intervention, redirection of the threat away from the five,
 the one's lethal harm, ending of the threat, survival of the five), the death
 counts of intervening and refraining, the events the agent's plan includes, and
-a supplied classification of the act's object. Causal paths are Mathlib
-`Relation.ReflTransGen` paths. Principles are Lean definitions over this
-description, and a premise `XGoverns F P` says that principle `X` fixes the
-permissibility assignment `P` for intervening, scenario by scenario. Every
-verdict is computed from the graph by reachability, so it could fail on another
-description; the controls exhibit such descriptions.
+a supplied classification of the act's object (double-effect condition 1).
+Causal paths are Mathlib `Relation.ReflTransGen` paths. Principles are Lean
+definitions over this description, and a premise `XGoverns F P` says that
+principle `X` fixes the permissibility assignment `P` for intervening, scenario
+by scenario. Every verdict is computed from the graph by reachability, so it
+could fail on another description; the controls exhibit such descriptions.
 
-Case descriptions (statements `SwitchFacts` and siblings, each its own premise):
-
-| Case | causal links | plan includes the harm |
+| Case | causal links | plan includes the one's lethal harm |
 | --- | --- | --- |
 | Switch | act → redirect → harm; redirect → saved | no |
 | Footbridge | act → harm → threat stopped → saved | yes |
-| Transplant | same graph as footbridge (no threat to redirect) | yes |
+| Transplant | same `Case` as footbridge (no threat to redirect) | yes |
 | Loop | act → redirect → harm → threat stopped → saved | no (acts because of the hit, not in order to) |
 
-The frame does not separate footbridge from transplant (control 8): role duties,
-consent, institutions and "personal force" are not represented.
+Frame limits, stated once:
+
+- Footbridge and transplant are the same `Case` value. Their verdicts are one
+  formal datum carrying two labels, not independent data; they share defeaters
+  such as personal force and using a person. Role duties, consent and
+  institutions are not represented.
+- There is no separate impact event. "Plan includes the harm" is the stipulation
+  that carries the intention reading's footbridge verdict; the narrow-plan
+  control shows what happens without it (closeness).
+- Condition 1 (`objectNotEvil`) is stipulated true in all four descriptions.
+  Only control 11 varies it. A tradition that classifies harvesting or pushing as
+  evil by object would make those verdicts overdetermined.
+- Only deaths are counted, so "act consequentialism" here is lives-only.
 
 Senses (`corpus/disambiguations`): KILLS_1 any causal path from the act to the
-harm; KILLS_2 such a path avoiding the redirection of the existing threat.
-MEANS_1 every causal path from act to saving passes through the harm; MEANS_2
-the harm is planned and contributes causally. INTENDS_1 plan inclusion;
-INTENDS_2 every known necessary causal means counts as intended (coincides with
-MEANS_1 by its stated content). WHOLLY_GOOD_1–3 are below.
+harm (diverting kills, as in ordinary use); KILLS_2 a stipulated technical
+relation, introducing a new threat (a path avoiding the redirection). MEANS_1
+every causal path from act to saving passes through the harm; MEANS_2 the harm
+is planned and some path leads from it to the saving (MEANS_2 does not entail
+MEANS_1). INTENDS_1 plan inclusion; INTENDS_2 every known necessary causal means
+counts as intended (by its stated content an alias of MEANS_1; no principle uses
+it). The two readings of double-effect condition 3 (causal, MEANS_1; intention,
+MEANS_2) are recorded as equal alternatives; neither is labelled "classical".
 
-## Which principle survives which verdict
+## Which principle fits which verdict
 
 Computed values for intervening (P = permissible, I = impermissible):
 
 | Principle | Switch | Footbridge | Transplant | Loop | Common triad |
 | --- | --- | --- | --- | --- | --- |
-| Act consequentialism (lives) | P | P | P | P | inconsistent (footbridge, transplant) |
+| Lives-only act consequentialism | P | P | P | P | inconsistent (footbridge/transplant case) |
 | Causal no-killing (KILLS_1) | I | I | I | I | inconsistent (switch) |
-| Classical double effect (MEANS_1, INTENDS_1) | P | I | I | I | entailed |
-| Intention-only double effect (MEANS_2) | P | I | I | P | entailed |
-| Kantian MEANS_1 principle | P | I | I | I | entailed |
-| Redirection, Thomson/Kamm-style (KILLS_2) | P | I | I | P | entailed |
+| Double effect, causal reading (MEANS_1, INTENDS_1) | P | I | I | I | entailed |
+| Double effect, intention reading (MEANS_2) | P | I* | I* | P | entailed |
+| Causal MEANS_1 principle (one Kantian-inspired reading) | P | I | I | I | entailed |
+| Thomson-style redirection (KILLS_2) | P | I | I | P | entailed |
 
-Results: `acFootbridge`, `acTransplant`, `causalNoKillingSwitch` (rival
-verdicts derived); `footbridgeVerdictExcludesAC`, `transplantVerdictExcludesAC`,
+\* rests on the stipulated plan fact that the harm is planned.
+
+Results: `acFootbridge`, `acTransplant`, `causalNoKillingSwitch` (rival verdicts
+derived); `footbridgeVerdictExcludesAC`, `transplantVerdictExcludesAC`,
 `switchVerdictExcludesCausalNoKilling` (conditional refutations, recorded as
 `refutes` relations that do not count until the verdicts are established);
 `doubleEffectTriad`, `intentionDoubleEffectTriad`, `meansTriad`,
-`redirectionTriad`; the four loop results; `jointModels` (each surviving
-principle with all four case facts and the triad is satisfiable, with its loop
-verdict); `controls`.
+`redirectionTriad`; the four loop results; `jointModels`; `controls`.
 
-Two refutations of act consequentialism come from independent case data
-(footbridge and transplant) but share the same open element: the verdict as
-prima facie warrant. The KILLS_2 no-killing reading escapes the switch test, so
-the switch verdict refutes only the KILLS_1 form of an absolute doing/allowing
-deontology.
+The two refutations of act consequentialism come from one formal case and share
+its verdict-warrant dependency. The KILLS_2 reading escapes the switch test, so
+the switch verdict refutes only the KILLS_1 form of an absolute no-killing
+deontology. That switch verdict is itself contested: Thomson 2008, unread here,
+is reported to reject the bystander's permission.
 
-Controls (which fact each verdict depends on):
+Controls (`TrolleyControls`):
 
-1. *Means/side-effect.* A side-effect footbridge (a dropped weight stops the
-   trolley and its fall also kills the bystander) flips classical double effect
-   and the means principle to permissible; act consequentialism does not change.
+1. *Causal path only.* The side-effect footbridge (a dropped weight stops the
+   trolley and its fall also kills the bystander) and the narrow-plan footbridge
+   share plan, death counts and object; the harm is off the rescue path in the
+   first and on it in the second. This flips the causal reading of double effect
+   and the causal means principle, not the intention reading or act
+   consequentialism.
 2. *Closeness.* The footbridge graph with the harm left out of the plan stays
-   impermissible under classical double effect (causal condition 3) and becomes
-   permissible under intention-only double effect.
-3. *Intention.* A malicious switcher who wants the one dead is forbidden by both
-   double-effect readings and permitted by the means and redirection principles.
-4. *Numbers.* Reversed numbers defeat classical double effect, the means and
+   impermissible on the causal reading and becomes permissible on the intention
+   reading.
+3. *Intention.* A malicious switcher who plans the one's death is forbidden by
+   both double-effect readings and permitted by the means and redirection
+   principles.
+4. *Numbers.* Reversed numbers defeat the causal reading, the means and
    redirection principles and act consequentialism.
-5. *KILLS.* The switch kills in KILLS_1, not KILLS_2.
-6. *Loop.* The loop harm is MEANS_1 but not planned; see below. Adding it to the
-   plan makes intention-only double effect forbid the loop.
-7. On the intention reading, condition 3 (MEANS_2) is implied by condition 2.
+5. *KILLS.* The switch is KILLS_1 but not KILLS_2.
+6. *Loop.* The loop harm is MEANS_1 but not planned; planning it makes the
+   intention reading forbid the loop.
+7. MEANS_2 implies INTENDS_1, so on the intention reading condition 3 adds
+   nothing to condition 2.
 8. Footbridge and transplant coincide in the frame.
-9. The case facts alone do not entail the common triad: the principle premise is
-   needed.
-10. INTENDS_1 and INTENDS_2 split exactly on the loop.
+9. The case facts alone do not entail the common triad (trivially, by the empty
+   assignment): the principle premise is needed.
+10. INTENDS_1 and INTENDS_2 split on the loop and agree on the other three cases.
+11. *Condition 1.* An evil object on the switch structure defeats both
+    double-effect readings but not the means or redirection principles.
 
 ## Loop finding
 
-Thomson's loop is the objection to double effect with a stated mechanism: the
-one's being hit is causally needed to stop the trolley, yet the case differs from
-the switch only by track behind the one. In the frame:
+Thomson's loop is an objection to double effect with a stated mechanism: the
+one's being hit is causally needed to stop the trolley, yet the case differs
+from the switch only by track behind the one. In the frame:
 
-- Classical double effect forbids the loop. The failing condition is condition 3
-  in MEANS_1 (every path to the saving passes through the harm), not condition 2:
-  the plan omits the harm. The Kantian MEANS_1 principle agrees.
-- Intention-only double effect permits the loop, but only given Kamm's plan
-  reading; with the harm in the plan it forbids it (control 6). Its price is
-  control 2: on the same reading a footbridge agent who plans only the impact
-  escapes condition 2 and 3, so the reading needs an independent closeness
-  criterion that the frame does not supply.
-- The redirection principle permits the loop on causal structure alone (the harm
-  lies downstream of redirecting the existing threat) and keeps the footbridge
-  and transplant verdicts. Its price is control 3: it ignores intention, so the
-  malicious switcher acts permissibly.
+- The causal reading of double effect forbids the loop. The failing condition is
+  condition 3 in MEANS_1, not condition 2: the plan omits the harm. The causal
+  MEANS_1 principle agrees, so on these four cases the two are not separated.
+- The intention reading permits the loop, but only given Kamm's plan reading;
+  with the harm in the plan it forbids it (control 6). The same reading, applied
+  to a footbridge agent said to intend only the impact, permits pushing
+  (control 2), so it needs a closeness criterion that the frame does not supply.
+- The redirection principle permits the loop on causal structure alone and
+  permits the malicious switcher (control 3).
 
-So double effect and the means principle diverge only on the intention reading:
-classical double effect *is* a means principle on the loop, and the refinement
-that rescues the loop verdict either moves condition 3 into the plan (and must
-answer closeness) or replaces it by a causal-structure condition (and must
-separate permissibility from intention). Whether the loop verdict itself has
-warrant comparable to the triad verdicts is open; reported survey data are an
-unread lead, not evidence here. If the loop verdict is not warranted, the loop is
-not an objection to classical double effect.
+So double effect diverges from the causal means principle only on its intention
+reading. Rescuing the permissive loop verdict either moves condition 3 into the
+plan, which must then answer closeness, or replaces it by a causal-structure
+condition that ignores intention. Whether the loop verdict has warrant is
+unassessed; if it does not, the loop is not an objection to the causal reading.
 
-## The strongest consequentialist account, stated symmetrically
+## Survivors compared
 
-- *Positive warrant.* Impartiality: each life counts equally, and the switch
-  verdict itself shows that numbers carry weight. Act consequentialism is the
-  simplest principle that fits the switch.
-- *Paradox of constraints* (mechanism: if the harm is so bad, an agent-relative
-  constraint forbids minimizing that very harm). In this frame the five are
-  threatened by a trolley, not by agents' violations, so the paradox applies
-  only in its outcome form; it does not touch double effect's distinction of
-  intended from foreseen harm.
-- *Debunking* (mechanism: footbridge and transplant responses correlate with
-  personal-force features that the triad's moral content does not mention). The
-  mechanism targets the warrant of those two verdicts, not the derivations. Its
-  empirical basis is an unread lead here, so this note states the mechanism and
-  assigns it no further weight. The side-effect control
-  shows a feature the debunking story does not cover: causal role, not force,
-  flips double effect.
+The four principles that entail the triad, on the further cases, with the warrant
+of every column's verdict unassessed:
+
+| Principle | Loop | Malicious switcher | Closeness (narrow-plan footbridge) | Evil object |
+| --- | --- | --- | --- | --- |
+| Double effect, causal reading | I | I | I | I |
+| Double effect, intention reading | P (plan-dependent) | I | P | I |
+| Causal MEANS_1 principle | I | P | I | P |
+| Thomson-style redirection | P | P | I | P |
+
+No column has an assessed verdict, so no ranking follows. A principle's verdict
+in a column is a cost only if that verdict conflicts with a warranted commitment.
+For example, permitting the malicious switcher conflicts only with a commitment
+that intention bears on permissibility, which is itself contested (some hold that
+intention bears on the agent's character, not on permissibility; unread lead).
+The survivors stand at parity in this frame.
+
+## The consequentialist case, stated symmetrically
+
+- *Positive warrant.* Impartiality, since each life counts equally, and
+  simplicity: lives-only act consequentialism is the simplest principle that fits
+  the switch, and the switch verdict shows that numbers carry weight.
+- *Paradox of constraints* (mechanism: an agent-relative constraint forbids
+  minimizing the very harm it treats as grave). In this frame the five are
+  threatened by a trolley, not by agents' violations, so the paradox applies only
+  in its outcome form; it does not touch the distinction of intended from foreseen
+  harm.
+- *Debunking* (mechanism: the footbridge and transplant responses would track
+  personal-force features that the moral content of the verdicts does not
+  mention). This targets the warrant of those verdicts, not the derivations. In
+  the frame, double effect's verdict tracks causal role (control 1). Whether
+  intuitive verdicts track causal role or force is the empirical question
+  debunking raises; the evidence is unread here.
 - *Indirect consequentialism.* A rule or institutional consequentialist can
   forbid transplant through effects on trust. Those facts are absent from the
   case description, so in this frame that reply is a different principle with
-  extra case facts, not a defense of act consequentialism on the stated cases.
+  extra case facts.
 
 ## Senses of "wholly good" and Rowe's permission constraint
 
@@ -147,84 +179,93 @@ predicate has no derivation from the ontological goodness on the root route.
 `TruthCore.Ethics.TrolleyRowe` reuses Rowe's `Sig`, `BlockingCost` and
 `PermissionConstraintReading` and describes each prevention way by a trolley
 `Case` (intervening = preventing; `harmOne` = a harm the preventer itself would
-do). `Better b e` is a supplied all-things-considered comparison.
+do). `Better b e` ("preventing is strictly better overall") is a supplied
+primitive with its own definition record; it has no axiology or aggregation rule.
 
-- WHOLLY_GOOD_1 `OutcomeStandard`: never permits what would be strictly better
-  prevented. With the OPEN outcome bridge `UnblockedPreventionBetter` (no
-  blocking cost ⇒ preventing strictly better) it yields Rowe's simplified
-  permission constraint (`outcomeSenseYieldsPermissionConstraint`). This is a new
-  conditional support option for STMT-ROWE-PERMISSION-CONSTRAINT. The bridge
-  fails if several individually lesser costs can jointly outweigh a suffering.
-- WHOLLY_GOOD_2 `ConstraintStandard`: keeps the rescue duty unless every way of
-  preventing fails double-effect condition 1–3. With the same bridge it yields
-  only `ConstraintQualifiedPermission`: blocking cost *or* constraint-blocked
-  prevention. Controls: it does not yield Rowe's constraint (a footbridge-shaped
-  only way of prevention); one constraint-free way of preventing restores Rowe's
+- WHOLLY_GOOD_1 `OutcomeStandard` with the OPEN outcome bridge
+  `UnblockedPreventionBetter` gives Rowe's permission constraint
+  (`outcomeSenseYieldsPermissionConstraint`). Because `Better` is free, this only
+  relocates the constraint: goodness-sense control 6 proves that the premise
+  bundle holds for some `Better` exactly when the constraint without its
+  omniscience and intensity antecedents holds. The result is recorded as a
+  near-transcription (assembly) and leaves the constraint's closure unchanged.
+- WHOLLY_GOOD_2 `ConstraintStandard` with the same bridge relocates only the
+  `ConstraintQualifiedPermission` condition (blocking cost, or every way of
+  preventing violates double-effect conditions 1–3), also a near-transcription.
+  Controls: with a footbridge-shaped way as the only supplied way, the qualified
+  condition holds while Rowe's constraint fails (omnipotence does not constrain
+  the supplied ways in that model); one constraint-free way restores Rowe's
   requirement (easy rescue survives).
-- WHOLLY_GOOD_3: supreme ontological goodness plus willing some good to every
-  existing being (`GodIsSupremelyGood`, `DivineWillsGoodForAllExisting`, read as
-  Rowe's `WhollyGood` on a shared carrier) is jointly satisfiable with an
-  omniscient omnipotent bearer and failure of the constraint. It yields neither
-  form without an added standard for permitting.
+- WHOLLY_GOOD_3 (`OntologicalGoodnessSense`: `GodIsSupremelyGood` and
+  `DivineWillsGoodForAllExisting` on a shared carrier) is only a structural
+  surrogate. Its model makes every relation true, and such relations exist for
+  every signature, so the two predicates constrain no Rowe field. It omits the
+  classical permission rule the corpus records (ST I q.2 a.3 ad 1;
+  STMT-GOD-DRAWS-GOOD-FROM-EVERY-EVIL and its collective variants), and it is not
+  the classical-theist sense. Its non-entailment is evidence about this encoding,
+  not about the goodness of GOD_4.
 
-Consequence for the planned bridge from STMT-ROWE-NO-THEISTIC-BEING to
-STMT-GOD-EXISTS: Rowe's core bites on the case's GOD_4 only if its goodness is
-read with a permission standard. Under WHOLLY_GOOD_2, which the triad verdicts
-support for human agents, Rowe additionally needs that some constraint-free way
-of preventing the suffering exists. For an omnipotent preventer such ways look
-easy to come by, so WHOLLY_GOOD_2 narrows Rowe's argument to cases where every
-prevention would itself use harm as a means, as in the free-will defence recast
-as a doing constraint. That last reading is an open lead; #1456 owns divine
-permission versus intention.
+Consequence for Rowe's argument: under WHOLLY_GOOD_2, Rowe's argument survives
+for every suffering that has a constraint-free way of preventing it (control 2).
+It loses force only where every prevention is constraint-violating, so it is the
+theist's escape that WHOLLY_GOOD_2 confines to such cases. The triad is
+compatible with WHOLLY_GOOD_2's constraint clause, as it is with the redirection
+and means variants; it does not test rescue duties, and transferring human
+verdicts to divine permitting is a further bridge (#1456).
 
 ## Reuse
 
 Lean search (LeanSearch, lean-explore) found no normative-ethics vocabulary in
 Mathlib; reachability reuses `Relation.ReflTransGen`. Reused by import: Rowe's
-signature and constraints, `GodIsSupremelyGood`, `DivineWillsGoodForAllExisting`.
+signature and constraint, `GodIsSupremelyGood`, `DivineWillsGoodForAllExisting`.
 Not reused, because meanings do not coincide: `Ethics.HardCaseTyped` (opaque
 factual predicates such as `deliberateKilling`, no causal graph; its killing
 context is closest to transplant, with the offender as beneficiary),
 `RossPermission`/`RossDerived` (ideal-frame and issued-norm permission, not a
 governed assignment), `AgencyNeutrality` (pro-tanto reasons), `Population*` (real
-welfare scales, not death counts), and the q.94 natural-law vocabulary (see
-above).
+welfare scales, not death counts), and the q.94 natural-law vocabulary.
 
 ## Shared edit
 
 `corpus/statements/rowe-permission-constraint.json`: dropped the
-APPARENTLY_POINTLESS (recognition) definition, which `PermissionConstraintReading`
-does not use and which made every argument concluding it mix the two
-POINTLESS_GRATUITOUS senses; added a connection plan to STMT-GOD-EXISTS.
+APPARENTLY_POINTLESS definition, because the constraint concerns actual blocking
+costs, not costs recognized by an investigator; with that link, every argument
+concluding the statement mixed the two POINTLESS_GRATUITOUS senses. Added a
+connection plan to STMT-GOD-EXISTS. The relocation leaves the statement's closure
+as on main.
 
 ## Overall provisional assessment
 
-The triad verdicts are widely shared prima facie data. Given them, act
-consequentialism and the KILLS_1 no-killing deontology are excluded at matching
-scope, and four constraint principles survive the triad. The debunking objection
-names the mechanism that would lower that warrant; its evidence is unread here,
-and the side-effect control isolates causal role rather than force. Among
-survivors, classical double effect and the redirection principle are the
-strongest at matching scope: they agree on the triad and split on the loop and
-the malicious switcher. The best surviving rival to classical double effect is
-the redirection principle; its price is making intention irrelevant to
-permissibility. The price of classical double effect is the loop verdict, whose
-own warrant is unassessed. Act consequentialism survives only by rejecting two
-verdicts, with debunking as its support.
+The triad verdicts are treated as prima facie inputs. How widely they are shared,
+the debunking evidence, the loop survey data and Thomson's later rejection of the
+switch verdict are all unread here, and they get the same status. Given the
+verdicts, lives-only act consequentialism and the KILLS_1 no-killing view are
+excluded at matching scope, and four constraint principles fit the triad. They
+split on the loop, the malicious switcher, closeness and evil objects, where no
+verdict's warrant is assessed, so they stand at parity. Lives-only act
+consequentialism rejects the footbridge/transplant verdicts. Its positive warrant
+is impartiality and simplicity, and debunking is a possible defeater of those
+verdicts.
 
-For the case: these results establish no premise. They show that Rowe's
-constraint follows from an outcome-minimizing sense of goodness and only a
-weakened form from a constraint-respecting one, and that ontological goodness
-alone yields neither.
+For the case: these results establish no premise. The Rowe connection is a map of
+senses, not support: WHOLLY_GOOD_1 and WHOLLY_GOOD_2 relocate Rowe's constraint
+through a free comparison, and the WHOLLY_GOOD_3 surrogate shows only that two
+stage-2 predicates without a permission rule fix nothing about permitting.
 
 ## Next tests
 
-1. Closeness: add separate impact and death events, and test a closeness
-   criterion that lets intention-only double effect keep footbridge impermissible.
-2. Warrant of the loop verdict at matching scope with the triad; then whether the
-   loop is an objection to classical double effect at all.
-3. Rowe: find a concrete prevention case for which every way of preventing an
-   intense suffering is constraint-violating (free agency), coordinated with #1456.
-4. Outcome bridge: a finite aggregation countermodel with several lesser costs.
-5. Source leads, unread: Aquinas ST II-II q.64 a.7; manualist four conditions;
-   Thomson 1985 and 2008; Kamm on triple effect.
+1. Give `Better` typed content that can fail, for example from Rowe's cost fields
+   or from the ways' death counts, and retest the WHOLLY_GOOD_1 and WHOLLY_GOOD_2
+   relocations.
+2. Restore the classical permission rule (ST I q.2 a.3 ad 1, one of its recorded
+   readings) on Rowe's signature, with a link from Rowe's events to the beings
+   willed good, and retest WHOLLY_GOOD_3.
+3. Closeness: add separate impact and death events, and test a closeness
+   criterion that lets the intention reading keep the footbridge impermissible.
+4. Warrant of the loop and malicious-switcher verdicts at matching scope with the
+   triad.
+5. Rowe: a concrete prevention case for which every way of preventing an intense
+   suffering is constraint-violating (free agency), coordinated with #1456.
+6. Source leads, unread: Aquinas ST II-II q.64 a.7; manualist four conditions;
+   Thomson 1985 and 2008; Kamm on triple effect and the Principle of Permissible
+   Harm; debunking and loop survey evidence.

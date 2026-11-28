@@ -1,0 +1,10 @@
+{
+  "id": "4f64c675-9e4a-4583-9d05-a0e84d647a91",
+  "label": "Switching in Thomson's loop is impermissible: rival verdict",
+  "subject_kind": "statement",
+  "subject_id": "98bb5913-4800-4b92-87c1-c5906db623f6",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "5a5bd4a6-4224-4350-8d60-8adb59623cf1",
+  "note": "Rival loop verdict: double effect on its causal reading and the causal MEANS_1 principle forbid switching in the loop."
+}
