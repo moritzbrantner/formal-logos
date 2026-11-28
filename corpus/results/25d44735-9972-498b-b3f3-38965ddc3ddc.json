@@ -1,0 +1,11 @@
+{
+  "id": "25d44735-9972-498b-b3f3-38965ddc3ddc",
+  "label": "Trolley single-feature controls",
+  "argument_id": "6ccd9c54-4307-4935-87d3-b07e9d48faff",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.controls",
+  "comparator_config": "results/25d44735-9972-498b-b3f3-38965ddc3ddc/comparator.json",
+  "status": "solution-present",
+  "description": "Which case fact each verdict depends on, by variants that change one feature; see the statement. A sense-comparison control over KILLS, MEANS and INTENDS, side by side; it asserts no verdict."
+}

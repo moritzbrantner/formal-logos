@@ -1,0 +1,11 @@
+{
+  "id": "d2844b91-0ac0-4df3-9ef7-3be200ebfa86",
+  "label": "Switching the trolley is impermissible, from causal no-killing (KILLS_1)",
+  "argument_id": "914da641-bbae-4901-af09-91ff07e3af09",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.causalNoKillingSwitch",
+  "comparator_config": "results/d2844b91-0ac0-4df3-9ef7-3be200ebfa86/comparator.json",
+  "status": "solution-present",
+  "description": "In the switch graph the intervention reaches the one's harm (KILLS_1), so the absolute causal no-killing deontology forbids switching."
+}

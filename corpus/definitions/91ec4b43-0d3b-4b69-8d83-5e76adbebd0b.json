@@ -1,0 +1,9 @@
+{
+  "id": "91ec4b43-0d3b-4b69-8d83-5e76adbebd0b",
+  "label": "INTENDS_2: every known necessary causal MEANS_1 counts as intended",
+  "term": "intends (known necessary means)",
+  "definition": "IntendsHarmAsKnownMeans c: on this reading an agent who chooses the act for the saving intends every event it knows to be a necessary causal means to it, so the harm is intended exactly when it is a MEANS_1. The identification with MEANS_1 is the explicit content of this sense.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.IntendsHarmAsKnownMeans",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "1434728b-de11-43cc-8a85-bf904c94ae3b",
+  "label": "Pushing the footbridge bystander is permissible: rival verdict",
+  "subject_kind": "statement",
+  "subject_id": "aa97268b-a8a4-467e-b14d-81081662ffde",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "2101b99a-8df7-43ad-ba05-a6c1d7d995bd",
+  "note": "Rival verdict: lives-only act consequentialism permits pushing."
+}

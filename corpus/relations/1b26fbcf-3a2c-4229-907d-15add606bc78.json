@@ -1,0 +1,10 @@
+{
+  "id": "1b26fbcf-3a2c-4229-907d-15add606bc78",
+  "label": "The causal MEANS_1 principle as rival to causal-reading double effect",
+  "subject_kind": "statement",
+  "subject_id": "a74a388b-b2b0-4c4f-9ede-f23d6d6d3884",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "0738e9bb-e60c-470e-b90f-b89d1adede12",
+  "note": "Diverges from double effect when a harm is planned but not a causal means, or the object is evil."
+}

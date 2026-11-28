@@ -1,0 +1,15 @@
+{
+  "id": "92937c8e-8467-4d4c-b1ad-cd5ff2034a16",
+  "label": "Common triad verdicts, from double effect on its causal reading (inference)",
+  "input_statement_ids": [
+    "0738e9bb-e60c-470e-b90f-b89d1adede12",
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "6434b71f-c311-401c-8aeb-6a267f1baaee",
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1"
+  ],
+  "output_statement_id": "9b14d253-e29a-4041-88eb-d45c8de9ac53",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "Switch: harm off the rescue path, not planned, proportionate, so permissible. Footbridge and transplant: harm is a MEANS_1 (and planned), so impermissible. Computed from the causal graphs by reachability.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

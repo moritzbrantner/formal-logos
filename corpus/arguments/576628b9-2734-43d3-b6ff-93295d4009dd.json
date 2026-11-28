@@ -1,0 +1,18 @@
+{
+  "id": "576628b9-2734-43d3-b6ff-93295d4009dd",
+  "label": "Pushing the footbridge bystander is permissible, from lives-only act consequentialism",
+  "premise_statement_ids": [
+    "874bf22e-8265-4dd6-98df-3fce6d74470d",
+    "6434b71f-c311-401c-8aeb-6a267f1baaee"
+  ],
+  "conclusion_statement_id": "aa97268b-a8a4-467e-b14d-81081662ffde",
+  "inference_ids": [
+    "896bd152-79de-4fe4-9a91-c58f5bc08bf4"
+  ],
+  "meaning": "Act consequentialism compares only deaths: one versus five makes pushing permissible. No causal or intentional feature of the case is used.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59"
+  ]
+}

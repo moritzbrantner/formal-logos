@@ -1,0 +1,22 @@
+{
+  "id": "4bb1655d-51a6-4c7a-b717-6c9cdaee0a72",
+  "label": "Causal no-killing (KILLS_1) fails, from the switch verdict",
+  "premise_statement_ids": [
+    "067d271e-c17c-48fb-bb5a-252453202a9f",
+    "567693b5-c750-4d8c-bed6-298728e74106"
+  ],
+  "conclusion_statement_id": "96bad715-d4ba-4fb6-986d-35b097f0b85e",
+  "inference_ids": [
+    "f79b06b8-7d98-4765-910c-51d582c4a833"
+  ],
+  "meaning": "Whoever holds the switch verdict on these facts rejects the KILLS_1 no-killing deontology. Conditional on the open prima facie verdict; the KILLS_2 reading escapes this test.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "4eb02a3c-95b0-42ef-82e4-1f6ccb1235f5",
+    "56fb94ef-7af4-4e41-b87a-204f57a1a015"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee"
+  ]
+}

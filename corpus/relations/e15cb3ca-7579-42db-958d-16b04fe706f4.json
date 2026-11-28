@@ -1,0 +1,10 @@
+{
+  "id": "e15cb3ca-7579-42db-958d-16b04fe706f4",
+  "label": "Goodness-sense controls test the constraint standard",
+  "subject_kind": "argument",
+  "subject_id": "6647f768-bcb9-49c0-beaf-913238a4783e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6d54e61c-a2fe-4d0b-89ed-367a8e1f93c0",
+  "note": "A footbridge-structured only supplied prevention way makes the constraint standard and outcome bridge consistent with failure of Rowe's simplified constraint."
+}

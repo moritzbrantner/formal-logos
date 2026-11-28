@@ -1,0 +1,11 @@
+{
+  "id": "493b468a-4fa9-4eaa-8886-df09239533e8",
+  "label": "Switching in Thomson's loop is impermissible, from the causal MEANS_1 principle",
+  "argument_id": "eb966e7b-9ff4-43f6-a753-c15a2a48fe8a",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.meansLoop",
+  "comparator_config": "results/493b468a-4fa9-4eaa-8886-df09239533e8/comparator.json",
+  "status": "solution-present",
+  "description": "The loop harm is a causal means (MEANS_1)."
+}

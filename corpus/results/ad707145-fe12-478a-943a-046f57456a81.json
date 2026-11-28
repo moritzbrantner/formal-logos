@@ -1,0 +1,12 @@
+{
+  "id": "ad707145-fe12-478a-943a-046f57456a81",
+  "label": "Rowe's permission constraint relocated into WHOLLY_GOOD_1 and the outcome bridge",
+  "argument_id": "fab6fff2-69ae-42a0-93dc-ec9efbd23fb6",
+  "challenge_module": "TruthCore.Results.Ethics.TrolleyRowe.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.TrolleyRowe.Solution",
+  "theorem": "TruthCore.Results.Ethics.TrolleyRowe.outcomeSenseYieldsPermissionConstraint",
+  "comparator_config": "results/ad707145-fe12-478a-943a-046f57456a81/comparator.json",
+  "status": "solution-present",
+  "description": "Near-transcription (assembly): relocates Rowe's permission constraint into an axiological bridge and a deontic standard over the free comparison Better. With Better free the premise bundle is satisfiable exactly when a strengthened constraint holds (goodness-sense control 6), so this adds no warrant to Rowe's premise (2).",
+  "transcription": "assembly"
+}

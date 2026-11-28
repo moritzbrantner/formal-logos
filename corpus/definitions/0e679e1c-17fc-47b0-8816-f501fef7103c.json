@@ -1,0 +1,9 @@
+{
+  "id": "0e679e1c-17fc-47b0-8816-f501fef7103c",
+  "label": "Trolley case frame: A case is a finite causal graph over five event kinds with death…",
+  "term": "trolley case frame",
+  "definition": "A case is a finite causal graph over five event kinds (intervention, redirection of the threat, the one's lethal harm, ending of the threat, survival of the five), the death counts of intervening and of refraining, the events the agent's plan includes, and a supplied classification that the act's object is not evil. Causal paths are Mathlib ReflTransGen paths of the graph. The four scenario descriptions are analyst stipulations, not empirical reports.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.Case",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

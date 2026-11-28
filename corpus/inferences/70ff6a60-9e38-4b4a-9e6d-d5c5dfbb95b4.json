@@ -1,0 +1,13 @@
+{
+  "id": "70ff6a60-9e38-4b4a-9e6d-d5c5dfbb95b4",
+  "label": "Switching in Thomson's loop is permissible, from the redirection principle (inference)",
+  "input_statement_ids": [
+    "db653ae6-974e-403f-a6d6-7dd57782e801",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "output_statement_id": "5a5bd4a6-4224-4350-8d60-8adb59623cf1",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "The loop harm lies only downstream of redirecting the threat (no KILLS_2); proportionality holds.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "45620acb-803e-4f02-965e-4e8de5ec4c82",
+  "label": "WHOLLY_GOOD_2: keeps the rescue duty unless every way of preventing violates a constraint",
+  "term": "wholly good (constraint-respecting rescuer)",
+  "definition": "ConstraintStandard s W: for every Rowe-wholly-good being and occurring event it can prevent, either preventing is not strictly better, or some way of preventing exists and every such way fails one of double-effect conditions 1–3. Doing/allowing shapes the rescue duty; it does not remove it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.ConstraintStandard",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

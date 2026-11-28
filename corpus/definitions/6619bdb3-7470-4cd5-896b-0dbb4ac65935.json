@@ -1,0 +1,9 @@
+{
+  "id": "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+  "label": "MEANS_1: the saving is reached from the intervention, and every such path passes through the harm",
+  "term": "means (causal)",
+  "definition": "HarmIsCausalMeans c: the intervention reaches the survival of the five, and no causal path from the intervention to that survival avoids the one's harm. Causal necessity in the case graph, independent of the agent's plan.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.HarmIsCausalMeans",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

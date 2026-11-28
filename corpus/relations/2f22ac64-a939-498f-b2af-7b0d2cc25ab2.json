@@ -1,0 +1,10 @@
+{
+  "id": "2f22ac64-a939-498f-b2af-7b0d2cc25ab2",
+  "label": "Footbridge verdict refutes lives-only act consequentialism",
+  "subject_kind": "argument",
+  "subject_id": "2f0ef60f-953b-4bda-9a1e-d03c67400309",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "874bf22e-8265-4dd6-98df-3fce6d74470d",
+  "note": "Conditional refutation: rests on the open prima facie footbridge verdict, so it does not count until that verdict is established."
+}
