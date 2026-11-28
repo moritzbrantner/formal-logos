@@ -642,7 +642,8 @@ Objection Standard, applied to both).
   - *Unread material that would strengthen it:* Metaph. Δ15 1021a21–26 and
     Aquinas, In V Metaph. lect. 17, divide relations by action according to
     time (having acted, having been acted on). It was not read and carries no
-    weight here.
+    weight here. De potentia q.3 a.3 ad 6 (sonship remaining after generation,
+    reported in #1802) is a further unread lead with no weight.
 - *Sustaining reply:*
   - *Mechanism:* a relation to a cause of being, as against a cause of
     becoming, holds only while the cause acts (q.104 a.1).
@@ -751,9 +752,10 @@ of them are reported with locators and are not attributed as statements.
 De ente c.4, the PSR variants, Metaph. Δ15 and In V Metaph. lect. 17 are
 named only as unread leads or next tests, with no weight.
 That filiation lasts after the begetting is marked as ordinary use, not as
-text. #1802 reports that De potentia q.3 a.3 ad 6 uses sonship after
+text. #1802 reports that De potentia q.3 a.3 co. and ad 6 use sonship after
 generation as Aquinas's own illustration of a real relation that remains
-when the agent no longer changes the effect, and that De potentia q.5 a.3
+when the agent no longer changes the effect, while the same article affirms
+continuing divine making through the illumination comparison, and that De potentia q.5 a.3
 ad 5–6 distinguishes the eternity of divine action from its order to a
 particular effect. Neither passage is pinned or read here; both are leads
 with no weight until a witness is read.
