@@ -338,7 +338,7 @@ each fixed exercise has one operation, while the full token carrier is not
 a subsingleton. This supplies no application to an eternal exercise. -/
 def RepeatedOperations : Prop :=
   OperationProfileComplete (bearer : Nat → Bool) id whole ∧
-  (∀ n, OperationAt frame () occurs bearer id true n n) ∧
+  (∀ n : Nat, OperationAt frame () occurs bearer id true n n) ∧
   (∀ n, IntrinsicOperationRealizersAt frame () occurs (bearer : Nat → Bool) id
     simpleReal whole true n) ∧
   (∀ n, Subsingleton {o // OperationAt frame () occurs (bearer : Nat → Bool) id true n o}) ∧
