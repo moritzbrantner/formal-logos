@@ -102,6 +102,7 @@ theorem coverage_iff_cut (mode : Bool) :
   cases mode
   · simp only [cut_reports.2, Bool.false_eq_true, Bool.true_eq_false]
   · rw [cut_reports.1]
+    exact ⟨fun _ => rfl, fun _ => rfl⟩
 
 theorem appraises_and_meets (mode : Bool) :
     (Control.plan mode true true).ApprehendsAsGood false false () ∧
