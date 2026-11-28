@@ -9380,8 +9380,8 @@ that denies the bridge keeps `0c8631bd` and denies the in-root premise.
 
 Clause 12 checks the route on the carrier:
 - The classical source meets every premise and has every pure determination.
-- The rival source meets every premise except the in-root purity of
-  requirements, and lacks noesis.
+- The rival source meets every non-logical premise except the in-root purity
+  of requirements, and lacks noesis.
 
 The in-root premise is restricted to roots for a stated reason. A pure
 determination realized in a finite bearer can require there the lack of a pure
@@ -9420,8 +9420,10 @@ that denies `0c8631bd` as well pays the Plotinian price once.
 
 **#2153's encoded simplicity** (`HasLimitingPrinciple`: composition, esse
 other than essence, a distinct prior being). None of its three disjuncts
-concerns a clause of a nature. In the #2153 and lane E controls, the rival
-rows satisfy no-limitation while lacking noesis.
+concerns a clause of a nature. On the #2153 carrier the source has no
+represented limiting principle when `composite` is off (`limitingIff`), and
+that does not depend on its profile, so a source with `{esse, a, b}` and a
+clause "lacks noesis" satisfies no-limitation.
 
 **RootPurity `c78c77da`** (no limiting principle gives only pure
 determinations). It bears on the purity of the carrier. On the fine-grained
