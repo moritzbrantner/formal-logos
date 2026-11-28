@@ -1,0 +1,11 @@
+{
+  "id": "369832bd-54c9-4a75-9c42-11894a0ae014",
+  "label": "The same persistence reason for x permits absence of a distinct y",
+  "argument_id": "5c21b025-e0ef-4962-ac73-a7922bcd7380",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.otherBearerActualityOpen",
+  "comparator_config": "results/369832bd-54c9-4a75-9c42-11894a0ae014/comparator.json",
+  "status": "solution-present",
+  "description": "The reason at 0 for x at 1 is valid in both histories. Even the stronger global cessation law under no inducers leaves the distinct y's actuality open."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "de8a1c33-6b24-48a9-9017-665ec67ceb15",
+  "label": "An inertial profile can also model a received act",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "5e88324f-0939-4237-b305-aebf745a36c2",
+  "inference_ids": [
+    "02366a63-8b73-4bf7-984c-a7953207a2ce"
+  ],
+  "meaning": "The same candidate is everlasting in the populated history, has no strict giver there and receives esse according to the supplied dictionary. The two open theses can coexist in this interpretation.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

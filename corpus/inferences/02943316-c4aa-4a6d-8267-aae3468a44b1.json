@@ -1,0 +1,12 @@
+{
+  "id": "02943316-c4aa-4a6d-8267-aae3468a44b1",
+  "label": "Transport an existence-entailing nature fact to a dated actuality witness (inference)",
+  "input_statement_ids": [
+    "9d8f2c7e-ddf0-49e3-b35b-67880de96acb"
+  ],
+  "output_statement_id": "f36be486-bee3-4042-8436-1656eb30ef2a",
+  "rule": "Apply the existence entailment and use the designated now",
+  "meaning": "Apply the ontic entailment where the fact holds. At-now coherence in the conclusion transports it to dated presence. Essentiality identifies the kind of fact under test.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
