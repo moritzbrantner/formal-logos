@@ -1,0 +1,11 @@
+{
+  "id": "42f919df-6092-472c-b827-daa07cc2c304",
+  "label": "A CONTINGENT_1 bearer refutes VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer on the route",
+  "argument_id": "cad42854-dea2-46e5-80d4-a6d89b216a6e",
+  "challenge_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Solution",
+  "theorem": "TruthCore.Results.Modal.ActualistContingencyRoute.forwardTransferFails",
+  "comparator_config": "results/42f919df-6092-472c-b827-daa07cc2c304/comparator.json",
+  "status": "solution-present",
+  "description": "Composes the strength order from the transfer to concrete necessitarianism with the existing refutation of concrete necessitarianism (e1d0d14b). One actual contingent bearer suffices to refute the global forward transfer policy. The refutation is conditional on the route's contingency premise and supports only that refutation, not the route."
+}
