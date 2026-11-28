@@ -1,0 +1,9 @@
+{
+  "id": "189cfe30-cb3f-43c8-be97-f212d8773a74",
+  "label": "Rate-weighted type cutoff stage",
+  "term": "Rate-weighted type cutoff stage",
+  "definition": "For naturals a, b and stage n, the finite set of the first a(n+1) true-type and first b(n+1) false-type instances of the roster Bool x Nat. No physical time slicing is asserted.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the plenitude controls (#2143); no source attribution or physical application is assumed.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.cutoffStage"
+}

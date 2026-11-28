@@ -494,3 +494,192 @@ histories are metaphysically possible. For #930, the accuracy result
 specifies an information-sensitive consideration under the modeled update
 conditions. Whether it supplies actual pro tanto or categorical reasons
 for belief requires the separate epistemic bridge.
+
+## Plenitude and observational identification (2026-11-27)
+
+Analyst mathematics, following the delivered #1381 and #1569 results and PP-07.
+The prospective root connection is STMT-GOD-EXISTS through the existing
+fine-tuning/epistemic bridge (#1734); the separate contrastive explanation
+target is #736. This is not a new root inference. The new Lean declarations
+are in `Science.FineTuningInformation.Plenitude`, with proofs in the
+`Plenitude` section of `Results.Science.FineTuningInformation`. Four results
+are registered through `specs/fine-tuning-information.toml` and pass binding,
+Comparator and NanoDa: `observationalUnderdetermination` (22182838),
+`cutoffUnderdetermination` (0a2dec46), `observerWeightUnderdetermination`
+(757378ea) and the shared `arbitraryInteriorMass` (cb2b9ac7). Each conclusion
+carries a connection plan to GOD_4 (8626f8a5) naming the missing calibrated
+measure or observer rule, followed by an independently warranted designer
+inference that is not yet built. No fine-tuning node is currently on a root
+path. Generic vocabulary (pointwise positive measure, interior rate, relative
+frequency, exhaustion, density as Mathlib `Tendsto`, finitely additive set
+function) lives in the neutral `Logic.CarrierProbability` module, shared with
+#2142. The four senses of "probability" used here are kept apart by the
+probability-assignment disambiguation (4d54ff26). Findings, limits and the
+independent review record are in attempt
+[`103e8d13`](../../corpus/attempts/103e8d13-9372-436c-af8a-c11200270711.json).
+
+**Fixed meanings.** The supplied metaphysically possible type profile is not
+the set of outputs allowed by physical dynamics; physical reachability does
+not imply actual population without an occupancy bridge. A roster is a set
+of concrete instance indices and their type map, not a Kripke accessibility
+relation. The model stipulates one eligible observation center per instance.
+Cardinality of a fiber, finite relative counts, normalized probabilities of
+centers and first-person credences are distinct. The toy Boolean report
+distinguishes two residual observations *among observers*, not existence
+versus nonexistence of an observer. No source ontology or actual cosmology
+is encoded by these labels.
+
+**Formal controls.**
+
+- `ObservationalUnderdetermination`: the fixed realized roster is
+  Bool × Nat, with each type repeated via an injection from Nat. On that
+  exact roster, use Mathlib's Bernoulli law (the constructor behind
+  `modelPrior`) directly as a *sampling* law, not a prior over design vs
+  naturalism, and take its product with the same geometric(1/2) law over
+  instance indices. For an interior real p, each singleton (true,n) has
+  mass p·2^(-n-1), each (false,n) has mass (1-p)·2^(-n-1), and the entire
+  true fiber has mass p. The probability measures have the same underlying
+  realized instances, same types, same multiplicities, same possible and
+  reachable type profiles, and positive mass at every center. Set p to
+  1/100 or 99/100 to witness failure of identification. Both profiles can
+  be stipulated equal to univ. These are rival laws on one population,
+  not a claim that both are licensed by an already fixed physical dynamics.
+  The non-identification conjunct is trivial in form: the scope data do
+  not depend on p, and a constant function does not determine a
+  nonconstant one. Its content is the modeling claim that these data carry
+  no information about p. They omit the order of the instance index, which
+  `geometricMeasure` itself uses. A rival that reads that order, such as
+  natural density along the interleaved enumeration of Bool × Nat, returns
+  1/2; the cutoff control shows that other exhaustive orders return other
+  values.
+- `CutoffUnderdetermination`: for positive naturals a,b, at stage n retain
+  the first a(n+1) true and b(n+1) false instances. The stages form an
+  `Exhaustion` of the roster (nested finite sets, each instance present by
+  its own stage), the shared `frequency` of the true type is a/(a+b) at
+  every stage, and `HasDensity` holds with that limit. As a and b range over
+  positive naturals, a/(a+b) ranges over exactly the rationals strictly
+  between zero and one. The same infinite roster gives 1/100 or 99/100
+  by interchanging (1,99) and (99,1), without a single instance being omitted
+  forever. This is not a physical time-slicing prescription or a claim that
+  all physically justified cutoffs differ.
+- `ObserverWeightUnderdetermination`: reuse the existing three-cell
+  `Sampling` and its positive evidence cell. If the other-observer cell has
+  positive mass, multiplying the two cells by positive record-yield or
+  self-location weights r,t gives likelihood w0 r/(w0 r+w1 t). Unit weights
+  recover the old likelihood. For any interior rational p, choose
+  r=p/w0, t=(1-p)/w1. The result is p. An independently constrained record
+  yield or reference class may restrict these weights; the theorem does
+  not say all weights are physically or epistemically admissible. If the
+  other cell is absent, this construction fails, correctly respecting #1381
+  screening-off.
+
+`arbitraryInteriorMass` pushes the product control forward along a surjection
+from Bool × Nat that sends the true fiber onto a given event and the false
+fiber onto its complement. On every countable carrier with a nonempty event
+and nonempty complement, each interior event probability therefore has a
+normalized measure with positive mass at every point. Infinity does no work
+in this lemma: a finite carrier gives the same non-identification. Infinity
+matters only for the separate absence of a uniform default
+(`NoUniform` in #2142): on a finite carrier the normalized counting measure
+is available, and on a countably infinite one no measure has equal point
+masses. This is the one copy of
+the interior-mass lemma; the modal-carrier follow-up (#2142) reuses it for a
+fixed Kripke frame's accessible worlds. It shows that a carrier and its
+partition do not fix a probability, not that no probability is warranted.
+
+The unregistered `no_scope_decoder` corollary composes with the existing
+`Science.Identifiability.total_factor_iff`: arbitrary complexity of a rule
+depending only on the fixed profile cannot recover the right likelihood in
+both models. The unregistered `threshold_not_evidence_only` corollary uses #736's exact
+`HistorySelection.EvidenceOnly` criterion: no truth-vector derived only from
+that unchanged data, even an infinite vector, entails the proposition that
+the likelihood is at least one half across the admitted models. This is
+information dependence and the specific contrast *which likelihood?*, not
+a theorem that adequate causal explanations must necessitate their effects.
+It neither rules out a stochastic explanation nor equates a numerical
+likelihood with a complete history or its actuality.
+
+**Positive explanatory work, matched scope.** Existential coverage has genuine
+value: a populated ensemble containing at least one observer-bearing member
+answers whether such a member exists, and a generator with warranted
+dynamics may explain its production. In the distinct independent-trials
+model, a positive per-trial chance q gives probability 1-(1-q)^N of at least
+one success by N; the limit is one for fixed q>0. Neither claim gives the
+chance of a particular centered observation. If E holds for every eligible
+observer, then P(E|O)=1 independently of weights; if no eligible observer
+sees E it is zero. #1381 already distinguishes this screening from the
+evidential role of O itself. If the event is nontrivial among observers,
+quantitative prediction needs a warranted law or a robust bound across
+admissible laws, not necessarily a uniquely selected measure. Infinite and
+continuous normalized measures are allowed, as the product control and
+#1381 pushforward invariance illustrate. A new cutoff or fresh uniform prior
+is not a reparameterization of an existing measure.
+
+Retain the actual positive accounts in #1569 rather than treating them as
+unrestricted plenitude:
+
+- The causal-entropic principle's previously reviewed same-density comparison
+  predicts the observed decade with roughly 0.34 or 0.43 conditional mass.
+  The available vacua and population dynamics provide the alternatives;
+  the assumed linear-density prior, causal diamond, entropy proxy and
+  stellar evolution produce the quantitative distribution. This is a
+  serious predictive rival under those assumptions, not a consequence of
+  the number of populated vacua alone. The existing record documents the
+  independently motivated sensitivity to late entropy.
+- Weinberg's anthropic calculation (Martel, Shapiro and Weinberg,
+  arXiv:astro-ph/9701099; Weinberg, DOI 10.1103/PhysRevD.61.103505) is a
+  further comparison lead: vary vacuum energy, use structure formation as
+  the observer proxy and a motivated prior on the allowed interval. Its
+  prediction is not just the claim that a suitable universe exists.
+- Physical cutoff proposals can have substantive constraints and even
+  equivalences, not merely arbitrary enumerations. Comparison leads:
+  Bousso, Freivogel and Yang, DOI 10.1103/PhysRevD.79.063513 (abstract
+  reports a lower observed-Λ probability with scale-factor than
+  causal-diamond weighting); Bousso and Katz, DOI
+  10.1103/PhysRevD.86.083530 (global-local duals, including light-cone/causal
+  patch). Distinguish genuinely different measures from equivalent
+  regularizations of the same law.
+- The Bayesian alternative of Khoury and Wong, DOI
+  10.1103/PhysRevD.108.023506, uses vacuum-transition dynamics and priors
+  over ancestral vacuum and nucleation time instead of counting all
+  bubbles. Their argued time-prior choice and reported sensitivity
+  assessment are positive warrant to investigate, not conclusions derived
+  from bare plenitude. Srednicki and Hartle's xerographic distribution
+  (DOI 10.1088/1742-6596/462/1/012050) is a comparison lead for
+  distinguishing third-person occurrence from location among copies.
+  Restricting the space of admissible structures (Tegmark, arXiv:0704.0646)
+  likewise does not by itself select a probability on those structures.
+
+The newly listed literature leads were inspected at abstract/summary scope,
+not materialized as canonical source witnesses; no new attributed corpus
+claim or source-derived theorem is made. The existing #1569 source findings
+remain authoritative. Do not combine rival proposals into one model.
+
+**Provisional judgment and remaining test.** Bare plenitude cannot settle
+the residual observational likelihood even with infinite repetition and
+full support. It can solve an existential coverage task and, coupled to
+a warranted generator, a production task. A calibrated or robust measure
+and observation rule can solve a predictive task; their success counts
+in favor of the *combined* explanation. The models show a non-entailment,
+not that every physically restricted model has the exhibited ambiguity.
+Compare only admissible alternatives with the same explanandum. For the
+actual vacuum-density decade, the reviewed #1569 CEP result is still
+stronger quantitatively than the current unspecified design-likelihood
+account. An intended objective or design capacity does not fix its
+likelihood either. The exact next test is whether competing physically
+warranted measures and record proxies agree on residual bins beyond
+observer viability, and whether an independently justified goal/choice
+model bounds the same probabilities. This is the existing #1734
+epistemic bridge, not a replacement for it. Also separate the wider
+question why the generator, initial conditions and measure-producing
+principles obtain (#736/#735); the mathematical selection test applies
+only if the rival claims to settle that specified contrast.
+
+No root premise is claimed discharged. No historical source attribution,
+metaphysical necessity, actual physical generation, actual observer
+reference class, or designer likelihood has been proved by these controls.
+The two corollaries stay unregistered because, like the registered
+non-identification conjunct, both follow directly from the scope data being
+constant across the compared measures. Reopen on a failed elaboration, semantic mismatch, physically justified
+restricted class that identifies a prediction, calibrated selection
+kernel, or a discriminating same-evidence design likelihood.
