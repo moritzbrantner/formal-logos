@@ -4,12 +4,15 @@
   "statement_ids": [
     "000e1f65-6e74-5519-bbf3-300d5f61ada8",
     "42756c07-03cd-4b54-8ed6-ed6c1a5132aa",
-    "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1"
+    "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+    "11dc5069-a46b-47b5-ba97-bc9cf00c4b28",
+    "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361",
+    "06047f4c-ce98-4a33-a3f2-84fcf476d86e"
   ],
   "date": "2026-11-26",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions. Matched individuation continuation: exact provenance excludes the backup candidate, making preservation vacuous in the fixed three-world profile. Role occupancy admits it and the closest-absence selector omits the resulting contrast despite selected loss and accessible realization. Assigning the far output the original producer’s provenance preserves the omission even under exact origin. The typed origin case uses the prior witness theorem to derive model-relative modal exclusion.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 19c36016 tests 06047f4c. With skipEmptyWorld at actual, the accessible near world is excluded although the supplied agent is absent there. Neither bearer exists at near, so removing it loses no effect-present source-absence witness. The weaker preservation premise holds while full coverage fails.",
+  "summary": "Issue #2052. Selected loss yields the existing dependence-to-impossibility premise via soundness for the shared dependence primitive, accessible absence coverage and realization of being-without by an accessible witness. A three-world omission model exhibits a case where the effect drops after the chosen removal but persists in a farther accessible world. A separate normal/repair comparison reuses the matched AND/idle mechanisms and public-input clamp, which concerns public input absence only. None of these comparisons supplies an interpretation of the existence-fact labels in the strict-ground map. Independent-review repair: witness preservation lets the selector omit accessible source-absence worlds provided it keeps an accessible contrast for each pair that has one. Full coverage entails this weaker policy, and omitting the empty near world in the same frame witnesses strictness. The sibling derivation of the modal premise uses witness preservation with the same soundness and realization assumptions. Matched individuation continuation: exact provenance excludes the backup candidate, making preservation vacuous in the fixed three-world profile. Role occupancy admits it and the closest-absence selector omits the resulting contrast despite selected loss and accessible realization. Assigning the far output the original producer’s provenance preserves the omission even under exact origin. The typed origin case uses the prior witness theorem to derive model-relative modal exclusion.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 19c36016 tests 06047f4c. With skipEmptyWorld at actual, the accessible near world is excluded although the supplied agent is absent there. Neither bearer exists at near, so removing it loses no effect-present source-absence witness. The weaker preservation premise holds while full coverage fails.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2089. Confirmed in Lean: with the selector free, soundness and coverage, or soundness and witness preservation, hold for some selector exactly when 000e1f65 holds with being-without read as accessible contrast, CAN_BE_WITHOUT_1 (track_cover_iff_strict, track_preserve_iff_strict; the converse uses the selector returning the accessible antecedent worlds). Results b8c1cfb7 and 3dc6c377 therefore re-present 000e1f65 and add no warrant beyond that accessibility reading and the realization bridge 11dc5069 (beingWithoutHasAccessibleWitness_iff). Records relabelled accordingly. Disambiguation d3808588 separates CAN_BE_WITHOUT_1 from CAN_BE_WITHOUT_2, being without through another's power, and definition 88302e83 fixes the one accessibility relation of the route. SCG III c. 99 and ST III q. 77 a. 1 are unread leads for the second reading; nothing is attributed to them. The repository has no record field that stops a verified non-transcription re-presentation from counting as a derivation, so 000e1f65 stays computed as proved (reported as a tooling gap).",
   "blocker": "OPEN: warrant a same-bearer criterion for a selected sustaining dependence edge and justify which accessible source-absence histories realize genuine contrasts. The dependence-to-strict-ground map still needs an independently interpreted existence-fact theory and its oriented edges.",
   "evidence": [
     "b8c1cfb7-c820-45c2-a102-cb26633c6bf8",
@@ -60,22 +63,38 @@
       "effort": "high",
       "date": "2026-11-27",
       "pr": "PR-2120"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2089"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
     }
   ],
   "current_assessment": {
-    "date": "2026-11-26",
+    "date": "2026-11-28",
     "statement_ids": [
       "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
-      "000e1f65-6e74-5519-bbf3-300d5f61ada8"
+      "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+      "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"
     ],
-    "scope": "Same-effect witness preservation for closest source absence in the three-world replacement control",
-    "assessment": "Provenance is informative for a historically identified token and role occupancy for a function. The checked backup assignment defeats preservation under the role criterion. Under exact provenance it leaves no same-effect contrast, so preservation holds in that profile. A retained historical provenance assignment restores the omitted witness under exact origin, so origin matching provides no general guarantee of preservation. Modal exclusion is conditional and confined to the model. Real application to the stage-one dependence premise remains open.",
-    "next_test": "Select a particular load-bearing sustaining dependence edge, specify its bearer and constitutive continuity conditions, and defend which source-absence histories are accessible for that bearer. Revise toward a preservation counterexample if a warranted same-bearer absence history is omitted by the selector with no qualifying selected witness. A warranted contrast inventory that rules out omission would support preservation for that edge.",
-    "note": "docs/notes/counterpossible-conservativity.md#what-counts-as-the-same-effect-through-replacement",
-    "reviewed_revision": "f0023fc0f135ae1b5a81c0d22e4866ab92edf00e",
+    "scope": "Support value of the counterfactual-selection route for 000e1f65 (arguments 18a75892, 0a971de7), and same-effect witness preservation in the three-world replacement control",
+    "assessment": "The computed status of 000e1f65 as proved rests on b8c1cfb7 and 3dc6c377, whose premises 2bdb0be1, 06047f4c or 31bcb75e, and 11dc5069 are all open. With the selector free, the selection premises are exactly 000e1f65 read as accessible contrast (track_cover_iff_strict, track_preserve_iff_strict), so the warrant these results give 000e1f65 is that of its accessibility reading plus 11dc5069, not of a counterfactual semantics. Their premises are plausible together only on one reading of the accessibility (disambiguation d3808588). The prior replacement findings are unchanged: Provenance is informative for a historically identified token and role occupancy for a function. The checked backup assignment defeats preservation under the role criterion. Under exact provenance it leaves no same-effect contrast, so preservation holds in that profile. A retained historical provenance assignment restores the omitted witness under exact origin, so origin matching provides no general guarantee of preservation. Modal exclusion is conditional and confined to the model. Real application to the stage-one dependence premise remains open.",
+    "next_test": "Fix a selector independently (a closest-world or intervention selector for a selected sustaining edge) and test soundness and coverage for it; only then can the selection premises discriminate. Separately fix which possibility the accessibility represents and test 11dc5069 and the selection premises on that one reading, starting with whether a first cause can conserve an effect without its secondary cause. Prior next test: Select a particular load-bearing sustaining dependence edge, specify its bearer and constitutive continuity conditions, and defend which source-absence histories are accessible for that bearer. Revise toward a preservation counterexample if a warranted same-bearer absence history is omitted by the selector with no qualifying selected witness. A warranted contrast inventory that rules out omission would support preservation for that edge.",
+    "note": "docs/notes/counterpossible-conservativity.md#god-existence-route-and-next-test",
+    "reviewed_revision": "722f5eab29c52c60edaebeeb7f329f365ce7c286",
     "review": "unreviewed",
     "publication": "unpublished",
-    "evidence": "Proposed comparison in draft PR-2093. The linked note and Lean results give the exact model and scope. Independent semantic challenge belongs to coordinator review.",
-    "supersedes": "Completes the prior note’s next test to fix the same-effect criterion and compare replacement on one accessibility profile. Retains the prior coverage and strict-ground findings and the unresolved real-possibility application."
+    "evidence": "Independent semantic challenge of origin/main 722f5eab2 (issue #2103; findings P1-2089-A, P1-2089-B, P2-2089-C) requested these changes. The repair on branch consistency/2103-post-merge-challenge adds the Lean equivalences and disambiguation d3808588 and awaits independent re-check.",
+    "supersedes": "Replaces the 2026-11-26 assessment scoped to same-effect witness preservation, whose findings are retained verbatim above, and adds the re-presentation finding for the route as a whole."
   }
 }

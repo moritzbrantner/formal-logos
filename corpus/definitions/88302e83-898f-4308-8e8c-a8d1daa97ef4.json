@@ -1,0 +1,8 @@
+{
+  "id": "88302e83-898f-4308-8e8c-a8d1daa97ef4",
+  "label": "Accessibility of the shared ontology in the counterfactual-dependence route",
+  "term": "accessible (world), counterfactual-dependence route",
+  "basis": "stipulative",
+  "definition": "A world v is accessible from the standpoint w when f.history.ontic.frame.access w v holds in the shared causal frame f. The same relation, at the same frame and standpoint, is used by soundness of selected absence (2bdb0be1), coverage (06047f4c), witness preservation (31bcb75e) and realization of being-without (11dc5069). It is a supplied Kripke relation with no structural property assumed.",
+  "note": "Stipulative frame reading (#2103). The real possibility the relation represents is OPEN: read as possibility in the order of natures and causes, realization 11dc5069 becomes the claim that every being-without in the sense of DEF-CAN-BE-WITHOUT is such a possibility; read as including whatever some being's power can bring about, the soundness and coverage pair becomes the claim that no power can bring about the effect without its source. Disambiguation d3808588 records the two senses of being-without. A source passage fixing the relevant possibility would source it."
+}

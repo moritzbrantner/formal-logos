@@ -1,10 +1,14 @@
 {
   "id": "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361",
   "label": "Selected absence tracks DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1",
-  "paraphrase": "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty.",
+  "paraphrase": "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty. With the selector left free, this premise and coverage (06047f4c), or this premise and witness preservation (31bcb75e), hold for some selector exactly when 000e1f65 holds with being-without read as CAN_BE_WITHOUT_1, accessible contrast (Lean track_cover_iff_strict, track_preserve_iff_strict, #2103). The selection then adds no constraint of its own; it would add one only if fixed independently, for example as a closest-world or intervention selector.",
   "lean_declaration": "TruthCore.Causality.CounterfactualDependence.DependenceTracksSelectedAbsence",
   "definition_ids": [
     "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
-    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c",
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4"
+  ],
+  "disambiguation_ids": [
+    "d3808588-cf71-4047-8417-d16156c04f47"
   ]
 }

@@ -13,7 +13,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Admissible withholding cells supply per-effect accessible withholding in the existing NAR route. Dstit production excludes fixity under the world alignment used in the proof. The same actual rational exercise plus a feasible withholding cell with aligned worlds and invariant setup supplies WilledTwoWayAt. The matched finite assignment preserves dstit under restriction of metaphysical access while retaining fixity, so historical variation alone was rejected as a test of NECESSITATE_5. The fixed ThroughWill and BenefitPlanWitness model preserves rational exercise and a governing beneficiary requirement with no two-way giving. The exclusive-output control rejects the inference from per-recipient ability to a jointly noncreating choice. At the NAR inputs, (b2) excludes a withholding cell for a NECESSARY_2 actual concretum grounded by the selected root whenever its representative maps to an accessible world retaining that root. The root and reach clauses of the common-root premise then connect the cell exclusion and both STIT inputs to NAR. The necessary-only sibling is entailed by all-recipient coverage and suffices for the NAR proof. If an actual root directly grounds a NECESSARY_2 actual concretum, necessary-recipient coverage, root-history admissibility and (b2) yield False on that same pair and map without any common-root premise. Common-root reach extends the exclusion to NAR.",
+  "summary": "Admissible withholding cells supply per-effect accessible withholding in the existing NAR route. Dstit production excludes fixity under the world alignment used in the proof. The same actual rational exercise plus a feasible withholding cell with aligned worlds and invariant setup supplies WilledTwoWayAt. The matched finite assignment preserves dstit under restriction of metaphysical access while retaining fixity, so historical variation alone was rejected as a test of NECESSITATE_5. The fixed ThroughWill and BenefitPlanWitness model preserves rational exercise and a governing beneficiary requirement with no two-way giving. The exclusive-output control rejects the inference from per-recipient ability to a jointly noncreating choice. At the NAR inputs, (b2) excludes a withholding cell for a NECESSARY_2 actual concretum grounded by the selected root whenever its representative maps to an accessible world retaining that root. The root and reach clauses of the common-root premise then connect the cell exclusion and both STIT inputs to NAR. The necessary-only sibling is entailed by all-recipient coverage and suffices for the NAR proof. If an actual root directly grounds a NECESSARY_2 actual concretum, necessary-recipient coverage, root-history admissibility and (b2) yield False on that same pair and map without any common-root premise. Common-root reach extends the exclusion to NAR.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2090. Confirmed in Lean: with the branching frame, moment and world map free and at most one actual root, some representation satisfies 0dd78706 and 46a468b2 exactly when fbd0a6d3 holds (cellsRepresentationIff; the converse uses the discrete partition with one history per root, grounded recipient and withholding witness). Result 5ce72737 therefore re-presents premise (a) in the choice register; the whole-cell clause is used only at the representative. Disambiguation 419a65c2 separates WITHHOLD_1 (choice-cell control, 0dd78706) from WITHHOLD_2 (accessible per-effect non-giving, fbd0a6d3); 19a0417f passes from 1 to 2 only through 46a468b2, recorded as its sense bridge. The strong_version_needed entry of 19a0417f now records that the cell strength is not used by its proof and why it is kept. The repository has no record field that stops this verified derivation from counting, so fbd0a6d3 stays computed as proved (reported as a tooling gap).",
   "blocker": "The joint incompatibility is resolved formally. Application requires identifying the actual root and adjudicating whether the directly grounded necessary pair exists, whether it has a withholding cell with an admissible representative, and whether its giving is rigid. A joint refraining cell requires separate evidence.",
   "evidence": [
     "5ce72737-3acd-4b56-994f-9292d96e55b5",
@@ -56,10 +56,25 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2095"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2090"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
     }
   ],
   "current_assessment": {
-    "date": "2026-11-26",
+    "date": "2026-11-28",
     "statement_ids": [
       "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747",
       "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
@@ -70,13 +85,13 @@
       "e1c6cc9b-1bd3-470e-a42a-5404ddf60577"
     ],
     "scope": "Recipient-specific STIT withholding at the NAR inputs, with the same-setup and joint-refraining questions from PR-2090.",
-    "assessment": "The contingent control supports admissible withholding in that case. The mixed-mode model supports varying contingent giving with fixed necessary giving at the world level. For an actual root directly grounding a NECESSARY_2 actual concretum, 0dd78706 (even restricted to necessary recipients), 46a468b2 and (b2) are jointly unsatisfiable. The conjunction of (a) fbd0a6d3 and (b2) is also incompatible with that pair. NAR follows when common-root reach covers all necessary actual concreta. The incompatibility alone ranks none of the commitments.",
-    "next_test": "Check identity and direct grounding in the selected profile, and warrant NECESSARY_2 existence for the proposed pair. Test cell coverage using actual control over withholding this recipient, or test a governing requirement that fixes its giving across the represented outputs. Establish the selected representative’s accessibility and same-root presence separately. A warranted admissible withholding cell defeats (b2) for this pair. Reassess NAR if the necessary recipient falls outside common-root reach or if any premise fails. Joint refraining has a separate witness requirement.",
+    "assessment": "The contingent control supports admissible withholding in that case. The mixed-mode model supports varying contingent giving with fixed necessary giving at the world level. For an actual root directly grounding a NECESSARY_2 actual concretum, 0dd78706 (even restricted to necessary recipients), 46a468b2 and (b2) are jointly unsatisfiable. The conjunction of (a) fbd0a6d3 and (b2) is also incompatible with that pair. NAR follows when common-root reach covers all necessary actual concreta. The incompatibility alone ranks none of the commitments. Challenge #2103 (2026-11-28): with the frame and map free and at most one actual root, 0dd78706 with 46a468b2 is equivalent to (a) fbd0a6d3 (cellsRepresentationIff), so 5ce72737 adds no warrant for (a) beyond (a) itself unless the decision partition and map are fixed independently; 'withhold' in (a) is WITHHOLD_2 only (disambiguation 419a65c2).",
+    "next_test": "Check identity and direct grounding in the selected profile, and warrant NECESSARY_2 existence for the proposed pair. Test cell coverage using actual control over withholding this recipient, or test a governing requirement that fixes its giving across the represented outputs. Establish the selected representative’s accessibility and same-root presence separately. A warranted admissible withholding cell defeats (b2) for this pair. Reassess NAR if the necessary recipient falls outside common-root reach or if any premise fails. Joint refraining has a separate witness requirement. To make the STIT premises discriminate, fix the decision partition and history-to-world map independently of (a) and test whether a withholding cell with an admissible representative exists for a selected recipient.",
     "note": "docs/notes/nar-derivation.md#the-necessary-recipient-test-at-the-nar-inputs",
-    "reviewed_revision": "5abdcba7cd7089089b2e166025a4eaa7b8212106",
+    "reviewed_revision": "722f5eab29c52c60edaebeeb7f329f365ce7c286",
     "review": "unreviewed",
     "publication": "published",
-    "evidence": "Astra rejected d5af5bebb5df74ac19ef5db86f428e2a960cec2f while accepting both original Lean inferences. PR-2095 adds the strength certificate, the restricted NAR route and the typed incompatibility. Review of the repair is pending.",
-    "supersedes": "Revises the earlier PR-2095 assessment by making joint unsatisfiability conditional on the grounding pair explicit and preserving all four responses. The contingent control and the separate joint-refraining question remain part of the assessment."
+    "evidence": "Independent semantic challenge of origin/main 722f5eab2 (issue #2103; P1-2090-A, P1-2090-B, P2-2090-C) requested the re-presentation and sense repairs, now on branch consistency/2103-post-merge-challenge awaiting re-check. Earlier: Astra rejected d5af5bebb5df74ac19ef5db86f428e2a960cec2f while accepting both original Lean inferences. PR-2095 adds the strength certificate, the restricted NAR route and the typed incompatibility. Review of the repair is pending.",
+    "supersedes": "Adds the #2103 re-presentation and WITHHOLD findings to the 2026-11-26 assessment, whose content is retained. Earlier: Revises the earlier PR-2095 assessment by making joint unsatisfiability conditional on the grounding pair explicit and preserving all four responses. The contingent control and the separate joint-refraining question remain part of the assessment."
   }
 }
