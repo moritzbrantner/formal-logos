@@ -1,0 +1,43 @@
+{
+  "id": "ee069ef5-6459-4e92-aeea-ab8c64068c54",
+  "label": "Requires the lack of: as such (every bearer) or in a bearer",
+  "term": "Requires the lack of: as such or in a bearer",
+  "term_label": "REQUIRES_LACK",
+  "sense_definition_ids": [
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"
+  ],
+  "senses": [
+    {
+      "id": "b86b5ed9-bc29-4d74-927c-021b30ad3d37",
+      "label": "REQUIRES_LACK_1",
+      "definition_id": "88f7c656-f484-4737-a872-b2d78c604322",
+      "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RequiresLackAsSuch",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsCarried",
+          "parameter": "RequiresLack"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootPerfectionIntellect.AdmissibleIsExclusionFree",
+          "parameter": "RequiresLack"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootPerfectionIntellect.PureRequiresNoPureLack",
+          "parameter": "RequiresLack"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootPerfectionIntellect.ExclusionFree",
+          "parameter": "RequiresLack"
+        }
+      ]
+    },
+    {
+      "id": "f2edc5e5-a770-4939-9f71-52dba25c3086",
+      "label": "REQUIRES_LACK_2",
+      "definition_id": "34b90f09-77b7-47dd-b576-9fcaf6a0cca7",
+      "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RequiresLackIn"
+    }
+  ],
+  "resolution": "A determination 'requires the lack of' a set in sense 1 (REQUIRES_LACK_1, DEF 88f7c656) when it belongs to what the determination is, as such, that any bearer of it does not have every member of the set. This is the existing primitive RequiresLack of RootPerfectionIntellect, the sense of member grounding (89c988d9), the purity of requirements (0c8631bd), exclusion-freedom and carriage LE (682e6436); RequiresLackAsSuch is its parameter wrapper. It requires the lack 'in a bearer' in sense 2 (REQUIRES_LACK_2, DEF 34b90f09) when this belongs to what the determination is as realized in that bearer; it is bearer-relative and does not bind the bearer-neutral admissible family. The unity argument for carriage (#2145 lane U) reaches sense 2: the transfer from a simple root's one constituent to the determinations it realizes is natural there (TRANSFER_2, RootSeatedExclusionsRequiredIn). Carriage as such (LE and its own-nature restriction) is in sense 1. The passage from sense 2 to sense 1 at actual roots is the explicit open premise RootRequirementsInHoldAsSuch, listed in sense_bridges of the argument that derives own-nature carriage as such from carriage in the root. It fails for a determination the root shares with a bearer that has the excluded items, and is near-analytic for a 'this nature' determination that only bearers of the root's nature have (simpleUnityCarriageMap, clauses 3 and 10). The certificate that compares both senses is a declared mixing control. No statement identifies the two senses. See docs/notes/causal-perfection-transfer.md, section 'Carriage from the unity of a simple root'."
+}

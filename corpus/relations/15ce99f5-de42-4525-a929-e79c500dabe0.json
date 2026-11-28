@@ -1,0 +1,10 @@
+{
+  "id": "15ce99f5-de42-4525-a929-e79c500dabe0",
+  "label": "The anchored-location certificate checks the two reported destinations",
+  "subject_kind": "result",
+  "subject_id": "1371f04e-8b90-4fb2-bda9-56ba9f02d8dc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8f8111e3-9bb0-40e2-9c60-163686668613",
+  "note": "The existing Comparator configuration checks samePresenceDifferentLocation, which witnesses the reported contrast."
+}

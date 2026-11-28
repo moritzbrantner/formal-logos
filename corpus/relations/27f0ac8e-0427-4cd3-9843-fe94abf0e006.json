@@ -1,0 +1,10 @@
+{
+  "id": "27f0ac8e-0427-4cd3-9843-fe94abf0e006",
+  "label": "Fixed-bearer act and fact substitution tests the essential-existence bridge",
+  "subject_kind": "result",
+  "subject_id": "cdda0f09-97ae-4d1e-9323-a638a3795ad0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "565ccd6c-0036-4613-8595-f6f03d273a0d",
+  "note": "The modified content-based judgment distinguishes coextensive exercise and existence, while its world-predicate projection passes the extensional identity-to-essential-existence bridge. This tests the role of extensionality without challenging the checked extensional proof."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "5e88324f-0939-4237-b305-aebf745a36c2",
+  "label": "A received-act bearer can satisfy the state-transition law in a common frame",
+  "paraphrase": "Analyst formulation, attribution deferred. There is an integer-time frame with an everlasting bearer that has received esse, satisfies the inducer-free adjacent state rule and receives no strict giving in the populated history.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.StateAndReceiptCompatible",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}
