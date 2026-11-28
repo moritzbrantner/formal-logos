@@ -4,6 +4,6 @@
   "term": "physical probability profile",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.LawProfile",
-  "definition": "A mathematical PMF of physical outcomes assigned at each context, separate from credence, observed record, admitted outcomes, and primitive actual operative status.",
-  "note": "No probability on context indices, no assumption that a PMF acts as a cause. Actual propensity interpretation is open."
+  "definition": "At each context: a physical law (a Mathlib PMF on outcomes), an epistemic credence (another PMF) and an observed finite record, kept as three separate fields.",
+  "note": "No probability on contexts, and no assumption that a PMF acts as a cause. Whether the physical law is an actual propensity is open."
 }

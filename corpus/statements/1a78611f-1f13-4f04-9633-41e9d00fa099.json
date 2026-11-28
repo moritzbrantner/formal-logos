@@ -1,0 +1,11 @@
+{
+  "id": "1a78611f-1f13-4f04-9633-41e9d00fa099",
+  "label": "Determination of a probability law by symmetry, stationarity and mixture",
+  "paraphrase": "Premise-free mathematical controls. (1) For every finite nonempty type and every set G of permutations acting with one orbit, exactly one PMF is G-invariant, and each of its masses is the reciprocal of the number of outcomes. (2) On Bool x Bool the set {identity, flip of the second coordinate} does not act with one orbit; for every positive p, q with p+q=1 the law with mass p/2 on each point of the first orbit and q/2 on each point of the other is invariant with full support, different p give different laws, and two such full-support invariant laws differ. (3) For every kernel K on Bool, with real switching masses a = K(true)(false) and b = K(false)(true), a PMF is stationary (one PMF.bind step returns it) exactly when its real mass x at true satisfies x(a+b) = b; if a+b > 0 exactly one PMF is stationary, and if a+b = 0 every PMF is. The identity kernel has two distinct stationary laws; the reset kernel's only stationary law is the point mass at true; the flip kernel has exactly one stationary law, yet no iterate of the point mass at true under it is stationary, and the point mass returns after two steps while one step moves it. (4) A PMF.bind mixture of components each invariant under G is invariant under G; for binary components with different masses at true the mixture is injective in its upper law; with one constant component every upper law gives the same mixture. No topology on PMF is used, so no convergence claim beyond (3) is made. Mathematics only: no claim that any physical or metaphysical source has such a symmetry, kernel or mixture.",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.LawDeterminationControls",
+  "definition_ids": [
+    "0a465487-4d9a-4b41-80d7-687e71ff9b31",
+    "a69282f2-e1ac-4ee6-a792-973cafd91e13",
+    "25b5137e-db99-4974-a2d2-59dd0195e82c"
+  ]
+}

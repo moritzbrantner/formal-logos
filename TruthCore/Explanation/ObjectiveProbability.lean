@@ -1,177 +1,290 @@
 module
 
+public import TruthCore.Explanation.BinaryLaw
 public import TruthCore.Explanation.PSRLaterAxes
-public import TruthCore.Causality.SelectedAncestry
+public import TruthCore.Modal.SelectedEffectBridge
+public import TruthCore.Modal.STIT
 
-/-! Objective probabilistic order: physical outcomes are NOT metaphysical worlds.
-The PMF is mathematical data. Its interpretation as an operative propensity
-requires a separate realization relation. This is an extension of the later
-PSR axes and selected-ancestry route, not an attribution or a new root. -/
+/-!
+# Objective probability laws: determination, the law fork and realization (#2151)
+
+Analyst formulations, attribution deferred. A probability law is a Mathlib
+`PMF` on physical outcomes: mathematical data, not a causal power and not a
+measure over metaphysical worlds. Three diagnostics for the will step of
+#2145 (`66aecdd7`, `4be0f774`):
+
+1. **Determination.** What fixes a law uniquely without an agent?
+   A transitive symmetry group fixes exactly one invariant law; a group with
+   two orbits leaves the orbit masses free. A binary Markov kernel has a
+   stationary law exactly when a real balance equation holds; positive
+   switching makes it unique, zero switching leaves every law stationary.
+   Uniqueness is not convergence: under the flip kernel the unique
+   stationary law is never reached from a point mass. A mixture of
+   invariant laws is invariant; distinct components make the mixture
+   injective in its upper law, equal components erase it.
+2. **The law fork.** Under the contingent-fact PSR of `PSRStrength`, a fact
+   whose obtaining tracks the value of a selected law is either constant
+   across accessible worlds (then it is not contingent and the PSR makes no
+   demand) or has an admitted reason. The same theorem applies to a personal
+   selector's adopted content: the demand is symmetric. An admitted reason
+   need not fix the law.
+3. **Realization and sample.** The same PMF support matches the output table
+   of #462's `varying` profile and of the same profile with its causal edges
+   removed; only the first realizes its outputs causally. In a STIT cell,
+   seeing to it that a law is adopted is compatible with seeing to neither
+   the particular sample nor its contrary.
+
+The emptied profile is a structural independence control, NOT a countermodel
+to an actual intrinsically productive disposition. Nothing here establishes
+that a necessary source does or does not ground a particular law, or that
+the impersonal account is defeated. See `docs/notes/objective-probability.md`.
+-/
 
 @[expose] public section
 
 namespace TruthCore.Explanation.ObjectiveProbability
 
 open TruthCore.Explanation.PSRStrength
-open TruthCore.Causality.BruteFoundationBoundary
-open TruthCore.Causality.SelectedAncestry
-open TruthCore.Logic (ExcludedMiddle)
+open TruthCore.Explanation.BinaryLaw
+open TruthCore.Modal.SelectedEffectBridge
+open TruthCore.Modal.NecessaryVariableEffects
+open TruthCore.Modal.STIT
 open scoped ENNReal
 
-/-- Two strictly positive normalized binary outcome laws. The index names a
-favored PHYSICAL outcome, not a world sampled from metaphysical possibilities. -/
-noncomputable def binaryLaw (high : Bool) : PMF Bool :=
-  PMF.ofFintype (fun b => if b = high then (3 : ℝ≥0∞) / 4 else 1 / 4) (by
-    rw [Fintype.sum_bool]
-    have h : (3 : ℝ≥0∞) / 4 + 1 / 4 = 1 := by
-      rw [← ENNReal.add_div]
-      have he : (3 : ℝ≥0∞) + 1 = 4 := by norm_num
-      rw [he]
-      exact ENNReal.div_self (by norm_num) (by norm_num)
-    cases high
-    · change (1 : ℝ≥0∞) / 4 + 3 / 4 = 1
-      rw [add_comm]
-      exact h
-    · exact h)
+/-! ## 1. Determination of a law by symmetry, stationarity and mixture -/
 
-/-- Likelihood of a specified finite ordered record under an explicitly
-stationary independent-trials model. The product rule is a model assumption,
-not derived from observed frequencies. -/
-noncomputable def iidLikelihood {O : Type} (μ : PMF O) : List O → ℝ≥0∞
-  | [] => 1
-  | x :: xs => μ x * iidLikelihood μ xs
+/-- `μ` gives the same mass to `x` and to its image under every `g ∈ G`. -/
+def Invariant {E : Type} (G : Set (Equiv.Perm E)) (μ : PMF E) : Prop :=
+  ∀ g ∈ G, ∀ x, μ (g x) = μ x
 
-/-- Both distributions have full point support. Every finite observation record,
-hence the very same empirical frequencies calculated from that record, has
-nonzero likelihood in both IID models. The one-trial prediction differs. -/
-def BinaryControls : Prop :=
-  (∀ h b, 0 < binaryLaw h b) ∧
-  binaryLaw true true = 3 / 4 ∧ binaryLaw false true = 1 / 4 ∧
-  binaryLaw true ≠ binaryLaw false ∧
-  (∀ xs, iidLikelihood (binaryLaw true) xs ≠ 0 ∧
-    iidLikelihood (binaryLaw false) xs ≠ 0)
+/-- `G` has one orbit: every outcome is carried to every outcome. -/
+def ActsTransitively {E : Type} (G : Set (Equiv.Perm E)) : Prop :=
+  ∀ x y, ∃ g ∈ G, g x = y
 
-/-- The observed record and epistemic credence do not define the physical law.
-Operative is a primitive claim that a distribution is physically instantiated;
-it is not a synonym for mathematical consistency or actual causal supply.
-No probability measure over W is assumed. -/
+/-- The uniform law on a finite nonempty type, as a `PMF`. Hand-rolled because
+the pinned Mathlib deprecates `PMF.uniformOfFintype` in favour of a uniform
+`Measure`, and the controls below compose laws by `PMF.bind`. -/
+noncomputable def uniformLaw (E : Type) [Fintype E] [Nonempty E] : PMF E :=
+  PMF.ofFintype (fun _ => (Fintype.card E : ℝ≥0∞)⁻¹) (by
+    rw [Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
+    exact ENNReal.mul_inv_cancel (by simp [Fintype.card_ne_zero]) (ENNReal.natCast_ne_top _))
+
+/-- Flip the second coordinate and keep the first. -/
+def flipSecond : Equiv.Perm (Bool × Bool) where
+  toFun x := (x.1, !x.2)
+  invFun x := (x.1, !x.2)
+  left_inv x := by simp
+  right_inv x := by simp
+
+/-- The group `{id, flipSecond}`: two orbits, distinguished by the first coordinate. -/
+def firstPreserving : Set (Equiv.Perm (Bool × Bool)) := {1, flipSecond}
+
+/-- Mass `p` spread evenly over the orbit with first coordinate `true`,
+mass `q` over the other orbit. -/
+noncomputable def orbitLaw (p q : ℝ≥0∞) (h : p + q = 1) : PMF (Bool × Bool) :=
+  PMF.ofFintype (fun x => if x.1 then p / 2 else q / 2) (by
+    simp only [Fintype.sum_prod_type, Fintype.sum_bool, ite_true, ite_false,
+      ENNReal.add_halves, Bool.false_eq_true]
+    exact h)
+
+/-- `μ` is unchanged by one step of the kernel `K`. -/
+def Stationary {E : Type} (K : E → PMF E) (μ : PMF E) : Prop := μ.bind K = μ
+
+/-- One step of the kernel. -/
+noncomputable def step {E : Type} (K : E → PMF E) (μ : PMF E) : PMF E := μ.bind K
+
+/-- Switching probability out of `true`, as a real number. -/
+noncomputable def switchOut (K : Bool → PMF Bool) : ℝ := (K true false).toReal
+
+/-- Switching probability into `true`, as a real number. -/
+noncomputable def switchIn (K : Bool → PMF Bool) : ℝ := (K false true).toReal
+
+/-- Balance: with `x = μ(true)`, `x · (out + in) = in`. -/
+def Balance (K : Bool → PMF Bool) (μ : PMF Bool) : Prop :=
+  (μ true).toReal * (switchOut K + switchIn K) = switchIn K
+
+/-- Stay put: zero switching. -/
+noncomputable def identityKernel : Bool → PMF Bool := PMF.pure
+
+/-- Always move to `true`. -/
+noncomputable def resetKernel : Bool → PMF Bool := fun _ => PMF.pure true
+
+/-- Always switch. -/
+noncomputable def flipKernel : Bool → PMF Bool := fun b => PMF.pure (!b)
+
+/-- Symmetry, stationarity and mixture: when a law is uniquely fixed by
+structure alone, and when it is not. -/
+def LawDeterminationControls : Prop :=
+  -- transitive symmetry fixes exactly one invariant law, the uniform one
+  (∀ (E : Type) [Fintype E] [Nonempty E] (G : Set (Equiv.Perm E)),
+    ActsTransitively G → ∃! μ : PMF E, Invariant G μ) ∧
+  (∀ (E : Type) [Fintype E] [Nonempty E] (G : Set (Equiv.Perm E)),
+    ActsTransitively G → ∀ μ : PMF E, Invariant G μ →
+      ∀ x, μ x = (Fintype.card E : ℝ≥0∞)⁻¹) ∧
+  -- two orbits: every positive orbit mass gives an invariant full-support law,
+  -- and different orbit masses give different laws
+  ¬ ActsTransitively firstPreserving ∧
+  (∀ (p q : ℝ≥0∞) (h : p + q = 1), 0 < p → 0 < q →
+    Invariant firstPreserving (orbitLaw p q h) ∧ ∀ x, 0 < orbitLaw p q h x) ∧
+  (∀ (p q p' q' : ℝ≥0∞) (h : p + q = 1) (h' : p' + q' = 1),
+    orbitLaw p q h = orbitLaw p' q' h' → p = p') ∧
+  (∃ μ ν : PMF (Bool × Bool), Invariant firstPreserving μ ∧
+    Invariant firstPreserving ν ∧ (∀ x, 0 < μ x ∧ 0 < ν x) ∧ μ ≠ ν) ∧
+  -- binary stationarity
+  (∀ (K : Bool → PMF Bool) (μ : PMF Bool), Stationary K μ ↔ Balance K μ) ∧
+  (∀ K : Bool → PMF Bool, 0 < switchOut K + switchIn K →
+    ∃! μ : PMF Bool, Stationary K μ) ∧
+  (∀ K : Bool → PMF Bool, switchOut K + switchIn K = 0 →
+    ∀ μ : PMF Bool, Stationary K μ) ∧
+  (∃ μ ν : PMF Bool, μ ≠ ν ∧ Stationary identityKernel μ ∧ Stationary identityKernel ν) ∧
+  (∀ μ : PMF Bool, Stationary resetKernel μ ↔ μ = PMF.pure true) ∧
+  (∃! μ : PMF Bool, Stationary flipKernel μ) ∧
+  -- uniqueness is not convergence: the flip orbit of a point mass never
+  -- reaches the unique stationary law, and returns after two steps
+  (∀ n : Nat, ¬ Stationary flipKernel ((step flipKernel)^[n] (PMF.pure true))) ∧
+  step flipKernel (step flipKernel (PMF.pure true)) = PMF.pure true ∧
+  step flipKernel (PMF.pure true) ≠ PMF.pure true ∧
+  -- mixtures
+  (∀ (I E : Type) (G : Set (Equiv.Perm E)) (π : PMF I) (ν : I → PMF E),
+    (∀ i, Invariant G (ν i)) → Invariant G (π.bind ν)) ∧
+  (∀ ν : Bool → PMF Bool, ν true true ≠ ν false true →
+    Function.Injective (fun π : PMF Bool => π.bind ν)) ∧
+  (∀ (I E : Type) (ρ : PMF E) (π π' : PMF I),
+    π.bind (fun _ => ρ) = π'.bind (fun _ => ρ))
+
+/-! ## 2. The law fork under the contingent-fact PSR -/
+
+/-- The fact `f` holds at `w` exactly when the selected value at `w` is the
+value at `a`. With `sel` a law, `f` is the obtaining of the actual law; with
+`sel` a selector's adopted content, `f` is the obtaining of that adoption. -/
+def TracksValue {W B F X : Type} (A : Arena W B F) (f : F) (sel : W → X) (a : W) : Prop :=
+  ∀ w, A.holds w f ↔ sel w = sel a
+
+/-- The reason `r` fixes the selected value: wherever `r` holds at an
+accessible world, the value is the actual one. Determination of a law, not
+necessitation of its outcomes. -/
+def FixesValue {W B F X : Type} (A : Arena W B F) (sel : W → X) (a : W) (r : F) : Prop :=
+  ∀ v, Access A a v → A.holds v r → sel v = sel a
+
+/-- Physical law, epistemic credence and an observed finite record, kept apart. -/
 structure LawProfile (W O : Type) where
   propensity : W → PMF O
   credence : W → PMF O
   record : W → List O
-  admitted : W → O → Prop
-  operative : W → Prop
 
-/-- Same essential description implies the same law wherever operative.
-Whether a proposed description is genuinely intrinsic, necessary and
-exhaustive of the powers is a separate philosophical premise. -/
-def FixedBy {W O E : Type} (L : LawProfile W O) (essence : W → E) : Prop :=
-  ∀ w v, L.operative w → L.operative v →
-    essence w = essence v → L.propensity w = L.propensity v
+/-- Likelihood of an ordered finite record under independent identical trials.
+The product rule is a model assumption, not derived from frequencies. -/
+noncomputable def iidLikelihood {O : Type} (μ : PMF O) : List O → ℝ≥0∞
+  | [] => 1
+  | x :: xs => μ x * iidLikelihood μ xs
 
-/-- The matched contexts retain all physical outcomes, a fixed epistemic
-credence, and exactly the same finite record. The second bit independently
-controls realization of the otherwise identical mathematical law. -/
-noncomputable def matched (xs : List Bool) : LawProfile (Bool × Bool) Bool where
-  propensity w := binaryLaw w.1
-  credence _ := binaryLaw true
+/-- Three quarters on the outcome `high`, one quarter on the other. -/
+noncomputable def favoring (high : Bool) : PMF Bool :=
+  binaryLaw (if high then 3 / 4 else 1 / 4) (if high then 1 / 4 else 3 / 4) (by
+    have h : (3 : ℝ≥0∞) / 4 + 1 / 4 = 1 := by
+      rw [← ENNReal.add_div, show (3 : ℝ≥0∞) + 1 = 4 by norm_num]
+      exact ENNReal.div_self (by norm_num) (by norm_num)
+    cases high
+    · simpa [add_comm] using h
+    · simpa using h)
+
+/-- Two contexts with the same credence and the same record; the law differs. -/
+noncomputable def matched (xs : List Bool) : LawProfile Bool Bool where
+  propensity := favoring
+  credence _ := favoring true
   record _ := xs
-  admitted _ _ := True
-  operative w := w.2 = true
 
-/-- A law's exact obtaining is a fact, not the existence of a reified abstract
-measure. This adapter uses the existing PSR Arena, with no causal relation
-and no claim of metaphysical admissibility of the matched contexts. -/
-inductive LawFact | base | actualLaw | operative deriving DecidableEq
+/-- Facts of the matched arena: a base fact true everywhere, and the
+obtaining of the actual law (true only at the context `true`). -/
+inductive LawFact | base | actualLaw deriving DecidableEq
 
-def lawArena (reason : Bool) : Arena (Bool × Bool) Empty LawFact :=
+/-- The matched arena, with or without the base fact admitted as a reason
+for the actual law. No causal relation, no beings. -/
+def lawArena (reason : Bool) : Arena Bool Empty LawFact :=
   basic everywhere
     (fun w f => match f with
       | .base => True
-      | .actualLaw => w.1 = true ∧ w.2 = true
-      | .operative => w.2 = true)
-    (fun w r f => reason = true ∧ r = .base ∧ f = .actualLaw ∧
-      w.1 = true ∧ w.2 = true)
+      | .actualLaw => w = true)
+    (fun _ r f => reason = true ∧ r = .base ∧ f = .actualLaw)
     (fun r f => r = f)
 
-/-- A reason fixes the law among accessible operative alternatives in which
-the reason obtains. This asks for determination of the distribution, NOT
-necessitation of each stochastic outcome. -/
-def FixesLaw {W B F O : Type} (A : Arena W B F) (L : LawProfile W O)
-    (a : W) (r : F) : Prop :=
-  ∀ v, Access A a v → A.holds v r → L.operative v →
-    L.propensity v = L.propensity a
-
-/-- Exact bridge to the contingent-fact PSR: the law fact denotes the obtaining
-of THIS distribution, not merely the existence of its mathematical object. -/
-def RepresentsLaw {W B F O : Type} (A : Arena W B F) (L : LawProfile W O)
-    (f : F) (μ : PMF O) : Prop :=
-  ∀ w, A.holds w f ↔ L.operative w ∧ L.propensity w = μ
-
-/-- Productive source is kept on the existing concrete grounding profile.
-A concrete realization relation (not an abstract measure's existence) is
-supplied as an application premise. The selected bearer is the SAME witness
-in the realization and its complete actual concrete ancestry. -/
-def RealizationRoute : Prop :=
-  ∀ (W B O : Type) (m : Profile W B) (w : W) (selected : B)
-    (μ : PMF O) (realizes : B → PMF O → Prop),
-    (∀ b q, realizes b q → ActualConcrete m w b) →
-    realizes selected μ → ConeWellFounded m w selected →
-    ConeContingentGrounded m w selected → ExcludedMiddle →
-    realizes selected μ ∧ NecessaryRootAncestor m w selected
-
-/-- The law data alone cannot infer physical realization or distinguish causal
-supply. The latter control attaches the same physical PMF to the existing
-actual target2 exercises of the single and source-free chain configurations.
-No claim is made that the attached PMF is produced by either exercise. -/
-noncomputable def ExerciseLaw (_ : TruthCore.Explanation.UltimateAdequacy.Kind) : PMF Bool :=
-  binaryLaw true
-
-def ProductiveControl : Prop :=
-  let U := TruthCore.Explanation.UltimateAdequacy.Kind.single
-  let C := TruthCore.Explanation.UltimateAdequacy.Kind.chain
-  ExerciseLaw U = ExerciseLaw C ∧
-    (TruthCore.Explanation.UltimateAdequacy.exercise U).occurs
-      (TruthCore.Explanation.UltimateAdequacy.exercise U).actual 2 ∧
-    (TruthCore.Explanation.UltimateAdequacy.exercise C).occurs
-      (TruthCore.Explanation.UltimateAdequacy.exercise C).actual 2 ∧
-    TruthCore.Causality.DerivativeJointPower.Supply
-      (TruthCore.Explanation.UltimateAdequacy.groups U)
-      (TruthCore.Explanation.UltimateAdequacy.intrinsic U) 2 ∧
-    ¬ TruthCore.Causality.DerivativeJointPower.Supply
-      (TruthCore.Explanation.UltimateAdequacy.groups C)
-      (TruthCore.Explanation.UltimateAdequacy.intrinsic C) 2
-
-/-- Closed conditional certificate. The law-identification and realization
-bridges are not established of reality. In particular neither an impersonal
-necessitated distribution nor an intentionally selected law is excluded. -/
-def Certificate : Prop :=
-  BinaryControls ∧
+/-- The fork, applied symmetrically to an impersonal law and to a personal
+selector's adoption, and its two controls. -/
+def LawSelectionFork : Prop :=
+  -- the fork, for any selected value
+  (∀ (W B F X : Type) (A : Arena W B F) (f : F) (sel : W → X) (a : W),
+    TracksValue A f sel a → ContingentPSR A a →
+      (∀ v, Access A a v → sel v = sel a) ∨
+      ((∃ v, Access A a v ∧ sel v ≠ sel a) ∧ Explained A a f)) ∧
+  -- a value constant across accessible worlds makes its fact non-contingent
+  (∀ (W B F X : Type) (A : Arena W B F) (f : F) (sel : W → X) (a : W),
+    TracksValue A f sel a → (∀ v, Access A a v → sel v = sel a) → ¬ Contingent A a f) ∧
+  -- symmetry: an operating law that is a selector's adopted law; if it varies,
+  -- both the law and the adoption need an admitted reason
+  (∀ (W B F O : Type) (A : Arena W B F) (law adopt : F) (laws adopted : W → PMF O) (a : W),
+    TracksValue A law laws a → TracksValue A adopt adopted a → (∀ w, laws w = adopted w) →
+    ContingentPSR A a → (∃ v, Access A a v ∧ laws v ≠ laws a) →
+      Explained A a law ∧ Explained A a adopt) ∧
+  -- matched contexts: same record and credence, different law; neither
+  -- law makes any finite record impossible
   (∀ xs : List Bool,
     let L := matched xs
-    let a : Bool × Bool := (true, true)
-    let v : Bool × Bool := (false, true)
-    let absent : Bool × Bool := (true, false)
-    L.operative a ∧ L.operative v ∧
-    (∀ b, L.admitted a b ↔ L.admitted v b) ∧
-    L.record a = L.record v ∧ L.credence a = L.credence v ∧
-    L.propensity a ≠ L.propensity v ∧
-    L.propensity a = L.propensity absent ∧ ¬ L.operative absent ∧
-    FixedBy L Prod.fst ∧ ¬ FixedBy L (fun _ => ()) ∧
-    RepresentsLaw (lawArena false) L .actualLaw (L.propensity a) ∧
-    Contingent (lawArena false) a .actualLaw ∧
-    ¬ ContingentPSR (lawArena false) a ∧
-    (lawArena true).explains a .base .actualLaw ∧
-    ¬ FixesLaw (lawArena true) L a .base) ∧
-  (∀ (W B F O : Type) (A : Arena W B F) (L : LawProfile W O)
-    (a v : W) (f : F),
-    RepresentsLaw A L f (L.propensity a) →
-    L.operative a → Access A a v → L.operative v →
-    L.propensity v ≠ L.propensity a →
-    Contingent A a f ∧ (ContingentPSR A a → Explained A a f)) ∧
-  (∀ (W O E : Type) (L : LawProfile W O) (essence : W → E) (a v : W),
-    FixedBy L essence → L.operative a → L.operative v →
-    L.propensity a ≠ L.propensity v → essence a ≠ essence v) ∧
-  ProductiveControl ∧ RealizationRoute
+    L.record true = L.record false ∧ L.credence true = L.credence false ∧
+    L.propensity true ≠ L.propensity false ∧
+    iidLikelihood (L.propensity true) xs ≠ 0 ∧ iidLikelihood (L.propensity false) xs ≠ 0 ∧
+    (∀ r, TracksValue (lawArena r) .actualLaw L.propensity true) ∧
+    Contingent (lawArena false) true .actualLaw ∧
+    ¬ ContingentPSR (lawArena false) true ∧
+    ContingentPSR (lawArena true) true ∧
+    (lawArena true).explains true .base .actualLaw ∧
+    ¬ FixesValue (lawArena true) L.propensity true .base)
+
+/-! ## 3. Realization and sample -/
+
+/-- #462's `varying` profile with every causal edge removed. Same source,
+existence table, act and output table. -/
+def emptied : OutputProfile Bool EffectBeing Unit where
+  ontic := { frame := alternatingEffects.frame
+             ExistsAt := alternatingEffects.ExistsAt
+             Causes := fun _ _ _ => False }
+  source := varying.source
+  performs := varying.performs
+  output := varying.output
+
+/-- A law on world labels, read as a law on the effects `some w`. -/
+noncomputable def outputLaw (μ : PMF Bool) : PMF EffectBeing := μ.map some
+
+/-- The support of the law is exactly the set of outputs of the act. -/
+def SupportMatches {W B : Type} (p : OutputProfile W B Unit) (ℓ : PMF B) : Prop :=
+  ∀ x, x ∈ ℓ.support ↔ ∃ v, p.output v () x
+
+/-- Histories `(adopted, sample)`; one agent at one moment, whose choice
+cells are fixed by the adoption coordinate. -/
+def lawFrame : BranchingFrame Unit (Bool × Bool) Unit where
+  traverses _ _ := True
+  choice _ _ := Setoid.ker fun h => h.val.1
+
+def lawHistory (adopted sample : Bool) : lawFrame.Through () := ⟨(adopted, sample), trivial⟩
+
+/-- The law is adopted on this history. -/
+def LawAdopted (h : lawFrame.Through ()) : Prop := h.val.1 = true
+
+/-- The particular sample on this history is `true`. -/
+def SampleTrue (h : lawFrame.Through ()) : Prop := h.val.2 = true
+
+/-- Support does not settle productive realization; adopting a law does not
+settle its sample. -/
+def RealizationSampleControls : Prop :=
+  (∀ μ : PMF Bool, (∀ b, 0 < μ b) →
+    SupportMatches varying (outputLaw μ) ∧ SupportMatches emptied (outputLaw μ)) ∧
+  emptied.source = varying.source ∧
+  (∀ v x, emptied.ontic.ExistsAt v x ↔ varying.ontic.ExistsAt v x) ∧
+  (∀ v, emptied.performs v () ↔ varying.performs v ()) ∧
+  (∀ v x, emptied.output v () x ↔ varying.output v () x) ∧
+  RealizedOutputs varying ∧ ¬ RealizedOutputs emptied ∧
+  Dstit () (lawHistory true true) LawAdopted ∧
+  SampleTrue (lawHistory true true) ∧
+  ¬ Cstit () (lawHistory true true) SampleTrue ∧
+  ¬ Cstit () (lawHistory true true) (fun h => ¬ SampleTrue h)
 
 end TruthCore.Explanation.ObjectiveProbability

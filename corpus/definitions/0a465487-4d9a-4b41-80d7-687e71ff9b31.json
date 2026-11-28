@@ -1,0 +1,9 @@
+{
+  "id": "0a465487-4d9a-4b41-80d7-687e71ff9b31",
+  "label": "Law invariant under a set of permutations",
+  "term": "law invariant under a set of permutations",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.Invariant",
+  "definition": "A PMF gives the same mass to an outcome and to its image under every permutation in the given set.",
+  "note": "Mathematical symmetry of the law; whether a physical symmetry applies to a source, and is relevant to objective chance, is a separate premise."
+}

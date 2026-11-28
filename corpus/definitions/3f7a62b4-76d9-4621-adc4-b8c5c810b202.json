@@ -1,9 +1,0 @@
-{
-  "id": "3f7a62b4-76d9-4621-adc4-b8c5c810b202",
-  "label": "Distribution fixed by an essential description",
-  "term": "distribution fixed by an essential description",
-  "basis": "stipulative",
-  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.FixedBy",
-  "definition": "At any two operative contexts equal essential descriptions imply equal physical PMFs.",
-  "note": "This condition does not establish that a selected description is a real intrinsic essence, nor explain its realization."
-}

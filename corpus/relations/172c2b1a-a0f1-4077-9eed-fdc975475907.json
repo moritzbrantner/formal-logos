@@ -1,0 +1,10 @@
+{
+  "id": "172c2b1a-a0f1-4077-9eed-fdc975475907",
+  "label": "Test by law determination controls of DNP_inv",
+  "subject_kind": "result",
+  "subject_id": "44d5916b-b017-4030-b8c2-0f125a13ac8b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+  "note": "Tests the scope of any claim that a non-rational source with an invariant set-up cannot fix a determinate law: one symmetry orbit or positive switching fixes a unique law without an agent, while two orbits, zero switching or an idle mixture do not. Whether such a structure applies to the source is open. It neither supports nor refutes DNP_inv."
+}

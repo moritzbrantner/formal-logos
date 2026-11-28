@@ -1,0 +1,11 @@
+{
+  "id": "44d5916b-b017-4030-b8c2-0f125a13ac8b",
+  "label": "Law determination controls checked",
+  "argument_id": "884935a1-68d8-40ff-906f-e92780ef6390",
+  "challenge_module": "TruthCore.Results.Explanation.ObjectiveProbability.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ObjectiveProbability.Solution",
+  "theorem": "TruthCore.Results.Explanation.ObjectiveProbability.lawDeterminationControls",
+  "comparator_config": "results/44d5916b-b017-4030-b8c2-0f125a13ac8b/comparator.json",
+  "status": "solution-present",
+  "description": "Structural determination of a probability law without an agent: one symmetry orbit, or positive binary switching, fixes a unique law; two orbits, zero switching or an idle upper mixture leave it open. Uniqueness is not convergence (the flip kernel's point-mass orbit never reaches its unique stationary law). Generalizes #2144's exchange-symmetry control. Mathematics only: no claim that a source has such a structure, and no defeat of either the impersonal or the personal account. Not a transcription; establishes no premise."
+}

@@ -1,11 +1,11 @@
 {
   "id": "b0dd0673-74b8-47e6-9573-649f10630b9d",
-  "label": "Objective probability law, realization and productive grounding boundary",
+  "label": "Law fork under the contingent-fact PSR, applied alike to laws and adoptions",
   "argument_id": "9b1d7b14-6e3d-44c4-bd0a-7131cd9a01e1",
   "challenge_module": "TruthCore.Results.Explanation.ObjectiveProbability.Challenge",
   "solution_module": "TruthCore.Results.Explanation.ObjectiveProbability.Solution",
-  "theorem": "TruthCore.Results.Explanation.ObjectiveProbability.certificate",
+  "theorem": "TruthCore.Results.Explanation.ObjectiveProbability.lawSelectionFork",
   "comparator_config": "results/b0dd0673-74b8-47e6-9573-649f10630b9d/comparator.json",
   "status": "solution-present",
-  "description": "Candidate closed controls and conditional applications of existing PSR, productive Supply and actual-concrete ancestry. No independent premise discharge; verification pending."
+  "description": "The contingent-fact PSR asks for a reason for a law's obtaining exactly when the law varies across accessible worlds, and asks the same of a selector's adoption of that law: the demand is symmetric between impersonal law and personal selection. A law or adoption that is constant across accessible worlds escapes it. An admitted reason need not fix the law. A fact-PSR application, not the existence-PSR bridge 608a262d. Establishes no premise, no contingency of any actual law and no identification of reasons with intentional exercise; connection plan to 66aecdd7. Not a transcription."
 }

@@ -1,9 +1,9 @@
 {
   "id": "d84f1b39-397f-4b80-b3b6-4201e37d3100",
-  "label": "Exact obtaining of a probability law",
-  "term": "exact obtaining of a probability law",
+  "label": "Fact tracking a selected value",
+  "term": "fact tracking a selected value",
   "basis": "stipulative",
-  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.RepresentsLaw",
-  "definition": "A fact holds at a context exactly when a supplied law is operative there and its propensity equals the specified mathematical distribution.",
-  "note": "This is a semantic application bridge, not reification of probability as a concrete being."
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.TracksValue",
+  "definition": "A fact of a PSRStrength arena holds at a world exactly when the selected value there (an operating law, or a selector's adopted content) equals its value at the designated actual world.",
+  "note": "A semantic application bridge: the fact is the obtaining of this value, not the existence of a mathematical object, and no reification of probability as a concrete being."
 }

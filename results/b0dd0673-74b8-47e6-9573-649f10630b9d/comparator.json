@@ -2,7 +2,7 @@
   "challenge_module": "TruthCore.Results.Explanation.ObjectiveProbability.Challenge",
   "solution_module": "TruthCore.Results.Explanation.ObjectiveProbability.Solution",
   "theorem_names": [
-    "TruthCore.Results.Explanation.ObjectiveProbability.certificate"
+    "TruthCore.Results.Explanation.ObjectiveProbability.lawSelectionFork"
   ],
   "permitted_axioms": [
     "propext",

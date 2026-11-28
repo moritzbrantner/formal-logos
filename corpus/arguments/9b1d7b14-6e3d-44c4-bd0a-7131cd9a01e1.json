@@ -1,26 +1,20 @@
 {
   "id": "9b1d7b14-6e3d-44c4-bd0a-7131cd9a01e1",
-  "label": "Objective probability law, realization and productive grounding boundary",
+  "label": "Law fork under the contingent-fact PSR, applied alike to laws and adoptions",
   "premise_statement_ids": [],
   "conclusion_statement_id": "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
   "inference_ids": [
     "1495ab84-1ec4-4dc9-8e17-8ae86b6f8236"
   ],
-  "meaning": "A closed quantified control certificate, not a root-reaching proof: all application assumptions remain inside the conditional clauses. A necessary root of a concrete law realizer need not uniquely or intentionally determine its probability law.",
+  "meaning": "Premise-free. If the tracked value differs at an accessible world, the tracking fact holds at a and fails there, so it is contingent and the contingent-fact PSR supplies an admitted reason; if it is constant, the fact holds at every accessible world and is not contingent. When the operating law is the adopted law, the same variation makes both tracking facts contingent. The matched model computes the masses 3/4 and 1/4, the positive likelihood of every record, the PSR failure without a reason, and an admitted base reason holding at the rival context.",
   "definition_ids": [
+    "0a36cead-b4fc-4248-a9f2-884edf61d89f",
     "32ab2937-0d02-452d-86cf-0113c6d50ed7",
-    "3f7a62b4-76d9-4621-adc4-b8c5c810b202",
-    "d84f1b39-397f-4b80-b3b6-4201e37d3100",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
     "7ec53aa6-58ba-4a82-b55d-ad53435f03cb",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
     "c9574404-a0e5-4a88-a24f-60b87e41d226",
-    "cf2d9a1c-3b66-5bd1-9b30-a29b21d32969",
-    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
-    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
-    "99f27f99-cf28-58bb-9e08-eb3fe8e752c1",
-    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
-    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
-    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
-    "e1ff44df-ed97-5990-8424-1abd720f23ea"
+    "d84f1b39-397f-4b80-b3b6-4201e37d3100"
   ],
   "disambiguation_ids": [
     "a236004c-7bef-5ecb-a3b6-7ab5b25ce654",

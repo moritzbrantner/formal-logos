@@ -1,29 +1,41 @@
 {
   "id": "cf82ce06-6a8a-4dc1-9b0d-582e2036c993",
-  "label": "Objective probability law as a distinct cosmological explanandum",
+  "label": "Objective probability law: determination, law fork and realization at the will step",
   "statement_ids": [
+    "1a78611f-1f13-4f04-9633-41e9d00fa099",
     "b07f01e7-28c3-4b49-8ea1-c993e39873a1",
-    "4c1de755-a0ad-5536-bfc8-db3fa6c57126",
-    "177b9b54-212d-5162-b288-d0cb70899f3d",
-    "aa6a9f58-a800-50ca-aa74-201d13efbbe4"
+    "769cc04f-2560-4292-ba73-f613272a82b4",
+    "66aecdd7-ea4e-55c6-9377-10db08893854",
+    "4be0f774-2c0a-4691-9088-6e790940960a",
+    "55892476-1e99-444b-a6bd-5430b0f115c4"
   ],
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "kind": "derivation",
-  "outcome": "blocked",
-  "summary": "Candidate Lean certificate extends PSRLaterAxes and the selected actual-concrete ancestry argument, without assuming probabilities over metaphysical worlds. #2142 at 77bbab66 is draft with failed CI; no dependency imported. Main CI 45957495671 was still running; preceding successful main CI 45954588956 at d97e6a0d differs in Lean inputs only by NamedRootStructuralAttributes and its aggregators, not the reused modules or toolchain. Matched binary laws and a common finite record test exact law determination; the separate operative bit is a formal realization control, not a metaphysical counterexample. Brute law preserves law-data but rejects contingent-fact PSR if law contingency is granted. Dispositional essentialism survives if a complete intrinsic nature fixes the law: then the nature's actuality, not bare mathematical parameters, is the relevant grounding target. A mathematical necessitarian must connect abstract structure to concrete realization; a Humean frequency account can summarize a whole mosaic but finite records do not identify the generating law, and the actuality/order of the mosaic remains the target of existing whole-history research. A personal source may intentionally realize a law, but intention alone is not a specified distribution-fixing reason; no stochastic selection of metaphysical worlds is needed. Provisional judgment: objective probabilistic order sharpens the actual-law and actual-realizer explananda; the strongest conditional route is the existing necessary-root argument applied to an actual concrete realizer with cone foundation and contingent dependence. A bridge showing that the necessary source itself grounds the precise propensity, and the existing intellect/will and same-witness divine-profile conditions, remain separate. No warranted metaphysical contingency inferred from the matched formal contexts. No new root edge claimed. Author did not run repository CLI, worker preflight, local Lean, Comparator/NanoDa or independent semantic challenge; no verified status claimed.",
+  "outcome": "succeeded",
+  "summary": "Delivers the #2145 Probability-law slice (issue comment 2026-11-27 09:06) in TruthCore.Explanation.ObjectiveProbability, stacked on #2144's shared BinaryLaw module. Formalized: unique_invariant_of_transitive (one orbit fixes the uniform law; two orbits on Bool x Bool leave the orbit mass free, a continuum of invariant full-support laws); stationary_binary_iff (stationary iff x(a+b)=b in real masses; unique for a+b>0 with an explicit stationary law, every law for a+b=0; identity, reset and flip controls; uniqueness is not convergence: the flip orbit of a point mass alternates and never reaches the unique stationary law); mixture_preserves_invariance, binary_mixture_injective and the bind_const collapse; law_fork as a general value fork on PSRStrength.Arena (constant across accessible worlds, hence not contingent, or varying and explained), applied symmetrically: if the operating law is a selector's adopted law and varies, both the law fact and the adoption fact need admitted reasons; matched controls (same record and credence, different law; admitted base reason does not fix the law); realization_independent_of_support on #462's varying profile versus the same profile with causal edges removed (a structural independence control, not a countermodel to an actual intrinsically productive disposition); a STIT model in which seeing to a law's adoption sees to neither its sample nor the contrary. Removed from the earlier draft: RealizationRoute (returned its own hypothesis with the existing necessaryRootAncestor: a projection, effectively a transcription), ProductiveControl (replaced by the slice's varying/emptied control), FixedBy/RepresentsLaw/operative (replaced by TracksValue/FixesValue). Deferred: general finite-kernel existence and irreducible uniqueness, infinite chains, topological convergence, the 1/12-grid arithmetic diagnostic (superseded by the general binary theorems); fixed ranking and no universal net selection are reused from PSRLaterAxes.probability, not re-proved. Provisional comparison: a necessary intrinsic law passes the contingent-fact PSR's constant branch, and structure can fix it uniquely, so the open questions are applicability and productive realization; a contingent brute law conflicts with the contingent-fact PSR (not logically inconsistent apart from it); a higher-order mixture helps only if its upper law is warranted and operative; personal selection can settle content for reasons without necessitating effects but faces the same demand for any contingent adoption. No demonstrated defeat of the impersonal account and no premise discharged. Lean build, binding and Comparator/NanoDa pass locally; independent semantic review pending.",
   "evidence": [
+    "44d5916b-b017-4030-b8c2-0f125a13ac8b",
     "b0dd0673-74b8-47e6-9573-649f10630b9d",
-    "43d045d9-9713-5539-9054-8b1a52290d04",
-    "ef1815c4-25cc-5cbc-9ac5-3a64e9b7df65",
-    "PR-2142"
+    "cf8e0adc-91ac-49b1-929f-bbc21fbab807",
+    "725538ae-ef24-4c5f-bca9-7bab754ba1aa",
+    "PR-2151",
+    "PR-2144"
   ],
-  "blocker": "Run focused Lean build, truth related/semantics/dossier, binding, Comparator, NanoDa, computed frontier diff and independent semantic review. Then assess a physical actual-realizer witness and same-source precise-law grounding, against the strongest essentialist and mathematical rivals.",
+  "blocker": "Open interfaces: productive calibration of a law to the actual same root; warrant for the contingent-fact PSR's coverage of the law fact; explanation of the particular outcome beyond comparative probabilities; positive actual rational apprehension and exercise (#2145 beede613/4be0f774, same witness 29818edd/66aecdd7). Next test: a premise identifying the admitted reason for a contingent law or content fact at the root with intentional exercise, assessed against a necessary intrinsic law with a structurally unique form.",
   "workers": [
     {
       "role": "author",
       "provider": "openai",
       "model": "GPT-6.2",
       "date": "2026-11-27"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2151"
     }
   ]
 }

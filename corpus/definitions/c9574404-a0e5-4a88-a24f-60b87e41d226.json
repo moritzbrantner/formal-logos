@@ -1,9 +1,9 @@
 {
   "id": "c9574404-a0e5-4a88-a24f-60b87e41d226",
-  "label": "Reason determines an operative law",
-  "term": "reason determines an operative law",
+  "label": "Reason fixes a selected value",
+  "term": "reason fixes a selected value",
   "basis": "stipulative",
-  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.FixesLaw",
-  "definition": "Every accessible operative context where the reason holds has the same propensity as the designated context.",
-  "note": "This is determination of law parameters, not necessitation of outcomes. Admitted explanatory relations need not meet it."
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.FixesValue",
+  "definition": "At every accessible world where the reason holds, the selected value equals its value at the designated world.",
+  "note": "Determination of a law or content, not necessitation of its outcomes. A reason admitted by an arena's explains relation need not meet it."
 }

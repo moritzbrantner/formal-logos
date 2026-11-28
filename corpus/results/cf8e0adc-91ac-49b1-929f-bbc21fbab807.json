@@ -1,0 +1,11 @@
+{
+  "id": "cf8e0adc-91ac-49b1-929f-bbc21fbab807",
+  "label": "Support does not settle realization; adopting a law does not settle its sample, checked",
+  "argument_id": "bd1eb4a1-2df6-4547-9b9d-dea0c915669d",
+  "challenge_module": "TruthCore.Results.Explanation.ObjectiveProbability.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.ObjectiveProbability.Solution",
+  "theorem": "TruthCore.Results.Explanation.ObjectiveProbability.realizationSampleControls",
+  "comparator_config": "results/cf8e0adc-91ac-49b1-929f-bbc21fbab807/comparator.json",
+  "status": "solution-present",
+  "description": "Matching a law's support to an act's outputs does not establish causal realization, and seeing to the adoption of a law in a STIT cell does not see to its particular sample: rationally choosing a law is not necessarily choosing its sample. The emptied profile is a structural independence control, not a countermodel to an actual intrinsically productive disposition. Establishes no premise and nothing about any actual source or plan. Not a transcription."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "b08fddc6-584e-4e39-897d-7758b92e0e95",
+  "label": "Law support matches the act's outputs",
+  "term": "law support matches the act's outputs",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Explanation.ObjectiveProbability.SupportMatches",
+  "definition": "Every element in the support of the law is an output of the profile's act at some world, and every such output is in the support.",
+  "note": "A match between mathematical support and an output table; it says nothing about causal realization (RealizedOutputs)."
+}

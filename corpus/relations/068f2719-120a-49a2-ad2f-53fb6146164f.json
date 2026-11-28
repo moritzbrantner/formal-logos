@@ -1,0 +1,10 @@
+{
+  "id": "068f2719-120a-49a2-ad2f-53fb6146164f",
+  "label": "Test by realization and sample controls of the operative-plan premise",
+  "subject_kind": "result",
+  "subject_id": "cf8e0adc-91ac-49b1-929f-bbc21fbab807",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4be0f774-2c0a-4691-9088-6e790940960a",
+  "note": "Tests the plan-to-outcome step: seeing to a law's adoption is compatible with seeing to neither its particular sample nor its contrary, and a law's support matching the outputs does not establish causal realization. A plan at the level of a law therefore needs a further bridge to fix particular outputs. It neither supports nor refutes the premise."
+}
