@@ -10,11 +10,29 @@
   "date": "2026-10-29",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Issue #704: bounded presence/edge observations agree between explicit finite source chain and infinite non-WF chain; empty/populated interpretations share universal presence equation. Reuses LocalTransmission and successorChainNotWellFounded, not a new infinite-regress proof. Dossiers and related discovery inspected existing escaping-source, observation-selection, actual-source/regress and #693 uniformity/parity boundaries. Proposed actual-occurrence/realization bridge remains independent, and finite access fails to warrant an actually infinite series without extension support. Strongest rival replies and symmetric first-source burden persist in docs/notes/chain-instantiation-controls.md. Initial proof edits failed on equality rewriting and unavailable Acc.mono, repaired by explicit rewriting and accessibility induction. Repeated shared preview accepted combined content SHA256 a90789dd9d962ca0536009e6e9b94ef2b1b1d08edce0dd64fffe39d5d328a1ee at db603d3140e92c4b1ca653ab2098a0189a70653f session master-20261029 with empty diagnostics; this is development evidence, final CI owns certification. No historical attribution or actual metaphysical possibility established; root delta none.",
+  "summary": "Issue #704: bounded presence/edge observations agree between explicit finite source chain and infinite non-WF chain; empty/populated interpretations share universal presence equation. Reuses LocalTransmission and successorChainNotWellFounded, not a new infinite-regress proof. Dossiers and related discovery inspected existing escaping-source, observation-selection, actual-source/regress and #693 uniformity/parity boundaries. Proposed actual-occurrence/realization bridge remains independent, and finite access fails to warrant an actually infinite series without extension support. Strongest rival replies and symmetric first-source burden persist in docs/notes/chain-instantiation-controls.md. Initial proof edits failed on equality rewriting and unavailable Acc.mono, repaired by explicit rewriting and accessibility induction. Repeated shared preview accepted combined content SHA256 a90789dd9d962ca0536009e6e9b94ef2b1b1d08edce0dd64fffe39d5d328a1ee at db603d3140e92c4b1ca653ab2098a0189a70653f session master-20261029 with empty diagnostics; this is development evidence, final CI owns certification. No historical attribution or actual metaphysical possibility established; root delta none.\n\nCuration pass 2, lane D batch 4 (#2103, 2026-11-27). 6c8cd838 tests 42890b45. For each bound, `SameWindow` makes the infinite profile and `finite bound` agree on existence and cause edges inside that finite window. In the fully populated infinite profile `x + 1` is a causal predecessor of every `x` at `()`. The certificate proves `¬ WellFounded (infinite.Causes ())`, which falsifies `WellFoundedPredecessors` instantiated with that relation.",
   "evidence": [
     "6c8cd838-b1a1-521f-860e-9289b89f0e60",
     "640c65cf-e68b-59b3-ba84-00230570e4e3",
     "PR-693",
     "PR-709"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2146"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2146"
+    }
   ]
 }

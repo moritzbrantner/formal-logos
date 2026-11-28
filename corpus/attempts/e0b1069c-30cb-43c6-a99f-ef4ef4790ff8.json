@@ -1,0 +1,25 @@
+{
+  "id": "e0b1069c-30cb-43c6-a99f-ef4ef4790ff8",
+  "label": "Frame-premise symmetry delta connectivity finding",
+  "statement_ids": [
+    "9a02972e-df16-413c-baa4-5dfaf9b3f8f4"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Exact equivalence of the frame-premise delta and symmetry on the selected profile frame, Comparator theorem frameDelta. Connected to 938650b0-ff50-5c60-8b70-5b7dc600eaaf.",
+  "evidence": [
+    "79564d3e-e0b9-4311-aafb-a8bf97d52831",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ]
+}

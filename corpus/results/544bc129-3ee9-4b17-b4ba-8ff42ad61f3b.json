@@ -1,0 +1,11 @@
+{
+  "id": "544bc129-3ee9-4b17-b4ba-8ff42ad61f3b",
+  "label": "A holder MOTION_3 held in no respect, from the unlosable first holder",
+  "argument_id": "d69e9493-2672-4cb6-9f75-7c7af28bf16e",
+  "challenge_module": "TruthCore.Results.Causality.HoldingFirstMover.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingFirstMover.Solution",
+  "theorem": "TruthCore.Results.Causality.HoldingFirstMover.firstUnheldHolderOfUnlosable",
+  "comparator_config": "results/544bc129-3ee9-4b17-b4ba-8ff42ad61f3b/comparator.json",
+  "status": "solution-present",
+  "description": "5eb16c61 supplies, under double negation, an f that presently actualizes some other x in r, is in act in r and could not lack its act in r. Suppose f were MOTION_3 held in some respect s. Then f is in act in s and, by the first lackability premise, could lack its act in s; by 6e2176cd it is in act as to being and could lack being; by the second lackability premise, since f is in act in r, it could lack its act in r, against the choice of f. So f is held in no respect, and the same f holds x. All on one Holding, one Lackability, one InAct and one esse. This is the passage (2') from the operative respect to every respect that docs/notes/caused-mover-cstar.md 10.5 records as unformulated. It does not use the esse instance f834ee65, the timed present-moment reading or any giving relation, so it neither duplicates nor depends on the connection plans of f834ee65 and f360bb6f. Each lackability premise is needed (controls parts 2 and 3) and the bundle is satisfiable with a holder (part 1). All premises stay open."
+}

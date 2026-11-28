@@ -1,0 +1,10 @@
+{
+  "id": "2abc35cf-d046-4260-885a-35aa3ff71b4e",
+  "label": "Test by Distinct reciprocal production obstructs common strict extension",
+  "subject_kind": "result",
+  "subject_id": "e61a7881-72cc-4aad-98d7-07b17501cb9d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1d1f5ac4-011e-461a-b8bd-14409b5dddf9",
+  "note": "Tests sufficiency of locally distinct production for mixed-edge acyclicity on the two-Bool reciprocal production interpretation."
+}

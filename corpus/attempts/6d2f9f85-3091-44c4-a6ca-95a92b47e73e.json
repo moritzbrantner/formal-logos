@@ -1,0 +1,31 @@
+{
+  "id": "6d2f9f85-3091-44c4-a6ca-95a92b47e73e",
+  "label": "Root links from Plato, Timaeus",
+  "statement_ids": [
+    "272eaae2-7e3a-58dc-b0cb-0a3cea357fee",
+    "d77d31cf-32db-58bf-af1f-4344dc26b51a",
+    "edff6235-fe05-56fd-9e7f-bdd6047b178a",
+    "8f11af80-09cc-55a9-bd03-749d68778bc7"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "28a–b: Timaeus distinguishes maker and stable model, offering a case where dependence on a model is intelligible without making the model the producer. Transfer needs the same relation for the admitted particulars, beyond the craft analogy's selected work and standard of beauty. 29a–b: Plato proposes the cosmos as made according to a stable exemplar, distinct in role from the maker. To apply this instance to the general premise, the case needs metaphysical warrant for that cosmological model and a justified scope beyond this one proposed cosmos. 51d–e: Timaeus gives a conditional argument for Forms in themselves from the difference between understanding and true opinion. The target needs the cognitive distinction to be valid, an account of why it entails independent objects, and applicability to each admitted quality. 52a–d: The passage distinguishes intelligible exemplar and sensible image while retaining a third role for receptacle. Mapping the exemplar relation alone does not model how the image's location and coming-to-be depend on that third kind.",
+  "evidence": [
+    "456e6897-4418-5b5c-89de-51ab9ec7ff89",
+    "0d39ec95-2dd8-536b-a555-b1e0e74d7adf",
+    "a611ecd8-b941-57ea-945e-7c7dd8120c18",
+    "29e71914-4da3-5534-931a-bb9b897f1144",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

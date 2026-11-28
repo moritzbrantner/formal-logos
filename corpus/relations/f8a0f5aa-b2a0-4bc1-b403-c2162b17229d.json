@@ -1,0 +1,10 @@
+{
+  "id": "f8a0f5aa-b2a0-4bc1-b403-c2162b17229d",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Nothing merely possible e (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c85117b0-6113-5460-95d8-5593d1acd49d",
+  "note": "Tests omitting this premise in the encoded existingInActAtFromMerePossibility argument, with the other premises retained and the conclusion false in each corresponding control."
+}

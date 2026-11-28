@@ -1,0 +1,10 @@
+{
+  "id": "387fc214-7a3f-4332-96cf-a004a86c8217",
+  "label": "Test by Finite controls: departed-builder production satisfies t for At every admitted time, n (1)",
+  "subject_kind": "result",
+  "subject_id": "db60a52a-da4e-5e93-9767-774629d36119",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d15ded6f-1895-5d2d-b967-a14165c49bda",
+  "note": "Tests the stronger temporal no-self condition in the past self-production profile that satisfies current no-self alone."
+}

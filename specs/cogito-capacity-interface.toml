@@ -33,3 +33,13 @@ rule = "Pointwise equivalence transport and explicit finite omission witnesses"
 meaning = "Proves local formula transport without asserting its mapping premise universally. Finite controls retain the original four noncapacity premises and the applicable concreteness premise, isolating missing exercise-to-capacity and mismatched profile mapping. No metaphysical defeat or root discharge. thinRecovery consumes the existing CapacityInterface.Certificate/result d26f85e9-262c-426d-888c-2a09fef96a17 and preserves any original thin profile exactly."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 senses = { CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE = "CAUSAL_CAPACITY_VERSUS_ACTUAL_EXERCISE_1" }
+
+[[relation]]
+id = "Test by Cogito selected capacity transport with activation and mapping controls"
+label = "Test by Cogito selected capacity transport with activation and mapping controls"
+subject_kind = "result"
+subject_id = "401885b1-4a3a-49c6-8d74-a5eba441d304"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8061edec-5af6-5d25-81b4-e1ccd98207fa"
+note = "Tests the missing exercise-to-capacity interface in the finite thought-bearer profile retaining thought, bearing, exercise and existence."

@@ -1,0 +1,10 @@
+{
+  "id": "a4e9f1e8-b9ca-4b4e-99ec-ed6da9a8108b",
+  "label": "Test by Finite interpretations for the eight derivations of roun for If c, distinct from x, ca (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "efe134d4-be4e-528e-83c3-dfd6685e2608",
+  "note": "Tests omitting this premise in the encoded causedPerfectionReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+}

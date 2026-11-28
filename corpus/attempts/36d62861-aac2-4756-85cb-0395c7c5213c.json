@@ -1,0 +1,27 @@
+{
+  "id": "36d62861-aac2-4756-85cb-0395c7c5213c",
+  "label": "Available per-accidens capacity connection plan",
+  "statement_ids": [
+    "b41ded17-411d-48ae-91a0-4bc3c6e01d3e",
+    "dfe83b81-2b42-49bb-b0c3-2f9878cfe9a4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The move from every removal to some removal needs at least one admissible removal. Holding capacity then is weaker than exercising now. To connect it, identify the same cause/patient roles across states and justify which removal preserves the act required by the actual series. Introduced in ddcfa884a.",
+  "evidence": [
+    "2607753c-ca36-4da4-a966-bca774a0fc52",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 97f5850f-62bc-5e43-a0c1-dd1033d08fc9. The scoped bridge described in the summary remains open."
+}

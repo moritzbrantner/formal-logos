@@ -1,0 +1,11 @@
+{
+  "id": "cad867dd-941f-4ff5-ac19-1d042f43511e",
+  "label": "Profile global calibration implies local fusion calibration",
+  "argument_id": "7d5a6f13-fba1-4566-851f-b342e89c8764",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.localCalibrationOfProfile",
+  "comparator_config": "results/cad867dd-941f-4ff5-ac19-1d042f43511e/comparator.json",
+  "status": "solution-present",
+  "description": "Apply the existing global-to-local proof to the definitionally equal profile form, with the same world, sum and order."
+}

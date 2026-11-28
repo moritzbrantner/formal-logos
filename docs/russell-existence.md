@@ -157,3 +157,15 @@ The verdict is: A1 and singular-description analysis survive these tests;
 extension-only explanatory sufficiency does not follow; an unrestricted A2 is
 not established as Russell’s view in these passages. Whether a stronger
 philosophical theory answers A3 remains open.
+
+## Predication, description and framework (2026-11-26)
+
+Russell treats general existence by satisfaction of a propositional function,
+and singular descriptions require existence and uniqueness. Using these analyses
+to assess the case's real-predicate or naming premises requires that the target
+uses those very senses. Carnap's practical choice of a framework also needs a
+separate bridge to an external existence thesis. Sellars's criterion for
+description and explanation leaves the intended extension of the naturalist
+predicate to be fixed.
+
+[Bertrand Russell reading attempt](../corpus/attempts/9d9d3eca-8017-4702-be38-9fa42cfb6eed.json), [Rudolf Carnap reading attempt](../corpus/attempts/936944d9-f567-423c-98f5-825ce7058f72.json), [Wilfrid Sellars reading attempt](../corpus/attempts/1f04c41c-c549-4941-96c8-ad22aa1e4c08.json).

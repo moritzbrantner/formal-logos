@@ -1,0 +1,10 @@
+{
+  "id": "10183083-fc5c-4b27-8fce-6e16d0d81bb8",
+  "label": "Test by The existing raven law lacks a finite observation proof despite failing the proposed global…",
+  "subject_kind": "result",
+  "subject_id": "47bc564a-035f-57f1-8b6c-0f45b58f68bd",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e211ba7c-8ce3-5790-b11a-3230bad522cc",
+  "note": "Tests whether observational indistinguishability explains all failures with the singleton law inquiry whose observations discriminate jointly but never prove the law finitely."
+}

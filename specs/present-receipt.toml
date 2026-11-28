@@ -141,3 +141,23 @@ object_kind = "statement"
 object_id = "Whatever has received esse is receiving it at a first moment of its presence"
 verification_result_id = "Present-tense reception entails onset reception"
 note = "Same history, receipt relation and reception predicate; the weak version restricts the moments to a first moment of presence. Strict: Control part 1 (receipt at time 1 only, the thing present from time 1 on)."
+
+[[relation]]
+id = "Test by Present-receipt controls checked"
+label = "Test by Present-receipt controls checked"
+subject_kind = "result"
+subject_id = "45b3c73b-90da-4018-abc3-336b95dc6b3e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "52b05849-88b3-4f44-b81b-768850f9ed12"
+note = "Tests omission of this premise from onsetOfOnsetReceipt in the onset history assignment with the other input retained."
+
+[[relation]]
+id = "Test by Present-receipt controls checked for Whatever has received esse is receiving it at a f (1)"
+label = "Test by Present-receipt controls checked for Whatever has received esse is receiving it at a f (1)"
+subject_kind = "result"
+subject_id = "45b3c73b-90da-4018-abc3-336b95dc6b3e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "db441b19-a990-47c5-9fde-0de212062837"
+note = "Tests omission of this premise from onsetOfOnsetReceipt in the onset history assignment with the other input retained."

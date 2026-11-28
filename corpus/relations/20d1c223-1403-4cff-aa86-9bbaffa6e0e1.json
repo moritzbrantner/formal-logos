@@ -1,0 +1,10 @@
+{
+  "id": "20d1c223-1403-4cff-aa86-9bbaffa6e0e1",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Every occurring thought e (3)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+  "note": "Tests omitting this premise in the encoded everyThoughtHasSubjectFromModification argument, with the other premises retained and the conclusion false in each corresponding control."
+}

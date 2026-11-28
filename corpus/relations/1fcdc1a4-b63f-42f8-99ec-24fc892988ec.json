@@ -1,0 +1,10 @@
+{
+  "id": "1fcdc1a4-b63f-42f8-99ec-24fc892988ec",
+  "label": "Test by MetricGrimReaper.controls (8072fc5a)",
+  "subject_kind": "result",
+  "subject_id": "83fd4e6f-e390-4741-bce8-015154e6b5be",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8072fc5a-fbc6-43f6-8b71-15e85f36ab20",
+  "note": "In openBelow at true, the occupied positive real clock admits a coinitial descent by halving but no infinite descent with a fixed positive lower bound on slot length. With silent registers the coinitial local-pieces clause fails, while the weaker spaced clause holds."
+}

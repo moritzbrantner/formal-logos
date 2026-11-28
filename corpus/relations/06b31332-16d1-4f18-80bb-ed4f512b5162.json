@@ -1,0 +1,10 @@
+{
+  "id": "06b31332-16d1-4f18-80bb-ed4f512b5162",
+  "label": "Test by MetricGrimReaper.controls (fce4ac74)",
+  "subject_kind": "result",
+  "subject_id": "83fd4e6f-e390-4741-bce8-015154e6b5be",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "fce4ac74-26df-4e97-909d-34865b6463dc",
+  "note": "In firstMoment, zero is the first clock moment, so every populated past is begun. The sole bearer is present and contingent at accessible true at time 1. Repeated halving gives an infinite descent through positive moments below 1, so the populated past at 1 fails foundedness."
+}

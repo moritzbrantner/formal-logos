@@ -1,0 +1,10 @@
+{
+  "id": "badb695c-c5d4-4b35-b3ae-ac26b5ce3a73",
+  "label": "Test by Finite interpretations for the nine derivations of round for OPEN capacity clause alon (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "61b6e188-39aa-57d9-9e0b-dedc05226995",
+  "note": "Tests omitting this premise in the encoded inhabitedFromPower argument, with the other premises retained and the conclusion false in each corresponding control."
+}

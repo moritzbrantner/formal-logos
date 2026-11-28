@@ -73,3 +73,33 @@ conclusion = "Finite controls for q44 essential-source selection"
 axioms = []
 rule = "Universal instantiation, equality elimination and existential construction"
 meaning = "Three nonempty selection omissions and a positive full-route finite interpretation. The dictionary omission tests an unfaithful supplied map, not metaphysical possibility; the other controls likewise establish encoded non-implications only. All are closed mathematical facts, without a claim that a rival is true or any premise doubtful."
+
+[[relation]]
+id = "Test by Q44 essential-source finite controls, checked"
+label = "Test by Q44 essential-source finite controls, checked"
+subject_kind = "result"
+subject_id = "7cdc011d-037c-4a23-b748-f4311ebc5cd3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6acd44eb-4b3e-480c-a479-6b4ac7a2522e"
+note = "Tests absence of identity calibration in the populated selection profiles on the finite q.44 source dictionary."
+
+[[relation]]
+id = "Test by Q44 essential-source finite controls, checked for At most one actual being has its ess (1)"
+label = "Test by Q44 essential-source finite controls, checked for At most one actual being has its ess (1)"
+subject_kind = "result"
+subject_id = "7cdc011d-037c-4a23-b748-f4311ebc5cd3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a576300f-4b01-45ae-902c-cfe3d0fbf2de"
+note = "Tests omission of the at-most-one condition in the finite q.44 source selection."
+
+[[relation]]
+id = "Test by Q44 essential-source finite controls, checked for Selected p is actual with its repres (1)"
+label = "Test by Q44 essential-source finite controls, checked for Selected p is actual with its repres (1)"
+subject_kind = "result"
+subject_id = "7cdc011d-037c-4a23-b748-f4311ebc5cd3"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"
+note = "Tests omission of qualification of the selected witness in the populated q.44 profile."

@@ -1,0 +1,10 @@
+{
+  "id": "39c4ee3c-c172-485a-8aa6-308d453e131a",
+  "label": "Source qualification for 1f2dec4f from reading b46de3b7",
+  "subject_kind": "claim",
+  "subject_id": "7de04d7f-9cde-536a-a61a-82cc226bf9d0",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "1f2dec4f-e494-50f7-a1df-ffd84f4f5c3c",
+  "note": "Objection 1 argues from infinite goodness to the absence of any evil. The Rowe-frame challenge concerns a more specific permission constraint. The earlier objection tests a stricter interpretation, requiring an independent link between goodness and nonpermission that addresses Aquinas’s reply about goods from permitted evils."
+}

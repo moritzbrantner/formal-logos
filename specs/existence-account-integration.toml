@@ -83,3 +83,33 @@ conclusion = "Same profile witness support adapter joint and omission controls"
 rule = "Constructive finite support assignments and well-foundedness"
 meaning = "The nonempty positive case tests the full six-input package. In the second, both candidates exist necessarily, the unique profile bearer false is supported by true, and true is underived. Thus an existential underived output cannot be silently swapped for underivedness of the ontological exemplar. No source attribution or metaphysical possibility is claimed."
 sense_mixing_control = true
+
+[[relation]]
+id = "Test by Same profile witness support adapter joint and omission certificates"
+label = "Test by Same profile witness support adapter joint and omission certificates"
+subject_kind = "result"
+subject_id = "9fe202a4-c151-420a-b394-523e09aa56c2"
+predicate = "tests"
+object_kind = "argument"
+object_id = "78dfeded-5bc4-40e3-af5d-7adeb178cc0e"
+note = "Tests joint satisfiability of the exact same-witness package and distinguishes an underived bearer from the underivedness of the unique profile exemplar in the second assignment."
+
+[[relation]]
+id = "Test by Rigid profile actualist population adapter omission certificates"
+label = "Test by Rigid profile actualist population adapter omission certificates"
+subject_kind = "result"
+subject_id = "9a4e34cf-1357-4edf-a2be-2160695a6024"
+predicate = "tests"
+object_kind = "statement"
+object_id = "84ae3700-f0a9-5d49-9c8c-0ccc9cb40e8a"
+note = "Tests omitting unique profile bearer identity on the alternating two-world fixture, retaining profile population but with no necessary candidate."
+
+[[relation]]
+id = "Test by Rigid profile actualist population adapter omission cert for Actualist necessary exemp (1)"
+label = "Test by Rigid profile actualist population adapter omission cert for Actualist necessary exemp (1)"
+subject_kind = "result"
+subject_id = "9a4e34cf-1357-4edf-a2be-2160695a6024"
+predicate = "tests"
+object_kind = "statement"
+object_id = "93804e57-d09d-4d9b-908b-29b0d86eeef7"
+note = "Tests omitting necessary population of the selected profile on the alternating two-world fixture, retaining actual exemplification and uniqueness."

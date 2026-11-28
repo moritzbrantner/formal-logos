@@ -1,0 +1,32 @@
+{
+  "id": "046db269-23b9-4a72-b935-9cbdfe25d3e9",
+  "label": "No PER_SE_5 esse regress from SERIES_OF_CAUSES_4 and the efficiency bridge",
+  "premise_statement_ids": [
+    "87aa978c-f33c-4fc6-8881-5ff6484f8a7a",
+    "e0088de9-28eb-533c-a1e7-662f780cc0e2"
+  ],
+  "conclusion_statement_id": "ea251340-c89e-4535-a00f-6323cd8403a5",
+  "inference_ids": [
+    "ea56f0dc-4c0b-4c66-8582-440a321d5dd1"
+  ],
+  "meaning": "The explicitly supplied efficiency bridge maps each distinct mode-unspecified actual esse cause to a present efficient cause at esse. Keep the given AsCaused conjunct to get a SERIES_OF_CAUSES_4 edge. The accessibility on that relation gives accessibility along its PER_SE_5 subrelation. The SERIES_OF_CAUSES_4 premise may be assumed directly or obtained through the SERIES_OF_CAUSES_3 inclusion. Its existing derivation from the target PER_SE_5 regress cannot provide independent support for that target.",
+  "definition_ids": [
+    "4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740",
+    "57348ddc-eaa0-4f0d-bf3f-ce358f452b53",
+    "8163859b-95b3-4dd2-8a69-541bd332f32f",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "57f80020-fa6f-5b69-be58-b4cf95b7226f"
+  ],
+  "sense_bridges": [
+    {
+      "term": "UNITING_CAUSE_VERSUS_EFFICIENT_CAUSE",
+      "from": "2478812d-d2cd-4182-8ad0-d27a4bdb9ff2",
+      "to": "018d4f0a-2276-42a7-b20d-b0fe6c9c3714",
+      "statement_id": "e0088de9-28eb-533c-a1e7-662f780cc0e2"
+    }
+  ]
+}

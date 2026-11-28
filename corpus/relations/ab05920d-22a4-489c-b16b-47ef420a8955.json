@@ -1,0 +1,10 @@
+{
+  "id": "ab05920d-22a4-489c-b16b-47ef420a8955",
+  "label": "Test by If literal meaningfulness by the 1946 criterion is close for Strong version: for every (1)",
+  "subject_kind": "result",
+  "subject_id": "ec224889-c152-5afe-896b-91039f8208aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "afa7a288-a1d5-5958-a1d0-3f68d4d186ad",
+  "note": "Checks what follows from assuming 1946 meaningfulness is negation-closed on languages admitting Church's three observations."
+}

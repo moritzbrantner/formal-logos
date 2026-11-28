@@ -1,0 +1,10 @@
+{
+  "id": "e3a284e3-0a91-46ba-ad1c-1856b04b2c24",
+  "label": "Test by Finite interpretations for the seven derivations of caus for For every y, perfection r (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "39a4c28c-4a75-5918-96bf-16a5acd8e783",
+  "note": "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+}

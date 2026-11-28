@@ -1,0 +1,25 @@
+{
+  "id": "b83c0d69-b9f6-4a38-ab65-c1ddea784356",
+  "label": "Cross-theory compositional moral semantics connection plan",
+  "statement_ids": [
+    "17fe8be1-a86c-57f2-8732-9e52dc7982de"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The general compositional assumption exceeds a truth-aptness claim. Map the chosen moral premise and its conditionals to the same content under both naturalistic and Catholic theories before carrying the Frege–Geach result into the evil comparison.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 1aa52dcb-7d39-507c-89ce-73629cdc0abd. The scoped bridge described in the summary remains open."
+}

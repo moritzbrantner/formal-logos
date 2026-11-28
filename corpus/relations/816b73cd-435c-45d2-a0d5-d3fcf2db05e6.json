@@ -1,0 +1,10 @@
+{
+  "id": "816b73cd-435c-45d2-a0d5-d3fcf2db05e6",
+  "label": "Source qualification for da9bddcf from reading 51b7dabe",
+  "subject_kind": "claim",
+  "subject_id": "2b7a3431-5e29-5c91-a0ff-a23a0eb78fcb",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3",
+  "note": "Einstein's distant synchronization procedure compares remote event times within a selected inertial system under specified light-signal assumptions. Reading the case clock as such a physical clock requires choosing and justifying a frame for both tokens rather than assuming a coordinate-independent equal time."
+}

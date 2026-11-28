@@ -1,0 +1,10 @@
+{
+  "id": "3f46b6c1-fda5-4a16-be1f-896e40c8c7fc",
+  "label": "Test by Graded-foundation controls, checked",
+  "subject_kind": "result",
+  "subject_id": "5dbba779-432b-4d3a-bd4a-11b14086ef63",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "78945dde-2e6b-4e40-9383-ecb615208930",
+  "note": "Tests existence of a compatible well-founded ascending grade in the rotating triangle and rooted pair, both of which contain cross-world return paths."
+}

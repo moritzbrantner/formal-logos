@@ -1,0 +1,10 @@
+{
+  "id": "89c4c027-f5c4-4a5c-968f-682f8b68078e",
+  "label": "Test by Idle-maximum rival of the genus principle at being survives, checked",
+  "subject_kind": "result",
+  "subject_id": "37ad5dfc-0fd9-4ff7-85e0-a9ddd5791c0f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "note": "Tests the selected premise in the following setting. Same InAct, MoreIn, CausesIn and esse parameters as the premise; three members strictly ranked. Control.Tier with tierAct, tierMore, tierCause in Control.IdleMaximumSurvives; idleMaximumSurvives proves the listed conjuncts. Control.tierAct, tierMore, tierCause at the one respect: the rival and SomeBeingMaximalInBeing hold; MaximeEnsCausesBeingOfAllReading fails. Consumer tested: TermSenseForks3.maximeEnsCausesAllMaximal."
+}

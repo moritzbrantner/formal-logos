@@ -1,0 +1,10 @@
+{
+  "id": "6e2b9d75-115c-48a7-b3e5-11a9be687544",
+  "label": "Test by Sustaining-dependence and onset-parity controls checked for Whatever gives a thing bei (1)",
+  "subject_kind": "result",
+  "subject_id": "886615a9-9c8d-4b74-a52f-723e046108a1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c4661518-33cc-4a53-ae55-cb986be9c2b5",
+  "note": "Tests omission of the giver-contact premise in the finite absent-giver case."
+}

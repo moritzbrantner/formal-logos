@@ -7,5 +7,6 @@
   "theorem": "TruthCore.Results.Causality.FirstMoverNecessity.firstMoverRootIsNecessaryFirstPureAct",
   "comparator_config": "results/930c6d8c-be67-4f63-ba4c-9a8d0375b977/comparator.json",
   "status": "solution-present",
-  "description": "Projection of the First Way's same-witness grounding endpoint onto the existing necessary actual first pure-act endpoint. A transcription by projection; it carries closure only when its premise is closed. Establishes no premise."
+  "description": "Projection of the First Way's same-witness grounding endpoint onto the existing necessary actual first pure-act endpoint. A transcription by projection; it carries closure only when its premise is closed. Establishes no premise.",
+  "transcription": "assembly"
 }

@@ -1,0 +1,11 @@
+{
+  "id": "da5001d2-3f90-449b-a772-8e3964a03375",
+  "label": "An accessible successor from the no-dead-end frame condition",
+  "argument_id": "62f2915b-12d4-45b7-8284-4fff4f2e8978",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.DeadEndFreeSuccessor.successorWithoutDeadEnds",
+  "comparator_config": "results/da5001d2-3f90-449b-a772-8e3964a03375/comparator.json",
+  "status": "solution-present",
+  "description": "For one frame and selected world w, if all worlds satisfy the no-dead-end condition and excluded middle holds, there exists a world accessible from w. This gives the world witness used in finite roster amalgamation without assuming that w accesses itself. The witness need not be distinct or populated. The global no-dead-end premise is incomparable with self-access at a single selected world."
+}

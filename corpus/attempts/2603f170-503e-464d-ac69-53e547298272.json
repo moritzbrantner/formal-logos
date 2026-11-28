@@ -1,0 +1,29 @@
+{
+  "id": "2603f170-503e-464d-ac69-53e547298272",
+  "label": "Root links from Charles Darwin, On the Origin of Species",
+  "statement_ids": [
+    "55b34b5f-045f-555f-b0f4-148fe03f7ef0",
+    "9ab464ba-460f-5b91-89bd-d5af57016616",
+    "00ad618f-8328-5db5-a7a0-f100c0887f16"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "IV, natural selection, opening paragraph and Summary of the Chapter: Differential survival and reproduction of useful heritable variations give a positive mechanism for some adaptive patterns. Applying it to the target requires establishing the effectiveness of this mechanism in the selected biological cases. Its local scope leaves the independent question of ultimate direction and nonbiological regularity open. IV, natural selection, opening paragraph: Variations neither useful nor injurious: Darwin leaves variations neither useful nor injurious outside the action of natural selection. To credit adaptation to that mechanism in the case one needs fitness effects in the relevant circumstances, rather than classifying any regular trait as selected. IV, natural selection, paragraph: We have reason to believe: Darwin's mechanism requires favourable variations to occur. An application needs to establish the supply and inheritance of relevant variations for the outcome, independently of what selection can subsequently preserve.",
+  "evidence": [
+    "7c58152a-efbf-5722-b9a0-494622ec63c8",
+    "b1ad0240-bc4d-53d3-af63-7da3d5368833",
+    "882f06f1-7c33-5ceb-b511-e8cfdb9b65e3",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

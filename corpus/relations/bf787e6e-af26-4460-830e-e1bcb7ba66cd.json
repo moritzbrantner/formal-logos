@@ -1,0 +1,10 @@
+{
+  "id": "bf787e6e-af26-4460-830e-e1bcb7ba66cd",
+  "label": "Test by Experience finite controls for Experience local calibration",
+  "subject_kind": "result",
+  "subject_id": "27a66a4d-6693-458b-8232-f87b6cc1a870",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ecd2eb8d-e245-4679-b7e9-7a265309d992",
+  "note": "Tests omitting calibration by retaining occurrence and theological identification in the finite profile without recognized GOD_4."
+}

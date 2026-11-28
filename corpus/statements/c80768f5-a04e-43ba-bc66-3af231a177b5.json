@@ -1,0 +1,15 @@
+{
+  "id": "c80768f5-a04e-43ba-bc66-3af231a177b5",
+  "label": "Grounding edges from a root compose among existents classified as concrete by the selected profile",
+  "paraphrase": "Open analyst premise. For a root r and recipient x that exist at w and are classified as concrete by the selected profile, take grounding edges from r to y and from y to x in the selected relation at w. Both edge sources must exist at w and satisfy the same classifier. Then the grounding edge from r to x holds at w, with the same source guard. The law is restricted to root-starting edges, existents covered by that classifier, and the selected world.",
+  "lean_declaration": "TruthCore.Causality.RootGroundComposition.RootGroundsComposeAt",
+  "definition_ids": [
+    "3818558a-d30a-4804-8624-f0a874c17e45",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ]
+}

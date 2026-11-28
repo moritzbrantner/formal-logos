@@ -1,0 +1,10 @@
+{
+  "id": "f6397dc7-c496-4aac-a8a8-1e92dd69f6af",
+  "label": "Test by PrussPowerPremises.prussPowerControls (18e5bd4e)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+  "note": "Omit joint absence from the route grounded at absence worlds. In vanCleveG at a, c and d are both present and contingent, but every accessible world keeps one of them. The absence-world rules hold vacuously, and the conclusion requiring an accessible joint absence fails."
+}

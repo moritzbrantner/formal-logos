@@ -567,3 +567,12 @@ verified source readings and claims above retain their exact content.
 ## Research attempts citing this note
 
 - [Whole-corpus definition audit, Church cluster: the existing sourced visible/spiritual aspect…](../corpus/attempts/church-definition-calibration-audit.json)
+
+## Authority claims in John and Mark (2026-11-26)
+
+In John 8.42 Jesus is reported as claiming that God sent him. The case needs the
+historicity of the saying and an account of what authority the claimed sending
+conveys. Mark 14.63–64 supplies the high priest's blasphemy charge as evidence
+of the reported reception of the trial sayings. Its scope and the force of
+Jesus's own words remain interpretive questions. See the [John attempt](../corpus/attempts/4d46d314-654c-45a4-b9bb-967f3200580e.json)
+and the [Mark attempt](../corpus/attempts/b988a769-d6f2-4004-807a-30b592a47c1f.json).

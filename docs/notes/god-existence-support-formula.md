@@ -565,6 +565,102 @@ Why consider it? Actual productive giving of the recipient's very esse differs f
 
 **Next discriminating check:** register the two relation-sense families with distinct Lean declarations and explicit selected-profile links; keep old Challenges intact. In a separate sibling batch, test the esse-only anti-reception theorem and the parent/child omission model with Lean, bind-check, Comparator, NanoDa and a computed `frontier-diff`. Require independent review of the semantic reading, especially the scope of whole-being versus illumination, equal-grade or reciprocal esse causes, and whether `Profile.grounds` root laws remain plausible on its chosen causal interpretation. The overall judgment is **provisionally favorable to the scoped causal/essendi reading as a clearer formal target, but warrant underdetermined**, not established or a defeat of existential inertia.
 
+## Automated checks on stage 1–2 premises (2026-11-26)
+
+The sweep used corpus revision `1c9e6607bc6e004abc94cdb41426dbd26d4a0e97`.
+It selected the 40 eligible open root-route premises with the most transitive
+dependent arguments, breaking ties by statement UUID. It excluded the six
+gradation-calibration premises and records touched by #2032, #2035, #2036
+and #2038. All 40 serve both examined stages. A separate dossier pass
+identified three eligible premises specific to stage 2 outside the cohort.
+`12dc2662` links universal weak maximality to causing other actual bearers.
+`0730d46f` and `bf422bd7` concern shared nature and suppositum–nature
+identity. Their existing dossiers supply the reuse starting points for a
+separate check of the exclusively attribute-stage premises.
+
+Discovery with the proved pool left 32 trials unresolved and skipped seven
+targets at retrieval. The sole closure used the prohibition on self-origin
+to make the productive self-origin bridge vacuous. It also identified the
+carriers and cause frame across modules by name. The existing consumer
+already uses the bridge to derive that prohibition together with the
+no-self-production premise. The reverse trial adds no substantive support
+for the bridge. The proof-term audit identified no unused selected premise.
+All consuming Challenges already had Solutions. The tactic probe closed
+three of four existing flagged consumers, with zero folded
+single-premise-application hits. The corpus's assembly and instantiation
+classifications apply a different test.
+
+Of 58 consuming results, 33 yielded 51 Lean-checked omission certificates;
+extraction stopped before model search on the other 25, covering 35 requests. The [omission attempt](../../corpus/attempts/11adaaa5-7e9a-4855-8fcd-275421fa2067.json)
+links the corresponding existing controls and the
+[19 retained certificates](../../TruthCore/Case/Catholicism/DiscoverySweepControls.lean).
+For example, the omitted dependence requirement in
+`reciprocityIncompatibleViaDependence` permits two beings to move each
+other and each to be prior to the other while the dependence relation is
+empty. This is non-entailment from the remaining typed assumptions.
+It gives no evidence that the selected dependency relation is empty in
+reality. The [extraction attempt](../../corpus/attempts/808d2c82-bd33-4d34-a307-e2d027f77b67.json)
+records the other 35 omission requests, including the first unsupported
+binder or formula for each consumer. A fresh search needs either a relevant
+explicit proved bundle for a retrieval gap or an interpretation that
+supports the consumer's original structured vocabulary.
+
+## First-pass premise curation for stages 1–2 (2026-11-26)
+
+The curation starts from the stage 1–2 list on `f0fbf831d`. The attempts
+record which consuming arguments need each premise, weaker sufficient
+readings where available, and a test for each remaining application gap.
+
+Selected-world self-access supplies the starting successor for finite roster
+amalgamation. The frontier counts this witness assembly under its transcription
+closure rule. Global contingent grounding rules out a contingent root in
+the same selected cone by restricting grounds to the cone and contradicting
+roothood. The direct local premises remain useful in applications that
+lack the stronger hypotheses. The first result supplies a world witness,
+and the second excludes one kind of root. The second result does not supply
+a necessary root. [Successor result](../../corpus/results/7d450da7-c3e7-42e3-b49c-06fce72b6953.json)
+· [Cone result](../../corpus/results/06e57838-89c8-4196-a2d5-f1b807af5ddd.json)
+
+On the universal-giving route, an alleged distinct prior is in act in esse
+under the selected actuality premises. The universal giver causes that
+prior's being, and the same priority relation would run both ways. The
+nonmutual-dependence premise rules this out. This proof gives firstness for
+the qualifying giver under the stated premises.
+[Universal giving priority result](../../corpus/results/fde3e9d8-0358-44f5-a1a2-823a880a8331.json)
+
+The source records supply partial support for existential necessity, attainment
+in the being comparison, and substance priority. Physics V.1 gives a necessary
+condition on motion. The converse, that the route’s persistence-preserving change
+suffices for motion in the same respect, remains open. The moved
+mover probe locates a remaining potency-sense bridge even after the same
+mover's actuality in esse is supplied.
+
+- [Causal necessity in the Third Way](../../corpus/attempts/44f0c0c2-3f9a-45bf-ac45-273d18f1708f.json)
+- [Comparative-degree calibrations and superlative uses](../../corpus/attempts/29b64770-aaff-484b-9e05-a238cf9404cd.json)
+- [Fourth Way existence and power across maximum readings](../../corpus/attempts/a6ddfe48-728f-40ba-afa2-438da45c3f31.json)
+- [Naming in the Fourth Way and common maximum](../../corpus/attempts/d6966a7c-4fb0-479a-8744-a88633e7a231.json)
+- [Physical and residual broad motion](../../corpus/attempts/31aab3cc-df95-4063-a195-e3942b805122.json)
+- [Global grounding and the selected cone's roots](../../corpus/attempts/cf5f5d13-436d-4229-a5fb-0bc3b90f1ab8.json)
+- [Motion, virtual actuality and capacity variants](../../corpus/attempts/e45c2155-ff80-48d3-b7f8-f90ad5cb10a1.json)
+- [Mutability of life boundaries and the receiving subject](../../corpus/attempts/7a456e63-abe2-4f73-a6a0-622da69c7aaa.json)
+- [Intellect from reception: calibrations and the old structural domain](../../corpus/attempts/903fd8d5-62ee-4938-9271-1a030d3728d0.json)
+- [Focal subject-role application and causal order](../../corpus/attempts/d995fef1-d683-45d7-8a78-3e6422ca4753.json)
+- [Selected-world concreteness and productive countercases](../../corpus/attempts/235d9974-6fa0-4071-a5ee-0208db44c825.json)
+- [Thought episodes, assent and intellectual exercise](../../corpus/attempts/8953f709-b2a8-4328-8c87-e0c6c628c72a.json)
+- [Goodness account selection by admissibility and adequacy](../../corpus/attempts/adcab4ff-68f1-4e98-b1b1-156d2d0ea13e.json)
+- [Ideal consensus as a route to due actuality](../../corpus/attempts/5177acf0-eaf6-4031-bf7d-32ee3093dbc8.json)
+- [Numerical individuation by grounding ancestry](../../corpus/attempts/9242f14b-94d8-4add-b3bb-99323c09e00f.json)
+- [Intellectual creation and the exercise of will](../../corpus/attempts/f3099a5e-1216-4ac1-8212-78f0c63a05db.json)
+- [Life-state change, motion and duration scope](../../corpus/attempts/f6083a95-5f06-458e-a157-36bf959015c6.json)
+- [Calibrations for duration and temporal causal attribution](../../corpus/attempts/e179bcd0-8c07-4aad-a93b-cb9007e496f2.json)
+- [Composition, self-uniting and the two cause uses](../../corpus/attempts/e54991f4-261a-4ea6-ae98-0014326b44e8.json)
+- [Esse reception and same-bearer actuality](../../corpus/attempts/3c6ff084-76f5-48fc-9b2f-e328a07fdbc4.json)
+- [Substance priority and the ground of a potency](../../corpus/attempts/d05575f9-eebf-43d1-aeb6-cddf14603d45.json)
+- [C* and the esse cause of a moved mover](../../corpus/attempts/09ff1e75-2e98-4801-b536-f0c47492fa24.json)
+- [Strict comparison and non-reciprocity](../../corpus/attempts/19cf46a0-15c4-4f62-bd05-cda902dd002a.json)
+- [Ontic causes as actual concrete grounds](../../corpus/attempts/ea95f029-7215-430c-9920-621dbf8efdb3.json)
+- [Selected modal base and accessible successor](../../corpus/attempts/e716cccf-1641-49e9-bc2f-0691231418c3.json)
+
 ## Research attempts citing this note
 
 - [Classical root's PURE_ACT_1 from its simplicity, existence and the composition premise](../../corpus/attempts/383d23ad-bec6-442c-9fec-0112df1e1c97.json)
@@ -572,3 +668,64 @@ Why consider it? Actual productive giving of the recipient's very esse differs f
 - [Cluster reassessment of the modal-spine frame, uniting-cause, transfer and separability premises](../../corpus/attempts/dd24400b-cc87-4095-b4c4-df857e1edff5.json)
 - [Cluster reassessment of the sustaining, Dei Filius bridge and dependence premises (eternity path)](../../corpus/attempts/447838c8-601f-4a04-ad65-b50ef9dd3764.json)
 - [Modal countermodel and exact support audit for independence and separability](../../corpus/attempts/independence-separability-scope-audit.json)
+- [Proved-pool trials and retrieved bundles](../../corpus/attempts/01a04e4a-9e8c-4886-9559-a9c6d97b7213.json)
+- [Targets skipped at proved-pool retrieval](../../corpus/attempts/4b35db72-847b-4a41-b2ec-582c74be6236.json)
+- [Rejected self-origin converse](../../corpus/attempts/853663da-b50c-452b-814b-8f58edc0c852.json)
+- [Tactic probes on existing Challenges](../../corpus/attempts/b3bdaa86-3f9d-4a3d-b292-c7c0d39722bc.json)
+
+## Connectivity review (2026-11-26)
+
+Two existing comparisons now have explicit rival links. The absence of a
+natural-number rank challenges the ranking of the same selected actual
+concrete grounding graph. The reverse-successor model gives a mathematical
+instance of the rival, while the bounded uniform-potential argument excludes it
+under its three open calibrations. In q.14, failure of all three calibrations
+challenges coverage by the named menu on the same receiver scope. Neither
+comparison settles which profile applies to the actual case.
+
+Both symmetry deltas express condition B on the same selected frame. The
+[identity certificate](../../corpus/results/79564d3e-e0b9-4311-aafb-a8bf97d52831.json)
+allows readers of the Pruss and necessary-root routes to find the shared
+condition without identifying their independently supplied frames. The proof
+asserts the equivalences for every supplied profile.
+
+The [no-dead-end argument](../../corpus/results/da5001d2-3f90-449b-a772-8e3964a03375.json)
+adds a route to the accessible world needed for finite-roster amalgamation.
+Excluded middle supplies a successor from the global frame condition at the
+selected world. The existing self-access route still supplies its own
+witness. The new route needs global absence of dead ends and leaves
+the application of that frame condition open.
+
+The mover fork remains a priority for bridge research. Its common conclusion
+provides a mover in some respect, while the reduction premise of the prima
+via asks for a mover in the very respect in which the subject moves. A bridge
+must supply that alignment for the respect-free constructor and connect
+accidental-mover coverage to actual reductions in the stated domain.
+
+- [Unranked actual grounding connectivity finding](../../corpus/attempts/4a389529-42fc-48e8-987c-e40cebd3e605.json)
+- [Q14 pointwise foreign-form reception connection plan](../../corpus/attempts/8098a6d6-afc1-467c-8b3b-5e74e52f632f.json)
+- [Procedurally selected whole-series exercise connection plan](../../corpus/attempts/9c67743d-c18c-4663-87bf-6978ca7f85ad.json)
+- [Respect-free mover fork connection plan](../../corpus/attempts/b9061349-cd4e-4378-bef4-9cbdcab219d9.json)
+- [No-dead-end frame gives a selected successor](../../corpus/attempts/3702a4c0-b6a9-446d-b55f-f06d32ad609e.json)
+
+The corrected connectivity scan includes every inference in a registered
+argument, including scoped assumptions. The 31 original retirement candidates
+have existing uses: 26 occur in registered inferences and five are exercised
+in the motion and mover controls. The Third Way occupancy and coming-to-be
+statements are intermediate steps. The succession assumption is discharged
+in the conditional infinite-past argument.
+
+The [finite-cover result](../../corpus/results/645be66f-1072-4205-92b5-05c3fa65dfbb.json)
+registers the existing derivation of one individual present at every accessible
+world. It keeps excluded middle, successor existence, absence amalgamation,
+finite population cover and de dicto population on one frame and existence
+predicate. Identifying its individual with an actual concrete divine witness
+requires further work. The [Gödel result](../../corpus/results/a7f5faf2-7f51-4bfd-a5bd-236105e44f6c.json)
+registers the existing no-dead-end inference with Ax2a, Ax4 and empty-property
+exclusion explicit. It supplies a frame condition for the successor argument.
+Gödel positivity retains its model-specific meaning.
+
+- [Finite population cover](../../corpus/attempts/511a2d50-be61-4dea-8b1e-5019967c6972.json)
+- [Gödel empty-property exclusion](../../corpus/attempts/b2aff06e-1761-4d05-8e97-0852637106ef.json)
+- [Third Way temporal inferences](../../corpus/attempts/daabd904-66a0-4a5c-baf0-1a1e2f8edf6c.json)
+- [Exact Humean alternatives](../../corpus/attempts/294d7c64-6672-4fc2-a341-7d8e280d0f8c.json)

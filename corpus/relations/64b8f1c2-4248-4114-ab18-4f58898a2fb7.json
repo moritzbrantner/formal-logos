@@ -1,0 +1,10 @@
+{
+  "id": "64b8f1c2-4248-4114-ab18-4f58898a2fb7",
+  "label": "Test by Finite models for the modal-principle branches of the NE for Necessary-being node, pos (1)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cdf897a8-5490-561a-b9d2-507486a3f192",
+  "note": "Tests omission of this premise from forkT in the corresponding hand-written modal frames for the T fork."
+}

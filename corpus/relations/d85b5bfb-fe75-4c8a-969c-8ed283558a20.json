@@ -1,0 +1,10 @@
+{
+  "id": "d85b5bfb-fe75-4c8a-969c-8ed283558a20",
+  "label": "Test by ContingencyGrounding.controls (ae9d9473)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+  "note": "Test stronger R1 with the receiver reading held fixed. In CorruptorModel the contingent x at true is composed of matter and form, satisfying C2 by receptivity. Reception is empty, so x fails R1 and the receiver reading holds vacuously."
+}

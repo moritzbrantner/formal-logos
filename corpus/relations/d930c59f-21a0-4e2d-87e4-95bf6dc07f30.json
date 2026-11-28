@@ -1,0 +1,10 @@
+{
+  "id": "d930c59f-21a0-4e2d-87e4-95bf6dc07f30",
+  "label": "Test by For every type of WORLDS_9 and FIXED_ROSTER_2, frame, pr for Every ordered pair of WOR (1)",
+  "subject_kind": "result",
+  "subject_id": "88822bfa-0b9e-597c-9c45-9ba416ff50d5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5f402453-6fc8-5d8f-a13b-d22e6861dbe1",
+  "note": "Checks the sufficient direction from exact meet closure to absence amalgamation on a fixed roster and world."
+}

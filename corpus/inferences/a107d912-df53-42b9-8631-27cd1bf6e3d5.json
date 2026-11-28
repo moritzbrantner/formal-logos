@@ -1,0 +1,10 @@
+{
+  "id": "a107d912-df53-42b9-8631-27cd1bf6e3d5",
+  "label": "Check the selected recipient population omission (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "1820e7c1-dae1-4f26-ad1f-2eda9feff674",
+  "rule": "Singleton roster with an unpopulated selected world",
+  "meaning": "The only candidate satisfies the concreteness classifier and fails ExistsAt. There are no actual concrete recipients, no actual contingent concreta and no actual necessary concrete witness. Universal assertions over the empty recipient subtype give neither a witness nor its pointwise premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

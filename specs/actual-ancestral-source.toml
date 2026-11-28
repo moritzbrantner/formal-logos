@@ -77,3 +77,23 @@ conclusion = "The mediated optimum has one root with a finite grounding path to 
 axioms = ["propext","Classical.choice","Quot.sound"]
 rule = "Keep the mediated optimum and exhibit all grounding paths on its actual three-being graph"
 meaning = "On chainG at false, d is a root, g receives an edge from d, and c receives one from g. No other actual root is possible. The imported MediatedOptimum retains the original giving model and the absence of any directly covering actual root. The graph does not interpret a new God predicate."
+
+[[relation]]
+id = "Test by Test common finite ancestry on the existing mediated-optimum creator profile"
+label = "Test by Test common finite ancestry on the existing mediated-optimum creator profile"
+subject_kind = "result"
+subject_id = "1e652b87-fba4-4653-801e-1911fbd4b957"
+predicate = "tests"
+object_kind = "statement"
+object_id = "96082032-91f1-586b-9db8-e42edbb5e52e"
+note = "Tests nonvacuity on the actual concrete grounding graph with a d-to-g-to-c chain and a single source."
+
+[[relation]]
+id = "bcfb4804-73b4-4dfe-9f98-648209407e46"
+label = "Test by ActualAncestralSource.mediatedChain (98138853)"
+subject_kind = "result"
+subject_id = "1e652b87-fba4-4653-801e-1911fbd4b957"
+predicate = "tests"
+object_kind = "argument"
+object_id = "98138853-8873-4d7a-81a7-b8d88d266520"
+note = "On chainG at false, d, g and c are actual concreta. The unique root d reaches g by one grounding edge and c by the path through g. This jointly witnesses unique actual root and universal access by finite grounding paths."

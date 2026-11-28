@@ -1,0 +1,10 @@
+{
+  "id": "a9f0d70b-bd05-42fa-86de-52d9e9ac4555",
+  "label": "Test by Finite interpretations for the uniting-cause, in-act and for Each of the two uses of ' (1)",
+  "subject_kind": "result",
+  "subject_id": "07959b3c-475e-55d4-9cab-a6bb2687539f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6af2aed7-d9bd-54f1-a4c2-4e981b22d099",
+  "note": "Tests omitting uniting-cause sense coverage with exclusivity retained in the Bool case."
+}

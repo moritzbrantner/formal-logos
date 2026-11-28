@@ -3,6 +3,7 @@ module
 
 public import TruthCore.Ontology.ConcreteAbstract
 public import TruthCore.Ontology.EncodingAndRealPredicates
+public import TruthCore.Ontology.EssenceActFactInvariance
 public import TruthCore.Ontology.ExistenceInEssence
 public import TruthCore.Ontology.ExistencePredicate
 public import TruthCore.Ontology.NamedRootLocation

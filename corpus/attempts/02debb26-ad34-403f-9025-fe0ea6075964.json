@@ -1,0 +1,25 @@
+{
+  "id": "02debb26-ad34-403f-9025-fe0ea6075964",
+  "label": "Simple remote candidate connection plan",
+  "statement_ids": [
+    "1f0be6be-200b-58a0-a26e-cd5078bffcf3"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Same-world existence, simplicity and remoteness are weaker than the full nominal description. A naturalism objection needs the rival spatial or composition claim to cover this exact existing witness, including a separate connection between remoteness and spatiotemporality.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

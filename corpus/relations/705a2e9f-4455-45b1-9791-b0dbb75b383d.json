@@ -1,0 +1,10 @@
+{
+  "id": "705a2e9f-4455-45b1-9791-b0dbb75b383d",
+  "label": "Source support for 5588083c from reading 19b68341",
+  "subject_kind": "claim",
+  "subject_id": "cc55748d-85e1-5038-996d-a15adfc6628e",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "5588083c-55e5-57ce-91ff-67db25fe80fc",
+  "note": "Aquinas's commentary argues that a divisible mobile whose whole motion depends on motion of the parts cannot move itself primarily and per se. The case needs a bridge from that analysis to each indexed respect of the routed movement, including which intrinsic mover counts as distinct from what moves in that respect."
+}

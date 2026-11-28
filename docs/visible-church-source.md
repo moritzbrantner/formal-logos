@@ -20,3 +20,12 @@ source evidence for an existing root premise; it does not independently
 establish the historical occurrence, the Church's divine authority, or the
 truth of its teachings. The premise remains open. No inference, Lean result,
 or change to either root route is advertised by this source connection.
+
+## Commission readings and the report-to-event bridge (2026-11-26)
+
+John 20.21–23, John 21.15–17 and Matthew 18.17–18 bear separately on the
+forgiving and retaining, shepherding, and judging and binding components of the
+existing commission premise. Each application requires the actual grant of the
+specified power. The selected premise also requires the Matthew 28 commission.
+See the [John attempt](../corpus/attempts/4d46d314-654c-45a4-b9bb-967f3200580e.json)
+and the [Matthew attempt](../corpus/attempts/8bdc66a9-63c8-4a0c-8bfc-b68a9b873a52.json).

@@ -1,0 +1,10 @@
+{
+  "id": "57a63f09-8752-45a3-980b-53efa3a0f354",
+  "label": "Test by A small interpretation model has both an invariant logic for Every test sentence has a (1)",
+  "subject_kind": "result",
+  "subject_id": "0d04ea56-4694-5ada-95d5-8919cc117342",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "dbf0c4c2-9d64-5b2a-a18f-4342dcbdc723",
+  "note": "Tests substituting local variation for global variation by constructing a stable logical sentence beside the variable taste sentence."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "763e11c9-1982-497d-b3c0-c9b0ac319be3",
+  "label": "Root links from Allan Gibbard, Reply to Commentators",
+  "statement_ids": [
+    "393081a1-2fa4-5a74-a1fa-691f1594048f",
+    "8ea56025-0be0-5353-8daf-33ceeb81623f"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "pp. 536–538, response to McPherson and Perl, expanded truth and indicative conditionals: Gibbard uses indicative conditionals with false antecedents to distinguish expanded full truth from more permissive senses while allowing appropriate belief or assertion. Application to this quasi-realist comparison requires showing which of those senses is the case's minimal truth and that the relevant moral sentence has the same features. pp. 541–542, response to Seth Yalcin, planning and picking: The proposal construes permission attitudes through settling what to permit to oneself, and distinguishes this from choosing among options already eligible. Testing the constant-meaning expressivist premise requires a common role for that permission attitude in embedded and standalone uses. The explanation of planning by itself does not supply it.",
+  "evidence": [
+    "add2d90b-631c-571d-a2ae-70d30fd6a1b4",
+    "dcca546d-6976-5eb8-a60a-750d73983cb8",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

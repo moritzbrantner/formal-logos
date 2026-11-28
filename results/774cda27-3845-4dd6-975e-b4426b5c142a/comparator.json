@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.CompositionRoutes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CompositionRoutes.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.CompositionRoutes.actualContingentOfNoNecessaryParts"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

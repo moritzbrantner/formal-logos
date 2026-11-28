@@ -1,0 +1,23 @@
+# Fixed-bearer substitution test for the stage 2 route through 565ccd6c.
+# Analyst formulation. See docs/notes/existence-in-essence-identity.md.
+[batch]
+vocab = "TruthCore.Ontology.EssenceActFactInvariance"
+results = "TruthCore.Results.Ontology.EssenceActFactInvariance"
+
+[[statement]]
+id = "Act and fact substitution at one bearer: extension criterion and conditional model"
+lean = "FixedBearerControls"
+definitions = ["25d4df96-f18b-4477-a7ce-11fa8c17cd83", "b2e22524-357f-47b5-814f-0a0e59f0d612", "7cf63236-9c12-41bc-bf20-6fbce7a121db", "1fda7b2c-4411-4ffd-8fa2-78e30b6aedef", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-DATA-RELATIVE-CORRECTION-CRITERION"]
+disambiguations = ["DISAMB-ESSENCE", "f704b7ca-b455-4da7-a757-b0564fe76b3b", "DISAMB-EXISTENCE-ESSE-SUPPORT"]
+paraphrase = "For one supplied nature judgment on the three fixed-bearer contents, a criterion on their world extensions licenses substitution of coextensive exercise and existence. In the existing conditional-exercise model with bearer true, the two unconditional contents are coextensive and differ in extension from the conditional. The lifted nature takes the conditional alone and admits an extension criterion. A changed judgment accepts the conditional and unconditional exercise while rejecting the existence fact, so it admits no extension criterion. Its projection to world predicates nevertheless satisfies the extensional identity-to-essential-existence bridge. This is a structural test of the projection, with no metaphysical admissibility claim."
+
+[[argument]]
+id = "Fixed-bearer act and fact substitution controls checked"
+theorem = "fixedBearerControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+premises = []
+conclusion = "Act and fact substitution at one bearer: extension criterion and conditional model"
+rule = "Extension criterion and explicit finite judgments"
+meaning = "Apply extensionCriterion to the fixed-slot judgment, test the conditional-exercise model and a changed judgment on the same frame, and apply exerciseInNatureGivesEssentialExistence to the world-predicate projection of the changed judgment."
+description = "Diagnostic at 823d4312 and 565ccd6c. The changed content-based judgment defeats inference from coextension and unconditional exercise membership to existence membership on that formal reading. The original conditional profile rejects both unconditional contents. The extensional proof at 565ccd6c remains valid on its stated type. The control supplies no independent warrant for unconditional exercise or for the application of an extension criterion to the actual nature."

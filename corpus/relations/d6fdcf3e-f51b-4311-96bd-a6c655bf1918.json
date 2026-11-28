@@ -1,0 +1,10 @@
+{
+  "id": "d6fdcf3e-f51b-4311-96bd-a6c655bf1918",
+  "label": "Test by Certificate-only and non-well-founded known-prior accounts survive",
+  "subject_kind": "result",
+  "subject_id": "20ed92f4-766f-4bd6-b67d-9e5e37f9a209",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b178b6e6-0115-4611-8fea-58dab5d69fed",
+  "note": "Tests the earlier-premise reading of demonstration in the Unit certificate-only model where the sole content is known and priority is empty."
+}

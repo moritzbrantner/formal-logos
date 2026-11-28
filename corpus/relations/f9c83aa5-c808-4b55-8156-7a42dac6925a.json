@@ -1,0 +1,10 @@
+{
+  "id": "f9c83aa5-c808-4b55-8156-7a42dac6925a",
+  "label": "Test by Experience finite controls",
+  "subject_kind": "result",
+  "subject_id": "27a66a4d-6693-458b-8232-f87b6cc1a870",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5f5995c2-c827-4b60-805a-04d3ce2d4b14",
+  "note": "Tests omitting the reverse capability bridge in the finite root profile retaining calibration, identification and GOD_4 coverage."
+}

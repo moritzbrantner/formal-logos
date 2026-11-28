@@ -1,0 +1,10 @@
+{
+  "id": "2ace6de6-0403-44c9-95c1-4bc4b1bff264",
+  "label": "Test by Permitted parameter control",
+  "subject_kind": "result",
+  "subject_id": "c96a618f-aaca-466b-986f-818e7a803bec",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "980a800d-57a6-4e5e-9c0f-363bce4c1842",
+  "note": "Tests nonvacuity of uniform definability in a nonempty interpretation class by equality to the one permitted Bool parameter."
+}

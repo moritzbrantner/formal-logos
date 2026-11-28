@@ -1,0 +1,10 @@
+{
+  "id": "eff974fa-ae65-400f-99d5-acd151e98061",
+  "label": "Test by The selected thin bundles each have an explicit finite m for Explicit deterministic co (1)",
+  "subject_kind": "result",
+  "subject_id": "efe4bf2c-402c-5e09-b774-aa0e43e2c16e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "438caf34-80d5-51bf-806a-d5e7c127e088",
+  "note": "Checks separate finite realizations of the bare observational, intervention-enriched, and scoped-brute bundles used in the diagnostic comparisons."
+}

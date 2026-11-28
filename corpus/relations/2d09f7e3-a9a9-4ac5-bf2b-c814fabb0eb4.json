@@ -1,0 +1,10 @@
+{
+  "id": "2d09f7e3-a9a9-4ac5-bf2b-c814fabb0eb4",
+  "label": "Test by Fixed carrier specializes indexed first-order definability",
+  "subject_kind": "result",
+  "subject_id": "e9941a68-5ca4-40fb-a21d-ca7aad9d1654",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e611886f-2a21-448d-8069-a9d87f63494e",
+  "note": "Checks the fixed-carrier specialization of indexed first-order definability over the same interpretations."
+}

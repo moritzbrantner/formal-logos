@@ -1,0 +1,10 @@
+{
+  "id": "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361",
+  "label": "Selected absence tracks DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1",
+  "paraphrase": "OPEN soundness assumption at the supplied origin: for every x that depends for its being on y in the shared causal frame, x is absent in every world selected for y's absence. This is a one-way condition. It neither supplies an efficient-causal edge nor requires a selected world when the selection is empty.",
+  "lean_declaration": "TruthCore.Causality.CounterfactualDependence.DependenceTracksSelectedAbsence",
+  "definition_ids": [
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ]
+}

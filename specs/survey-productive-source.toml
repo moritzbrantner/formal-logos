@@ -43,3 +43,23 @@ meaning = "Explicit finite omissions and joint witness; Bool and Unit are contro
 
 definitions = ["beb654a7-e204-5f4c-a7b4-45e886ba7109", "d662ee50-cdd3-517b-bd8a-024dca5929d0"]
 disambiguations = ["aee7e4c7-819b-5905-b363-813c06b7e92c"]
+
+[[relation]]
+id = "Test by Productive source calibration controls"
+label = "Test by Productive source calibration controls"
+subject_kind = "result"
+subject_id = "79af5fb6-3d6b-4a41-9528-ad8c6ee3f9ca"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c1d16add-865b-4ac6-a790-4e6e85fe0ac5"
+note = "Tests the productivity omission on the finite survey source profile where the necessary-concrete conclusion fails."
+
+[[relation]]
+id = "Test by Productive source calibration controls for Accessible direct exercise calibration"
+label = "Test by Productive source calibration controls for Accessible direct exercise calibration"
+subject_kind = "result"
+subject_id = "79af5fb6-3d6b-4a41-9528-ad8c6ee3f9ca"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e2104271-bf96-4d07-af55-5bcb7871f9e7"
+note = "Tests the causal-concreteness omission on the separate finite survey source profile with the other carrying inputs maintained."

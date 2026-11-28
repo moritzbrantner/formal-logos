@@ -9,11 +9,37 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Certified a non-linear map of PSR formulations in one arena, with a seven-member inconsistent core and a deletion model per member. Rejected in review of the draft: calling necessity-to-actuality reflexivity-dependent without a model (a separating model was added); leaving the box-exists versus exists-box scope untested (shiftingReason was added); assuming factivity in the weak-PSR bridge (the proof does not use it, so it was dropped). Not formalized: the rational-inquiry norm, contrastive and probabilistic explanation, and independently productive Supply. Not read: the #409 and #365 sources, so nothing is attributed to them. The results #465, #735, #746 and #750 are not imported as lemmas; only #312 is composed. Remaining blockers for any root use: whether explanation is necessitating, whether a totality fact exists, distribution, the diagonal facts, and extensionality. See docs/notes/psr-strength-755.md.",
+  "summary": "Certified a non-linear map of PSR formulations in one arena, with a seven-member inconsistent core and a deletion model per member. Rejected in review of the draft: calling necessity-to-actuality reflexivity-dependent without a model (a separating model was added); leaving the box-exists versus exists-box scope untested (shiftingReason was added); assuming factivity in the weak-PSR bridge (the proof does not use it, so it was dropped). Not formalized: the rational-inquiry norm, contrastive and probabilistic explanation, and independently productive Supply. Not read: the #409 and #365 sources, so nothing is attributed to them. The results #465, #735, #746 and #750 are not imported as lemmas; only #312 is composed. Remaining blockers for any root use: whether explanation is necessitating, whether a totality fact exists, distribution, the diagonal facts, and extensionality. See docs/notes/psr-strength-755.md.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 0f3d25c7 tests baf22110. Omit contingency of the supplied fact `c` at `false`. Every fact holds at both worlds in `allNecessary`, so every choice of `c` fails that premise.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 9d1bdcc3 tests 0a8e600a. In causeOnly, all Nat bearers exist at false and are absent at accessible true. Each bearer n that exists and is contingent at false has n + 1 as its existing cause there. This witnesses the argument's global causal coverage premise with a populated selected world false.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 0fa6505d remains unplaced. In the first universal-access arena, false exists at both worlds and its existence fact has an intrinsic token at each. There are no causal edges, so EveryExistentExternallyCaused fails. In the second arena true exists only at false and receives its circumstance token there, satisfying ContingentPSR. The necessary bearer false lacks a token at false, so ExistencePSR fails. Those exact all-world predicates are off path.",
   "evidence": [
     "0f3d25c7-cbb1-5a4d-b30c-cc9cb9752d7e",
     "9d1bdcc3-732f-5188-bfb2-5b913322b1c8",
     "0fa6505d-d25d-5276-a89a-8f705a61018c",
     "PR-757"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2115"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2121"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2136"
+    }
   ]
 }

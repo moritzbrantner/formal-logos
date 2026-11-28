@@ -19,5 +19,10 @@
     "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
     "5d15d8f2-1080-53c9-886f-cee2a4ff23a9",
     "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976",
+    "missing_bridge": "Certify the same populated grounding fixture with all six nonlogical premises and the separately registered excluded-middle premise of the underived-concretum route.",
+    "blocker": "JointWitness certifies the six grounding and population premises in one frame. The route also consumes unrestricted ExcludedMiddle, which the witness type does not supply."
+  }
 }

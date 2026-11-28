@@ -1,0 +1,10 @@
+{
+  "id": "2d1ffc9b-31f5-4192-bd90-255e501c54c6",
+  "label": "Test by Finite interpretations for the nine derivations of round for OPEN analyst reading of ' (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0bdb0436-34ad-5409-9bdf-20cd4bcc4fb8",
+  "note": "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+}

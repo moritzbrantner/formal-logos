@@ -78,3 +78,33 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 senses = {RECEIVES_ESSE_AT = "RECEIVES_ESSE_AT_1"}
 rule = "Evaluate the passion interpretation of receipt on the two-moment causality frame"
 meaning = "Closed control over the passion interpretation. Receipt at onset and correlativity hold. Present-tense receipt and weak concurrent actualization fail."
+
+[[relation]]
+id = "Test by Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2"
+label = "Test by Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2"
+subject_kind = "result"
+subject_id = "ea414de5-3a51-42d2-8297-2846dfc63caa"
+predicate = "tests"
+object_kind = "statement"
+object_id = "52b05849-88b3-4f44-b81b-768850f9ed12"
+note = "Tests reception-giving correlativity with standing receipt and onset-only giving in the same history."
+
+[[relation]]
+id = "Test by Finite onset-only giving with explanation, origin and RE for The term of the origin re (1)"
+label = "Test by Finite onset-only giving with explanation, origin and RE for The term of the origin re (1)"
+subject_kind = "result"
+subject_id = "ea414de5-3a51-42d2-8297-2846dfc63caa"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6da7d94a-abc4-4092-96c1-9469af548f87"
+note = "Tests giving by the coexistent term through the onset-only giving history with a persisting origin relation and no later giving."
+
+[[relation]]
+id = "Test by Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt"
+label = "Test by Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt"
+subject_kind = "result"
+subject_id = "62877563-d97a-4f44-9890-bf0bc739731c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "964928dc-9067-45d4-8de3-c91e27cbe1c6"
+note = "Tests omission of standing receipt with onset and passion correlativity retained in the inertial history."

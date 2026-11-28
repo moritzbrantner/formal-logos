@@ -2,6 +2,7 @@
 pub mod attribution;
 pub mod bind_check;
 pub mod bind_types;
+pub mod bottlenecks;
 pub mod bridge_experiments;
 pub mod bridges;
 pub mod brief;
@@ -9,6 +10,7 @@ pub mod check;
 pub mod configuration_explorer;
 pub mod configuration_live;
 pub mod configurations;
+pub mod connectivity;
 pub mod context;
 pub mod countermodel;
 pub mod currentness;

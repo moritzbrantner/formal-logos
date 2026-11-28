@@ -1,0 +1,10 @@
+{
+  "id": "c971b9b8-f863-4a8c-8b71-cb8cf742731a",
+  "label": "Matched four-account table tests the existential PSR for contingents",
+  "subject_kind": "result",
+  "subject_id": "f66e83d4-aab0-4a64-8331-712f427355b4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Applies the determination standard to four accounts matched in reach and recipient good, separating existence of some production, the range and the actual selection."
+}

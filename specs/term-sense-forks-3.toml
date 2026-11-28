@@ -320,3 +320,43 @@ object_kind = "statement"
 object_id = "STMT-MOVED-ONLY-AS-CAPABLE"
 verification_result_id = "MOVED-AS-CAPABLE-FROM-ADOPTED-POTENCY"
 note = "Strength order between POTENCY_1 and POTENCY_3 in the moved use. No strictness control; a moved thing that is capable and already in act separates them."
+
+[[relation]]
+id = "Test by Finite models for the maxime ens and potency sense forks"
+label = "Test by Finite models for the maxime ens and potency sense forks"
+subject_kind = "result"
+subject_id = "06f23500-cdaa-5797-b9a2-fe6d47e24a34"
+predicate = "tests"
+object_kind = "argument"
+object_id = "09164174-022e-57fc-a241-9da629576ccb"
+note = "Tests mixing the potency readings with coverage but without exclusivity in the finite Unit profile."
+
+[[relation]]
+id = "Test by Finite models for the maxime ens and potency sense forks for Whichever single sense ma (1)"
+label = "Test by Finite models for the maxime ens and potency sense forks for Whichever single sense ma (1)"
+subject_kind = "result"
+subject_id = "06f23500-cdaa-5797-b9a2-fe6d47e24a34"
+predicate = "tests"
+object_kind = "argument"
+object_id = "312639cc-b428-5f6b-a299-f852720125ec"
+note = "Tests mixing MAXIME readings with coverage but without exclusivity on the selected degree profile."
+
+[[relation]]
+id = "Test by Finite models for the maxime ens and potency sense forks for In potency is read as POT (1)"
+label = "Test by Finite models for the maxime ens and potency sense forks for In potency is read as POT (1)"
+subject_kind = "result"
+subject_id = "06f23500-cdaa-5797-b9a2-fe6d47e24a34"
+predicate = "tests"
+object_kind = "statement"
+object_id = "887dea7d-64aa-54bb-8890-c105cd573f47"
+note = "Tests omitting potency sense coverage with exclusivity on the selected Unit profile."
+
+[[relation]]
+id = "Test by Finite models for the maxime ens and potency sense forks for Maxime ens is read as MAX (1)"
+label = "Test by Finite models for the maxime ens and potency sense forks for Maxime ens is read as MAX (1)"
+subject_kind = "result"
+subject_id = "06f23500-cdaa-5797-b9a2-fe6d47e24a34"
+predicate = "tests"
+object_kind = "statement"
+object_id = "89a4b3a6-c839-5599-b627-c55c2ba25b5f"
+note = "Tests omitting MAXIME sense coverage with exclusivity on the selected degree profile."

@@ -1,0 +1,9 @@
+{
+  "id": "11dc5069-a46b-47b5-ba97-bc9cf00c4b28",
+  "label": "Being able to be without another has an accessible existence witness",
+  "paraphrase": "OPEN realization assumption at the supplied origin: whenever x can be without y, some world accessible from the origin in the shared ontology has x existing and y absent. This assumes only the realization direction.",
+  "lean_declaration": "TruthCore.Causality.CounterfactualDependence.BeingWithoutHasAccessibleWitness",
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2"
+  ]
+}

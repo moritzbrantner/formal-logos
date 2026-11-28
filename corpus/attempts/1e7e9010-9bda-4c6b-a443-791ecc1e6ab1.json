@@ -1,0 +1,27 @@
+{
+  "id": "1e7e9010-9bda-4c6b-a443-791ecc1e6ab1",
+  "label": "Root links from Ludwig Wittgenstein, Tractatus Logico-Philosophicus",
+  "statement_ids": [
+    "29eb8c46-7ef0-5e8d-8baf-295ee6325a76",
+    "01991d29-248c-5d9e-97aa-c333404dd0c9"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "6.53, \"To say nothing except what can be said, i.e. the propositions of natural science\": The proposed method limits what is said to scientific propositions and diagnoses certain signs as lacking assigned meaning. Applying it to the target requires deciding what the method claims of the selected God-language signs and whether its scope includes every case sentence under discussion. 6.54, \"he who understands me finally recognizes them as senseless\": The ladder remark applies to the book's own elucidations. A target that reads the limits of God sentences as a substantive asserted doctrine must account for this self-application, including the traditional and resolute options.",
+  "evidence": [
+    "3e8600a1-b38e-5263-9a7f-b748a5d84222",
+    "961d3f49-e6e0-58cc-9686-0615058043ef",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

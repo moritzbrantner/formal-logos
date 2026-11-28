@@ -5,15 +5,57 @@
   "statement_ids": [
     "8626f8a5-9531-5da7-9ebd-f901e74b1129",
     "94808f80-2c73-4757-b95e-61808b5bcde5",
-    "d4ada0cc-ad6a-4713-a540-3ca6caaafd90"
+    "d4ada0cc-ad6a-4713-a540-3ca6caaafd90",
+    "27379412-f94e-44b0-8e29-1b548bc142d1",
+    "ad278bbf-84c0-4833-8810-e451c4797574",
+    "7646255d-dc5a-460d-ac88-8c11ecc5cbcd"
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Analyst finite normalized observer-conditioned model; selection and designer-calibration omissions separately reverse Bayes-factor direction. Nonvacuity and prior-odds control. Interpretation, calibration and theological bridges remain open. See docs/notes/fine-tuning-selection.md for rejected readings and exact boundaries.",
+  "summary": "Analyst finite normalized observer-conditioned model; selection and designer-calibration omissions separately reverse Bayes-factor direction. Nonvacuity and prior-odds control. Interpretation, calibration and theological bridges remain open. See docs/notes/fine-tuning-selection.md for rejected readings and exact boundaries. #2050: Equal observer-conditioned binary likelihoods give zero mutual information at any interior prior. The screened pair has identical certain fine reports despite unequal comparison weights; observing observerhood before selection distinguishes the same pair. The calibrated pair has positive fine-report information. Under the coherent interior Bayesian update profile, the Brier and Shannon zero conditions agree. Independent Astra review accepted the information-theoretic comparison and rejected the proposed teleonomy edge. The fixed Boolean filter did not exercise heritability or local advantage. The retained statements carry an explicit open connection plan to GOD_4.",
   "evidence": [
     "8bd85a69-2977-4e16-b4cd-5f0c1723e232",
     "237e878c-e671-46b0-a10c-25890ec8d90d",
-    "PR-1258"
+    "PR-1258",
+    "2a31f820-89a6-4b49-b20f-34239f966727",
+    "05180ad2-fb54-4fdf-9e4d-7fd5e6323303",
+    "fc550063-aa4c-49e7-9e32-10bb8d1fe952",
+    "PR-2101"
   ],
-  "blocker": "No actual sampling or likelihood estimate, actual designer inference or GOD_4 identification. Root connection remains planned."
+  "blocker": "The route to GOD_4 requires calibrated physical sampling, a warranted inference to an actual designer, and identification of that same witness with GOD_4.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2101"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2101"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "27379412-f94e-44b0-8e29-1b548bc142d1",
+      "ad278bbf-84c0-4833-8810-e451c4797574",
+      "7646255d-dc5a-460d-ac88-8c11ecc5cbcd"
+    ],
+    "scope": "Binary fine-evidence report in the existing three-cell sampling profiles after observer selection.",
+    "assessment": "Different conditional report laws give the strongest positive discrimination within the matched profile. Observer selection can screen the report off entirely, even when observerhood distinguishes the same pair before selection. The fixtures leave the actual origin models unranked because their physical likelihoods are uncalibrated.",
+    "next_test": "Reassess when candidate origin models derive different distributions of more specific observed features under a common observer selection and measurement rule. Any GOD_4 application also requires a warranted actual-designer inference and identification of that witness.",
+    "note": "docs/notes/fine-tuning-selection.md#2050-information-in-the-report-after-observer-selection",
+    "reviewed_revision": "b6112277efa2fb4f88e74106a30feaf2efa12058",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent Astra review of b6112277 accepted the mathematical core, fine-tuning application and rival assessment, and rejected the separate teleonomy edge. This repair removes that edge and records the open bridge. The repair revision awaits re-check.",
+    "supersedes": "none"
+  }
 }

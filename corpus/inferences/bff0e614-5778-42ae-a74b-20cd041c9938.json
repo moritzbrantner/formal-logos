@@ -1,0 +1,10 @@
+{
+  "id": "bff0e614-5778-42ae-a74b-20cd041c9938",
+  "label": "Test occurrence identification under truthful selective disclosure (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "05719a6e-f043-4f6c-8591-f038779062ce",
+  "rule": "Apply the absence criterion and compare exact observation fibers",
+  "meaning": "Reuses the archive absence lemma and the earlier populated three-event case. Applying the proposition identification criterion to the same event across two histories separates the truth of disclosed entries from recoverability of omitted events. The control supplies no actual-history, recipient uptake, normative, source-attribution or metaphysical possibility premise.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

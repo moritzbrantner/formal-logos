@@ -1,0 +1,10 @@
+{
+  "id": "fffecbd4-f859-46a3-817b-1515eba3ebcb",
+  "label": "Test by Root bundle immutability witness and omission controls",
+  "subject_kind": "result",
+  "subject_id": "c198d4da-f06c-4f22-b532-89103d100e6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "note": "Tests omission from the unchanged immutability bundle in the finite profile renaming the mutable bearer as GOD_4."
+}

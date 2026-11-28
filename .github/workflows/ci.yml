@@ -164,7 +164,7 @@ jobs:
         if: needs.comparator-plan.outputs.lean == 'true'
         run: target/release/truth unused-premises --strict
       # `truth countermodel` (docs/countermodels.md) rediscovers the hand-written
-      # omission certificates of five results and Lean accepts every one; the solver
+      # omission certificates of unchanged consumers; Lean accepts every one. The solver
       # and its golden replays run offline in the truth-cli job.
       - name: Rediscover omission countermodels with Lean
         if: needs.comparator-plan.outputs.lean == 'true'
@@ -184,6 +184,14 @@ jobs:
             --module TruthCore.Results.Logic.AssertionRetorsion.Solution --all --size 2 \
             | jq -e '.reports | length == 3 and all(.status == "lean-checked")' >/dev/null \
             || { echo "unary-function countermodel rediscovery failed"; exit 1; }
+          target/release/truth --json countermodel \
+            TruthCore.Results.Causality.Round2ExistenceAct.existentInActFromEleaticPower \
+            --module TruthCore.Results.Causality.Round2ExistenceAct.Solution --omit hAct --size 2 \
+            | jq -e '.reports | length == 1 and all(.omitted == "hAct" and .status == "lean-checked")'
+          target/release/truth --json countermodel \
+            TruthCore.Results.Causality.DependenceGroundingPriority.simplyPriorGroundViaDistinctDependence \
+            --module TruthCore.Results.Causality.DependenceGroundingPriority.Solution --omit hReq --size 2 \
+            | jq -e '.reports | length == 1 and all(.omitted == "hReq" and .status == "lean-checked")'
       # Duper (owner decision 2026-11-19, docs/axiom-policy.md): its reconstructed proofs
       # stay within the three classical axioms, and `truth discover` (docs/discover.md)
       # finds, minimizes and certifies one known derivation end to end (a fixed target,
@@ -221,6 +229,52 @@ jobs:
       - name: Report the orphan-count delta
         if: always() && github.event_name == 'pull_request'
         run: target/release/truth orphans --base HEAD^1 | tee -a "$GITHUB_STEP_SUMMARY"
+      # Cohesive-graph goal (owner direction, 2026-11-26): the report shows statements
+      # with no recorded contact with the root (counts are not a score) and every
+      # connection plan. On a PR (checkout is the merge commit, so HEAD^1 is the base)
+      # the gate fails when a statement new since the base, moved out of the root's
+      # typed component, or planned at the base, is outside that component (attempt
+      # co-citation excluded) without a valid connection_plan (docs/corpus-model.md).
+      - name: Gate new graph disconnection
+        if: always()
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          set -o pipefail
+          {
+            echo "### Graph connectivity (\`truth connectivity\`, diagnostic)"
+            echo '```text'
+            target/release/truth connectivity --list-isolated 20 || true
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          if [[ "$EVENT" == pull_request ]]; then
+            {
+              echo "### Connectivity gate (\`truth connectivity --base HEAD^1\`)"
+              echo '```text'
+              status=0
+              target/release/truth connectivity --base HEAD^1 || status=$?
+              echo '```'
+              exit "$status"
+            } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      # Result placement (owner decision, 2026-11-27, #2103): typed contact is not enough
+      # for verified results. The gate fails when a result new since the base, whose
+      # argument changed, or that lost its placement, neither reaches the root nor is a
+      # placed diagnostic or rival nor carries a connection_plan to a root-path statement.
+      # Pre-existing unplaced results are reported as backlog. connectivity --base above
+      # still judges statements, which this gate does not cover.
+      - name: Gate new results on reaching the root or placement
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo "### Placement gate (\`truth orphans --base HEAD^1 --gate\`)"
+            echo '```text'
+            status=0
+            target/release/truth orphans --base HEAD^1 --gate || status=$?
+            echo '```'
+            exit "$status"
+          } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       # Attribution self-check (#989, owner decision 2026-11-05): on a PR, every new or
       # changed stating claim (or claim whose statement text or passage changed) must
       # record "The passage states X, which is the premise." CI checks the record

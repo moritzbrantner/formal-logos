@@ -1,0 +1,10 @@
+{
+  "id": "68bd8f8c-e3b5-476d-ad62-1794abbd66f0",
+  "label": "Source support for 26e8e6ed from reading fd0230f2",
+  "subject_kind": "claim",
+  "subject_id": "ec3bfcb9-5529-5447-8a8e-5adc9d9d91c8",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "26e8e6ed-964e-55ef-a9fd-756164aad6a7",
+  "note": "Leibniz appeals to a necessary universal substance on which all else depends in arguing to unlimited reality. Applying the argument to the target requires showing that its same esse-identical, noncomposite bearer realizes that universal dependence and that Leibniz's absence of limits entails the target's specified perfection bounds."
+}

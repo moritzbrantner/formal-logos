@@ -1,0 +1,20 @@
+{
+  "id": "e31b4d08-658f-4eb7-a96c-8ab1c25b54d6",
+  "label": "Actual individuals outside the selected fusion scope are CONCRETE_6",
+  "paraphrase": "At w every actual individual outside SelectedFusionPart for this sum is CONCRETE_6. The scope excludes the parts of the selected sum and the parts of every actual cause of that sum, in the same order.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.OutsideFusionActualConcreteAt",
+  "definition_ids": [
+    "4295a4ac-0a5a-4ea7-88b3-8a3551415dd5",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ],
+  "connection_plan": {
+    "target_statement_id": "0e02cd69-8fb0-4859-8287-937440c84b5b",
+    "missing_bridge": "An application with independently warranted concreteness for both the local and outside classes.",
+    "blocker": "The outside calibration by itself classifies no in-scope actual individual. Its role here is the exact difference in the strength comparison."
+  }
+}

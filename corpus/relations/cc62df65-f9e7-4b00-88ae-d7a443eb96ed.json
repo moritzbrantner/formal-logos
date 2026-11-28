@@ -1,0 +1,10 @@
+{
+  "id": "cc62df65-f9e7-4b00-88ae-d7a443eb96ed",
+  "label": "Test by A universal conditional: under StrictForward, the link b for If some causal event edge (1)",
+  "subject_kind": "result",
+  "subject_id": "6b56e320-bccc-5656-a862-f797bfa63ab8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2c8373ac-78d5-50aa-a2d0-3f3a7b8b6bec",
+  "note": "Tests the simultaneous-slice regress condition by contrasting the alternating circle with the simultaneous three-event chain."
+}

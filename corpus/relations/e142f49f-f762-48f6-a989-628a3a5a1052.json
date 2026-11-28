@@ -1,0 +1,10 @@
+{
+  "id": "e142f49f-f762-48f6-a989-628a3a5a1052",
+  "label": "Source qualification for bd0a956c from reading 1f56b796",
+  "subject_kind": "claim",
+  "subject_id": "9f49c161-11f3-5a1c-9768-b5304c17e537",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "bd0a956c-149e-5d7d-9771-b974da72fd3a",
+  "note": "Leibniz's relative-order account gives a reason to treat preserved relations on a globally relocated material arrangement as the same order. Transferring that to the case needs the represented pure real determinations to be exhaustively fixed by the relations, and identity of the bearer rather than only of the order."
+}

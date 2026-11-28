@@ -60,3 +60,33 @@ predicate = "logically_equivalent_to"
 object_kind = "statement"
 object_id = "c94b5446-e7e7-5b36-9bed-288959725526"
 note = "The same proposition on two carriers: SomeContingentConcreteAt F concrete w ('some x is concrete and ContingentAt F.history.ontic w x', exists at w and fails to exist at some world accessible from w) is SomeActualContingentAt on the ground profile of F with the same concreteness predicate (groundProfile F concrete grounds, whose ontic is F.history.ontic), for every grounding relation, which the proposition does not mention. Verified as someContingentConcreteIff (Iff.rfl), a Comparator-checked theorem of the restated-premise controls result. Same contingency sense (MODAL_CONTINGENCY_1, DEF-KANT-MODAL-CONTINGENCY) and model (DEF-KANT-ONTOLOGICAL-MODEL). Both take the concreteness predicate as a parameter; the c94b5446 record also reads it as CONCRETE_6 (DEF-CONCRETE-ESSE-IN-RE), while c76b6e2c leaves the selected predicate open, so the equivalence holds whenever the same predicate is supplied and does not fix the c76b6e2c routes to CONCRETE_6. Every profile is the ground profile of some frame on its own ontic, so the equivalence needs only the same concreteness predicate. The records stay distinct (Pruss routes on the CausalityFrame, the contingent-being node on its route profile); no argument is registered in either direction."
+
+[[relation]]
+id = "Test by Restated-premise controls, checked"
+label = "Test by Restated-premise controls, checked"
+subject_kind = "result"
+subject_id = "554f060b-f097-4729-b90a-196d535448ac"
+predicate = "tests"
+object_kind = "statement"
+object_id = "22954087-d5fb-4bd3-bcb7-5d5167016988"
+note = "Checks the exact selected-meditator reformulation by using the same occurrence, bearer and meditator fields."
+
+[[relation]]
+id = "Test by Restated-premise controls, checked for Whatever has its being by participation has a c (1)"
+label = "Test by Restated-premise controls, checked for Whatever has its being by participation has a c (1)"
+subject_kind = "result"
+subject_id = "554f060b-f097-4729-b90a-196d535448ac"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2b25a78c-abad-50d9-abb9-31a753409192"
+note = "Checks definitional equivalence of the two participated-esse other-cause formulations at the same parameters."
+
+[[relation]]
+id = "Test by Restated-premise controls, checked for Some concrete being is CONTINGENCY_1 at w"
+label = "Test by Restated-premise controls, checked for Some concrete being is CONTINGENCY_1 at w"
+subject_kind = "result"
+subject_id = "554f060b-f097-4729-b90a-196d535448ac"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
+note = "Checks equality of the contingency readings on the same frame, world, grounding relation and concreteness predicate."

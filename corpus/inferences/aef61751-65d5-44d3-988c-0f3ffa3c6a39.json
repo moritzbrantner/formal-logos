@@ -1,0 +1,14 @@
+{
+  "id": "aef61751-65d5-44d3-988c-0f3ffa3c6a39",
+  "label": "Accessible witness preservation rules out being without a source of dependence (inference)",
+  "input_statement_ids": [
+    "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361",
+    "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+    "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"
+  ],
+  "output_statement_id": "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+  "rule": "Preserve a realized contrast witness, which then contradicts selected absence soundness",
+  "meaning": "Conditional support at the same origin. If a dependent effect could exist without its source, realization gives an accessible contrast witness. Preservation supplies a selected accessible contrast witness for the same pair. Dependence soundness excludes the effect there, contradicting its presence. This uses only witness preservation alongside the original realization and soundness premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

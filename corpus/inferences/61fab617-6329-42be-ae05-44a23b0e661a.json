@@ -1,0 +1,10 @@
+{
+  "id": "61fab617-6329-42be-ae05-44a23b0e661a",
+  "label": "The dependence reading moves the transfer load to the total-cause premise, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f2fa8028-0527-45a9-a109-2eae3a9df6fa",
+  "rule": "Unfold the dependence reading; use actuality only insofar as being",
+  "meaning": "Assume nothing has actuality except insofar as it is. Every perfection had in act is then had together with being, so it is a mode of being in the dependence sense, and the total-cause premise at that reading demands causation of every perfection had in act. Premise-free: the implication itself.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -187,3 +187,23 @@ comparator_theorems = ["necessaryOfUniversalMemberwiseGiving", "selfGivingSepara
 definitions = ["6e811e85-b983-5988-b20a-f4f3ee83c50e", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "008cb21a-256c-5a90-822c-acd4591d699a", "375676b0-a295-4a17-a9e4-3db23319d517", "d0757d5d-5f68-4e2e-9bd8-4ed8f57dc5ee", "c0d65b45-33bb-47a2-b16b-48a493a762cb", "028c1066-481d-4eb4-a96e-01ad62f85a2c", "9e1d45f4-7cee-44b5-a911-803c95b3fa07", "67a624ba-11f6-4535-8154-8295b2d62765", "77254d4d-c318-40a3-b2a1-5c922632f011", "158301bc-9585-4145-be60-34f08c9f922c"]
 disambiguations = ["88a8fba7-f1a1-4340-8a7f-41dd39bbbe7d"]
 
+
+[[relation]]
+id = "Test by Finite-duration Arrival B controls checked"
+label = "Test by Finite-duration Arrival B controls checked"
+subject_kind = "result"
+subject_id = "ebf324e3-ecbb-4d14-92dc-1bfa19702074"
+predicate = "tests"
+object_kind = "statement"
+object_id = "256b5bab-d753-4167-a802-421954a3da48"
+note = "Tests omission of this premise from necessaryConcreteOfFiniteDurationBeginning in the open-below history retaining the finite-duration beginning and the required frame laws but with no totality cause."
+
+[[relation]]
+id = "7cfd0928-c134-4130-81c8-ad8d3c06b037"
+label = "Finite-duration arrival test with possible population and no metric past bound"
+subject_kind = "result"
+subject_id = "ebf324e3-ecbb-4d14-92dc-1bfa19702074"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4365c3c5-d39b-405c-97a9-a4f7e43c628f"
+note = "Tests omission of PopulatedPastsMetricallyFinite in the beginningless integer history pivot with the identity clock, where PossiblyPopulated holds and PossiblyBeginsFiniteDuration fails."

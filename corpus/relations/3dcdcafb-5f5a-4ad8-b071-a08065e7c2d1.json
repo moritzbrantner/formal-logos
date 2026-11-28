@@ -1,0 +1,10 @@
+{
+  "id": "3dcdcafb-5f5a-4ad8-b071-a08065e7c2d1",
+  "label": "Source qualification for cdc7a58f from reading 3c931390",
+  "subject_kind": "claim",
+  "subject_id": "80203a87-5d80-544e-b1f9-330102c300a7",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Carnap distinguishes empirical reasons to adopt an efficient framework from evidence for the reality of the framework's world. Transferring that restriction requires deciding whether the case makes an external framework claim or asserts a feature internally, with a fixed domain and interpretation."
+}

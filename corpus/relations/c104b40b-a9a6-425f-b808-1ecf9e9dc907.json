@@ -1,0 +1,10 @@
+{
+  "id": "c104b40b-a9a6-425f-b808-1ecf9e9dc907",
+  "label": "Source qualification for 58e8a6b6 from reading 6d829efb",
+  "subject_kind": "claim",
+  "subject_id": "4da1a2cf-e205-527d-8d5c-f03c950ea34b",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "58e8a6b6-8cc5-5b17-83b4-918295222606",
+  "note": "The Tractatus locates value outside the world of contingent facts and thereby denies ethical propositions in its picture account. A clash with the target requires moral facts in its domain to be the kind of value claims the Tractatus excludes, and a defense of that restriction on propositions."
+}

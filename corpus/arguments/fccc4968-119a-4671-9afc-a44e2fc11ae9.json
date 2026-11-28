@@ -1,0 +1,38 @@
+{
+  "id": "fccc4968-119a-4671-9afc-a44e2fc11ae9",
+  "label": "NAR from admissible root cells and exclusion of NECESSARY_2 recipient withholding",
+  "premise_statement_ids": [
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
+    "bf7b9a2d-d98f-49a4-a236-c963c4830693"
+  ],
+  "conclusion_statement_id": "43651417-cd19-43d7-8f70-8def61acb0f0",
+  "inference_ids": [
+    "3268a24a-5262-4738-a82f-06c4d57a6134"
+  ],
+  "meaning": "For any NECESSARY_2 actual concretum, common-root reach either identifies it as the root or gives the root as its ground. In the grounded case the selected cell has an admissible representative by the two STIT premises, contradicting recipient exclusion with the same profile, frame and map. Only root and reach are used from the intellectual common-root premise. Instantiating the exclusion with rigidity reuses the original composed N1 assumptions.",
+  "definition_ids": [
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1620ba7e-edb9-56c4-bd02-3ece55903b1c",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+  ],
+  "disambiguation_ids": [
+    "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6",
+    "205a39c3-915d-5fe4-8076-a9ff91329e08",
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "strong_version_needed": {
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9": "Retains the frozen all-recipient proof for comparison. The necessary-only route supplies the restriction that suffices for NAR."
+  }
+}

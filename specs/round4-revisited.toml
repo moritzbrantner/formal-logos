@@ -244,3 +244,293 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-INTELLECT-FOLLOWS-GRADE-OF-IMMATERIALITY"
 note = "Q.14 a.1 co. says the mode of knowledge follows the mode of immateriality and that intellect is more separated from matter than sense. The premise reads this as upward closure of the primitive intellect power along an unordered grade relation; the text speaks of degrees of cognition, not of closure of a fixed power, and does not address abstract objects."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whoever causes a thing in (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whoever causes a thing in (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0014afa4-30be-5693-9a41-93bf0eaa923c"
+note = "Tests omitting this premise in the encoded necessityFromConsistsInBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever is in POTENCY_1 (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever is in POTENCY_1 (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "010988b9-346a-5b81-8ad8-98a1c43debeb"
+note = "Tests omitting this premise in the encoded actPriorFromMotionFork argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Nothing that is being mov (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Nothing that is being mov (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "079b53bf-a222-5dfc-b8df-7419f9e98030"
+note = "Tests omitting this premise in the encoded actPriorFromMotionFork argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for OPEN analyst reading of ' (1)"
+label = "Test by Finite interpretations for the nine derivations of round for OPEN analyst reading of ' (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0bdb0436-34ad-5409-9bdf-20cd4bcc4fb8"
+note = "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for The bearer principle: eve (1)"
+label = "Test by Finite interpretations for the nine derivations of round for The bearer principle: eve (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "30e6e01c-b7f1-536c-86ae-0a9be35dd160"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction, inhabitedFromPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whoever causes a thing in (2)"
+label = "Test by Finite interpretations for the nine derivations of round for Whoever causes a thing in (2)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3c20c835-0af9-52d9-bbff-32fb22ceaff6"
+note = "Tests omitting this premise in the encoded necessityFromPerfection argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for What is ALTOGETHER_IMMATE (1)"
+label = "Test by Finite interpretations for the nine derivations of round for What is ALTOGETHER_IMMATE (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "44000fce-47be-5597-b176-61e2f270199c"
+note = "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whoever is attributed an (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whoever is attributed an (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "54b0131b-96f2-51b6-b47d-87a0b7f2219c"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Something HAS_INTELLECT_1"
+label = "Test by Finite interpretations for the nine derivations of round for Something HAS_INTELLECT_1"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5854ef2b-41dd-5617-99d2-f53a850c35fd"
+note = "Tests omitting this premise in the encoded immaterialIntellectualFromGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for OPEN capacity clause alon (1)"
+label = "Test by Finite interpretations for the nine derivations of round for OPEN capacity clause alon (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "61b6e188-39aa-57d9-9e0b-dedc05226995"
+note = "Tests omitting this premise in the encoded inhabitedFromPower argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for The necessity of every NE (1)"
+label = "Test by Finite interpretations for the nine derivations of round for The necessity of every NE (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "651a68d4-a36e-5237-925b-ffdedcf41144"
+note = "Tests omitting this premise in the encoded necessityFromConsistsInBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever is being moved i (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever is being moved i (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6b9fedc2-6fea-530b-bc6d-116a5d307a54"
+note = "Tests omitting this premise in the encoded actPriorFromMotionFork argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for A being in act in a respe (1)"
+label = "Test by Finite interpretations for the nine derivations of round for A being in act in a respe (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6ca87431-3383-58f6-9322-a1f0e8f0396b"
+note = "Tests omitting this premise in the encoded actPriorFromMotionFork argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whoever is attributed an (2)"
+label = "Test by Finite interpretations for the nine derivations of round for Whoever is attributed an (2)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8061edec-5af6-5d25-81b4-e1ccd98207fa"
+note = "Tests omitting this premise in the encoded inhabitedFromPower argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Every POTENCY_1 has a gro (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Every POTENCY_1 has a gro (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8a1d7012-3a77-5c78-a5b1-30006aa4ae8c"
+note = "Tests omitting this premise in the encoded actPriorFromGround argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for In ordered efficient caus (1)"
+label = "Test by Finite interpretations for the nine derivations of round for In ordered efficient caus (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8a22ae75-4198-5a32-ae52-bad2848a50a5"
+note = "Tests omitting this premise in the encoded perSeMoverLinkFromEfficientCausing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Bearers exercise intellec (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Bearers exercise intellec (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8cf54bde-0c97-5428-9179-0d567293675d"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction, inhabitedFromPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whenever y moves x as mov (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whenever y moves x as mov (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9c252f24-3d84-5246-9551-2637c0fe6379"
+note = "Tests omitting this premise in the encoded perSeMoverLinkFromEfficientCausing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever grounds a thing' (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever grounds a thing' (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a4606a6b-8209-58d9-b221-a26a7f31b0e1"
+note = "Tests omitting this premise in the encoded actPriorFromGround argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever moves another in (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever moves another in (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a7d2b839-5873-585e-ae86-4ec36c563b10"
+note = "Tests omitting this premise in the encoded perSeMoverLinkFromEfficientCausing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Having two distinct const (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Having two distinct const (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b67c6bb9-3a56-5400-89f7-c6eb6f0eb2a1"
+note = "Tests omitting this premise in the encoded compositionsFromConstituents argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for OPEN activity clause alon (1)"
+label = "Test by Finite interpretations for the nine derivations of round for OPEN activity clause alon (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bc2af29f-8202-50f4-a177-b8dd21e135b1"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever grounds a potenc (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever grounds a potenc (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bf374f2e-df3b-5e8f-bea8-9fcfe680141b"
+note = "Tests omitting this premise in the encoded actPriorFromGround argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Every bearer of an occurr (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Every bearer of an occurr (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c821487b-9c5e-5836-bf27-dcb47f210c94"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction, inhabitedFromPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Whatever is composed of m (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Whatever is composed of m (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cc0f7879-dba8-5b47-ab8d-3905d1e518a6"
+note = "Tests omitting this premise in the encoded compositionsFromConstituents argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Every NECESSARY_1 being i (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Every NECESSARY_1 being i (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d483248e-677b-5120-989c-ccc30debac75"
+note = "Tests omitting this premise in the encoded necessityFromPerfection argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for Some thought episode occu (1)"
+label = "Test by Finite interpretations for the nine derivations of round for Some thought episode occu (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e81971f1-601c-57f5-be2d-c4b0624d0cad"
+note = "Tests omitting this premise in the encoded inhabitedFromProduction, inhabitedFromPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for When a thing's esse is ot (1)"
+label = "Test by Finite interpretations for the nine derivations of round for When a thing's esse is ot (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f5db1796-20b1-5eef-8953-ef549815e989"
+note = "Tests omitting this premise in the encoded compositionsFromConstituents argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the nine derivations of round for The cause of a thing's be (1)"
+label = "Test by Finite interpretations for the nine derivations of round for The cause of a thing's be (1)"
+subject_kind = "result"
+subject_id = "9b1c8d31-2458-5ece-9902-ea7dd0371d6c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f8ba2429-b4f1-5712-a4d3-798213963d34"
+note = "Tests omitting this premise in the encoded necessityFromPerfection argument, with the other premises retained and the conclusion false in each corresponding control."

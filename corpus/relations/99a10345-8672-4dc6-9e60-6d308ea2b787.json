@@ -1,0 +1,10 @@
+{
+  "id": "99a10345-8672-4dc6-9e60-6d308ea2b787",
+  "label": "Test by FirstMoverNecessity.receptionControls (ae9d9473)",
+  "subject_kind": "result",
+  "subject_id": "ed10e3b5-4804-4fa8-bb17-cc1835c24659",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ae9d9473-34f1-4b51-8f13-41d340d64ad1",
+  "note": "Test contingent receipt in the bruteFirst variant at reading world true. The supplied first mover f is present there and absent at false, and its represented esse and essence are distinct. The reception relation is empty, so f fails R1 despite satisfying the represented esse distinction."
+}

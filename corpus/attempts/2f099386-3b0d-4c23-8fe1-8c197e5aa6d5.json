@@ -1,0 +1,25 @@
+{
+  "id": "2f099386-3b0d-4c23-8fe1-8c197e5aa6d5",
+  "label": "Root links from Rudolf Carnap, \"Überwindung der Metaphysik durch logische Analyse der Sprache\"",
+  "statement_ids": [
+    "366b8be6-b2b5-5c9a-9287-9d0a92e30a43"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§1, p. 3, \"Im strengen Sinn sinnlos ist dagegen eine Wortreihe, die innerhalb einer bestimmten, vorgegebenen Sprache gar keinen Satz bildet.\": Carnap supplies a different demarcation mechanism: look for unassigned meanings or violation of the relevant syntax in a purported sentence. To reach the case's specific philosophical claims, that test must be applied in a specified language rather than presuming the whole scope from the label metaphysical.",
+  "evidence": [
+    "54bd32fa-88a3-5598-8792-6b213c885c0f",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

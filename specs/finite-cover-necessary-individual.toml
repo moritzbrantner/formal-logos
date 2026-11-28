@@ -1,0 +1,11 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.StageOne.NecessaryIndividual"
+results = "TruthCore.Results.Case.Catholicism.FiniteCoverNecessaryIndividual"
+
+[[argument]]
+id = "One individual persists across successors under finite population cover"
+theorem = "necessaryIndividualOfFiniteCover"
+premises = ["STMT-EXCLUDED-MIDDLE", "STMT-ACCESSIBLE-SUCCESSOR", "STMT-ABSENCE-AMALGAMATION", "STMT-FINITE-POPULATION-COVER", "STMT-NECESSARY-INDIVIDUAL-DE-DICTO"]
+conclusion = "STMT-NECESSARY-INDIVIDUAL-DE-RE"
+rule = "Finite omission induction, followed by a contradiction with de dicto population"
+meaning = "Registers the existing finite_cover_deRe derivation. On one frame, population predicate and base world, excluded middle, accessible-successor existence, absence amalgamation, finite population cover and de dicto population imply that one individual is present at every accessible world. Concrete divine witness identification requires further premises."

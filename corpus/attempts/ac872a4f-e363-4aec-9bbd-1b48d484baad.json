@@ -1,0 +1,35 @@
+{
+  "id": "ac872a4f-e363-4aec-9bbd-1b48d484baad",
+  "label": "Retained readings from Paul, Philippians",
+  "statement_ids": [
+    "2b67b7e9-59b2-5af9-bde4-7d9914b6702f",
+    "4fbdac84-adfc-5e86-9856-fa517b0ca8b2"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "2.6: Philippians 2.6 is used in docs/philippians-christology.md to compare divine-form and equality readings. A route to Jesus's own claim needs a bridge from Paul's description to a claim made by Jesus himself. 2.9-11: Philippians 2.9–11 is used in docs/philippians-christology.md to compare exaltation and homage readings. Connecting it to the historical resurrection premise requires identifying the exaltation with the claimed event and evaluating the testimony.",
+  "evidence": [
+    "17349a64-690f-50c7-8d2b-593b7265d642",
+    "7b67a2b1-9386-5f2e-a299-87d868f6bda7",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

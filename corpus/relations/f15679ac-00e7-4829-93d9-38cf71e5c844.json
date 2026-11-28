@@ -1,0 +1,10 @@
+{
+  "id": "f15679ac-00e7-4829-93d9-38cf71e5c844",
+  "label": "Test by Subtraction argument controls checked for Unrestricted free absence among distinct con (1)",
+  "subject_kind": "result",
+  "subject_id": "7c5984f9-2424-428e-b1d7-539b490d8eba",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ff30c214-d193-4501-a6a8-0a5bdeb80477",
+  "note": "Tests the converse strength implication in the registered interpretation. Same profile and world. Strict: in the theist model (God at both worlds, one creature at one world, universal access) free absence for candidates that could be absent holds and unrestricted free absence fails, at x the creature and y God (controls)."
+}

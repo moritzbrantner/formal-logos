@@ -1,0 +1,10 @@
+{
+  "id": "2a2401fa-762d-41e7-a3ac-565d93101b60",
+  "label": "Test by For every supplied type and predicate P, unique existenc for For an arbitrary supplied (1)",
+  "subject_kind": "result",
+  "subject_id": "e3aea651-fe22-5812-8e64-becbe2c366e8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f976f890-aba8-59cb-a312-1feaf833e727",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f13ef592-d31b-4a44-836d-1737cb9eb5e8",
+  "label": "Source qualification for 0db3a62e from reading 94b82989",
+  "subject_kind": "claim",
+  "subject_id": "3368c027-2f31-5c09-a17d-0d05a6a4dcf1",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "0db3a62e-90ec-59a3-8599-f3843f636af1",
+  "note": "The reported intuitionist reading distinguishes knowing a truth from admitting an arbitrary assertion. To use knowing-as-proof for the case's assertion condition, the selected assertions must be knowledge-assertions in the mathematical practice and require proof in the relevant system."
+}

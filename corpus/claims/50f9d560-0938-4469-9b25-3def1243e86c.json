@@ -1,0 +1,13 @@
+{
+  "id": "50f9d560-0938-4469-9b25-3def1243e86c",
+  "label": "Descartes: An idea derives its particular objective reality from a cause",
+  "statement_id": "c4b4f646-2733-4009-bb2c-d498f5681064",
+  "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+  "locator": "Meditatio III, AT VII 40–42, §§13–16",
+  "interpretation": "The idea as an exercise of thought borrows its formal being from the meditator’s thinking. The causal demand here explains its having this objective reality. Section 15 allows one idea to arise from another and requires a first archetype.",
+  "status": "formalized",
+  "attribution": "The passage states that an idea derives its particular objective reality from a cause with at least as much formal reality as the idea contains objectively, which is the premise.",
+  "definition_ids": [
+    "e4b40a41-13ee-4272-b38a-1c992776ab4e"
+  ]
+}

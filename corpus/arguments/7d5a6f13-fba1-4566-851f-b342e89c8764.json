@@ -1,0 +1,22 @@
+{
+  "id": "7d5a6f13-fba1-4566-851f-b342e89c8764",
+  "label": "Profile global calibration implies local fusion calibration",
+  "premise_statement_ids": [
+    "dd5cd8fa-cc79-4a1c-8871-3fc7633dfb3f"
+  ],
+  "conclusion_statement_id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
+  "inference_ids": [
+    "f06b2fc7-3ab1-451b-a1d8-9835ab98b8f4"
+  ],
+  "meaning": "Apply the existing global-to-local proof to the definitionally equal profile form, with the same world, sum and order.",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "008cb21a-256c-5a90-822c-acd4591d699a",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "c651b2bd-5178-4367-9182-3e235625fde3",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

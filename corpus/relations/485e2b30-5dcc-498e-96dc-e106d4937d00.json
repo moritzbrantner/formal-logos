@@ -1,0 +1,10 @@
+{
+  "id": "485e2b30-5dcc-498e-96dc-e106d4937d00",
+  "label": "Test by PrussPowerPremises.prussPowerControls (3ef41442)",
+  "subject_kind": "result",
+  "subject_id": "8ad1804e-06d1-4491-ba96-d3382245f2ad",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3ef41442-431a-4bed-83bd-4458ed623f5f",
+  "note": "Omit factivity of giving. In nonFactiveG with origin false, g is recorded as giving c being at both worlds. At true c is absent, yet the giving record remains. The other premises hold and the joint absence lacks the required withholding witness."
+}

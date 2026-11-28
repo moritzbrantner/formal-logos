@@ -93,3 +93,23 @@ conclusion = "Omission and nonvacuity controls for the two horns left to the ini
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Explicit interpretations with integer, natural-number and non-negative rational times, checked by case analysis and linear arithmetic"
 meaning = "Each horn survives every bundle with one member omitted. H2 (a non-well-founded populated past, endless or dense) survives state-causal finitism without the precedence bridge, the precedence bridge without finitism, and an earlier-grounded endless past; under the Reaper bridge it fails in every model; on dense time with a first moment it holds while A3 holds, the Reaper bridge fails, and no state-causation relation satisfies finitism and the precedence bridge together (each of those bridges can hold there alone). H1 (a never-generated contingent thing) survives grounding whenever some ground has no earlier presence: simultaneous (controls 4 and 5) or only later (control 7); without a necessary individual only with non-well-founded grounding. The rooted control satisfies every premise and bridge of the new arguments jointly. Model claims concern these interpretations only."
+
+[[relation]]
+id = "Test by Coming-to-be horn controls checked"
+label = "Test by Coming-to-be horn controls checked"
+subject_kind = "result"
+subject_id = "6d52624e-369a-4e6c-858d-bd3accc130de"
+predicate = "tests"
+object_kind = "statement"
+object_id = "20e6c7df-6eae-4afd-9f7e-b5e5e907ebee"
+note = "Tests the precedence-to-state-causation bridge in the endless history with an idle state-cause relation satisfying state-causal finitism."
+
+[[relation]]
+id = "Test by Coming-to-be horn controls checked for An endless populated past would admit a Grim Re (1)"
+label = "Test by Coming-to-be horn controls checked for An endless populated past would admit a Grim Re (1)"
+subject_kind = "result"
+subject_id = "6d52624e-369a-4e6c-858d-bd3accc130de"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f63cd425-ab12-404e-a431-3c798f5f4847"
+note = "Tests the Reaper assembly premise in the dense populated history with a first moment and non-founded pasts."

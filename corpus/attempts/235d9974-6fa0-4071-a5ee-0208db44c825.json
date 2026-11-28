@@ -1,0 +1,30 @@
+{
+  "id": "235d9974-6fa0-4071-a5ee-0208db44c825",
+  "label": "Selected-world concreteness and productive countercases",
+  "statement_ids": [
+    "35871d99-a2e5-5625-82c4-2b61836633a2",
+    "488eb991-a56a-506e-bc04-dd0abf33b80f",
+    "d75fefb5-07e7-590b-bba9-693dabd9da9d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "35871d99-a2e5-5625-82c4-2b61836633a2 (Variant): 5ed36963 projects the owner-approved weak commitment from the strong all-causal-senses hypothesis. The weak formula already suffices for its consumers that require causal power and efficient causes only; the strength result provides no evidence for the all-senses addition. Retain the strong statement solely as the stronger comparison input.\n\n488eb991-a56a-506e-bc04-dd0abf33b80f (Bridge): 210f93d4 and 25ce9863 need three separate no-esse productive exclusions of set, Form and mathematical-object cases in the same profile. Exclusion of the supplied equality cases against a GOD_4 candidate does not rule out productive power assigned elsewhere in the frame. For each named case, test whether its claimed role is productive esse-giving or structural/explanatory contribution, retaining the selected-world bearer.\n\nd75fefb5-07e7-590b-bba9-693dabd9da9d (Bridge): The same consumers require that existence of a capacity-only or productive no-esse countercase entail existence of some named productive one. It need not be the original witness. The capacity-only case illustrates the missing step from a power-having profile to any named producer; narrowing productive coverage alone still leaves that case. Test capacity-only and further-category productive cases separately on the same frame, or use independently justified restricted coverage that gives the exact intended weak conclusion.",
+  "evidence": [
+    "9679c661-c706-5a38-ac2c-c3a8dcf87cc2",
+    "839358ce-a242-4356-8fd8-75a4067980c7",
+    "da23017d-7eff-5baa-9370-b5a0c33ec15d",
+    "PR-2048"
+  ],
+  "blocker": "A capacity-only no-esse case and a further productive category remain distinct application gaps for the named elimination route.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

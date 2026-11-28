@@ -133,3 +133,13 @@ comparator_theorems = ["distinctPossessorWithoutBearer", "surpassedCauseWithEsse
 axioms = []
 rule = "Existential elimination and reintroduction preserving both witnesses, with actuality-to-being instantiated at the cause"
 meaning = "Extend the existing Meditation III result by applying actuality-to-being to its cause in the represented respect. The positive two-being control grants the full bundle while the meditator surpasses the cause at esse. The omission control retains all four Cartesian premises and a meditator with esse while the cause lacks esse. The weaker distinct-possessor endpoint uses occurrence and content independently of the bearer clause. A separate two-state mathematical control changes which lengths are accepted above every bound by changing a finite output rule. It illustrates determinate positive content in an unbounded domain; its subject matter is unary lengths."
+
+[[relation]]
+id = "0d1a1ae8-3069-4f9c-a968-396fc00de8a5"
+label = "Test by CartesianIdeaOfInfinite.objectiveAdequacySeparationControl (3845020d)"
+subject_kind = "result"
+subject_id = "114e32ea-99bb-4d3b-8f8d-3adda4508987"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3845020d-f64b-4a4f-8734-e8069a80e36a"
+note = "Omit objective adequacy for the occurring idea. The only bearer is its own idea's objective cause and has the respect some false associated with representing the infinite, while lacking the infinite respect some true. The idea, objective causation and the meditator's lack of the infinite all hold in the same assignment."

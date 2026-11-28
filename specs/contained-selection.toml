@@ -34,3 +34,13 @@ premises = []
 conclusion = "Existential coverage survives removing the explanation of the same contingent act"
 rule = "Exhaust the fixed fact and being signatures while preserving the original truth table"
 meaning = "Use the exact #742 ActingReason constructors. The deleted target has no admitted reason, while all other original edges remain. Source-existence tokens still explain the contingent target bearer in the #312 projection, but the separate contingent act fact refutes contingent-fact coverage. A necessary source true at world 1 fails to necessitate the act or outcome. The result executes the prior #1910 matched comparison; it does not claim that admitted edges are adequate reasons or actual causes."
+
+[[relation]]
+id = "Test by Matched act-reason deletion separates existential from contingent-fact coverage"
+label = "Test by Matched act-reason deletion separates existential from contingent-fact coverage"
+subject_kind = "result"
+subject_id = "31a48b76-871a-4205-9c51-58663787b64d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+note = "Tests whether local no-brute-existence coverage accounts for the contingent act that explains a target, keeping ontology and the existence-fact map fixed while removing the act's reason."

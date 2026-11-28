@@ -1,0 +1,29 @@
+{
+  "id": "bc8c3bce-d6ab-4d88-ab10-f8983f8a6d0e",
+  "label": "Root links from Immanuel Kant, Critique of Pure Reason",
+  "statement_ids": [
+    "3b5198a8-0463-5e7e-b3df-5f91c1a272ea",
+    "eaa3ec6d-de1b-5375-a0d7-cb53a6289578",
+    "e2f4b27c-6869-5cd5-b8e2-cd0c6ac63a95"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Analytic, Phenomena and Noumena, A238–241/B297–300; paragraph “That the understanding, therefore, cannot make”: Kant's limit on objectively valid synthetic cognition through categories restricts causal claims crossing the bounds of possible experience under his account. To apply it here one must identify the proposed originating relation with that categorical use and show which applications exceed possible experience, rather than infer absence of causal power. Analytic, Phenomena and Noumena, A248/B305; paragraph “It may be advisable, therefore, to express ourselves thus.”: Kant's distinction between transcendental meaning and determining transcendental use qualifies an application that takes pure causal concepts to determine supersensible objects. The case requires a separate warrant for a cause outside possible sensible experience and a match of the causal senses. Ideal, section V, A608–609/B636–637; paragraph “If the proposition”: Kant's reported conversion invokes nondifference among most-real beings. The uniqueness step still needs qualitative nondifference in all selected real determinations, their purity, and the identity principle for the relevant bearers.",
+  "evidence": [
+    "5fa97f31-dc20-5b2a-a0f2-9cf08fa8fbe7",
+    "b1c57851-d6e4-5321-bb85-661051489029",
+    "40a923af-9b72-57ce-a6c3-6b82c5273b89",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

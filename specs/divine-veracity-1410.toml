@@ -239,3 +239,43 @@ conclusion = "Veracity route structural controls"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Construction of explicit interpretations"
 meaning = "Skeleton interpretations only: real classified bearer and actual assertion in joint sample; every A/B premise omission permits false assertion; noncontradiction does not give sincerity; cognitive perfection plus permission needs an independent contrary-sign norm. No utility, counterfactual necessity, or metaphysical possibility claim."
+
+[[relation]]
+id = "Test by Divine assertion route structural controls certificate"
+label = "Test by Divine assertion route structural controls certificate"
+subject_kind = "result"
+subject_id = "bd2c7094-5946-4815-b7a0-27a535bd2d8e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1496f7ec-2c22-4b26-aef2-39c77ca6ea49"
+note = "Tests omission of this premise from assertionTruthA in the finite actual-assertion profile, which retains the other input and has a false assertion."
+
+[[relation]]
+id = "Test by Divine assertion route structural controls certificate for Veracity GodNoContraryAssertion"
+label = "Test by Divine assertion route structural controls certificate for Veracity GodNoContraryAssertion"
+subject_kind = "result"
+subject_id = "bd2c7094-5946-4815-b7a0-27a535bd2d8e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6e8807d4-9aea-4f9d-9226-89a302701df6"
+note = "Tests omission of this premise from assertionTruthB in the finite actual-assertion profile, which retains the other input and has a false assertion."
+
+[[relation]]
+id = "Test by Divine assertion route structural controls certificate for Veracity GodAssentAccurate"
+label = "Test by Divine assertion route structural controls certificate for Veracity GodAssentAccurate"
+subject_kind = "result"
+subject_id = "bd2c7094-5946-4815-b7a0-27a535bd2d8e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad"
+note = "Tests omission of this premise from assertionTruthA in the finite actual-assertion profile, which retains the other input and has a false assertion."
+
+[[relation]]
+id = "Test by Divine assertion route structural controls certificate for Veracity GodCounterAssertio (1)"
+label = "Test by Divine assertion route structural controls certificate for Veracity GodCounterAssertio (1)"
+subject_kind = "result"
+subject_id = "bd2c7094-5946-4815-b7a0-27a535bd2d8e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e2ca9054-a50f-442c-bdb2-e3c8f8121184"
+note = "Tests omission of this premise from assertionTruthB in the finite actual-assertion profile, which retains the other input and has a false assertion."

@@ -1,0 +1,9 @@
+{
+  "id": "e495db9a-29dc-4953-8ca3-9f6043b530e1",
+  "label": "Witness preservation can hold when full accessible absence coverage fails",
+  "paraphrase": "In the fixed three-world replacement interpretation, the accessible selector omits the near world, where neither being exists. For each pair it still selects an accessible witness whenever one exists with effect present and source absent, but it fails to select every accessible source-absence world.",
+  "lean_declaration": "TruthCore.Modal.CounterfactualSelectionControls.Replacement.WitnessCoverageStrictness",
+  "definition_ids": [
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ]
+}

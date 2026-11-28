@@ -1,0 +1,31 @@
+{
+  "id": "68156929-3ca1-4da8-92cf-28d0935ba203",
+  "label": "Root links from Gottfried Wilhelm Leibniz and Samuel…, A Collection of Papers",
+  "statement_ids": [
+    "8b0aa573-2d31-5826-ba3f-385d83f429bc",
+    "81ec01fe-0050-5438-b309-1244471e6bed",
+    "1f56b796-dd74-568f-8163-6a4ba8bc7443",
+    "7dd2af35-8ea3-53b8-ba7c-8993f96aad05"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Clarke III §§2,5: Clarke's proposed numerically distinct yet alike absolute places differentiate structural likeness from identity. For this to challenge the case premise the places would need to be case bearers with identical real determinations that are all pure. The source does not supply that bridge. Clarke III §§2,5,7–8: Clarke offers the agent's willing as a sufficient reason among indifferent alternatives. The formal policy comparison can apply only after identifying those alternatives with a tied order and deciding whether an adequacy standard admits a reason in the exercise of will itself. Leibniz III §4: Leibniz's relative-order account gives a reason to treat preserved relations on a globally relocated material arrangement as the same order. Transferring that to the case needs the represented pure real determinations to be exhaustively fixed by the relations, and identity of the bearer rather than only of the order. Leibniz III §§5,7: A global translation on uniform absolute space preserves internal relative situations. Leibniz argues that this leaves no reason for the selected placement if the bare will is inadequate. The case policy comparison requires fixing which placement facts are distinct, what counts as adequacy, and how that inadequacy applies to the selected whole.",
+  "evidence": [
+    "875927bf-0787-51b8-b5d4-be60f25d3663",
+    "f7025438-a715-5745-ac98-8fa68c90166c",
+    "9f49c161-11f3-5a1c-9768-b5304c17e537",
+    "cec9588c-0830-570c-9e2f-4fe264739851",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

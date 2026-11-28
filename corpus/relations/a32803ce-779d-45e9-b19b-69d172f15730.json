@@ -1,0 +1,10 @@
+{
+  "id": "a32803ce-779d-45e9-b19b-69d172f15730",
+  "label": "Test by Classical attributes full joint witness",
+  "subject_kind": "result",
+  "subject_id": "5583089b-a4a8-4a42-ad6b-da64b6a8e80f",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "79252a71-5590-50fb-9cde-a767b823c556",
+  "note": "Tests joint satisfiability of the corresponding original global classical attribute bundle in its finite two-being two-respect assignment, with excluded middle retained explicitly."
+}

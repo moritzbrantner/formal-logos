@@ -37,6 +37,7 @@ id = "Grounded-beginnings omission, strictness, no-re-import and nonvacuity cont
 lean = "Control.Certificate"
 paraphrase = "Closed mathematical controls, every individual counted concrete, two mutually accessible worlds. (1) Natural-number times, one individual present only at time 1 of the selected world, no grounds: post-absence well-founded grounding holds; the lasting-ground premise and inert emptiness fail. (2) Natural-number times, individual false present only at time 0 and individual true only at time 2 of the selected world, false grounding true: every beginning has a concrete ground and post-absence well-founded grounding holds; the lasting-ground premise and inert emptiness fail. (3) Times WithBot Int, integer individual n present at every integer time from n on at the selected world, nothing present at the first moment, each individual grounded by its predecessor: the lasting-ground premise holds; post-absence well-founded grounding and inert emptiness fail. (4) One individual present at every time of the selected world and existing only there, no grounds: both premises and the traced form hold, and no concrete individual exists at both worlds. (5) Individual false present at every time of both worlds, individual true present only at time 1 of the selected world, no grounds: inert emptiness holds and the traced form fails. (6) The same history with false grounding true: both premises, presence-to-existence and the possible contingent-free past hold, and some concrete individual exists at the selected world and at every world accessible from it. (7) Integer times and individuals, individual n present at every time from n on at the selected world, each grounded by its predecessor: both premises and inert emptiness hold, while well-founded grounding among all present concrete things fails. These are statements about these interpretations only."
 definitions = ["Beginnings of concrete things have concrete grounds", "Beginnings have a concrete ground present at the absence or later", "Grounding among concrete things that come to be after a moment is well-founded", "Grounding among present concrete things of a history is well-founded", "Traced nothing from nothing: what is present traces back to something present earlier", "Inert emptiness: a concrete-empty moment is followed only by concrete-empty moments", "Contingent concrete things absent at a moment and present at a later one", "DEF-COUNT-TEMPORAL-HISTORY-PRESENCE", "DEF-KANT-MODAL-CONTINGENCY"]
+disambiguations = ["DISAMB-CAUSAL-SERIES", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[argument]]
 id = "Traced nothing-from-nothing from two grounding principles"
@@ -102,3 +103,53 @@ object_kind = "statement"
 object_id = "In every history, grounding among concrete things that come to be after a moment is well-founded"
 verification_result_id = "Post-absence well-founded grounding from well-founded grounding among present things"
 note = "Same history, Concrete predicate and grounding relation; the weak version restricts the relation to things that come to be after one moment. GroundedBeginnings.Control.beginningless (control 7) witnesses failure of the converse."
+
+[[relation]]
+id = "c037a692-ca0d-41d3-919f-ea0f408e20a5"
+label = "Test by GroundedBeginnings.controls (71df1177)"
+subject_kind = "result"
+subject_id = "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "71df1177-b082-46e9-ab85-6815b3ed1650"
+note = "Omit the requirement that a beginning have a concrete ground present at its earlier absence or later. At true the ground of the individual present at time 2 is present only at time 0, so post-absence grounding is well-founded and time 1 is empty and time 2 is populated."
+
+[[relation]]
+id = "7f39506e-2436-43c6-8174-b5dde4ebf7d5"
+label = "Test by GroundedBeginnings.controls (bf18a0d0)"
+subject_kind = "result"
+subject_id = "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bf18a0d0-f43c-49a6-9876-0dbdf5c5f98a"
+note = "Omit well-foundedness among concrete bearers absent at the earlier moment and present later. The history at true starts with an empty bottom moment, and every later-present integer bearer is grounded by the preceding integer bearer, which is also present after bottom."
+
+[[relation]]
+id = "1d89dea0-0d70-447c-9000-c806c9bf6726"
+label = "Test by GroundedBeginnings.controls (e6a1ac3c)"
+subject_kind = "result"
+subject_id = "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e6a1ac3c-6a3b-484f-a638-edb8af4f92be"
+note = "With the rooted history and no grounding links, a permanently present concrete bearer makes inert emptiness hold. The other concrete bearer is present only at time 1 at true and cannot be traced to a bearer present at time 0."
+
+[[relation]]
+id = "416b01b3-b3fc-4e07-a695-aa306a7341f5"
+label = "Test by GroundedBeginnings.controls (81c39a34)"
+subject_kind = "result"
+subject_id = "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "81c39a34-8188-4df5-b433-256a249630ca"
+note = "With integer times at true, each integer bearer is present from its own index onward and grounded by its predecessor. Grounding restricted to bearers absent at any fixed earlier moment is well-founded, while grounding among all concrete bearers ever present in that history is not."
+
+[[relation]]
+id = "d80fa84e-3271-4a45-954e-b4d941e3ed9c"
+label = "Test by GroundedBeginnings.controls (6f691227)"
+subject_kind = "result"
+subject_id = "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a"
+predicate = "tests"
+object_kind = "argument"
+object_id = "6f691227-2c49-4dcd-80dd-0e33a9be926e"
+note = "In the rooted history, the permanently present bearer false grounds the bearer present only at time 1 at true. Lasting grounds and post-absence well-foundedness hold jointly in the same History, concrete predicate, and grounding relation."

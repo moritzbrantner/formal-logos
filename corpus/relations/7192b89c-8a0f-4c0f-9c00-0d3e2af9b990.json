@@ -1,0 +1,10 @@
+{
+  "id": "7192b89c-8a0f-4c0f-9c00-0d3e2af9b990",
+  "label": "Test by There is a three-entity, two-account interpretation in w for Whatever causes a quality (1)",
+  "subject_kind": "result",
+  "subject_id": "91a68d8f-cbed-5988-9052-48e7fad1a92c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
+  "note": "Tests the restriction to synonymy in a finite profile with both same-account and changed-account cause-effect pairs."
+}

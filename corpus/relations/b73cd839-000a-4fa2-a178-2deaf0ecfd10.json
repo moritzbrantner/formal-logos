@@ -1,0 +1,10 @@
+{
+  "id": "b73cd839-000a-4fa2-a178-2deaf0ecfd10",
+  "label": "Test by WitnessLocalTeleology.controls (b5f01676)",
+  "subject_kind": "result",
+  "subject_id": "f9c0f1e4-7540-44af-a692-107f65d5ecd2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b5f01676-0b48-454c-80ee-ade579adb43d",
+  "note": "In strict, b0 satisfies the seven conditions at the sole end, but the other natural body b1 has no regular attainment. The model separates the witness-local bundle from the stronger universal bundle."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b211aa95-6ebb-4e48-a13e-71fd2f23b57a",
+  "label": "Test by The fixed fork, isolated pair, integer chain and empty graph witness the separate limits of…",
+  "subject_kind": "result",
+  "subject_id": "7a1dcb73-7789-5571-a8be-51d50cd7a3aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "25697a6f-d4f8-55c4-9e12-2d6b6710c119",
+  "note": "Tests omission in the connected integer chain with unique immediate predecessors and no source."
+}

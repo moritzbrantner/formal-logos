@@ -1,0 +1,32 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+    "source_url": "https://archive.org/download/philosophicalwor015731mbp/philosophicalwor015731mbp.pdf",
+    "retrieved_at": "2026-11-26T15:31:48Z",
+    "sha256": "sha256:958da411432a4f84e035ad7b0fb698f95bc8a316077705343e62b8823f52ff43",
+    "encoding": "utf-8",
+    "language": "eng",
+    "license": "Translation published 1912; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt. No matching Wayback fallback was supplied with this witness.",
+    "translation": {
+      "translator": "Elizabeth S. Haldane and G. R. T. Ross",
+      "year": 1912,
+      "edition": "The Philosophical Works of Descartes, vol. II"
+    }
+  },
+  "passages": [
+    {
+      "id": "546afe16-ea50-4199-9151-0d034429747b",
+      "label": "Second Replies in the Haldane–Ross scan",
+      "locator": "Second Replies, geometrical exposition, Haldane–Ross II 52–59",
+      "claim_locator_prefixes": [
+        "Second Replies, geometrical exposition, Haldane–Ross II 52–59"
+      ],
+      "pdf_pages": {
+        "first": 58,
+        "last": 65
+      },
+      "text_sha256": "sha256:0295cdebc01e8cafd2d51b69723cb0f398f06a849f0b18ce6e747efa07d03331"
+    }
+  ]
+}

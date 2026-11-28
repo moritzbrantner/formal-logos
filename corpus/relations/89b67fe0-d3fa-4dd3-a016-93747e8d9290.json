@@ -1,0 +1,10 @@
+{
+  "id": "89b67fe0-d3fa-4dd3-a016-93747e8d9290",
+  "label": "Test by Coming-to-be horn controls checked",
+  "subject_kind": "result",
+  "subject_id": "6d52624e-369a-4e6c-858d-bd3accc130de",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "20e6c7df-6eae-4afd-9f7e-b5e5e907ebee",
+  "note": "Tests the precedence-to-state-causation bridge in the endless history with an idle state-cause relation satisfying state-causal finitism."
+}

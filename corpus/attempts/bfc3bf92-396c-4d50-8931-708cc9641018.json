@@ -1,0 +1,31 @@
+{
+  "id": "bfc3bf92-396c-4d50-8931-708cc9641018",
+  "label": "Mathematical limit admission transfers connection plan",
+  "statement_ids": [
+    "3a4f93e1-40f5-58b1-9de4-5f678a3699c4",
+    "3b649cd3-ea6e-5d5c-8e90-4e22a607b8ba",
+    "667f1ace-c9dc-555d-9f66-40a4263b643a",
+    "7b9648fb-2a44-5149-a9da-dcf00bdfdff7",
+    "9aab0792-2fe3-5e74-a42e-d5ca5f8dc743",
+    "a38821e6-dc0f-5f20-85b9-ff45cf069e74",
+    "cad37467-5957-516c-aabf-5434d06486d0"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Specify a closed selected event subset for the temporal target. Convergence in the ambient metric space is insufficient for event occupancy. For population or supertask applications, supply closedness of the admitted profiles or separate output-state coherence, respectively.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 4365c3c5-d39b-405c-97a9-a4f7e43c628f. The scoped bridge described in the summary remains open."
+}

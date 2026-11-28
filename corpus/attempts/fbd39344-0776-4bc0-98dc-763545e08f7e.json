@@ -1,0 +1,37 @@
+{
+  "id": "fbd39344-0776-4bc0-98dc-763545e08f7e",
+  "label": "Retained readings from New Testament, John",
+  "statement_ids": [
+    "777e1ba1-f952-51e7-9001-f92ecd31ac6b",
+    "1ff54b8e-8bc4-52d4-8226-3cb2fe99c3bc",
+    "18ef68d7-6dac-579d-b0a3-872185de40af"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "8.58: The Abraham saying is used in docs/john-abraham-saying.md to compare a divine self-identification with weaker readings. A case link requires a defended interpretation of the reported formula in context and a report-to-event bridge. 8.59: The stone-taking report constrains interpretation in docs/john-abraham-saying.md. The reaction alone does not identify what the interlocutors took the saying to mean. Applying it to a claim of divine authority requires a bridge from the reported reaction to its motive and the meaning of the saying. 9.8-9: The blind man's self-identification serves as a lexical control in docs/john-abraham-saying.md. It defeats a reading rule based on the words alone, but application to John 8 needs an argument about the different context and the force of the whole utterance.",
+  "evidence": [
+    "34998c55-6f2c-50b6-8fa4-5a0f614ab730",
+    "cd8d1b26-b5e3-5f1a-b73a-22b996d086b9",
+    "0a68fc5d-34d3-593b-8efe-f5a44dcdb48a",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

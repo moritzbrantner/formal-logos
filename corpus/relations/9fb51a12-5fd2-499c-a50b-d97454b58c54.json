@@ -1,0 +1,10 @@
+{
+  "id": "9fb51a12-5fd2-499c-a50b-d97454b58c54",
+  "label": "Source support for 448dfeda from reading edff6235",
+  "subject_kind": "claim",
+  "subject_id": "a611ecd8-b941-57ea-945e-7c7dd8120c18",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "448dfeda-94f9-5185-a702-a799e24b4ff3",
+  "note": "Timaeus gives a conditional argument for Forms in themselves from the difference between understanding and true opinion. The target needs the cognitive distinction to be valid, an account of why it entails independent objects, and applicability to each admitted quality."
+}

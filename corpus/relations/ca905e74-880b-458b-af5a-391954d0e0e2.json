@@ -1,0 +1,10 @@
+{
+  "id": "ca905e74-880b-458b-af5a-391954d0e0e2",
+  "label": "Test by AtomisticRequirementControl.certificate (74d3060e)",
+  "subject_kind": "result",
+  "subject_id": "8c2e229f-c128-4bd7-bcfa-630fa6f018fa",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "74d3060e-be21-5864-bd5e-ffb1a93c9d61",
+  "note": "Witness population, atomic parts, conditional caused-simple cover and complete-cause nonoverlap on the fixed six-object subset order. All six objects exist in the supplied all-present scenario. The caused simples p and q have fusion m, and each of the four production edges joins disjoint objects. The argument takes excluded middle explicitly."
+}

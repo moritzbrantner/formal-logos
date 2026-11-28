@@ -1,0 +1,12 @@
+{
+  "id": "fbac4c4e-bb0b-4965-bd26-33d5f4c306e5",
+  "label": "Content form of the second unde gives its real-otherness form, checked (inference)",
+  "input_statement_ids": [
+    "89d82643-cf45-4933-90b3-83a89f6210f2"
+  ],
+  "output_statement_id": "94036513-8146-4137-8cce-daf40577369d",
+  "rule": "Weaken the antecedent",
+  "meaning": "The real-otherness form adds an antecedent to the content form, so the content form gives it. Backing of the strength registration.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

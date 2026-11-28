@@ -199,3 +199,13 @@ rereading of the current witnesses without pretending those passages establish
 the critic's additions. No primary-text source range is left unread by #269;
 the unresolved work is defense of the stated bridges and concrete cross-domain
 comparisons. The full Humean campaign remains open.
+
+## Custom and the move beyond observations (2026-11-26)
+
+Treatise I.3.6 and Enquiry IV–V distinguish past correspondence, an attempted
+demonstration of continued uniformity, and the operation of custom. The
+particular trigger and expectation relations need to match the inferences
+tested. Successful adjustment of means to ends gives a practical role for custom
+while prospective reliance still requires a warrant for the relevant extension.
+
+[David Hume reading attempt](../corpus/attempts/138eabc0-b26e-4f8f-b80a-b984632a6d95.json), [David Hume reading attempt](../corpus/attempts/6e5246a7-2464-49a5-86c2-31abf8277776.json).

@@ -1,0 +1,10 @@
+{
+  "id": "bbf36e73-5ad3-48dc-9c39-751e7e24a398",
+  "label": "Test by Holder-root identification controls checked for Any two actual CONCRETE_6 roots of the (1)",
+  "subject_kind": "result",
+  "subject_id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "49fdec01-cb92-48cf-90c5-9de7761121f2",
+  "note": "Tests the at-most-one-root input on the two-root profile where both actual necessary roots hold the power."
+}

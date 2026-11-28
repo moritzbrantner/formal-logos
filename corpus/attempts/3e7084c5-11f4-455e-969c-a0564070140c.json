@@ -1,0 +1,27 @@
+{
+  "id": "3e7084c5-11f4-455e-969c-a0564070140c",
+  "label": "Root links from Kevin Richardson, Grounding is Necessary and Contingent",
+  "statement_ids": [
+    "b3b979bc-636d-5816-b352-9dc7f64433be",
+    "6573cc65-79ab-549f-88c9-47700a2678ee"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "PDF pp. 14–18 (printed pp.465–469), section 6.1: Richardson's what-grounding makes necessity part of the real-definition explanation. This warrants testing the case premise on that reading. The admitted complete-ground relations must realize such real definitions before that defense transfers. PDF pp. 19–21 (printed pp.470–472), section 6.2: Richardson proposes contrastive why-explanation as a different ground relation. On it, difference-making can hold without necessitation. This is a positive rival if the case records track why-explanation. Its applicability to those records and their modal scope remains open.",
+  "evidence": [
+    "1c6a18df-8623-5c21-8496-3341eb8cb86f",
+    "569751bc-8437-561b-9e26-185ab7cb9f75",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

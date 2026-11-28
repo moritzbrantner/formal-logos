@@ -49,3 +49,13 @@ conclusion = "Reference fixed independently of correctness permits error and com
 axioms = []
 rule = "Boolean constructor separation"
 meaning = "Witness error with fixed referent, and two differing referents with matching correctness, without defining reference as truth."
+
+[[relation]]
+id = "Test by Two form selection and intervention controls checked"
+label = "Test by Two form selection and intervention controls checked"
+subject_kind = "result"
+subject_id = "94c1c39b-1127-4e34-8baf-b166c1724ce6"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a9f20e41-34bc-4d21-bbd3-6032ac78b018"
+note = "Tests the context-independence hypothesis of the intrinsic decoder theorem using an accurate contextual decoder at one constant intrinsic state."

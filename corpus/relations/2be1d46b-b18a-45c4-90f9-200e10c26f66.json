@@ -1,0 +1,10 @@
+{
+  "id": "2be1d46b-b18a-45c4-90f9-200e10c26f66",
+  "label": "Source qualification for b90c4dd1 from reading 7591bf88",
+  "subject_kind": "claim",
+  "subject_id": "21ef805c-edc0-51c3-968c-2f113675f8a9",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "b90c4dd1-88d9-4afe-8455-4152d7836c99",
+  "note": "Hume rejects treating the alleged absurdity of an uncaused determinate onset as independent proof of the absurdity of uncaused existence. A defense of the case's first-moment cause needs a noncircular reason why onset at that moment requires a giver."
+}

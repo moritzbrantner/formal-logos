@@ -1,0 +1,33 @@
+{
+  "id": "5d213fef-9f88-4240-a834-b5bd4d1638fc",
+  "label": "Gödel 1970: distinct positivity closure axioms",
+  "statement_ids": [
+    "9cdba00e-f2ef-585c-8d4d-c6a94ce1d408"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "GoedelVariantHOML1.thy, Ax1: \"⌊P φ ❙∧ P ψ ❙⊃ P (φ ❙. ψ)⌋\": Gödel's conjunction axiom and the closure axiom for necessary inclusion constrain different operations. The conjunction axiom does not restrict the necessary-inclusion axiom. A further account of their interaction would require a common derivation or an explicit implication with its premises.",
+  "evidence": [
+    "9c34b71a-b9c7-5e64-997b-811f2426ee6a",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

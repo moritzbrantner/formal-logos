@@ -1,0 +1,10 @@
+{
+  "id": "62310f4d-5df6-4d3a-8586-73dcb45dcaa3",
+  "label": "Source support for ParticipatedIsReceivedInParticipant",
+  "subject_kind": "claim",
+  "subject_id": "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "9da93cd4-e4ed-536b-8302-4e7acd0e02ed",
+  "note": "The example locates the received light in the same air that participates. Extend this coincidence to each mode admitted by ParticipatesIn, showing for the identical perfection r that the participant x is itself the receiving potency required by ReceivedIn x r x. The logical particular-to-universal example supplies no such potency by itself."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "6219d631-98e5-4825-aebb-c89ce21879be",
+  "label": "Test by Assembled veracity routes are jointly nonvacuous at one bearer",
+  "subject_kind": "result",
+  "subject_id": "75e72e5e-942a-42d4-a3ab-519acb18ee25",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "9cb3d63f-de88-4184-b87d-709e7d89606b",
+  "note": "Tests nonvacuity of the composed assertion route using the reused populated selective-veracity assignment."
+}

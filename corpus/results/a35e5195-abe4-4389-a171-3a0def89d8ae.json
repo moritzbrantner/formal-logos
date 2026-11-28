@@ -1,0 +1,11 @@
+{
+  "id": "a35e5195-abe4-4389-a171-3a0def89d8ae",
+  "label": "Cause-of-being possession entails its universal-source restriction",
+  "argument_id": "411c536c-c57f-4f05-9f67-162d1008755b",
+  "challenge_module": "TruthCore.Results.Causality.UniversalPreexistence.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalPreexistence.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalPreexistence.universalPossessionOfCauseOfBeingPossession",
+  "comparator_config": "results/a35e5195-abe4-4389-a171-3a0def89d8ae/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order registration: cause-of-being possession for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here."
+}

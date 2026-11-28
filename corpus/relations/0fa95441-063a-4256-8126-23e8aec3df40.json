@@ -1,0 +1,10 @@
+{
+  "id": "0fa95441-063a-4256-8126-23e8aec3df40",
+  "label": "Source support for ed9d582d from reading 3d046008",
+  "subject_kind": "claim",
+  "subject_id": "bb808034-54c6-53f0-8fca-de213b98bfba",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "ed9d582d-fe3a-5350-a3fe-05cbfa6d94cd",
+  "note": "Wittgenstein distinguishes genuinely following a rule from merely thinking one does, locating the distinction in practice. A case application needs to identify the rule-governed role of its selected expressions and the relevant practice and criterion of correctness."
+}

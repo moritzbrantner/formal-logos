@@ -1,0 +1,78 @@
+[batch]
+vocab = "TruthCore.Science.FineTuningInformation"
+results = "TruthCore.Results.Science.FineTuningInformation"
+
+[[statement]]
+id = "Observer-conditioned binary report information criterion"
+lean = "ObserverInformationCriterion"
+paraphrase = "For a supplied prior giving both models positive mass, the binary report has zero mutual information about the model label exactly when both three-cell sampling rows give the same observer-conditioned fine-evidence likelihood."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+
+[[statement]]
+id = "Screened and separating fine-evidence reports at unequal model weights"
+lean = "ScreeningControls"
+paraphrase = "At model weights one third for design and two thirds for the natural rival, the screened pair always reports fine evidence and has zero model-report information. The existing calibrated design and natural pair has positive model-report information at that same prior."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+
+[[statement]]
+id = "Binary fine-evidence report has zero Brier gain exactly at zero information"
+lean = "AccuracyAgreement"
+paraphrase = "With both models and both reports having positive predictive mass and coherent binary update equations, expected Brier gain vanishes exactly when the fine-evidence report has zero mutual information about the model label."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "Calibrate the rival predictions using physical sampling, justify the inference from the calibrated evidence to an actual designer, and identify that same witness with GOD_4."
+blocker = "The stipulated sampling rows supply no physical calibration, warrant for a designer inference, or evidence identifying the inferred witness with GOD_4."
+
+[[argument]]
+id = "Observer-conditioned likelihood equality determines binary report independence"
+theorem = "observerInformation"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Observer-conditioned binary report information criterion"
+rule = "KL equality and supported kernel rows determine binary independence"
+meaning = "For the supplied observer-conditioned comparison prior with two positive masses, KL vanishes precisely when both Bernoulli report laws coincide. Equality of their fine-report masses is necessary and sufficient for that equality."
+
+[[argument]]
+id = "Screened and calibrated sampling rows test binary report discrimination"
+theorem = "screeningControls"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Screened and separating fine-evidence reports at unequal model weights"
+rule = "Evaluate the report laws and compare their likelihoods at one interior prior"
+meaning = "The two screened sampling rows give the same certain fine report even at unequal model weights. The calibrated sampling pair gives distinct report likelihoods and positive mutual information at the same comparison prior."
+
+[[argument]]
+id = "Bayesian Brier and fine-report Shannon zero conditions agree"
+theorem = "accuracyAgreement"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = ["907aafab-960d-4290-bd08-b955f1f10f4c", "Observer-conditioned binary report information criterion"]
+conclusion = "Binary fine-evidence report has zero Brier gain exactly at zero information"
+rule = "Identify both zero conditions through the conditional likelihoods"
+meaning = "With the encoded joint-probability equations and interior predictive and prior probabilities, Brier gain and Shannon information have the same zero condition. The metrics remain distinct."
+
+[[relation]]
+id = "Shannon screening controls test finite observer selection"
+subject_kind = "result"
+subject_id = "Screened and calibrated sampling rows test binary report discrimination"
+predicate = "tests"
+object_kind = "statement"
+object_id = "94808f80-2c73-4757-b95e-61808b5bcde5"
+note = "Uses the same sampling and event definitions to check an equal-likelihood screened pair against the calibrated separating pair. The control tests dependence on calibration under observer selection."
+
+[[relation]]
+id = "Screened and separating reports test the information criterion"
+subject_kind = "result"
+subject_id = "Screened and calibrated sampling rows test binary report discrimination"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Observer-conditioned binary report information criterion"
+note = "At one interior prior the two concrete row pairs witness equality and inequality of the conditional likelihoods, with the corresponding zero and positive information values."

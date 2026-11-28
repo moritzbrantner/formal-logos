@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.InquiryClosure.rootLackPSROfFactPSR"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

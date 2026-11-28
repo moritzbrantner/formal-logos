@@ -1,0 +1,11 @@
+{
+  "id": "a8fe73bf-f45e-4e17-b14b-5f3268682d4e",
+  "label": "Rigidity excludes admissible cells withholding NECESSARY_2 grounded recipients",
+  "argument_id": "92af8688-41ff-434c-903f-a232966bc415",
+  "challenge_module": "TruthCore.Results.Causality.GivingChoiceNar.Challenge",
+  "solution_module": "TruthCore.Results.Causality.GivingChoiceNar.Solution",
+  "theorem": "TruthCore.Results.Causality.GivingChoiceNar.rigidity_excludes_admissible_withholding_cell",
+  "comparator_config": "results/a8fe73bf-f45e-4e17-b14b-5f3268682d4e/comparator.json",
+  "status": "solution-present",
+  "description": "Reflexivity places the representative in its own withholding cell. Bridge (b2) requires this same root to give the same NECESSARY_2 grounded recipient being at that representative's mapped world, since the world is accessible and retains the root. The two conclusions contradict."
+}

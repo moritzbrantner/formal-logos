@@ -40,6 +40,7 @@ public import TruthCore.Explanation.GroundingBaseline.Reduct
 public import TruthCore.Explanation.HistorySelection
 public import TruthCore.Explanation.InducerFreePersistence
 public import TruthCore.Explanation.InertialReceiverNature
+public import TruthCore.Explanation.InquiryClosure
 public import TruthCore.Explanation.IntrinsicReasonBoundary
 public import TruthCore.Explanation.JointCondition
 public import TruthCore.Explanation.JointContingencyLocalization
@@ -47,6 +48,7 @@ public import TruthCore.Explanation.JointCooperation
 public import TruthCore.Explanation.JointGroundEffectContingency
 public import TruthCore.Explanation.LawActuality
 public import TruthCore.Explanation.LimitPersistenceLaw
+public import TruthCore.Explanation.LocationPersistence
 public import TruthCore.Explanation.MechanismInterventionParity
 public import TruthCore.Explanation.NecessaryFactBoundary
 public import TruthCore.Explanation.NecessaryUltimateSource

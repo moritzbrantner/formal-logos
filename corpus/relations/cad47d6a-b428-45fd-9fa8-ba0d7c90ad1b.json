@@ -1,0 +1,10 @@
+{
+  "id": "cad47d6a-b428-45fd-9fa8-ba0d7c90ad1b",
+  "label": "Source support for 096e6131 from reading 37a8abd3",
+  "subject_kind": "claim",
+  "subject_id": "b1180750-26b0-584f-b001-775b46bb6166",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "096e6131-a286-57d1-af74-c8a285e39b15",
+  "note": "The private sign example identifies a missing distinction between seeming right and being right. To reach the general reading one needs the case to represent the proposed private language, and correctness to be unavailable under each relevant private criterion, not just this setup."
+}

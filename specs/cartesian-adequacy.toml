@@ -163,3 +163,13 @@ object_kind = "statement"
 object_id = "4a5a43a5-bb4d-4a87-828a-d913a1f0422e"
 verification_result_id = "Containment in every cause entails that nothing gives being it does not have"
 note = "The weak version is the esse instance of the strong one, over the same InAct, CausesIn and esse. 4a5a43a5 is also the esse instance of q.4 a.2 preexistence. No strictness result is registered."
+
+[[relation]]
+id = "Test by Finite grades frames separate total-cause containment from q.4 a.2 preexistence"
+label = "Test by Finite grades frames separate total-cause containment from q.4 a.2 preexistence"
+subject_kind = "result"
+subject_id = "b704a38d-f87d-45ff-83e7-6a280c0ca53f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64498e7e-7f10-54a0-9ec0-c65e6076de1f"
+note = "Tests independence of preexistence and respect-wise total-cause containment, with separate finite cases using partial causes and the distinction between causing being and causing a perfection."

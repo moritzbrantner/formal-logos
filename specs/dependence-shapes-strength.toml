@@ -19,6 +19,7 @@ lean = "TruthCore.Mereology.DependenceShapes.CompositeExtensionality"
 paraphrase = "OPEN analyst principle on the SAME supplied Type B with the SAME supplied PartialOrder B: for all x and y in B, if both have a strict proper part and have equal strict proper-part profiles, then x=y. Only the two compared objects are restricted to composites; parts still range over all B. It asserts no composites exist. Weak sibling of unrestricted proper-part extensionality; it neither asserts nor requires the strong sibling."
 definitions = ["fbfd68f0-5ebe-4a35-a047-c08fbf45b308", "f3379a14-41d3-48b6-a91e-4b694d136c0a"]
 disambiguations = ["91d5918a-a193-491d-806f-d32441ee41c5"]
+connection_plan = { target_statement_id = "d7741cdc-881b-5bda-85ce-d70223162f78", missing_bridge = "Interpret the same selected bearer and its constitutive principles in an explicit partial order. Show when its matter/form or real esse/essence distinction gives a proper subobject and when order-composition agrees with the q.3 a.7 Composite predicate.", blocker = "Strict lower cones contain individuals of the ordered carrier. The typed q.3 composition can compare principles in a separate sort without supplying proper subobjects. Extensional identity of order composites alone says nothing about what constitutes the bearer; simple priority and cause of esse would require separate premises even after calibration." }
 
 [[statement]]
 id = "At most one minimal object on a fixed partial order"

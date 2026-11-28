@@ -7,10 +7,13 @@
   "date": "2026-11-26",
   "kind": "reading",
   "outcome": "rejected",
-  "summary": "In the unpinned Second Replies, geometrical exposition, axiom IV refers to the first and total cause. Axiom V requires a cause of the idea’s objective reality that contains that reality formally or eminently. Meditatio III §§14–15 starts with the efficient and total cause and even allows an idea to arise from another idea, while requiring a first archetypal cause. The texts supply no generalization to every partial cause, which the route’s ObjectiveAdequacy would quantify over.",
-  "blocker": "For the narrower sibling, obtain the pinned witnesses and couple an existence premise supplying an adequate or total cause with an adequacy premise restricted to that cause, or explicitly reconstruct the degree-of-reality comparison. Universal partial-cause adequacy would require a separate defense.",
+  "summary": "The pinned witnesses confirm the rejection of the unrestricted reading. Second Replies axiom IV names the first and adequate cause. Axiom V requires a cause containing the idea’s objective reality formally or eminently. Meditation III §§14–15 starts with the efficient and total cause and allows one idea to arise from another while requiring a first archetype. These passages support containment at a qualified cause and leave partial-cause adequacy open.",
+  "blocker": "Supply a total or adequate cause and map its formal-or-eminent containment to the same modeled respect. A universal conclusion over partial ObjCause witnesses needs a separate justification.",
   "evidence": [
-    "PR-2024"
+    "PR-2024",
+    "4bbbf389-5cea-44ee-8862-8df801fb2ba1",
+    "50f9d560-0938-4469-9b25-3def1243e86c",
+    "PR-2044"
   ],
   "workers": [
     {
@@ -20,6 +23,14 @@
       "effort": "high",
       "date": "2026-11-26",
       "pr": "PR-2024"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
     }
   ]
 }

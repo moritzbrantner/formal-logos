@@ -1,0 +1,12 @@
+{
+  "id": "644a57cd-0156-4cbb-b443-57386fe9c165",
+  "label": "Full accessible absence coverage strengthens witness preservation",
+  "subject_kind": "statement",
+  "subject_id": "06047f4c-ce98-4a33-a3f2-84fcf476d86e",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+  "verification_result_id": "37ec7490-ffa8-455c-b5e3-a396a3ad12f9",
+  "strictness_result_id": "19c36016-c875-470e-9d66-fc24c86fb018",
+  "note": "For the same frame, origin and selector, keeping every accessible source-absence world entails keeping at least one accessible effect-present source-absence witness whenever one exists for the pair. The fixed three-world strictness model retains all such witnesses while omitting the accessible near world, where neither being exists."
+}

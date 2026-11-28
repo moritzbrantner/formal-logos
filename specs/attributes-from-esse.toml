@@ -86,3 +86,23 @@ premises = ["818a73cc-249d-5f9b-9c34-aee1f2cbf333", "4c79298d-ee09-5e99-9ced-1be
 conclusion = "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
 rule = "Compose maximality-based exclusion with the carrier-wide cause and the six retained attribute proofs"
 meaning = "For each named God, causal ascent excludes any distinct cause of its esse at a maximum. The reviewed unity derivation uses this exclusion and the carrier-wide converse. Perfection and goodness use the same giver directly. The six remaining attribute proofs and the one-way sufficiency bridge apply at that same bearer. The logical equality splits retain excluded middle."
+
+[[relation]]
+id = "Test by Finite source and attribute substitutions checked"
+label = "Test by Finite source and attribute substitutions checked"
+subject_kind = "result"
+subject_id = "845202df-3632-41b4-9c8a-71e1aa03b8bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0881e859-c4c3-53ff-9bec-b61294e12d51"
+note = "Tests the converse comparison to genus causation with the finite carrier-wide cause assignment."
+
+[[relation]]
+id = "Test by Finite source and attribute substitutions checked for Whatever is GOD_4 causes the bei (1)"
+label = "Test by Finite source and attribute substitutions checked for Whatever is GOD_4 causes the bei (1)"
+subject_kind = "result"
+subject_id = "845202df-3632-41b4-9c8a-71e1aa03b8bf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "86d02b69-87eb-5594-9958-ccaa5fe6b685"
+note = "Tests whether unrestricted genus causation fixes the GOD_4 carrier-wide cause assignment, by using the two separate finite scope profiles."

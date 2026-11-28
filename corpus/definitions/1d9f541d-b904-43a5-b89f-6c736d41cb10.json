@@ -1,0 +1,9 @@
+{
+  "id": "1d9f541d-b904-43a5-b89f-6c736d41cb10",
+  "label": "Actual endpoints of the selected-world cause relation",
+  "term": "Actual endpoints of the selected-world cause relation",
+  "lean_declaration": "TruthCore.Causality.ActualFusionNecessaryBeing.CausesHaveActualEndpointsAt",
+  "definition": "At w every Ontic.Causes edge has both ends in the existence extension of w.",
+  "basis": "stipulative",
+  "note": "An explicit local factivity policy for the primitive cause relation."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "828a190b-515f-4854-af80-15e4f107fee8",
+  "label": "Test by Esse-cause efficiency controls",
+  "subject_kind": "result",
+  "subject_id": "23792412-934c-4ea1-a3a8-e9f5d37a94b0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0cc3a136-33b2-4d98-bc9a-48d6fc53429d",
+  "note": "Tests the converse strength implication in the registered interpretation. Same profile; the restricted bridge covers only actual causes of actual distinct esse. RestrictedBridgeOnlyControl satisfies the restricted bridge and falsifies the unrestricted one."
+}

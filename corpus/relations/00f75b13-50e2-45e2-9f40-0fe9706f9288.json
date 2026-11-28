@@ -1,0 +1,10 @@
+{
+  "id": "00f75b13-50e2-45e2-9f40-0fe9706f9288",
+  "label": "Test by SelectedPlgTheory.presentationControls (2bdf810f)",
+  "subject_kind": "result",
+  "subject_id": "1ea2f628-a121-4e37-a21c-5f4af77f0321",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2bdf810f-f7ca-4732-b661-378f54fbd6d4",
+  "note": "Omit absence of a strict step with a weak return in the inhabited Bool atom type. The selected withWeakReturn theory keeps the strict full step from false to true and adds the weak full step from true to false. This gives a return and breaks consistency."
+}

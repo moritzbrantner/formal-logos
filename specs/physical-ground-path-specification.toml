@@ -143,3 +143,43 @@ lean = "TruthCore.Alternatives.PhysicalSpecification.VaryingPathDefinability"
 paraphrase = "OPEN analyst candidate: one restricted first-order plus finite-reachability formula defines an explicit unary target family on every full carrier of a nonempty admitted indexed interpretation class. Fixed-domain use is obtained by taking a constant carrier family; cross-domain correspondence and physical adequacy remain separate conditions."
 definitions = ["7ec17771-8ac2-476b-b674-40ef61a2debc", "e6aeaf5b-de26-4beb-bc38-6941c7b3530e", "f2fa9b1d-6d34-417b-a734-1fb787badd55"]
 disambiguations = []
+
+[[relation]]
+id = "Test by FO embeds into restricted reachability language"
+label = "Test by FO embeds into restricted reachability language"
+subject_kind = "result"
+subject_id = "29541ab7-d199-41ce-a82d-d144d1a4f6be"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5"
+note = "Checks definability after embedding first-order formulas into the restricted path language on the same indexed profile."
+
+[[relation]]
+id = "Test by One reachability formula covers Nat and Bool from permitted anchors"
+label = "Test by One reachability formula covers Nat and Bool from permitted anchors"
+subject_kind = "result"
+subject_id = "6fd854ba-1174-47cb-8076-486f375dd2cb"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5"
+note = "Tests nonvacuity with the single permitted-anchor reachability formula on Nat successor and the Bool inequality graph."
+
+[[relation]]
+id = "Test by Fixed carrier specializes indexed first-order definability"
+label = "Test by Fixed carrier specializes indexed first-order definability"
+subject_kind = "result"
+subject_id = "e9941a68-5ca4-40fb-a21d-ca7aad9d1654"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e611886f-2a21-448d-8069-a9d87f63494e"
+note = "Checks the fixed-carrier specialization of indexed first-order definability over the same interpretations."
+
+[[relation]]
+id = "Test by One permitted anchor is definable across Unit and Bool"
+label = "Test by One permitted anchor is definable across Unit and Bool"
+subject_kind = "result"
+subject_id = "1af0faf6-7e8d-4099-90ce-cb22719c61cf"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e611886f-2a21-448d-8069-a9d87f63494e"
+note = "Tests nonvacuity with equality to the single permitted anchor in the varying Unit and Bool carriers."

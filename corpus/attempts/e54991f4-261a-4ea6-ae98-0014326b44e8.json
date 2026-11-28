@@ -1,0 +1,33 @@
+{
+  "id": "e54991f4-261a-4ea6-ae98-0014326b44e8",
+  "label": "Composition, self-uniting and the two cause uses",
+  "statement_ids": [
+    "0a0c841c-5ebf-5f39-946b-0655a3c2ab57",
+    "828fc834-25ad-534c-8212-f6745ae02b96",
+    "b67c6bb9-3a56-5400-89f7-c6eb6f0eb2a1",
+    "bd7c5881-f868-5b51-b60a-320335836a7b",
+    "ccaffa91-30b9-5325-afbf-fbd0e0d00323"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "0a0c841c-5ebf-5f39-946b-0655a3c2ab57 (Variant): a2857e5d takes the no-self principle at esse from a prohibition in every perfection. The esse-only no-self-being sibling supplies the needed instance; the all-respects prohibition also excludes a subject's operation on its own accidents and is stronger. Retain the unrestricted perfection reading for comparison.\n\n828fc834-25ad-534c-8212-f6745ae02b96 (Variant): 7126eeb8 uses the direct UNITING-CAUSE_1 prohibition on a bearer uniting its own components. A narrower ban at actual composite uniting tuples would supply what this consumer uses. An efficient no-self-cause ban alone still needs the uniter-to-efficient link when the relations are separate. Retain the direct uniting interpretation.\n\nb67c6bb9-3a56-5400-89f7-c6eb6f0eb2a1 (Primitive): ccd7d1cd uses sufficiency of two numerically distinct constituent principles for composition. Plausibility comes from the conceptual role of real constitutive plurality. Mere distinctions in description or an extrinsic co-cause do not meet that constituency reading; for a narrower matter-form Composite category the unrestricted rule needs a further classification. Retain as a candidate principle for real intrinsic composition.\n\nbd7c5881-f868-5b51-b60a-320335836a7b (Variant): 4723e4a8 uses a ban for the second use-indexed cause. Fixing that predicate as efficient causing would supply this instance from the existing efficient ban. An arbitrary use predicate has no such binding, and the direct efficient sibling can bypass the indexed formulation. Retain the indexed-use comparison.\n\nccaffa91-30b9-5325-afbf-fbd0e0d00323 (Variant): 4723e4a8 needs uniting to imply the first use-indexed cause. The efficiency sibling is sufficient in its own route after the first-use predicate is given the efficient sense. With two independent uses, agreement is substantive and remains a separate premise of the consumer. Retain the indexed-use comparison.",
+  "evidence": [
+    "386fdad9-919c-5ab5-8d8c-ffa33648a624",
+    "f2d4c971-8138-5852-9721-92142d50a728",
+    "09fd79a2-5007-5432-97c6-b2e3d9674abf",
+    "e53e38f3-663e-554f-966f-a85f72a3aece",
+    "PR-2048"
+  ],
+  "blocker": "The relevant uniting, efficient-causal and component relations must be fixed before transferring either route-use premise.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

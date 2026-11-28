@@ -1,0 +1,10 @@
+{
+  "id": "36eb9d23-73c4-4b89-aa56-81bba8bf32e8",
+  "label": "Test by Finite onset-only giving with explanation, origin and RE for The term of the origin re (1)",
+  "subject_kind": "result",
+  "subject_id": "ea414de5-3a51-42d2-8297-2846dfc63caa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6da7d94a-abc4-4092-96c1-9469af548f87",
+  "note": "Tests giving by the coexistent term through the onset-only giving history with a persisting origin relation and no later giving."
+}

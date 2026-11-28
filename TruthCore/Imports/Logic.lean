@@ -18,12 +18,15 @@ public import TruthCore.Logic.CognitiveReplacement
 public import TruthCore.Logic.CollectivePossibilityRouteBoundary
 public import TruthCore.Logic.CommonKnowerScopes
 public import TruthCore.Logic.Configuration
+public import TruthCore.Logic.ContentInterpretation
 public import TruthCore.Logic.ContrastiveWorldview
 public import TruthCore.Logic.CorrectionCriterion
 public import TruthCore.Logic.CorrelatedTestimony1396
 public import TruthCore.Logic.DarwinianEpistemicDebunking
 public import TruthCore.Logic.DarwinianEpistemicDebunking.BasisDefeat
 public import TruthCore.Logic.DistributedKnowledge
+public import TruthCore.Logic.Doxastic
+public import TruthCore.Logic.DoxasticThreshold
 public import TruthCore.Logic.EpistemicAccuracy
 public import TruthCore.Logic.EpistemicAccuracy.BayesianRefinement
 public import TruthCore.Logic.EpistemicAccuracy.Refinement
@@ -39,6 +42,7 @@ public import TruthCore.Logic.ExcludedMiddleAssertionBoundary
 public import TruthCore.Logic.ExperiencedThoughtBearer
 public import TruthCore.Logic.FallibleCorrection
 public import TruthCore.Logic.FinerContentCriterion
+public import TruthCore.Logic.FiniteInformation
 public import TruthCore.Logic.FiniteValidationLogic
 public import TruthCore.Logic.FirstPersonWitness
 public import TruthCore.Logic.FirstPrincipleControls
@@ -92,6 +96,7 @@ public import TruthCore.Logic.SoritesBoundary
 public import TruthCore.Logic.Strength.Cause
 public import TruthCore.Logic.Strength.NecessaryFrames
 public import TruthCore.Logic.Strength.Order
+public import TruthCore.Logic.Strength.RouteSymmetryIdentity
 public import TruthCore.Logic.Strength.UniqueExistence
 public import TruthCore.Logic.StrengthComparison
 public import TruthCore.Logic.TemporalPastCoverage

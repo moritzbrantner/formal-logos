@@ -1,0 +1,10 @@
+{
+  "id": "eda832b6-873b-4385-b37f-6b50eba50c46",
+  "label": "Test by S5 route frame is the S4 route frame plus symmetry",
+  "subject_kind": "result",
+  "subject_id": "e2575d88-098f-461a-9326-02b2903ec78d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

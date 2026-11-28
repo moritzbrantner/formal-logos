@@ -1,0 +1,10 @@
+{
+  "id": "dd13908c-be01-4ae5-bfe2-3e6a2a5541ea",
+  "label": "Test by NecessaryConcreteRouteBridge.necessaryRouteControls (82cfaf26)",
+  "subject_kind": "result",
+  "subject_id": "d492d6e9-e381-5628-ba20-18e7855c322d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Omit well-foundedness on the actual concrete population. The sole world has two actual concreta that ground each other. The other six nonlogical clauses hold, but the maximum false has the distinct simply prior bearer true."
+}

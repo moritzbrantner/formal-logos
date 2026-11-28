@@ -1,0 +1,10 @@
+{
+  "id": "4fb04e00-f2fb-4cfb-adbb-8c7e95e4ff93",
+  "label": "Source qualification for 2aeed907 from reading 393081a1",
+  "subject_kind": "claim",
+  "subject_id": "add2d90b-631c-571d-a2ae-70d30fd6a1b4",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "2aeed907-013b-5c13-8bfb-c66d25734bc8",
+  "note": "Gibbard uses indicative conditionals with false antecedents to distinguish expanded full truth from more permissive senses while allowing appropriate belief or assertion. Application to this quasi-realist comparison requires showing which of those senses is the case's minimal truth and that the relevant moral sentence has the same features."
+}

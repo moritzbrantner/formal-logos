@@ -1,0 +1,11 @@
+{
+  "id": "fde3e9d8-0358-44f5-a1a2-823a880a8331",
+  "label": "Intellectual universal causes are first from actual priority relata and esse dependence",
+  "argument_id": "12be8688-c4bd-4a08-99cc-8a63627788cf",
+  "challenge_module": "TruthCore.Results.Causality.UniversalGivingPriority.Challenge",
+  "solution_module": "TruthCore.Results.Causality.UniversalGivingPriority.Solution",
+  "theorem": "TruthCore.Results.Causality.UniversalGivingPriority.universalCauseIsFirstOfPriorityDependence",
+  "comparator_config": "results/fde3e9d8-0358-44f5-a1a2-823a880a8331/comparator.json",
+  "status": "solution-present",
+  "description": "For a qualifying universal cause, any alleged distinct prior exists at the selected world and is actual as to esse by the two actuality premises. The universal cause therefore causes that prior's esse and precedes it in the same simple-priority relation. Priority requires nonmutual dependence, so the two directions contradict. Excluded middle for equality then gives the required identity. The argument uses universal causal coverage without needing the intellect and will qualifications to obtain the contradiction."
+}

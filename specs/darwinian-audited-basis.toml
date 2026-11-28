@@ -73,3 +73,23 @@ premises = ["Correctness supervenes on a selected factor across the admitted his
 conclusion = "The scoped epistemic judgment has no incorrect verdict in the represented scenarios"
 rule = "Transfer the verdict and correctness from an accurate panel representative at the same factor value"
 meaning = "The relation horn admits a restricted reply if correctness supervenes on the selected factor, verdicts stay fixed at each factor value, and a covering comparison panel is accurate. The transported result concerns the represented cases. Supervenience supplies neither the direction of calibration nor a causal explanation of selection."
+
+[[relation]]
+id = "Test by Four controls for the audited defeat policy"
+label = "Test by Four controls for the audited defeat policy"
+subject_kind = "result"
+subject_id = "fddc2381-a88e-41b9-b799-16e834ad7217"
+predicate = "tests"
+object_kind = "argument"
+object_id = "ceaee982-9528-43d0-ac9d-8a35f4594bea"
+note = "Tests policy self-application and the limit of basis defeat in stipulated models with true unwarranted content or an independent supporting ground."
+
+[[relation]]
+id = "Test by Four controls for the audited defeat policy for Audited cue bypass under fixed truth a (1)"
+label = "Test by Four controls for the audited defeat policy for Audited cue bypass under fixed truth a (1)"
+subject_kind = "result"
+subject_id = "fddc2381-a88e-41b9-b799-16e834ad7217"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dc7d2e57-5d06-4f4a-a51f-b3b0ea7aec00"
+note = "Tests omission of the audited defeat policy in a stipulated model retaining warranted audit and verdict variation."

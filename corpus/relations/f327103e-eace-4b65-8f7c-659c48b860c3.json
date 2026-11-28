@@ -1,0 +1,10 @@
+{
+  "id": "f327103e-eace-4b65-8f7c-659c48b860c3",
+  "label": "Test by Joint mathematical package: genuine Mathlib convergence/ for Every closed real event-o (1)",
+  "subject_kind": "result",
+  "subject_id": "695a73ac-2b13-5219-8b88-a963c29e6688",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9aab0792-2fe3-5e74-a42e-d5ca5f8dc743",
+  "note": "Checks the instance of closed-set limit admission in its stated indexed setting, including finite controls for dropping closure or the tail conditions."
+}

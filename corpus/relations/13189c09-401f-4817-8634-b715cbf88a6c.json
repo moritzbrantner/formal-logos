@@ -1,0 +1,10 @@
+{
+  "id": "13189c09-401f-4817-8634-b715cbf88a6c",
+  "label": "Test by Formal fact: 'whatever is moved has a mover' together wi for Act is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "04b49e6e-5b8f-590a-af94-b98f5604dbda",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4d3261a-3239-5b44-9953-64ab1b0ed762",
+  "note": "Tests the sufficiency of the being-in-act reading for simple priority when the Prima Via premises are kept in the same typed interpretation."
+}

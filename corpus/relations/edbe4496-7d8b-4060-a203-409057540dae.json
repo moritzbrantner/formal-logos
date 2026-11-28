@@ -1,0 +1,10 @@
+{
+  "id": "edbe4496-7d8b-4060-a203-409057540dae",
+  "label": "Source qualification for e29fa057 from reading ce92c0a9",
+  "subject_kind": "claim",
+  "subject_id": "cf494304-602a-574e-9903-6735dad045eb",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "e29fa057-3742-5de8-85b7-7066ffadb538",
+  "note": "Th1 supplies the 1970 antecedent-to-essence step using its actualist necessary inclusion. To reach Th3 one still needs the necessary-existence axiom and the accessible occurrence of an existing God-like individual in the same embedding."
+}

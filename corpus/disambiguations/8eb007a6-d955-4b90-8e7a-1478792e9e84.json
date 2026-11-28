@@ -1,0 +1,25 @@
+{
+  "id": "8eb007a6-d955-4b90-8e7a-1478792e9e84",
+  "label": "Mode of being: dependence reading versus constitutive reading",
+  "term": "mode of being (ModeOfBeing)",
+  "term_label": "MODE_OF_BEING",
+  "sense_definition_ids": [
+    "064cf1e9-a682-4f65-bd31-e8a327d5c072",
+    "42f8b601-09d6-5ad0-af5f-27af30b95166"
+  ],
+  "resolution": "MODE_OF_BEING_1 (DependenceMode) reads 'r is a mode of x's being' as 'x has r in act and has being'; MODE_OF_BEING_2 (DEF-MODE-OF-BEING) is the constitutive reading, r as one of the ways in which x has being, a determination of its act of being. The registered premise 791fa216 uses the primitive ModeOfBeing, which is MODE_OF_BEING_2 by its definition record; DEF-MODE-OF-BEING's lean_declaration names the constraining premise PerfectionsAreModesOfBeing, not a declaration of the parameter (recorded gap). On MODE_OF_BEING_1 the premise follows from 7067553d and the whole transfer load sits on 2f6b9eff (dependenceReading); on MODE_OF_BEING_2 the premise carries the content of the act-of-being thesis. No statement relates the two senses; the q.4 a.1 ad 3 'unde' inference from the dependence ground to the act thesis is the open bridge (docs/notes/mode-of-being-subsistent-esse.md).",
+  "senses": [
+    {
+      "id": "9bd641e3-adae-403d-8fc1-a85d5210960c",
+      "label": "MODE_OF_BEING_1",
+      "definition_id": "064cf1e9-a682-4f65-bd31-e8a327d5c072",
+      "lean_declaration": "TruthCore.Causality.ModeOfBeingMiddleTerm.DependenceMode"
+    },
+    {
+      "id": "f70db8e7-88c6-465a-9c66-3d5ba487624e",
+      "label": "MODE_OF_BEING_2",
+      "definition_id": "42f8b601-09d6-5ad0-af5f-27af30b95166",
+      "lean_declaration": "TruthCore.Causality.Round2PerfectionPrimacy.PerfectionsAreModesOfBeing"
+    }
+  ]
+}

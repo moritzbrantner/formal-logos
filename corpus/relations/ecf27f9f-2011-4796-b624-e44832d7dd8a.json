@@ -1,0 +1,10 @@
+{
+  "id": "ecf27f9f-2011-4796-b624-e44832d7dd8a",
+  "label": "Test by Finite models for the CONTINGENT_1 node and its modal-co for T schema: whatever is NEC (1)",
+  "subject_kind": "result",
+  "subject_id": "3e1d8dfa-b732-5e4b-84ee-374fafe05f66",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cb456382-efd6-554b-8ee4-c8fc193f876a",
+  "note": "Tests omission of the T schema on the step frame with actual contingency and collapse at every accessible world."
+}

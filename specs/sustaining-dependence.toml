@@ -142,3 +142,53 @@ object_kind = "statement"
 object_id = "Whatever has received esse and began is given being by something whenever it is present"
 verification_result_id = "Concurrent actualization entails it for begun things"
 note = "Same history, giving relation and reception predicate; the weak version adds a first moment of presence. No strictness countermodel registered."
+
+[[relation]]
+id = "Test by Sustaining-dependence and onset-parity controls checked"
+label = "Test by Sustaining-dependence and onset-parity controls checked"
+subject_kind = "result"
+subject_id = "886615a9-9c8d-4b74-a52f-723e046108a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5b24ef26-709e-4c67-a03c-cb856a4411eb"
+note = "Tests omitting persistence parity in the inertial history retaining received onset and lacking concurrent actualization."
+
+[[relation]]
+id = "Test by Sustaining-dependence and onset-parity controls checked for Whatever gives a thing bei (1)"
+label = "Test by Sustaining-dependence and onset-parity controls checked for Whatever gives a thing bei (1)"
+subject_kind = "result"
+subject_id = "886615a9-9c8d-4b74-a52f-723e046108a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c4661518-33cc-4a53-ae55-cb986be9c2b5"
+note = "Tests omission of the giver-contact premise in the finite absent-giver case."
+
+[[relation]]
+id = "Test by Sustaining-dependence and onset-parity controls checked for Every cause of another thi (1)"
+label = "Test by Sustaining-dependence and onset-parity controls checked for Every cause of another thi (1)"
+subject_kind = "result"
+subject_id = "886615a9-9c8d-4b74-a52f-723e046108a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ce55210c-d3b5-4720-bd83-a3f63c5dc884"
+note = "Tests the sustaining-cause premise in the finite inertial history."
+
+[[relation]]
+id = "Test by Sustaining-dependence and onset-parity controls checked for Whatever has received esse (1)"
+label = "Test by Sustaining-dependence and onset-parity controls checked for Whatever has received esse (1)"
+subject_kind = "result"
+subject_id = "886615a9-9c8d-4b74-a52f-723e046108a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fa3e228b-7ed7-4441-aa36-4b120792b148"
+note = "Tests omitting received onset on the no-giving history where persistence parity holds."
+
+[[relation]]
+id = "Test by Sustaining-dependence and onset-parity controls checked for A distinct esse cause pres (1)"
+label = "Test by Sustaining-dependence and onset-parity controls checked for A distinct esse cause pres (1)"
+subject_kind = "result"
+subject_id = "886615a9-9c8d-4b74-a52f-723e046108a1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ffcb81fb-882b-460e-a6b1-651528dbb83d"
+note = "Tests the co-presence dependence bridge in the finite history with sustaining giving and no dependence."

@@ -1,0 +1,9 @@
+{
+  "id": "c3339c0f-64ce-4d88-b2ad-11ad32dbbdcb",
+  "label": "Cause availability for actual candidates without necessary parts",
+  "term": "Cause availability for actual candidates without necessary parts",
+  "lean_declaration": "TruthCore.Causality.ActualFusionNecessaryBeing.ActualNoNecessaryPartsHaveCausesAt",
+  "definition": "Every actual individual whose parts are all nonnecessary has some source under the supplied Ontic.Causes relation at the same world.",
+  "basis": "stipulative",
+  "note": "The policy uses NoNecessaryPartsAt on the supplied partial order and has no causal actuality, cover, overlap, or part-existence conjunct."
+}

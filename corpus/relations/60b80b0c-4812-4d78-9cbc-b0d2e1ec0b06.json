@@ -1,0 +1,10 @@
+{
+  "id": "60b80b0c-4812-4d78-9cbc-b0d2e1ec0b06",
+  "label": "Test by Finite benchmark accuracy and opposite-truth responsiveness are independent",
+  "subject_kind": "result",
+  "subject_id": "721646f2-eadd-43d4-8df9-a3aa00c48fd7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "034cb5d4-4e52-4c61-8b7b-708436f3a670",
+  "note": "Tests whether benchmark reliability and responsiveness are equivalent using constant-true and opposite-answer methods on the four-entry benchmark."
+}

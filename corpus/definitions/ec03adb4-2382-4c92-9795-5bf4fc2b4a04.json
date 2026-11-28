@@ -1,0 +1,9 @@
+{
+  "id": "ec03adb4-2382-4c92-9795-5bf4fc2b4a04",
+  "label": "Per-model observation law of an experiment",
+  "term": "per-model observation law of an experiment",
+  "definition": "For a supplied experiment e and a fixed model m, Experiment.law is Measure.map (e.readout m) (e.sampleLaw m). It is the pushforward of that model’s probability measure on the sample space through its measurable readout into the observation space.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Science.Identifiability.Experiment.law",
+  "note": "The observation law describes the distribution of one specified measurement or transcript at a fixed model. A governing transition rule specifies permitted state changes within a model (58d12f26, with the existing law-actuality disambiguation b6e7ec07). Distinct transition rules can induce equal laws for the recorded prefix and unequal laws for a later readout. A constant deterministic readout has a Dirac observation law. No probability measure over the models is supplied."
+}

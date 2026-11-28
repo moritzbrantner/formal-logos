@@ -1,0 +1,10 @@
+{
+  "id": "33be177e-aa54-4482-b9c6-b64e136dac5b",
+  "label": "Test by Nonvacuity witness for the strict-ground dependence bundle",
+  "subject_kind": "result",
+  "subject_id": "6d871ee2-14db-43a9-b8f4-a6d7707a86d2",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "3f972da1-d36f-4b00-95ed-cf0b78bf0105",
+  "note": "Tests whether the consistency and mapping premises can hold with a nonempty distinct-step dependence relation on Nat."
+}

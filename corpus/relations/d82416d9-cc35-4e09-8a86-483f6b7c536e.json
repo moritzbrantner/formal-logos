@@ -1,0 +1,10 @@
+{
+  "id": "d82416d9-cc35-4e09-8a86-483f6b7c536e",
+  "label": "Test by Two already constructed finite witnesses show: with no m for Quasi-realism: moral sent (1)",
+  "subject_kind": "result",
+  "subject_id": "6b47d826-33f2-579c-9e79-d53825ff59f6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2aeed907-013b-5c13-8bfb-c66d25734bc8",
+  "note": "Tests the claimed exhaustiveness and exclusivity of the exact two readings with both answers true on empty scope and both false on a populated scope."
+}

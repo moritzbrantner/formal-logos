@@ -1,0 +1,10 @@
+{
+  "id": "4e21980b-0666-4291-bf18-1533c7e02c0f",
+  "label": "Stationarity transports a location anchor and its presence presupposition (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "f913dc34-49c6-4f3d-bade-5e5dc47ccef4",
+  "rule": "Transport the location anchor by stationarity and project presence by soundness",
+  "meaning": "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

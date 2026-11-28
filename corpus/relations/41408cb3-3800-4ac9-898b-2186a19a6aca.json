@@ -1,0 +1,10 @@
+{
+  "id": "41408cb3-3800-4ac9-898b-2186a19a6aca",
+  "label": "Recorded rival for 5f9430cf from reading 6573cc65",
+  "subject_kind": "statement",
+  "subject_id": "6573cc65-79ab-549f-88c9-47700a2678ee",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "5f9430cf-099b-58ce-895f-ca7681ac3ecc",
+  "note": "Richardson proposes contrastive why-explanation as a different ground relation. On it, difference-making can hold without necessitation. This is a positive rival if the case records track why-explanation. Its applicability to those records and their modal scope remains open."
+}

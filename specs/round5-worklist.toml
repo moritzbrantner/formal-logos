@@ -250,3 +250,263 @@ conclusion = "STMT-ROUND5-WORKLIST-CONTROLS"
 rule = "Explicit finite interpretations"
 meaning = "Finite interpretations for the eleven derivations of round 5: for each premise, a hand-written model (Unit, Bool or Fin 2; the natural numbers for the two finiteness omissions) in which the other premises hold and the conclusion fails (28 omission models, checked by decide or short proofs), and one joint nonvacuity witness per map in which every premise and conclusion holds with populated antecedents. Satisfiability and omission only; no model is claimed to describe reality."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Every operation through a (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Every operation through a (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "12bdfec3-81f6-59e6-91df-88b323ff860e"
+note = "Tests omitting this premise in the encoded everyFormInclinedFromFinality argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Every actualizing form is (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Every actualizing form is (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "144b0405-9800-5032-bf9c-5f26a2d4d2d1"
+note = "Tests omitting this premise in the encoded everyFormInclinedFromFinality argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Nothing is prior to itself"
+label = "Test by Finite interpretations for the eleven derivations of rou for Nothing is prior to itself"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "32d77f18-a9c2-5486-b51c-a24f32863af4"
+note = "Tests omitting this premise in the encoded noLoopsFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Whatever is in act in its (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Whatever is in act in its (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3317e074-fdda-5c61-999f-87744fcd68c6"
+note = "Tests omitting this premise in the encoded pureActOperatesFromBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for If y is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for If y is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "47aff057-35ef-5418-930b-fef72e1104d2"
+note = "Tests omitting this premise in the encoded simplyPriorCausesBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Nothing is moved except i (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Nothing is moved except i (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be9a4ac-699a-5adc-88d4-bbd958fa1576"
+note = "Tests omitting this premise in the encoded pureActOperatesFromBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Every edge of the studied (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Every edge of the studied (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "57552dce-fee0-506b-9aef-58a20da0db44"
+note = "Tests omitting this premise in the encoded noLoopsFromPriority, wellFoundedFromPriority arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for A change in a respect of (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for A change in a respect of (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5a229a9d-9186-58f7-b5b9-c6c20223400d"
+note = "Tests omitting this premise in the encoded successionMotionFromChange argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Every bearer of an operat (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Every bearer of an operat (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5bedb69b-8fbb-53b5-be2f-377d1331cf37"
+note = "Tests omitting this premise in the encoded pureActOperatesFromBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Whatever a thing depends (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Whatever a thing depends (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5dacb0db-edb7-5ac0-985b-de65780fceb6"
+note = "Tests omitting this premise in the encoded simplyPriorCausesBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for A life-state difference a (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for A life-state difference a (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5fdac93c-13f7-506a-b151-d02f8a50d995"
+note = "Tests omitting this premise in the encoded successionMotionFromChange argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Whatever HAS_INTELLECT_1 (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Whatever HAS_INTELLECT_1 (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "64e174b3-3efb-510e-81cc-34bc054a9898"
+note = "Tests omitting this premise in the encoded intellectFormFromUnderstanding argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Causal explanations are c (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Causal explanations are c (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "68172f57-65d2-53fe-930e-936ef99d9d60"
+note = "Tests omitting this premise in the encoded finitePredecessorsFromModes argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Each being is in act or i (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Each being is in act or i (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6884dcfd-7c4c-588a-8fce-8c05ccbd3844"
+note = "Tests omitting this premise in the encoded pureActOperatesFromBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Whatever actually underst (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Whatever actually underst (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "73b3d83a-3699-5b19-87bb-fc43364a47d8"
+note = "Tests omitting this premise in the encoded intellectFormFromUnderstanding argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Simple priority is transi (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Simple priority is transi (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7ad36aca-d55e-5b66-92fa-30749333df4f"
+note = "Tests omitting this premise in the encoded noLoopsFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Intelligible-form inclina (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Intelligible-form inclina (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8554d4f7-2c78-53f5-97c4-dffed1148941"
+note = "Tests omitting this premise in the encoded willFromIntellectualAppetite argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for A thing operating through (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for A thing operating through (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "87afc0da-6637-5707-9e40-9a4a14d095ad"
+note = "Tests omitting this premise in the encoded everyFormInclinedFromFinality argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for CAUSE_3: Each effect has (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for CAUSE_3: Each effect has (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b3853b1b-cb6d-5fdd-bb94-d8ad99034561"
+note = "Tests omitting this premise in the encoded finitePredecessorsFromModes argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Beginning or ceasing to l (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Beginning or ceasing to l (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c41ed610-456e-59db-a8af-81e209769486"
+note = "Tests omitting this premise in the encoded noLifeBoundaryFromChange argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Whatever operates from it (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Whatever operates from it (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ce1ed1ad-9a30-5ba6-a6d8-d264a52169ee"
+note = "Tests omitting this premise in the encoded selfOperatingUnmovedLivesFromOperation argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Simple priority is well-f (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Simple priority is well-f (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d85de8e1-2f7f-5b2f-ba1e-112a0799994c"
+note = "Tests omitting this premise in the encoded wellFoundedFromPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for An efficient cause is pri (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for An efficient cause is pri (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e078f07b-a4b8-595e-a3ee-02dd83474450"
+note = "Tests omitting this premise in the encoded noLoopsFromPriority, wellFoundedFromPriority arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for OPEN analyst reading of S (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for OPEN analyst reading of S (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ed993287-249f-5bd1-ad0d-430acdf698f2"
+note = "Tests omitting this premise in the encoded noLifeBoundaryFromChange argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for Every bearer of an appeti (1)"
+label = "Test by Finite interpretations for the eleven derivations of rou for Every bearer of an appeti (1)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f586a11b-dbda-53d1-9c21-8d75da74056f"
+note = "Tests omitting this premise in the encoded willFromIntellectualAppetite argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eleven derivations of rou for OPEN analyst reading of S (2)"
+label = "Test by Finite interpretations for the eleven derivations of rou for OPEN analyst reading of S (2)"
+subject_kind = "result"
+subject_id = "133783a4-07b1-5727-9fca-7f9fb474db54"
+predicate = "tests"
+object_kind = "statement"
+object_id = "feb2967b-1e3d-5983-8332-d77490cdecca"
+note = "Tests omitting this premise in the encoded selfOperatingUnmovedLivesFromOperation argument, with the other premises retained and the conclusion false in each corresponding control."

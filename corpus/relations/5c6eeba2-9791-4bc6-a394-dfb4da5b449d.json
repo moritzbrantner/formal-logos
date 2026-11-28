@@ -1,0 +1,10 @@
+{
+  "id": "5c6eeba2-9791-4bc6-a394-dfb4da5b449d",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an intellec (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "84c57a8c-d9a2-5672-8b7f-200117f13497",
+  "note": "Tests omitting this premise in the encoded thoughtIsExerciseFromIntellective argument, with the other premises retained and the conclusion false in each corresponding control."
+}

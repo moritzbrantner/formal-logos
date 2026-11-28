@@ -1,0 +1,9 @@
+{
+  "id": "177138ed-5cfd-4b94-ba05-771686976a24",
+  "label": "Favouring fixed by a feature: scenarios agreeing on it get the same favouring",
+  "term": "favouring fixed by a feature (FixedBy φ f)",
+  "definition": "FixedBy φ f, for a favouring profile φ (the favouring in each variation scenario) and a scenario feature f: any two scenarios on which f agrees receive the same favouring from φ (Mathlib's Function.FactorsThrough φ f). It says what the favouring's verdicts can respond to. It does not say that f causes them, and a favouring can be fixed by several features at once. Examples: Lane 2b's D-directed profile is fixed by end-realization (dNatureFactors); a constant profile is fixed by every feature. Non-example: the good-tracking profile is not fixed by end-realization, since it differs between actual and cBetter, which agree on end-realization.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AppetiteStandard.FixedBy",
+  "note": "Stipulative analyst notion (#2145 lane H3), attribution deferred. It names what fixes a favouring's object, the coordinate on which natural and rational appetite differ. See docs/notes/causal-perfection-transfer.md, section 'Natural or rational appetite? The purity premises and the object of an original source's favouring'."
+}

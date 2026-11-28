@@ -41,3 +41,53 @@ premises = []
 conclusion = "Finite controls on GOD_4 uniqueness by esse causation"
 rule = "Evaluate fixed finite cause, order, actuality and dependence dictionaries"
 meaning = "Explicit finite models establish joint nonvacuity, individual nonlogical omissions and scope distinctions for the stated bundles. Partitioned causes each give a real edge in the model. With causation restricted to actual recipients the dependence route also needs to reach God candidates. For the maximal-witness proof the existing MAXIME_1 definition already supplies actuality at esse for the required recipient."
+
+[[relation]]
+id = "Test by Finite controls on GOD_4 uniqueness by esse causation, checked"
+label = "Test by Finite controls on GOD_4 uniqueness by esse causation, checked"
+subject_kind = "result"
+subject_id = "4f934468-3157-4d9f-b606-35832ae1c9af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c"
+note = "Tests omission of this premise from oneFromNonmutualDependence in the finite esse-causation and dependence profiles retaining the other nonlogical inputs."
+
+[[relation]]
+id = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Every maximum in being ex (1)"
+label = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Every maximum in being ex (1)"
+subject_kind = "result"
+subject_id = "4f934468-3157-4d9f-b606-35832ae1c9af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "18561596-1269-53ff-8505-c56e4348e335"
+note = "Tests omission of this premise from oneFromGodMaximal in the finite naming and esse-causation profiles retaining the other nonlogical inputs."
+
+[[relation]]
+id = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for If c, distinct from x, ca (1)"
+label = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for If c, distinct from x, ca (1)"
+subject_kind = "result"
+subject_id = "4f934468-3157-4d9f-b606-35832ae1c9af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+note = "Tests omission of this premise from oneFromNonmutualDependence in the finite esse-causation and dependence profiles retaining the other nonlogical inputs."
+
+[[relation]]
+id = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Whatever is GOD_4 is maxi (1)"
+label = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Whatever is GOD_4 is maxi (1)"
+subject_kind = "result"
+subject_id = "4f934468-3157-4d9f-b606-35832ae1c9af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4c79298d-ee09-5e99-9ced-1be92c19b4cc"
+note = "Tests omission of this premise from oneFromGodMaximal in the finite naming and esse-causation profiles retaining the other nonlogical inputs."
+
+[[relation]]
+id = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Whatever is GOD_4 causes (1)"
+label = "Test by Finite controls on GOD_4 uniqueness by esse causation, c for Whatever is GOD_4 causes (1)"
+subject_kind = "result"
+subject_id = "4f934468-3157-4d9f-b606-35832ae1c9af"
+predicate = "tests"
+object_kind = "statement"
+object_id = "86d02b69-87eb-5594-9958-ccaa5fe6b685"
+note = "Tests omission of this premise from oneFromNonmutualDependence in the finite esse-causation and dependence profiles retaining the other nonlogical inputs."

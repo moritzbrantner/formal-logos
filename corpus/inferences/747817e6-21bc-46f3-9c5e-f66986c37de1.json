@@ -1,0 +1,13 @@
+{
+  "id": "747817e6-21bc-46f3-9c5e-f66986c37de1",
+  "label": "Fixed-content calibration and actual access yield divine assent accuracy (inference)",
+  "input_statement_ids": [
+    "104b8748-db76-44a4-917e-108fb8ce1720",
+    "aba394e1-845d-441d-9cfb-24b71fe8da0a"
+  ],
+  "output_statement_id": "7dd8a624-b04d-4ea0-9ecf-2d9e5cab95ad",
+  "rule": "Compose assent calibration, actual-world specialization of the box, and disquotation",
+  "meaning": "Keep the content, its supplied world interpretation, its report, and the bearer fixed. The calibration links the actual legacy assent to independently assented content and then to its box. The actual edge gives the content's truth at actuality. Disquotation and the matching report recover the original proposition.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "1c343669-b662-477d-829b-243c57295618",
+  "label": "Fixed-content divine assent accuracy and its two KD45 controls",
+  "paraphrase": "Two worlds and one fixed interpretation. A classified bearer assents to an accurately reported contingent content when actuality is accessible. In a pointed KD45 profile for the same content and interpretation, omitting actual access permits false assent. The same nonreflexive pointed frame allows exact accuracy when the supplied assent only selects an everywhere-true content.",
+  "lean_declaration": "TruthCore.Causality.FixedContentDoxasticVeracity.Control.Certificate",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"
+  ]
+}

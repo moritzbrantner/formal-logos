@@ -144,3 +144,23 @@ predicate = "logically_equivalent_to"
 object_kind = "statement"
 object_id = "STMT-DISTINCT-ESSE-REQUIRES-EXTERNAL-CAUSE"
 note = "Same proposition on the same q.3 a.4 profile: both unfold to 'every actual distinct-esse x has some y other than x, in act as to being, that causes x's esse'. Verified as otherActualCauseIffExternalCause (Iff.rfl), a Comparator-checked theorem of the esse-cause efficiency controls result. No argument is registered in either direction, since each would be an identity transcription; the statements stay distinct records because their sources differ (De ente c.3, ST I q.3 a.4)."
+
+[[relation]]
+id = "Test by Esse-cause efficiency controls"
+label = "Test by Esse-cause efficiency controls"
+subject_kind = "result"
+subject_id = "23792412-934c-4ea1-a3a8-e9f5d37a94b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0cc3a136-33b2-4d98-bc9a-48d6fc53429d"
+note = "Tests the converse strength implication in the registered interpretation. Same profile; the restricted bridge covers only actual causes of actual distinct esse. RestrictedBridgeOnlyControl satisfies the restricted bridge and falsifies the unrestricted one."
+
+[[relation]]
+id = "Test by Esse-cause efficiency controls for Every actual distinct esse is efficiently caused (C (1)"
+label = "Test by Esse-cause efficiency controls for Every actual distinct esse is efficiently caused (C (1)"
+subject_kind = "result"
+subject_id = "23792412-934c-4ea1-a3a8-e9f5d37a94b0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1ff08418-e7a8-473f-9348-f2fe83b4d00e"
+note = "Tests the converse strength implication in the registered interpretation. Same q.3 a.4 profile and witness; the strong version adds that the external cause of esse is an efficient cause of it (EfficientlyCausesEsse). NonEfficientCauseControl satisfies the weak version and falsifies the strong one."

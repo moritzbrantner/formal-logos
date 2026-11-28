@@ -1,0 +1,27 @@
+{
+  "id": "78afce41-1d70-48ee-8d6a-4d698518badd",
+  "label": "Root links from Rosalie Iemhoff, Intuitionism in the Philosophy of Mathematics",
+  "statement_ids": [
+    "94b82989-b0f4-5046-8ae9-1a3c940e3b3e",
+    "fe6414bf-580f-595b-937e-c0e7bf7bb6b6"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§3.1, BHK-interpretation, 'knowing that a statement A is true means having a proof of it': The reported intuitionist reading distinguishes knowing a truth from admitting an arbitrary assertion. To use knowing-as-proof for the case's assertion condition, the selected assertions must be knowledge-assertions in the mathematical practice and require proof in the relevant system. §6.3, Dummett, 'the central notion in the theory of meaning for mathematics is not, as in Platonism, truth, but proof': The reported Dummett reading ties mathematical understanding to recognition of a proof when presented. An actual assertion still needs to carry a proof in the selected setting, a stronger condition than the speaker being able to recognize one.",
+  "evidence": [
+    "3368c027-2f31-5c09-a17d-0d05a6a4dcf1",
+    "a622ecc3-dd59-593e-a8f9-18f80f91159e",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1077,3 +1077,15 @@ gap. These reuse the original schema signature; they are not Christian
 histories, complete modal models or independent models of classical attributes.
 No source claim, author interpretation, real-world coverage or root premise is
 established by these conditional findings.
+
+## Rules, hinges and shared evidence (2026-11-26)
+
+The rule-following and private-sign passages are evidence about criteria of
+correctness. On Certainty adds proposed stopping points for justification
+involving an inherited background and practices. The Tractatus's ladder and
+mystical passages qualify competing readings of what can be said. Later
+religious-language interpretations vary in what they allow historical evidence
+and shared inquiry to do. Using these readings in the case requires selecting
+the operative practice, assertion and evidence relation.
+
+[Ludwig Wittgenstein reading attempt](../corpus/attempts/16f91989-dfe3-4b6c-9023-e37a9faf6a20.json), [Ludwig Wittgenstein reading attempt](../corpus/attempts/1db59ef0-d120-4f39-a5a9-d7de091322dc.json), [Richard Amesbury reading attempt](../corpus/attempts/9be4b9cd-583a-4d71-9d00-ac4b53428f55.json), [Michael Scott reading attempt](../corpus/attempts/67ce2ac2-7aaa-442e-bb4d-9e3d0d650fa5.json).

@@ -1,0 +1,10 @@
+{
+  "id": "47c228ff-2082-4a27-b0b9-856cc1b79c7c",
+  "label": "The arena's lack fact for an actual root holds exactly when the root lacks the determination",
+  "paraphrase": "OPEN fact-to-profile bridge, analyst formulation: for every actual concrete root r at w and every determination d, the arena's fact lack r d holds at w exactly when r does not really have d at w. It puts a root's absences among the facts a fact PSR quantifies over and says nothing about their reasons. lack is a supplied map from bearers and determinations to facts of the arena.",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.RootLackFactsAt",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ]
+}

@@ -74,3 +74,22 @@ coverage = "One explicitly populated omission model, not all lower-bounded groun
 exclusivity = "No exclusion between lower bound alone and absence of Nat rank is assumed."
 witness = "Control.descending with S=0,L=0,epsilon=0 in Control.Certificate; controls proves lower bound, gap, failed positivity, failed Nat rank and failed ActualGroundingWF."
 next_step = "The checked full-bundle exclusion requires both remaining open calibrations; no metaphysical actuality inferred."
+
+[[relation]]
+id = "Unranked actual grounding is the Nat-rank rival"
+subject_kind = "statement"
+subject_id = "Actual grounding lacks a finite Nat rank"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "STMT-ACTUAL-GROUNDING-FINITE-RANK"
+note = "ActualGroundingUnranked m w is the exact negation of ActualGroundingFiniteRank m w on the same selected world and actual concrete grounding relation. The existing potential result excludes it under the three open numerical calibrations. The reverse-successor interpretation supplies a mathematical example of the rival, without settling its metaphysical application or the weaker well-foundedness premise."
+
+[[relation]]
+id = "Test by Actual grounding quantitative controls checked"
+label = "Test by Actual grounding quantitative controls checked"
+subject_kind = "result"
+subject_id = "d4cceb07-f9ff-4a49-a6d8-b5b59e693123"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5adb2dc9-54bc-4727-8821-b4dbb94d5220"
+note = "Tests the selected premise in the following setting. Identical reverse-successor grounds y x iff y=x+1, selected (), no varying frame or bearer identity. Control.descending with S=0,L=0,epsilon=0 in Control.Certificate; controls proves lower bound, gap, failed positivity, failed Nat rank and failed ActualGroundingWF. Fixed Control.descending, Unit world, Nat all actual/concrete; S=0,L=0,epsilon=0 retains lower bound and uniform gap while positivity fails."

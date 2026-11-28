@@ -30,6 +30,11 @@ paraphrase = "OPEN analyst premise, attribution deferred (respect-general concur
 definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ACT"]
 disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
 
+[statement.connection_plan]
+target_statement_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+missing_bridge = "Instantiate respect-general concurrent actualization at esse, then apply the selected-world contingency-to-lackability and holder-to-actual-ground calibrations of the esse-only sibling."
+blocker = "The wider respect law produces holding at esse but includes neither the modal lackability calibration nor the selected grounding edge for that holder."
+
 [[statement]]
 id = "A mover that could lack the act by which it holds another is MOTION_3 held in it by another"
 lean = "HeldMoverIsHeldInItsOperativeAct"
@@ -43,6 +48,11 @@ lean = "LackableBeingIsHeld"
 paraphrase = "OPEN analyst premise, attribution deferred: the untimed esse instance of the respect-general concurrent actualization. Whatever is in act as to being (InAct x esse) and could lack being (Lackability.CanLack x esse) is presently given being by something other than itself (HeldMotion at esse, the holding relation read at esse as giving being). Derived from the timed strong concurrent actualization 76d2cc96-14a0-48bc-bd0b-a5c0ca853265 under the present-moment reading of its vocabulary (dedc431f-4f04-40e9-b519-3243d1874c18), which is a further open bridge: its clause (b), that whatever could lack being has received esse, is substantive. Existential inertia contests it (concurrent-actualization Control part 1); its warrant is assessed on branch agent/sustaining-vs-inertia and is not judged here."
 definitions = ["56b438a0-7fcc-4dd5-916b-1d2e2162310b", "ea1904bc-bdfa-4835-a4a7-8545c5221e2e", "6ab9a832-6b0f-47ac-9f08-144444bf1cb1", "DEF-ESSE"]
 disambiguations = ["a59fd0ac-f276-528d-8dc3-c3eddd331ac7"]
+
+[statement.connection_plan]
+target_statement_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+missing_bridge = "Use the existing existence-to-act calibration at esse. Show that modal absence from an accessible world gives CanLack at esse for the same actual concretum. Show that the distinct holder at esse is concrete, exists at the selected world, and grounds the recipient there."
+blocker = "Holding and lackability are primitive and untimed. PresentMomentHoldingReading maps timed giving into holding, while this application needs the holder-to-selected-actual-ground direction. A present actualization alone does not certify the giver’s concreteness or the selected grounding edge."
 
 [[statement]]
 id = "Whatever presently gives another being presently actualizes it in every act it could lack"
@@ -185,3 +195,31 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 rule = "Explicit finite interpretations checked by case analysis; two facts over all interpretations"
 meaning = "C* in the holding sense entails neither the respect-general concurrent actualization nor its esse instance (stick); the esse instance with the actualizer premise and the lackable-being bridge does not give C* without accident-inclusive conservation (iron); mutual holding is consistent with concurrent actualization and C* (cards); MOTION_1's potency premise fails for MOTION_3 whenever anything is held, and, where that premise holds of the MOTION_1 relation with a shared act predicate, no being is moved in one respect in both senses (all interpretations); the holding First Way's premises with C* and the respect-general concurrent actualization hold while the absolute first-unmoved-mover form fails (crossed; the esse-side bridges are not in that model). A finite countermodel shows a premise is needed in that interpretation, not that it is false."
+
+[[relation]]
+id = "Test by Holding controls checked for Nothing is moved except insofar as it is in POTENCY_1 to (1)"
+label = "Test by Holding controls checked for Nothing is moved except insofar as it is in POTENCY_1 to (1)"
+subject_kind = "result"
+subject_id = "8eeebe1a-ec1f-4c81-a406-a75d887b02d4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be9a4ac-699a-5adc-88d4-bbd958fa1576"
+note = "Tests importing the motion-to-potency commitment into the holding interpretation when there is an actual held thing."
+
+[[relation]]
+id = "The leaning-cards observation attacks the unrestricted holding per se link"
+subject_kind = "statement"
+subject_id = "5469677e-3b43-4eda-8bc9-a23b5fa9bd6b"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "685933c7-f557-4cf4-80e2-cea2f2e88e2b"
+note = "Target: the unrestricted holding per se link 685933c7, which since #2103 lane E batch 7 is on a root route through cf7940a7 and 5eb16c61. The observation conflicts with 685933c7 only jointly with the holding regress 6f924bb0: alone it is consistent with the link (two cards that are per se links of each other are excluded only by the regress). Mechanism: two cards leaning on each other each presently hold the other in act in the same respect, and each is MOTION_3 held in the act by which it holds, so the link makes each a per se link of the other; with 6f924bb0 that series a, b, a, b, ... is excluded (noMutualHolding, result 0b40c6e1, conclusion f401994a). Independent justification: ordinary statics, where each card's propped position is held by the contact force the other now exerts. Relevance: the attack bears on the original support of cf7940a7 (result 7263cb1a); the total-holding repair (4b9462dd, b41f6bcd, 6fdb45c3) gives cf7940a7 a support consistent with the cards. The inconsistency forces rejecting at least one of the three, not a preferred one; the parallel attack on 6f924bb0 records the other target."
+
+[[relation]]
+id = "The leaning-cards observation attacks the holding regress"
+subject_kind = "statement"
+subject_id = "5469677e-3b43-4eda-8bc9-a23b5fa9bd6b"
+predicate = "attacks"
+object_kind = "statement"
+object_id = "6f924bb0-beb4-4a7c-845e-ceb9b7aeb3c1"
+note = "Target: the holding regress 6f924bb0, on a root route through cf7940a7 and 5eb16c61. The observation conflicts with it only jointly with the unrestricted holding per se link 685933c7: the link makes two leaning cards per se links of each other, and the regress then excludes the series a, b, a, b, ... (noMutualHolding, result 0b40c6e1, conclusion f401994a). Independent justification: ordinary statics, as for the parallel attack on 685933c7. Relevance: either member of the pair can be the one to go; the total-holding regress c4e333da, used by the repair, is consistent with the cards (TotalHolding Control part 1)."

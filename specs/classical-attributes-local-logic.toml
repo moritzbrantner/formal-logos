@@ -33,3 +33,13 @@ object_kind = "statement"
 object_id = "Classical attributes actual-bearer local equality logic"
 verification_result_id = "173653fe-4e66-4959-9dac-b5dabb6d5948"
 note = "Sole-premise verified projection; strictness remains open."
+
+[[relation]]
+id = "Test by Classical attributes local logic inhabited controls"
+label = "Test by Classical attributes local logic inhabited controls"
+subject_kind = "result"
+subject_id = "eef069bb-db3c-49d8-a7c6-e8f6166476a6"
+predicate = "tests"
+object_kind = "argument"
+object_id = "6c6549ae-1181-42b5-9702-ce826bc3b924"
+note = "Tests joint nonvacuity of local equality logic in the Unit bearer interpretation and compares the packaged omission profiles."

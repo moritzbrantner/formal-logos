@@ -1,0 +1,16 @@
+{
+  "id": "6590363c-241f-4acc-b14b-bf7c053a0fe2",
+  "label": "Check the selected recipient population omission",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "1820e7c1-dae1-4f26-ad1f-2eda9feff674",
+  "inference_ids": [
+    "a107d912-df53-42b9-8631-27cd1bf6e3d5"
+  ],
+  "meaning": "The only candidate satisfies the concreteness classifier and fails ExistsAt. There are no actual concrete recipients, no actual contingent concreta and no actual necessary concrete witness. Universal assertions over the empty recipient subtype give neither a witness nor its pointwise premises.",
+  "definition_ids": [
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "e9e031af-665e-5888-9328-f7637b5a2677",
+    "a1b2e330-388f-4120-bc5c-969642317792"
+  ]
+}

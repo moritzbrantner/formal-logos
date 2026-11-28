@@ -82,3 +82,33 @@ premises = []
 conclusion = "Finite controls for Darwinian epistemic debunking and its self-application"
 rule = "Evaluate three two-scenario profiles and reuse two existing reliability controls"
 meaning = "Nonvacuity and omission controls for the three arguments. Tracking failure does not entail actual inaccuracy; one omission example shows origin fixing is needed; the self-application premises are jointly satisfiable and leave the conclusion true and F6 intact; a no-undercutting model with history-fixed correctness satisfies the same uniform policy and keeps warrant, which shows consistency, not that antirealism specifically secures warrant. These are formal interpretations only; no actual history, reliability or account of epistemic correctness is established."
+
+[[relation]]
+id = "Test by Darwinian epistemic debunking finite controls"
+label = "Test by Darwinian epistemic debunking finite controls"
+subject_kind = "result"
+subject_id = "92a88754-ad36-4b22-a645-d054fc0400ac"
+predicate = "tests"
+object_kind = "argument"
+object_id = "6380434c-7e0b-4585-a1e8-9926cd0d1853"
+note = "Tests nonvacuity of the self-application bundle in the finite realist frame and contrasts the history-fixed model with retained warrant."
+
+[[relation]]
+id = "Test by Darwinian epistemic debunking finite controls for History-fixed correctness keeps an a (1)"
+label = "Test by Darwinian epistemic debunking finite controls for History-fixed correctness keeps an a (1)"
+subject_kind = "result"
+subject_id = "92a88754-ad36-4b22-a645-d054fc0400ac"
+predicate = "tests"
+object_kind = "argument"
+object_id = "d1691cbe-0b0c-4ddc-a2e4-bc98bd2f3a77"
+note = "Tests nonvacuity of the surviving-reply bundle with history-fixed correctness and a selection-fixed accurate verdict."
+
+[[relation]]
+id = "Test by Darwinian epistemic debunking finite controls for The selective history fixes the verd (1)"
+label = "Test by Darwinian epistemic debunking finite controls for The selective history fixes the verd (1)"
+subject_kind = "result"
+subject_id = "92a88754-ad36-4b22-a645-d054fc0400ac"
+predicate = "tests"
+object_kind = "statement"
+object_id = "af1256e2-dcaa-48f5-975f-db90c0452667"
+note = "Tests omission of selection fixing in the finite within-history variation profile where every history mate remains accurate."

@@ -1,0 +1,26 @@
+{
+  "id": "a4316cb7-fe8d-4a3e-b60e-41beec9d152f",
+  "label": "Necessary support strength deltas connection plan",
+  "statement_ids": [
+    "0d3e56b9-b82a-48f3-bc08-ffa71b9e34bf",
+    "f82af4ee-1188-4fa7-8385-1ac608250ed4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Recurrence of the edge at w0 and necessity/actuality of the supporter are distinct laws. Align the existing support predicate and base world and derive precisely the missing conjunct before invoking predecessor lifting.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 96d25c42-71aa-5fa0-841d-9aa62d91e1be. The scoped bridge described in the summary remains open."
+}

@@ -67,3 +67,14 @@ God-like individual. The larger Ax2a/Ax3/Ax4 inconsistency result remains a
 separate stronger-bundle result. Neither this correction nor Scott's distinct
 consistency control establishes real-world truth of positivity axioms or a
 metaphysically warranted admissible-property domain.
+
+## Where the modal source steps belong (2026-11-26)
+
+Scott's T1, C and T2 are steps within the stated embedded derivation. C2 obtains
+ordinary existential exemplification with reflexivity, separate from a rigid
+witness across worlds. The 1970 Th1 and Th2 retain their actualist necessary
+inclusion and existence condition. Application to the case requires a viable
+possibility premise and a bridge from the selected God-like property to the case
+profile.
+
+[Scott embedding reading attempt](../corpus/attempts/bf516bc2-571b-4fb0-a39a-168b133e525b.json), [Gödel 1970 variant reading attempt](../corpus/attempts/4e3c2dcb-b0da-4f04-8539-a93cfe372a0e.json).

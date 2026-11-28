@@ -1,0 +1,10 @@
+{
+  "id": "9fe18023-07d6-4052-ba44-60e8a5e452c3",
+  "label": "Test by ConcurrentActualization.controls (76d2cc96)",
+  "subject_kind": "result",
+  "subject_id": "955ef523-695d-4920-b88d-bf6e737e71e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "76d2cc96-14a0-48bc-bd0b-a5c0ca853265",
+  "note": "With selfGiving, false gives itself being from time 1 on and its distinct giver true gives it being only at time 1. The weak concurrent actualization holds whenever the recipient is present, while distinct-giver actualization fails after time 1."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "a3ef28c6-aff9-4cac-8f93-7397bde8a51b",
+  "label": "Test by Sustaining-causation controls checked for A concrete thing present at two moments is p (1)",
+  "subject_kind": "result",
+  "subject_id": "b12b253b-7031-41f3-ac3f-42b7bad3d166",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7a41ea33-cbc1-4b74-9437-5d222ed9b633",
+  "note": "Tests temporal convexity in the originating lasting-ground derivation using the separated time slices."
+}

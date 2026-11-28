@@ -1,0 +1,37 @@
+{
+  "id": "9d9d3eca-8017-4702-be38-9fa42cfb6eed",
+  "label": "Root links from Bertrand Russell, The Philosophy of Logical Atomism",
+  "statement_ids": [
+    "909948e9-0ead-52c6-a8da-2adfe2daa23c",
+    "bcdb9a97-621a-5be7-a4dd-5b949e0538e9",
+    "9bef7771-9458-5639-9270-0940d1c80b78",
+    "550cc92a-452d-5696-8275-c26db8cebc0f",
+    "15f1f3dc-9dbb-52d0-bdab-7209c8db74b1",
+    "79154228-f519-5cb9-a011-2b45ea260497",
+    "47defcba-8271-5287-a59d-6aed9e496947"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "V.66–68: Russell explains general existence by some value satisfying a propositional function. Using this account against the case's proposed object-level existence feature requires treating that feature as exhausted by the same quantificational reading. It does not deny that the function is exemplified. V.71–72: Russell acknowledges existential and general facts without a complete analysis of them by the formula. His limitation prevents treating the propositional-function paraphrase alone as an exhaustive account of a case existence fact. A further connection between those facts and the case's reality feature is open. V.75–76: Russell treats universe nonemptiness and the number of things as empirical questions. Reading the case's two-bearer assertion this way requires matching its selected-world candidate domain to that empirical inventory. Formal possibility of two inhabitants does not supply the actual observations. V.77: Russell denies meaningful predication of the same existence notion of an actually named object. Comparison requires identifying the case's reality feature with Russell's quantifier reading and the bearer with a genuinely named object, rather than treating his claim as a denial of every object-level notion of esse. VI.78–81: Russell takes a genuine name to have a referent, and treats a significant denial of existence such as the Romulus example through a description. Applying the doctrine to the naming route needs to establish whether the target term is a proper name in this strict sense or a name introduced by a nominal description. VI.86–87: Russell's test for the existence of a singular described individual requires both a satisfier and uniqueness. If the route really uses such a description, the application needs both conditions for the same descriptor. Naming from a satisfied profile alone does not implement that semantic analysis. VI.90–91: Russell withholds a transfer from existential satisfaction of a description to predicating existence of a genuinely named individual. The naming route needs an explicit transition from its nominal description to the same proper referent before drawing that stronger predicative conclusion.",
+  "evidence": [
+    "da14fe0e-1845-544c-8830-2b1d57790743",
+    "c580477d-db12-5177-ae41-d633d3530ae2",
+    "7cf7e1f0-9d8f-5586-b43a-af4d6b4ce375",
+    "fbc90e34-7cf4-570c-868e-7855e101346a",
+    "966b6704-f97d-53ee-b364-bdde909ecadb",
+    "b69319d1-c5d9-5d35-aea5-88763147f3c8",
+    "895e2b81-1869-5674-86c0-1e65e0a57e63",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

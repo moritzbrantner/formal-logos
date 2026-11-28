@@ -11,6 +11,7 @@ public import TruthCore.Models.CountTemporalControls
 public import TruthCore.Models.EmptyTruthmaker
 public import TruthCore.Models.FiniteSupport
 public import TruthCore.Models.HistoryTimeScope
+public import TruthCore.Models.HyperintensionalExistence
 public import TruthCore.Models.Inertia
 public import TruthCore.Models.InfiniteGreatestWhole
 public import TruthCore.Models.Intentionality943
@@ -40,6 +41,7 @@ public import TruthCore.Models.QuartaViaCausalAscent
 public import TruthCore.Models.QuartaViaDegreeFork
 public import TruthCore.Models.QuartaViaMaximumControls
 public import TruthCore.Models.RespectAlternatingMotionCycle
+public import TruthCore.Models.STITControls
 public import TruthCore.Models.Scott
 public import TruthCore.Models.SelectedAncestry
 public import TruthCore.Models.SelectedPlgNegations

@@ -1,0 +1,29 @@
+{
+  "id": "1ba72963-95fc-409d-a5ac-fe0791a5ee97",
+  "label": "Root links from James H. Fetzer, Carl Hempel",
+  "statement_ids": [
+    "afa7a288-a1d5-5958-a1d0-3f68d4d186ad",
+    "3f979107-8ac1-557c-8e10-b3cfa3a7ba78",
+    "c40631a3-c697-5e8d-a1cf-2bbf48f25226"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§2.3, \"on the assumption that a sentence \\(S\\) is meaningful if and only if its negation is meaningful\": The reported Hempel argument adds negation closure to the verification criterion. Its stronger reading applies to every meaningful sentence. Any argument against the case criterion using negated laws must declare this as an extra assumption and preserve the sense of meaningfulness. §2.3, \"on the assumption that a sentence \\(S\\) is meaningful if and only if its negation is meaningful\": The analyst's weaker reading of Hempel uses the negation step only on already negated sentences. It can test the law example when the negated law is counted meaningful. It gives no unrestricted closure law and the passage's biconditional does not identify just this local weakening as Hempel's thesis. §2.3, \"the verifiability criterion implies that existential generalizations are meaningful, but that universal generalizations are not\": Hempel's reported criticism challenges a verification scope including universal laws: a finite observation can verify particular existential examples while leaving universals open, and meaning closure under negation cannot then be combined with the resulting particular/universal split. The objection requires that interpretation of verification and the extra negation assumption.",
+  "evidence": [
+    "53f64561-9829-5283-bd46-8d921d97bd9e",
+    "7ac3d198-dba6-518c-8592-a7407fa62cb1",
+    "544a5f43-0617-516e-8b7a-dcdc89c83bcd",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

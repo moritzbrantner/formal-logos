@@ -1,0 +1,10 @@
+{
+  "id": "bb7f661a-47e7-4d78-ba84-3e8cb1b0ae17",
+  "label": "Test by JustificationIntrospection.introspectionBoundary (d65fb12b)",
+  "subject_kind": "result",
+  "subject_id": "901bfc2f-eafd-5200-b002-38426075383e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d65fb12b-7a85-479a-8c40-4b10f8b3c7c8",
+  "note": "The epistemic interpretation of the frame supplies w0 to w1 and w1 to w2 while excluding w0 to w2, so TransitiveAt fails at w0. Reflexivity and the global knowledge-requires-justification norm hold. The selected proposition is known and justified at w0, while justification fails at w1 and therefore is not known at w0."
+}

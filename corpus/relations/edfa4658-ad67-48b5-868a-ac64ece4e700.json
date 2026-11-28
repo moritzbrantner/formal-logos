@@ -1,0 +1,10 @@
+{
+  "id": "edfa4658-ad67-48b5-868a-ac64ece4e700",
+  "label": "Test by Finite interpretations for the nine derivations of round for When a thing's esse is ot (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f5db1796-20b1-5eef-8953-ef549815e989",
+  "note": "Tests omitting this premise in the encoded compositionsFromConstituents argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "60f54e6a-af7a-444c-bff3-2a70a8d31c8d",
+  "label": "Root links from Ludwig Wittgenstein, A Lecture on Ethics",
+  "statement_ids": [
+    "d5b316f2-a0fb-5df0-ac9d-75f6cb2ba7db",
+    "12f53e30-5f08-58c2-b289-16b34c251845",
+    "95a7894d-2072-59df-b8c9-8f2ec45e1362"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "LE all religious terms seem in this sense to be used as similes or allegorically: The later lecture argues from the failure to state the supposed literal counterpart of a religious simile. This identifies a reason to question certain religious expressions, separate from an unrestricted test of all case God sentences. Transfer requires showing the specific expressions behave like those similes. LE no statement of fact can ever be, or imply, a judgment of absolute value: Wittgenstein distinguishes relative evaluative judgments from absolute value judgments and denies that a description of facts implies the latter. To bear on naturalistic moral ascription, the selected moral judgment would have to use that absolute sense and the proposed natural basis would have to be merely descriptive in the relevant respect. LE the tendency of all men who ever tried to write or talk Ethics or Religion was to run against the boundaries of language: The lecture regards ethics and religion in their absolute-value and ultimate-meaning use as a tendency to run against language's limits. The target's wider account of God sentences still needs scope and a reason this proposed limitation applies to its metaphysical assertions.",
+  "evidence": [
+    "a9968524-0232-5cd7-85ec-58b71996db5e",
+    "fc318450-8503-5be4-b0c8-ac972cefa7e6",
+    "1745aa7a-031c-5d65-8bd8-4798f7b87970",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "27488f69-756d-4e6d-a02b-4841d3913fb3",
+  "label": "Test by Infinite actual roster witnesses omission of the finite giver pivot",
+  "subject_kind": "result",
+  "subject_id": "8353b4b6-b22b-45d2-8216-a32b12df5707",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0881e859-c4c3-53ff-9bec-b61294e12d51",
+  "note": "Tests strengthening finite panels to universal giving in the Nat candidate graph where each giver reaches only smaller recipients."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "a7f5faf2-7f51-4bfd-a5bd-236105e44f6c",
+  "label": "The Gödel positivity premises exclude dead ends",
+  "argument_id": "780669c5-2f8f-4afc-a12b-73b567e52159",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.noDeadEndOfPositivity",
+  "comparator_config": "results/a7f5faf2-7f51-4bfd-a5bd-236105e44f6c/comparator.json",
+  "status": "solution-present",
+  "description": "Registers the existing noDeadEndWorld theorem on a fixed frame, existence predicate and positivity predicate. Ax2a, Ax4 and exclusion of the empty property imply no world accesses no worlds. Positivity stays specific to the Gödel setting."
+}

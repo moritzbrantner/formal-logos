@@ -2,6 +2,7 @@
 module
 
 public import TruthCore.Alternatives.ActPotencyRegress
+public import TruthCore.Alternatives.ActualHistoryIdentification
 public import TruthCore.Alternatives.ActualPracticeRecognition
 public import TruthCore.Alternatives.ActualityWithoutBeing
 public import TruthCore.Alternatives.ConciliarGrammarDefinitions

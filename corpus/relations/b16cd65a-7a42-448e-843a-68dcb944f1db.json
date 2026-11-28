@@ -1,0 +1,10 @@
+{
+  "id": "b16cd65a-7a42-448e-843a-68dcb944f1db",
+  "label": "Test by Controls for the typed LORD_3 reading, checked for Whatever is LORD_2 is LORD_1",
+  "subject_kind": "result",
+  "subject_id": "96ce418a-a2d7-40ac-bf8d-cf698f16f4dc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "eb6611a5-f8a7-44f6-9bf1-2f65eb80b3cb",
+  "note": "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse, Governs and IsLord. The strong version gives LORD_1 to every cause and governor of all; the weak one only to such a being that also wills some good of their own to every other intellectual being. Control part 2: a cause and governor of all that wills no good to an existing intellectual creature satisfies the weak version and falsifies the strong one."
+}

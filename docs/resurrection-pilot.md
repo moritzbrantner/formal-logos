@@ -222,3 +222,15 @@ consequences; no extra philosophical coverage premise is needed merely to count
 this finite enum. A future elimination of named theories would need explicit
 named-account coverage and an additional-relevant-account remainder rather
 than promoting this enum into an exhaustive history/worldview domain.
+
+## Testimony bearing on crucifixion (2026-11-26)
+
+Philippians 2.7–8 presents Jesus's death on a cross in an account of
+self-abasement. Tacitus, Annals 15.44, places Christus's execution under Pilate
+during Tiberius's reign and leaves the method unstated. Applying these witnesses
+to the pilot requires evaluating identity, provenance and historical testimony.
+Josephus's notice of James concerns kinship and execution. Testing conversion
+requires evidence of James's belief before and after the claimed change. See
+the [Paul attempt](../corpus/attempts/8536c265-7158-4f8f-933f-03b188019ccb.json),
+[Tacitus attempt](../corpus/attempts/4f1cbc09-11a1-40ff-865d-06194315f618.json)
+and [Josephus attempt](../corpus/attempts/6eba3e2b-39c9-400d-81f9-77fc6d239ea5.json).

@@ -1,0 +1,10 @@
+{
+  "id": "1e9762e9-0dbb-4cf7-a7de-b1b10af8ae80",
+  "label": "Source qualification for d8a1fb16 from reading 8895a07f",
+  "subject_kind": "claim",
+  "subject_id": "8895a07f-e4e1-5bd5-acff-83196f9c804b",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "d8a1fb16-ce20-542f-9e3b-d9350468e331",
+  "note": "A2 invokes the earlier unqualified report to classify a possible uncaused chain head as noncontingent. Its use for the selected actual coverage claim needs a bridge from the survey's qualified cause and contingent classes to existing individuals and their existing causes at that world."
+}

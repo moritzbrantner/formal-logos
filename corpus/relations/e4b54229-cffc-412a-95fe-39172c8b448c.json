@@ -1,0 +1,10 @@
+{
+  "id": "e4b54229-cffc-412a-95fe-39172c8b448c",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Whatever is not in act of (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a62975a9-bcd4-5bc7-83e7-6d4f5d2b2c13",
+  "note": "Tests omitting this premise in the encoded existingInActAtFromMerePossibility argument, with the other premises retained and the conclusion false in each corresponding control."
+}

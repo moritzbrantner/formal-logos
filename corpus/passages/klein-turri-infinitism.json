@@ -7,7 +7,9 @@
     "sha256": "sha256:9c78547cf7b03474b8d7a2e0d19e3dcd8afbbca01c89da299689d427b7676c4d",
     "encoding": "utf-8",
     "language": "eng",
-    "license": "Copyright Peter D. Klein, John Turri and Internet Encyclopedia of Philosophy. Public author-coauthored scholarly exposition; only hashes, short incipit, locators and analytical paraphrases committed, no full-text redistribution. Byte hash re-pinned 2026-11-05 from sha256:d32fb3a1b27855432249179fdf86c1ba272f3ce9528b737ab826b5b7cf8c65bf after the live page drifted (main CI run 42002902785); the extracted text still matches the unchanged text_sha256, so only sha256 changed. No Wayback capture of this page is pinned yet, so the snapshot stays fragile."
+    "license": "Copyright Peter D. Klein, John Turri and Internet Encyclopedia of Philosophy. Public author-coauthored scholarly exposition; only hashes, short incipit, locators and analytical paraphrases committed, no full-text redistribution. Byte hash re-pinned 2026-11-05 from sha256:d32fb3a1b27855432249179fdf86c1ba272f3ce9528b737ab826b5b7cf8c65bf after the live page drifted (main CI run 42002902785); the extracted text still matches the unchanged text_sha256, so only sha256 changed. Wayback capture 20261016021922 pinned (matching selected text; formal-logos issue #2013, 2026-11-26). Only metadata and short incipits are committed.",
+    "wayback_url": "https://web.archive.org/web/20261016021922id_/https://iep.utm.edu/inf-epis/",
+    "wayback_sha256": "sha256:e8908546a6933859b5fc2e46db06887978393ae76d1761ea63888a7cadc17978"
   },
   "passages": [
     {

@@ -1,0 +1,10 @@
+{
+  "id": "ac5604ec-8341-440f-9eee-db9e8b2e6e3f",
+  "label": "Deterministic transcript laws test the blind and audit history contrast",
+  "subject_kind": "argument",
+  "subject_id": "c57d8091-a040-4a9f-924a-151de3044056",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "62d59ef4-fc23-4f8f-86f6-9af03c4ecc1e",
+  "note": "Tests whether access to the entire observation law instead of a realized transcript splits the same latent-history pair in the deterministic blind model, using the audit on the same inputs as a positive control."
+}

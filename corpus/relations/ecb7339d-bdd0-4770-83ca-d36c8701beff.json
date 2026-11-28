@@ -1,0 +1,10 @@
+{
+  "id": "ecb7339d-bdd0-4770-83ca-d36c8701beff",
+  "label": "Test by POSSIBILITY_DEFINED_CONCEPTION_3 satisfies H by definition",
+  "subject_kind": "result",
+  "subject_id": "5be9bf2f-4f18-5a70-a1d8-b4d012cae2b7",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "310b916d-ee16-56c4-9ae4-9c5613ef9376",
+  "note": "Tests the reach of the strong bridge when conception is possibility-defined or merely satisfiability somewhere, using the two-world modal profiles."
+}

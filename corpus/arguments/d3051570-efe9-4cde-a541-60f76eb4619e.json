@@ -1,0 +1,41 @@
+{
+  "id": "d3051570-efe9-4cde-a541-60f76eb4619e",
+  "label": "Every actual root has every pure perfection, from no unexplained absence",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "a30c5963-cb81-5366-aab0-2454363e18f7",
+    "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "9281317d-1f0a-4522-b91c-58cc07652e92"
+  ],
+  "conclusion_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "inference_ids": [
+    "f61d5fdb-1ddd-4cb0-a3cb-011559bd896c"
+  ],
+  "meaning": "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If r lacks k, no unexplained absence at actual roots says no admissible profile contains r's determinations and k. The root's profile is admissible and k occurs in some admissible profile. The structural L bridge then gives r a represented limiting principle, which the existing statement that actual roots have none excludes. So r has k. The main theorem uses no axioms; the Comparator companions use the three Mathlib axioms. structuralControls (two beings, source true the only actual root, five determinations) witnesses every premise and the conclusion, and gives for four of the five non-logical premises an assignment where it fails, the other premises hold and the conclusion fails; anchorControl (same beings and root relation, natural-number determinations) does this for the fifth. In the standing-rival row only no unexplained absence fails and the source's lack of noesis is unexplained. In the joint-conflict row the L bridge fails, joint compossibility fails and the lack is a positive exclusion; in the finite-mode rows the L bridge or the root's lack of a limiting principle fails because of a nonpure limiter, while joint compossibility holds. In the exact-closure row admissibility of each pure determination fails and noesis is in no admissible profile. anchorControl has an infinite all-pure root profile and finite admissible profiles: only admissibility of the root's profile fails; since no finite admissible profile contains the infinite root profile, the root's absence of the pure 0 is vacuously a positive-profile exclusion (inadmissibility alone would not give this, because the family need not be closed downward). standingRival puts the no-unexplained-absence failure on the #1892 impersonal eminence source, with its Has profile linked to its apprehension relation by the conjunct that a being has noesis exactly when it apprehends some content, and with its own capacity set equal to its apprehension; it also shows, as a Has-profile parity check only, that a source whose profile has noesis but lacks the admissible pure a violates the same premise. The models are assignments of the stated relations, not metaphysical possibilities. E (no unexplained absence at actual roots) is neutral in form, but given the background premises it decides exactly the point at issue: restricted to pure determinations it is equivalent to the conclusion, and the impersonal profile satisfies every other premise. Its support value therefore equals the independent warrant for a closure principle of sufficient reason at roots, which is not yet in the graph.",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a919ce52-6c8b-5e0f-9aaa-5b570bded78b",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "956247e3-ca78-5f54-a8b1-6e725735c754",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "06fb4f51-ff5f-5c5e-b947-844f20de4174",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "567c3e74-9514-52d9-b3b6-f5a3af078784"
+  ]
+}

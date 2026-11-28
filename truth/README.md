@@ -18,6 +18,8 @@ target/debug/truth context ARGUMENT-ID --json
 target/debug/truth tree STMT-GOD-EXISTS --down 2 --up 2
 target/debug/truth orphans
 target/debug/truth orphans --senses --json
+target/debug/truth connectivity --list-isolated 20
+target/debug/truth connectivity --base origin/main
 target/debug/truth issues --from issues.json --for STMT-GOD-EXISTS
 target/debug/truth brief STMT-GOD-EXISTS --issues-from snapshot.json
 target/debug/truth brief --question 'ultimate explanation, brute fact or infinite regress'
@@ -1076,6 +1078,51 @@ entries under each attempt (`worker: author codex/gpt-6.2-sol (high) 2026-11-26
 PR-2020`), and their JSON carries the `workers` list. The view writes nothing;
 a worker entry records who did the work, not evidence about its targets.
 
+## `bottlenecks`
+
+`truth bottlenecks [--stage N]... [--min-arguments N] [--min-routes N]
+[--limit N] [--authored-only-by MODEL] [--frontier-root STATEMENT]` (owner
+direction, 2026-11-26; `truth/src/bottlenecks.rs`) lists the open premises
+where several arguments or routes stop, for choosing which premises get a
+focused negation-side review ([when several arguments stop at the same
+premise](../docs/systematic-corpus-loop.md#when-several-arguments-stop-at-the-same-premise)).
+It reads the reaching-root frontier computed in-process for the root and
+adds no closure rule of its own. For each open premise it prints:
+
+- **routes**: the root routes (`truth frontier --routes`) that need it. A
+  route's open premises are the leaves of its expanded route; a stated or
+  supported premise proved from open premises stays such a leaf, so a route
+  needs a premise when it is a leaf or when every verified derivation of a
+  proved leaf needs it. The JSON also gives `routes_using_it_in_some_proof`
+  (some chain of verified derivations uses it);
+- **stage routes**: per stage, the verified derivations of the stage
+  conclusion (for stage 1 the existence of God) that need it, in the same
+  sense. Every root route rests on the stage conclusions, so stage routes
+  separate premises that the root routes share;
+- **args**: the distinct arguments that take it as a premise;
+- **reach**: its transitive dependent statements;
+- **stages**, the frontier **support** class (`bare`, `supported`: only
+  supporting or unpinned claims, `stated`: a pinned stating claim) with
+  `+derivation` when a verified derivation is a conditional support option,
+  its recorded **rivals** (refuted ones counted) and **objections**, and the
+  models that authored attempts on it (as in `truth workers`).
+
+Premises are ranked by routes, then the stage routes of the selected stages
+(of every stage without `--stage`), then arguments, then reach.
+
+- `--stage N` (repeatable) keeps premises on which a stage-N conclusion rests.
+- `--min-arguments N` (default 2) and `--min-routes N` (default 0) set the
+  thresholds; `--limit N` prints the first N after ranking.
+- `--authored-only-by MODEL` keeps premises whose recorded attempt authors are
+  exactly `MODEL`, so a second model can take premises one model has worked
+  on alone.
+
+For example, `truth bottlenecks --stage 1 --stage 2 --min-arguments 3
+--limit 20` lists the shared open premises of the God-existence and divine
+attribute stages. The counts describe shared dependency, not philosophical
+merit or the strength of a premise (`AGENTS.md`); a listed premise is a
+candidate for review, not a finding about it. The view writes nothing.
+
 ## `next`, `next-steps`, `arguments`, `results`, `sort-lists`
 
 Ports of the navigation subcommands of `scripts/corpus.py`
@@ -1108,7 +1155,7 @@ implementations stay until their retirement (#954, R2).
 
 ## `orphans`
 
-`truth orphans [--frontier-root STATEMENT-ID] [--by module|family]` lists
+`truth orphans [--frontier-root STATEMENT-ID] [--by module|family] [--all]` lists
 verified results (status `solution-present` or `verified`) whose argument
 conclusion does not reach the frontier root (default
 `STMT-CATHOLICISM-TRUE`) and which do not support a verified recorded refutation
@@ -1120,6 +1167,42 @@ already reach the root, so such work is otherwise invisible to round
 selection. Reaching the root is the same route-aware walk as `thickness`;
 The retired parity script checked the disconnected set against Python's
 `reaching_root_statements` plus `corpus.refutation_support`.
+
+Each verified result also gets a **placement state** (owner decision,
+2026-11-27; `docs/corpus-model.md`, "Result placement"), the first that
+applies: `reaching` (the connected notion above), `placed_diagnostic` (a
+premise-free result whose result or argument `tests` a root-path statement or
+a root-path argument), `placed_rival` (an `alternative_to` or `attacks`
+relation between its conclusion and a root-path statement, either direction;
+its argument `attacks` or `refutes` one; or a root-path argument `attacks` or
+`refutes` its conclusion), `planned` (a valid `connection_plan` on its conclusion targeting
+a root-path statement) and `unplaced`. A root-path argument has a verified
+result and either concludes a root-path statement or is itself a verified
+refutation counted as connected above; an unverified argument record places
+nothing. `--json` gives `state_counts` over all
+verified results, `transcription_state_counts` for the transcriptions among
+them, per group `placed_count`, `planned_count`, `unplaced_count` and
+`state_counts`, and per result its `state` and `placed_by` (the relation or
+plan target). The text lists, per group, only the unplaced conclusions and
+omits groups without one; `--all` lists every disconnected result with its
+state and transcription kind. Contact lines read `contact (on root path):`:
+they name root-path statements as leads, not disconnected results.
+
+`truth orphans --base REV --gate` is the **placement gate**. It computes the
+states at the head and at the base (read like `frontier-diff`, "head rules on
+base data") and judges each verified head result that is new (no verified
+result with its ID at the base), whose argument changed (another argument id,
+conclusion, premise or commitment set), or that was placed at the base and is
+unplaced now. It exits 1 when a judged result is `unplaced`, naming the
+conclusion, the result and the change, and stating the honest options: a real
+derivation to a root-path statement, a `tests` link for a diagnostic, a typed
+rival relation, or a `connection_plan` naming the exact missing bridge
+(contrived edges and tautological bridges are not acceptable; reviewers check
+every new edge). Unplaced results that are not judged are the backlog, counted
+but never failed. An unreadable base is a `revision_error` (exit 1). `--gate`
+requires `--base`; `--base` excludes `--by`, `--senses` and `--all`. CI runs it
+on every pull request against `HEAD^1`, beside `connectivity --base`, which
+still judges statements; `scripts/preflight.sh` runs it against the merge base.
 
 `truth orphans --base REV` ports `scripts/orphan_summary.py --base REV`, the
 Markdown table CI adds to a PR's job summary: the disconnected count at the
@@ -1153,7 +1236,8 @@ statements, and up to five nearest root-path contacts, ranked by tier:
    `corpus.py related`.
 
 Contacts are discovery leads, not equivalences or entailments. Text output
-lists eight conclusions per group; `--json` lists every result and conclusion.
+lists eight unplaced conclusions per group; `--all` and `--json` list every
+disconnected result.
 
 `truth orphans --senses` lists root-path disambiguations (linked, directly or
 through a sense definition, from a statement reaching the root or an argument
@@ -1168,6 +1252,70 @@ in `-SENSES-EXHAUSTIVE` (coverage) or `-SENSE-UNIQUE`/`-SENSES-EXCLUSIVE`
 and takes that coverage premise. Entries are ordered by the number of
 root-path links and name the missing parts. Neither report closes anything or
 writes records.
+
+## `connectivity`
+
+`truth connectivity [--frontier-root STATEMENT-ID] [--list-isolated N]` is a
+**diagnostic** for the cohesive-graph goal (owner direction, 2026-11-26): it
+shows which statements share no recorded contact with the frontier root
+(default `STMT-CATHOLICISM-TRUE`), so that work connecting them can be found.
+Its counts describe the graph's shape. They are not a progress score, a
+measure of philosophical merit, or a quantity to optimize, and contact is not
+warrant: the command closes, supports and attacks nothing.
+
+It reports, over all statements:
+
+- **reach root via argument chains**: statements from which the root is
+  reached by following premises and commitments up to conclusions, through
+  any recorded argument whatever its verification status (unlike the
+  route-aware `frontier --reaching-root`);
+- **root component**: the undirected connected component of the root, whose
+  edges are each argument (premises and commitments to the conclusion), each
+  relation of any predicate, `tests` included (a statement endpoint stands for
+  itself, a claim for its statement, an argument for its conclusion and
+  premises, a result for its argument's; `background_statement_ids` join the
+  object), and each attempt (the statements it names);
+- **other components**: the statements with some edge outside the root
+  component, the number of their components and their sizes (largest first);
+- **isolated**: statements with no edge at all.
+
+The statements outside the root component are classified, isolated and
+island statements separately, by the first match of: the conclusion of a
+premise-free argument (a control, model or consistency check: record what it
+tests with a `tests` relation, `docs/corpus-model.md`); a source reading (a
+claim states it); the conclusion of an argument whose premises are off the
+root component; named only by an attempt; unused. `--list-isolated N` lists N
+isolated statements with their class (premise-free results first, then by
+label). `--json` gives every non-root component's statement IDs. The method
+matches the measurement script of the 2026-11-26 baseline, extended only by
+the `result` endpoint of `tests` relations. The report ends with every
+recorded `connection_plan` (`docs/corpus-model.md`), with its target, missing
+bridge and blocker: *outstanding* while its statement is outside the root's
+typed component (below), *ready for plan review* once it has joined it. CI
+prints the text report to the job summary.
+
+`truth connectivity --base REV` is the **gate on new disconnection** (owner
+direction, 2026-11-26: disconnected work must not accumulate again). It reads
+the base revision's committed corpus like `frontier-diff`, `thickness --base`
+and `orphans --base` ("head rules on base data") and computes the root's
+**typed component** at both revisions: the report's edges except attempt
+co-citation, which records research activity rather than a typed contact. It
+judges each statement outside the typed component at the head that is new
+(present at the head, absent at the base), was in the typed component at the
+base, or carried a `connection_plan` at the base. Such a statement passes only
+with a valid `connection_plan` (the shape `truth check` requires, checked by
+the gate itself) whose `target_statement_id` is in the head's typed
+component; statements outside it at the base that never had a plan are not
+judged. The command exits 1 and lists each offending statement as
+`label [uuid8]`, with the reason (no plan, an invalid plan, or a plan target off the typed
+component). It also lists the outstanding planned statements and the plans
+ready for plan review: joining the component does not show that the named
+bridge was delivered. The gate checks that work is linked, not the
+substantive root-route obligation. `--base` and `--list-isolated` are
+alternatives; an unreadable base is a `revision_error` (exit 1). On a pull
+request CI runs it against `HEAD^1` (checkout is the merge commit) and fails
+on it; `scripts/preflight.sh` runs it against the merge base.
+
 
 ## `bridges`
 

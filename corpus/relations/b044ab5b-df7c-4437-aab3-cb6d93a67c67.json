@@ -1,0 +1,10 @@
+{
+  "id": "b044ab5b-df7c-4437-aab3-cb6d93a67c67",
+  "label": "Test by Giver-of-being controls, checked",
+  "subject_kind": "result",
+  "subject_id": "cd075a84-bb64-4c05-a592-21072621d30f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0436de86-6579-53f2-9ff5-2111ba44ebae",
+  "note": "Tests omission of existence-to-act on the profile with all bearers existent, one concretum, and no act."
+}

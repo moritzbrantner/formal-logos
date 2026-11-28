@@ -1,0 +1,10 @@
+{
+  "id": "067d2cb7-2e44-4633-a0b6-64f1239558b3",
+  "label": "Test by FirstMoverNecessity.receptionControls (c4bc08b3)",
+  "subject_kind": "result",
+  "subject_id": "ed10e3b5-4804-4fa8-bb17-cc1835c24659",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "c4bc08b3-5684-428d-abe9-7fd943d20f60",
+  "note": "Witness all four reception premises together at world true, with both bearers present and x contingent. X receives esse in principle false. The receptive potency edge goes from false to esse-principle true, so the receiver condition and irreflexivity hold. The same frame satisfies identity-scoped receipt."
+}

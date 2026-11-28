@@ -90,3 +90,83 @@ premises = []
 conclusion = "STMT-ROOT-WIRING-CONTROLS"
 rule = "Explicit finite interpretations"
 meaning = "Finite interpretations for the eight root-wiring derivations: for the carrying premise of each (the owner-approved concreteness commitment twice, each rival refutation, the performed doubt and the retorsion), a hand-written model on Unit or Bool in which the other non-logical premises hold and the conclusion fails (nine omission models), and one joint nonvacuity witness with populated antecedents. Excluded middle is not omitted (no finite countermodel in a classical metatheory). Satisfiability and omission only; no model is claimed to describe reality."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the occasiona (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the occasiona (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0300cfd9-7f62-5270-801f-01f860d7b506"
+note = "Tests omission of this premise from perSeMoverLinkFromOccasionalistRefutation in the finite Occasionalist causal-link interpretation."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Nothing is in act in some (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Nothing is in act in some (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "65c301a8-afb4-5d75-a321-9a1c0c67af65"
+note = "Tests omission of this premise from actualityOnlyInsofarAsBeingFromRefutation in the finite actuality-without-being interpretation of the rival."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Ash'arite (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Ash'arite (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6948dde0-64ef-550b-ae3c-d30b3e113986"
+note = "Tests omission of this premise from movedOnlyAsInPotencyFromAshariteRefutation in the finite Asharite moved-without-potency interpretation."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Every performed doubt tha (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Every performed doubt tha (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8697bb2d-f29d-5945-88ea-bb62d6a3e4e2"
+note = "Tests omission of this premise from thoughtOccursFromRetorsion in the respective finite doubt interpretation with the other retorsion input retained."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the exact cou (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the exact cou (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8f183538-204e-5a50-8a07-3d88dc999b47"
+note = "Tests omission of this premise from movedOnlyAsInPotencyFromCountertupleRefutation in the finite moved-not-potent countertuple interpretation."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Some doubt whether any th (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Some doubt whether any th (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "95c5138f-e3cc-552d-9846-ab8dc84502f4"
+note = "Tests omission of this premise from thoughtOccursFromRetorsion in the respective finite doubt interpretation with the other retorsion input retained."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Owner framework commitmen (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Owner framework commitmen (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e27489c3-7419-5123-8476-386633e62532"
+note = "Tests omission of this premise from inhabitedFromFloorPower in the Unit/Bool power route witness with the other Cogito inputs maintained."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Scotist r (1)"
+label = "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Scotist r (1)"
+subject_kind = "result"
+subject_id = "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f6003a4c-fc27-5b0a-acf9-97515d131755"
+note = "Tests omission of this premise from notActAndPotencyFromRefutation in the finite act-and-potency interpretation of the rival."

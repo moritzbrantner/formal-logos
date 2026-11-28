@@ -1,0 +1,10 @@
+{
+  "id": "dcf2fe21-2fff-45c0-af08-24255f020771",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Whatever is CREATURE_2 (c (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b7d4eede-ab50-5522-8902-f33238fa234d",
+  "note": "Tests omitting this premise in the encoded othersAreCreatures argument, with the other premises retained and the conclusion false in each corresponding control."
+}

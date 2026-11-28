@@ -1,0 +1,10 @@
+{
+  "id": "78219347-8fa5-4350-9f75-80fe13ad663a",
+  "label": "Test by Formal fact: the strong-reading premises entail the weak for A mover other than the mo (1)",
+  "subject_kind": "result",
+  "subject_id": "58218019-e1d4-59ec-830b-444017abe2ec",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1e47e6db-da06-5a40-9ccf-fbd1f929c596",
+  "note": "Checks the direction from the strong second-mover premise to the relevant-respect restriction while keeping the other motion premises and dictionary fixed."
+}

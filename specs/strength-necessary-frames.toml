@@ -71,3 +71,23 @@ delta_statement_id = "The route's modal frame is symmetric (frame condition B)"
 evidence_result_ids = { implication = "NECESSARY-ROOT-BOX-B-STRENGTHENS-BOX-T", equivalence = "KTB node is the T node plus a symmetric frame" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 4], weaker = [0, 1, 2, 3, 4], delta = [0, 1, 2] }
 note = "Difference of the KTB and T readings of the necessary-being node: KTB adds to T exactly that the route's frame is symmetric. The delta is a frame condition independent of the root. No strictness separator is recorded."
+
+[[relation]]
+id = "Test by KTB node is the T node plus a symmetric frame"
+label = "Test by KTB node is the T node plus a symmetric frame"
+subject_kind = "result"
+subject_id = "769e5a6f-08a6-489f-a795-073b8b6e1c3f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "12e11583-51e9-5c42-a51f-0debdb152818"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by S5 node is the S4 node plus a symmetric frame"
+label = "Test by S5 node is the S4 node plus a symmetric frame"
+subject_kind = "result"
+subject_id = "55d28645-5b35-41e1-bb67-e14080b667f4"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7089ce3d-3855-5bfb-a3c3-c202e8ff458a"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."

@@ -1,0 +1,10 @@
+{
+  "id": "73633bc7-d93a-4aa0-b05c-7fe1b46e0da2",
+  "label": "Source qualification for 5f9430cf from reading fee31960",
+  "subject_kind": "claim",
+  "subject_id": "71ad3d96-1833-5800-8d8f-c9feeea19486",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "5f9430cf-099b-58ce-895f-ca7681ac3ecc",
+  "note": "Leuenberger's proposed blocker-blocker case retains the original facts while changing what is required for their grounding role. It tests persistence of the full-ground relation despite their truth. It is not by itself a case where the selected grounds hold and the target is false."
+}

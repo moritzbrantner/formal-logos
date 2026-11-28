@@ -1,0 +1,10 @@
+{
+  "id": "b2b44cb5-a219-48e5-82a4-697405bc5459",
+  "label": "Test by GOD_4 incorruptibility controls, checked",
+  "subject_kind": "result",
+  "subject_id": "32c078f4-e548-4b5e-8c70-d2c385d11a78",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "note": "Tests omission of this premise from godIsIncorruptibleSimply in a profile retaining both other inputs with some GOD_4 bearer that can fail to be."
+}

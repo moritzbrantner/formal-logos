@@ -1,0 +1,10 @@
+{
+  "id": "d27f6d91-a31e-44c6-b821-03ad9deda8c8",
+  "label": "Source qualification for 46132461 from reading b1f1f52d",
+  "subject_kind": "claim",
+  "subject_id": "2a67385a-8faa-5e9a-956c-fd4f0d40299c",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "Schlick's criterion invokes logical possibility of verification under linguistic rules independently of laws of nature. Identifying it with the case's empirical predicate requires a bridge from that rule-governed possibility to the proposed empirical test, including scope over the principle itself."
+}

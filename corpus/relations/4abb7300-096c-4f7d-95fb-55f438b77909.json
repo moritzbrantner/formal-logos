@@ -1,0 +1,10 @@
+{
+  "id": "4abb7300-096c-4f7d-95fb-55f438b77909",
+  "label": "Test by Populated truthful-production positive control",
+  "subject_kind": "result",
+  "subject_id": "add4c236-3c26-4173-8aae-55a3fceea7a2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "389db8f3-19c9-48c6-a6c7-c778f13895e2",
+  "note": "Tests joint nonvacuity of the source-to-record guarantee in the two admitted histories with actual causal tokens and distinct readouts."
+}

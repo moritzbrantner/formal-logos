@@ -1,0 +1,27 @@
+{
+  "id": "3ad52005-8ead-4349-bafa-6a7d92359ccb",
+  "label": "Root links from Anat Biletzki and Anat Matar, Ludwig Wittgenstein",
+  "statement_ids": [
+    "84af6e34-c1c5-5039-a0fc-dba2667e9ecd",
+    "48336917-2c3a-58a7-9250-3dd6a8f57eab"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§2.4, More recent readings tend to take nonsense more seriously: The reported resolute reading discards the ladder and saying/showing framework. This qualifies the target's explicit reliance on the traditional reading. Both readings can reject literal metaphysical assertions, so the disagreement concerns the status of talk about what is shown. §2.4, The traditional readings of the Tractatus accepted: The entry's traditional reading permits an unsayable mystical domain while excluding metaphysical assertions from literal sense. The target needs God sentences in that excluded domain under the intended criterion and an account of whether showing can convey relevant content.",
+  "evidence": [
+    "31b04d2e-8e89-5c29-ac3f-4179a23d5ca7",
+    "55623738-68e0-5e39-a775-0caacd3eb9f1",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

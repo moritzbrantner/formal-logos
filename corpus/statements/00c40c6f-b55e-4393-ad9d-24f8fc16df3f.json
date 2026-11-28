@@ -1,0 +1,15 @@
+{
+  "id": "00c40c6f-b55e-4393-ad9d-24f8fc16df3f",
+  "label": "Actual parts in the selected fusion scope are CONCRETE_6",
+  "paraphrase": "Open concreteness calibration: each part of the selected sum or of any of that sum's actual causes is CONCRETE_6 if that part exists at w. It classifies only the specified parts, including reflexive parts.",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.SelectedActualFusionPartsConcreteAt",
+  "definition_ids": [
+    "04ecf669-22fb-43a1-97c6-c54556d5cd5f",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "008cb21a-256c-5a90-822c-acd4591d699a"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

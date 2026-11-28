@@ -1,0 +1,10 @@
+{
+  "id": "119122b2-7518-455a-b932-a69e1754187f",
+  "label": "Test by A universal conditional: under StrictForward, the link b for Over a supplied clock: wh (1)",
+  "subject_kind": "result",
+  "subject_id": "6b56e320-bccc-5656-a862-f797bfa63ab8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "00a44bb5-9128-5fb3-8de7-8a7d10ebbf11",
+  "note": "Tests the slice-to-global unmoved bridge in the strictly forward feedback history where both movers are moved at another time."
+}

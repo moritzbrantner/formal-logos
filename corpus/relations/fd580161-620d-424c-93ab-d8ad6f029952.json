@@ -1,0 +1,10 @@
+{
+  "id": "fd580161-620d-424c-93ab-d8ad6f029952",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for Existing causes of actual (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a9e55713-876d-54f7-9ecc-fc6136c1d8a9",
+  "note": "Tests omitting this premise in the encoded contingentGroundedViaLocalCause argument, with the other premises retained and the conclusion false in each corresponding control."
+}

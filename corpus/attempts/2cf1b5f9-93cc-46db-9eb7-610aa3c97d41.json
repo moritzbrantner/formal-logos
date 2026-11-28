@@ -1,0 +1,31 @@
+{
+  "id": "2cf1b5f9-93cc-46db-9eb7-610aa3c97d41",
+  "label": "Root links from Plato, Phaedo",
+  "statement_ids": [
+    "c99ff530-daf7-512d-a330-a41bfea1bdd4",
+    "ce65a71f-3e46-5846-80eb-301bc5c73593",
+    "c272a798-e8c3-55f8-9465-dca0fdefade7",
+    "95bd78ea-4abb-59e2-b392-7653d2b3953f"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "100b–c: The source permits a literal beauty self-predication reading, while the target takes 'beautiful itself' as essential characterization. Deciding between them requires a reason that the predication about the Form uses the same exemplification relation as the predication about participants. 101d–102a: The methodological passage calls for testing agreement of consequences and seeking a higher sufficient hypothesis when an account of the assumption is needed. It qualifies treating the agreement on Forms in the dialogue as independent proof of that hypothesis. 74b–d: The recollection proposal distinguishes the Equal itself from the sensed sticks and stones that occasion thought of it. Applying it to the general intelligibility premise requires a bridge across admitted qualities and a reason the proposed recollection accesses a genuinely distinct object. 99d–100a: The turn to accounts introduces the method of using the strongest hypothesis under consideration. Its methodological status qualifies a reading that the forms hypothesis comes already established by that turn itself.",
+  "evidence": [
+    "1f059445-2495-5b63-ac68-86b9f50ca5b2",
+    "e3d3acfc-58f2-5dcd-a6e3-6a074081016f",
+    "01fe4ce3-40fa-5091-8d37-46b535a0cfd8",
+    "3ae838ba-4a69-55d8-9351-6a7d2b1f059d",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

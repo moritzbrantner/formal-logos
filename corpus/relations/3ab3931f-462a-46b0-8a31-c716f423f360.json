@@ -1,0 +1,10 @@
+{
+  "id": "3ab3931f-462a-46b0-8a31-c716f423f360",
+  "label": "Test by Stage-one rival survival controls checked",
+  "subject_kind": "result",
+  "subject_id": "7b545360-7d87-400f-89cd-44ac707103a8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+  "note": "Tests the selected premise in the following setting. Same Ontic and History carrier; three worlds, natural-number times, selected world Place.actual. Control.aheadHistory, group 1 of Control.Certificate; nothing exists at the selected world, so NecessaryConcreteAt fails there. Euclidean frame, presence-to-existence, inert emptiness and the possible contingent-free past all hold in Control.aheadHistory."
+}

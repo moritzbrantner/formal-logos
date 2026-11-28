@@ -1,0 +1,10 @@
+{
+  "id": "2c1a9a4f-3ba8-46b4-b86a-acc2fe77d543",
+  "label": "Test by Finite interpretations; excluded middle is not asserted",
+  "subject_kind": "result",
+  "subject_id": "1d13aa5a-4d64-565f-8890-2bcc69a96745",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd0a956c-149e-5d7d-9771-b974da72fd3a",
+  "note": "Tests the converse strength implication in the registered interpretation. Two beings each with every pure perfection and only pure ones are purely determined and indiscernible, so the narrower bridge identifies them. Strict: two determination-free beings are purely determined and indiscernible yet distinct, while SCG I.42 holds vacuously because neither has the pure perfection."
+}

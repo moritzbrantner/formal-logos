@@ -141,3 +141,23 @@ conclusion = "Per-accidens response-family controls"
 rule = "Explicit-intervention-models"
 meaning = "Construct the nonempty integer-dated histories and response witnesses; evaluate the omission and current-condition controls. These abstract profiles do not establish metaphysical possibility, adequacy for the original sourced sense, MovesAsMoved or accessibility."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[relation]]
+id = "Test by Per-accidens response-family model controls"
+label = "Test by Per-accidens response-family model controls"
+subject_kind = "result"
+subject_id = "bbfad776-4451-4bb1-9fda-ba62c31a19ed"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9a78c82f-2219-4299-8c31-a92f9073ac4c"
+note = "Tests whether preserving exercise under all admissible removals requires a populated removal class in the integer-dated intervention profiles."
+
+[[relation]]
+id = "Test by Per-accidens response-family model controls for Every-removal retained capacity"
+label = "Test by Per-accidens response-family model controls for Every-removal retained capacity"
+subject_kind = "result"
+subject_id = "bbfad776-4451-4bb1-9fda-ba62c31a19ed"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ad2d36f3-848d-42d4-b916-78f6c84c2538"
+note = "Tests whether preserving exercise under some removal suffices for all-removal capacity on the integer-dated response profiles."

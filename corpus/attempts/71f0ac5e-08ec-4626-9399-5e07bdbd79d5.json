@@ -1,0 +1,25 @@
+{
+  "id": "71f0ac5e-08ec-4626-9399-5e07bdbd79d5",
+  "label": "Root links from Graham Oppy, The Universe Does Not Have a Cause",
+  "statement_ids": [
+    "dc3e4a6d-22a9-5eb5-8485-26986497d161"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§§I–II, pp.13–15: Oppy's natural-only causal reality supplies a position in which every participant in an actual causal relation is natural, compatible in his account with either a natural initial cause or regress. The case uses possession of causal power, so applying it requires the account to cover unexercised power and to match Oppy's natural and the selected-world predicates.",
+  "evidence": [
+    "24ecb146-8e23-5ffe-9be1-7097270ae78d",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

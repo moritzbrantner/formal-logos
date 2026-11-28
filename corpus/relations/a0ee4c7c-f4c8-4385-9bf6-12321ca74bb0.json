@@ -1,0 +1,10 @@
+{
+  "id": "a0ee4c7c-f4c8-4385-9bf6-12321ca74bb0",
+  "label": "Test by ExplanatoryAdequacy.comparison (9acbdc2b)",
+  "subject_kind": "result",
+  "subject_id": "58d50214-8e61-5c18-b40b-6c29b71488cd",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9acbdc2b-8a51-5bd1-aa9c-3b42eca37467",
+  "note": "In law at world 0, the account consists of the true target and the always-true source fact. The source is the sole admitted reason for the contingent target, belongs to the account, and has a different modal truth extension. This witnesses the full ReasonClosed bundle with a contingent target bearer present at 0."
+}

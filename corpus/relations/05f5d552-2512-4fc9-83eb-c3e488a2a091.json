@@ -1,0 +1,10 @@
+{
+  "id": "05f5d552-2512-4fc9-83eb-c3e488a2a091",
+  "label": "Test by Populated founder and agent-entry controls under three fixed boundary conditions",
+  "subject_kind": "result",
+  "subject_id": "9a461665-57c8-48cf-be37-07ec42d0f07f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Tests the local existence PSR for contingents in the shared persistent-founder model with a sound reason assignment for its firing but no reason for its own existence."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f71f33a5-df92-4066-8375-ccfc30eaef02",
+  "label": "Source qualification for 46132461 from reading 7b0fcb04",
+  "subject_kind": "claim",
+  "subject_id": "e9b942ad-581e-5833-acca-86d70e434ab6",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "Church's reported construction uses suitably independent observation statements to arrange verification of an arbitrary statement or its negation under the 1946 rule, undermining its power to demarcate cognitive significance. This diagnosis qualifies using that particular verification test if the construction's observation and independence assumptions are met."
+}

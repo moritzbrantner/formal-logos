@@ -1,0 +1,10 @@
+{
+  "id": "dc15b742-4fa4-47d6-a04d-3c90e4880176",
+  "label": "Test by Matched controls for the practical specification of fixed rational giving",
+  "subject_kind": "result",
+  "subject_id": "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "437438f0-183c-48e5-8d84-f82b94fabf3e",
+  "note": "Tests benefit-to-willing recognition with a plan that requires benefit and recipient willing switched off."
+}

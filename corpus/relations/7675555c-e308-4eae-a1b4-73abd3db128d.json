@@ -1,0 +1,10 @@
+{
+  "id": "7675555c-e308-4eae-a1b4-73abd3db128d",
+  "label": "Test by Bottomless-grounding rival of whole-roster nontrapping survives, checked",
+  "subject_kind": "result",
+  "subject_id": "35de6bba-d517-4107-a1e0-4b72dad4c739",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5c898d24-d1f7-5087-b09e-3287a723e787",
+  "note": "Tests the selected premise in the following setting. Same Profile, selected relation and selected world as the premise; two mutually accessible worlds, natural-number candidates, all concrete. Control.descent in Control.BottomlessSurvives; bottomlessSurvives proves the listed conjuncts. Control.descent at world false: the rival, concrete population, contingent dependence and excluded middle hold; NecessaryConcreteAt fails. Consumer tested: WholeRosterFoundation.necessaryConcrete."
+}

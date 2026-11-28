@@ -1,0 +1,10 @@
+{
+  "id": "8b3da3c6-9daa-4e0a-872d-853272e99328",
+  "label": "Test by Finite models for the modal-principle branches of the NECESSARY_2 sense fork",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0aa36cd6-29b1-5d3e-bf2e-e92a737cc58c",
+  "note": "Tests omission of this premise from forkT in the corresponding hand-written modal frames for the T fork."
+}

@@ -348,3 +348,223 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-DEPENDENCE-FOR-BEING-ASYMMETRIC"
 note = "The slide says nothing can depend on itself, which is the irreflexive instance of the premise. Excluding mutual dependence between two distinct things is the analyst's strengthening."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0f5b53ef-0872-597b-b2f0-fc22b8df600a"
+note = "Tests omitting this premise in the encoded asymmetricViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for If c, distinct from x, ca (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for If c, distinct from x, ca (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495"
+note = "Tests omitting this premise in the encoded esseCauseGroundViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for If an actual concretum x (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for If an actual concretum x (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2e248016-f8bf-5d8a-931e-7f9ebbb13e42"
+note = "Tests omitting this premise in the encoded esseCauseGroundViaDependence, simplyPriorGroundViaDependence, necessityCauseGroundViaDependence, contingentGroundedViaDependence arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Every actual contingent c (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Every actual contingent c (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3ef67739-a427-582b-9eaa-af6410b9c3d3"
+note = "Tests omitting this premise in the encoded contingentGroundedViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for If y is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for If y is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "47aff057-35ef-5418-930b-fef72e1104d2"
+note = "Tests omitting this premise in the encoded simplyPriorGroundViaDependence, asymmetricViaPriority arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whenever y is SIMPLY_PRIO (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whenever y is SIMPLY_PRIO (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "57c5ed67-f9fa-55bb-9b3e-3c00643b21e9"
+note = "Tests omitting this premise in the encoded simplyPriorGroundViaDependence, simplyPriorGroundViaEsseCause arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for What is SIMPLY_PRIOR_1 to (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for What is SIMPLY_PRIOR_1 to (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "70e98bb5-a96d-5d69-870d-e6bd0df2b813"
+note = "Tests omitting this premise in the encoded simplyPriorGroundViaEsseCause argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whatever has its necessit (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whatever has its necessit (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "71454b27-1943-5bb4-a1f4-4a1bb716082a"
+note = "Tests omitting this premise in the encoded necessityCauseGroundViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whatever has ESSE_BY_PART (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whatever has ESSE_BY_PART (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "732302a1-f7bf-594d-9a8a-cb4bd00687a7"
+note = "Tests omitting this premise in the encoded contingentGroundedViaParticipation argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (2)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (2)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7a63a3fe-a29f-5282-8106-79fedcb10d08"
+note = "Tests omitting this premise in the encoded asymmetricViaPriority argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for The profile's selected re (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for The profile's selected re (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21"
+note = "Tests omitting this premise in the encoded asymmetricFromWF argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whatever causes the esse (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whatever causes the esse (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "82eeeb3c-b96d-5483-b1ac-f6059ff02211"
+note = "Tests omitting this premise in the encoded esseCauseGroundViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whatever causes the neces (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whatever causes the neces (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8c8b1986-f554-5f66-a2c6-2eb96d183ad5"
+note = "Tests omitting this premise in the encoded necessityCauseGroundViaEsseCause argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Being more in any perfect (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Being more in any perfect (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a4814f25-84b0-560e-870a-eb3a23a6a35b"
+note = "Tests omitting this premise in the encoded asymmetricViaGrades argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Existing causes of actual (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Existing causes of actual (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a9e55713-876d-54f7-9ecc-fc6136c1d8a9"
+note = "Tests omitting this premise in the encoded contingentGroundedViaLocalCause argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for At the reading world w, w (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for At the reading world w, w (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c99f9d23-3f05-5c3c-9279-44a59e445a14"
+note = "Tests omitting this premise in the encoded esseCauseGroundViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for An actual concretum's dis (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for An actual concretum's dis (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"
+note = "Tests omitting this premise in the encoded simplyPriorGroundViaEsseCause, necessityCauseGroundViaEsseCause, contingentGroundedViaParticipation arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whenever c causes the nec (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whenever c causes the nec (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d6e558d0-131a-553a-a183-fa73aed91281"
+note = "Tests omitting this premise in the encoded necessityCauseGroundViaEsseCause, necessityCauseGroundViaDependence arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (3)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Whenever an actual concre (3)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d96105fb-8c4d-5e56-b3c7-2cb77a447c2b"
+note = "Tests omitting this premise in the encoded asymmetricViaGrades, atMaximalTargetViaGrades arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for If x depends for its bein (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for If x depends for its bein (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da8e6b60-4dab-5858-9c8d-f6e84c821970"
+note = "Tests omitting this premise in the encoded asymmetricViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for At every world each exist (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for At every world each exist (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ef69a630-2277-56be-86ca-f05f8193093a"
+note = "Tests omitting this premise in the encoded contingentGroundedViaLocalCause argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the thirteen derivations of r for Every CONCRETE_6 individu (1)"
+label = "Test by Finite interpretations for the thirteen derivations of r for Every CONCRETE_6 individu (1)"
+subject_kind = "result"
+subject_id = "59d1be21-3572-5381-8674-06d17ec79c97"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ff8ff869-e90a-54f6-af8b-35060113568a"
+note = "Tests omitting this premise in the encoded contingentGroundedViaParticipation argument, with the other premises retained and the conclusion false in each corresponding control."

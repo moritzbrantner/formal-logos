@@ -9,6 +9,12 @@
 //! for each group, names root-path statements it shares Lean imports,
 //! vocabulary modules, definitions or paraphrase words with.
 //!
+//! Each verified result also gets a placement state ([`place`], owner
+//! decision 2026-11-27): reaching, placed diagnostic, placed rival, planned or
+//! unplaced. [`gate`] (`truth orphans --base REV --gate`) fails on results
+//! new or changed since a base revision that are unplaced; pre-existing
+//! unplaced results are backlog.
+//!
 //! Contacts are discovery leads, not equivalences or entailments (AGENTS.md
 //! invariants 6 and 16). Nothing here closes a statement, changes a route
 //! cost or writes a record; `truth frontier` stays the closure
@@ -165,6 +171,9 @@ struct Orphan<'a> {
     transcription: Option<String>,
     /// A premise, commitment or argument relation touches the root path.
     touches: Vec<String>,
+    /// The placement state (never `reaching` here) and what places it.
+    state: &'static str,
+    via: Option<Value>,
 }
 
 fn words(value: &str) -> BTreeSet<String> {
@@ -207,24 +216,444 @@ pub fn disconnected_count(checkout: &Path, corpus: &Corpus, root: &str) -> usize
     let records = Records::from_corpus(corpus);
     let flags = crate::frontier::transcription_flags(checkout, &records);
     let frontier = thickness::frontier_inputs(root, &records, &flags);
-    let (support, refuters) = refutation_support(&records, &frontier.reaching_root);
+    place(&records, &frontier)
+        .iter()
+        .filter(|placement| placement.state != REACHING)
+        .count()
+}
+
+/// A verified result reaches the root: its argument's conclusion is on a
+/// root path (or supports a verified refutation of a recorded rival of one).
+pub const REACHING: &str = "reaching";
+/// A verified result that is in none of the placed or planned states.
+pub const UNPLACED: &str = "unplaced";
+
+/// The placement states of a verified result (owner decision 2026-11-27,
+/// `docs/decisions/2026-11-27-01-reaching-root-curation-target.md`), in the
+/// order they are tried, with their report titles.
+pub const STATES: [(&str, &str); 5] = [
+    (REACHING, "reaching the root"),
+    ("placed_diagnostic", "placed diagnostic"),
+    ("placed_rival", "placed rival"),
+    ("planned", "planned"),
+    (UNPLACED, "unplaced"),
+];
+
+/// One verified result and its placement state.
+pub struct Placement<'a> {
+    pub result: &'a Record,
+    pub argument: &'a Record,
+    /// One of the [`STATES`] keys.
+    pub state: &'static str,
+    /// What places it: the relation or the plan target (none for `reaching`
+    /// and `unplaced`).
+    pub via: Option<Value>,
+    /// The transcription kind, when the result is a transcription
+    /// (invariant 16). A transcription's state is computed like any other.
+    pub transcription: Option<String>,
+}
+
+/// The placement state of every verified result, first match wins:
+///
+/// 1. `reaching`: its argument's conclusion reaches the root by the
+///    route-aware walk (`reaching_root_statements`), or the argument supports
+///    a verified refutation of a recorded rival of a root-path statement.
+/// 2. `placed_diagnostic`: a premise-free result (control, model,
+///    countermodel or consistency check) whose result or argument is the
+///    subject of a `tests` relation whose object is a root-path statement or
+///    a root-path argument.
+/// 3. `placed_rival`: its conclusion is a typed rival of a root-path
+///    statement: `alternative_to` or `attacks` between the conclusion and a
+///    root-path statement (either direction: both record a competing
+///    position), the argument `attacks` or `refutes` a root-path statement,
+///    or a root-path argument `attacks` or `refutes` the conclusion.
+/// 4. `planned`: the conclusion carries a `connection_plan` that is valid by
+///    `truth check`'s rule and whose target is a root-path statement.
+/// 5. `unplaced`: anything else.
+///
+/// "Root-path statement" is the `reaching` notion: a statement reaching the
+/// root or supporting a verified refutation of a recorded rival of one. A
+/// "root-path argument" has a verified result and either concludes a
+/// root-path statement or is itself such a verified refutation; an
+/// unverified argument record is not a path.
+/// Placement is navigation, not warrant: nothing here closes, supports or
+/// attacks a statement.
+pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placement<'a>> {
+    let reaching = &frontier.reaching_root;
+    let (support, refuters) = refutation_support(records, reaching);
+    let on_path = |statement: &str| reaching.contains(statement) || support.contains(statement);
     let arguments: HashMap<&str, &Record> = records
         .arguments
         .iter()
         .map(|argument| (text(argument, "id"), *argument))
         .collect();
-    records
+    // A root-path argument has a verified result: an unverified argument
+    // record is not a real path. Every refuter is verified already.
+    let verified: std::collections::HashSet<&str> = records
         .results
         .iter()
         .filter(|result| matches!(text(result, "status"), "solution-present" | "verified"))
-        .filter_map(|result| arguments.get(text(result, "argument_id")))
-        .filter(|argument| {
-            let conclusion = text(argument, "conclusion_statement_id");
-            !frontier.reaching_root.contains(conclusion)
-                && !support.contains(conclusion)
-                && !refuters.contains(text(argument, "id"))
+        .map(|result| text(result, "argument_id"))
+        .collect();
+    let argument_on_path = |id: &str| {
+        verified.contains(id)
+            && (refuters.contains(id)
+                || arguments
+                    .get(id)
+                    .is_some_and(|argument| on_path(text(argument, "conclusion_statement_id"))))
+    };
+    // Relations by endpoint id, so each result scans only its own.
+    let mut by_endpoint: HashMap<&str, Vec<&Record>> = HashMap::new();
+    for relation in &records.relations {
+        let (subject, object) = (text(relation, "subject_id"), text(relation, "object_id"));
+        by_endpoint.entry(subject).or_default().push(relation);
+        if object != subject {
+            by_endpoint.entry(object).or_default().push(relation);
+        }
+    }
+    let statements: HashMap<&str, &Record> = records
+        .statements
+        .iter()
+        .map(|statement| (text(statement, "id"), *statement))
+        .collect();
+    let statement_ids: std::collections::HashSet<&str> = statements.keys().copied().collect();
+    let relation_via = |relation: &Record| {
+        json!({
+            "relation_id": text(relation, "id"),
+            "predicate": text(relation, "predicate"),
+            "subject_kind": text(relation, "subject_kind"),
+            "subject_id": text(relation, "subject_id"),
+            "object_kind": text(relation, "object_kind"),
+            "object_id": text(relation, "object_id"),
         })
-        .count()
+    };
+    let mut placements = Vec::new();
+    for result in &records.results {
+        if !matches!(text(result, "status"), "solution-present" | "verified") {
+            continue;
+        }
+        let Some(&argument) = arguments.get(text(result, "argument_id")) else {
+            continue;
+        };
+        let (result_id, argument_id) = (text(result, "id"), text(argument, "id"));
+        let conclusion = text(argument, "conclusion_statement_id");
+        let premise_free = list(argument, "premise_statement_ids").is_empty();
+        // The relations naming the result, its argument or its conclusion, in
+        // relation-id order so the reported placing relation is deterministic.
+        let mut candidates: Vec<&Record> = [result_id, argument_id, conclusion]
+            .iter()
+            .flat_map(|id| by_endpoint.get(id).into_iter().flatten().copied())
+            .collect();
+        candidates.sort_by_key(|relation| text(relation, "id"));
+        candidates.dedup_by(|left, right| std::ptr::eq(*left, *right));
+        let (state, via): (&'static str, Option<Value>) =
+            if on_path(conclusion) || refuters.contains(argument_id) {
+                (REACHING, None)
+            } else if let Some(relation) = candidates.iter().find(|relation| {
+                premise_free
+                    && text(relation, "predicate") == "tests"
+                    && match text(relation, "subject_kind") {
+                        "result" => text(relation, "subject_id") == result_id,
+                        "argument" => text(relation, "subject_id") == argument_id,
+                        _ => false,
+                    }
+                    && match text(relation, "object_kind") {
+                        "statement" => on_path(text(relation, "object_id")),
+                        "argument" => argument_on_path(text(relation, "object_id")),
+                        _ => false,
+                    }
+            }) {
+                ("placed_diagnostic", Some(relation_via(relation)))
+            } else if let Some(relation) = candidates.iter().find(|relation| {
+                let (subject, object) = (text(relation, "subject_id"), text(relation, "object_id"));
+                let statement_object = text(relation, "object_kind") == "statement";
+                match (text(relation, "predicate"), text(relation, "subject_kind")) {
+                    ("alternative_to" | "attacks", "statement") if statement_object => {
+                        (subject == conclusion && on_path(object))
+                            || (object == conclusion && on_path(subject))
+                    }
+                    ("attacks" | "refutes", "argument") if statement_object => {
+                        (subject == argument_id && on_path(object))
+                            || (object == conclusion && argument_on_path(subject))
+                    }
+                    _ => false,
+                }
+            }) {
+                ("placed_rival", Some(relation_via(relation)))
+            } else if let Some(target) = statements
+                .get(conclusion)
+                .filter(|statement| {
+                    crate::check::validate_connection_plan(statement, &statement_ids).is_ok()
+                })
+                .and_then(|statement| crate::connectivity::plan_target(statement))
+                .filter(|target| on_path(target))
+            {
+                ("planned", Some(json!({"plan_target_statement_id": target})))
+            } else {
+                (UNPLACED, None)
+            };
+        placements.push(Placement {
+            result,
+            argument,
+            state,
+            via,
+            transcription: frontier
+                .transcription_results
+                .get(result_id)
+                .map(|kind| kind.kind.clone()),
+        });
+    }
+    placements
+}
+
+/// The argument fields a result's placement depends on: its identity,
+/// conclusion, premises and commitments.
+fn argument_signature(argument: &Record) -> (String, String, BTreeSet<String>, BTreeSet<String>) {
+    let owned = |field: &str| {
+        list(argument, field)
+            .into_iter()
+            .map(str::to_owned)
+            .collect()
+    };
+    (
+        text(argument, "id").to_owned(),
+        text(argument, "conclusion_statement_id").to_owned(),
+        owned("premise_statement_ids"),
+        owned("commitment_statement_ids"),
+    )
+}
+
+/// The placement gate (owner decision 2026-11-27): every verified result at
+/// the head that is new since the base (no verified result with its ID
+/// there), whose argument changed (another argument, or another conclusion,
+/// premise or commitment set), or that was placed at the base and is
+/// unplaced now must not be [`UNPLACED`]. Other unplaced results are the
+/// backlog: reported, never failed. Both corpora are judged by this
+/// binary's rules ("head rules on base data"); `checkout`s supply the Lean
+/// files of the transcription heuristics.
+pub fn gate(
+    head_checkout: &Path,
+    head: &Corpus,
+    head_root: &str,
+    base_checkout: &Path,
+    base: &Corpus,
+    base_root: &str,
+    base_label: &str,
+) -> Value {
+    let head_records = Records::from_corpus(head);
+    let head_flags = crate::frontier::transcription_flags(head_checkout, &head_records);
+    let head_frontier = thickness::frontier_inputs(head_root, &head_records, &head_flags);
+    let head_places = place(&head_records, &head_frontier);
+    let base_records = Records::from_corpus(base);
+    let base_flags = crate::frontier::transcription_flags(base_checkout, &base_records);
+    let base_frontier = thickness::frontier_inputs(base_root, &base_records, &base_flags);
+    let base_places: HashMap<&str, (&str, _)> = place(&base_records, &base_frontier)
+        .into_iter()
+        .map(|placement| {
+            (
+                text(placement.result, "id"),
+                (placement.state, argument_signature(placement.argument)),
+            )
+        })
+        .collect();
+    let label = |id: &str| -> String {
+        head.get("statements", id)
+            .map(|record| text(&record.fields, "label").to_owned())
+            .unwrap_or_default()
+    };
+    let mut judged = Vec::new();
+    let mut backlog = Vec::new();
+    for placement in &head_places {
+        let id = text(placement.result, "id");
+        let change = match base_places.get(id) {
+            None => Some("new"),
+            Some((_, signature)) if *signature != argument_signature(placement.argument) => {
+                Some("argument_changed")
+            }
+            Some((state, _)) if *state != UNPLACED && placement.state == UNPLACED => {
+                Some("placement_lost")
+            }
+            Some(_) => None,
+        };
+        let conclusion = text(placement.argument, "conclusion_statement_id");
+        let entry = json!({
+            "result_id": id,
+            "argument_id": text(placement.argument, "id"),
+            "conclusion_statement_id": conclusion,
+            "conclusion_label": label(conclusion),
+            "state": placement.state,
+            "placed_by": placement.via,
+            "transcription": placement.transcription,
+            "change": change,
+        });
+        match change {
+            Some(_) => judged.push(entry),
+            None if placement.state == UNPLACED => backlog.push(entry),
+            None => {}
+        }
+    }
+    let offending: Vec<&Value> = judged
+        .iter()
+        .filter(|entry| entry["state"] == UNPLACED)
+        .collect();
+    let judged_counts = {
+        let mut counts: Map<String, Value> = STATES
+            .iter()
+            .map(|(key, _)| ((*key).to_owned(), json!(0)))
+            .collect();
+        for entry in &judged {
+            let key = entry["state"].as_str().unwrap_or_default();
+            if let Some(value) = counts.get_mut(key) {
+                *value = json!(value.as_u64().unwrap_or(0) + 1);
+            }
+        }
+        Value::Object(counts)
+    };
+    let root_known = head.get("statements", head_root).is_some();
+    json!({
+        "root": head_root,
+        "root_known": root_known,
+        "base": base_label,
+        "passed": root_known && offending.is_empty(),
+        "head_state_counts": state_counts(head_places.iter()),
+        "head_transcription_state_counts": state_counts(
+            head_places.iter().filter(|placement| placement.transcription.is_some())),
+        "judged_state_counts": judged_counts,
+        "judged": judged,
+        "offending": offending,
+        "backlog_count": backlog.len(),
+        "backlog_transcription_count": backlog.iter().filter(|entry| !entry["transcription"].is_null()).count(),
+        "backlog": backlog,
+    })
+}
+
+/// [`gate`] against a Git revision of `checkout`, read from its committed
+/// corpus and Lean files ([`crate::frontier::base_tree`]), never by running
+/// its tooling. `root` is `None` for the default frontier root.
+pub fn revision_gate(
+    checkout: &Path,
+    head: &Corpus,
+    head_root: &str,
+    revision: &str,
+    root: Option<&str>,
+) -> Result<Value, String> {
+    let tree = crate::frontier::base_tree(checkout, revision)?;
+    let base = Corpus::load(tree.path()).map_err(|error| {
+        format!(
+            "corpus at {revision} failed: {}: {}",
+            error.path, error.message
+        )
+    })?;
+    let base_root = root.unwrap_or(thickness::DEFAULT_ROOT);
+    Ok(gate(
+        checkout,
+        head,
+        head_root,
+        tree.path(),
+        &base,
+        base_root,
+        revision,
+    ))
+}
+
+/// The text form of [`gate`]. Statement IDs are left for the caller's alias
+/// humanization.
+pub fn format_gate(report: &Value) -> String {
+    let root = report["root"].as_str().unwrap_or_default();
+    if report["root_known"] != true {
+        return format!("unknown root statement {root}");
+    }
+    let verdict = if report["passed"] == true {
+        "passed"
+    } else {
+        "FAILED"
+    };
+    let judged = report["judged"].as_array().cloned().unwrap_or_default();
+    let mut lines = vec![
+        format!(
+            "Placement gate against {} (root {root}; head rules on base data): {verdict}",
+            report["base"].as_str().unwrap_or_default()
+        ),
+        format!(
+            "judged results (new, argument changed, or placement lost since the base): {}; {}",
+            judged.len(),
+            states_line(&report["judged_state_counts"], 0)
+        ),
+        format!(
+            "backlog (pre-existing unplaced results, reported, not failed): {} ({} transcription)",
+            report["backlog_count"], report["backlog_transcription_count"]
+        ),
+        format!(
+            "every verified result at the head: {}",
+            states_line(&report["head_state_counts"], 0)
+        ),
+        format!(
+            "transcriptions among them: {}",
+            states_line(&report["head_transcription_state_counts"], 0)
+        ),
+    ];
+    let offending = report["offending"].as_array().cloned().unwrap_or_default();
+    if !offending.is_empty() {
+        lines.push(String::new());
+        lines.push(
+            "Each result below is unplaced: its conclusion neither reaches the root nor is a \
+             placed diagnostic, a placed rival or planned. The honest options \
+             (docs/decisions/2026-11-27-01-reaching-root-curation-target.md; AGENTS.md, \
+             \"Connect every library to the case\"):"
+                .into(),
+        );
+        for option in [
+            "1. a real derivation from its conclusion to a root-path statement (or support for a \
+             verified refutation of a recorded rival of one);",
+            "2. for a premise-free control, model, countermodel or consistency check, a `tests` \
+             relation from its result or argument to the root-path statement, or argument \
+             concluding one, that it actually tests;",
+            "3. a typed rival relation (`alternative_to`, `attacks` or `refutes`) between its \
+             conclusion or argument and the root-path statement it genuinely competes with;",
+            "4. a `connection_plan` on its conclusion naming a root-path target statement, the \
+             exact missing bridge and its blocker.",
+        ] {
+            lines.push(format!("  {option}"));
+        }
+        lines.push(
+            "Contrived edges and tautological bridges are not acceptable: reviewers check the \
+             meaning of every new edge, and a link or bridge added only to pass this gate is a \
+             P1 finding."
+                .into(),
+        );
+        for entry in &offending {
+            let change = match entry["change"].as_str() {
+                Some("new") => "new result",
+                Some("argument_changed") => "argument changed",
+                _ => "placed at the base, unplaced now",
+            };
+            lines.push(format!(
+                "  {} (result {}; {change}{})",
+                entry["conclusion_statement_id"]
+                    .as_str()
+                    .unwrap_or_default(),
+                entry["result_id"].as_str().unwrap_or_default(),
+                entry["transcription"]
+                    .as_str()
+                    .map(|kind| format!("; transcription {kind}"))
+                    .unwrap_or_default(),
+            ));
+        }
+    }
+    lines.join("\n")
+}
+
+/// Counts per state, every state listed (zero included).
+fn state_counts<'p, 'a: 'p>(placements: impl Iterator<Item = &'p Placement<'a>>) -> Value {
+    let mut counts: Map<String, Value> = STATES
+        .iter()
+        .map(|(key, _)| ((*key).to_owned(), json!(0)))
+        .collect();
+    for placement in placements {
+        let entry = counts.get_mut(placement.state).expect("known state");
+        *entry = json!(entry.as_u64().unwrap_or(0) + 1);
+    }
+    Value::Object(counts)
 }
 
 /// The disconnected count at a Git revision (Python `orphan_summary.base_count`)
@@ -341,16 +770,10 @@ fn refutation_support<'a>(
 
 fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: GroupBy) -> Value {
     let reaching = &frontier.reaching_root;
-    let (support, refuters) = refutation_support(records, reaching);
     let statements: BTreeMap<&str, &Record> = records
         .statements
         .iter()
         .map(|statement| (text(statement, "id"), *statement))
-        .collect();
-    let arguments: HashMap<&str, &Record> = records
-        .arguments
-        .iter()
-        .map(|argument| (text(argument, "id"), *argument))
         .collect();
     let mut rivals: HashMap<&str, BTreeSet<&str>> = HashMap::new();
     let mut argument_relations: HashMap<&str, Vec<&Record>> = HashMap::new();
@@ -377,23 +800,22 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
             .is_some_and(|set| set.iter().any(|rival| on_path(rival)))
     };
 
-    let verified: Vec<(&Record, &Record)> = records
-        .results
+    let placements = place(records, frontier);
+    let verified: Vec<(&Record, &Record)> = placements
         .iter()
-        .filter(|result| matches!(text(result, "status"), "solution-present" | "verified"))
-        .filter_map(|result| {
-            arguments
-                .get(text(result, "argument_id"))
-                .map(|argument| (*result, *argument))
-        })
+        .map(|placement| (placement.result, placement.argument))
         .collect();
+    let state_totals = state_counts(placements.iter());
+    let transcription_totals = state_counts(
+        placements
+            .iter()
+            .filter(|placement| placement.transcription.is_some()),
+    );
     let mut connected = 0usize;
     let mut orphans: Vec<Orphan> = Vec::new();
-    for (result, argument) in &verified {
-        if on_path(text(argument, "conclusion_statement_id"))
-            || support.contains(text(argument, "conclusion_statement_id"))
-            || refuters.contains(text(argument, "id"))
-        {
+    for placement in &placements {
+        let (result, argument) = (placement.result, placement.argument);
+        if placement.state == REACHING {
             connected += 1;
             continue;
         }
@@ -418,11 +840,10 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
         orphans.push(Orphan {
             result,
             argument,
-            transcription: frontier
-                .transcription_results
-                .get(text(result, "id"))
-                .map(|kind| kind.kind.clone()),
+            transcription: placement.transcription.clone(),
             touches,
+            state: placement.state,
+            via: placement.via.clone(),
         });
     }
 
@@ -501,6 +922,7 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
         let mut transcriptions = 0usize;
         let mut touching = 0usize;
         let mut results = Vec::new();
+        let mut group_states: BTreeMap<&str, usize> = BTreeMap::new();
         for orphan in &members {
             let conclusion = text(orphan.argument, "conclusion_statement_id");
             conclusions.insert(conclusion);
@@ -521,6 +943,7 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
                 }
             }
             transcriptions += usize::from(orphan.transcription.is_some());
+            *group_states.entry(orphan.state).or_default() += 1;
             touching += usize::from(!orphan.touches.is_empty());
             results.push(json!({
                 "result_id": text(orphan.result, "id"),
@@ -529,6 +952,8 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
                 "solution_module": text(orphan.result, "solution_module"),
                 "transcription": orphan.transcription,
                 "touches_root_path": orphan.touches,
+                "state": orphan.state,
+                "placed_by": orphan.via,
             }));
         }
 
@@ -645,6 +1070,14 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
             "non_transcription_count": members.len() - transcriptions,
             "transcription_count": transcriptions,
             "touching_root_path_count": touching,
+            // Placed (diagnostic or rival), planned and unplaced members.
+            "placed_count": group_states.get("placed_diagnostic").copied().unwrap_or(0)
+                + group_states.get("placed_rival").copied().unwrap_or(0),
+            "planned_count": group_states.get("planned").copied().unwrap_or(0),
+            "unplaced_count": group_states.get(UNPLACED).copied().unwrap_or(0),
+            "state_counts": STATES[1..].iter()
+                .map(|(key, _)| ((*key).to_owned(), json!(group_states.get(key).copied().unwrap_or(0))))
+                .collect::<Map<String, Value>>(),
             "conclusion_statement_ids": conclusions,
             "results": results,
             "contacts": contacts,
@@ -669,6 +1102,10 @@ fn build(checkout: &Path, records: &Records, frontier: &FrontierInputs, by: Grou
         "disconnected_result_count": orphans.len(),
         "disconnected_non_transcription_count": orphans.len() - transcriptions,
         "disconnected_transcription_count": transcriptions,
+        // Every verified result by placement state (`reaching` is the
+        // connected count); transcriptions are also counted on their own.
+        "state_counts": state_totals,
+        "transcription_state_counts": transcription_totals,
         "reaching_root_statement_count": reaching.len(),
         "groups": output_groups,
         "scope": "Contacts are advisory leads (Lean import reuse, shared vocabulary modules, shared definitions, paraphrase overlap); no equivalence, entailment or closure is inferred.",
@@ -1011,7 +1448,19 @@ pub fn format_senses(report: &Value) -> String {
     lines.join("\n")
 }
 
-pub fn format(report: &Value) -> String {
+/// One `title N; title N; ...` line over the [`STATES`] from `skip` on.
+fn states_line(counts: &Value, skip: usize) -> String {
+    STATES[skip..]
+        .iter()
+        .map(|(key, title)| format!("{title} {}", counts[*key].as_u64().unwrap_or(0)))
+        .collect::<Vec<_>>()
+        .join("; ")
+}
+
+/// The text form of [`report`]. By default each group lists only its
+/// unplaced conclusions, and groups without unplaced results are summarized;
+/// `all` lists every disconnected result with its state.
+pub fn format(report: &Value, all: bool) -> String {
     let count = |field: &str| report[field].as_u64().unwrap_or(0);
     let mut lines = vec![
         format!(
@@ -1027,46 +1476,90 @@ pub fn format(report: &Value) -> String {
             count("disconnected_non_transcription_count"),
             count("disconnected_transcription_count"),
         ),
-        "Contacts are advisory leads, not equivalences or entailments.".into(),
+        format!(
+            "placement of every verified result: {}",
+            states_line(&report["state_counts"], 0)
+        ),
+        format!(
+            "placement of transcriptions among them: {}",
+            states_line(&report["transcription_state_counts"], 0)
+        ),
+        if all {
+            "Listing every disconnected result with its state.".into()
+        } else {
+            "Listing unplaced results only (--all lists every disconnected result with its state)."
+                .into()
+        },
+        "Contacts are advisory leads, not equivalences or entailments; each contact line names a \
+         statement ON the root path, not a disconnected result."
+            .into(),
     ];
+    let mut omitted = 0usize;
     for group in report["groups"].as_array().into_iter().flatten() {
-        let conclusions: Vec<&str> = group["conclusion_statement_ids"]
-            .as_array()
-            .into_iter()
-            .flatten()
-            .filter_map(Value::as_str)
+        let results = group["results"].as_array().cloned().unwrap_or_default();
+        let unplaced: BTreeSet<&str> = results
+            .iter()
+            .filter(|result| result["state"] == UNPLACED)
+            .filter_map(|result| result["conclusion_statement_id"].as_str())
             .collect();
+        if !all && unplaced.is_empty() {
+            omitted += 1;
+            continue;
+        }
         lines.push(String::new());
         lines.push(format!(
-            "{}  {} results ({} non-transcription, {} transcription; {} touch the root path), {} conclusions",
+            "{}  {} results ({} non-transcription, {} transcription; {} touch the root path)",
             group["group"].as_str().unwrap_or_default(),
             group["result_count"],
             group["non_transcription_count"],
             group["transcription_count"],
             group["touching_root_path_count"],
-            conclusions.len(),
         ));
-        let shown: Vec<&str> = conclusions
-            .iter()
-            .take(TEXT_CONCLUSION_LIMIT)
-            .copied()
-            .collect();
-        let more = conclusions.len().saturating_sub(TEXT_CONCLUSION_LIMIT);
         lines.push(format!(
-            "  conclusions: {}{}",
-            shown.join(", "),
-            if more > 0 {
-                format!(" (+{more} more; --json lists all)")
-            } else {
-                String::new()
-            }
+            "  placed {}, planned {}, unplaced {} ({})",
+            group["placed_count"],
+            group["planned_count"],
+            group["unplaced_count"],
+            states_line(&group["state_counts"], 1),
         ));
+        if all {
+            for result in &results {
+                lines.push(format!(
+                    "  {}{}: {} (result {})",
+                    result["state"].as_str().unwrap_or_default(),
+                    result["transcription"]
+                        .as_str()
+                        .map(|kind| format!(", transcription {kind}"))
+                        .unwrap_or_default(),
+                    result["conclusion_statement_id"]
+                        .as_str()
+                        .unwrap_or_default(),
+                    result["result_id"].as_str().unwrap_or_default(),
+                ));
+            }
+        } else {
+            let shown: Vec<&str> = unplaced
+                .iter()
+                .take(TEXT_CONCLUSION_LIMIT)
+                .copied()
+                .collect();
+            let more = unplaced.len().saturating_sub(TEXT_CONCLUSION_LIMIT);
+            lines.push(format!(
+                "  unplaced conclusions: {}{}",
+                shown.join(", "),
+                if more > 0 {
+                    format!(" (+{more} more; --all or --json lists all)")
+                } else {
+                    String::new()
+                }
+            ));
+        }
         let contacts = group["contacts"].as_array().cloned().unwrap_or_default();
         if contacts.is_empty() {
             lines.push("  nearest root-path contacts: none found".into());
             continue;
         }
-        lines.push("  nearest root-path contacts:".into());
+        lines.push("  nearest root-path contacts (connection leads ON the root path):".into());
         for contact in contacts {
             let reasons: Vec<String> = contact["reasons"]
                 .as_array()
@@ -1076,11 +1569,17 @@ pub fn format(report: &Value) -> String {
                 .map(describe)
                 .collect();
             lines.push(format!(
-                "    {}  {}",
+                "    contact (on root path): {}  {}",
                 contact["statement_id"].as_str().unwrap_or_default(),
                 reasons.join("; ")
             ));
         }
+    }
+    if omitted > 0 {
+        lines.push(String::new());
+        lines.push(format!(
+            "{omitted} group(s) with no unplaced result omitted (--all lists them)."
+        ));
     }
     lines.join("\n")
 }
@@ -1246,7 +1745,7 @@ mod tests {
             groups[1]["results"][0]["touches_root_path"],
             json!(["premise P"])
         );
-        let text = format(&report);
+        let text = format(&report, true);
         assert!(text.contains("TruthCore.Modal  2 results (1 non-transcription, 1 transcription"));
         assert!(text.contains("ROOT-ARG imports TruthCore.Results.Modal.MODAL-A.Solution"));
     }
@@ -1446,6 +1945,483 @@ mod tests {
             modal["result_count"].as_u64().unwrap() >= 40,
             "{}",
             modal["result_count"]
+        );
+    }
+
+    fn relation(
+        root: &Path,
+        id: &str,
+        subject: (&str, &str),
+        predicate: &str,
+        object: (&str, &str),
+    ) {
+        write(
+            root,
+            &format!("corpus/relations/{id}.json"),
+            &json!({"id": id, "subject_kind": subject.0, "subject_id": subject.1,
+                    "predicate": predicate, "object_kind": object.0, "object_id": object.1})
+            .to_string(),
+        );
+    }
+
+    /// A premise-free argument and result `id` concluding statement `id`.
+    fn premise_free(root: &Path, id: &str) {
+        write(
+            root,
+            &format!("corpus/statements/{id}.json"),
+            &json!({"id": id, "paraphrase": "A finite model satisfies the bundle."}).to_string(),
+        );
+        write(
+            root,
+            &format!("corpus/arguments/{id}.json"),
+            &json!({"id": id, "premise_statement_ids": [], "inference_ids": ["I"],
+                    "conclusion_statement_id": id, "meaning": "m"})
+            .to_string(),
+        );
+        write(
+            root,
+            &format!("corpus/results/{id}.json"),
+            &json!({"id": id, "argument_id": id, "challenge_module": "c",
+                    "solution_module": format!("TruthCore.Results.Models.{id}.Solution"),
+                    "theorem": "t", "comparator_config": "c", "status": "solution-present"})
+            .to_string(),
+        );
+    }
+
+    fn plan(root: &Path, id: &str, paraphrase: &str, lean: &str, plan: Value) {
+        write(
+            root,
+            &format!("corpus/statements/{id}.json"),
+            &json!({"id": id, "paraphrase": paraphrase, "lean_declaration": lean,
+                    "connection_plan": plan})
+            .to_string(),
+        );
+    }
+
+    fn states(root: &Path) -> BTreeMap<String, (String, bool)> {
+        let corpus = Corpus::load(root).unwrap();
+        let records = Records::from_corpus(&corpus);
+        let flags = crate::frontier::transcription_flags(root, &records);
+        let frontier = thickness::frontier_inputs("ROOT", &records, &flags);
+        place(&records, &frontier)
+            .into_iter()
+            .map(|placement| {
+                (
+                    text(placement.result, "id").to_owned(),
+                    (
+                        placement.state.to_owned(),
+                        placement.transcription.is_some(),
+                    ),
+                )
+            })
+            .collect()
+    }
+
+    fn state(root: &Path, result: &str) -> String {
+        states(root)[result].0.clone()
+    }
+
+    #[test]
+    fn placement_states_reaching_diagnostic_rival_planned_and_unplaced() {
+        let dir = fixture();
+        let root = &dir.0;
+        // Baseline: only ROOT-ARG reaches; the rest is unplaced.
+        assert_eq!(state(root, "ROOT-ARG"), REACHING);
+        for id in ["MODAL-A", "MODAL-B", "CAUSE-A"] {
+            assert_eq!(state(root, id), UNPLACED, "{id}");
+        }
+
+        // Diagnostic: a premise-free result that `tests` a root-path statement
+        // (by its result) or an argument concluding one (by its argument).
+        premise_free(root, "MODEL");
+        premise_free(root, "CONTROL");
+        relation(root, "T1", ("result", "MODEL"), "tests", ("statement", "P"));
+        relation(
+            root,
+            "T2",
+            ("argument", "CONTROL"),
+            "tests",
+            ("argument", "ROOT-ARG"),
+        );
+        assert_eq!(state(root, "MODEL"), "placed_diagnostic");
+        assert_eq!(state(root, "CONTROL"), "placed_diagnostic");
+        // Testing an off-path statement places nothing.
+        relation(root, "T1", ("result", "MODEL"), "tests", ("statement", "Q"));
+        assert_eq!(state(root, "MODEL"), UNPLACED);
+        // A `tests` link does not place a result that has premises.
+        relation(
+            root,
+            "T3",
+            ("result", "CAUSE-A"),
+            "tests",
+            ("statement", "P"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), UNPLACED);
+
+        // Rival: the conclusion is `alternative_to` a root-path statement
+        // (either direction), or the argument attacks or refutes one.
+        relation(
+            root,
+            "R1",
+            ("statement", "C"),
+            "alternative_to",
+            ("statement", "P"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        relation(
+            root,
+            "R1",
+            ("statement", "P"),
+            "alternative_to",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        relation(
+            root,
+            "R1",
+            ("statement", "C"),
+            "alternative_to",
+            ("statement", "Q"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), UNPLACED);
+        relation(
+            root,
+            "R1",
+            ("argument", "CAUSE-A"),
+            "attacks",
+            ("statement", "P"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        relation(
+            root,
+            "R1",
+            ("argument", "CAUSE-A"),
+            "refutes",
+            ("statement", "P"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        // A root-path argument refuting the conclusion places it as a rival.
+        relation(
+            root,
+            "R1",
+            ("argument", "ROOT-ARG"),
+            "refutes",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+        // Argument-level `attacks` counts in both directions, like `refutes`.
+        relation(
+            root,
+            "R1",
+            ("argument", "ROOT-ARG"),
+            "attacks",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+
+        // A root-path argument must be verified: an argument record concluding
+        // the root without a result places nothing, as a `tests` object or as
+        // the subject of a placing `refutes` or `attacks`.
+        write(
+            root,
+            "corpus/arguments/UNVERIFIED.json",
+            &json!({"id": "UNVERIFIED", "premise_statement_ids": ["P"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "ROOT", "meaning": "m"})
+            .to_string(),
+        );
+        for predicate in ["refutes", "attacks"] {
+            relation(
+                root,
+                "R1",
+                ("argument", "UNVERIFIED"),
+                predicate,
+                ("statement", "C"),
+            );
+            assert_eq!(state(root, "CAUSE-A"), UNPLACED, "{predicate}");
+        }
+        relation(
+            root,
+            "T2",
+            ("argument", "CONTROL"),
+            "tests",
+            ("argument", "UNVERIFIED"),
+        );
+        assert_eq!(state(root, "CONTROL"), UNPLACED);
+        relation(
+            root,
+            "T2",
+            ("argument", "CONTROL"),
+            "tests",
+            ("argument", "ROOT-ARG"),
+        );
+        relation(
+            root,
+            "R1",
+            ("argument", "ROOT-ARG"),
+            "refutes",
+            ("statement", "C"),
+        );
+        assert_eq!(state(root, "CAUSE-A"), "placed_rival");
+
+        // Planned: a valid plan on the conclusion targeting a root-path node.
+        let paraphrase = "Necessary being exists in every accessible world.";
+        let lean = "TruthCore.Modal.Kripke.m";
+        let good = json!({"target_statement_id": "P", "missing_bridge": "accessible to every world",
+                          "blocker": "no accessibility bridge yet"});
+        plan(root, "M", paraphrase, lean, good);
+        assert_eq!(state(root, "MODAL-A"), "planned");
+        // An off-path target or an invalid plan places nothing.
+        let off = json!({"target_statement_id": "N", "missing_bridge": "b", "blocker": "c"});
+        plan(root, "M", paraphrase, lean, off);
+        assert_eq!(state(root, "MODAL-A"), UNPLACED);
+        let invalid = json!({"target_statement_id": "P", "missing_bridge": "b"});
+        plan(root, "M", paraphrase, lean, invalid);
+        assert_eq!(state(root, "MODAL-A"), UNPLACED);
+
+        // A transcription keeps a computed state and is counted on its own.
+        assert_eq!(states(root)["MODAL-B"], (UNPLACED.to_owned(), true));
+        let counts = super::report(root, &Corpus::load(root).unwrap(), "ROOT", GroupBy::Module);
+        assert_eq!(counts["state_counts"][REACHING], 1);
+        assert_eq!(counts["state_counts"]["placed_diagnostic"], 1);
+        assert_eq!(counts["state_counts"]["placed_rival"], 1);
+        assert_eq!(counts["state_counts"][UNPLACED], 3);
+        assert_eq!(counts["transcription_state_counts"][UNPLACED], 1);
+        assert_eq!(counts["transcription_state_counts"][REACHING], 0);
+        let modal = counts["groups"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|group| group["group"] == "TruthCore.Modal")
+            .unwrap();
+        assert_eq!(modal["unplaced_count"], 2);
+        assert_eq!(modal["placed_count"], 0);
+        assert_eq!(modal["planned_count"], 0);
+
+        // Text: by default only unplaced conclusions and the groups with one;
+        // `--all` lists each disconnected result with its state.
+        plan(
+            root,
+            "M",
+            paraphrase,
+            lean,
+            json!({"target_statement_id": "P",
+            "missing_bridge": "b", "blocker": "c"}),
+        );
+        let listed = super::report(root, &Corpus::load(root).unwrap(), "ROOT", GroupBy::Module);
+        let text = format(&listed, false);
+        assert!(text.contains("placed diagnostic 1; placed rival 1; planned 1; unplaced 2"));
+        assert!(text.contains("  unplaced conclusions: Q\n"), "{text}");
+        assert!(!text.contains("TruthCore.Causality  1 results"), "{text}");
+        assert!(text.contains("group(s) with no unplaced result omitted"));
+        assert!(
+            text.contains("    contact (on root path): ROOT  "),
+            "{text}"
+        );
+        let all = format(&listed, true);
+        assert!(all.contains("  planned: M (result MODAL-A)"), "{all}");
+        assert!(all.contains("  unplaced, transcription single_application: Q (result MODAL-B)"));
+        assert!(all.contains("  placed_rival: C (result CAUSE-A)"));
+        assert!(all.contains("  placed_diagnostic: CONTROL (result CONTROL)"));
+    }
+
+    /// Copies the fixture tree (corpus and Lean files) to a fresh directory.
+    fn copy(from: &Path) -> Dir {
+        use std::sync::atomic::{AtomicU32, Ordering};
+        static NEXT: AtomicU32 = AtomicU32::new(0);
+        let to = std::env::temp_dir().join(format!(
+            "truth-orphans-copy-{}-{}",
+            std::process::id(),
+            NEXT.fetch_add(1, Ordering::Relaxed)
+        ));
+        fn walk(from: &Path, to: &Path) {
+            fs::create_dir_all(to).unwrap();
+            for entry in fs::read_dir(from).unwrap() {
+                let entry = entry.unwrap();
+                let target = to.join(entry.file_name());
+                if entry.file_type().unwrap().is_dir() {
+                    walk(&entry.path(), &target);
+                } else {
+                    fs::copy(entry.path(), target).unwrap();
+                }
+            }
+        }
+        walk(from, &to);
+        Dir(to)
+    }
+
+    fn run_gate(head: &Path, base: &Path) -> Value {
+        let (head_corpus, base_corpus) = (Corpus::load(head).unwrap(), Corpus::load(base).unwrap());
+        gate(
+            head,
+            &head_corpus,
+            "ROOT",
+            base,
+            &base_corpus,
+            "ROOT",
+            "BASE",
+        )
+    }
+
+    fn offending(report: &Value) -> Vec<(String, String)> {
+        report["offending"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|entry| {
+                (
+                    entry["result_id"].as_str().unwrap().to_owned(),
+                    entry["change"].as_str().unwrap().to_owned(),
+                )
+            })
+            .collect()
+    }
+
+    #[test]
+    fn the_gate_fails_new_unplaced_results_and_reports_the_backlog() {
+        let base = fixture();
+        relation(
+            &base.0,
+            "RIVAL",
+            ("statement", "C"),
+            "alternative_to",
+            ("statement", "P"),
+        );
+        let head = copy(&base.0);
+        // Unchanged: the three unplaced-at-base results are backlog, not failures.
+        let report = run_gate(&head.0, &base.0);
+        assert_eq!(report["passed"], true);
+        assert_eq!(report["backlog_count"], 2); // MODAL-A, MODAL-B (CAUSE-A is a rival)
+        assert_eq!(report["backlog_transcription_count"], 1);
+        assert_eq!(report["judged"], json!([]));
+
+        // A new unplaced result fails; the honest options are spelled out.
+        write(
+            &head.0,
+            "corpus/statements/Y.json",
+            &json!({"id": "Y", "paraphrase": "y"}).to_string(),
+        );
+        write(
+            &head.0,
+            "corpus/arguments/NEW.json",
+            &json!({"id": "NEW", "premise_statement_ids": ["Q"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "Y", "meaning": "m"})
+            .to_string(),
+        );
+        write(
+            &head.0,
+            "corpus/results/NEW.json",
+            &json!({"id": "NEW", "argument_id": "NEW", "challenge_module": "c",
+                    "solution_module": "TruthCore.Results.Mereology.NEW.Solution",
+                    "theorem": "t", "comparator_config": "c", "status": "solution-present",
+                    "transcription": "assembly"})
+            .to_string(),
+        );
+        let report = run_gate(&head.0, &base.0);
+        assert_eq!(report["passed"], false);
+        assert_eq!(offending(&report), [("NEW".to_owned(), "new".to_owned())]);
+        assert_eq!(report["offending"][0]["transcription"], "assembly");
+        let text = format_gate(&report);
+        assert!(text.contains("FAILED"));
+        assert!(text.contains("a `connection_plan` on its conclusion"));
+        assert!(text.contains("a `tests` relation"));
+        assert!(text.contains("Contrived edges and tautological bridges are not acceptable"));
+        assert!(
+            text.contains("  Y (result NEW; new result; transcription assembly)"),
+            "{text}"
+        );
+
+        // A connection plan to a root-path node places it: the gate passes.
+        write(
+            &head.0,
+            "corpus/statements/Y.json",
+            &json!({"id": "Y", "paraphrase": "y", "connection_plan": {
+                "target_statement_id": "P", "missing_bridge": "Y entails P", "blocker": "open"}})
+            .to_string(),
+        );
+        let report = run_gate(&head.0, &base.0);
+        assert_eq!(report["passed"], true);
+        assert_eq!(report["judged_state_counts"]["planned"], 1);
+
+        // A pre-existing result whose argument changes is judged again.
+        write(
+            &head.0,
+            "corpus/arguments/MODAL-A.json",
+            &json!({"id": "MODAL-A", "premise_statement_ids": ["Q", "N"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "M", "meaning": "m"})
+            .to_string(),
+        );
+        assert_eq!(
+            offending(&run_gate(&head.0, &base.0)),
+            [("MODAL-A".to_owned(), "argument_changed".to_owned())]
+        );
+        let path = head.0.join("corpus/arguments/MODAL-A.json");
+        fs::copy(base.0.join("corpus/arguments/MODAL-A.json"), &path).unwrap();
+
+        // Removing the rival link that placed a pre-existing result fails it.
+        fs::remove_file(head.0.join("corpus/relations/RIVAL.json")).unwrap();
+        assert_eq!(
+            offending(&run_gate(&head.0, &base.0)),
+            [("CAUSE-A".to_owned(), "placement_lost".to_owned())]
+        );
+    }
+
+    #[test]
+    fn the_gate_fails_lost_reaching_and_planned_placements() {
+        // At the base, CAUSE-A reaches the root (a verified argument C -> ROOT)
+        // and MODAL-A is planned (M targets P); the head drops both.
+        let base = fixture();
+        write(
+            &base.0,
+            "corpus/arguments/C-ROOT.json",
+            &json!({"id": "C-ROOT", "premise_statement_ids": ["C"], "inference_ids": ["I"],
+                    "conclusion_statement_id": "ROOT", "meaning": "m"})
+            .to_string(),
+        );
+        write(
+            &base.0,
+            "corpus/results/C-ROOT.json",
+            &json!({"id": "C-ROOT", "argument_id": "C-ROOT", "challenge_module": "c",
+                    "solution_module": "TruthCore.Results.Case.C-ROOT.Solution",
+                    "theorem": "t", "comparator_config": "c", "status": "solution-present"})
+            .to_string(),
+        );
+        let paraphrase = "Necessary being exists in every accessible world.";
+        let lean = "TruthCore.Modal.Kripke.m";
+        plan(
+            &base.0,
+            "M",
+            paraphrase,
+            lean,
+            json!({"target_statement_id": "P", "missing_bridge": "b", "blocker": "c"}),
+        );
+        assert_eq!(state(&base.0, "CAUSE-A"), REACHING);
+        assert_eq!(state(&base.0, "MODAL-A"), "planned");
+        let head = copy(&base.0);
+        assert_eq!(run_gate(&head.0, &base.0)["passed"], true);
+
+        fs::remove_file(head.0.join("corpus/arguments/C-ROOT.json")).unwrap();
+        fs::remove_file(head.0.join("corpus/results/C-ROOT.json")).unwrap();
+        assert_eq!(
+            offending(&run_gate(&head.0, &base.0)),
+            [("CAUSE-A".to_owned(), "placement_lost".to_owned())]
+        );
+        write(
+            &head.0,
+            "corpus/statements/M.json",
+            &json!({"id": "M", "paraphrase": paraphrase, "lean_declaration": lean}).to_string(),
+        );
+        let report = run_gate(&head.0, &base.0);
+        let mut lost = offending(&report);
+        lost.sort();
+        assert_eq!(
+            lost,
+            [
+                ("CAUSE-A".to_owned(), "placement_lost".to_owned()),
+                ("MODAL-A".to_owned(), "placement_lost".to_owned())
+            ]
+        );
+        assert!(
+            format_gate(&report).contains("  M (result MODAL-A; placed at the base, unplaced now)")
         );
     }
 

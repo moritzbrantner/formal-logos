@@ -1,0 +1,10 @@
+{
+  "id": "34a2a8cf-3b8f-4a60-bee2-652137309e5e",
+  "label": "Test by The fixed Bool interpretations certify: an S4 boxed-cond for At the named standpoint, (1)",
+  "subject_kind": "result",
+  "subject_id": "ceeb12bd-8442-511a-995f-a105e953887e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bd1281e6-75b3-5503-8c0a-f97213388c88",
+  "note": "Tests the boxed and actual-only readings in fixed Bool models and distinguishes their force across S4, universal S5 and disconnected frames."
+}

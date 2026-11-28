@@ -476,11 +476,23 @@ Seek nonvacuity witnesses and omission countermodels where practical and informa
 **The rule.** No library, framework, vocabulary or result family is built or extended in isolation.
 
 1. **Name the target before building.** Every worker brief and every PR that adds vocabulary or results names the root-route node it serves: a premise it discharges, an argument it connects, or a rival it refutes. `target/release/truth frontier --routes` lists the routes.
-2. **Connect, or say why not.** The PR either shows the connection in the computed `frontier-diff` (new results reaching the root, a premise closed or defended, a route re-routed) or states an explicit connection plan: the target statement, the missing bridge and its blocker. The coordinator's handoff tracks that plan. Unconnected work does not count as progress on the case until it is connected.
+2. **Connect, or say why not.** The PR either shows the connection in the computed `frontier-diff` (new results reaching the root, a premise closed or defended, a route re-routed) or states an explicit connection plan: the target statement, the missing bridge and its blocker. The coordinator's handoff tracks that plan. Unconnected work does not count as progress on the case until it is connected. CI checks typed contact for statements: `truth connectivity --base <merge-base>` fails on a new, moved-out or previously planned statement that neither joins the root's component through arguments, inference steps or relations (including `tests`; claims count through relations, attempts do not) nor records a valid `connection_plan` (docs/corpus-model.md). Typed component contact is not enough for results (owner decision, 2026-11-27): `truth orphans --base <merge-base> --gate` fails on a new, changed, or previously placed verified result that neither reaches the root, nor is a placed diagnostic (`tests` a root-path node) or placed rival (typed rival relation), nor carries a `connection_plan` on its conclusion targeting a root-path statement. Contrived edges and tautological bridges are not acceptable. Passing either gate does not discharge the substantive root-route obligation.
 3. **Include idle work in prioritization.** Inspect verified families that do not reach the root (`truth orphans`) when choosing a round. A useful bridge can be a high-value target, but disconnected work does not automatically outrank a live objection or missing warrant. Judge research by the uncertainty it changes; route cost and thickness remain diagnostics.
 4. **Investigate load-bearing senses and their relationships.** Give the selected sense a faithful definition/interpretation, preserve consequential alternatives, and test proposed implication, equivalence or independence. Distinct names or types alone do not establish meaning. Use the existing sense-index and bridge machinery when formalizing these relationships. A [certified fork](docs/configuration-elimination-loop.md#certified-forks-for-selected-investigations) needs coverage only if its inference uses coverage, and exclusivity only if it uses exclusivity; overlapping or strength-ordered senses need not be mutually exclusive. Research rivals and premise warrant whenever informative, without first completing an exhaustive enum or joint theorem for all senses.
 
 See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
+
+**Placement is plumbing, not warrant** (owner decision 2026-11-27, `docs/decisions/2026-11-27-02-curation-ends-mechanical-review-strict-main.md`). A result is "reaching the root" or placed when it is connected, not when it is supported. Progress reports keep four standings apart. Each reaching result's `truth orphans` provenance key maps to one of them:
+
+1. **established**: the frontier's established statements (no provenance key).
+2. **conditionally supported by a substantive derivation**: `substantive`. `refutation_support` belongs here too, but only as support for that refutation of a recorded rival, not for a root route.
+3. **connected only**:
+   - `transcription_closed` carries rule (d) closure to the root but no independent warrant;
+   - `transcription_self` contributes at most rule (d) closure;
+   - `transcription_open`, `loop_back`, `registration_bare` and `unverified_route` carry no support to the root.
+4. **planned**: the placement state `planned` (no provenance key).
+
+Counts are never progress (owner direction, 2026-11-24).
 
 ## Proof-seeking stance
 
@@ -691,7 +703,7 @@ Do not call an argument mechanically verified unless its result passes Comparato
 
 ### 8. Self-sweep before requesting review
 
-Before requesting `@codex review`, apply the Review guidelines below to your own diff in one pass and fix what you find. For research PRs, also go through the [recurring semantic defects checklist](docs/systematic-corpus-loop.md#recurring-semantic-defects-pre-push-checklist). An automated review does not replace the independent semantic challenge. A research thread does not leave a draft PR without either that challenge or a handoff naming it as pending.
+Before requesting `@codex review`, apply the Review guidelines below to your own diff in one pass and fix what you find. For research PRs, also go through the [recurring semantic defects checklist](docs/systematic-corpus-loop.md#recurring-semantic-defects-pre-push-checklist). An automated review does not replace the independent semantic challenge. A research thread does not leave a draft PR without either that challenge or a handoff naming it as pending. Before pushing, run `scripts/preflight.sh`; it bundles the offline checks CI runs plus a lint for artifacts, future dates and over-long labels.
 
 - every "read as" or attributed claim states no more than its cited sentence; any strengthening is stated as an explicit, unattributed open premise;
 - **attribution self-check (#989), before the first push** (CI runs the same check on every PR): run `target/release/truth attribution-check --base <merge-base>`. This offline check prints each new or changed stating claim (or claim whose statement text changed) beside its locator and any usable cached passage text; absent or stale text is reported as not checked, and it fails until the claim records `"attribution": "The passage states X, which is the premise."` Check quantifier scope, species/genus restriction (one kind of cause or being read as all), and temporal and modal scope. If the sentence would be false, because the passage only bears on the premise or states something narrower, do not keep the claim as stating. Replace it by a `supports` relation with a gap note (#987), or state the narrower reading as its own statement;

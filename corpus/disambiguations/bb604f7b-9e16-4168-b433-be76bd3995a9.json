@@ -1,0 +1,32 @@
+{
+  "id": "bb604f7b-9e16-4168-b433-be76bd3995a9",
+  "label": "Explained absence: admitted reason, positive fixing, admissibility fixing",
+  "term": "Explained absence: admitted reason, positive fixing, admissibility fixing",
+  "term_label": "EXPLAINED_ABSENCE",
+  "sense_definition_ids": [
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
+  ],
+  "senses": [
+    {
+      "id": "5e7d2fd0-dc12-4654-b1e2-8fa12c43c7be",
+      "label": "EXPLAINED_ABSENCE_1",
+      "definition_id": "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+      "lean_declaration": "TruthCore.Explanation.PSRStrength.Explained"
+    },
+    {
+      "id": "e3064991-b249-48bf-b015-0652cb63078e",
+      "label": "EXPLAINED_ABSENCE_2",
+      "definition_id": "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+      "lean_declaration": "TruthCore.Explanation.InquiryClosure.PositivelyFixedAbsence"
+    },
+    {
+      "id": "ea93739d-0a36-447e-bc29-384846b8eebe",
+      "label": "EXPLAINED_ABSENCE_3",
+      "definition_id": "c48266c2-ba78-41c2-8860-61273abf0ef8",
+      "lean_declaration": "TruthCore.Explanation.InquiryClosure.AbsenceExcludedByAdmissibility"
+    }
+  ],
+  "resolution": "An absence at a root is 'explained' in sense 1 when some fact is admitted as a reason for the lack fact in the #755 arena (ADMITTED_EXPLICABILITY_ROLE_1, the sense of every PSR and inquiry bridge in the graph). It is explained in sense 3 when it is excluded by admissibility (c48266c2, AbsenceExcludedByAdmissibility): the admissibility constraints, alone or with the bearer's profile, exclude the missing determination (case i or ii). For a lacked determination this is the negation of an unexplained absence (a5452da9), and it is the sense of 'no unexplained absence at roots' (9281317d). A statement asserting an unexplained absence keeps a5452da9 and is not tagged with this disambiguation. Sense 2 (positively fixed) is sense 3 or a carried exclusion; in Lean its first disjunct is AbsenceExcludedByAdmissibility. Sense 3 gives sense 2 by that disjunct, and sense 2 gives sense 3 under the necessity direction of member grounding (89c988d9, carriedClosureNotUnexplained). Sense 1 gives neither: a bare negative clause, or any necessary truth under necessaryReasons, is an admitted reason for a necessary lack that no admissibility constraint fixes (InquiryClosure rival row). Passages between the senses are explicit premises listed in sense_bridges: the open bridge RootLackReasonsPositive (a8a43166) from 1 to 2; the necessity direction 89c988d9 from 2 to 3; the reason-essence thesis fedc67d8 from 1 to 3 together with carriage and 89c988d9; the factorization argument derives a8a43166 from fedc67d8, carriage and 89c988d9. See docs/notes/causal-perfection-transfer.md, section on inquiry and closure at the root."
+}

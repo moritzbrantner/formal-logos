@@ -1,0 +1,20 @@
+{
+  "id": "be0d93c7-2666-4c7c-82aa-b0c668f605cf",
+  "label": "Root lack PSR, from the unrestricted fact PSR",
+  "premise_statement_ids": [
+    "6db599dd-272b-4546-ba50-11a69095280d"
+  ],
+  "conclusion_statement_id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+  "inference_ids": [
+    "c9f7592e-3cb3-46fa-9b27-b8e007aab861"
+  ],
+  "meaning": "A lack fact of an actual root that holds at w is a fact that holds at w, so the unrestricted fact PSR gives it an admitted reason. It certifies the strength order of the two scopes. No axioms.",
+  "definition_ids": [
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "179d4557-bda1-59c4-938a-b91e9974a27f"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}

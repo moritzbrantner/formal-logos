@@ -1,0 +1,10 @@
+{
+  "id": "a33c9da7-db63-4be8-8f99-4cfab3af2748",
+  "label": "Test by Universal finite-list omission, full-cover joint absence for One finite list contains (1)",
+  "subject_kind": "result",
+  "subject_id": "dd025239-76a8-5e59-b5e0-16a1ae9dae37",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33",
+  "note": "Checks the sufficient role of a finite cover in the finite-list joint-absence and necessary-bearer arguments under the stated frame assumptions."
+}

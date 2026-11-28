@@ -1,0 +1,10 @@
+{
+  "id": "a6ffdd8d-52bf-4026-b348-8a718b86352e",
+  "label": "Test by A schema model satisfies both raw message-only and Catho for For any being g: if Jesus (1)",
+  "subject_kind": "result",
+  "subject_id": "de76edd9-78f1-5674-8af8-5998a9776bc1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "723ee3c4-00e9-5f86-9562-79d430227b19",
+  "note": "Tests coexistence with the raw message-only conditional in the profile with actual visible Catholic founding but no mandator."
+}

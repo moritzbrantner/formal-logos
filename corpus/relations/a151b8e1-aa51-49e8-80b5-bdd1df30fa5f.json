@@ -1,0 +1,10 @@
+{
+  "id": "a151b8e1-aa51-49e8-80b5-bdd1df30fa5f",
+  "label": "Test by WorldwiseCompositeGround.checks (c71c068c)",
+  "subject_kind": "result",
+  "subject_id": "e167d4d4-2be0-5820-9cbc-8c6ccb2bf473",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c71c068c-bbae-5ed5-a99d-70b155c8d239",
+  "note": "At each supplied world the actual contingent concreta are the two atoms tagged with that world. The same necessarily existing whole directly grounds both there. In this profile `P2At` is `EveryContingentGroundedAt`, with a populated contingent class at each world."
+}

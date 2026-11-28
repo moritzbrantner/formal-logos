@@ -1,0 +1,9 @@
+{
+  "id": "06047f4c-ce98-4a33-a3f2-84fcf476d86e",
+  "label": "The selector covers every accessible absence world",
+  "paraphrase": "OPEN coverage assumption at the supplied origin: for every candidate source y and every world accessible from the origin in the shared ontology where y is absent, that world is in the selection for y's absence.",
+  "lean_declaration": "TruthCore.Causality.CounterfactualDependence.CoversAccessibleAbsence",
+  "definition_ids": [
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ]
+}

@@ -1,6 +1,7 @@
 module
 
 public import TruthCore.Logic.FirstPersonWitness
+public import TruthCore.Causality.CartesianIdeaOfInfinite
 
 @[expose] public section
 
@@ -213,5 +214,66 @@ theorem presenceOmissionControl :
   exact ⟨⟨(), trivial, trivial⟩, fun _ _ _ => ⟨(), rfl, trivial⟩, fun _ _ _ => trivial,
     fun _ _ => trivial, fun presence => Bool.noConfusion (presence false () () rfl trivial),
     fun ⟨_, _, absent⟩ => Bool.noConfusion absent⟩
+
+end TruthCore.Results.Logic.FirstPersonWitness
+
+namespace TruthCore.Results.Logic.FirstPersonWitness
+
+open TruthCore.Causality.Round2ExistenceAct
+open TruthCore.Causality.Round3CogitoBase
+open TruthCore.Logic.AssertionRetorsion
+open TruthCore.Logic.PerformedDenial (NoEpisodeOccurs)
+
+/-- At the selected world both candidates assert the same content and both acts
+qualify as doubts. Only the first has a realizing episode. This is a scope
+control for the universal inputs, without any claim about actual psychology. -/
+theorem realizedTokenWithFailedBridges :
+    let occursAt := TruthCore.Logic.FirstPersonWitness.Control.occursAt false
+    let asserts := fun (_ : Bool) (_ : Unit) => True
+    let marked := fun (_ : Bool) => True
+    let realizes := fun (a : Bool) (_ : Unit) => a = false
+    AssertionMade asserts () ∧ DoubtIsPerformed marked marked ∧
+    (∃ e, occursAt false e ∧ realizes false e) ∧
+    ¬ AssertionRealized asserts () (occursAt false) (fun a _ => realizes a) ∧
+    ¬ PerformedDoubtIsThought marked marked (occursAt false) realizes ∧
+    ¬ NoEpisodeOccurs (occursAt false) ∧ NoEpisodeOccurs (occursAt true) := by
+  dsimp only
+  exact ⟨⟨false, trivial⟩, ⟨false, trivial, trivial⟩, ⟨(), rfl, rfl⟩,
+    fun h => Bool.noConfusion (h true trivial).choose_spec.2,
+    fun h => Bool.noConfusion (h true trivial trivial).choose_spec.2,
+    fun h => h ⟨(), rfl⟩, fun ⟨_, here⟩ => Bool.noConfusion here⟩
+
+/-- A speaker can assert a different content and think through it without
+asserting the selected content or performing a doubt about thought. -/
+theorem otherContentWithoutSelectedPerformance :
+    let asserts := fun (_ : Unit) (c : Bool) => c = true
+    let performed := fun (_ : Unit) => True
+    AssertionMade asserts true ∧ ¬ AssertionMade asserts false ∧
+    AssertionRealized asserts true performed (fun _ _ _ => True) ∧
+    ¬ DoubtIsPerformed performed (fun _ => False) := by
+  exact ⟨⟨(), rfl⟩, fun ⟨_, h⟩ => Bool.noConfusion h,
+    fun _ _ => ⟨(), trivial, trivial⟩, fun ⟨_, _, h⟩ => h⟩
+
+end TruthCore.Results.Logic.FirstPersonWitness
+
+namespace TruthCore.Results.Logic.FirstPersonWitness
+
+open TruthCore.Causality.CartesianIdeaOfInfinite
+open TruthCore.Causality.Round2ExistenceAct
+
+/-- One local episode, borne by the candidate other than the designated
+meditator. Assign the meditator agency and withhold modification from the
+episode. All three negations are consistent even with a thin bearer. -/
+theorem otherBearerAttribution :
+    ∃ I : IdeaFrame Bool Unit Unit,
+      I.Occurs () ∧ I.Bears true () ∧ I.me = false ∧ ¬ MeditatorThinks I ∧
+      ¬ AgentOfEpisodeBearsIt (fun b _ => b = I.me) I.Bears ∧
+      ¬ OccurringThoughtIsModification I.Occurs (fun _ => False) := by
+  let I : IdeaFrame Bool Unit Unit := {
+    Occurs := fun _ => True, Bears := fun b _ => b = true,
+    Represents := fun _ _ => False, ObjCause := fun _ _ _ => False,
+    inf := (), me := false }
+  exact ⟨I, trivial, rfl, rfl, fun ⟨_, _, bears⟩ => Bool.noConfusion bears,
+    fun h => Bool.noConfusion (h I.me () rfl), fun h => h () trivial⟩
 
 end TruthCore.Results.Logic.FirstPersonWitness

@@ -1,0 +1,10 @@
+{
+  "id": "6ce0ed2c-84c3-4d19-83b1-176c741795dd",
+  "label": "Test by Conditional origin as a nonempty nature of the contingent receiver",
+  "subject_kind": "result",
+  "subject_id": "24a6beb5-9cf6-4f7d-95fd-0776ccff9102",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "34e4ff72-0ab4-4c76-9f37-4ccc361f1aa1",
+  "note": "Tests both giving assignments after adding the same receiver's nonempty origin-conditional nature dictionary, whose truths do not entail its existence."
+}

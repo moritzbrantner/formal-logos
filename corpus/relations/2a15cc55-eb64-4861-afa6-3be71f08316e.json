@@ -1,0 +1,10 @@
+{
+  "id": "2a15cc55-eb64-4861-afa6-3be71f08316e",
+  "label": "Test by Each of the three ¬F7 cells of q f7 has an interpretation in which something is moved",
+  "subject_kind": "result",
+  "subject_id": "81ca8216-ddf6-5d47-ba1b-a3473d306a9b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
+  "note": "Tests whether the floor excludes the three ¬F7 cells by exhibiting a moved tuple in each one-being one-respect interpretation."
+}

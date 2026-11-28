@@ -168,3 +168,14 @@ brute and coherent non-WF rivals remain open on #545.
 Explorer source-location repair: the original raw core `WellFounded` hypothesis and all frozen Challenges remain unchanged. The repository-only declaration scan had no source entry for this valid Lean core declaration; a complete audit found no other missing statement or advertised theorem. The existing causal-predecessor declaration cannot be assigned the distinct fact-dependency statement identity. A trial fact-specific definitional wrapper passed scoped binding but failed Comparator's structural type comparison against the frozen raw hypothesis; that trial was removed. The explorer now carries source-location metadata for `WellFounded` only, inspected at `src/Init/WF.lean:60` in installed `leanprover/lean4:v4.35.0`, and links to that exact official release. Other pins receive no guessed location. Both statement and definition renderers honor the external URL. This is navigation metadata, not proof/source certification, and performs no network fetch or library installation. No premise change; all eight original formal certificates remain the evidence for unchanged proof inputs.
 
 Repair validation: the failing site-state suite plus focused source-link/configuration tests pass14/14; TypeScript typecheck and lint pass. The post-main-merge producer configuration suite passes8/8. A complete index audit has zero missing statement declarations or advertised theorems. All34 original proof/vocabulary/affected metadata/result-config files checked against published8c3432f5 are byte-identical; the rejected wrapper draft is superseded. Eight original formal gates are reused.
+
+## What complete grounds necessitate (2026-11-26)
+
+Trogdon's proposal requires full grounding and offers essence and significance
+as its rationale. Richardson's what-grounding retains necessity, while
+why-grounding has its own contrastive requirements. Leuenberger's
+blocker-blocker proposal targets persistence of a ground assignment with the
+same obtaining relata. Joint necessitation needs a case-specific argument about
+the complete ground record and can leave that persistence question open.
+
+[Kelly Trogdon reading attempt](../../corpus/attempts/eb0e691b-4c95-4660-9067-8a57518bd27d.json), [Kevin Richardson reading attempt](../../corpus/attempts/3e7084c5-11f4-455e-969c-a0564070140c.json), [Stephan Leuenberger reading attempt](../../corpus/attempts/f351b097-eac7-41d4-aa7c-f810a035aa77.json).

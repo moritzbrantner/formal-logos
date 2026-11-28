@@ -1,0 +1,10 @@
+{
+  "id": "da0fa0fe-d4d7-49bf-8a21-dc1b87e8d2b8",
+  "label": "Test by Finite models for the modal-principle branches of the NE for The route's 'necessary be (2)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "380cba7c-9dd6-5484-91ba-b3d99b6eb086",
+  "note": "Tests omission of this premise from forkS4 in the corresponding hand-written modal frames for the S4 fork."
+}

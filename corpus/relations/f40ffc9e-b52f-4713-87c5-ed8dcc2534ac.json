@@ -1,0 +1,10 @@
+{
+  "id": "f40ffc9e-b52f-4713-87c5-ed8dcc2534ac",
+  "label": "Test by SourceWitness.overlap_control (a86ff6ca)",
+  "subject_kind": "result",
+  "subject_id": "b06d45ee-a1da-5ce4-84be-4f2a8009ab07",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "a86ff6ca-23aa-58d5-963f-06e52dc6db16",
+  "note": "Witness the joint weak-connectivity and confluence premises on the infinite all-present graph. Every node has an upstream extension to none, which is itself a source. There are no incoming edges to none."
+}

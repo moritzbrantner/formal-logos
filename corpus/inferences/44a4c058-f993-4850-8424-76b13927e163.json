@@ -1,0 +1,12 @@
+{
+  "id": "44a4c058-f993-4850-8424-76b13927e163",
+  "label": "Root cognition criterion, from the unrestricted cognition criterion (inference)",
+  "input_statement_ids": [
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+  ],
+  "output_statement_id": "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8",
+  "rule": "Restrict the universal criterion to actual roots",
+  "meaning": "The cognition criterion says that every bearer with a good-general favouring apprehends some content about some candidate; an actual root is such a bearer when it has a good-general favouring. This verifies the strength order from the criterion to its restriction to actual roots. The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

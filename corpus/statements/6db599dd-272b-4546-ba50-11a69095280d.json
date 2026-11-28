@@ -1,0 +1,13 @@
+{
+  "id": "6db599dd-272b-4546-ba50-11a69095280d",
+  "label": "Every fact true at a world has an admitted reason there",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: the unrestricted fact PSR at w in the #755 arena. Every fact that holds at w has some fact admitted at w as a reason for it (EXPLAINED_ABSENCE_1, the admitted-explicability property). An admitted reason need not be true, necessitating, independent of its target or a genuine explanation; those are separate quality conditions. It is not restricted to contingent facts. With excluded middle it holds wherever the contingent-fact PSR holds once every true necessary fact is admitted as a reason for every true necessary fact (necessaryReasons, InquiryScopeMap clause 3), so its reach beyond contingent facts constrains nothing about which reason a necessary fact has.",
+  "lean_declaration": "TruthCore.Explanation.PSRStrength.FactPSR",
+  "definition_ids": [
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}

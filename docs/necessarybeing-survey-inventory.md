@@ -720,3 +720,15 @@ The existing substantive Lean helper `CountCauseTimeNecessity.opportunityOfOld` 
 The final extracted count-one witness retains its same accessible history, concrete individual, selected cause/target times and `CauseCount` marker while forgetting all-earlier absence and other threshold guards. `CauseCount` is still a supplied count-situation relation, not `Ontic.Causes`, ordinary individual production, grounding or sufficient explanation. Absence is of a concrete CONTINGENT singleton at the cause time, not absence of all concrete individuals, all worlds or all times. No real opportunity is admitted by this wrapper.
 
 The graph now connects the old two-input threshold configuration to the existing `COUNT-CAUSE-TIME-NECESSITY` five-input route; temporal-presence→world-existence, excluded middle, Euclidean accessibility and designated-world reflexivity remain separate commitments. The existing `COUNT-CAUSE-TIME-NECESSITY-PROJECTION` still forgets concreteness and cause role through `necessaryBeingOfWitness`; its assembly classification and rich-witness input are unchanged. No cause role is transported to actuality, and no uniqueness, God identity or root premise truth follows. This is the missing graph connection for an already checked implication, not a new independent philosophical discharge or proof discovery. Exact frontier comparison accompanies the PR, and the existing count attempt preserves the scope/rejected-shortcut history.
+
+## Reported answers and selected causal coverage (2026-11-26)
+
+The branch questions about size, shape and parts elicit possible respondent
+answers. A10's arbitrary-X default needs an explicit extension to a first
+contingent on a selected history, including reference class and possible
+exceptions. A1 and A2 reuse a reported causal commitment, and the case's
+actual-coverage premise further requires a cause in its own selected-world
+sense. The definition page separates causal capability of an individual from the
+de dicto existential modal stipulation.
+
+[Unattributed website author reading attempt](../corpus/attempts/bc3bf5b2-4aad-4e65-b47e-fe36dc24ad3f.json), [Unattributed website author unlinked attempt](../corpus/attempts/1e7694f6-9b5c-494e-926b-034fac28df35.json).

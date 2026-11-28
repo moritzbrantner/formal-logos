@@ -1,0 +1,10 @@
+{
+  "id": "681dc6bc-6d0e-42a5-b093-aa1169734b61",
+  "label": "Test by GroundingBaseline.necessitationCore (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "007ac010-9145-5fa9-9256-b0fce5de9c24",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the supplied fact p = false at world false in the three-premise necessitation core. In noC both facts hold at both worlds. The supplied q = true remains necessary and implies p at every accessible world, while p has no accessible absence."
+}

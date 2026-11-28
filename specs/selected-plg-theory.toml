@@ -85,3 +85,53 @@ sense_mixing_control = true
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Apply the strict-step and return-path tests to the two labels"
 meaning = "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises."
+
+[[relation]]
+id = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+label = "Test by Classify consistency of a supplied PLG presentation by strict steps and weak returns"
+subject_kind = "result"
+subject_id = "00f2cd7c-c0a7-4eef-b57a-e59bde59b204"
+predicate = "tests"
+object_kind = "argument"
+object_id = "4bd8457a-2c92-4d47-bcb6-d32fda38af75"
+note = "Checks the sufficiency and exact boundary of the no-return criterion for consistency of the supplied theory, with predecessor-set ranks in the positive direction."
+
+[[relation]]
+id = "4aea7b37-f930-47a1-af2f-d5a2915932d5"
+label = "Test by SelectedPlgTheory.presentationControls (2bdf810f)"
+subject_kind = "result"
+subject_id = "1ea2f628-a121-4e37-a21c-5f4af77f0321"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2bdf810f-f7ca-4732-b661-378f54fbd6d4"
+note = "Omit absence of a strict step with a weak return in the inhabited Bool atom type. The selected withWeakReturn theory keeps the strict full step from false to true and adds the weak full step from true to false. This gives a return and breaks consistency."
+
+[[relation]]
+id = "c4c8919a-065a-43a8-89b9-5c46b11854de"
+label = "Test by SelectedPlgTheory.presentationControls (b6784d40)"
+subject_kind = "result"
+subject_id = "1ea2f628-a121-4e37-a21c-5f4af77f0321"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b6784d40-65cb-444d-9027-b93a074592ac"
+note = "Omit strict-step coverage for the sole distinct dependence edge of true on false. The consistent weakOnly theory has just a weak full sequent from false to true. It has no strict step, so it cannot supply the required path for that dependence edge."
+
+[[relation]]
+id = "ac03ac63-c5f3-46f5-8a15-5528a88ea907"
+label = "Test by SelectedPlgTheory.presentationControls (4bd8457a)"
+subject_kind = "result"
+subject_id = "1ea2f628-a121-4e37-a21c-5f4af77f0321"
+predicate = "tests"
+object_kind = "argument"
+object_id = "4bd8457a-2c92-4d47-bcb6-d32fda38af75"
+note = "Witness the joint consistency inputs on two Boolean atoms. In strictForward, the sole strict step goes from false to true and no weak steps can lead back. Both the populated-atom and no-strict-return premises hold."
+
+[[relation]]
+id = "ad0a2859-66d0-42df-b460-5c308fdf5fa1"
+label = "Test by SelectedPlgTheory.presentationControls (ea09d50b)"
+subject_kind = "result"
+subject_id = "1ea2f628-a121-4e37-a21c-5f4af77f0321"
+predicate = "tests"
+object_kind = "argument"
+object_id = "ea09d50b-ed10-4454-b737-ff7014bebdd6"
+note = "Witness strict-step coverage on the two populated Boolean labels. The sole distinct dependence edge of true on false has its required path in the singleton strictForward theory, consisting of the strict full step from false to true."

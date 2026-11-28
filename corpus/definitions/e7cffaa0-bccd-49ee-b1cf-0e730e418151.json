@@ -1,0 +1,9 @@
+{
+  "id": "e7cffaa0-bccd-49ee-b1cf-0e730e418151",
+  "label": "EFFECT_INDIVIDUATION_2: Occupancy of the fixed role",
+  "term": "effect individuation by role occupancy",
+  "definition": "The designated effect is present at a standpoint exactly when the fixed role has a candidate output there, regardless of which producer originally produced it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.RoleIndividuation",
+  "note": "Analyst criterion for the same role and candidate profile in the three-world replacement comparison. The stipulated role may be multiply realized across worlds. Applicability to a given concrete target requires an independent bridge from role equivalence to the identity required by that target. See docs/notes/counterpossible-conservativity.md."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "0b8e2173-a3bb-49e4-943b-46b1b3b920b0",
+  "label": "Test by S5 route frame is the KTB route frame plus transitivity",
+  "subject_kind": "result",
+  "subject_id": "6041a2b6-32c0-4832-8553-43bd7cd5e97a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

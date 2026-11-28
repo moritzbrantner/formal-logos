@@ -1,0 +1,36 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "14f373d9-8abe-42b8-8180-25e8299cf3f9",
+    "source_url": "https://web.archive.org/web/20260908085833id_/https://www.gutenberg.org/cache/epub/4391/pg4391-images.html",
+    "retrieved_at": "2026-11-26T15:31:51Z",
+    "sha256": "sha256:514f45d51c7735efdac06b355d1f762581877d216e432737a1dd402ca23316c5",
+    "encoding": "utf-8",
+    "language": "eng",
+    "license": "Veitch translation public domain in the US; Project Gutenberg License for the ebook. Local research copy. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt.",
+    "translation": {
+      "translator": "John Veitch",
+      "year": 2003,
+      "edition": "Selections from the Principles of Philosophy, Project Gutenberg eBook #4391 (2003 release, updated 2024)"
+    }
+  },
+  "passages": [
+    {
+      "id": "0a009d1a-cbb7-4ee0-a0c7-07dd3742b41b",
+      "label": "Principles I §§52–53 in the Veitch translation",
+      "locator": "Principles I §§52–53 (Veitch, Gutenberg 4391)",
+      "claim_locator_prefixes": [
+        "Principles I §§52–53 (Veitch, Gutenberg 4391)"
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "id00136"
+        },
+        "to": {
+          "anchor": "id00140"
+        }
+      },
+      "text_sha256": "sha256:212c0128cde3f04650700ce012ce3f1d266b8f5e80e6bb2204a3472db74392a5"
+    }
+  ]
+}

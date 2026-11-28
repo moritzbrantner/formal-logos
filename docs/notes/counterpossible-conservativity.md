@@ -145,3 +145,171 @@ Final CI covers the delivered revision. Shared conventions resolved at
 ## Research attempts citing this note
 
 - [Constructed a bounded three-way mechanism contrast after #974: active AND with two input-state…](../../corpus/attempts/mechanism-intervention-parity-20261104.json)
+
+## Selection, intervention and the dependence-to-impossibility bridge (#2052)
+
+The selection core takes a world and the extension of an antecedent and returns
+a set of worlds. `Would` requires the consequent at every member of that set.
+Success gives the identity law. Weak centering gives modus ponens when the
+antecedent is true at the origin. Conjunction of consequents and consequence
+weakening use only the universal clause. Nonemptiness for normally possible
+antecedents is a separate condition. A selected witness rules out truth of both
+polarities, whereas an empty selection admits both vacuously.
+
+In the ordered profiles lower ranks are closer. At the same origin a supplied
+Stalnaker-style single choice obeys conditional excluded middle (classically).
+With two tied least antecedent worlds that disagree on the consequent, retaining
+both makes both polarities fail. When least worlds exist, the Lewis-style
+strict-comparison clause and the least-world universal agree. The integer
+control uses all integers, ordered by their values. Every candidate has a
+strictly closer antecedent world, so the least-world universal makes even the
+empty consequent true by vacuity. The strict-comparison clause rejects it.
+The three-world control also excludes antecedent strengthening and conditional
+transitivity at one fixed origin. With actual < near < far, the closest away
+world is near, but the closest away-and-far world is far. Away selects a member
+of {actual, near}, which in turn selects actual. Away itself fails to select
+actual. These are laws of specified profiles, with no completeness or
+historical attribution claim.
+
+### Matched explanatory rivals
+
+The test is whether the same effect survives the public-input clamp in the same
+origin context. Both the active AND mechanism and the idle lookup produce the
+same natural observations at every normal context. The latent first bit stays
+true, the origin context sets the second bit true, and the operation clamps the
+same public input to false in both. The intervention adapter selects the outcome
+only when it realizes the antecedent. The existing normal-first repair selector
+agrees with accessible-only selection when the antecedent has a normal witness,
+and agrees with the intervention selector for this public-off antecedent.
+Accessible-only evaluation makes both consequent polarities true vacuously in
+both mechanisms. At the supplied repair, the AND effect disappears because it
+reads the clamped input, whereas the idle effect remains because it reads the
+unmodified background bits. One response measurement under that operation would
+distinguish these two equations. Admissibility of the operation and empirical
+reach are open. This compares normal-model impossibility with a consistent
+off-normal repair. The controlled variable is a public contributor and supplies
+no model of annihilating a necessary bearer. Identical extensions over the entire
+evaluation domain remain indistinguishable to this extensional selector.
+
+### God-existence route and next test
+
+The conditional arguments target `000e1f65`, dependence excluding the real
+possibility of being without the source. They feed the existing route from
+nonmutual dependence to simple priority (`75f11492`) and the priority-in-being
+consumer (`2e96d2fa`). Both use the shared `DependsForBeing` primitive in
+`DEF-DEPENDS-FOR-BEING`, sense 1 of `23dd6f32`. The full-coverage argument assumes
+one-way soundness of selected absence for that primitive at a designated origin,
+coverage of every accessible source-absence world by selection, and realization
+of any real being-without contrast by an accessible witness in the same frame.
+The original argument is retained because full antecedent coverage is
+a consequent-independent selection policy. It can be specified without knowing
+which effect or consequent is at issue. Its sibling uses only
+`PreservesAccessibleAbsenceWitnesses`: if an accessible contrast exists with
+the effect present and source absent, at least one accessible contrast for that
+pair is selected. Realization gives an accessible witness, preservation gives
+a selected witness, and soundness excludes the effect there.
+`full_coverage_preserves_witnesses` registers the implication from full
+coverage alone. `witness_coverage_strictness` keeps every contrast witness in
+the same three-world replacement frame while omitting the accessible near
+world, where neither being exists. The weaker policy holds and full coverage
+fails on that selector. This comparison makes no soundness claim for that
+selector.
+
+`SustainingRemovalTest` compares an actual effect and agent, with a supplied
+giving-of-being edge at the designated moment, to a supplied outcome where
+both are absent. The theorem equates passing this test with the corresponding
+nonempty intervention counterfactual and the same origin conditions. The
+operation is a proposed interpretation. Whether it holds the appropriate
+background fixed, whether existence at the origin is presence at the designated
+moment, and whether the test is adequate for the shared dependence primitive
+remain open. The local sun-and-light example motivates a sustaining reading
+within its specified illumination conditions. The originating/sustaining fork
+and the diagonal convention of the primitive remain as assessed in the
+[causal dependence investigation](causal-dependence-support-investigation.md).
+The adapter assumes no general transitivity, asymmetry or well-foundedness.
+
+### What counts as the same effect through replacement?
+
+The original replacement control assigns one effect to actual and far. It
+shows failure of closest-absence reasoning under that assignment. To test the
+assignment itself, keep the role, the giving edge and the dependence edge at
+issue, the actual origin, the source existence profile, universal accessibility
+and the ordering actual < near < far fixed. The candidate inventory has one
+output for the role at actual, produced by the designated source, no candidate
+at near, and one at far, produced by the backup. The two criteria assign
+different cross-world presence predicates to the same target slot. The formal
+standpoint records a provenance tag independently of current producer existence.
+
+| Criterion | Same effect at far | Consequence for the same closest-absence selector |
+| --- | --- | --- |
+| EFFECT_INDIVIDUATION_1, exact origin within the fixed role | No, because the candidate has backup provenance | Both tracked individuals exist only at actual. There is no accessible effect-present/source-absent contrast for any pair, so witness preservation holds vacuously. |
+| EFFECT_INDIVIDUATION_2, occupancy of the fixed role | Yes, because the backup realizes the role | Far is an accessible contrast. Near is the sole selected absence and has no output. Witness preservation fails even though selected loss and accessible realization hold in the model. |
+
+The [Lean comparison](../../TruthCore/Modal/WitnessPreservationIndividuation.lean)
+checks the role assignment in `role_omits_witness`. The registered
+[`origin_preserves`](../../TruthCore/Results/Modal/WitnessPreservationIndividuation/Solution.lean)
+checks the provenance assignment. Its typed consumer `origin_case_exclusion`
+uses the existing `dependence_excludes_being_without_of_witnesses` with that
+preservation result, the selected near loss, and the control's three-world
+witness relation. Its conclusion is a model-relative instance of `000e1f65`.
+The role result also proves that this instance fails under the second criterion.
+A criterion that tracks provenance alone does not entail the modal conclusion.
+`retained_origin_omits_witness` keeps the role output at far and changes its
+provenance to the original source. Its absence at the standpoint is consistent
+with that historical tag, and the selector loses a witness even on the origin
+criterion. This is a checked assignment of provenance, with no claim that a
+complete history for a particular sustaining effect realizes that assignment.
+The result is conditional on counting the far candidate by its producer tag:
+`OriginIndividuation` tests only whether the candidate carries `.source`, so
+it matches producers, not production histories.
+
+**Provenance.** Tracking a particular produced item often depends on continuity
+of its production history. Two separately produced replacement parts can
+occupy the same machine role and have the same specifications, yet a serial
+number and continuous custody trace distinguish them. That gives a reason to
+reject a separately produced duplicate when the question is about this item.
+It gives no corresponding reason to count every candidate made by the same
+producer as the original token: one manufacturer can make two replacement
+parts for the same slot, each the sole candidate in its world and each
+carrying the producer tag, while serial number and custody still distinguish
+them. The provisional assessment therefore treats producer matching as the
+formal criterion tested here, and token identity by production history as a
+further, stronger criterion that the finite profile does not encode.
+It does not make ongoing presence of its producer constitutive of the item.
+A part can remain in use after the producer ceases to exist, precisely because
+production and subsequent maintenance are different activities. The historical
+control isolates that objection to treating the provenance criterion as enough
+for witness preservation, and exact provenance also needs a defensible account
+of how much variation in production can leave the target item the same.
+
+**Role.** A service can continue at the same endpoint when a backup takes
+over. An account of service continuity should admit the alternate realization
+if it preserves the selected interface and service conditions. Role
+equivalence can also hold between two distinct realizers, as when both primary
+and standby servers can answer the same request. The existence of the standby
+therefore answers a question about the service without establishing that the
+primary server persists. That distinction gives a substantive objection to
+using role occupancy as sufficient for numerical identity in the root
+argument, even when role occupancy is the right criterion for the service.
+
+**Provisional assessment.** Exact provenance has the stronger warrant when
+the effect is a particular produced token and the backup independently
+produces a duplicate. Role occupancy has the stronger warrant when the
+explanandum is the continued realization of a specified function. The root
+premise concerns a being, so a backup filling a function does not by itself
+challenge `31bcb75e` for that being. The historical variant also blocks an
+inference from provenance alone to the general premise. The next test is to
+fix a particular bearer, specify which constitutive conditions its sustaining
+dependence involves, and justify accessible source-absence histories against
+those conditions. An admissible history with the same bearer at far would
+revise the preservation judgment if every selected absence loses it. An
+independently warranted account covering all relevant contrasts and ruling
+out such omission would support the scoped use. The three-world result gives
+no such coverage for the intended metaphysical frame. The route from
+`31bcb75e` to `000e1f65`, `75f11492` and `2e96d2fa` still uses the prior
+argument. Neither this comparison nor the prior witness argument supplies
+`8ab3d114`, the independence-to-separability premise of the PRIOR_4 sibling
+`c4bb0481` at `47aff057`. The separate strict-ground map `42756c07` still
+needs independently interpreted existence-fact labels and oriented edges.
+
+[Recorded attempt](../../corpus/attempts/f9d65e23-d6a2-4259-98e9-0dc4fe418956.json).

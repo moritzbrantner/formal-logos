@@ -1,0 +1,10 @@
+{
+  "id": "cbb5b844-4121-44f3-b751-c1a4484fc992",
+  "label": "Source qualification for bd0a956c from reading e2f4b27c",
+  "subject_kind": "claim",
+  "subject_id": "40a923af-9b72-57ce-a6c3-6b82c5273b89",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "bd0a956c-149e-5d7d-9771-b974da72fd3a",
+  "note": "Kant's reported conversion invokes nondifference among most-real beings. The uniqueness step still needs qualitative nondifference in all selected real determinations, their purity, and the identity principle for the relevant bearers."
+}

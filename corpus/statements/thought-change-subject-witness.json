@@ -11,5 +11,10 @@
   ],
   "disambiguation_ids": [
     "42f77a36-a0f6-5b52-a428-1a7af0613503"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "7ee7b61e-bce1-52e4-aea1-b207c1a3289c",
+    "missing_bridge": "Map the Physics III.1 change reading (change as the actuality of what exists potentially, qua such) onto the case's being-moved predicate in a recorded MOTION sense, so that an actual thought which is such a change makes its bearer one that is being moved in the respect of that thought; this is what the opinion-is-a-motion premise asserts for opining.",
+    "blocker": "Deferred: Aristotle work is deferred by owner direction (2026-11-27), and this route rests on the Physics III.1 reading (1d9604fd) and the open thought-change bridge (4791525a). The sense mapping between the Physics change reading and the case's MOTION senses is not recorded."
+  }
 }
