@@ -1,0 +1,10 @@
+{
+  "id": "4a98d484-93b9-497d-afc9-3253ec49423b",
+  "label": "Rigidified actual approval is the alternative to the rigidity bridge",
+  "subject_kind": "statement",
+  "subject_id": "a6e4cd4b-4a88-4ce3-90e5-6a8877228dc2",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "c2c3bebf-cd31-4ec4-9055-7d09acb898ac",
+  "note": "Target: the rigidity bridge. Mechanism: goodness is fixed to the assessor's actual approvals, so it keeps invariance while non-actual approvals vary; then base coextension does not spread (Controls proves the rigidified account excludes the bridge, and the rigidified artifact model witnesses it). Independent justification: rigidified dispositional or response-dependent theories of value (unread leads). Price: approval no longer makes the difference in the varied profiles; goodness tracks one actual set of attitudes."
+}

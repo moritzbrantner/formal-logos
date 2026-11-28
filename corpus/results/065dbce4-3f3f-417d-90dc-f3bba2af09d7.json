@@ -1,0 +1,11 @@
+{
+  "id": "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+  "label": "Euthyphro modal approval test has joint and omission models",
+  "argument_id": "a6b5a402-6a1f-47d5-b28d-4d0ead68b135",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.controls",
+  "comparator_config": "results/065dbce4-3f3f-417d-90dc-f3bba2af09d7/comparator.json",
+  "status": "solution-present",
+  "description": "On the existing knife and counterweight profile: a divine joint model has goodness as due actuality in every profile, supervenience, approval exactly of the good, approvals fixed by natures and no variation; there the extensional approval-failure premise is false while the weak approval premise and the due thesis hold. A human-assessor model satisfies invariance, variation and (vacuously, since its base approval is incorrect) transfer, and the approval account fails without coextending with due actuality (the varied approvals are of aspects, not acts). A rigidified model omits transfer: invariance and variation hold, approval does not ground, yet base approval is correct. A voluntarist model omits invariance: approval varies and grounds goodness. The divine joint model's second profile changes the natures, so its only nature-fixed profile is the base and its modal conjuncts hold trivially; its non-trivial content is extensional. A modified command model is the non-degenerate divine instance: a nature-fixed variant with fixed approvals, goodness fixed, cruelty never commanded (so the goodness constraint on commands is not vacuous), and the promise-keeping command and obligation varying. The premise bundle of the extensional step is equivalent to its conclusion, and given invariance and variation the bridge alone is. General conjuncts: robust due actuality gives supervenience; weak invariance equals stable truth of every aspect over the nature-fixed profiles; the rigidified account excludes transfer; command-constituted obligation with command variation is not invariant."
+}

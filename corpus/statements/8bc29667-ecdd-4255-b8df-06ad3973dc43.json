@@ -1,0 +1,18 @@
+{
+  "id": "8bc29667-ecdd-4255-b8df-06ad3973dc43",
+  "label": "Neither EUTHYPHRO_HORN_2 horn holds",
+  "paraphrase": "On the consequence reading EUTHYPHRO_HORN_2: the standard of goodness is not an independent standard distinct from God, and it is neither dependent for what it is on God's approving nor identical with it. On the literal reading EUTHYPHRO_HORN_1 the identity model satisfies horn 1 (approved because good) while denying its alleged consequence.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.NeitherHorn",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c",
+    "0dca022a-c561-4510-9c72-cf25b68bb593"
+  ],
+  "disambiguation_ids": [
+    "5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"
+  ],
+  "connection_plan": {
+    "target_statement_id": "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+    "missing_bridge": "From goodness identical with the divine nature and approval following that nature to the named assessor approving exactly the due actualities in the form/end frame: creaturely due actuality as participated likeness of the divine goodness, read as God's approval.",
+    "blocker": "No participation or likeness vocabulary links the dependence frame to the form/end profile frame."
+  }
+}

@@ -2,7 +2,7 @@
   "id": "50d8be94-f9c1-52af-bf43-fb2751915756",
   "label": "The named fixed-assessor approval account fails to describe goodness in the fixed profile",
   "legacy_id": "STMT-GOODNESS-APPROVAL-ACCOUNT-FAILS",
-  "paraphrase": "The supplied named fixed-assessor approval definition does not correctly describe goodness in the fixed profile. This is an open substantive failure premise and is not a refutation of expressivism as a theory of moral language.",
+  "paraphrase": "The supplied named fixed-assessor approval definition does not correctly describe goodness in the fixed profile. This is an open substantive failure premise and is not a refutation of expressivism as a theory of moral language. Instance-neutral in the named assessor: its warrant differs by assessor. It is false in the Euthyphro divine joint model, where the assessor approves exactly the due actualities; for an assessor whose approvals vary with natures fixed, the Euthyphro modal test reaches it only through a bridge equivalent to it given the test's premises (goodness note, Euthyphro section).",
   "lean_declaration": "TruthCore.Metaethics.GoodnessFormEnd.ApprovalAccountFails",
   "definition_ids": [
     "2b760306-fed0-583e-b7b8-53a8a1d85676",

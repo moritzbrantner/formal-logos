@@ -1,0 +1,55 @@
+{
+  "id": "7363eaea-ec56-42aa-b95f-049b8b1c4ecc",
+  "label": "Euthyphro modal test and identity reply for the approval account",
+  "statement_ids": [
+    "50d8be94-f9c1-52af-bf43-fb2751915756",
+    "6cc47d1b-4840-54e1-b96b-d389d74fbbf4",
+    "0ce33876-2356-4d58-92b6-6a7f8e377765",
+    "1707ae66-4f7a-4edd-99c8-b675cdaa0fd7",
+    "2a304439-6fc1-4e7a-b35f-baeb38f96c30",
+    "301b241d-af77-4af9-b881-dffd8af2e685",
+    "30f61b46-2d54-409f-9859-a0ce904dce98",
+    "3b258c1f-e63b-40a6-980e-65184707bc0e",
+    "4f7359c3-07c1-4f1d-b03d-ce388e117afb",
+    "5bb03e95-b971-445a-beb9-c6ba1ccf706a",
+    "72694566-3f1e-4b4e-8b79-8a0bd80dd20e",
+    "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+    "8bc29667-ecdd-4255-b8df-06ad3973dc43",
+    "9134209f-9027-4f95-866d-13c2831d97a1",
+    "9612248a-221a-416e-81c5-bd0411c446e9",
+    "a6e4cd4b-4a88-4ce3-90e5-6a8877228dc2",
+    "b0a6e8e2-bf8e-4e1c-b482-76113d8560c9",
+    "b93773ca-c349-482c-9ed8-b4f20939eec7",
+    "c2c3bebf-cd31-4ec4-9055-7d09acb898ac",
+    "cd616911-8bb5-4134-bec3-ff1451cbb0c3",
+    "d27756f6-4364-4dfc-ac59-2b555c7a7465",
+    "f427a0d4-d093-43df-897d-63a15b204659"
+  ],
+  "date": "2026-11-28",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Analyst Euthyphro formulation, attribution deferred. Added ProfileFamily (shared forms, ends and due standards; profile-relative actual perfections, goodness and named-assessor approval) so the arbitrariness objection is statable. Checked, all zero-axiom: weak invariance plus nature-fixed approval variation gives modal approval failure; the step on to the extensional failure 50d8be94 through the rigidity bridge is a declared transcription: the premise bundle is equivalent to 50d8be94 in every family, and the bridge alone is under the core premises, so 50d8be94 stays open and the modal finding is b93773ca. Supervenience strengthens invariance. A command theory with approval as ground and invariance must have approvals fixed by natures (dctGroundPrice; under grounding invariance is equivalent to that). Key relocation: in the divine joint model (assessor approves exactly due actualities) 50d8be94 is FALSE while the due thesis holds; the correct-support elimination needs only the weak premise 'approval fails or coextends with due actuality' (dueFromWeakApprovalPremise). This is a minimality finding, not support: given the other three inputs the weak premise is equivalent to the due thesis. Symmetric test: the same invariance premise refutes human subjectivism and voluntarist command theory (given variation), and spares a nature-fixed divine assessor and a rigidified actual-approval account (which denies the bridge). Modified command theory survives the goodness test by splitting good from obligatory; checked price: with command variation obligation is not invariant. Weak invariance equals ObjectiveTruthDefinitionFork.Stable of every aspect over the nature-fixed profiles, connecting the attitude-intervention reading of attempts fa1ce455/a6d3b944 to this account. Owner direction (false dilemma): EuthyphroDilemma encodes coverage; hornsCoverFromDistinctness proves it from excluded middle, distinctness and approval-only dependence; neitherHornFromIdentity proves neither consequence-reading horn (EUTHYPHRO_HORN_2) from goodness = divine nature, God = his nature, approval depending on nature and asymmetric dependence; simplicity works only against horn 1, and the nature's dependence on God would also do that work (dependent-nature model). On the literal reading (EUTHYPHRO_HORN_1, disambiguation 5ceda5e1) the identity reply takes horn 1, 'approved because good', and denies its alleged consequence of an external standard. Exemplar model escapes without identity by dropping approval-only dependence. Relocation objection checked: identity with necessary nature fixes goodness; contingent-nature model varies it. Plantinga collapse checked to require identifying God's goodness with the shared universal; property model separates them. Note: docs/notes/goodness-form-end-definitions.md#euthyphro-a-modal-test-of-the-approval-account-2026-11-28. Lean search: Function.FactorsThrough (equality, propext) and SupervenienceProfiles.Strong (per-case, false for due account) not reused; ExplanationOrder (topics of sentences) not reused. Independent semantic challenge 2026-11-28 (2 P1, 7 P2), repaired: P1-1 approvalFailsFromNotGround declared a single_application transcription, with the bundle and bridge equivalences added to Controls; P1-2 horn disambiguation added with the literal-horn conjuncts. P2: the weak premise is disclosed as equivalent to the conclusion given the other inputs; the divine joint model is disclosed as degenerate on modal claims, and the modified command family is the non-degenerate witness; the goodness-sense fork (due vs unrestricted actuality) is stated for the divine assessor and f5b1a1e9 is dropped from the dilemma arguments; 'needs simplicity' is corrected to simplicity or nature-dependence; the invariance warrant no longer cites supervenience consensus; the modified command model has a non-vacuous goodness constraint, with the promise-keeping obligation varying; instance-neutrality is disclosed on cd616911, d27756f6, c2c3bebf and 50d8be94.",
+  "blocker": "Open premises (50d8be94 itself stays open; its only derivation is a transcription through an equivalent bridge): nature-fixed approval variation (instance-dependent: holds for human and voluntarist assessors, fails for a nature-fixed divine assessor), the rigidity bridge (rival: rigidified actual approval), supervenience/invariance (rival: voluntarist bullet-biting), the weak approval premise's other inputs (9108832f, 40420659, 4c22019a), identity and simplicity-identity (only indirect support from non-composition 9f4e5f17, which does not reach the root), approval following nature, asymmetry, and rigidity of the divine nature. Missing bridges: dependence-to-covariation between the dependence and profile frames; participation of creaturely due actuality in divine goodness; explanation order under coextension; positive account of non-universal subsistent goodness. Next tests: an encoded identity reading of the approval account giving the bridge a non-equivalent warrant; explanation-order premise separating 'approved because good' from the converse; actual-approval error cases for a rigidified fixed human assessor; obligation-level invariance against natural-law statements.",
+  "evidence": [
+    "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+    "5fcd6e63-02ac-4bdb-8c89-cb99c1c76ed3",
+    "68c9d948-e042-4936-ac5d-164b8f5baa3c",
+    "7375d2d7-4ef8-4ceb-971f-0cd5be1f4dbf",
+    "8d762d29-9f64-4a6c-bb49-c55b080c116f",
+    "ae285ebb-a76c-4746-a64c-70749f5c6e63",
+    "d40cf91a-c416-45b5-8042-60c6e5e8baf1",
+    "d784a2ad-bc5f-4ce2-bdd6-ec56dd9a8302",
+    "db74f405-1aad-465e-b7c2-1a34e62e9446",
+    "eb0605ee-7a98-4588-b7fd-f715011eed1a",
+    "eeebc1a6-a538-4b09-a7ed-23744638c980"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28"
+    }
+  ]
+}

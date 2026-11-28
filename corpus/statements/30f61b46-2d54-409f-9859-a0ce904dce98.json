@@ -1,0 +1,14 @@
+{
+  "id": "30f61b46-2d54-409f-9859-a0ce904dce98",
+  "label": "Base goodness is invariant under nature-fixed approval variation",
+  "paraphrase": "Open weak invariance premise: every profile of the supplied family that keeps the base profile's actual perfections has exactly the base profile's goodness relation, whatever the named assessor approves there.",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.GoodnessInvariantUnderApprovalVariation",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

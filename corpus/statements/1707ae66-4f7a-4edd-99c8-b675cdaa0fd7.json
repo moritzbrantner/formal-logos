@@ -1,0 +1,9 @@
+{
+  "id": "1707ae66-4f7a-4edd-99c8-b675cdaa0fd7",
+  "label": "Goodness is distinct from God and from God's nature",
+  "paraphrase": "Open distinctness premise of the dilemma: in the dependence frame the standard of goodness is neither God nor God's nature.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.GoodnessDistinctFromGod",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

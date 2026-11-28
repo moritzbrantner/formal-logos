@@ -1,0 +1,14 @@
+{
+  "id": "a6e4cd4b-4a88-4ce3-90e5-6a8877228dc2",
+  "label": "Goodness is the assessor's actual approval while its approvals vary",
+  "paraphrase": "Rigidified actual-approval rival, with its test scenario: in the base profile goodness coextends with the named assessor's approval, every profile keeping the base actual perfections keeps the base goodness, and in some such profile the assessor's approvals differ. The variation conjunct is the scenario in which the theory is tested, not part of the theory.",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.RigidifiedApprovalAccount",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

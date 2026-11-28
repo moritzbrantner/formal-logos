@@ -1,0 +1,9 @@
+{
+  "id": "f427a0d4-d093-43df-897d-63a15b204659",
+  "label": "Constitutive dependence is asymmetric",
+  "paraphrase": "Open structural premise: if x depends for what it is on y, then y does not depend for what it is on x. Irreflexivity follows.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.DependenceAsymmetric",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

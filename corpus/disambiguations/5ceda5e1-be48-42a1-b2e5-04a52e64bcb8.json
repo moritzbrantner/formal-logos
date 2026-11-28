@@ -1,0 +1,25 @@
+{
+  "id": "5ceda5e1-be48-42a1-b2e5-04a52e64bcb8",
+  "label": "Euthyphro horns: literal explanatory direction versus alleged consequence",
+  "term": "Euthyphro horn",
+  "term_label": "EUTHYPHRO_HORN",
+  "sense_definition_ids": [
+    "0b5ad0e7-35af-43a3-b824-c98a6b46c501",
+    "0dca022a-c561-4510-9c72-cf25b68bb593"
+  ],
+  "senses": [
+    {
+      "id": "8f031c91-b126-4664-b3fc-f61c8c147bd1",
+      "label": "EUTHYPHRO_HORN_1",
+      "definition_id": "0b5ad0e7-35af-43a3-b824-c98a6b46c501",
+      "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.LiteralHornsCover"
+    },
+    {
+      "id": "c4511caf-74a6-4ecd-bad6-a03049ad0df2",
+      "label": "EUTHYPHRO_HORN_2",
+      "definition_id": "0dca022a-c561-4510-9c72-cf25b68bb593",
+      "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.HornsCover"
+    }
+  ],
+  "resolution": "The coverage theorem, the identity theorem and the statements HornsCover and NeitherHorn take EUTHYPHRO_HORN_2, the consequence reading: an independent external standard, or constitution by approval. The literal reading EUTHYPHRO_HORN_1 (approved because good, or good because approved) is a different claim: in the identity model literal horn 1 holds while consequence horn 1 fails, and generally goodness identical with the divine nature plus approval following nature gives literal horn 1. So the identity reply accepts 'approved because good' and denies that it carries an independent standard; 'neither horn' is true only on reading 2. The passage between the readings is exactly the dilemma's alleged inference from literal horn 1 to an external standard, which the identity model refutes; no argument passes between the senses. The dilemma controls are a premise-free mixing control."
+}

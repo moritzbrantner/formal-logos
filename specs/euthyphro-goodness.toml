@@ -1,0 +1,373 @@
+[batch]
+vocab = "TruthCore.Ethics.Euthyphro"
+results = "TruthCore.Results.Ethics.Euthyphro"
+definitions = []
+disambiguations = []
+
+[[statement]]
+id = "Goodness supervenes on the natural base across the approval profile family"
+lean = "GoodnessSupervenes"
+paraphrase = "Open strong invariance premise: in the supplied profile family, which shares forms, ends and due standards, any two profiles that agree on every bearer's actual perfections agree on goodness in every respect, whatever the named assessor approves in them."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "Base goodness is invariant under nature-fixed approval variation"
+lean = "GoodnessInvariantUnderApprovalVariation"
+paraphrase = "Open weak invariance premise: every profile of the supplied family that keeps the base profile's actual perfections has exactly the base profile's goodness relation, whatever the named assessor approves there."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "The named assessor's approvals differ in some nature-fixed profile"
+lean = "ApprovalVariesWithNaturesFixed"
+paraphrase = "Open variation premise: some profile of the supplied family keeps the base profile's actual perfections while the named assessor's approval differs from its base approval at some bearer and perfection. Instance-neutral in the named assessor: its warrant differs by assessor (human, voluntarist, nature-fixed divine) and is recorded per instance in the goodness note."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "Approval does not coextend with goodness in every nature-fixed profile"
+lean = "ApprovalDoesNotGround"
+paraphrase = "It is not the case that, in every profile of the supplied family keeping the base actual perfections, goodness coextends with the named assessor's approval. This is the modal (covariation) failure of approval; it does not say in which profile the coextension fails and it is the finding of the Euthyphro core."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "Approval coextensive with goodness at the base stays so in every nature-fixed profile"
+lean = "ApprovalCorrectnessTransfers"
+paraphrase = "Open rigidity bridge: if goodness coextends with the named assessor's approval in the base profile, it coextends with that assessor's approval in every profile of the supplied family keeping the base actual perfections. The encoded antecedent is base coextension, not identity of goodness with approval; an identity reading would motivate the bridge but is not encoded. Given weak invariance and variation this bridge is equivalent to the extensional approval failure 50d8be94 (Controls), so it carries that premise's content rather than supporting it. Instance-neutral in the named assessor: its warrant differs by assessor (human, voluntarist, nature-fixed divine) and is recorded per instance in the goodness note."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "Approval coextends with goodness in every nature-fixed profile"
+lean = "ApprovalGroundsAcrossNatureFixed"
+paraphrase = "Divine-command rival: in every profile of the supplied family keeping the base actual perfections, goodness coextends with the named assessor's approval. It is the exact negation of the modal approval failure."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "The named assessor's approvals are fixed by the natures"
+lean = "ApprovalsFixedByNatures"
+paraphrase = "Every profile of the supplied family that keeps the base profile's actual perfections also keeps the named assessor's base approval at every bearer and perfection. This is the positive replacement account of a command theory that accepts invariance. Instance-neutral in the named assessor: its warrant differs by assessor (human, voluntarist, nature-fixed divine) and is recorded per instance in the goodness note."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "The named approval account fails or coextends with the due-actuality account"
+lean = "ApprovalFailsOrCoincidesWithDue"
+paraphrase = "Open weak approval premise: in the fixed profile the named fixed-assessor approval account either does not correctly describe goodness, or has pointwise the same extension as the named due-actuality account. Given the other three correct-support inputs and excluded middle it is equivalent to the due-actuality thesis, so it has no warrant of its own beyond its disjuncts; replacing 50d8be94 by it shows that 50d8be94 was stronger than needed, not that the thesis gained support."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "ea819c3e-09bb-5000-85f8-e4b28e34aead"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "The named approval account coextends with the due-actuality account"
+lean = "ApprovalCoincidesWithDue"
+paraphrase = "In the fixed profile the named fixed-assessor approval account and the named due-actuality account have pointwise the same extension: the assessor approves a bearer's perfection exactly when it is a due actuality. Correctness of either account is not asserted."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "ea819c3e-09bb-5000-85f8-e4b28e34aead"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "a6e4cd4b-4a88-4ce3-90e5-6a8877228dc2"
+label = "Goodness is the assessor's actual approval while its approvals vary"
+lean = "RigidifiedApprovalAccount"
+paraphrase = "Rigidified actual-approval rival, with its test scenario: in the base profile goodness coextends with the named assessor's approval, every profile keeping the base actual perfections keeps the base goodness, and in some such profile the assessor's approvals differ. The variation conjunct is the scenario in which the theory is tested, not part of the theory."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[statement]]
+id = "Euthyphro modal approval test finite controls"
+lean = "Controls"
+paraphrase = "General facts: robust due actuality gives supervenience; weak invariance is stable truth of every aspect over the nature-fixed profiles; under approval as ground, invariance is equivalent to approvals fixed by natures; the rigidified account excludes the transfer bridge; command-constituted obligation with nature-fixed command variation is not invariant. The premise bundle of the extensional step is equivalent to the extensional approval failure, and given invariance and variation the transfer bridge alone is; with excluded middle the due thesis gives the weak approval premise. Fixed artifact models: a divine joint model (whose only nature-fixed profile is the base, so its modal conjuncts are degenerate), a human-assessor model, a rigidified model, a voluntarist model and a modified command model (a non-degenerate divine instance with a nature-fixed variant and a non-vacuous goodness constraint on commands). These are formal interpretations, not metaphysical possibility claims."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "decf0fdd-1b81-4d8f-930a-55a0537d32d6", "f6e1dde9-2228-4a54-8eb7-1135e7bc0218", "68191121-85f6-5bce-b32e-1900c8b52f57", "3fb2bd92-d135-5db1-8fe3-a3caa18a12ca"]
+disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
+
+[[argument]]
+id = "Base goodness invariance from supervenience on the natural base"
+theorem = "invarianceFromSupervenience"
+premises = ["Goodness supervenes on the natural base across the approval profile family"]
+conclusion = "Base goodness is invariant under nature-fixed approval variation"
+rule = "instantiate supervenience at the base profile"
+meaning = "Strength order: supervenience over every pair of profiles gives invariance of base goodness over the profiles that keep the base natures. The weak version is the one the Euthyphro argument uses."
+
+[[argument]]
+id = "Modal approval failure, from invariance and nature-fixed approval variation"
+theorem = "approvalNotGroundFromInvariance"
+premises = ["Base goodness is invariant under nature-fixed approval variation", "The named assessor's approvals differ in some nature-fixed profile"]
+conclusion = "Approval does not coextend with goodness in every nature-fixed profile"
+rule = "chain base approval, base goodness, varied goodness and varied approval; contradict the variation"
+meaning = "Euthyphro core, analyst formulation: if goodness stays fixed while the natures stay fixed, and the assessor's approvals change in such a profile, approval cannot coextend with goodness in every such profile. The theorem is assessor-generic: it applies to a human assessor and to a divine assessor alike, and the instances differ only in whether the variation premise holds."
+
+[[argument]]
+id = "Named approval account fails, from modal approval failure and the rigidity bridge"
+theorem = "approvalFailsFromNotGround"
+premises = ["Approval does not coextend with goodness in every nature-fixed profile", "Approval coextensive with goodness at the base stays so in every nature-fixed profile"]
+conclusion = "STMT-GOODNESS-APPROVAL-ACCOUNT-FAILS"
+rule = "calibrate the base profile with the frame and space; modus tollens through the rigidity bridge"
+meaning = "Modus tollens through the rigidity bridge: correctness of the named approval account is base coextension, the bridge would spread it to every nature-fixed profile, and the modal failure excludes that. In every family the premise bundle is equivalent to the conclusion, and given the core premises the bridge alone is (Controls). The modal finding is the premise b93773ca; this step adds no warrant to 50d8be94."
+description = "Transcription by single application (AGENTS.md invariant 16): the premise bundle (modal approval failure plus the rigidity bridge) is equivalent to the extensional approval failure for every family, as the controls prove, so the step re-presents 50d8be94 rather than supporting it. It closes its conclusion only if both premises are closed. The Euthyphro finding is the modal failure b93773ca."
+transcription = "single_application"
+
+[[argument]]
+id = "Approvals fixed by natures, from approval as ground and invariance"
+theorem = "dctGroundPrice"
+premises = ["Approval coextends with goodness in every nature-fixed profile", "Base goodness is invariant under nature-fixed approval variation"]
+conclusion = "The named assessor's approvals are fixed by the natures"
+rule = "transport base approval to base goodness, invariant goodness, and varied approval"
+meaning = "Price of the divine-command rival: if approval coextends with goodness in every nature-fixed profile and base goodness is invariant there, the assessor's approvals are fixed by the natures, so the variation premise fails. A command theory that keeps invariance must deny nature-fixed approval variation, giving up a voluntarist command theory. It does not show which of approval and nature is explanatorily prior."
+
+[[argument]]
+id = "Weak approval premise from extensional approval failure"
+theorem = "approvalFailsWeakens"
+premises = ["STMT-GOODNESS-APPROVAL-ACCOUNT-FAILS"]
+conclusion = "The named approval account fails or coextends with the due-actuality account"
+rule = "disjunction introduction"
+meaning = "Strength order: extensional failure of the named approval account gives the disjunction that it fails or coextends with the due-actuality account."
+
+[[argument]]
+id = "Weak approval premise from approval and due-actuality coextension"
+theorem = "approvalCoincidesWeakens"
+premises = ["The named approval account coextends with the due-actuality account"]
+conclusion = "The named approval account fails or coextends with the due-actuality account"
+rule = "disjunction introduction"
+meaning = "Strength order: coextension of the named approval and due-actuality accounts gives the weak approval premise. This is the support option for an assessor whose approvals track due actuality, such as the nature-fixed divine assessor of the joint model."
+
+[[argument]]
+id = "Due actuality from correct support with the weak approval premise"
+theorem = "dueFromWeakApprovalPremise"
+premises = ["9108832f-0ef5-5036-8550-f405c7203ff4", "40420659-5692-5b9c-ab26-36941f0a1a97", "4c22019a-12c3-5cf6-adff-7288a3741e1a", "The named approval account fails or coextends with the due-actuality account"]
+conclusion = "STMT-GOODNESS-DUE-TO-FORM-AND-END"
+rule = "case split on the named extension of a supported correct account; an approval-correct case coextends with due actuality"
+meaning = "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. Given the other three premises, the weak premise is equivalent to the conclusion (with excluded middle the due thesis gives it, as the Euthyphro controls prove). The result shows that 50d8be94 was stronger than needed; it adds no support to the due thesis. No premise is established."
+definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "68191121-85f6-5bce-b32e-1900c8b52f57", "ea819c3e-09bb-5000-85f8-e4b28e34aead", "3fb2bd92-d135-5db1-8fe3-a3caa18a12ca"]
+
+[[argument]]
+id = "Euthyphro modal approval test has joint and omission models"
+theorem = "controls"
+premises = []
+conclusion = "Euthyphro modal approval test finite controls"
+rule = "explicit finite artifact interpretations and general structural lemmas"
+meaning = "On the existing knife and counterweight profile: a divine joint model has goodness as due actuality in every profile, supervenience, approval exactly of the good, approvals fixed by natures and no variation; there the extensional approval-failure premise is false while the weak approval premise and the due thesis hold. A human-assessor model satisfies invariance, variation and (vacuously, since its base approval is incorrect) transfer, and the approval account fails without coextending with due actuality (the varied approvals are of aspects, not acts). A rigidified model omits transfer: invariance and variation hold, approval does not ground, yet base approval is correct. A voluntarist model omits invariance: approval varies and grounds goodness. The divine joint model's second profile changes the natures, so its only nature-fixed profile is the base and its modal conjuncts hold trivially; its non-trivial content is extensional. A modified command model is the non-degenerate divine instance: a nature-fixed variant with fixed approvals, goodness fixed, cruelty never commanded (so the goodness constraint on commands is not vacuous), and the promise-keeping command and obligation varying. The premise bundle of the extensional step is equivalent to its conclusion, and given invariance and variation the bridge alone is. General conjuncts: robust due actuality gives supervenience; weak invariance equals stable truth of every aspect over the nature-fixed profiles; the rigidified account excludes transfer; command-constituted obligation with command variation is not invariant."
+
+[[relation]]
+id = "Goodness supervenience strengthens base invariance under approval variation"
+label = "Goodness supervenience strengthens base invariance under approval variation"
+subject_kind = "statement"
+subject_id = "Goodness supervenes on the natural base across the approval profile family"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Base goodness is invariant under nature-fixed approval variation"
+verification_result_id = "Base goodness invariance from supervenience on the natural base"
+note = "Verified by invarianceFromSupervenience: the strong version is the only premise and the weak version the conclusion. Strictness is not tested."
+
+[[relation]]
+id = "Extensional approval failure strengthens the weak approval premise"
+label = "Extensional approval failure strengthens the weak approval premise"
+subject_kind = "statement"
+subject_id = "STMT-GOODNESS-APPROVAL-ACCOUNT-FAILS"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "The named approval account fails or coextends with the due-actuality account"
+verification_result_id = "Weak approval premise from extensional approval failure"
+note = "Verified by approvalFailsWeakens. The divine joint model of the Euthyphro controls has the weak premise true and the strong one false; that strictness is a conjunct of the controls result, not a separate registered strictness result."
+
+[[relation]]
+id = "Approval and due-actuality coextension strengthens the weak approval premise"
+label = "Approval and due-actuality coextension strengthens the weak approval premise"
+subject_kind = "statement"
+subject_id = "The named approval account coextends with the due-actuality account"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "The named approval account fails or coextends with the due-actuality account"
+verification_result_id = "Weak approval premise from approval and due-actuality coextension"
+note = "Verified by approvalCoincidesWeakens. The human-assessor model of the Euthyphro controls has the approval account failing, so the weak premise holds there without coextension; strictness is not registered as a separate result."
+
+[[relation]]
+id = "Approval grounding is the command-theory alternative to modal approval failure"
+label = "Approval grounding is the command-theory alternative to modal approval failure"
+subject_kind = "statement"
+subject_id = "Approval coextends with goodness in every nature-fixed profile"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "Approval does not coextend with goodness in every nature-fixed profile"
+note = "Exact negation. Mechanism: the assessor's approvals are fixed by the natures, so no nature-fixed profile varies them; with invariance it yields fixed approvals (dctGroundPrice), and under grounding invariance holds exactly when approvals are fixed (Controls). Positive replacement: a command theory whose approvals follow necessarily from a good nature; witnessed non-degenerately in the modified command model (the divine joint model witnesses it only trivially, its single nature-fixed profile being the base). Price: it survives only by denying nature-fixed approval variation, giving up a voluntarist command theory; the model does not decide whether approval or nature is explanatorily prior."
+
+[[relation]]
+id = "Rigidified actual approval is the alternative to the rigidity bridge"
+label = "Rigidified actual approval is the alternative to the rigidity bridge"
+subject_kind = "statement"
+subject_id = "a6e4cd4b-4a88-4ce3-90e5-6a8877228dc2"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "Approval coextensive with goodness at the base stays so in every nature-fixed profile"
+note = "Target: the rigidity bridge. Mechanism: goodness is fixed to the assessor's actual approvals, so it keeps invariance while non-actual approvals vary; then base coextension does not spread (Controls proves the rigidified account excludes the bridge, and the rigidified artifact model witnesses it). Independent justification: rigidified dispositional or response-dependent theories of value (unread leads). Price: approval no longer makes the difference in the varied profiles; goodness tracks one actual set of attitudes."
+
+[[relation]]
+id = "Euthyphro controls test the rigidity bridge"
+label = "Euthyphro controls test the rigidity bridge"
+subject_kind = "result"
+subject_id = "Euthyphro modal approval test has joint and omission models"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Approval coextensive with goodness at the base stays so in every nature-fixed profile"
+note = "The rigidified model satisfies invariance and variation, the modal approval failure holds, the bridge fails and the base approval account is correct: the bridge is needed for the extensional conclusion. The controls also prove that, given invariance and variation, the bridge is equivalent to the extensional approval failure."
+
+[[relation]]
+id = "Euthyphro controls test base goodness invariance"
+label = "Euthyphro controls test base goodness invariance"
+subject_kind = "result"
+subject_id = "Euthyphro modal approval test has joint and omission models"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Base goodness is invariant under nature-fixed approval variation"
+note = "The voluntarist model has approval variation and approval grounding with invariance false: invariance is needed for the modal approval failure."
+
+[[relation]]
+id = "Euthyphro controls test nature-fixed approval variation"
+label = "Euthyphro controls test nature-fixed approval variation"
+subject_kind = "result"
+subject_id = "Euthyphro modal approval test has joint and omission models"
+predicate = "tests"
+object_kind = "statement"
+object_id = "The named assessor's approvals differ in some nature-fixed profile"
+note = "The modified command model has two nature-fixed profiles, invariance, approval coextending with goodness in both and fixed approvals, so variation is false: variation is needed, and it is exactly where human-assessor and nature-fixed divine-assessor instances differ. (The divine joint model also lacks variation, but only because its single nature-fixed profile is the base.)"
+
+[[relation]]
+id = "Euthyphro controls test extensional approval failure"
+label = "Euthyphro controls test extensional approval failure"
+subject_kind = "result"
+subject_id = "Euthyphro modal approval test has joint and omission models"
+predicate = "tests"
+object_kind = "statement"
+object_id = "STMT-GOODNESS-APPROVAL-ACCOUNT-FAILS"
+note = "False in the divine joint model, where the named assessor approves exactly the due actualities, and in the rigidified model; true in the human-assessor model. With the correct-support inputs, the due thesis holds in the divine model, so this premise is not needed there. The controls also prove that the bundle of modal failure and the rigidity bridge is equivalent to this premise in every family. Its warrant is assessor-relative: recorded per instance in the goodness note."
+
+[[relation]]
+id = "Approvals fixed by natures is the alternative to nature-fixed approval variation"
+label = "Approvals fixed by natures is the alternative to nature-fixed approval variation"
+subject_kind = "statement"
+subject_id = "The named assessor's approvals are fixed by the natures"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "The named assessor's approvals differ in some nature-fixed profile"
+note = "Incompatible: fixed approvals give the same approvals in every nature-fixed profile, which the variation premise denies (the modified command model has two nature-fixed profiles, fixed approvals and no variation). Target: the variation premise of the Euthyphro core. Mechanism: the assessor's approval follows from the natures, as on an intellectualist or divine-nature account of approval. Independent justification: for a divine assessor, divine simplicity and the dependence of will on intellect (unread leads, ST I q.19); for a human assessor no positive justification is on file, and actual variation of human approvals with natures held fixed is the ordinary case. It is derived for a command theory that keeps invariance (dctGroundPrice)."
+
+# Is the dilemma exhaustive? (owner direction 2026-11-28: false-dilemma reply)
+
+[[statement]]
+id = "Goodness is distinct from God and from God's nature"
+lean = "TruthCore.Ethics.EuthyphroDilemma.GoodnessDistinctFromGod"
+paraphrase = "Open distinctness premise of the dilemma: in the dependence frame the standard of goodness is neither God nor God's nature."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "Other things that depend on God for what they are depend on his approval"
+lean = "TruthCore.Ethics.EuthyphroDilemma.DistinctDependenceThroughApproval"
+paraphrase = "Open premise: whatever is distinct from God, his nature and his approving, and depends on God for what it is, depends for what it is on God's approving."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "5bb03e95-b971-445a-beb9-c6ba1ccf706a"
+label = "EUTHYPHRO_HORN_2 coverage: goodness is an independent standard or constituted by approval"
+lean = "TruthCore.Ethics.EuthyphroDilemma.HornsCover"
+paraphrase = "The dilemma's coverage claim on the consequence reading EUTHYPHRO_HORN_2: either the standard of goodness is distinct from God and does not depend on him for what it is, or it depends for what it is on God's approving or is that approving."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+[statement.connection_plan]
+target_statement_id = "b93773ca-c349-482c-9ed8-b4f20939eec7"
+missing_bridge = "A carrier bridge from the dependence frame to the profile frame: goodness depending for what it is on God's approving yields approval coextending with goodness in every nature-fixed profile, the rival of b93773ca."
+blocker = "The profile frame is extensional and has no dependence relation; a dependence-to-covariation bridge has not been formulated or defended."
+
+[[statement]]
+id = "The standard of goodness is God's nature"
+lean = "TruthCore.Ethics.EuthyphroDilemma.GoodnessIsDivineNature"
+paraphrase = "Open identity premise: in the dependence frame the standard of goodness is identical with God's nature. Its existing support is indirect: GOD_4 is SIMPLE_4 (9f4e5f17) gives non-composition only, and the step from non-composition to identity of essence and goodness is an open bridge."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "God is his own nature"
+lean = "TruthCore.Ethics.EuthyphroDilemma.GodIsOwnNature"
+paraphrase = "Open simplicity-identity premise: in the dependence frame God is identical with his nature. GOD_4 is SIMPLE_4 (9f4e5f17) states non-composition; the step from non-composition to this identity is an open bridge."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "God's approving depends for what it is on God's nature"
+lean = "TruthCore.Ethics.EuthyphroDilemma.ApprovalFollowsNature"
+paraphrase = "Open premise: God's act of approving is what it is because of God's nature, as on an account where will follows intellect and nature."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "Constitutive dependence is asymmetric"
+lean = "TruthCore.Ethics.EuthyphroDilemma.DependenceAsymmetric"
+paraphrase = "Open structural premise: if x depends for what it is on y, then y does not depend for what it is on x. Irreflexivity follows."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c"]
+
+[[statement]]
+id = "8bc29667-ecdd-4255-b8df-06ad3973dc43"
+label = "Neither EUTHYPHRO_HORN_2 horn holds"
+lean = "TruthCore.Ethics.EuthyphroDilemma.NeitherHorn"
+paraphrase = "On the consequence reading EUTHYPHRO_HORN_2: the standard of goodness is not an independent standard distinct from God, and it is neither dependent for what it is on God's approving nor identical with it. On the literal reading EUTHYPHRO_HORN_1 the identity model satisfies horn 1 (approved because good) while denying its alleged consequence."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+[statement.connection_plan]
+target_statement_id = "79ba9d77-257e-4abd-bd20-e164d17c64f6"
+missing_bridge = "From goodness identical with the divine nature and approval following that nature to the named assessor approving exactly the due actualities in the form/end frame: creaturely due actuality as participated likeness of the divine goodness, read as God's approval."
+blocker = "No participation or likeness vocabulary links the dependence frame to the form/end profile frame."
+
+[[statement]]
+id = "9612248a-221a-416e-81c5-bd0411c446e9"
+label = "EUTHYPHRO_HORN_1 and EUTHYPHRO_HORN_2 dilemma coverage finite controls"
+lean = "TruthCore.Ethics.EuthyphroDilemma.DilemmaControls"
+paraphrase = "General facts: identity with a necessary divine nature leaves goodness fixed across nature profiles; goodness identical with the divine nature and approval following nature give literal horn 1 (EUTHYPHRO_HORN_1, approved because good); property collapse needs the identification of God's goodness with the shared universal. Finite models: identity (literal horn 1 holds, consequence horn 1 fails), dependent-nature, distinct exemplar, non-simple, voluntarist, contingent-nature and property models. Formal interpretations only."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0b5ad0e7-35af-43a3-b824-c98a6b46c501", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+[statement.connection_plan]
+target_statement_id = "79ba9d77-257e-4abd-bd20-e164d17c64f6"
+missing_bridge = "The same participation bridge as for the identity conclusion: the controls test the identity reply that would support approval of exactly the due actualities."
+blocker = "No participation or likeness vocabulary links the dependence frame to the form/end profile frame."
+
+[[argument]]
+id = "8f102bd2-a54f-47cc-9fe3-8bc1269088d7"
+label = "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and approval-only dependence"
+theorem = "hornsCoverFromDistinctness"
+premises = ["STMT-EXCLUDED-MIDDLE", "Goodness is distinct from God and from God's nature", "Other things that depend on God for what they are depend on his approval"]
+conclusion = "5bb03e95-b971-445a-beb9-c6ba1ccf706a"
+rule = "case split on goodness being the approving and on its dependence on God"
+meaning = "Checked coverage of the dilemma under explicit background: if goodness is the approving, horn 2; otherwise if it depends on God, distinctness and approval-only dependence make it depend on the approving, horn 2; otherwise horn 1. Exclusivity of the horns is not claimed. Given distinctness, the instance of approval-only dependence at goodness is equivalent to coverage, so the result rests on applying that generalization (creatures depend on God through his will) to a distinct standard."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+senses = {EUTHYPHRO_HORN = "EUTHYPHRO_HORN_2"}
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+
+[[argument]]
+id = "09c5f27c-4735-491f-a34d-fac4e3041672"
+label = "Neither EUTHYPHRO_HORN_2 horn holds, from identity, simplicity and approval after nature"
+theorem = "neitherHornFromIdentity"
+premises = ["The standard of goodness is God's nature", "God is his own nature", "God's approving depends for what it is on God's nature", "Constitutive dependence is asymmetric"]
+conclusion = "8bc29667-ecdd-4255-b8df-06ad3973dc43"
+rule = "identity defeats distinctness; asymmetry with approval following nature defeats constitution by approval"
+meaning = "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. On the literal reading the same premises give horn 1 (approved because good): the reply takes literal horn 1 and denies its alleged consequence. None of the four premises is established."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+senses = {EUTHYPHRO_HORN = "EUTHYPHRO_HORN_2"}
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+
+[[argument]]
+id = "0ccb4deb-2976-4fbd-a952-2275958bb8a1"
+label = "Euthyphro dilemma coverage has identity, exemplar and omission models"
+theorem = "dilemmaControls"
+premises = []
+conclusion = "9612248a-221a-416e-81c5-bd0411c446e9"
+rule = "explicit finite interpretations and general structural lemmas"
+meaning = "Premise-free mixing control for EUTHYPHRO_HORN. Identity model: all identity premises and approval-only dependence hold, distinctness fails and neither consequence horn holds, while literal horn 1 (approved because good) holds and literal horn 2 fails; generally identity with approval following nature gives literal horn 1. Dependent-nature model: goodness is God's nature, which is not God but depends on him, and neither consequence horn holds, so either simplicity or the nature's dependence on God excludes horn 1. Exemplar model: distinctness holds, approval-only dependence fails, neither horn holds. Non-simple model: goodness is God's nature, which is not God and does not depend on him, so horn 1 holds. Voluntarist model: distinctness and approval-only dependence hold and horn 2 holds. Contingent-nature model: identity in each profile without a necessary nature lets goodness vary; generally identity with a necessary nature fixes it. Property model: God is his goodness, which is not the shared universal property; generally collapse into a property needs that identification."
+definitions = ["68fff412-65a9-45ad-941d-665703c64d1c", "0b5ad0e7-35af-43a3-b824-c98a6b46c501", "0dca022a-c561-4510-9c72-cf25b68bb593"]
+disambiguations = ["5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"]
+sense_mixing_control = true
+
+[[relation]]
+id = "Neither horn is the alternative to Euthyphro coverage"
+label = "Neither horn is the alternative to Euthyphro coverage"
+subject_kind = "statement"
+subject_id = "8bc29667-ecdd-4255-b8df-06ad3973dc43"
+predicate = "alternative_to"
+object_kind = "statement"
+object_id = "5bb03e95-b971-445a-beb9-c6ba1ccf706a"
+note = "Exact incompatibility: NeitherHorn is the negation of both disjuncts of HornsCover. The identity reply denies the distinctness premise of coverage; the exemplar reply denies approval-only dependence. Both are model-witnessed in the dilemma controls."

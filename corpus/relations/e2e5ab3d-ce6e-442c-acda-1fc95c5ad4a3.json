@@ -1,0 +1,10 @@
+{
+  "id": "e2e5ab3d-ce6e-442c-acda-1fc95c5ad4a3",
+  "label": "Approval grounding is the command-theory alternative to modal approval failure",
+  "subject_kind": "statement",
+  "subject_id": "72694566-3f1e-4b4e-8b79-8a0bd80dd20e",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "b93773ca-c349-482c-9ed8-b4f20939eec7",
+  "note": "Exact negation. Mechanism: the assessor's approvals are fixed by the natures, so no nature-fixed profile varies them; with invariance it yields fixed approvals (dctGroundPrice), and under grounding invariance holds exactly when approvals are fixed (Controls). Positive replacement: a command theory whose approvals follow necessarily from a good nature; witnessed non-degenerately in the modified command model (the divine joint model witnesses it only trivially, its single nature-fixed profile being the base). Price: it survives only by denying nature-fixed approval variation, giving up a voluntarist command theory; the model does not decide whether approval or nature is explanatorily prior."
+}

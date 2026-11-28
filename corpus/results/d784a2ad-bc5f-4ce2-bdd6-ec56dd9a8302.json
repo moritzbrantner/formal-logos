@@ -1,0 +1,11 @@
+{
+  "id": "d784a2ad-bc5f-4ce2-bdd6-ec56dd9a8302",
+  "label": "Weak approval premise from approval and due-actuality coextension",
+  "argument_id": "1633f7ff-0c39-4537-a849-6f13ddfc64ce",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.approvalCoincidesWeakens",
+  "comparator_config": "results/d784a2ad-bc5f-4ce2-bdd6-ec56dd9a8302/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order: coextension of the named approval and due-actuality accounts gives the weak approval premise. This is the support option for an assessor whose approvals track due actuality, such as the nature-fixed divine assessor of the joint model."
+}

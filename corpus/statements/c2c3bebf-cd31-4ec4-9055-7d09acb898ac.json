@@ -1,0 +1,14 @@
+{
+  "id": "c2c3bebf-cd31-4ec4-9055-7d09acb898ac",
+  "label": "Approval coextensive with goodness at the base stays so in every nature-fixed profile",
+  "paraphrase": "Open rigidity bridge: if goodness coextends with the named assessor's approval in the base profile, it coextends with that assessor's approval in every profile of the supplied family keeping the base actual perfections. The encoded antecedent is base coextension, not identity of goodness with approval; an identity reading would motivate the bridge but is not encoded. Given weak invariance and variation this bridge is equivalent to the extensional approval failure 50d8be94 (Controls), so it carries that premise's content rather than supporting it. Instance-neutral in the named assessor: its warrant differs by assessor (human, voluntarist, nature-fixed divine) and is recorded per instance in the goodness note.",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalCorrectnessTransfers",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

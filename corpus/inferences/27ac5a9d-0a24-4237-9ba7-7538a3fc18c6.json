@@ -1,0 +1,13 @@
+{
+  "id": "27ac5a9d-0a24-4237-9ba7-7538a3fc18c6",
+  "label": "Named approval account fails, from modal approval failure and the rigidity bridge (inference)",
+  "input_statement_ids": [
+    "b93773ca-c349-482c-9ed8-b4f20939eec7",
+    "c2c3bebf-cd31-4ec4-9055-7d09acb898ac"
+  ],
+  "output_statement_id": "50d8be94-f9c1-52af-bf43-fb2751915756",
+  "rule": "calibrate the base profile with the frame and space; modus tollens through the rigidity bridge",
+  "meaning": "Modus tollens through the rigidity bridge: correctness of the named approval account is base coextension, the bridge would spread it to every nature-fixed profile, and the modal failure excludes that. In every family the premise bundle is equivalent to the conclusion, and given the core premises the bridge alone is (Controls). The modal finding is the premise b93773ca; this step adds no warrant to 50d8be94.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

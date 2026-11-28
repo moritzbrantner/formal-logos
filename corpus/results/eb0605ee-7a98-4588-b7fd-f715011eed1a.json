@@ -1,0 +1,11 @@
+{
+  "id": "eb0605ee-7a98-4588-b7fd-f715011eed1a",
+  "label": "Neither EUTHYPHRO_HORN_2 horn holds, from identity, simplicity and approval after nature",
+  "argument_id": "09c5f27c-4735-491f-a34d-fac4e3041672",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.neitherHornFromIdentity",
+  "comparator_config": "results/eb0605ee-7a98-4588-b7fd-f715011eed1a/comparator.json",
+  "status": "solution-present",
+  "description": "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. On the literal reading the same premises give horn 1 (approved because good): the reply takes literal horn 1 and denies its alleged consequence. None of the four premises is established."
+}

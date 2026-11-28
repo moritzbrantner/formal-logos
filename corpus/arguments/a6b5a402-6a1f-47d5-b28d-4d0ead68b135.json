@@ -1,0 +1,21 @@
+{
+  "id": "a6b5a402-6a1f-47d5-b28d-4d0ead68b135",
+  "label": "Euthyphro modal approval test has joint and omission models",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "4f7359c3-07c1-4f1d-b03d-ce388e117afb",
+  "inference_ids": [
+    "9f13f39b-250b-4f88-8530-b3b274575599"
+  ],
+  "meaning": "On the existing knife and counterweight profile: a divine joint model has goodness as due actuality in every profile, supervenience, approval exactly of the good, approvals fixed by natures and no variation; there the extensional approval-failure premise is false while the weak approval premise and the due thesis hold. A human-assessor model satisfies invariance, variation and (vacuously, since its base approval is incorrect) transfer, and the approval account fails without coextending with due actuality (the varied approvals are of aspects, not acts). A rigidified model omits transfer: invariance and variation hold, approval does not ground, yet base approval is correct. A voluntarist model omits invariance: approval varies and grounds goodness. The divine joint model's second profile changes the natures, so its only nature-fixed profile is the base and its modal conjuncts hold trivially; its non-trivial content is extensional. A modified command model is the non-degenerate divine instance: a nature-fixed variant with fixed approvals, goodness fixed, cruelty never commanded (so the goodness constraint on commands is not vacuous), and the promise-keeping command and obligation varying. The premise bundle of the extensional step is equivalent to its conclusion, and given invariance and variation the bridge alone is. General conjuncts: robust due actuality gives supervenience; weak invariance equals stable truth of every aspect over the nature-fixed profiles; the rigidified account excludes transfer; command-constituted obligation with command variation is not invariant.",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "3fb2bd92-d135-5db1-8fe3-a3caa18a12ca",
+    "68191121-85f6-5bce-b32e-1900c8b52f57",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6",
+    "f6e1dde9-2228-4a54-8eb7-1135e7bc0218"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

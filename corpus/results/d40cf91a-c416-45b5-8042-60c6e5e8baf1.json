@@ -1,0 +1,12 @@
+{
+  "id": "d40cf91a-c416-45b5-8042-60c6e5e8baf1",
+  "label": "Named approval account fails, from modal approval failure and the rigidity bridge",
+  "argument_id": "064f8d37-d2d5-4f4f-a298-66b7d6603c4e",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.approvalFailsFromNotGround",
+  "comparator_config": "results/d40cf91a-c416-45b5-8042-60c6e5e8baf1/comparator.json",
+  "status": "solution-present",
+  "description": "Transcription by single application (AGENTS.md invariant 16): the premise bundle (modal approval failure plus the rigidity bridge) is equivalent to the extensional approval failure for every family, as the controls prove, so the step re-presents 50d8be94 rather than supporting it. It closes its conclusion only if both premises are closed. The Euthyphro finding is the modal failure b93773ca.",
+  "transcription": "single_application"
+}

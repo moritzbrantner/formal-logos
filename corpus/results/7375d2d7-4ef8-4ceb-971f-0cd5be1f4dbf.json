@@ -1,0 +1,11 @@
+{
+  "id": "7375d2d7-4ef8-4ceb-971f-0cd5be1f4dbf",
+  "label": "Base goodness invariance from supervenience on the natural base",
+  "argument_id": "00856f63-350e-4673-8807-7af69af052c2",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.invarianceFromSupervenience",
+  "comparator_config": "results/7375d2d7-4ef8-4ceb-971f-0cd5be1f4dbf/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order: supervenience over every pair of profiles gives invariance of base goodness over the profiles that keep the base natures. The weak version is the one the Euthyphro argument uses."
+}

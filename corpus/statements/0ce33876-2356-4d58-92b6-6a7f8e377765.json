@@ -1,0 +1,9 @@
+{
+  "id": "0ce33876-2356-4d58-92b6-6a7f8e377765",
+  "label": "God is his own nature",
+  "paraphrase": "Open simplicity-identity premise: in the dependence frame God is identical with his nature. GOD_4 is SIMPLE_4 (9f4e5f17) states non-composition; the step from non-composition to this identity is an open bridge.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.GodIsOwnNature",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

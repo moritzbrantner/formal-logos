@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ethics.Euthyphro.approvalFailsFromNotGround"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

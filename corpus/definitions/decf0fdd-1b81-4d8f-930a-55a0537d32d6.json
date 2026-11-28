@@ -1,0 +1,9 @@
+{
+  "id": "decf0fdd-1b81-4d8f-930a-55a0537d32d6",
+  "label": "Nature-fixed approval profile family over a goodness frame",
+  "term": "nature-fixed approval profile family",
+  "definition": "A ProfileFamily over a frame f and named definition space s supplies profiles with a base. Forms, ends and due standards are f's in every profile. Each profile fixes actual perfections hasAt, goodness goodAt and the named assessor's approvals approvesAt; the base reproduces f.Has, f.GoodIn and s.approves pointwise. Two profiles have the same natures when they agree on every actual perfection. Supervenience: same natures give the same goodness. Invariance (weak): every profile with the base natures has the base goodness. Approval variation: some profile with the base natures has different approvals. Approval grounds goodness across the nature-fixed profiles when goodness and approval coextend in each of them; the transfer bridge says base coextension gives that. The rigidified account keeps base goodness while approvals vary and approval coextends with goodness only at the base.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.ProfileFamily",
+  "note": "Analyst formulation of the Euthyphro dilemma as a modal test; attribution deferred. Profiles are a selected range of formal interpretations, not a claim about all metaphysically possible worlds. Which assessor is named (human, ideal, God) is an interpretation, not a parameter. Invariance, variation and transfer are explicit premises, never built into the structure. A source reading would come from Plato's Euthyphro 10a and the divine-command literature (unread leads)."
+}

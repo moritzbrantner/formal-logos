@@ -1,0 +1,14 @@
+{
+  "id": "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+  "label": "The named approval account coextends with the due-actuality account",
+  "paraphrase": "In the fixed profile the named fixed-assessor approval account and the named due-actuality account have pointwise the same extension: the assessor approves a bearer's perfection exactly when it is a due actuality. Correctness of either account is not asserted.",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalCoincidesWithDue",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "ea819c3e-09bb-5000-85f8-e4b28e34aead"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}
