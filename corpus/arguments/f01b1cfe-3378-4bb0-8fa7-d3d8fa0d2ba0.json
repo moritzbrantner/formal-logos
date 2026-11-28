@@ -6,7 +6,7 @@
   "inference_ids": [
     "f0aac0ea-001b-45c3-b669-cff83228a81a"
   ],
-  "meaning": "Premise-free. Normalization gives every positive binary pair a full-support law; explicit eighths give two laws with the same support, strict ranking and tied optima; normalization makes one mass (or full exchange symmetry) fix a binary law; explicit eighths on three points give two laws with the same two-element-orbit symmetry and different singleton mass; two STIT partitions of the same histories separate seeing to the giving and withholding from their mere occurrence. Model-witnessed separations and finite calculations only; no premise is established.",
+  "meaning": "Premise-free. Normalization gives every positive binary pair a full-support law; explicit eighths give two laws with the same support and strict ranking (the tied-optimality clause holds for every law, so it constrains nothing); normalization makes one mass (or full exchange symmetry) fix a binary law; explicit eighths on three points give two laws with the same two-element-orbit symmetry and different singleton mass; two STIT partitions of the same histories separate seeing to the giving and withholding from their mere occurrence. Model-witnessed separations and finite calculations only; no premise is established.",
   "definition_ids": [
     "0a36cead-b4fc-4248-a9f2-884edf61d89f",
     "582f44c3-7778-4806-b385-e1eff852ac5e",

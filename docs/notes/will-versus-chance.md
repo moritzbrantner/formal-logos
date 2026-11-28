@@ -2145,8 +2145,11 @@ is pending.
 necessary giver, the same two possible histories (giving c and withholding c),
 and the same non-rational power. Extend the qualitative description with
 one Mathlib PMF, fixed across both histories. The creation/withholding masses
-7/8 and 1/8 versus 5/8 and 3/8 preserve the histories, positive support,
-strict probability rank and the same tied-optimal complete-output set.
+7/8 and 1/8 versus 5/8 and 3/8 preserve the histories, positive support
+and strict probability rank. Both also satisfy the tied-optimality clause, but
+that clause holds for every law: its quality is the constant 0, so it
+constrains nothing. It is a stand-in and does not use the quality order of the
+optimal-output rival 78af5042.
 Every positive normalized pair is admitted by this qualitative description.
 These are different completions, not two worlds with a demonstrably
 identical *complete quantitative essence*. A necessarily fixed nondegenerate
@@ -2197,9 +2200,10 @@ cell ensuring withholding. It neither requires a stochastic mechanism
 nor establishes that such control belongs to the actual necessary root.
 
 The existing optimal-creation-choice result separates unique optimum,
-ties and nonexistence of an optimum. The numerical control adds that even
-an unchanged tied-optimum set and a strict probability ordering leave
-quantitative weights open. A unique optimum under a justified total
+ties and nonexistence of an optimum. The numerical control adds only that a
+strict probability ordering leaves quantitative weights open; its tied-optimum
+clause is satisfied by every law (constant quality), so it shows nothing about
+the eligible outputs of 78af5042's quality order. A unique optimum under a justified total
 optimization principle is a different, stronger explanatory account.
 
 The causal-perfection/intellect route must be evaluated independently.
@@ -2218,7 +2222,12 @@ The strongest surviving impersonal commitments are (i) a necessary complete
 quantitative nature with a uniquely grounded nondegenerate law, (ii) a
 grounded structure that uniquely induces that law, and (iii) a primitive
 necessary law accepted as an explanatory terminus. A contingent brute law
-survives only rejection or restriction of the applicable PSR. The personal
+survives only rejection or restriction of the applicable PSR. The same price
+falls on a contingent adoption with no admitted reason: if the operating law
+is the law a selector adopts and it varies across accessible worlds, the
+contingent-fact PSR requires an admitted reason for the adoption fact as well
+as for the law fact (#2151, `lawSelectionFork` clause 3), so a personal route
+that leaves the adoption brute pays exactly the brute-law price. The personal
 route can explain actual contingent production without positing a selection
 probability, but requires independent intellectual/rational causal warrant
 and adequate reasons for intentional exercise. The numerical controls do
