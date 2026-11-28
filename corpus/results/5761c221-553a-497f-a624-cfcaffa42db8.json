@@ -1,0 +1,11 @@
+{
+  "id": "5761c221-553a-497f-a624-cfcaffa42db8",
+  "label": "No unexplained absence at roots, from own-nature exclusion and own-nature carriage",
+  "argument_id": "05955781-ba6f-4a56-b878-5f0411fe42c3",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.noUnexplainedAbsenceFromOwnExclusion",
+  "comparator_config": "results/5761c221-553a-497f-a624-cfcaffa42db8/comparator.json",
+  "status": "solution-present",
+  "description": "Derivation (#2145 lane U): E from own-nature exclusion, own-nature carriage as such and the necessity direction of member grounding. Establishes no premise."
+}

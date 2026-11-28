@@ -1,0 +1,12 @@
+{
+  "id": "cae68373-f6a2-43b5-9fa3-9a63da4cf13b",
+  "label": "Every real determination of an actual root is realized by a real constituent of it",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred (REAL): for every actual concrete root r at w and every determination t that r has at w, some real constituent k of r realizes t in r (r has t by k). Every real determination has a real constituent as its reality. It does not say that every constituent realizes some determination; a constituent that is a principle of limitation may realize none.",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RootDeterminationsRealized",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "968526e1-42a7-4e28-9221-b426f560d1ee"
+  ]
+}
