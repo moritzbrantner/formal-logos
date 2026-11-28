@@ -42,7 +42,10 @@ tens of megabytes).
   four queued callers, 120 s per call, 20 calls per minute globally; Traefik adds
   30 requests per minute per client IP.
 - Requests with an `Origin` header are rejected unless listed in
-  `TRUTH_MCP_ALLOWED_ORIGINS` (DNS-rebinding guard).
+  `TRUTH_MCP_ALLOWED_ORIGINS` (DNS-rebinding guard). `deploy.sh` adds
+  `https://claude.ai`, `https://chatgpt.com` and `https://chat.openai.com` to
+  the host env file when the variable is absent; without them those hosted
+  clients get `403 origin not allowed`.
 - Auth: the repository and its issues are public, so the deployment currently
   runs with `TRUTH_MCP_NO_AUTH=1`. Setting `TRUTH_MCP_TOKEN` (32+ characters)
   in place of it requires `Authorization: Bearer <token>`. The server refuses to

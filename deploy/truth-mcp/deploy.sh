@@ -34,6 +34,10 @@ umask 077
 if ! grep -qE '^(TRUTH_MCP_TOKEN|TRUTH_MCP_NO_AUTH)=' /opt/truth-mcp/env 2>/dev/null; then
   echo "TRUTH_MCP_NO_AUTH=1" >> /opt/truth-mcp/env
 fi
+# Browser-based MCP clients send an Origin header; allow the hosted chat apps.
+if ! grep -q '^TRUTH_MCP_ALLOWED_ORIGINS=' /opt/truth-mcp/env; then
+  echo "TRUTH_MCP_ALLOWED_ORIGINS=https://claude.ai,https://chatgpt.com,https://chat.openai.com" >> /opt/truth-mcp/env
+fi
 chmod 600 /opt/truth-mcp/env
 cd /opt/truth-mcp
 TRUTH_MCP_TAG=$tag docker compose up -d --remove-orphans
