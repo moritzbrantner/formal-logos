@@ -8,11 +8,15 @@
     "3e77cec9-1728-578b-958b-5876f572ce42",
     "06d6f1ae-bf4d-5b57-b722-44b068427820",
     "4121dd26-3ee8-53b4-a73f-5453e5308764",
-    "9ad17723-d80b-59ab-aac7-291843f55d93",
     "086f1ece-8e43-5363-97cd-2d165e7dc3ed"
   ],
   "disambiguation_ids": [
     "51142f83-40ad-50a3-83be-a6062eee1256",
     "008747c9-744a-581c-adad-570e834abb4e"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "Through Rowe's core: with refined gratuitous suffering this constraint yields STMT-ROWE-NO-THEISTIC-BEING, whose own plan names the remaining bearer bridge (IsGod g gives Omniscient, Omnipotent and WhollyGood of g on a carrier shared with Rowe's signature). The constraint itself still needs warrant: the trolley batch only relocates it into a WHOLLY_GOOD_1 standard and an outcome bridge over a free comparison, which adds none.",
+    "blocker": "The bearer bridge of STMT-ROWE-NO-THEISTIC-BEING is unbuilt (issue #1735). No warranted standard for divine permitting is recorded on Rowe's signature: the comparison used by the relocation has no axiology, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded there. Divine permission versus intention is owned by issue #1456."
+  }
 }

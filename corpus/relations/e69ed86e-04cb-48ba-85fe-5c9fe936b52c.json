@@ -1,0 +1,10 @@
+{
+  "id": "e69ed86e-04cb-48ba-85fe-5c9fe936b52c",
+  "label": "Switch verdict refutes causal no-killing (KILLS_1)",
+  "subject_kind": "argument",
+  "subject_id": "4bb1655d-51a6-4c7a-b717-6c9cdaee0a72",
+  "predicate": "refutes",
+  "object_kind": "statement",
+  "object_id": "4ec84eef-2cbb-43a4-891a-9224e5b786e8",
+  "note": "Conditional refutation: rests on the open prima facie switch verdict."
+}

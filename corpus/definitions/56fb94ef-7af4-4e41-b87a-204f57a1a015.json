@@ -1,0 +1,9 @@
+{
+  "id": "56fb94ef-7af4-4e41-b87a-204f57a1a015",
+  "label": "KILLS_1: the intervention starts a causal path to the one's lethal harm",
+  "term": "kills (causal initiation)",
+  "definition": "KillsCausally c: the intervention event reaches the one's lethal harm by a causal path. Redirecting an existing threat onto the one counts as killing.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.KillsCausally",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "8a6ae17a-c40f-47fa-bfce-9ac612f96e60",
+  "label": "Trolley joint models (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "bef996cf-4e3c-4ba4-8b66-f2a0314d99d1",
+  "rule": "Explicit witness assignments on the actual case descriptions",
+  "meaning": "Nonvacuity: on the four stated case descriptions, assigning permissibility by each principle yields a model of that principle, all case facts and the common triad; the causal reading of double effect and the causal means principle with loop impermissible, the intention reading and redirection with loop permissible. Models of consistency only; the senses appear side by side, not mixed.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "18abb0a5-15bc-4048-b79a-18330567c0a7",
+  "label": "Permissibility assignment governed by a principle: P k holds exactly when the principle holds of…",
+  "term": "permissible (governed assignment)",
+  "definition": "Governs X F P: for every scenario k, intervening in k is permissible under the assignment P exactly when the principle X holds of the case description F k. P is a supplied assignment for intervening only; refraining is not evaluated, and absence of permission is impermissibility of intervening.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Trolley.Governs",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

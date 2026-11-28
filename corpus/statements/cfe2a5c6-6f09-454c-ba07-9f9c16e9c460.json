@@ -1,0 +1,14 @@
+{
+  "id": "cfe2a5c6-6f09-454c-ba07-9f9c16e9c460",
+  "label": "Harvesting the transplant patient is impermissible",
+  "paraphrase": "Analyst formulation, attribution deferred. Prima facie verdict: under the supplied assignment, harvesting in the transplant scenario is not permissible.",
+  "lean_declaration": "TruthCore.Ethics.Trolley.TransplantImpermissible",
+  "definition_ids": [
+    "18abb0a5-15bc-4048-b79a-18330567c0a7"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "The trolley results bear on GOD_4 exists only through Rowe's evidential core. TruthCore.Ethics.TrolleyRowe states senses of Rowe's WhollyGood; its WHOLLY_GOOD_2 constraint clause reuses the double-effect case vocabulary of this frame, but no verdict, Governs or principle statement here is an input to it. Missing: an argument that the verdicts warrant WHOLLY_GOOD_1 or WHOLLY_GOOD_2 (or neither) as the standard for divine permitting, and the bearer bridge of STMT-ROWE-NO-THEISTIC-BEING, whose plan targets GOD_4 exists.",
+    "blocker": "The verdicts are prima facie inputs over a supplied permissibility assignment for human intervening. No record transfers them to divine permission, which issue #1456 owns (permission versus intention), and the bridge from the case GOD_4 bearer to Rowe's WhollyGood on a shared carrier is unbuilt (issue #1735)."
+  }
+}

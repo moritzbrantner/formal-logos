@@ -1,0 +1,11 @@
+{
+  "id": "d2ca0059-964d-4c96-9439-69a80b99c99e",
+  "label": "Causal no-killing (KILLS_1) fails, from the switch verdict",
+  "argument_id": "4bb1655d-51a6-4c7a-b717-6c9cdaee0a72",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.switchVerdictExcludesCausalNoKilling",
+  "comparator_config": "results/d2ca0059-964d-4c96-9439-69a80b99c99e/comparator.json",
+  "status": "solution-present",
+  "description": "Whoever holds the switch verdict on these facts rejects the KILLS_1 no-killing deontology. Conditional on the open prima facie verdict; the KILLS_2 reading escapes this test."
+}
