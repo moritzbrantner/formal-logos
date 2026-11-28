@@ -1,0 +1,9 @@
+{
+  "id": "41d1ffc6-c326-4422-a5ff-03336ff964ec",
+  "label": "PROBABILITY_ASSIGNMENT_1: normalized countably additive probability measure",
+  "term": "Normalized probability measure",
+  "definition": "A countably additive Mathlib measure with total mass one (MeasureTheory.IsProbabilityMeasure).",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary in the shared carrier-probability module, reused by the plenitude controls (#2143) and the modal-carrier controls (#2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "MeasureTheory.IsProbabilityMeasure"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad",
+  "label": "Probability assignment: measure, additive function, frequency, likelihood",
+  "term": "probability assignment",
+  "sense_definition_ids": [
+    "41d1ffc6-c326-4422-a5ff-03336ff964ec",
+    "75aec723-335c-4012-887c-745871b5e580",
+    "5c03a3af-49c0-4fc1-916a-59f38e39352c",
+    "6e31917c-7434-4135-8511-34220182aba1"
+  ],
+  "resolution": "The carrier-probability controls use four different things called probability. PROBABILITY_ASSIGNMENT_1 is a normalized countably additive measure; PROBABILITY_ASSIGNMENT_2 is a normalized finitely additive real set function on the whole power set, possibly signed; PROBABILITY_ASSIGNMENT_3 is the limit of relative frequencies along a selected finite exhaustion; PROBABILITY_ASSIGNMENT_4 is an observer-conditioned likelihood under positive observer-cell weights. Each statement uses one sense. No result passes between senses as a premise: the all-subsets measure result converts a measure to its real set values inside its proof, and its statement uses sense 1 only. Impossibility of a uniform or all-permutation-invariant assignment in one sense is not absence of every assignment in that sense or another. This is distinct from probabilistic explanation and selection (DISAMB-PROBABILITY-EXPLANATION), which concerns chance, probability raising and ranking.",
+  "term_label": "PROBABILITY_ASSIGNMENT",
+  "senses": [
+    {
+      "id": "0c4d3580-fd29-4400-bf72-968e0eb40371",
+      "label": "PROBABILITY_ASSIGNMENT_1",
+      "definition_id": "41d1ffc6-c326-4422-a5ff-03336ff964ec",
+      "lean_declaration": "MeasureTheory.IsProbabilityMeasure"
+    },
+    {
+      "id": "81812ebe-248b-4f0e-912c-417310328c1a",
+      "label": "PROBABILITY_ASSIGNMENT_2",
+      "definition_id": "75aec723-335c-4012-887c-745871b5e580",
+      "lean_declaration": "TruthCore.Logic.CarrierProbability.NormalizedAdditive"
+    },
+    {
+      "id": "28a1c29c-ad97-42b7-85a9-aeff2486ef28",
+      "label": "PROBABILITY_ASSIGNMENT_3",
+      "definition_id": "5c03a3af-49c0-4fc1-916a-59f38e39352c",
+      "lean_declaration": "TruthCore.Logic.CarrierProbability.HasDensity"
+    },
+    {
+      "id": "b2b38866-dd88-4fda-87c7-a983016f867a",
+      "label": "PROBABILITY_ASSIGNMENT_4",
+      "definition_id": "6e31917c-7434-4135-8511-34220182aba1",
+      "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.weightedLikelihood"
+    }
+  ]
+}
