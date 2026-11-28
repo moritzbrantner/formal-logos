@@ -1,0 +1,15 @@
+{
+  "id": "d83785e2-f572-4eb8-9098-0785da0e174d",
+  "label": "No pure determination of an actual root REQUIRES_LACK_2 in it the lack of pure determinations",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w, no pure determination t that r has requires, in r (REQUIRES_LACK_2), the lack of a set of pure determinations. It is the in-root counterpart of the purity of requirements (0c8631bd), restricted to actual roots, with the same rationale: requiring the lack of a positive actuality is a limitation of the requirer, here of the determination as realized in the root. It is restricted to roots because a pure determination realized in a finite bearer can require there the lack of a pure one (a finite knower's knowing excludes knowing everything at once). With the bridge from REQUIRES_LACK_2 to REQUIRES_LACK_1 at roots it follows from 0c8631bd (pureRequiresNoPureLackInOfAsSuch). A simple root that lacks noesis by a clause of its one nature, with its being as realized in it requiring that lack, denies it (simpleUnityCarriageMap, clause 3); the Plotinian line (the unity of the first excludes the duality of thought, and this is no limitation) denies it.",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RootPureRequiresNoPureLackIn",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"
+  ],
+  "disambiguation_ids": [
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54"
+  ]
+}

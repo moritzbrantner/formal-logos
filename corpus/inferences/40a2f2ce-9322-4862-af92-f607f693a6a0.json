@@ -1,0 +1,13 @@
+{
+  "id": "40a2f2ce-9322-4862-af92-f607f693a6a0",
+  "label": "Own-nature carriage REQUIRES_LACK_1, from carriage REQUIRES_LACK_2 and the sense bridge (inference)",
+  "input_statement_ids": [
+    "a48bdc1a-2d93-407e-b39f-9f5b91836199",
+    "c5396a7f-5084-498f-8c52-28455ea500b8"
+  ],
+  "output_statement_id": "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+  "rule": "If no determination of the root requires a lack as such, by the bridge none requires it in the root, and carriage in the root applies",
+  "meaning": "Fix an actual root r, a condition C of its own nature and an admissible q containing its determinations in which no determination of r requires, as such, the lack of members of q. By the sense bridge, none requires such a lack in r either, so own-nature carriage in the root gives C at q. With ownCarriageInFromUnity this is the unity argument's route to carriage as such: everything beyond what the identity thesis supports is in the bridge. The bridge fails for a determination the root shares with a bearer that has the excluded items (simpleUnityCarriageMap, clauses 3 and 4) and is near-analytic for a 'this nature' determination (clause 10). The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
