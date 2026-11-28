@@ -37,6 +37,7 @@ public import TruthCore.Results.Explanation.GroundingBaseline.Reduct.Solution
 public import TruthCore.Results.Explanation.GroundingBaseline.Solution
 public import TruthCore.Results.Explanation.HistorySelection.Solution
 public import TruthCore.Results.Explanation.InducerFreePersistence.Solution
+public import TruthCore.Results.Explanation.InertialActuality.Solution
 public import TruthCore.Results.Explanation.InertialReceiverNature.Solution
 public import TruthCore.Results.Explanation.InquiryClosure.Solution
 public import TruthCore.Results.Explanation.JointCondition.Solution

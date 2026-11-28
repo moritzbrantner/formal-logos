@@ -1,0 +1,11 @@
+{
+  "id": "90fcd276-9af3-46a7-9c4b-af6090b52938",
+  "label": "A shared cessation law admits opposite actuality profiles",
+  "argument_id": "195f6390-e3a8-4181-a207-9d53e7f01507",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.lawLeavesActualityOpen",
+  "comparator_config": "results/90fcd276-9af3-46a7-9c4b-af6090b52938/comparator.json",
+  "status": "solution-present",
+  "description": "Hold the background bearer fixed, vary the candidate's temporal profile and satisfy the global cessation law by time-independent presence. Omission refutes the claimed entailment of actuality."
+}
