@@ -1,0 +1,10 @@
+{
+  "id": "228ab0a4-18f1-4f9c-b42c-767e691c7476",
+  "label": "Held-back control tests held acts are lackable",
+  "subject_kind": "result",
+  "subject_id": "544bc129-3ee9-4b17-b4ba-8ff42ad61f3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "89f0d0d5-d22b-4811-bab6-1fa0d1830644",
+  "note": "Comparator companion controls, part 2 (heldBack): the unlosable first holder, 6e2176cd and the second lackability premise hold; HeldActsAreLackable and the MOTION_3 first-holder conclusion fail, since every holder is held in some respect. Part 1 (soleHolder) satisfies the whole bundle with one holder held nowhere."
+}

@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.MirrorCollapse.Challenge",
+  "solution_module": "TruthCore.Results.Modal.MirrorCollapse.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.MirrorCollapse.mirrorFork"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

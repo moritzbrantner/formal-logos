@@ -1,0 +1,11 @@
+{
+  "id": "0a9d3a40-4777-4352-a4b4-2126c0055924",
+  "label": "Every actual root's profile is admissible",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r of the selected grounding relation at w, the set of r's real determinations is an admissible intrinsic profile: it can be had together by a simple, unreceived, necessary source. It anchors the admissible family to the actual root's own profile.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionExclusion.RootProfilesAdmissible",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069"
+  ]
+}

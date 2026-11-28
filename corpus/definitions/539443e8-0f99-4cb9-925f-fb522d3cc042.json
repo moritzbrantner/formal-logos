@@ -1,0 +1,9 @@
+{
+  "id": "539443e8-0f99-4cb9-925f-fb522d3cc042",
+  "label": "Case instance of the necessary-if-existent proposition G",
+  "term": "some concrete GOD_4 exists (world proposition G)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodConcreteExists",
+  "definition": "GodConcreteExists σ m is the world proposition (MProp) true at v when some x is GodConcretePresent σ m x v. It instantiates the stipulated scalar proposition G of NecessaryIfExistent (#437). As a world proposition it fixes no individual across worlds, so its box is de dicto (box_iff_deDicto: definitionally DeDicto of concrete GOD_4 presence).",
+  "note": "Not Scott's essence-based NecessaryExistence and not Gödel's GodLike (DISAMB-NECESSARY keeps those senses distinct); no identification with a Gödel–Scott God is made. Analyst formulation, attribution deferred."
+}

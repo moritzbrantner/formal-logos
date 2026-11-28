@@ -1,0 +1,12 @@
+{
+  "id": "a76b4661-d52e-46eb-8e71-fe2333a00593",
+  "label": "The Cogito's necessary concrete ground-ancestor witnesses a necessary concretum at w",
+  "argument_id": "3c06d5bb-7ee2-4cd5-a3a6-812c4dd07ef2",
+  "challenge_module": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Challenge",
+  "solution_module": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.Solution",
+  "theorem": "TruthCore.Results.Causality.CogitoAncestorNecessaryConcrete.necessaryConcreteOfThinkerAncestor",
+  "comparator_config": "results/a76b4661-d52e-46eb-8e71-fe2333a00593/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiation of the vocabulary lemma necessaryConcreteAt_of_ancestor. It places the Cogito's necessary-ancestor conclusion below the root-path NecessaryConcreteAt without adding support beyond it.",
+  "transcription": "instantiation"
+}

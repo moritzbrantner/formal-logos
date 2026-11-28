@@ -1,0 +1,15 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PossibiliaContent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PossibiliaContent.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PossibiliaContent.simpleRootGoodGeneralFavouringIsApprehension",
+    "TruthCore.Results.Causality.PossibiliaContent.possibiliaControls",
+    "TruthCore.Results.Causality.PossibiliaContent.rootCriterionWithoutConceptualism"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

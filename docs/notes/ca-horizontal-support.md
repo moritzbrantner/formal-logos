@@ -424,6 +424,19 @@ given being at changes only, and whether that schedule satisfies coverage and
 exercise without concurrent actualization. A second test is the
 caused-universe connection (`CausingWholeCausesParts` with temporal parts).
 
+**Combination with the begun restriction (2026-11-27, #2103).** Module
+`TruthCore.Causality.BegunOrHomogeneousGiving`, spec
+`specs/begun-or-homogeneous-giving.toml`. The begun restriction `f4850897`,
+the homogeneous restriction `eb928359` and an open structural premise
+`ac376e28` (every present received-esse thing has a first moment of presence
+or is homogeneous) give `40a97664` by cases (`concurrentOfBegunOrHomogeneous`).
+Comparator companions show each premise is needed and that the three together
+are strictly stronger than `40a97664`. This does not discharge the crux: the
+begun half is parity restated given onset, and `ac376e28` names as an explicit
+premise exactly the case the test above leaves open, a beginningless changing
+received-esse thing. It makes the gap in `366a6ea3`'s `strong_version_needed`
+an inspectable premise and connects `eb928359` to the root route.
+
 ## Self-sweep
 
 The claim-vs-type table is in the PR body. No source claim is added. Schmid is

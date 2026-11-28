@@ -1,0 +1,9 @@
+{
+  "id": "45d04b45-4396-4f95-87ad-a8e762bce91a",
+  "label": "Non-real containment: in the bearer (CONTAINED_IN_1) without being a real constituent of it",
+  "term": "non-real containment (NonRealContained Contains RealConstituent b e)",
+  "basis": "stipulative",
+  "definition": "NonRealContained Contains RealConstituent b e: the item e is contained in the bearer b in the generic sense CONTAINED_IN_1 (DEF c917dda9-f382-48fa-8cc1-a0b9e609c164), and e is not a real constituent of b (DEF d6912ecb-aed2-411a-913e-0dab9106d910). Examples (each on the account that posits it): a divine idea, the one essence as understood under the respect in which a creature imitates it (classical personal account); a mode of imitability of a simple nature that is neither understood nor a real constituent (the noncognitive imitability-exemplar rival A4, the #1892 objective-eminence status); a Scotist formality distinguished a parte rei but not really. Non-examples: a real power or real representation of a composite bearer (a real constituent); an abstract object that exists whether or not the bearer does (not contained); a product made outside the bearer. Structural properties: a defined conjunction; whether anything satisfies it, and whether what satisfies it must be apprehended, is left open. The conceptualist premise NonRealContainmentIsApprehension says that it implies apprehension by the bearer.",
+  "note": "Stipulative analyst notion (#2145 lane H1), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Do possibilities need a mind? Conceptualism and non-real plurality at a simple root'. It cuts across CONTAINED_IN_2 and CONTAINED_IN_3: intentional or virtual containment may each be real or non-real.",
+  "lean_declaration": "TruthCore.Causality.PossibiliaContent.NonRealContained"
+}

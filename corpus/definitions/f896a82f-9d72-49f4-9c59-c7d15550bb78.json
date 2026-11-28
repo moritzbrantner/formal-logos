@@ -1,0 +1,9 @@
+{
+  "id": "f896a82f-9d72-49f4-9c59-c7d15550bb78",
+  "label": "Accessible uniqueness of concrete GOD_4 when one exists at the standpoint",
+  "term": "accessible uniqueness of concrete GOD_4 when present at the standpoint",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPresenceUniqueWhenPresentAt",
+  "definition": "GodPresenceUniqueWhenPresentAt σ m w: if some concrete GOD_4 exists at w, then for every world v accessible from w, any two concrete GOD_4 existing at v are identical. It asserts no existence.",
+  "note": "The certified difference of rigidity over persistence (#1598): rigidity holds exactly when persistence and this condition hold (rigidOverPersistsExact, no background). It is the cross-world uniqueness content that the modal ontological route does not use. Analyst formulation, attribution deferred."
+}

@@ -12,5 +12,10 @@
   ],
   "disambiguation_ids": [
     "4eb21e18-3541-5b78-ab20-0040e4e987f4"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "72361c88-db53-5064-8845-37ff5abbca82",
+    "missing_bridge": "From attainment by the selected individual's degree family, obtain an attained global degree maximum through the equivalence. Then follow the plan recorded on the attained maximum 3d474e11-24c3-5706-bc3c-719914e8c459: actual attainment at w0, the two-way existence-in-act contract and the identification premise value = intensity w0.",
+    "blocker": "No premise asserts that the selected family attains its maximum (SelectedDegreeFamilyAttains for n). The equivalence holds only under its registered hypotheses: the selected individual's necessary presence (4536ee5d-5cac-50e2-b7dc-1272fb19858a), its local other-directed potential causation (1aa6d02f-f29d-55f7-9e5d-7ea609609e76), the local weak cause-degree bound (728d8bd9-92dd-5af5-b831-e49c7a4f7b5f) and excluded middle (ee4ab504-c8fe-59bc-bc96-7cbeefed6410). The equivalence fixes no actual attaining world, and the contract and identification premise are not recorded."
+  }
 }

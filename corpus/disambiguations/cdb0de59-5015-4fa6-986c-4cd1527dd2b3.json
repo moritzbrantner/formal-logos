@@ -4,9 +4,11 @@
   "term": "more and less (magis et minus) in a perfection",
   "sense_definition_ids": [
     "5766de66-8a37-5b04-aa65-9eec53319f50",
-    "37ffc062-8966-4491-b6bc-4bba1b163f98"
+    "37ffc062-8966-4491-b6bc-4bba1b163f98",
+    "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+    "b4a7f37e-83d4-4e5f-bb24-b2a72cd85ca6"
   ],
-  "resolution": "MORE_1 is the primitive comparative of the quarta via, MoreIn r x y (DEF-MORE-IN): x is more r than y, with no order law, measure or comparability imposed; it is the comparative every grades, maximum and cause-of-perfection premise of the case uses, and its whole-binder tags name the declarations that state those premises over it. MORE_2 (DegreeComparative) is the comparative represented by a preorder-valued degree, of which both the homogeneous-scale reading (degree = the order on beings, HomogeneousScaleReading) and the approach-to-primary reading (degree = near, ApproachToPrimaryReading) are instances at a fixed respect; it is neutral between the univocal and the analogical reading. It is a strict order in every respect, while MORE_1 is not constrained to be one (Grades.primitive_not_degreeComparative). Arguments pass between the senses only through the explicit open calibration premises MoreInExceedsDegree and DegreeExcessAmongBearersIsMoreIn (Round3FourthWay), which relate MoreIn to a represented degree; no statement identifies the two. Defining MoreIn as MORE_2 would impose irreflexivity and transitivity, and would conceal the calibration premises. Follow-up: once the Round3 calibration statements link the MORE_2 definition, the arguments using them should list them as sense_bridges. DISAMB-ORDER-OF-BEING records the order models at esse and DISAMB-BEING-UNIVOCITY which premises survive on which model. The recorded senses are not claimed to be exhaustive or exclusive.",
+  "resolution": "MORE_1 is the primitive comparative of the quarta via, MoreIn r x y (DEF-MORE-IN): x is more r than y, with no order law, measure or comparability imposed; it is the comparative every grades, maximum and cause-of-perfection premise of the case uses, and its whole-binder tags name the declarations that state those premises over it. MORE_2 (DegreeComparative) is the comparative represented by a preorder-valued degree, of which both the homogeneous-scale reading (degree = the order on beings, HomogeneousScaleReading) and the approach-to-primary reading (degree = near, ApproachToPrimaryReading) are instances at a fixed respect; it is neutral between the univocal and the analogical reading. It is a strict order in every respect, while MORE_1 is not constrained to be one (Grades.primitive_not_degreeComparative). Arguments pass between the senses only through the explicit open calibration premises MoreInExceedsDegree and DegreeExcessAmongBearersIsMoreIn (Round3FourthWay), which relate MoreIn to a represented degree; no statement identifies the two. Defining MoreIn as MORE_2 would impose irreflexivity and transitivity, and would conceal the calibration premises. Follow-up: once the Round3 calibration statements link the MORE_2 definition, the arguments using them should list them as sense_bridges. DISAMB-ORDER-OF-BEING records the order models at esse and DISAMB-BEING-UNIVOCITY which premises survive on which model. The recorded senses are not claimed to be exhaustive or exclusive. MORE_3 (OrdinaryComparative, the ordinary comparative: both comparands have r formally and the first has a higher measured degree) and MORE_4 (EminentComparative: the first has r virtually and surpasses the second in the mode of having r, with Surpasses an open primitive) are two candidate determinations of MORE_1 for the 'more such' premise STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH, added by the causal possession assessment (docs/notes/causal-possession-bottleneck.md). No statement identifies either with MoreIn. On MORE_3 that premise faces the induction-heating objection; on MORE_4 it is unspecified except through the order by approach to a primary at being (DISAMB-ORDER-OF-BEING), where it holds only with the primary as cause.",
   "term_label": "MORE",
   "senses": [
     {
@@ -154,6 +156,18 @@
       "label": "MORE_2",
       "definition_id": "37ffc062-8966-4491-b6bc-4bba1b163f98",
       "lean_declaration": "TruthCore.Causality.Grades.DegreeComparative"
+    },
+    {
+      "id": "f1dd2b16-3e45-4e59-b9d4-490988b8848c",
+      "label": "MORE_3",
+      "definition_id": "5c5e062c-43ce-4b4e-af4e-45bf93dd8196",
+      "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.OrdinaryComparative"
+    },
+    {
+      "id": "aa8bbb60-6e82-4e11-a356-5d2d1ca8ce4c",
+      "label": "MORE_4",
+      "definition_id": "b4a7f37e-83d4-4e5f-bb24-b2a72cd85ca6",
+      "lean_declaration": "TruthCore.Causality.MoreSuchSenseCollapse.EminentComparative"
     }
   ]
 }

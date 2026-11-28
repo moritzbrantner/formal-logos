@@ -1,0 +1,10 @@
+{
+  "id": "f96c2100-0579-4d3b-9992-e9246537ef01",
+  "label": "Test by InquiryClosure.inquiryScopeMap (root lack PSR)",
+  "subject_kind": "result",
+  "subject_id": "a3d7403d-9488-463b-b6fd-07a7a0901eda",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+  "note": "Clause 11: every contingent-scoped inquiry condition holds in an arena in which no root lack has a reason, so none of them implies the PSR for root lack facts. Clause 3: that PSR holds whenever the contingent-fact PSR does, once the necessary truths are admitted as reasons for the necessary truths."
+}

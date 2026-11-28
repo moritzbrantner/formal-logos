@@ -1,0 +1,12 @@
+{
+  "id": "acaa3dff-6227-4d2c-8c15-4b17b92e8a7e",
+  "label": "Actual grounding well-foundedness gives selected-world acyclicity",
+  "argument_id": "44ab4c7b-0a4d-4d15-8ead-c9cae0eacf8a",
+  "challenge_module": "TruthCore.Results.Logic.ActualGroundingAcyclicity.Challenge",
+  "solution_module": "TruthCore.Results.Logic.ActualGroundingAcyclicity.Solution",
+  "theorem": "TruthCore.Results.Logic.ActualGroundingAcyclicity.actualGroundingAcyclicOfWF",
+  "comparator_config": "results/acaa3dff-6227-4d2c-8c15-4b17b92e8a7e/comparator.json",
+  "status": "solution-present",
+  "description": "Instantiates the constructive cycle-exclusion law on the exact selected-world grounding graph. It identifies acyclicity as a consequence of the existing well-foundedness commitment.",
+  "transcription": "instantiation"
+}

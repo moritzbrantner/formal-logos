@@ -1,0 +1,10 @@
+{
+  "id": "2c158094-5247-485b-b4eb-e695b370f113",
+  "label": "Test by the mode pair certificate of the mode premise",
+  "subject_kind": "argument",
+  "subject_id": "1bbbd5ed-2aab-4776-9571-cf43a2d03718",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+  "note": "Shows that 791fa216 with 2f6b9eff says exactly 'a total cause of being causes every actual perfection' when ModeOfBeing is otherwise unconstrained, as in afb8cba3."
+}

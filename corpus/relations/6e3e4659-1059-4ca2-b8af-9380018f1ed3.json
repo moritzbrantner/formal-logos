@@ -1,0 +1,12 @@
+{
+  "id": "6e3e4659-1059-4ca2-b8af-9380018f1ed3",
+  "label": "Concrete GOD_4 rigidity strengthens persistence from the standpoint",
+  "subject_kind": "statement",
+  "subject_id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "cce5a30e-c72f-43e6-ba29-19f8be68feeb",
+  "verification_result_id": "0687eb1d-fe5b-4d0c-bf0d-58fd411c7a5c",
+  "strictness_result_id": "bc8eea6a-231c-473e-8bf6-e4301b057c36",
+  "note": "Same signature, profile and standpoint. Rigidity identifies every accessible concrete GOD_4 with every concrete GOD_4 at w; persistence only requires each concrete GOD_4 at w to exist wherever some concrete GOD_4 exists. The difference is the cross-world uniqueness content (with reflexivity, at most one concrete GOD_4 at w). fixedPlusVisitor satisfies persistence and violates rigidity."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "54e1279c-543d-4cfe-8811-5a66a3a33216",
+  "label": "Choice-cell determination laws, from the definitions",
+  "argument_id": "006a2dda-4770-4b74-ade4-d3b65fa13bd3",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.selectionRangeLaws",
+  "comparator_config": "results/54e1279c-543d-4cfe-8811-5a66a3a33216/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 608a262d. An invariant explanans (the kind an existential PSR reason token can be) explains the realized range of outcomes and no contrast within it (law 3); selecting a contingent outcome requires an explanans level whose own cell is contingent and is not seen to by any invariant level (law 6). The value of laws 7 and 8 is negative: determination on cells reads only cell partitions, and any level as fine as the outcome partition, including a bare re-description of the outcome, meets it. So this standard cannot discriminate explaining the selection from re-describing it, nor an adoption from an actualization. A discriminating test needs a standard on which the explanans is individuated independently of the outcome partition, or a different sense of selecting (SELECTING_AN_OUTCOME_1, pro tanto favouring), neither tested here. Establishes no premise."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+  "label": "Admissible intrinsic profile: real determinations a simple unreceived source could jointly have",
+  "term": "admissible intrinsic profile (Admissible q)",
+  "definition": "Admissible q, for a set q of real determinations (DEF-REAL-DETERMINATION): the determinations in q could be had together by one metaphysically simple (SIMPLE_4), unreceived, necessary source, given the necessary incompatibilities taken as warranted in the interpretation. It is a primitive parameter Admissible : Set D → Prop. It is not the profile any actual being has, not a set of possible worlds and not a modal accessibility relation. A holistic constraint of a nature that no single determination represents is represented by restricting the family.",
+  "basis": "stipulative",
+  "note": "Stipulative analyst notion (#2145), attribution deferred. Lean has no declaration for it; each interpretation supplies the family. The classification of an absence by AbsenceFromAdmissibility, AbsenceFromPositiveProfile and UnexplainedAbsence (TruthCore.Causality.RootPerfectionExclusion) is relative to the family: narrowing it can move a case from unexplained to explained, so every premise of the arguments quantifies over the same family. The existing HasCompatibleExtension of SourceIntellectControls is reused for compatible completion. Which profiles are admissible is a substantive judgment; the finite controls only assign families."
+}

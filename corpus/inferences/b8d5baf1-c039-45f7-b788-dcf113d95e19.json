@@ -1,0 +1,10 @@
+{
+  "id": "b8d5baf1-c039-45f7-b788-dcf113d95e19",
+  "label": "Member grounding is sufficiency plus its difference (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "34e719e6-38d9-4ccc-88b0-4137f51aa92b",
+  "rule": "Split the biconditional into its two directions and recombine",
+  "meaning": "Certified difference (#1598) of the registration 'member-grounded admissibility strengthens exclusion-free admissibility', with no background: member grounding holds iff its sufficiency direction holds and every admissible profile is exclusion-free. Premise-free and constructive; it asserts none of the statements compared.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

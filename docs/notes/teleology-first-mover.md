@@ -1376,3 +1376,60 @@ refinement study also limits a generalization from selection to uniform
 optimality.
 
 [Thomas Aquinas reading attempt](../../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Charles Darwin reading attempt](../../corpus/attempts/2603f170-503e-464d-ac69-53e547298272.json), [Natalie A. Dye and colleagues reading attempt](../../corpus/attempts/bf3cf017-f0f7-4430-8e6e-2d0bd088b432.json), [Nathan Tompkins and colleagues reading attempt](../../corpus/attempts/920c9e5b-922e-4c1e-ad0e-45bc9cbe2346.json), [Zachary D. Blount and colleagues reading attempt](../../corpus/attempts/b888c0a0-f4cc-48f3-8642-d45da505bd0a.json).
+
+## Finite measure under content-fixed favouring (#2145; 2026-11-27)
+
+This continues the [finite-measure test](#does-finite-due-measure-restrict-an-unrestricted-source),
+which the program lists as the test that could change §44's parity. The
+results are in
+[optimal-creation-choice.md §§65–69](optimal-creation-choice.md#favouring-end-content-and-goodness-under-one-standard-2145-2026-11-27)
+(`TruthCore/Causality/GoodFavouring.lean`, analyst formulations, finite
+surrogates).
+
+The test's two options for the noncognitive source were a received restriction
+and a ceiling on its power. Typing the source's favouring as a profile across
+variation scenarios makes explicit a third option that was already implicit in
+the earlier "simple joint productive constitution": a *determination of the
+favouring to one content*. The rival on record, a nature directed to the joint
+manifestation D, is interpreted as having this determination. On that
+interpretation it fixes the measures that D requires. The finite model types
+favouring only, not measures or power. Whether that determination is free of
+reception and of a ceiling is conditional on the Investigation 4 hook below.
+
+A profile defined as tracking D meets the end-content reading of "because of
+its goodness" (BECAUSE_OF_GOODNESS_1) for a contrast given a variation witness,
+a scenario where D-realization no longer ranks it (the table's `reversal`).
+Without one, a D-tracking profile is fixed and fails that reading. A physical proxy aligned
+with D fails that reading at the recipient-relative reversal. Whether the rival's
+source is a D-tracker or a proxy is interpretive. The rival also fails the
+controlled goodness reading (BECAUSE_OF_GOODNESS_2), as a will with a fixed
+preference for D does. The rival's failure is unconditional, since its favouring
+factors through D-realization. The verdict discriminates only where some
+good-tracking profile passes, which needs goodness to vary within a
+D-realization class for the contrast in question. For a contrast whose
+betterness is fixed by the candidates' contents (c over z), that needs a
+counterpossible scenario. Within a D-class it need not (c over d, `cBetter`
+against `actual`). Only if betterness factors through D-realization does every
+profile fail reading 2.
+
+As typed, what apprehension avoids, a good-general profile also avoids: its
+favouring follows betterness, and it carries no content determination. Such a
+profile attributes a finite measure to goodness only where that measure is
+better than every relevant rival measure, and then as favouring, not
+determination. Where several measures are undominated (tied or incomparable),
+goodness favours none over the others and the choice among them is unresolved
+by goodness. Where every measure is strictly improvable, no measure is selected
+by goodness. In both of these cases the measure comes from a contingent
+exercise, for personal and impersonal profiles alike. So the finite-measure test does not by itself change the parity. It
+moves the open point to two places. One is which sense of original finality
+the case needs: only the for-the-good sense (ORIGINAL_FINALITY_2) includes
+non-coincidence of the origin's favouring with goodness. The other is whether
+good-generality without apprehension is coherent (the content-generality
+question). Whether the D-nature's content determination counts as a limitation
+at an unlimited root is the Investigation 4 hook to Lane 1 (#2153). It is
+recorded, not resolved.
+
+The `65c409cc`/`11628966` intellect route and its complete bundle are unchanged.
+The new results are placed diagnostics for `4be0f774` and `608a262d`.
+The current finite-measure assessment is in attempt
+[4d9cd347](../../corpus/attempts/4d9cd347-0a0f-49f3-8d85-14e5cdb8dab0.json).

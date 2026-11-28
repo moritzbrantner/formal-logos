@@ -1,0 +1,9 @@
+{
+  "id": "a09a6897-aec8-45f2-8cfe-5ae7bab3b8d4",
+  "label": "Concrete GOD_4 is necessary if existent at the standpoint",
+  "term": "necessary if existent (case instance)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodNecessaryIfExistentAt",
+  "definition": "GodNecessaryIfExistentAt σ m w is NecessaryIf m.ontic.frame (GodConcreteExists σ m) w: at every world v accessible from w, if some concrete GOD_4 exists at v then at every world accessible from v some concrete GOD_4 exists. A boxed conditional at the standpoint, not the bare actual conditional (DISAMB 7181df76) and not frame-global.",
+  "note": "The Anselmian premise of the modal ontological argument in its de dicto form, on the case profile's own frame. Open; analyst formulation, attribution deferred."
+}

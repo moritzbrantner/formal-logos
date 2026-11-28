@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionExclusion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RootPerfectionExclusion.rootPerfectionFromNoUnexplainedAbsence",
+    "TruthCore.Results.Causality.RootPerfectionExclusion.structuralControls",
+    "TruthCore.Results.Causality.RootPerfectionExclusion.anchorControl",
+    "TruthCore.Results.Causality.RootPerfectionExclusion.standingRival"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

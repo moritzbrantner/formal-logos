@@ -1,0 +1,45 @@
+{
+  "id": "b86a2364-8255-43f7-a725-08503ef2f1a5",
+  "label": "Actual-root favourings are good-general, from nonlimitation and the value standard",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "a30c5963-cb81-5366-aab0-2454363e18f7",
+    "c78c77da-91b0-5928-bd5f-ba670a6f3660",
+    "720bccc2-2114-4f6c-ab8a-a16aab3c9de3",
+    "a141e6a8-7ef7-443f-82fd-ee8a6c8663c5",
+    "ca3c311d-dab7-417d-8eb7-87c81fe82029"
+  ],
+  "conclusion_statement_id": "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+  "inference_ids": [
+    "243278fd-c826-48f4-a4c1-1e232a7e73ad"
+  ],
+  "meaning": "Fix an actual root r at w and a favouring determination favours phi of r. Actual roots have no represented limiting principle (its distinct simply prior being is the shared CausalityFrame's PriorSimply, PRIOR_1), so by the RootPurity bridge every real determination of r is pure, favours phi among them. The standard is a value order v (STANDARD_OF_FAVOURING_1, the type ValueStandardOrder, distinct from an end-realization order), and the conclusion is stated for its relation by explicit projection. By excluded middle and the loss bridge, phi favours x over y wherever x is better than y; by excluded middle and the arbitrariness bridge, phi favours x over y only where x is better than y. Betterness varies within an end-realization class: some x is better than y at s, at least one of them not a present input, and not at a scenario t that agrees with s on end-realization. Then phi favours x over y at s and not at t, so phi depends on betterness with end-realization fixed and is good-general. The argument uses neither the #2153 admissible family nor joint compossibility, root-profile admissibility, pure admissibility, the structural L, the purity of good-generality e2357adc or one-favouring realization 3e6ae3e7; nor the #2153 E premise. It is a conditional alternative formulation inside the purity family: its two bridges are the precise, value-relative form of the rationale recorded for e2357adc, so it shares that rationale and adds no independent warrant, and the bearer-level uniqueness that 3e6ae3e7 supplied to horn A is absorbed by the bridges (actualRootHasOneFavouringFromStandard, Lean-only). On this route alone the variation premise is bare; horn A's premises entail it (hornAPremisesGiveVariation). The main theorem uses no axioms. Comparator companions (Mathlib axioms): standardControls gives, on the #2153 two-being carrier with the Lane 2b profiles, a positive witness and for each non-logical premise a row where it fails, the others hold and the conclusion fails; its last row has a value order whose relation coincides with the end-realization ordering (betterness factors through end-realization), where the D-directed favouring is pure and tracks it and the variation premise fails. standardRelativity shows that the D-directed and good-tracking profiles agree in every genuine scenario except on c over d at cBetter, so the value bridges condemn the first and the D bridges the second at the same verdict. refinementCondemnsGoodTracking shows that a value-free refinement criterion would count the good-tracking profile itself as restricted. The assignments say nothing about what favouring, purity or value are.",
+  "term_senses": {
+    "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d",
+    "STANDARD_OF_FAVOURING": "9eadf812-1e1b-499d-8b2d-50aa57314df3"
+  },
+  "definition_ids": [
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "53634064-7959-4c9d-90c5-7dc88b741bea",
+    "8e29c4fa-2f76-4158-a088-42cd7fcf6250",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a919ce52-6c8b-5e0f-9aaa-5b570bded78b",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "e14aa0f0-6271-42a2-9762-52a8285c3180"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "06fb4f51-ff5f-5c5e-b947-844f20de4174",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048"
+  ]
+}

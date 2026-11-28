@@ -1,0 +1,58 @@
+{
+  "id": "0d8b9153-ad65-48a3-be6a-478612f0e2a1",
+  "label": "Do possibilities need a mind? Conceptualism and non-real plurality at a simple root (#2145 lane H1)",
+  "statement_ids": [
+    "d1fb6414-976e-4833-908d-17787cca2502",
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+    "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+    "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+    "5a3a1432-38f7-44b9-bdc6-01acc066b622",
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "fce9e0a3-f0c1-43d1-b97f-495d4a7e92a0",
+    "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8"
+  ],
+  "date": "2026-11-27",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "See docs/notes/causal-perfection-transfer.md, section 'Do possibilities need a mind? Conceptualism and non-real plurality at a simple root'. Horizontal family under the three-angles rule, after lane C rounds 2 and 3 (attempts 421caba9, 6429463e) left d1fb6414 at parity with A4. (1) The brief's conceptualist form (aboutness, intrinsic or derived, mental) was tested against Platonism, ersatz worlds, Lewisian and Meinongian or Zalta-style possibilia, cognitive-act theories, powers-based modality and A4 at the root's scope: every independent-realm account lands on horn 1 (65805e5a), cognitive-act theories leave no pre-creation stand-ins, factive relations cannot stand for non-present candidates (both sides), and derived aboutness reduces to the in-source case. (2) Derived the shared demand (Lean-only simpleBearerHasNonRealStandIn, zero axioms): a constitutively simple bearer with a good-general favouring and no present candidates has a stand-in in it that is not a real constituent; realStandInsGiveNoGoodGeneralFavouring answers question C: real Molnar-type directed powers, and real ideas, cannot supply the distinct stand-ins at a simple patientless root. (3) Registered 19d5872a (simpleRootGoodGeneralFavouringIsApprehension, zero axioms): lane C's five individuation premises, root simplicity f4180d0c, no present candidates fce9e0a3, the conceptualist premise cde7f1dd (non-real contained items are apprehended by their bearer; related to, but not a consequence of, the dictum that beings of reason have being only in an intellect) and the content premise 5a3a1432 give the root cognition criterion b371638a; 83b91c73 verifies that 3b40009e strengthens b371638a; 419e24af composes b371638a with 7fca65ec and 980e6482 into 3a32d91c, a route that uses neither 3b40009e nor d1fb6414 but re-presents the same dispute rather than adding evidence: A4 holds every premise except cde7f1dd, the instances the route uses are also instances of d1fb6414, and it shares lane C's five premises. Comparator companions possibiliaControls (single failures of each new premise: A4 modes, real plurality, template reading, present inputs) and rootCriterionWithoutConceptualism. (4) Relocation probe: given the rest, the conclusion is equivalent to a weakened existential form (NonRealStandInYieldsApprehension: some apprehended content about some candidate, not the stand-in itself); the conceptualist premise, even restricted to the route, is strictly stronger (rootCriterionWithoutConceptualism). A4 denies every apprehension at the root, so on the route's instances it denies both the premise and the conclusion: a relocation. (5) Same-criterion payment table and a domain survey (negations, possibilia, propositions, relations to non-existents, distinctions within one thing). (6) After an independent semantic challenge of 95077bd33 (itemized findings not preserved), wording and records were repaired: the relation to the dictum, the A3 value-dependence sentence, the relocation caveat on the route through 419e24af, the global form of fce9e0a3, the instance standard of table D, the evidence boundary of named authors, the control-row artifacts and the unlinked senses of simple (recorded for #216). No Lean statement or proof changed. (7) A second independent semantic challenge of 36d6d8fbb found one P1 (the route equivalence above had been stated for cde7f1dd itself) and five P2s (the content premise called the weakest form for the route; the template reading's counterfactual matching versus the factivity exclusion; table D's instance cells not marked as analyst assessment; row 5 vacuity; the review record). All are repaired in wording and records; no Lean statement or proof changed. (8) Codex review of #2180 (comment 4723624754): the denial of cde7f1dd had been equated with mind-independence. It is now non-apprehension by the containing bearer; A4's mind-independence is an additional commitment. The intermediate denier (another intellect apprehends or grounds the item) lands at a root, in the analyst's judgment, on the independent locus priced at 65805e5a; off the root it has candidate classical instances (privations, extrinsic denominations) that bear against the general bearer-indexed form.",
+  "blocker": "Parity at the status step. Both sides must posit a non-real plurality in one simple nature with no established instance of its kind outside the root: objects of one real act of understanding (personal; in the analyst's assessment, human distinctions of reason are carried by real plural representations) versus mind-independent formal distinctions a parte rei (A4; the Scotist precedent is contested by Ockham's identity objection). The domain-general record of the conceptualist premise does not discriminate: mind-independent accounts elsewhere use an independent realm, eliminate the items, or make them real items of composite bearers; induction from identified non-real items faces a selection effect. A4 in its template form (no aboutness, no apprehension) denies the conceptualist and content premises; a possible further price, not established, is that its counterfactual matching is aboutness under another name. The parity depends on the analyst's assessment that human non-real plurality is always carried by plural real representations.",
+  "evidence": [
+    "19d5872a-9548-4f12-a4e9-ab7038551cf9",
+    "83b91c73-7f8e-49e9-b890-c4c261709347",
+    "419e24af-22fb-46b5-998e-8b715cb43d15",
+    "1895c9f3-8099-4117-aa9e-c1c7fd4b7f87"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-27"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-27",
+    "statement_ids": [
+      "d1fb6414-976e-4833-908d-17787cca2502",
+      "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+      "b371638a-dd5a-4fe0-a5cd-d9b4545e0df8"
+    ],
+    "scope": "Horizontal family (#2145 lane H1): whether individuated, value-ranked possibilities need a mind, assessed at a constitutively simple root with no present candidates, comparing the personal payment (objects of one act of understanding) and A4's (mind-independent non-real modes) under one criterion.",
+    "assessment": "Parity. The shared demand is now derived for both sides (a non-real contained stand-in; real ideas and real directed powers are both excluded at a simple patientless root). The conceptualist premise cde7f1dd with the content premise gives the root criterion and a new conditional route to 3a32d91c that bypasses 3b40009e and d1fb6414, but it re-presents the same dispute and adds no evidence; against A4 it is a relocation: A4 denies every apprehension at the root, hence both the premise and the conclusion on the route's instances; given the rest the conclusion is equivalent only to a weakened existential form, and the premise, even restricted to the route, is strictly stronger; and its domain-general record (negations, possibilia, propositions, relations to non-existents, distinctions within one thing) does not discriminate it from A4's denial. Neither payment has an established instance outside the root; each faces a disputed objection (Euthyphro for ideas; Ockham's identity objection to formal distinction). Non-factive aboutness is established for human minds only as carried by real representations, as directedness in powers is carried by real powers, so it gives no asymmetry at a simple root; A4 in its template form also denies aboutness, at a possible but unestablished price (its counterfactual matching may be aboutness under another name). The parity rests on the analyst's assessment that human non-real plurality is carried by plural real representations. The denial of the conceptualist premise is only non-apprehension by the containing bearer; A4's mind-independence is an additional commitment, and an intermediate denier (another intellect apprehends or grounds the item) needs at a root an intellect beside it, the independent locus priced at 65805e5a (analyst judgment). The conceptualist premise is not a consequence of the classical dictum: it drops the dependence, indexes apprehension to the containing bearer and ranges over every non-real contained item. No change in the cognition criterion's overall warrant.",
+    "next_test": "1. Truthmakers for the modes: what in the one real nature makes these non-real items distinct; if they are individuated by limits, the plurality is one of negations (joins lane H2 on negative profile facts). 2. Ockham's objection without begging the question: real identity and formal non-identity as distinct relations, applied identically to A4's modes and to ideas really identical with the essence. 3. Explanatory use of the modes beyond favouring that requires them to be for the source. 4. The dictum-faithful sibling: apprehension by some apprehender, with an explicit root bridge that nothing other than the root can apprehend an item contained in it before production. 5. A pair-restricted form of fce9e0a3, if the shared signature gains a pair-restricted present-input relation. 6. Counterfactual matching versus aboutness: state the template's 'would match' relation positively and test whether it differs from aboutness in more than its name. 7. Whether one human act has several non-real objects without plural real representations; an instance would give the personal side an instance A4 lacks, while both objection rows stand; the A4 counterpart is an uncontested mind-independent non-real plurality, which the domain survey did not find.",
+    "note": "docs/notes/causal-perfection-transfer.md#do-possibilities-need-a-mind-conceptualism-and-non-real-plurality-at-a-simple-root-2026-11-27-provisional-2145",
+    "reviewed_revision": "ba8a6899fc6fc5f96869fbe986642ead2a15e7e5",
+    "review": "changes_requested",
+    "publication": "unpublished",
+    "evidence": "Branch research/h1-possibilia: focused Lean build, truth check, bundle audit, bind-check, verify-result (Comparator and NanoDa) for 19d5872a, 83b91c73 and 419e24af, orphans gate and connectivity passed locally at 71acd677d; build, affected bind-check and preflight passed at 36d6d8fbb. Two independent semantic challenges ran: of ad04834f7..95077bd33 (itemized findings not preserved) and of 36d6d8fbb (one P1, five P2s). Their repairs are listed in the note's review record and applied in the commits after each; no Lean statement or proof changed. A coordinator re-check of fb3805453 accepted the second-round repairs except residues (theorem names, the blocker's unqualified assessment, next test 7, the Challenge comment), repaired in the following commit. Published as PR #2180; Codex review of ba8a6899f raised one P1 (comment 4723624754, the denial of cde7f1dd), repaired in the following commit.",
+    "supersedes": "None. It adds a scoped assessment beside 421caba9 and 6429463e, which it leaves unchanged."
+  }
+}

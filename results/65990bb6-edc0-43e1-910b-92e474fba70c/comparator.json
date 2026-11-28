@@ -1,0 +1,14 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.RootPerfectionIntellect.exclusionFreeAdmissibleOfMemberGrounding",
+    "TruthCore.Results.Causality.RootPerfectionIntellect.constitutiveControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

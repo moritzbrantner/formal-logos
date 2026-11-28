@@ -1,0 +1,10 @@
+{
+  "id": "d7e2d77d-ebb1-4607-9534-7d344dba558a",
+  "label": "Test by numerical grounding controls of DNP_inv",
+  "subject_kind": "result",
+  "subject_id": "725538ae-ef24-4c5f-bca9-7bab754ba1aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
+  "note": "Tests the scope of the invariant-setup exclusion: qualitative chance variation alone does not identify a quantitative law, and a stronger calibration or full symmetry can determine the law without making effects deterministic. It neither supports nor refutes DNP_inv."
+}

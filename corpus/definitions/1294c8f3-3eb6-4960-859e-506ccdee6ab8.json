@@ -1,0 +1,9 @@
+{
+  "id": "1294c8f3-3eb6-4960-859e-506ccdee6ab8",
+  "label": "CONTAINED_IN_3, virtual: in the bearer without being apprehended by it",
+  "term": "virtual containment (ContainsVirtually)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainsVirtually",
+  "definition": "ContainsVirtually Contains Apprehends b e: the item e is contained in the bearer b and b does not apprehend it: any contained, unapprehended item, for example a power of b to produce a candidate, a mode in which b's nature is imitable by it, b's one undifferentiated nature, or a sub-personal item of a composite bearer. Examples: a disposition directed to a manifestation it does not represent; on the impersonal imitability-exemplar account, the modes of imitability of the source's nature. Non-examples: an apprehended idea; an item b neither contains nor produces. It includes, but is wider than, virtual containment of a perfection in a cause in the q.4 a.2 sense (DEF d7e7ae08-0ebe-519d-ba9d-e349998103dc).",
+  "note": "Stipulative analyst notion (#2145 premise lane C), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Individuating non-present candidates: the axiarchic rival and the cognition criterion'. It is the sense the impersonal good-general rival uses for its contained stand-ins (control row 2 of AxiarchicControls)."
+}

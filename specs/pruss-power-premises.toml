@@ -124,6 +124,7 @@ lean = "Model.TwoMemberCollective"
 paraphrase = "Premise-free finite model (structural surrogate, not metaphysical possibility): with two actual contingent concreta c and d (each possibly absent alone and jointly) and a necessary g, P1-prime, P2-prime, P3-prime, P4-prime and P5 hold at the actual world with g holding, at w, a power (PowerFor) for exactly the joint absence of c and d; yet the varying-holder distributive grounding fails: no being at the actual world has a power for c's absence alone. So the whole-to-member step for powers (the analogue of C1's premise B, applied to PowerFor) is not valid as typed. Unlike the replacement model of the controls, where one actual contingent makes collective and distributive coincide, this model separates them."
 definitions = ["bf7eddca-8291-4744-8470-379babcd7781", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL"]
 disambiguations = ["197f0097-f2ae-4a47-8770-3d43758f737b", "DISAMB-CONCRETE-ABSTRACT-CRITERIA", "DISAMB-KANT-CONTINGENCY"]
+connection_plan = { target_statement_id = "b90ee2de-8ae5-438b-bea4-e3158889c3e7", missing_bridge = "Certify the same two-member collective absence fixture with the five actual-roster premises and the separately registered excluded-middle premise of the necessary-holder route.", blocker = "TwoMemberCollective certifies the actual-roster premises and failure of individual absence powers. Its finite power assignment does not provide unrestricted ExcludedMiddle." }
 
 [[argument]]
 id = "Pruss power premises: two-member collective-without-distributive model checked"
@@ -248,7 +249,7 @@ subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
 predicate = "tests"
 object_kind = "statement"
 object_id = "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2"
-note = "Omit the exercise-difference premise. In inertG at false, g is a concrete, necessarily present holder of the actual-roster absence power. The giving relation is empty at both worlds, so the necessary varying-giver conclusion fails despite the other premises."
+note = "Omit the exercise-difference premise. In inertG at false, g is a concrete, necessarily present holder of the actual-roster absence power. The giving relation is empty at both worlds, so the necessary varying-giver conclusion fails. The remaining nonlogical premises hold."
 
 [[relation]]
 id = "76c5db7c-db59-44c3-8d30-3f66fce60d5b"
@@ -341,16 +342,6 @@ object_id = "18ad47bf-e45d-4f0b-866e-e1e2697d2229"
 note = "In theistG at false, g exists and holds a power for the joint absence of the roster containing c. There is an accessible world omitting c, and the transfer assigns the same holder g power over c's esse. The four premises hold together."
 
 [[relation]]
-id = "c31d7a13-9aa4-4b48-8450-a3ebfb844320"
-label = "Test by PrussPowerPremises.prussPowerControls (61e207fc)"
-subject_kind = "result"
-subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
-predicate = "tests"
-object_kind = "argument"
-object_id = "61e207fc-db4c-4afb-8dba-0155e035a4df"
-note = "In theistG at false, c is a contingent concretum and absent at true. The present concrete holder g gives c being at false and has a different giving pattern at true. Grounding, exercise difference, holder concreteness and both possibility and population conditions hold."
-
-[[relation]]
 id = "7156b5a3-8209-431c-9250-62ad5cada4da"
 label = "Test by PrussPowerPremises.prussPowerControls (f872a512)"
 subject_kind = "result"
@@ -371,21 +362,11 @@ object_id = "11afcb55-dea9-4d5b-a992-34de8852394e"
 note = "In theistG at false, g gives c being and withholds it at true. The actual-absence withholding predicate and the bridge to g's esse power over c hold jointly."
 
 [[relation]]
-id = "462e9ec7-bda3-4ad8-bfd1-4dcc0633741f"
-label = "Test by PrussPowerPremises.prussPowerControls (81b1b020)"
-subject_kind = "result"
-subject_id = "8ad1804e-06d1-4491-ba96-d3382245f2ad"
-predicate = "tests"
-object_kind = "argument"
-object_id = "81b1b020-b8d6-45fe-9f3a-18689173c6a6"
-note = "In theistG origin false and accessible absence world true are mutually accessible. Contingent c is present at false only. The same concrete g exists at both and has the power for false obtaining at true. The nonlogical premise bundle is jointly satisfied."
-
-[[relation]]
-id = "9d810671-1792-48d1-ac39-5bdbeecad0bb"
-label = "Test by PrussPowerPremises.twoMemberCollective (259571ae)"
+id = "6cdbbf4a-3dba-47fb-a314-c21a2af8e5b4"
+label = "Test by PrussPowerPremises.twoMemberCollective (95bf8780)"
 subject_kind = "result"
 subject_id = "9bba1325-f031-450d-b506-f91ca9f0bc46"
 predicate = "tests"
-object_kind = "argument"
-object_id = "259571ae-36c0-44ff-804b-d3f138c0a363"
-note = "Tests whether the route has a model with two contingent concreta at the origin even when powers for individual absence fail. In twoMemberG, c and d are present and contingent at (true, true). The concrete g holds the joint-absence power there and is present at accessible (false, false), where both members are absent. The model jointly witnesses all five nonlogical premises. The argument separately assumes excluded middle."
+object_kind = "statement"
+object_id = "95bf8780-0e3c-49ba-b636-2274e2997a30"
+note = "At the selected world (true, true), c and d are both present and contingent. Joint absence fails there and holds at the accessible world (false, false), so both antecedents of ActualAbsenceGrounded hold. The present g has the stipulated propositional PowerFor their joint absence. Individual absence grounding fails."
