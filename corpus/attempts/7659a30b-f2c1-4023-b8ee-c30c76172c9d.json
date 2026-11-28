@@ -29,5 +29,20 @@
       "date": "2026-11-28",
       "pr": "PR-2144"
     }
-  ]
+  ],
+  "current_assessment": {
+    "date": "2026-11-28",
+    "statement_ids": [
+      "55892476-1e99-444b-a6bd-5430b0f115c4"
+    ],
+    "scope": "Numerical grounding controls (result 725538ae) as a probe of the quantitative CHANCE_3 rival to DNP_inv at the invariant source.",
+    "assessment": "A quantitative CHANCE_3 rival must add a calibrated mass or a full symmetry to determine its law; histories, support and strict ranking leave it open, and the tied-optimality clause is a constant-quality stand-in that constrains nothing. A contingent brute law and a contingent adoption with no admitted reason pay the same price under the contingent-fact PSR (#2151 lawSelectionFork clause 3). No premise discharged; DNP_inv neither supported nor refuted.",
+    "next_test": "Specify an objective chance law on complete outputs, identify its alleged ground in the simple source, and test uniqueness without building the law in as a parameter; replace the tied-optimality stand-in by 78af5042's quality order if the optimal-output comparison is pursued.",
+    "note": "docs/notes/will-versus-chance.md#quantitative-grounding-of-the-chance-rival-2026-11-27",
+    "reviewed_revision": "9f0557a028ce1df3cf3c837756c4d4f35e03a74e",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic review of PR #2144 at 9f0557a02 (2026-11-28): no P1; four P2s (TiedOptimalLaw holds for every law; Dstit versus Cstit naming in the STIT conjunct; tests note should name the CHANCE_3 cost; symmetric price for a brute adoption). All four repaired in the following commit; the repair is not re-reviewed.",
+    "supersedes": "None."
+  }
 }

@@ -4,7 +4,7 @@
   "input_statement_ids": [],
   "output_statement_id": "5a288e2a-71f6-497e-be4c-0f3ad7957834",
   "rule": "PMF normalization, finite calibration and STIT choice partitions",
-  "meaning": "Premise-free. Normalization gives every positive binary pair a full-support law; explicit eighths give two laws with the same support, strict ranking and tied optima; normalization makes one mass (or full exchange symmetry) fix a binary law; explicit eighths on three points give two laws with the same two-element-orbit symmetry and different singleton mass; two STIT partitions of the same histories separate seeing to the giving and withholding from their mere occurrence. Model-witnessed separations and finite calculations only; no premise is established.",
+  "meaning": "Premise-free. Normalization gives every positive binary pair a full-support law; explicit eighths give two laws with the same support and strict ranking (the tied-optimality clause holds for every law, so it constrains nothing); normalization makes one mass (or full exchange symmetry) fix a binary law; explicit eighths on three points give two laws with the same two-element-orbit symmetry and different singleton mass; two STIT partitions of the same histories separate seeing to the giving and withholding from their mere occurrence. Model-witnessed separations and finite calculations only; no premise is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

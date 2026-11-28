@@ -861,7 +861,9 @@ noncomputable def twoOrbitLaw (p q : ℝ≥0∞) (h : p + p + q = 1) : PMF (Fin 
   PMF.ofFintype ![p, p, q] (by
     simpa [Fin.sum_univ_succ, add_assoc] using h)
 
-/-- Both complete outputs have the same optimal quality. -/
+/-- Both complete outputs have the same optimal quality. The quality is the
+constant 0, so this holds for every law and constrains nothing: a stand-in that
+does not use the quality order of the optimal-output rival. -/
 def TiedOptimalLaw (μ : PMF Bool) : Prop :=
   ∀ b, 0 < μ b →
     TruthCore.Modal.OptimalCreationChoice.Optimal (Set.univ : Set Bool) (fun _ => (0 : Nat)) b

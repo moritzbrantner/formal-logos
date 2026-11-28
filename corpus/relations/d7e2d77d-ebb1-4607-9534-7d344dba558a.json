@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
-  "note": "Tests the scope of the invariant-setup exclusion: qualitative chance variation alone does not identify a quantitative law, and a stronger calibration or full symmetry can determine the law without making effects deterministic. It neither supports nor refutes DNP_inv."
+  "note": "Probes the cost of a quantitative version of the CHANCE_3 rival (the denial of DNP_inv at the invariant source): qualitative chance variation alone does not identify its law, and the rival must add a calibration or a full symmetry to determine one, which still leaves the effect undetermined. It neither supports nor refutes DNP_inv."
 }
