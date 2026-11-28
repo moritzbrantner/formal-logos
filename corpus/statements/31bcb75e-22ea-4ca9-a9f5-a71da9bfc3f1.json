@@ -1,9 +1,14 @@
 {
   "id": "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
   "label": "Selection preserves accessible effect-present source-absence witnesses",
-  "paraphrase": "OPEN witness-preservation assumption at the supplied origin. For every effect and candidate source, if some accessible world has the effect present and the source absent, at least one accessible world with that same contrast is selected for the source-absence antecedent.",
+  "paraphrase": "OPEN witness-preservation assumption at the supplied origin. For every effect and candidate source, if some accessible world has the effect present and the source absent (CAN_BE_WITHOUT_1), at least one accessible world with that same contrast is selected for the source-absence antecedent. Jointly with soundness 2bdb0be1 and a free selector it is equivalent to 000e1f65 read as CAN_BE_WITHOUT_1 (track_preserve_iff_strict, #2103).",
   "lean_declaration": "TruthCore.Causality.CounterfactualDependence.PreservesAccessibleAbsenceWitnesses",
   "definition_ids": [
-    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c",
+    "b93d877f-6055-493c-93d6-99cbd52ad4b7",
+    "88302e83-898f-4308-8e8c-a8d1daa97ef4"
+  ],
+  "disambiguation_ids": [
+    "d3808588-cf71-4047-8417-d16156c04f47"
   ]
 }

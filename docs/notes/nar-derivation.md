@@ -679,6 +679,27 @@ makes a further distinction: contingent outputs can share a fixed
 recipient across all the represented optimal cells.
 [Registered result](../../corpus/results/5ce72737-3acd-4b56-994f-9292d96e55b5.json)
 
+**Re-presentation boundary (#2103 challenge, 2026-11-28).** The theorem
+quantifies over the branching frame, the moment and the history-to-world map,
+and no record fixes them. When the profile has at most one actual root, which a
+common actual root secures (`uniqueRootOfCommonRoot`), some representation satisfies both STIT premises exactly
+when premise (a) holds (`cellsRepresentationIff`). The converse takes one
+history for each root, grounded recipient and withholding witness, the
+discrete partition, and the witness as mapped world; every cell is then a
+single history. The whole-cell clause, which distinguishes withholding from
+one history of nonproduction, is used only at the representative. So
+`5ce72737` re-presents (a) in the choice register. It adds warrant for (a)
+only if an independently fixed decision partition and map are supplied, and
+the frontier's computed closure of `fbd0a6d3` through it records no further
+warrant. The same holds wherever `0dd78706` and `46a468b2` are used together
+with a free frame and map, as in `fccc4968`. Disambiguation `419a65c2`
+separates the two uses of "withhold": WITHHOLD_1, control over a whole choice
+cell (`0dd78706`), and WITHHOLD_2, an accessible world where the root exists
+and does not give the recipient being (`fbd0a6d3`). The argument passes from
+sense 1 to sense 2 only through `46a468b2`, so premise (a) carries none of the
+agentive content of sense 1. The argument's `strong_version_needed` records
+why the cell form is kept although a one-history premise would suffice here.
+
 **Provisional judgment.** The strongest support here for the conditional
 freedom reading is the controlled alternative: the same rational giver
 can have a producing cell and an available withholding cell while its

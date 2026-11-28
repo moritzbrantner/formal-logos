@@ -84,6 +84,32 @@ def BeingWithoutHasAccessibleWitness (f : CausalityFrame W B T R)
   ∀ x y, CanBeWithout x y → ∃ v, f.history.ontic.frame.access w v ∧
     f.history.ontic.ExistsAt v x ∧ v ∈ absent f y
 
+/-- CAN_BE_WITHOUT_1 (unindexed accessible contrast): some world accessible
+from `w` in the shared ontology has `x` existing and `y` absent. The relation is
+the frame's one accessibility relation, the same in the soundness, coverage,
+preservation and realization premises of this route. It names no agent whose
+power could bring the contrast about. Which real possibility that accessibility
+represents (for example possibility in the order of the beings' own natures
+and causes) is OPEN; the type does not encode it. -/
+def AccessibleContrast (f : CausalityFrame W B T R) (w : W) (x y : B) : Prop :=
+  ∃ v, f.history.ontic.frame.access w v ∧ f.history.ontic.ExistsAt v x ∧ v ∈ absent f y
+
+/-- CAN_BE_WITHOUT_2 (through another's power): some being `z` can, by its
+power, bring about from `w` a world where `x` exists and `y` is absent.
+`CanBringAbout z w v` is an explicitly supplied PRIMITIVE: `z`'s power suffices,
+from `w`, for `v`'s obtaining. No relation between it and the frame's
+accessibility is assumed, in either direction. -/
+def ContrastThroughPower (f : CausalityFrame W B T R) (CanBringAbout : B → W → W → Prop)
+    (w : W) (x y : B) : Prop :=
+  ∃ z v, CanBringAbout z w v ∧ f.history.ontic.ExistsAt v x ∧ v ∈ absent f y
+
+/-- The realization premise maps being-without into CAN_BE_WITHOUT_1. -/
+theorem beingWithoutHasAccessibleWitness_iff (f : CausalityFrame W B T R) (w : W)
+    (CanBeWithout : B → B → Prop) :
+    BeingWithoutHasAccessibleWitness f w CanBeWithout ↔
+      ∀ x y, CanBeWithout x y → AccessibleContrast f w x y :=
+  Iff.rfl
+
 /-- For each effect and putative source, preserve at least one accessible
 contrast with the effect still present whenever such a contrast exists. -/
 def PreservesAccessibleAbsenceWitnesses (f : CausalityFrame W B T R)

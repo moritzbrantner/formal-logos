@@ -90,6 +90,20 @@ theorem willed_two_way_of_cell
   exact ⟨(admit h).2, p, x, world k, owned, rationalPower, (admit k).1, (admit k).2,
     same k, givesBy, withheld⟩
 
+/-- WITHHOLD_1 (choice-cell withholding): every history in `g`'s choice cell
+represented by `k` maps to a world where `g` does not give `x` being. This is
+agentive STIT control over the cell (definition c54f0922), not one history of
+nonproduction, and it says nothing about accessibility or about `g`'s presence. -/
+def WithholdsByCell (F : CausalityFrame W B T R) (world : C.Through m → W) (g x : B)
+    (k : C.Through m) : Prop :=
+  Cstit g k (fun j => ¬ Produces F world g x j)
+
+/-- WITHHOLD_2 (accessible per-effect non-giving): some world accessible from
+`w` has `g` existing and not giving `x` being. No choice, control or agency is
+part of this sense; it is the matrix of `NarDerivation.ActualRootsWithholdEachGrounded`. -/
+def WithholdsAtAccessible (F : CausalityFrame W B T R) (w : W) (g x : B) : Prop :=
+  ∃ v, F.history.ontic.frame.access w v ∧ F.history.ontic.ExistsAt v g ∧ ¬ GivesTo F v g x
+
 /-- OPEN, for the selected grounding profile. Each actual root's grounded
 actual concretum admits an entire withholding cell. The cell may vary with
 the recipient; this is weaker than a cell that withholds all creation.
@@ -106,5 +120,27 @@ roots. The root withholding result applies it only at each chosen representative
 def RootHistoriesAdmissible (F : CausalityFrame W B T R) (world : C.Through m → W)
     (concrete : B → Prop) (G : W → B → B → Prop) (w : W) : Prop :=
   ∀ g, ActualRoot (groundProfile F concrete G) w g → Admissible F world w g
+
+/-- The cell premise is WITHHOLD_1 for each actual root and grounded actual
+concretum. -/
+theorem rootsHaveWithholdingCells_iff (F : CausalityFrame W B T R) (world : C.Through m → W)
+    (concrete : B → Prop) (G : W → B → B → Prop) (w : W) :
+    RootsHaveWithholdingCells F world concrete G w ↔
+      ∀ g x, ActualRoot (groundProfile F concrete G) w g →
+        ActualConcrete (groundProfile F concrete G) w x →
+        ActualConcreteGround (groundProfile F concrete G) w g x →
+        ∃ k, WithholdsByCell F world g x k :=
+  Iff.rfl
+
+/-- Premise (a) of the NAR route is WITHHOLD_2 for each actual root and
+grounded actual concretum. -/
+theorem actualRootsWithholdEachGrounded_iff (F : CausalityFrame W B T R)
+    (concrete : B → Prop) (G : W → B → B → Prop) (w : W) :
+    TruthCore.Causality.NarDerivation.ActualRootsWithholdEachGrounded F concrete G w ↔
+      ∀ g x, ActualRoot (groundProfile F concrete G) w g →
+        ActualConcrete (groundProfile F concrete G) w x →
+        ActualConcreteGround (groundProfile F concrete G) w g x →
+        WithholdsAtAccessible F w g x :=
+  Iff.rfl
 
 end TruthCore.Causality.GivingChoice

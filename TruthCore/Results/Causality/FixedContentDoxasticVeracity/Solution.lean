@@ -25,6 +25,30 @@ theorem accurateFromFixedContent (σ : Signature) (V : Veracity σ) {W Content :
   have believed := calibrated.2 g god attributes k contentAssent
   exact names ▸ aligned (believed c.actual (access g god attributes))
 
+/-- Structural boundary (#2103): for any fixed context with actual access,
+some content type, interpretation, report and assent relation satisfy the
+calibration exactly when divine assent is accurate. The witness is
+disquotational: `Prop` contents true at every world exactly when they hold,
+the identity report, and assent identified with the legacy assent. So with
+these parameters unpinned the premise pair adds no constraint beyond the
+conclusion, as `unrestrictedRepresentationIff` shows for the superseded
+interface. Not a registered result. -/
+theorem fixedContentRepresentationIff (σ : Signature) (V : Veracity σ) {W : Type}
+    (c : Context σ.Being W) (access : DivineActualAccess σ c) :
+    (∃ (Content : Type) (S : Semantics W Content) (report : Content → Prop)
+        (A : Attitudes σ Content), FixedAssentCalibration σ V c S report A) ↔
+      GodAssentAccurate σ V := by
+  constructor
+  · rintro ⟨Content, S, report, A, calibrated⟩
+    exact accurateFromFixedContent σ V c S report A calibrated access
+  · intro accurate
+    refine ⟨Prop, ⟨fun _ k => k, Not, fun _ _ => Iff.rfl⟩, id,
+      ⟨fun _ _ => False, V.Believes⟩, ?_, ?_⟩
+    · intro g _ _ p assent
+      exact ⟨p, assent, rfl, id⟩
+    · intro g god attributes k assent _ _
+      exact accurate g god attributes k assent
+
 open TruthCore.Causality.DivineVeracityContent1410.Control (σ a selective)
 open TruthCore.Causality.FixedContentDoxasticVeracity.Control
   (semantics pointed veracity always alwaysAssents)
