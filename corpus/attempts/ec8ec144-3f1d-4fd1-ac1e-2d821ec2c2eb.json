@@ -1,0 +1,40 @@
+{
+  "id": "ec8ec144-3f1d-4fd1-ac1e-2d821ec2c2eb",
+  "label": "Demand propagation along selected contingent reasons as a route to the local existence PSR",
+  "date": "2026-11-28",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+  ],
+  "kind": "derivation",
+  "outcome": "rejected",
+  "summary": "Draft #2015 added a DemandPilot section to ExistentialInheritance/Solution.lean (commits e34a9d54b..6ad1d0e94, last carried at 98543739d), never compiled or registered. It reused the #312 existence-reason Model and the BruteContingencyParity WhyStance. Definitions: SelectedContingentReason m w selected x y (some selected admitted reason token for x's existence has source y, and y is contingent at w); DemandPropagates (if the stance requires a reason why x exists and x has a selected contingent reason about y, it requires one why y exists). Results: reasonOfHonoredDemand (WhyHonors plus a required and accepted existence fact yields a #312 token); demandAlongSelectedReasons (induction on ReflTransGen moves the demand along a finite selected path); psrFromDemandCoverage (WhyHonors, acceptance of every contingent existence fact, DemandPropagates and coverage of every contingent x by a path from some demanded t give NoBruteContingentExistenceAt m w, the Lean declaration of 608a262d); bruteForcesDemandBreak (an honoring stance that accepts an unexplained y reached from a demanded x violates DemandPropagates); containedExemption (on the unchanged ExistentialInheritance Contained model at world false, a stance demanding a reason only for derivative 0 honors that demand, its reason is about the contingent base, it accepts the base without demanding a reason, 608a262d fails, and DemandPropagates fails).\n\nWhy rejected as a registered support option or diagnostic for 608a262d. (1) psrFromDemandCoverage is a genuine short derivation, not a transcription, but its warrant does not go beyond 608a262d restated. Its proof factors into two steps: coverage and DemandPropagates entail that the stance requires a reason why every contingent existence fact obtains; then WhyHonors and acceptance give each such fact a reason. Coverage uses ReflTransGen, so it is also met by the trivial cover in which every contingent existence is itself demanded. WhyHonors is a world-side premise that every demanded, accepted fact has a reason. The bundle is therefore the local existence PSR presented as an honored stance that demands every contingent existence. A different presentation of the same assumption is not additional evidence (AGENTS.md). Non-trivial coverage would add content only for contingents reachable from a demanded existence; isolated contingents still need direct demand. (2) bruteForcesDemandBreak has the structure of the registered parity result 6e7f5afd, with path propagation in place of FeatureUniform. The ParityMap fork in a1056aab already proves that a stance which requires why t, honors its demands and accepts a brute o is not Uniform for t and o. The path form adds only that the propagation norm, a different consistency norm, also fails. Its logical relation to uniformity was not established (see the residue below). (3) containedExemption shows that the contained-bruteness rival honors a restricted demand while denying 608a262d and DemandPropagates. That a stance can honor its demands while holding a brute contingent rival is already witnessed in the parity map (a1056aab: HoldsBruteRival evidential naturalist false .found). b2SupportControls (4c79358e) separately witnesses that brute contingent existence is consistent with the other B2 support premises. The countermodel shows the norm is needed in one formal interpretation, not that the rival is false. None of the three discriminates between 608a262d and the brute-contingency rival.\n\nResidue kept here, not in Lean: DemandPropagates is the stance-level form of the explanatory buck-passing intuition. No strength comparison with FeatureUniform is claimed. On the recorded definitions, SelectedContingentReason requires contingency only of the reason's source y, and DemandPropagates quantifies over every target x. So uniformity in the feature 'contingent existence fact' does not imply propagation: a stance can demand reasons for exactly the noncontingent facts and fail propagation at a demanded necessary x whose selected reason is about a contingent y (review of PR-2015). For contingent targets x, uniformity in that feature would give the propagated demand, since x and y share the feature. That restricted comparison, and any strictness, are unverified and not compiled. A rival that cites a contingent y as the reason for x and then exempts y must deny it. Its warrant is the open question; it is not the stance's own requirement. The regress and termination side is already covered by existing results: ContingentAncestry.necessaryAncestor (ead7c30a), ExplanatoryClosure certificate (f85ac952), WeakAccountNecessaryBeing.necessaryBeing (56278c18) and DerivativeJointPower.trap_obstruction. The tooling half of #2015 moved to PR #2185.",
+  "blocker": "A discriminating test needs either (a) independent warrant that the selected reason token is a genuine actual existential input of the target, so that DemandPropagates follows from what explaining x's existence requires rather than from the stance's choice, or (b) an argument that a stance honoring a demand for one contingent existence is committed to propagation without presupposing 608a262d. Reopen with such a bridge into the existing grounding/foundedness interfaces (necessaryAncestor, WeakAccountNecessaryBeing) or the inductive-supply interface (DerivativeJointPower).",
+  "evidence": [
+    "6e7f5afd-4d72-466d-bba0-b9eead60d2d2",
+    "a1056aab-cace-47f4-a12f-f29519964d59",
+    "4c79358e-1872-41a5-8a34-7c57eaeec756",
+    "ead7c30a-40a1-5207-8c52-3f1e9443edc6",
+    "f85ac952-c629-597c-b903-741815744b9a",
+    "56278c18-0aa8-5804-84d5-9a6d588b48e8",
+    "PR-2015",
+    "PR-2185"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2015"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2015"
+    }
+  ]
+}
