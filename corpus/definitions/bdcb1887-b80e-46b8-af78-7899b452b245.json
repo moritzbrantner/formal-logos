@@ -1,0 +1,9 @@
+{
+  "id": "bdcb1887-b80e-46b8-af78-7899b452b245",
+  "label": "Bernoulli-geometric observation law",
+  "term": "Bernoulli-geometric observation law",
+  "definition": "The product of Mathlib's Bernoulli law with parameter p on the report type and the geometric law with parameter one half on the instance index of Bool x Nat. It is a sampling law over residual reports, not the design/natural comparison prior.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the plenitude controls (#2143); no source attribution or physical application is assumed.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.observationLaw"
+}
