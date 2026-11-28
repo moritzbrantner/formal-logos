@@ -1,0 +1,9 @@
+{
+  "id": "799e0ff7-9705-4b50-89a9-a8463c1b4f22",
+  "label": "ACTUALIZED_THROUGH_1: dependence reading, r is actual in x through a when x has both in act",
+  "term": "dependence reading of actualized through",
+  "definition": "`DeflatedActualizedBy F x r a`: x has r in act and has a in act (F.InAct x r ∧ F.InAct x a). At a = esse it is the dependence ground of q.4 a.1 ad 3 ('nihil habet actualitatem, nisi inquantum est') read as a necessary condition. Distinguishing conditions: unlike ACTUALIZED_THROUGH_2 it does not say that a is the act by which r is actual; views that recognize no act of being beyond instantiation grant it.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.DeflatedActualizedBy",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from ST I q.4 a.1 ad 3, q.3 a.4 co. and De ente capp.3-4 (Baur/Koch), read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "3fc924f3-6226-41ae-8032-f63ea44f27a9",
+  "label": "Global mirror image and global handedness: a world map σ and a world feature H that it reverses",
+  "term": "global mirror image (σ) and global handedness (H)",
+  "definition": "HandednessReversedAt σ H w := H (σ w) ↔ ¬ H w, for a map σ : W → W on the frame's worlds (the global mirror) and a world feature H : W → Prop (global spatial handedness: the actual-handed arrangement obtains). The mirror image of w has the opposite handedness. Here σ is any world map; its two consequential readings are separate senses with distinct Lean types in disambiguation dec35f6f (term MIRROR): MIRROR_1, spatial reflection P (DEF 567674e6, SpatialReflection), and MIRROR_2, CPT conjugation (DEF 7147bcb5, CPTConjugation). Both are intended to reverse spatial handedness; whether a given map does at w is the open premise HandednessReversedAt (for MIRROR_2, statement 314f6b15). The registered mirror argument uses MIRROR_2 through the CPT-sense premises at τ.image; the generic declarations and the fork certificate are untagged and cover any map. Both σ and H are explicitly identified PRIMITIVE parameters of TruthCore.Modal.MirrorCollapse; nothing in Lean says which features σ preserves. Preservation enters only through the premise EssentialTruthsPreservedByMirrorAt.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.HandednessReversedAt",
+  "note": "Stipulated for #2145 lane M (owner question 2026-11-27; docs/notes/simplicity-collapse-555.md, section on the relation-of-reason account and the mirror-world rule). Physics background, navigation only and no attributed claim: the weak interaction is not invariant under spatial reflection P (Wu et al. 1957; V−A coupling), nor under CP; local Lorentz-invariant quantum field theory is invariant under CPT. So on dispositional essentialism the P-image of the actual world violates the law-grounding natures of creaturely kinds (option 1 at a creature), while the CPT image does not. The owner's left/right example survives as the CPT-mirror. Leibniz–Clarke (sourced statement 7dd2af35 concerns translation, not reflection) and Kant's incongruent counterparts are navigation only. A relationalist about global orientation rejects a global handedness feature and so denies HandednessReversedAt; identifying a world with its mirror image (σ w = w) makes it fail for every H, but for the CPT map that identity needs more than orientation relationalism: charge conjugation and time reversal must be identified away too. Distinct from translation (TruthCore.Space.TranslationBoundary), which preserves orientation, and from a value tie between qualitatively different arrangements, which a qualitative rule can break.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "σ maps each world to its global mirror image (any world map; the P and CPT readings are the senses MIRROR_1 and MIRROR_2 of disambiguation dec35f6f); H holds at a world when its spatial arrangement has the actual handedness. A model supplies both; Lean fixes only their types.",
+    "examples": [
+      "A world containing one left hand and nothing else; its P-image contains one right hand.",
+      "The CPT conjugate of the actual world: every chiral molecule replaced by the antimatter molecule of opposite handedness, the history run in reverse."
+    ],
+    "exclusions": [
+      "A translation or rotation, which preserves handedness.",
+      "A world that differs qualitatively from w (a different arrangement of relations), even if equally good.",
+      "Handedness relative to a part of the same world (this hand relative to that one), which the mirror preserves."
+    ],
+    "open_obligations": [
+      "Whether global handedness is a genuine feature of a world (orientation substantivalism) or nothing (relationalism): the premise HandednessReversedAt is what the relationalist denies.",
+      "Which features σ preserves: entered only for essential truths, through EssentialTruthsPreservedByMirrorAt; under the P reading that premise is doubtful on dispositional essentialism."
+    ]
+  }
+}

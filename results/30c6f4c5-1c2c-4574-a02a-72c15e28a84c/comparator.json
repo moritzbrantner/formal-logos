@@ -1,0 +1,16 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ImpersonalFoundationJoint.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ImpersonalFoundationJoint.actualRootsApprehendThroughGoodGeneralFavouring",
+    "TruthCore.Results.Causality.ImpersonalFoundationJoint.apprehensionControls",
+    "TruthCore.Results.Causality.ImpersonalFoundationJoint.criterionTable",
+    "TruthCore.Results.Causality.ImpersonalFoundationJoint.jointConfigurations"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

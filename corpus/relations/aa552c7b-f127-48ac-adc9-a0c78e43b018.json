@@ -1,0 +1,10 @@
+{
+  "id": "aa552c7b-f127-48ac-adc9-a0c78e43b018",
+  "label": "Test by RootPerfectionIntellect.strictSeparates (89c988d9)",
+  "subject_kind": "result",
+  "subject_id": "d6bfcd0d-d172-46ef-9b55-3183678903e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+  "note": "In the separating assignment the necessity direction fails (the admissible profile containing self-excluding noesis is not exclusion-free) while the sufficiency direction holds, so the difference is not implied by the sufficiency direction."
+}

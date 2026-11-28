@@ -1,0 +1,199 @@
+[batch]
+vocab = "TruthCore.Explanation.InquiryClosure"
+results = "TruthCore.Results.Explanation.InquiryClosure"
+
+[[statement]]
+id = "Every fact true at a world has an admitted reason there"
+lean = "TruthCore.Explanation.PSRStrength.FactPSR"
+definitions = ["179d4557-bda1-59c4-938a-b91e9974a27f", "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"]
+disambiguations = ["bb604f7b-9e16-4168-b433-be76bd3995a9"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the unrestricted fact PSR at w in the #755 arena. Every fact that holds at w has some fact admitted at w as a reason for it (EXPLAINED_ABSENCE_1, the admitted-explicability property). An admitted reason need not be true, necessitating, independent of its target or a genuine explanation; those are separate quality conditions. It is not restricted to contingent facts. With excluded middle it holds wherever the contingent-fact PSR holds once every true necessary fact is admitted as a reason for every true necessary fact (necessaryReasons, InquiryScopeMap clause 3), so its reach beyond contingent facts constrains nothing about which reason a necessary fact has."
+
+[[statement]]
+id = "Every lack fact of an actual root has an admitted reason"
+lean = "RootLackPSR"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "179d4557-bda1-59c4-938a-b91e9974a27f", "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"]
+disambiguations = ["bb604f7b-9e16-4168-b433-be76bd3995a9"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d, if the arena's fact lack r d holds at w, then some fact is admitted at w as a reason for it (EXPLAINED_ABSENCE_1). It is the unrestricted fact PSR restricted to the lack facts of actual roots: a PSR for the closure of a necessary root's profile, not restricted to contingent facts. What lack r d is the fact of is fixed by the separate lack-facts premise. The #756 inquiry bridges, the contingent-fact PSR and the contingent-scoped quality conditions all hold in an arena where no root lack has a reason and this fails (InquiryScopeMap clause 11); it holds whenever the contingent-fact PSR does, with the necessary truths admitted as reasons for the necessary truths (clause 3)."
+
+[[statement]]
+id = "The arena's lack fact for an actual root holds exactly when the root lacks the determination"
+lean = "RootLackFactsAt"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845"]
+paraphrase = "OPEN fact-to-profile bridge, analyst formulation: for every actual concrete root r at w and every determination d, the arena's fact lack r d holds at w exactly when r does not really have d at w. It puts a root's absences among the facts a fact PSR quantifies over and says nothing about their reasons. lack is a supplied map from bearers and determinations to facts of the arena."
+
+[[statement]]
+id = "An actual root's absence with an admitted reason is positively fixed"
+label = "An actual root's absence with an admitted reason is positively fixed (EXPLAINED_ABSENCE_1 to _2)"
+lean = "RootLackReasonsPositive"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "88f7c656-f484-4737-a872-b2d78c604322", "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d", "04c93d61-3c02-4e68-a48d-cfc72d6882c4"]
+disambiguations = ["bb604f7b-9e16-4168-b433-be76bd3995a9"]
+paraphrase = "OPEN sense bridge, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, if the arena admits some reason at w for the fact lack r d (EXPLAINED_ABSENCE_1), then the absence is positively fixed (EXPLAINED_ABSENCE_2): either no admissible profile contains all of r's real determinations together with d, or some real determination of r requires the lack of a set containing d whose other members r has. It passes between the two senses of EXPLAINED_ABSENCE. Its rationale is that negative facts at a root have positive grounds, the rationale shared with carriage (682e6436), member grounding and E. E alone implies it for every arena (positiveLackReasonsOfNoUnexplainedAbsence); with the PSR for root lack facts, the lack facts and the necessity direction of member grounding it implies E; the reason-essence thesis, carriage and the necessity direction imply it (InquiryScopeMap clause 7)."
+
+[[statement]]
+id = "An actual root's absence has an admitted reason only if some nature excludes it"
+lean = "RootLackReasonsEssential"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"]
+disambiguations = ["bb604f7b-9e16-4168-b433-be76bd3995a9", "DISAMB-ESSENCE"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, if the arena admits some reason at w for the fact lack r d (EXPLAINED_ABSENCE_1), then some ESSENCE_6 condition on r's profile fails at every set of determinations that contains r's real determinations together with d (an essential exclusion of d). It does not say that the reason is that condition. Rationale: a root has no actual concrete ground, so whatever counts as a reason why it lacks d does so because some nature excludes d. A bare negative clause 'lacks d' in the root's nature satisfies it, as does an admissibility condition that excludes d."
+
+[[statement]]
+id = "Every absence of an actual root is excluded by some ESSENCE_6 condition"
+lean = "RootLacksEssentiallyExcluded"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"]
+disambiguations = ["DISAMB-ESSENCE"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, some ESSENCE_6 condition on r's profile (in some being's nature) fails at every set of determinations containing r's real determinations together with d. Essentialism about a root's absences with no modal premise: unlike essence-grounded modality (f6f956a1) and necessity of root absences (906f9077) it mentions no accessible world. A necessary lack that no nature grounds (modal primitivism or brutalism) denies it; a bare negative clause in the root's nature satisfies it. On lane E's selection carrier, whose source's nature is stipulated to impose only an admissibility condition excluding a second selection, a classical root whose selection of one outcome is a real intrinsic determination varying across worlds satisfies it (essentialExclusionControls, row 5)."
+
+[[statement]]
+id = "The inquiry PSR family is blind to necessary root facts and reaches E only through a sense bridge"
+lean = "InquiryScopeMap"
+definitions = ["179d4557-bda1-59c4-938a-b91e9974a27f", "02c59c61-4cd1-5698-9338-e4a37ebf71f4", "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d", "04c93d61-3c02-4e68-a48d-cfc72d6882c4", "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45", "52352824-6be9-53c6-83d4-82fed9a08cbb", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "a5452da9-32eb-47d4-98fb-0da507cf4ce5", "c48266c2-ba78-41c2-8860-61273abf0ef8", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "88f7c656-f484-4737-a872-b2d78c604322"]
+disambiguations = ["bb604f7b-9e16-4168-b433-be76bd3995a9", "DISAMB-REASON-EPISTEMIC-ONTIC", "DISAMB-ESSENCE"]
+paraphrase = "Certificate, analyst formulations. (1) For any two reason relations that agree on targets contingent at the world of evaluation, the contingent-fact PSR, NoBrute, the #756 bridges TrackingBridge, SupportCoverage, EvidenceBridge and GlobalDefeat, the skeptical-alternative presupposition NoBruteEvidenceAlternative, ReasonIndependent and IrreflexiveContingent hold of one exactly when they hold of the other; FactPSR does not (allNecessary with its reasons removed). (2) No brute-evidence alternative exists for a hypothesis true at every accessible world, and the contingent-fact PSR at every accessible world gives the skeptical presupposition. (3) Admitting every true necessary fact as a reason for every true necessary fact agrees with the original reasons on contingent targets; with excluded middle it meets FactPSR wherever the contingent-fact PSR held and turns GlobalDefeat into its unrestricted form; it keeps factivity, necessitation, distribution under the conjunct law, contingent irreflexivity and reason independence. (3b) The why-stance forms of BruteContingencyParity, which clause 1 does not cover because they bind every accepted fact a stance requires a reason why for, necessary ones included: under the same extension, with excluded middle, the contingent-fact PSR and a stance accepting only facts true at w, WhyHonors and ExcludesUnreasonedAcceptance (for every o) hold, so such a stance's demand for a reason why a root lacks d is met by an admitted reason. (4) With excluded middle, factive reasons not modally coextensive with any target (WorkIndependent at every reason) give each explained necessary truth a contingent reason; with FactPSR they are inconsistent at a world with a true fact and no contingent fact. (5) On the profile's frame, with lack facts represented and N, every lack of an actual root is necessary at w and not contingent. (6) On the profile's frame, with lack facts represented, essence-grounded modality, positive essences and the contingent-fact PSR, an unexplained absence at an actual root is a contingent lack with an admitted reason. (7) The reason-essence thesis, carriage and the necessity direction of member grounding give the sense bridge. (8) Support for root lacks that is profile-sound never supports an unexplained absence, and profile-sound support of every absence of an actual root gives E. (9) If only impure determinations require lacks and an actual root's determinations are pure, a positively fixed absence at that root is fixed by admissibility (case i or ii). (10) On the #2153 carrier, a source with profile {esse, a, b} at both worlds in the arena that admits necessary truths as reasons for necessary truths meets N, the lack facts, FactPSR at both worlds with factive, distributing, contingently irreflexive and independent reasons, every condition of (1) and the unrestricted GlobalDefeat at the actual world, with support from the observed event for its lack of noesis; the necessity direction holds for the open family; E and the sense bridge fail. (11) The same carrier with no reason for any lack meets every contingent-scoped condition of (1), and the PSR for root lack facts and FactPSR fail. Structural assignments only: not models of inquiry, evidence, essence or explanation."
+
+[[argument]]
+id = "Root lack PSR, from the unrestricted fact PSR"
+theorem = "rootLackPSROfFactPSR"
+premises = ["Every fact true at a world has an admitted reason there"]
+conclusion = "Every lack fact of an actual root has an admitted reason"
+axioms = []
+rule = "Restrict the scope to the lack facts of actual roots"
+meaning = "A lack fact of an actual root that holds at w is a fact that holds at w, so the unrestricted fact PSR gives it an admitted reason. It certifies the strength order of the two scopes. No axioms."
+description = "Strength-order certificate: the unrestricted fact PSR implies the PSR for root lack facts. Establishes no premise."
+
+[[argument]]
+id = "No unexplained absence at roots, from the root lack PSR and the sense bridge"
+theorem = "noUnexplainedAbsenceFromPositiveLackReasons"
+comparator_theorems = ["lackReasonControls"]
+premises = ["Every lack fact of an actual root has an admitted reason", "The arena's lack fact for an actual root holds exactly when the root lacks the determination", "An actual root's absence with an admitted reason is positively fixed", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
+conclusion = "9281317d-1f0a-4522-b91c-58cc07652e92"
+sense_bridges = [
+  { term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_1", to = "EXPLAINED_ABSENCE_2", statement_id = "An actual root's absence with an admitted reason is positively fixed", role = "premise" },
+  { term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_2", to = "EXPLAINED_ABSENCE_3", statement_id = "89c988d9-34b2-4aee-9e1a-bf4a304c032b", role = "premise" },
+]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "The lack fact holds, the PSR gives it an admitted reason, the bridge makes the absence positively fixed, and member grounding's necessity direction excludes a carried exclusion inside an admissible profile"
+meaning = "Fix an actual root r at w and a determination d that r lacks while some admissible profile contains r's determinations and d (case iii). The lack facts make lack r d hold at w; the PSR for root lack facts gives it an admitted reason (EXPLAINED_ABSENCE_1); the sense bridge makes the absence positively fixed (EXPLAINED_ABSENCE_2). Either no admissible profile adds d to r's determinations, against the hypothesis, or a determination of r requires the lack of a set inside that admissible profile, which the necessity direction of member grounding forbids (carriedClosureNotUnexplained). It is a relocation: E alone gives the bridge (positiveLackReasonsOfNoUnexplainedAbsence), so given the other three premises the bridge and E are equivalent, and the PSR premise is met cheaply in its own sense (InquiryScopeMap clause 3). The load is on the bridge, whose rationale is the one shared with carriage, member grounding and E. The main theorem uses no axioms. The Comparator companion lackReasonControls (three Mathlib axioms; the #2153 carrier, open family, source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other three hold and E fails: the rival whose lack of noesis has the necessary truths as admitted reasons (bridge fails), the base arena with no reasons for lacks (PSR fails), no lack fact represented (lack facts fail), and the lack of noesis carried by the pure a in a family admitting every pure profile (necessity direction fails). The rows are assignments of the stated relations, not models of explanation."
+
+[[argument]]
+id = "Sense bridge for root absences, from no unexplained absence at roots"
+label = "Positively fixed root absences, from no unexplained absence at roots"
+theorem = "positiveLackReasonsOfNoUnexplainedAbsence"
+comparator_theorems = ["lackReasonControls"]
+premises = ["9281317d-1f0a-4522-b91c-58cc07652e92"]
+conclusion = "An actual root's absence with an admitted reason is positively fixed"
+sense_bridges = [
+  { term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_1", to = "EXPLAINED_ABSENCE_2", statement_id = "An actual root's absence with an admitted reason is positively fixed", role = "conclusion" },
+  { term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_3", to = "EXPLAINED_ABSENCE_2", statement_id = "An actual root's absence with an admitted reason is positively fixed", role = "conclusion" },
+]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "An absence that is not unexplained is fixed at the admissibility level, whatever reasons it has"
+meaning = "If no actual root has an unexplained absence, then every absence of an actual root, with or without an admitted reason, is one that no admissible profile adds to the root's determinations, which is the first disjunct of a positively fixed absence. It holds for every arena, lack map and requirement relation. So the derivation of E from the bridge is a relocation. The main theorem uses no axioms. In the Comparator companion lackReasonControls, row 3 (the base arena, no reasons for lacks) satisfies the bridge vacuously while E fails, so the order is strict on that assignment."
+description = "Relocation converse: E implies the sense bridge for every arena. Not a strength fork: E is a claim in EXPLAINED_ABSENCE_3, while the bridge is a passage from EXPLAINED_ABSENCE_1 to EXPLAINED_ABSENCE_2, a difference of content, not of strength. With noUnexplainedAbsenceFromPositiveLackReasons it closes the loop E to bridge to E, so that route to E is a relocation that is connected only. Establishes no premise."
+
+[[argument]]
+id = "No unexplained absence at roots, from the root lack PSR, the reason-essence thesis and carriage"
+label = "No unexplained absence at roots, from the root lack PSR, reasons in natures and carriage"
+theorem = "noUnexplainedAbsenceFromEssentialLackReasons"
+comparator_theorems = ["lackReasonEssenceControls"]
+premises = ["Every lack fact of an actual root has an admitted reason", "The arena's lack fact for an actual root holds exactly when the root lacks the determination", "An actual root's absence has an admitted reason only if some nature excludes it", "682e6436-a44f-40d6-bc02-7cb5f4a2b754", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
+conclusion = "9281317d-1f0a-4522-b91c-58cc07652e92"
+sense_bridges = [{ term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_1", to = "EXPLAINED_ABSENCE_3", statement_id = "An actual root's absence has an admitted reason only if some nature excludes it", role = "premise" }]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "The PSR gives a root lack an admitted reason, the reason-essence thesis an excluding ESSENCE_6 condition, and carriage with member grounding puts that condition at every admissible extension"
+meaning = "Fix an actual root r at w and a determination d it lacks. The lack facts and the PSR for root lack facts give the lack an admitted reason; the reason-essence thesis gives an ESSENCE_6 condition on r's profile failing at every profile containing r's determinations and d. Every admissible profile containing r's determinations is exclusion-free (necessity direction of member grounding), so carriage (LE) puts the condition there (positiveEssenceFromCarriage). Hence no admissible profile adds d to r's determinations, so the sense bridge holds (factorization) and E follows by noUnexplainedAbsenceFromPositiveLackReasons. Unlike the essentialist route 4fef9522 it uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1). The rival with a bare negative clause 'lacks noesis' meets the PSR, the lack facts, the reason-essence thesis and the necessity direction, and denies carriage: the load is on LE, as on route 4fef9522 through 10f44921. The main theorem uses no axioms. The Comparator companion lackReasonEssenceControls (three Mathlib axioms; same carrier) gives a positive witness and, for each premise, a row where it fails, the other four hold and E fails. The rows are assignments of the stated relations, not models of essence or explanation."
+
+[[argument]]
+id = "Sense bridge for root absences, from the reason-essence thesis and carriage"
+label = "Positively fixed root absences, from reasons in natures and carriage"
+theorem = "factorization"
+comparator_theorems = ["factorizationControls"]
+premises = ["An actual root's absence has an admitted reason only if some nature excludes it", "682e6436-a44f-40d6-bc02-7cb5f4a2b754", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
+conclusion = "An actual root's absence with an admitted reason is positively fixed"
+sense_bridges = [{ term = "EXPLAINED_ABSENCE", from = "EXPLAINED_ABSENCE_1", to = "EXPLAINED_ABSENCE_2", statement_id = "An actual root's absence with an admitted reason is positively fixed", role = "conclusion" }]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "An admitted reason requires an excluding ESSENCE_6 condition; carriage with member grounding's necessity direction puts it at every admissible extension"
+meaning = "Fix an actual root r at w and a determination d it lacks whose lack fact has an admitted reason (EXPLAINED_ABSENCE_1). The reason-essence thesis gives an ESSENCE_6 condition on r's profile failing at every profile containing r's determinations and d. Every admissible profile containing r's determinations is exclusion-free (necessity direction of member grounding), so carriage puts the condition there (positiveEssenceFromCarriage). Hence no admissible profile adds d to r's determinations: the absence is positively fixed by its first disjunct (EXPLAINED_ABSENCE_2). This is clause 7 of InquiryScopeMap registered as an argument. It gives the sense bridge a derivation that does not run through E; its load is carriage and the necessity direction, as on lane E's route. The main theorem uses no axioms. The Comparator companion factorizationControls (three Mathlib axioms) gives a positive witness and rows where the reason-essence thesis or carriage fails with the bridge failing; on this carrier no row drops the necessity direction alone (see its docstring)."
+
+[[argument]]
+id = "Reason-essence thesis for root absences, from essential exclusion of root absences"
+label = "Reasons for root absences lie in natures, from ESSENCE_6 exclusion of root absences"
+theorem = "lackReasonsEssentialOfExcluded"
+comparator_theorems = ["lackReasonEssenceControls"]
+premises = ["Every absence of an actual root is excluded by some ESSENCE_6 condition"]
+conclusion = "An actual root's absence has an admitted reason only if some nature excludes it"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Drop the reason hypothesis"
+meaning = "If every absence of an actual root is essentially excluded, then in particular every absence with an admitted reason is. Given the PSR for root lack facts and the lack facts the converse holds, so the two are then equivalent. The main theorem uses no axioms. In the Comparator companion lackReasonEssenceControls, row 2 (base arena, only admissibility essential) satisfies the reason-essence thesis vacuously and fails essential exclusion, so the order is strict on that assignment."
+description = "Strength-order certificate: essential exclusion of root absences implies the reason-essence thesis, which restricts it to absences with an admitted reason. Establishes no premise."
+
+[[argument]]
+id = "No unexplained absence at roots, from essential exclusion and carriage"
+label = "No unexplained absence at roots, from ESSENCE_6 exclusion of root absences and carriage"
+theorem = "noUnexplainedAbsenceFromEssentialExclusion"
+comparator_theorems = ["essentialExclusionControls"]
+strong_version_needed = { "Every absence of an actual root is excluded by some ESSENCE_6 condition" = "The weaker reason-essence thesis excludes only absences that have an admitted reason; without the PSR for root lack facts and the lack facts it leaves an absence with no admitted reason unconstrained, and E fails there (row 2 of lackReasonEssenceControls). With those two premises it suffices, which is the separate registered route noUnexplainedAbsenceFromEssentialLackReasons." }
+premises = ["Every absence of an actual root is excluded by some ESSENCE_6 condition", "682e6436-a44f-40d6-bc02-7cb5f4a2b754", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
+conclusion = "9281317d-1f0a-4522-b91c-58cc07652e92"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "An excluding ESSENCE_6 condition fails at the admissible extension, which carriage with member grounding's necessity direction forbids"
+meaning = "Fix an actual root r at w and a determination d it lacks while an admissible q contains its determinations and d. Some ESSENCE_6 condition on r's profile fails at every profile containing r's determinations and d, so at q. The necessity direction of member grounding makes q exclusion-free, and carriage (LE) then gives the condition at q (positiveEssenceFromCarriage), a contradiction. It uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1), so it does not require the essentialist account of modality that the powers account denies (whether the powers account supplies essential exclusion is open), and on lane E's selection carrier (one stipulated nature, row 5) it does not cost the classical root N: its non-selection of the other outcome is a case (ii) absence carried by its selection (row 5). That carrier is an impure real determination, which strict root purity (3b39e0ba) excludes in other routes. The main theorem uses no axioms. The Comparator companion essentialExclusionControls (three Mathlib axioms; #2153 carrier and lane E's selection carrier) gives a positive witness, a row for each premise where it fails, the other two hold and E fails (no nature excludes noesis; a bare negative clause that nothing carries; the clause carried by the pure a in a family admitting every pure profile), and the classical selection row."
+
+[[argument]]
+id = "Inquiry PSR scope map at roots"
+label = "Inquiry PSR scope map at roots: blind to necessary facts, bridged to E"
+theorem = "inquiryScopeMap"
+sense_mixing_control = true
+premises = []
+conclusion = "The inquiry PSR family is blind to necessary root facts and reaches E only through a sense bridge"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Invariance under change of reasons for necessary targets, cheap scope extension, quality at necessary targets, sense factorization and finite controls"
+meaning = "Certificate for #2145 lane H2. The nine conditions named in clause 1 (the contingent-fact PSR, NoBrute, the four #756 bridges, the skeptical-alternative presupposition, ReasonIndependent and IrreflexiveContingent) read the reason relation only at targets contingent at the world of evaluation, and the skeptical mechanism has no purchase on a necessary hypothesis; under N every lack of an actual root is necessary, so these nine are blind to its reasons. The why-stance forms WhyHonors and ExcludesUnreasonedAcceptance do reach necessary facts; the cheap extension meets them for a stance that accepts only facts true at w, given excluded middle and the contingent-fact PSR at w (clause 3b). Extending the scope to all facts is cheap: the necessary truths admitted as reasons for the necessary truths meet the unrestricted fact PSR and keep every quality condition. The quality condition that does reach necessary targets forces contingent reasons for necessary truths, for every root alike. The step to E's sense of explained absence is the sense bridge, which the reason-essence thesis, carriage and member grounding supply. The epistemic reading of closure (every root absence known by profile-sound inference) gives E only as a completeness demand. Finite rows: the impersonal source with profile {esse, a, b} meets every inquiry condition and the unrestricted fact PSR while E fails, and with no reasons for its lacks it still meets every contingent-scoped condition. Establishes no premise."
+description = "Diagnostic certificate (#2145 lane H2): what the inquiry PSR family reaches at a root and what would carry it to E. Establishes no premise."
+
+[[relation]]
+id = "The unrestricted fact PSR strengthens the root lack PSR"
+subject_kind = "statement"
+subject_id = "Every fact true at a world has an admitted reason there"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every lack fact of an actual root has an admitted reason"
+verification_result_id = "Root lack PSR, from the unrestricted fact PSR"
+note = "Same arena and world. The strong version gives an admitted reason to every fact true at w, the weak one to the true lack facts of actual roots. No strictness result and no certified difference are registered."
+
+[[relation]]
+id = "Test by InquiryClosure.inquiryScopeMap (9281317d)"
+subject_kind = "result"
+subject_id = "Inquiry PSR scope map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9281317d-1f0a-4522-b91c-58cc07652e92"
+note = "The impersonal source with profile {esse, a, b} at both worlds meets N, the lack facts, the unrestricted fact PSR with factive, distributing, irreflexive and independent reasons, the nine conditions of clause 1 and the unrestricted GlobalDefeat, while E fails. None of those conditions, and neither why-stance form met under clause 3b, excludes a case (iii) absence at a necessary root."
+
+[[relation]]
+id = "Test by InquiryClosure.inquiryScopeMap (682e6436)"
+subject_kind = "result"
+subject_id = "Inquiry PSR scope map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+note = "Clause 7: carriage, with the reason-essence thesis and the necessity direction of member grounding, supplies the sense bridge from an admitted reason to a positively fixed absence. The inquiry family supplies at most the admitted reason, so the step to E's sense rests on carriage, not on inquiry."
+
+[[relation]]
+id = "Test by InquiryClosure.inquiryScopeMap (root lack PSR)"
+subject_kind = "result"
+subject_id = "Inquiry PSR scope map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Every lack fact of an actual root has an admitted reason"
+note = "Clause 11: every contingent-scoped inquiry condition holds in an arena in which no root lack has a reason, so none of them implies the PSR for root lack facts. Clause 3: that PSR holds whenever the contingent-fact PSR does, once the necessary truths are admitted as reasons for the necessary truths."
+
+[[relation]]
+id = "Essential exclusion of root absences strengthens the reason-essence thesis"
+subject_kind = "statement"
+subject_id = "Every absence of an actual root is excluded by some ESSENCE_6 condition"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "An actual root's absence has an admitted reason only if some nature excludes it"
+verification_result_id = "Reason-essence thesis for root absences, from essential exclusion of root absences"
+note = "Same root, profile and ESSENCE_6 relation; the weak version adds an arena and a lack map and restricts the exclusion to absences with an admitted reason. Row 2 of lackReasonEssenceControls satisfies the weak version vacuously and fails the strong one. The PSR for root lack facts and the lack facts together with the weak version give the strong one. No certified difference is registered."

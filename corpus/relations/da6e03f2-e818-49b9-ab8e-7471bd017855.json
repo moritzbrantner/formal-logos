@@ -1,0 +1,10 @@
+{
+  "id": "da6e03f2-e818-49b9-ab8e-7471bd017855",
+  "label": "The begun-or-homogeneous omission control tests the begun restriction",
+  "subject_kind": "result",
+  "subject_id": "f5e33f03-e5fd-41e5-8050-000436c7c192",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f4850897-dfe3-4adb-80ab-1b404aab71cf",
+  "note": "Comparator companion controls, part 3: in the begun history with giving at moment 0 only, the coverage premise holds because false begins at 0, the homogeneous restriction holds because false is not homogeneous, and the begun restriction and 40a97664 fail."
+}

@@ -15,7 +15,6 @@
   "meaning": "An alternative to NecessaryConcreteUnderived.checks without J1 (no contingent concrete support), J2 (well-founded union) or reflexive access. The existing necessaryActualRootOfGrounded gives one concretum that is necessary from w and has no concrete ground existing at w. Coverage then excludes an existing concrete supporter of it at every admitted world. In the proof the witness is that actual necessary root; the Lean conclusion states only that some such concretum exists. Underived means no existing concrete supporter at any admitted world, not absence of every explanation. Conditional consequence only; no premise is established.",
   "definition_ids": [
     "7266f604-f0bc-4aac-89b9-0f4cc7be5f33",
-    "c86cc1d1-c09f-5296-8ab9-2e5ddf217dce",
     "58fee8ed-9b44-5399-95c8-5d239bea898d",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "008cb21a-256c-5a90-822c-acd4591d699a",
@@ -28,8 +27,6 @@
     "f8948e28-b13a-5244-95f1-41a05cd4fff2",
     "75c193e1-bab0-5ec2-890b-9ff608b05aa7",
     "e1ff44df-ed97-5990-8424-1abd720f23ea",
-    "baddf770-36bf-542f-bb3c-2297342d5452",
-    "7ac7fea6-5b3a-5e97-b687-c76569c58429",
     "b242943a-34cc-582d-8c38-c1203b9d2c91"
   ],
   "disambiguation_ids": [

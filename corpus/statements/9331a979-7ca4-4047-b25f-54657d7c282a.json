@@ -1,0 +1,14 @@
+{
+  "id": "9331a979-7ca4-4047-b25f-54657d7c282a",
+  "label": "Some actual concrete being is at the MIRROR_2 image only if that image has the actual handedness",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: an individual excluded from the CPT image, stated in chiral form and local to that image (MIRROR_2). Some concrete being x exists at w, and if x exists at the CPT image τ.image w then H (global handedness) has the same value there as at w. It says nothing about any other world. Given reversed handedness at the CPT image it is equivalent to x's absence from that image, and that absence implies it. Example: an actual molecule, if being of its chemical kind is essential to it and its only candidate at the CPT image is its CPT counterpart, which is made of antimatter. Under sortal essentialism charge conjugation alone already changes the kind (an antimatter molecule is not of the actual molecule's chemical kind), so the example supports the absence, hence this premise, for achiral material beings as well; for a chiral molecule the reversed handedness of the counterpart is a second, unneeded kind change. So the warrant for this premise does not lie in chirality or in the reversal premise 314f6b15, though the premise is stated in the chiral form the proof uses. The example does not support the global form 'x exists only at worlds with the actual handedness', which is not used. A haecceitist who holds that the same molecule exists at the CPT image, mirrored and as antimatter, denies it; that is a higher price than identity across a mere reflection.",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.ChiralAtCPTImageAt",
+  "definition_ids": [
+    "3fc924f3-6226-41ae-8032-f63ea44f27a9",
+    "7147bcb5-56be-414e-8079-46db23329fd9",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "dec35f6f-156a-489e-a542-7681a8ab2530"
+  ]
+}

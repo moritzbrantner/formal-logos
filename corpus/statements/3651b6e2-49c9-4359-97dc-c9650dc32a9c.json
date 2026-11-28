@@ -8,5 +8,10 @@
     "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
     "ff8bf1d7-0bf9-5dda-8038-7127e3d46ec8",
     "c9d479bb-308a-5a2b-9755-ddc0170d4e35"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "2f6b9eff-84a1-5310-9abb-19985f3282c3",
+    "missing_bridge": "The calibration premise planned for the cut-inheritance statement ca58266a, from inherited esse cuts and a giver's represented contribution to CausesIn c x r. Once that route exists, this equivalence is the exact test of its cut-inheritance input on nonintrinsic bearer esse and is linked to ca58266a by tests.",
+    "blocker": "The calibration premise is unwarranted, as recorded in the plan of ca58266a, so ca58266a is not on a root route and a tests link to it would place nothing."
+  }
 }

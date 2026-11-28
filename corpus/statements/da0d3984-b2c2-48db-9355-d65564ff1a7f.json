@@ -2,5 +2,10 @@
   "id": "da0d3984-b2c2-48db-9355-d65564ff1a7f",
   "label": "Occam’s razor and finite or infinite regress: equal likelihood preserves positive prior odds",
   "paraphrase": "At a fixed common positive likelihood for the same observation, positive prior weights on a finite hypothesis and an infinite regress hypothesis give positive comparison posteriors whose odds are exactly their prior odds. Every positive real odds ratio is realized by normalized positive priors, including odds favoring either rival.",
-  "lean_declaration": "TruthCore.Causality.OccamRegress.EqualLikelihoodOdds"
+  "lean_declaration": "TruthCore.Causality.OccamRegress.EqualLikelihoodOdds",
+  "connection_plan": {
+    "target_statement_id": "e529c42f-f0a2-5ebf-9ae1-459e7f798d31",
+    "missing_bridge": "Once an argument from a zero-weight prior assignment to e529c42f exists, this theorem is an undercutting test of its prior-assignment premise, to be linked by tests: at a common positive likelihood the posterior odds equal the prior odds, so the evidence does no work and the support stands or falls with the prior assignment alone.",
+    "blocker": "No Occam support argument for e529c42f exists yet, so there is no root-path prior-assignment premise for this result to test; a tests link now would place nothing honestly."
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "id": "578e81cd-d0fb-4921-9a02-7e250d5310cb",
+  "label": "Monotone power: a power for p is a power for whatever holds at every accessible p-world",
+  "term": "monotone power for a proposition",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.PowerForMonotoneAt",
+  "definition": "PowerForMonotoneAt F PowerFor w: for every y and propositions p, q, if q holds at every world accessible from w where p holds, then a power of y at w for p is a power of y at w for q.",
+  "note": "Stipulated bridge reading of PowerFor (DEF bf7eddca): an exercise that issues in p obtaining issues in q obtaining. Its cost is that any power is then a power for whatever holds at every accessible world. The possibility reading (possibilityPower) satisfies it. See docs/notes/optimal-creation-choice.md §63."
+}

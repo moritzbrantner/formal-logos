@@ -42,7 +42,9 @@ public import TruthCore.Modal.KResearch
 public import TruthCore.Modal.Kripke
 public import TruthCore.Modal.LimitationPossibility
 public import TruthCore.Modal.LimitationSeparation
+public import TruthCore.Modal.MirrorCollapse
 public import TruthCore.Modal.ModalGrounding
+public import TruthCore.Modal.ModalOntologicalCase
 public import TruthCore.Modal.ModalPowerHolder
 public import TruthCore.Modal.NecessaryBeingMeasure
 public import TruthCore.Modal.NecessaryContingentActivity

@@ -283,3 +283,516 @@ Actual premise delta is none. This is a completed scoped application assessment
 with a precise substantive reopening condition, not exhaustion of modal inquiry
 or a new verdict on the truth of contingency, simplicity or theism. The
 coordinator owns reallocation and independent review of this full proposal.
+
+## The relation-of-reason account and the mirror-world rule (2026-11-27, #2145 lane M)
+
+Analyst formulations, attribution deferred. Module `TruthCore.Modal.MirrorCollapse`,
+results `TruthCore.Results.Modal.MirrorCollapse.Solution`, spec
+`specs/mirror-collapse.toml`. [Research record](../../corpus/attempts/6637294f-e0a8-4d16-b73c-74d47ca6c7f0.json)
+Every model below is a finite structural surrogate: it witnesses a stated formal
+interpretation, never a metaphysical possibility. Names of Leibniz, Clarke,
+Kant and Spinoza are navigation only.
+
+**Why now.** Two reviewed lanes found that the personal case's own premises
+commit the classical root to the relation-of-reason (extrinsic-decree) account
+of its contingent willing: #2174 (premise lane E: N `906f9077` fails at a root
+whose selection is a real determination, Lean-only `classicalSelectionControl`)
+and lane P (`parAlternativeExcludedAtRoot` on `research/premise-purity`: a real
+choice token with an exclusive alternative on a par in purity is excluded at a
+root by RootPurity `c78c77da`, `a30c5963`, the sufficiency direction and
+`0c8631bd`). These are one commitment found twice and are counted once below.
+
+### A. The account, stated and priced
+
+`RelationOfReasonAt p Has w a x` (DEF `5e66f74d`) on #462's `OutputProfile` with
+world-indexed real determinations `Has` (DEF `3aba5f19`): the source's intrinsic
+profile is invariant over accessible worlds; one real determination carries the
+act; the act's actual terminus is `x`; every terminus exists; `x` is contingent.
+"Explained by the act without an intrinsic variable" is made checkable by two
+notions: `IntrinsicTo` (a world fact that agrees at every accessible world at
+which the source has its actual determinations) and `Discriminates` (contrast
+relevance for one explanandum: true at `w`, false wherever the explanandum
+fails).
+
+Certificate `relationOfReason` (result `af7bc494`, registered, premise-free,
+placed by `tests` on `c94b5446` and `0c8631bd`), clause 1, proved from the account
+alone:
+
+- the act is performed at every accessible world (#555's `SameActEverywhere`);
+- it does **not** strictly suffice for the effect (by #555's `rigid_core`);
+- **no fact intrinsic to the source discriminates** the effect's presence from
+  its absence;
+- the act's terminus does discriminate it, and is **not intrinsic** to the source.
+
+"Intrinsic" here is `IntrinsicTo` (DEF `f8bd9e72`): a world-predicate agrees
+with its value at `w` at every accessible world where the source has exactly its
+actual real determinations. This actual-relative supervenience criterion is not
+membership in `Has`; it admits necessarily true extrinsic predicates and any
+predicate that covaries with the source's profile over the accessible worlds. It
+reaches a narrower metaphysical notion of intrinsicness only for properties that
+supervene on the source's determinations (an open bridge: that `Has` exhausts
+its intrinsic nature). Every "no intrinsic fact" below, and in clause 6 of the
+fork, has this scope.
+
+The certificate ranges over intrinsic facts and the terminus only; it does not
+show that the terminus is the only discriminating fact.
+
+So the account is coherent in the framework and its exact cost is #555's: at the
+intrinsic level it is the *nonnecessitating necessary act* (strict sufficiency
+and contrast lost at the effect); no intrinsic fact carries the contrast, and the
+extrinsic terminus does. Interpretation, not certified by any type: the
+terminus's own variation has, among the source's intrinsic facts, only the
+invariant act as a reason, which does not discriminate it — #555's `relocated` pattern, "the gap moves one step back".
+It is the `oneRespect` exit of #555 finding 4: no decree is a respect.
+
+**Does the account collapse under the personal case's own premises?** No, on the
+tested set. Clause 3 is one finite carrier (`rrOutput`, `rrHas`, `rrProfile`) on
+which the account holds together with RootPurity `c78c77da`, `a30c5963`, N at
+the root (`AbsencesNecessaryFor`, the bearer form of #2174's N), `0c8631bd`,
+both directions of member grounding (`89c988d9` and the sufficiency direction),
+the existential PSR for contingents `608a262d`, some actual contingent concrete
+being `c94b5446`, the failure of actual collapse `185ce448`, and #555's IX.6
+reading, `IsImmutable` and `ModalCapacity` at the actual world. What carries it:
+at the root the IX.6 reading with `IsImmutable` forces every ability to be an
+actuality (Lean-only `rootAbilityForced`), so reading the root's ability as act
+is the intended reading, not a degeneracy; creature potency is restored (the
+effect can have the impure `limiter` and does not: `rrCanBe`, `rrPotency`, and
+the certificate states that the effect is in potency to it); admissibility is
+defined as exclusion-freedom, so both directions of member grounding hold by
+definition; `608a262d` holds only through the stipulated reason relation
+`rrExplains`, with none of the BX bridges; the root's four pure determinations
+are constant; the effect is composite;
+access is universal; the impure `limiter` requires the lack of `noesis`, so the
+requirement relation is not emptied. Not modelled: lane E's EM and LE (pending
+#2174 in this branch), and `0050b6ed` (power for the joint absence of the actual
+contingents, which needs the `CausalityFrame` agency overlay). These cells are
+untested, not satisfied.
+
+Collapse needs a further premise. The three found are each a premise the tested
+set does not contain: strict sufficiency of the intrinsic act (#555 `Core`);
+a real decree at every accessible world under N (clause 2 below); or a
+necessitating PSR (#555 `BranchCosts` clause 2). No premise listed in the brief
+is necessitating. A route-wide sweep for necessitating PSR premises was not run.
+
+**Real decrees under N (clause 2).** For an exclusive real decree family, N at
+the bearer sends any decree it has at an accessible world back to `w`, where
+exclusivity identifies it with the actual decree (`decreesUnderN`). So on the
+real-decree reading N excludes a **different decree of the family** at every
+alternative; it does not exclude extra effects under the same decree. The
+effect's absence needs a world with **no decree of the family**
+(`noDecreeWorldUnderN`): "could have refrained" survives, "could have decreed
+otherwise" does not. With a decree of the family at every accessible world the
+effect is not contingent. This replaces #555's readings
+(`ReadingsAt`) in `RootExposure` clause 2 by N and shows that lane E's N and
+#555's decree-as-respect give the same collapse.
+
+**Parity.** `RelationOfReasonAt` mentions neither intellect nor will. An
+impersonal permissive propensity whose chance outcome is its terminus satisfies
+every clause, and clauses 1–2 then give it the identical price at the level of
+the formal account (lane P's claim of an asymmetric burden is below). This agrees with
+[will-versus-chance.md](will-versus-chance.md) §7 ("contrastive explanation of
+which effects: none typed", both columns) and sharpens it: on an invariant
+profile no intrinsic fact discriminates at all.
+
+**Lane P's asymmetry, assessed at the same level.** Lane P's claim, as it stands
+([causal-perfection-transfer.md](causal-perfection-transfer.md), "The burden is
+not symmetric"): an impersonal permissive propensity's chance outcome is
+uncontroversially not a determination of the propensity; the personal side must
+hold something more, that the selection is the root's own free willing and yet
+not a real determination of it; "That extra commitment falls on the personal
+side only." Lane P thus asserts an asymmetric burden, not merely a description.
+*This lane's assessment, not lane P's:* the extra commitment is descriptive (the
+personal side calls its invariant act "willing x", a content-specific predicate
+whose truth then varies extrinsically, while the propensity's "produced b" is
+relational on its face); at the level of the formal account the two readings are
+the same conjunction; and no warrant is given, by lane P or here, for counting
+the extra commitment as a defect rather than a further assertion.
+
+This lane reconstructed a possible objection behind it, and states it as its own:
+
+- *Target:* the account's claim that "wills x" can be true of a bearer with no
+  real determination answering to `x`.
+- *Mechanism (this lane's reconstruction):* content-specific conative states are
+  intrinsic states of their subjects.
+- *Support:* finite agents, whose decisions are datable intrinsic changes.
+
+The reference-class test applies in both directions. The personal case's own
+attribution of will to the root also comes from finite agents, through
+perfection transfer. Excluding finite agents as a base would weaken that
+attribution too; admitting them supports the mechanism. So the asymmetry stays
+open. Recorded on the other side: no positive warrant is given here for "wills
+x" being true with no answering determination; the account asserts it.
+
+A second point bears on a *claim*, not on coherence. `TerminusSound` gives only
+terminus → effect at accessible worlds. **If** the creature's relation (the
+terminus) is also constituted by the effect's existence (terminus ↔ effect at
+accessible worlds), the terminus is coextensive with the effect there, and the
+classical account cannot claim **contrastive** explanation of which world exists
+by the will's terminus without explaining the effect by a fact it constitutes
+(irreflexivity of explanation). Withdrawn to non-contrastive explanation (the
+agent as source, Clarke's volitional reason `81ec01fe`, noncontrastive
+explanation `e35adb5f`), it stands where the propensity stands at the level of
+the formal account. The remaining difference is whether the invariant act
+apprehends and acts for reasons, which is the cognition lane's question.
+
+### B. The mirror-world rule
+
+Setting: a world map `σ` (the global mirror) and a world feature `H` (global
+spatial handedness), DEF `3fc924f3`. The two readings of `σ` are distinct
+senses with distinct Lean types (disambiguation `dec35f6f`, term MIRROR):
+**MIRROR_1 = P**, plain spatial reflection (`SpatialReflection`, DEF
+`567674e6`); **MIRROR_2 = CPT**, spatial reflection with charge conjugation and
+time reversal (`CPTConjugation`, DEF `7147bcb5`). The generic premises and the
+fork certificate take any map `σ` and are untagged; the registered argument is
+stated in MIRROR_2 only (premises `EssentialTruthsPreservedByCPTAt`,
+`HandednessReversedByCPTAt`, `ChiralAtCPTImageAt`, the generic premises at
+`τ.image`; argument `term_senses` MIRROR = MIRROR_2), so a P-premise cannot be
+used for it. No statement in MIRROR_1 is recorded. Physics background (navigation only, no attributed claim): the
+weak interaction is not invariant under P (Wu et al. 1957; V−A coupling), nor
+under CP, while local Lorentz-invariant quantum field theory is invariant under
+CPT. Both readings are intended to reverse spatial handedness; whether the CPT
+image of `w` does is the open premise `314f6b15`. The owner's left/right example
+survives as the CPT-mirror: the CPT image of a world with a left hand has a right
+hand made of antimatter, its history run in reverse.
+ESSENCE_5 (`EssentialTruth`, DEF `7cf63236`) is the grain at which natures
+constrain worlds. Four OPEN premises at the actual world
+`w`:
+
+| Premise | Lean | Denial (necessitarian option) |
+| --- | --- | --- |
+| every world violating no essential truth is possible | `EssenceGroundedWorldPossibility` | option 3: the mirror image is impossible though no nature excludes it (brute); also denied by powers accounts. Humean recombination does not deny it; primitivism denies only the grounding |
+| every essential truth holds at `w` | `EssentialTruthsHoldAt` | the actual world violates a nature (not a live option where essence grounds necessity on a reflexive frame) |
+| the mirror image satisfies every essential truth `w` satisfies | `EssentialTruthsPreservedByMirrorAt` (registered: `EssentialTruthsPreservedByCPTAt`, MIRROR_2) | option 1: some nature contains an orientation (for MIRROR_1 = P, available at creaturely law-natures on dispositional essentialism) |
+| the mirror image has the opposite handedness | `HandednessReversedAt` (registered: `HandednessReversedByCPTAt`, MIRROR_2) | option 2a: relationalism about global orientation rejects a global handedness feature (it does not make the CPT image the actual world); option 2b: no distinct mirror image (identity with the whole image, for CPT needing charge conjugation and time reversal identified away; clause 4 derives it only under collapse, possibility, factivity and preservation) |
+
+**The full-collapse form** (`notCollapsedFromMirror`, Lean-only, axiom-free):
+the four premises give `185ce448` (the route's world is not collapsed). It is not
+registered: `185ce448` is not on a current root route, and no honest bridge from
+"some truth at `w` is contingent" to a root-path node exists here. The mirror
+case itself shows why: a mirrored world can contain the same beings, so the
+contingency of a feature does not give the contingency of a being.
+
+**Registered argument** `contingentFromChiralMirror` (result `8d5ad56a`), mirror
+in sense MIRROR_2: the four premises at the CPT image and a **chiral individual
+at the CPT image** (`ChiralAtCPTImageAt`, statement `9331a979`: some actual
+concrete being exists at the CPT image only if that image has the actual
+handedness) give `c94b5446` (some actual concrete being is CONTINGENT_1).
+Axiom-free; the generic Lean-only `contingentFromMirrorImage` holds for any map. It is a conditional support
+option for `c94b5446`. It is **not** independent of modal intuition: its warrant
+is the same kind as the direct support for `c94b5446` (a judgment that some world
+is possible), here for the CPT-mirror world, plus the symmetry consideration that
+the mirror image violates no nature the actual world satisfies. The premise at the
+CPT image has a stated positive rationale: an actual molecule, if being of its
+chemical kind is essential to it and its only candidate at the CPT image is its
+CPT counterpart, which is made of antimatter. Under sortal essentialism charge
+conjugation alone already changes the kind, so the rationale supports the
+molecule's absence from the CPT image, and so the premise, for achiral material
+beings too; for a chiral molecule the counterpart's reversed handedness (an
+enantiomer as a distinct kind) is a second kind change that is not needed. The
+warrant therefore lies in charge conjugation, not in chirality or in the
+reversal premise `314f6b15`; chirality is only the formal shape in which the
+premise enters the proof (absence implies it; with reversed handedness the two
+are equivalent). Under the plain reflection P (MIRROR_1), by contrast, only the
+enantiomer kind change is available and chirality would carry the warrant. It does **not** support the global form used before the Codex
+review of #2179 (`ChiralIndividualAt`: the being exists only at worlds with the
+actual handedness, statement `a0d94a8d`), which needed an unstated
+local-to-global bridge; that form was removed, not kept as a strong version. Its
+denial is haecceitism about mirrored individuals: the same molecule exists at the
+CPT image, mirrored and as antimatter, a higher price than identity across a
+mere reflection.
+Comparator companion `mirrorControls` (propext only): a positive row; for each of
+the five premises a row where it alone fails, the other four hold and the
+conclusion fails (options 1–3 realized, factivity, and no chiral individual); and
+rows 6–10 where one premise fails, the other four hold and the conclusion still
+holds (row 10: the being is present at `w` and at its mirror image, absent at
+the unexcluded world `none`). The mirror in every row is a `CPTConjugation`
+value (`cptNot`, `cptId`, `cpt3`).
+
+**Relocation probe: the load is the mirror world's possibility.** Factivity is
+supported by essence grounding necessity (`EssenceGroundsNecessityAt`). Under
+that principle, essence-grounded possibility and factivity, preservation is
+**equivalent** to the accessibility of the mirror image (Lean-only
+`pres_iff_mirrorPossible`, review probe adopted; fork clause 9). So the warrant
+for preservation is exactly the warrant for "the mirror world is possible", a
+possibility premise in the style of modal-ontological arguments. Rows 6 and 9
+drop essence grounding necessity, so they do not show otherwise; rows 7, 8 and 10
+show that the possibility principle, reversal and chirality are each not
+recoverable from the conclusion together with the other four premises. The argument is valid and not a transcription;
+it is a *localization*: a concrete necessitarian who grounds possibility in
+essences must deny one named premise (fork clause 8).
+
+**The plain reflection P.** On dispositional essentialism the laws flow from
+creaturely natures, and the weak interaction is not reflection-invariant; the
+P-image of the actual world then violates an essential truth of a creaturely
+kind. That is **option 1 at a creature**, with independent physical support, and
+it takes no orientation in the source's nature. The argument's preservation
+premise is therefore registered in sense MIRROR_2 (CPT) only; in sense MIRROR_1
+(P) it is doubtful on that view, and no statement or argument uses it. On a Humean view of laws the P-image with mirrored laws may be possible.
+
+**The fork, certified** (`mirrorFork`, result `28b64d7f`, registered certificate,
+placed by `tests` on `c94b5446`):
+
+1. *Collapse with essence-grounded possibility, restated.* Every world violating
+   no essential truth is the actual world. This is one term from the two
+   premises; a necessitarian holding both (a Spinozist) already asserts it, so it
+   records no further cost.
+2. *Option 1 is exact.* Under collapse, the possibility principle, factivity and
+   reversal, some essential truth holds at `w` and fails at `σ w`: a nature
+   contains orientation.
+3. *Option 3 is exact.* Under collapse, factivity, preservation and reversal,
+   the mirror image violates no essential truth and is not accessible.
+4. *Option 2 is exact.* Under collapse, the possibility principle, factivity and
+   preservation, `σ w = w` and the mirror reverses nothing. The identity is
+   derived only under these four premises, not from relationalism. Option 2
+   therefore splits. (2a) Relationalism about global spatial orientation rejects
+   a global handedness feature: it denies reversal, but the CPT image still
+   differs from `w` (matter and antimatter exchanged, history reversed), so under
+   collapse, the possibility principle, factivity and preservation clause 4 still
+   demands `τ.image w = w`. (2b) Identity with the whole CPT image needs an
+   additional explicit identification commitment: charge/time-reversal
+   relationalism, or that CPT-related worlds are qualitatively identical as
+   wholes. For the plain reflection P, (2a) with the identity of indiscernibles
+   may give the identity, since P changes only spatial orientation.
+5. *Rules.* A rule that singles out `w` among the unexcluded worlds, where the
+   mirror image is unexcluded and handedness reversed, holds at `w` and fails at
+   `σ w`: a necessitating rule is itself not mirror-invariant. "Is best" is
+   mirror-invariant if value is qualitative and invariant under σ, so a
+   necessary choice of the best (personal necessitarianism) cannot then be that
+   rule.
+6. *Contrast gap.* For every source whose real determinations are invariant over
+   accessible worlds, with the mirror image accessible, no fact intrinsic to the
+   source discriminates this handedness from the other. This is clause 1 of the
+   relation-of-reason certificate with a general explanandum, not a new result.
+7. *An orientation token at a root.* Two exclusive orientation tokens (real
+   determinations, `Has r left`) on a par in purity are had by no actual root,
+   under `a30c5963`, RootPurity, the sufficiency direction and `0c8631bd`. This
+   is the handedness instance of lane P's `parAlternativeExcludedAtRoot`, proved
+   here from the declarations on main (`allPureAdmissible`); it can call lane P's
+   theorem once that lands. Parity in purity (`OrientationPurityParity`) is
+   assumed; the mirror motivates it if purity is mirror-invariant. Clause 7 says
+   nothing by itself about an orientation in a root's ESSENCE_5 nature.
+8. *Concrete necessitarianism.* If every actual concrete being is necessary and
+   some actual concrete being is chiral at the mirror image (`ChiralAtMirrorImageAt`,
+   the local form), then with factivity, preservation and reversal,
+   essence-grounded possibility fails: the concrete necessitarian (the recorded
+   rival of `c94b5446`), not only the full-collapse necessitarian, must take one
+   of the options or deny chirality.
+9. *Preservation is the mirror's possibility* (above): under essence grounding
+   necessity, the possibility principle and factivity, preservation holds
+   exactly when the mirror image is accessible.
+10. *Option 1 at a root, through a bridge.* With clause 7's premises and the open
+    sense bridge `OrientationInNatureCarried` (an orientation in the ESSENCE_5
+    nature of any being, roots included, is carried by an orientation token it
+    really has), no
+    ESSENCE_5 truth of an actual root holds at `w` and fails at `σ w`. The bridge
+    is the orientation instance of lane E's carriage pattern (LE), stated between
+    ESSENCE_5 and `Has`; lane E's ESSENCE_6 definition `8e1ba83c` asserts no
+    ESSENCE_5 bridge, and this lane supplies no warrant for this one.
+
+**The same case applied to every account (one table, one standard).**
+
+| Account | Handedness | Rule needed | What explains this handedness rather than that | Price recorded |
+| --- | --- | --- | --- | --- |
+| Impersonal necessitarian (emanation) | necessary | yes | its nature, only via option 1, 2 or 3 | option 1 (at a root: excluded only with the open carriage bridge, clause 10; at creatures for σ = P on dispositional essentialism), option 2 (σ w = w; for CPT this needs, beyond relationalism about global orientation, charge conjugation and time reversal identified away, e.g. charge/time-reversal relationalism or CPT-related worlds qualitatively identical as wholes), or brute |
+| Personal necessitarian (necessary choice of the best) | necessary | yes | as above; "best" cannot select if value is qualitative and σ-invariant (clause 5) | identical to the impersonal necessitarian |
+| Classical personal root, relation-of-reason account | contingent | no | no intrinsic fact (clause 6); the extrinsic terminus discriminates | #555's non-contrastive price (A above); plus the extra commitment lane P places on the personal side only ("willing x" with no real determination; this lane assesses it as descriptive) |
+| Personal root with a real, varying selection | contingent | no | the selection (intrinsic, varies) | denies N; at a root whose selection token has an exclusive mirror alternative on a par in purity, denies one of the purity premises (clause 7 applied to selection tokens) |
+| Impersonal permissive propensity, invariant | contingent | no | no intrinsic fact (clause 6) | #555's non-contrastive price, identical to the classical row |
+| Impersonal propensity with a varying outcome state | contingent | no | the outcome state | as the varying personal selection |
+
+**Scope of the conclusion.** The mirror case presses (i) necessitarian accounts,
+personal and impersonal alike (full collapse by clauses 1–4; concrete
+necessitarianism only together with a chiral individual, clause 8), and (ii) any account that claims full
+contrastive explanation from the intrinsic profile of an invariant source. It
+does not favour personal over impersonal accounts: the non-necessitarian rows
+pay identical prices, and the necessitarian rows pay identical prices.
+
+**What the mirror case adds beyond the general tie case.**
+
+- It closes the qualitative tie-break escape, for rules invariant under the
+  laws' symmetry. In a value tie between qualitatively different arrangements a
+  necessitarian can appeal to a non-value qualitative rule (a physical
+  tie-break, least action, an end-realization ordering). CPT twins agree on
+  every feature invariant under the laws' symmetry, so by clause 5 no such rule
+  selects between them. P-twins do not: the weak interaction distinguishes them.
+- It motivates parity in purity for lane P's mechanism without any value tie, if
+  purity is mirror-invariant: wherever the world has a mirror twin, a real
+  selection token then has an equally pure alternative.
+- It is weaker than the tie case in one respect: identity of mirror-related
+  worlds (option 2) dissolves it, while it does not dissolve a tie between
+  qualitatively different arrangements. For the P-twin relationalism about
+  orientation may suffice for that identity; for the CPT-twin it does not, and
+  the identity needs charge conjugation and time reversal identified away too.
+- Against non-necessitarian accounts it adds nothing beyond the tie case.
+
+### C. Counter-intuitiveness as evidence
+
+- **The intuitions.** (a) A globally mirrored world seems as possible as this
+  one. For the plain reflection P this intuition meets physics: the actual laws
+  are not reflection-invariant, so the P-twin is nomically impossible and, on
+  dispositional essentialism, excluded by creaturely natures. The intuition
+  survives for the CPT-twin (a right hand of antimatter, history reversed),
+  which is less immediately imaginable. (b) A rule that fixes global handedness
+  seems arbitrary.
+- **The kind of warrant.** Modal intuition, prima facie. It is the same kind of
+  warrant the corpus already accepts as a support option for particular
+  contingency judgments (above, "Contingency warrant"). It is defeasible.
+- **The necessitarian's strongest reply.** Identity of indiscernibles with
+  relationalism about orientation (Leibniz's translation argument `7dd2af35`,
+  navigation for reflection): the "two" worlds are two descriptions of one, so
+  (a) confuses distinct representations with distinct possibilities. For the
+  P-twin this may go through. For the CPT-twin, relationalism about orientation
+  only rejects a global handedness feature; the twin still differs in matter and
+  antimatter and in the direction of time, so the reply needs an additional
+  identification commitment (charge/time-reversal relationalism, or CPT-related
+  worlds qualitatively identical as wholes). A second
+  reply: modal intuitions about global symmetries are unreliable, because the
+  imagined difference makes no difference to anything within the world.
+  Kant's incongruent counterparts (navigation only) point the other way for a
+  single hand; this note does not adjudicate them.
+- **Recorded judgment.** The intuition supports `HandednessReversedAt` only
+  against a non-relationalist background, and preservation only for the CPT
+  reading. Under essence grounding necessity, accepting preservation *is*
+  accepting the mirror world's possibility (clause 9), so the argument adds the
+  symmetry consideration to a direct modal intuition; it does not replace one.
+  The necessitarian's reply, for the CPT reading, costs identity with the whole
+  CPT image (`τ.image w = w`, which clause 4 derives only under collapse, the
+  possibility principle, factivity and preservation): relationalism about
+  global orientation plus an explicit identification of charge-conjugated and
+  time-reversed worlds; relationalism alone only denies reversal. Clause 1 adds no further cost to a necessitarian who
+  already holds essence-grounded possibility. Prima facie evidence of low weight
+  against necessitarianism that also holds essence-grounded possibility; neutral
+  between personal and impersonal non-necessitarian accounts. The earlier
+  attempt `05c7e8d0` rejected "PSR alone → relationalism"; nothing here uses the
+  PSR alone.
+
+### D. Connection and verdict
+
+- The relation-of-reason account avoids collapse at #555's price: a contingent
+  fact whose intrinsic reason neither strictly suffices nor discriminates. At the
+  level of the formal account it is the same price an impersonal permissive
+  account pays (clause 1 applies verbatim); lane P holds that an extra
+  commitment falls on the personal side only; this lane assesses it as
+  descriptive, and whether it is a defect stays open (A above).
+  The classical side does pay here, as the table's third row shows.
+- The personal case's tested profile premises do not force collapse (clause 3).
+  They do force the classical root off the real-decree reading (#2174 N via
+  clause 2, lane P purity via clause 7): one commitment, counted once.
+- The mirror case adds the closure of tie-breakers invariant under the laws'
+  symmetry and a motivation for parity in purity; it presses necessitarianism,
+  not impersonality. Its load is the CPT-mirror world's possibility.
+
+**Three-angles rule, recounted.** Clause 1 of the relation-of-reason
+certificate (and clause 6 of the fork, its restatement) sharpens #555's
+`BranchCosts`; it is not a materially different angle. The materially different
+angles ending in parity on contrastive explanation at a necessary invariant
+source are #555's `BranchCosts`, will-versus-chance §7, and plausibly the tie
+results of #2154 (law 6) and #2163. On that count the threshold is met and
+vertical work there should stop; the live horizontal question is the cognition
+lane's: whether the invariant act acts for reasons.
+
+**Strongest standing rival and its price.** For the necessitarian rival
+(personal or impersonal), priced alike for every necessitarian account: option 2,
+identity with the whole CPT image (`τ.image w = w`), which needs relationalism
+about global orientation **and** an additional explicit identification
+commitment (charge/time-reversal relationalism, or CPT-related worlds
+qualitatively identical as wholes); relationalism about orientation alone only
+rejects a global handedness feature and, by clause 4, leaves a full-collapse
+necessitarian who keeps the possibility principle, factivity and preservation
+still needing the identity; or a powers account on which the possibility principle fails, or, for
+the plain reflection, option 1 at creaturely law-natures. For the non-necessitarian impersonal rival: none from this
+lane; it pays the classical root's price.
+
+**Remaining gaps and next tests.**
+
+1. Powers counterpart: if the source's powers are mirror-invariant (a power for
+   this arrangement gives a power for its mirror image), does a powers-based
+   modality yield the mirror possibility without essence-grounded possibility?
+   That would remove the main limit on the registered argument.
+2. Add lane E's EM, LE and E to the joint model once #2174 is on main; this
+   needs an ESSENCE_5/ESSENCE_6 bridge, since lane E's EM is stated over
+   ESSENCE_6. Rewrite clause 7 to call lane P's theorem once it lands.
+3. Warrant, or rejection, for the carriage bridge `OrientationInNatureCarried`.
+4. Model `0050b6ed` (power for the joint absence of actual contingents) on the
+   `CausalityFrame` overlay together with the relation-of-reason account.
+5. A route-wide sweep for necessitating PSR premises on routes to `66aecdd7`.
+
+**Pre-report self-checks.** (1) Relocation probe: under essence grounding
+necessity the preservation premise is the mirror image's possibility (clause 9);
+the certificates are premise-free. (2) The
+classical root has its own row in both tables and pays #555's price there.
+(3) Quantifier width: `Discriminates` is universal over accessible worlds
+lacking the explanandum; `IntrinsicTo` compares each accessible world with `w`
+only; `EssentialTruthsPreservedByMirrorAt` is at `w` and in one direction; the
+existential in clause 2 of the certificate (`noDecreeWorldUnderN`) gives one
+world, not every alternative; `HandednessReversedAt` is about one world and its
+image, not a global symmetry of the frame.
+
+**Lean search.** leansearch "predicate preserved by a map / involution" (Mathlib
+`Function.Involutive`, not needed: no involution is used); lean-explore
+"identity of indiscernibles" (metric `dist_eq_zero` only) and "modal collapse"
+(no hit). Repo: `truth novelty` "mirror world handedness necessitarian" (no
+prior mirror work), `truth index search` "relation of reason extrinsic decree".
+Reused `OutputProfile`, `SameActEverywhere`, `StrictEfficacy`, `rigid_core`,
+`ReadingsAt`, `EssentialTruth` (ESSENCE_5), `RouteCollapsedAt`/`MC`,
+`SomeActualContingentAt`, the RootPurity and requirement-form premises,
+`allPureAdmissible`, `NoBruteContingentExistenceAt` and the #1970
+`Determination` type. `WillVersusChance.SetupInvariantAt` (DEF `b4bb7bb4`) is the
+agency-frame counterpart of `IntrinsicProfileInvariant`; it was not reused
+because that module is owned by draft #2144 and lives on the `CausalityFrame`
+overlay.
+
+**Review state.** The independent semantic challenge of `d7aef0e32` accepted
+the Lean and every type match, and did not accept the assessment (six P1, seven
+P2). Its findings, as reconstructed here:
+
+- the mirror argument's load is the mirror world's possibility (◇mirror), not
+  preservation as a separate warrant (repaired: `pres_iff_mirrorPossible`,
+  fork clause 9);
+- parity fails under the plain reflection P (weak interaction), so σ is read as
+  CPT conjugation (repaired: P/CPT distinction in the premises and table; made
+  a sense distinction with distinct Lean types after the Codex review of #2179);
+- clause 7 reached no root nature without an ESSENCE_5-to-token bridge
+  (repaired: open bridge `OrientationInNatureCarried`, fork clause 10);
+- fork clause 1 was presented as a cost although it restates collapse with
+  essence-grounded possibility (repaired: recorded as a restatement);
+- lane P's asymmetry was mischaracterized (repaired above; finished at the
+  re-check);
+- "coextensive" and "only" overstated what the certificate ranges over
+  (repaired: other extrinsic facts are not ranged over);
+- creature potency was missing from the joint model (repaired: `rrCanBe`,
+  `rrPotency`, `rootAbilityForced`).
+
+The targeted re-check of `4d89b861d` found two P1s in the
+`RelationOfReasonCertificate` docstring ("only an extrinsic fact"; "every decree
+the root has"), lane P's claim still understated as "descriptive", an uncertified
+"only" in the relocation sentence, and five P2s (the carriage bridge ranges over
+every being; a stale `EssenceGroundedWorldPossibility` docstring; a duplicated
+sentence; gap numbering; "not recoverable" without the other four premises). All
+are repaired in `d111a0f8a`. The confirmation review of `d111a0f8a` found one
+residual: the cross-reference in causal-perfection-transfer.md (R2) still called
+lane P's commitment "descriptive". It now quotes lane P's claim and marks the
+"descriptive" judgment as lane M's own; no other new overstatement was found.
+
+The Codex review of #2179 (head `cb6d516c2`) raised two P1s, both repaired with
+a change of the registered argument's frozen type (regenerated Challenge, no
+independent Solution work existed). (1) The global chirality premise
+`ChiralIndividualAt` (statement `a0d94a8d`) was stronger than the molecular
+example supports: excluding the mirrored molecule gives at most absence from the
+mirror image. It is replaced by the local premise `ChiralAtCPTImageAt` (statement
+`9331a979`), which the absence implies and which still suffices with reversal;
+the global form is removed, so no `strengthens` pair is registered. Fork clause 8
+takes the generic local form `ChiralAtMirrorImageAt`. Control row 10 now keeps
+the being at the mirror image and drops it at `none`, since the old row satisfies
+the local premise. (2) P and CPT shared one primitive meaning. They are now
+senses MIRROR_1 and MIRROR_2 of disambiguation `dec35f6f` with distinct Lean
+types; the registered argument declares MIRROR = MIRROR_2, and `truth semantics`
+reports MIRROR_2 as its single sense.
+
+A further Codex P1 on `c094132d0` (comment 4723537199): relationalism about global
+orientation had been priced as identity with the mirror image. For MIRROR_2 it
+only rejects a global handedness feature; identity with the whole CPT image
+needs an additional identification of charge-conjugated and time-reversed
+worlds. Option 2 is now split and priced that way in the premise table, fork
+clause 4, the account table, section C and the strongest-rival paragraph, alike
+for every necessitarian account. No Lean type changed.

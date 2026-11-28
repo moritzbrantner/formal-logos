@@ -127,7 +127,7 @@ subject_id = "6cf3a8ce-9dff-434d-affb-787923538830"
 predicate = "tests"
 object_kind = "statement"
 object_id = "18e5bd4e-8178-468e-b867-fbaf9c5988ad"
-note = "Omit joint absence of those concreta that are contingent at the origin. In vanCleveFrame at (true, true), both origin-contingent candidates can individually be absent, but every accessible world has at least one of them. The remaining hypotheses hold with no powers assigned."
+note = "Omit joint absence of those concreta that are contingent at the origin. In vanCleveFrame at (true, true), both origin-contingent candidates can individually be absent, but every accessible world has at least one of them. The remaining nonlogical premises hold with no powers assigned."
 
 [[relation]]
 id = "a65750a6-8e17-4854-8575-62a964a51ecc"
@@ -138,13 +138,3 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "c76b6e2c-1ca0-47fd-a9d0-2c2faa3d1174"
 note = "Omit the premise that some concretum is contingent at the origin. In emptyFrame no candidate exists at true or at its accessible world. Joint absence is accessible for the empty roster, yet no candidate can witness the holder conclusion."
-
-[[relation]]
-id = "97999a57-ee1b-4af7-9a35-715e5a47cb94"
-label = "Test by ModalGroundingActualAbsence.actualAbsenceControls (259571ae)"
-subject_kind = "result"
-subject_id = "6cf3a8ce-9dff-434d-affb-787923538830"
-predicate = "tests"
-object_kind = "argument"
-object_id = "259571ae-36c0-44ff-804b-d3f138c0a363"
-note = "In theistFrame at true the actual contingent roster contains false and the other accessible world lacks it. True exists at both worlds and holds the assigned absence power. All nonlogical premises of the actual-roster variant are jointly satisfied."

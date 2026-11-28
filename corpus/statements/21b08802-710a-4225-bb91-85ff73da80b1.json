@@ -1,0 +1,13 @@
+{
+  "id": "21b08802-710a-4225-bb91-85ff73da80b1",
+  "label": "No CREATURE_1 has being itself as its nature",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: no CREATURE_1 is its own being. ST I q.7 a.2 ad 1, read in the pinned witness, says 'hoc est contra rationem facti, quod essentia rei sit ipsum esse eius, quia esse subsistens non est esse creatum'; that passage is the nearest source and is not attributed as a stating claim here. With R-act1 it gives the creature-reception leaf 29e71e43.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.NoCreatureIsOwnBeing",
+  "definition_ids": [
+    "afcdd2c5-1167-5a73-97d7-cb99a6ad5817",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5"
+  ],
+  "disambiguation_ids": [
+    "c49de1e9-c34f-424f-b144-b80c885974ca"
+  ]
+}

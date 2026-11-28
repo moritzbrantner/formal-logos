@@ -1,0 +1,9 @@
+{
+  "id": "a7985f66-16b1-4f0f-bb7f-4988d2377790",
+  "label": "Necessarily productive source: it gives something wherever it exists among accessible worlds",
+  "term": "necessarily productive source",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.NecessarilyGivesSomeAt",
+  "definition": "NecessarilyGivesSomeAt F w g: at every world accessible from w where g exists, g gives being to some being. The giving-level form of a necessarily operative productive purpose, a categorically directed generative nature, or a maximizer for whom some creation beats omission.",
+  "note": "Stipulative. It does not fix which being is given (replacement remains possible). See docs/notes/optimal-creation-choice.md §61."
+}

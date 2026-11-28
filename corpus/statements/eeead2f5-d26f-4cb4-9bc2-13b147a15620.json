@@ -1,0 +1,11 @@
+{
+  "id": "eeead2f5-d26f-4cb4-9bc2-13b147a15620",
+  "label": "The all-admissible family with self-excluding noesis separates member grounding from sufficiency",
+  "paraphrase": "On the five #1970 determinations, with every profile admissible and noesis requiring its own lack, every exclusion-free profile is admissible while member grounding fails (the profile containing noesis is admissible but not exclusion-free). A structural assignment only.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.Control.StrictSeparates",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

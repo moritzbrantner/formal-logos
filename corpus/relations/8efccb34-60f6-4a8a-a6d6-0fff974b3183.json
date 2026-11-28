@@ -1,0 +1,10 @@
+{
+  "id": "8efccb34-60f6-4a8a-a6d6-0fff974b3183",
+  "label": "Joint-absence power scope controls test the GOD_4 joint-absence power",
+  "subject_kind": "result",
+  "subject_id": "44e8200e-ec3f-4cda-8900-506e291e1240",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+  "note": "Independence from the total-noncreation power, compatibility with necessary production, and neededness of Euclidean access and monotone powers for the passage from total noncreation."
+}

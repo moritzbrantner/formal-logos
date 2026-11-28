@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.ActualGroundingAcyclicity.Challenge",
+  "solution_module": "TruthCore.Results.Logic.ActualGroundingAcyclicity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.ActualGroundingAcyclicity.actualGroundingAcyclicOfWF"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

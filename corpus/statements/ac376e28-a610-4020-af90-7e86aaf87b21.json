@@ -1,0 +1,15 @@
+{
+  "id": "ac376e28-a610-4020-af90-7e86aaf87b21",
+  "label": "Every present received-esse thing has a first moment of presence or is homogeneous",
+  "paraphrase": "OPEN analyst premise, attribution deferred (structural coverage of histories): in every history v of the model, every thing whose esse is received in some principle (DEF-ESSE-RECEIVED-IN) and that is present at some moment of v either has a first moment of presence in v (BeginsAt of the temporal history frame, as in f4850897 and onset fa3e228b: present then and at no strictly earlier moment) or is homogeneous in v relative to the supplied non-giving facts (HomogeneousIn, definition 6d0f77a2: any two moments of its presence are related by an order automorphism of the times preserving every being's presence and every supplied fact). It mentions no giving and no cause. What it excludes is a received-esse thing with no first moment of presence whose moments the presence pattern or the supplied facts distinguish: a beginningless changing thing, the case left open by the 'Next test' of docs/notes/ca-horizontal-support.md. It holds in every history whose times are the natural numbers, where every present thing has a first moment (by well-ordering; not formalized here). It fails in the eternal history of the controls once a supplied fact marks one moment (Control part 1), and weak concurrent actualization 40a97664 can hold there (part 4), so 40a97664 does not entail it. No warrant for its application to actual histories is recorded. Where a history's presence pattern or supplied facts rule out the automorphisms homogeneity needs, the premise requires each received-esse thing present at two or more moments there to have a first moment of presence.",
+  "lean_declaration": "TruthCore.Causality.BegunOrHomogeneousGiving.BegunOrHomogeneous",
+  "definition_ids": [
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "6d0f77a2-0474-4cc0-9aac-71f7fba67b33",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
+}

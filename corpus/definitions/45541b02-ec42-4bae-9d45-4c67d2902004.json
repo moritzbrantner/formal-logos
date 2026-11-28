@@ -1,0 +1,9 @@
+{
+  "id": "45541b02-ec42-4bae-9d45-4c67d2902004",
+  "label": "Controlled dependence of a favouring profile on a feature across variation scenarios",
+  "term": "depends on a feature (controlled difference-making)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.GoodFavouring.DependsUnder",
+  "definition": "DependsUnder g ctrl φ s x y: at s the feature g ranks x over y and the profile φ (the source's favouring in each variation scenario) favours x over y, and some scenario t with ctrl t = ctrl s has neither g nor φ ranking x over y. Tracks φ f: φ coincides with the feature f in every scenario. Fixed φ: φ is the same in every scenario. AlignedAt φ f s: they coincide at s. A profile favouring what g does not rank higher at s (perverse or biased) does not depend on g there.",
+  "note": "Stipulative, an interventionist-style test of whether a feature makes a difference to a source's favouring while another feature is held fixed. Scenarios are formal variation points; when the varied feature is a goodness fact that is necessary, the variation is counterpossible, and GoodDependenceLaws law 4 states what follows without it. It does not say that difference-making is the only kind of explanatory relevance. See docs/notes/optimal-creation-choice.md §§65–69."
+}

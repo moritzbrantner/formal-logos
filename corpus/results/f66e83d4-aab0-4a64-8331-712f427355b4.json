@@ -1,0 +1,11 @@
+{
+  "id": "f66e83d4-aab0-4a64-8331-712f427355b4",
+  "label": "Matched four-account table under determination, by computation",
+  "argument_id": "8462ddcc-09a4-47d3-9522-15cf2854c508",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.fourAccountTable",
+  "comparator_config": "results/f66e83d4-aab0-4a64-8331-712f427355b4/comparator.json",
+  "status": "solution-present",
+  "description": "A placed diagnostic for 608a262d. Necessary manifestation selects only by making c non-contingent; an invariant D-range frame explains 'rather than nothing' and 'rather than the unfit z' but never 'rather than d'; a permissive invariant frame does not explain 'rather than nothing'; a frame that selects a contingent c does so through an exercise level whose cells are the outcome partition, which its invariant nature does not see to. The difference between the invariant D-range frame and the exercise frame is only whether an outcome-fine level is posited (law 8), so the table does not show that one account explains selection where another explains only the range. That rational adoption, propensity actualization and generative exercise are all represented by the one exercise frame is an interpretive assignment; their parity under this standard is definitional (law 7), not a substantive result. Pro tanto favouring and apprehended content are untested, not defeated. Establishes no premise."
+}

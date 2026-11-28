@@ -1,0 +1,8 @@
+{
+  "id": "04d7652c-25df-46b0-8bef-2b619664855b",
+  "label": "Wisdom (the token): a real determination read as the bearer's own subject-grounded apprehension",
+  "term": "wisdom (the determination token wisdom : D)",
+  "definition": "wisdom is one real determination (DEF-REAL-DETERMINATION) of the supplied carrier D, intended as the bearer's own subject-grounded apprehension of truth: an apprehension that the bearer itself performs or is able to perform. It is NOT productive wisdom (a power to make other beings apprehend or to produce ordered effects) and NOT exemplary wisdom (an intelligible form that norms another knower without being apprehended by its bearer). Nothing in Lean fixes this reading: the token is an unconstrained element of D. Its intellectual content enters only through the open bridge WisdomSelfCapacity (a subsistent bearer of wisdom has its own capacity for a true content about itself).",
+  "basis": "stipulative",
+  "note": "Stipulative analyst notion (#1731, #2145), attribution deferred. Lean has no declaration for it: it is the parameter wisdom of the WisdomSelfUnderstanding theorems and of WisdomIsPure. The purity premise and the capacity bridge are separate premises about this same token; the productive and exemplary readings are excluded only by this intended reading and by the #1892 controls, in which an exemplar form norms a knower while its bearer apprehends nothing."
+}
