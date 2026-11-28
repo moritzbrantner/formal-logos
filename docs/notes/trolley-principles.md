@@ -198,8 +198,8 @@ primitive with its own definition record; it has no axiology or aggregation rule
   requirement (easy rescue survives).
 - WHOLLY_GOOD_3 (`OntologicalGoodnessSense`: `GodIsSupremelyGood` and
   `DivineWillsGoodForAllExisting` on a shared carrier) is only a structural
-  surrogate. Its model makes every relation true, and such relations exist for
-  every signature, so the two predicates constrain no Rowe field. It omits the
+  surrogate. Its model makes every relation true, and the same construction works on
+  any signature (an observation, not separately certified), so the two predicates constrain no Rowe field. It omits the
   classical permission rule the corpus records (ST I q.2 a.3 ad 1;
   STMT-GOD-DRAWS-GOOD-FROM-EVERY-EVIL and its collective variants), and it is not
   the classical-theist sense. Its non-entailment is evidence about this encoding,

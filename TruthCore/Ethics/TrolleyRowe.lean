@@ -119,8 +119,8 @@ of preventing restores Rowe's blocking-cost requirement.
 (3) Structural surrogate only: Rowe's `WhollyGood` read by the two WHOLLY_GOOD_3
 predicates, with omniscience, omnipotence and an unblocked preventable suffering,
 while the permission constraint fails. The witness makes every relation true on
-one being; for every signature such relations exist, so the predicates constrain
-no Rowe field. This shows nothing about the classical account's permission rule.
+one being; the same construction works on any signature (an observation, not separately
+certified), so the predicates constrain no Rowe field. This shows nothing about the classical account's permission rule.
 (4) WHOLLY_GOOD_1 without the outcome bridge does not yield it; the witness
 empties `Better`.
 (5) How the constraint clause classifies the trolley-shaped ways: the switch,
