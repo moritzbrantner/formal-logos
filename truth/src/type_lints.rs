@@ -336,23 +336,37 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
                 .unwrap_or_default(),
             _ => Vec::new(),
         };
-        // Judged when the relation is new or changed, when the tested
-        // argument's premises changed (it may have gained a logical premise),
-        // or when a subject result's certificate may have changed (it may no
-        // longer reach the logical premise).
+        // Judged when the relation is new or changed (including one newly
+        // designated `tests`), when the tested argument's premises changed or
+        // a premise was rebound to another Lean declaration (it may have
+        // gained a logical premise), or when a subject result's certificate
+        // may have changed (it may no longer reach the logical premise).
         if !scope.judges(
             "relations",
             id,
             relation,
-            &["subject_kind", "subject_id", "object_kind", "object_id"],
+            &[
+                "predicate",
+                "subject_kind",
+                "subject_id",
+                "object_kind",
+                "object_id",
+            ],
         ) && !scope.judges(
             "arguments",
             object,
             &argument.fields,
             &["premise_statement_ids"],
-        ) && !subjects
-            .iter()
-            .any(|subject| scope.result_changed(corpus, subject))
+        ) && !list(&argument.fields, "premise_statement_ids")
+            .into_iter()
+            .any(|premise| {
+                statements.get(premise).is_some_and(|statement| {
+                    scope.judges("statements", premise, statement, &["lean_declaration"])
+                })
+            })
+            && !subjects
+                .iter()
+                .any(|subject| scope.result_changed(corpus, subject))
         {
             continue;
         }
@@ -932,6 +946,41 @@ mod tests {
                 affected_results: Some(BTreeSet::new()),
             },
         )
+    }
+
+    /// #2167 review: a relation newly designated `tests` (same endpoints),
+    /// and a premise of the tested argument rebound to a logical premise, are
+    /// judged although nothing else changed.
+    #[test]
+    fn a_new_tests_designation_or_rebound_premise_is_judged() {
+        let checkout = fixture();
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        let relation = fixture();
+        relation.write(
+            "relations",
+            json!({"id": "REL-BAD", "subject_kind": "result", "subject_id": "CTRL-BAD",
+                   "predicate": "supports", "object_kind": "argument", "object_id": "ARG"}),
+        );
+        let redesignated = report_since(&corpus, &Corpus::load(&relation.0).unwrap());
+        assert_eq!(redesignated["tests_judged"], 1, "{redesignated}");
+        assert_eq!(
+            redesignated["tests_missing_logical_premise"][0]["relation_id"],
+            "REL-BAD"
+        );
+        let statement = fixture();
+        statement.write(
+            "statements",
+            json!({"id": "EM", "lean_declaration": "T.EM"}),
+        );
+        let rebound = report_since(&corpus, &Corpus::load(&statement.0).unwrap());
+        assert_eq!(rebound["tests_judged"], 2, "{rebound}");
+        assert_eq!(
+            rebound["tests_missing_logical_premise"]
+                .as_array()
+                .unwrap()
+                .len(),
+            1
+        );
     }
 
     /// #2167 review: a test whose subject's certificate changed is judged
