@@ -1,0 +1,10 @@
+{
+  "id": "3a969d57-230f-46e7-b521-d136ac0da58b",
+  "label": "Test by VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 strictness models",
+  "subject_kind": "result",
+  "subject_id": "b441a75c-b426-46be-b414-f008f31be7a7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c94b5446-e7e7-5b36-9bed-288959725526",
+  "note": "Tests whether refuting the necessitist transfer bears on the contingency node: on abstractDrop the transfer fails while the node fails at every world, so the transfer's failure gives the node no support (unlike the failure of its exact contradictory 411e5817, which gives the node classically). The same models show that the transfer strictly strengthens concrete necessitarianism (the weak version holds and the transfer fails)."
+}
