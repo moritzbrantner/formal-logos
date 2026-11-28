@@ -1,0 +1,14 @@
+{
+  "id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+  "label": "Every lack fact of an actual root has an admitted reason",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d, if the arena's fact lack r d holds at w, then some fact is admitted at w as a reason for it (EXPLAINED_ABSENCE_1). It is the unrestricted fact PSR restricted to the lack facts of actual roots: a PSR for the closure of a necessary root's profile, not restricted to contingent facts. What lack r d is the fact of is fixed by the separate lack-facts premise. The #756 inquiry bridges, the contingent-fact PSR and the contingent-scoped quality conditions all hold in an arena where no root lack has a reason and this fails (InquiryScopeMap clause 11); it holds whenever the contingent-fact PSR does, with the necessary truths admitted as reasons for the necessary truths (clause 3).",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.RootLackPSR",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}

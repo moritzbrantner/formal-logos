@@ -1,0 +1,10 @@
+{
+  "id": "fc1d00be-1e15-473d-b30c-28d12b9d9a41",
+  "label": "Rate-weighted nested cutoffs of one roster give constant arbitrary frequencies (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "b945e56e-b327-4737-9ba2-62e2e721e9e0",
+  "rule": "Count the two finite type slices at each stage",
+  "meaning": "For positive a and b the stage-n slices are initial segments of lengths a(n+1) and b(n+1); they are nested, index k appears by stage k, and the relative count of the first slice is a/(a+b) at every stage.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

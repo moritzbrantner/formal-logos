@@ -1,9 +1,12 @@
 module
 
 public import Mathlib.Probability.Distributions.Bernoulli
+public import Mathlib.Probability.Distributions.Geometric
+public import Mathlib.MeasureTheory.Measure.Prod
 public import TruthCore.Logic.EpistemicAccuracy.BayesianRefinement
 public import TruthCore.Logic.FiniteInformation
 public import TruthCore.Science.FineTuningEvidence
+public import TruthCore.Science.Identifiability
 
 /-! A binary report drawn from the existing observer-conditioned sampling pair.
 The model labels index rows of a channel. The prior is for this comparison
@@ -88,5 +91,121 @@ def AccuracyAgreement : Prop :=
     w*u = p * (reportRate d : ℝ) →
     (1-w)*v = p * (1-(reportRate d : ℝ)) →
     (accuracyGain w u v = 0 ↔ reportInformation p d n = 0)
+
+/-! Observational identification under plenitude. The roster below is a
+stipulated toy population, with one eligible observation center per instance.
+A Boolean type denotes a residual report among observers, not observerhood.
+Metaphysical and physical possibility are supplied sets, not definitions of
+instantiation or probability. No cosmological application is assumed. -/
+namespace Plenitude
+
+open Set
+
+abbrev Universe := Bool × ℕ
+
+/-- The realized population includes every pair; the first coordinate records
+the universe type. Neither coordinate is a first-person probability. -/
+def roster : Set Universe := Set.univ
+
+def realizedTypes : Set Bool := Prod.fst '' roster
+
+/-- Use a fixed, full-support geometric law for the instance index, varying
+only the Bernoulli law for the report. Both laws are normalized Mathlib
+measures. No uniform measure over the infinite roster is presumed. -/
+noncomputable def half : unitInterval := ⟨1/2, by norm_num, by norm_num⟩
+
+/-- The report coordinate uses Mathlib's Bernoulli law directly as a sampling
+law over residual reports. It is not the design/natural comparison prior
+`modelPrior`, although both are built from the same Mathlib constructor. -/
+noncomputable def observationLaw (p : unitInterval) : Measure Universe :=
+  (bernoulliMeasure true false p).prod (geometricMeasure half)
+
+def fineEvent : Set Universe := ({true} : Set Bool) ×ˢ (Set.univ : Set ℕ)
+
+abbrev InteriorRate := {p : unitInterval // 0 < (p : ℝ) ∧ (p : ℝ) < 1}
+
+/-- The entire roster, type assignment and both possibility profiles are
+unchanged across the compared observational models. A caller may stipulate
+both profiles are univ; this is not a modal-realizability theorem. -/
+def scopeData (possible reachable : Set Bool) (_ : InteriorRate) :
+    Set Bool × Set Bool × Set Universe × (Universe → Bool) :=
+  (possible, reachable, roster, Prod.fst)
+
+/-- Finite exhaustion by two disjoint type slices. Different positive
+rates enumerate the same entire roster. There is no claim that these are
+physical cosmological time cutoffs. -/
+def slice (a b n : ℕ) (tag : Bool) : Finset ℕ :=
+  Finset.range ((if tag then a else b) * (n + 1))
+
+def cutoffLikelihood (a b n : ℕ) : ℚ :=
+  (↑(slice a b n true).card : ℚ) /
+    (↑(slice a b n true).card + ↑(slice a b n false).card)
+
+/-- Reweight the two observer cells of the existing Sampling model. Common
+normalization cancels on conditioning on observerhood. Weights can model
+record yield or a first-person sampling rule; they are not thereby calibrated
+counts or physical probabilities. The results require positive weights and
+positive masses for both cells. -/
+def weightedLikelihood (s : Sampling) (r t : ℚ) : ℚ :=
+  s.weight 0 * r / (s.weight 0 * r + s.weight 1 * t)
+
+/-- All realized types have infinitely many distinct instances. This statement
+also exhibits countable repetition explicitly, via an injection from Nat. -/
+def RepeatedTypes : Prop :=
+  realizedTypes = Set.univ ∧
+  ∀ b : Bool, ∃ f : ℕ → Universe, Function.Injective f ∧
+    ∀ n, f n ∈ roster ∧ (f n).1 = b
+
+/-- Proper countably additive measures with positive singleton mass and any
+interior report probability, on exactly the same population and type map.
+Even the complete supplied ontology profile does not identify the likelihood. -/
+def ObservationalUnderdetermination : Prop :=
+  RepeatedTypes ∧
+  (∀ p : InteriorRate, IsProbabilityMeasure (observationLaw p.val) ∧
+    (∀ u : Universe, 0 < (observationLaw p.val).real {u}) ∧
+    (observationLaw p.val).real fineEvent = (p.val : ℝ)) ∧
+  (∀ possible reachable : Set Bool,
+    ¬ Identifiability.Identifies (scopeData possible reachable)
+      (fun p : InteriorRate => (observationLaw p.val).real fineEvent))
+
+/-- Both finite slices are nested and exhaustive, but their uniform relative
+type count has an arbitrary positive rational rate a/(a+b), already at every
+stage. Exact constancy is stronger here than convergence of the ratios. -/
+def CutoffUnderdetermination : Prop :=
+  ∀ a b : ℕ, 0 < a → 0 < b →
+    (∀ n m : ℕ, n ≤ m → ∀ tag, slice a b n tag ⊆ slice a b m tag) ∧
+    (∀ tag k, k ∈ slice a b k tag) ∧
+    (∀ n, cutoffLikelihood a b n = (a : ℚ) / ((a : ℚ) + b))
+
+/-- With both observer cells nonempty in mass, merely varying the positive
+relative sampling weights realizes every interior rational conditional
+likelihood. Unit weights recover the existing unweighted likelihood. -/
+def ObserverWeightUnderdetermination : Prop :=
+  (∀ s : Sampling, weightedLikelihood s 1 1 = likelihood s) ∧
+  (∀ s : Sampling, 0 < s.weight 1 → ∀ p : ℚ, 0 < p → p < 1 →
+    ∃ r t : ℚ, 0 < r ∧ 0 < t ∧ weightedLikelihood s r t = p)
+
+/-- Positive mass at every point of a measurable space. This is pointwise
+positivity of a (here discrete) measure, not the topological support of an
+atomless measure. -/
+def PointFullSupport {W : Type*} [MeasurableSpace W] (μ : Measure W) : Prop :=
+  ∀ x, 0 < μ {x}
+
+universe u
+
+/-- The shared interior-mass statement. On every countable carrier with
+measurable singletons, an event that is infinite and has an infinite
+complement receives every strictly interior probability from some normalized
+measure with positive mass at every point. The carrier, the event and its
+cardinality data are fixed before the measure is chosen. This is a
+non-identification statement about bare carriers and partitions; it does not
+say that no probability on the carrier is warranted. -/
+def ArbitraryInteriorMass : Prop :=
+  ∀ (W : Type u) [Countable W] [MeasurableSpace W] [MeasurableSingletonClass W]
+    (s : Set W) [Infinite s] [Infinite (sᶜ : Set W)] (p : InteriorRate),
+    ∃ μ : Measure W, IsProbabilityMeasure μ ∧ PointFullSupport μ ∧
+      μ.real s = (p.val : ℝ)
+
+end Plenitude
 
 end TruthCore.Science.FineTuningInformation

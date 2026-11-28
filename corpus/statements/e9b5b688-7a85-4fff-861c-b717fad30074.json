@@ -2,5 +2,10 @@
   "id": "e9b5b688-7a85-4fff-861c-b717fad30074",
   "label": "Occam’s razor and infinite regress: one shared law allows positive hypothesis weight",
   "paraphrase": "For each one-time charge c in (0,1], a prefix-weight profile has weight one at the empty prefix, c at the first step, and stays at c through all further steps. A whole-hypothesis weight of c satisfies every prefix bound. No uniform factor below one bounds every extension.",
-  "lean_declaration": "TruthCore.Causality.OccamRegress.SharedLawCharge"
+  "lean_declaration": "TruthCore.Causality.OccamRegress.SharedLawCharge",
+  "connection_plan": {
+    "target_statement_id": "e529c42f-f0a2-5ebf-9ae1-459e7f798d31",
+    "missing_bridge": "Once an argument from a zero-weight prior assignment to e529c42f exists, this theorem is an undercutting test of its prior-assignment premise, to be linked by tests: a single charge for a shared generating law gives the regress positive weight at every depth, so a zero-weight assignment must exclude law-generated regresses or show the law inapplicable to the actual series.",
+    "blocker": "No Occam support argument for e529c42f exists yet, so there is no root-path prior-assignment premise for this result to test; a tests link now would place nothing honestly."
+  }
 }

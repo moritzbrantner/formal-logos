@@ -1,0 +1,10 @@
+{
+  "id": "7cb07c61-1c9c-4212-b2ee-b257e660fb7c",
+  "label": "Observer-cell reweighting of a sampling row reaches every interior likelihood",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "dea28154-e726-46e6-ad33-67a1bf384afe",
+  "inference_ids": [
+    "a159b012-e6b4-4304-bbf2-9043b8b381f2"
+  ],
+  "meaning": "Unit weights give the existing likelihood. With positive evidence and other-observer masses, the weights p/w0 and (1-p)/w1 give weighted likelihood p for each interior rational p."
+}

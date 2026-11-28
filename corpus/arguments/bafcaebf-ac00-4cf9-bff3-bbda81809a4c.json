@@ -1,0 +1,13 @@
+{
+  "id": "bafcaebf-ac00-4cf9-bff3-bbda81809a4c",
+  "label": "Product sampling laws on one plenitude roster leave the report probability unidentified",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "2db2a6c0-6815-470c-a77f-6a548a2285aa",
+  "inference_ids": [
+    "e43c9041-834d-4b7b-970c-65cd8fc45c5c"
+  ],
+  "meaning": "The roster Bool x Nat repeats each type through an injection from Nat. For interior p the product of a Bernoulli(p) report law and a geometric(1/2) index law is a probability with positive point masses and true-fiber mass p. Rates 1/100 and 99/100 share all scope data but differ in that mass, so the scope data do not identify it.",
+  "definition_ids": [
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+  ]
+}

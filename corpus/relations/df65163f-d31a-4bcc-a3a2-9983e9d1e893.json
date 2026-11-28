@@ -1,0 +1,10 @@
+{
+  "id": "df65163f-d31a-4bcc-a3a2-9983e9d1e893",
+  "label": "Test by S5.Countermodels.checks (2b20b5af)",
+  "subject_kind": "result",
+  "subject_id": "1bb0ac1f-5e23-5ceb-9699-3ca1adf18a70",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+  "note": "At the sole world `()` of `deadEnd`, full-predicate collapse holds and its diamond fails because `access () ()` is absent. The `MC w → ◇MC w` direction in `S5.Laws.modes` uses that self-loop as its witness. Euclideanness holds vacuously on the empty accessibility relation."
+}

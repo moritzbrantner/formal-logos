@@ -1,0 +1,16 @@
+{
+  "id": "3c988509-1eaa-4a41-9e2b-35ab8762b11a",
+  "label": "Three omission scopes of giving, by derivation and finite controls",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "f50655a4-9a64-4838-b864-cac1a2175803",
+  "inference_ids": [
+    "8e15b5f9-af44-40f6-a472-d9a7dbffacd2"
+  ],
+  "meaning": "A total-refraining world withholds every actual recipient; a roster-withholding world withholds each. A necessarily productive giver gives something at the refraining witness. A fixed giver gives the same at the withholding world. The Van Cleve, replacement and theist frames are evaluated case by case; pointwiseNotJoint and tiedNoEmptyChoice are the existing STITControls theorems.",
+  "definition_ids": [
+    "3c8f25cf-97ae-4d0f-bd4e-c46d3eba8ec4",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "6f842f97-5de9-4fbc-8b1b-ac50a49a738e",
+    "a7985f66-16b1-4f0f-bb7f-4988d2377790"
+  ]
+}

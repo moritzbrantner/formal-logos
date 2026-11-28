@@ -1,0 +1,18 @@
+{
+  "id": "8ebb951a-044a-41d6-8614-40eff45072a5",
+  "label": "Content-fixed favouring laws, from the definitions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "03d50aae-cf49-48ae-9944-56da63ef0ac2",
+  "inference_ids": [
+    "19ab439c-5fd5-4784-b1af-037ffc37c67b"
+  ],
+  "meaning": "Law 1: the actual history h and a history k with another outcome are both in the realized range; selection at h gives favouring of out h over out k, at k favouring of out k over out h, by the same content, contradicting asymmetry. Law 2 checks the re-description directly; a contingent outcome makes its content differ between two histories. Law 3: one cell relates every two histories. Law 4: selection would favour the actual outcome over the tied rival, which good-boundedness turns into a G-ranking. Law 5: the bettering outcome is distinct by asymmetry, and selection over it gives the reverse G-ranking.",
+  "definition_ids": [
+    "5a818c39-1ba6-4cce-adf6-246d1d49fd1e",
+    "9e9af2c4-5938-4204-859b-fcf78d485e20",
+    "aaaad7b2-fd1c-49ad-ac0b-666763ef96df"
+  ],
+  "disambiguation_ids": [
+    "59b60fe6-1bfe-512f-a90c-17416218bba4"
+  ]
+}

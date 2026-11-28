@@ -76,3 +76,85 @@ predicate = "tests"
 object_kind = "statement"
 object_id = "Observer-conditioned binary report information criterion"
 note = "At one interior prior the two concrete row pairs witness equality and inequality of the conditional likelihoods, with the corresponding zero and positive information values."
+
+# Plenitude controls (#2143) and the shared interior-mass lemma reused by #2142.
+# Analyst mathematics, attribution deferred. None of these statements is a
+# premise of a root inference; each records its plan toward GOD_4.
+
+[[statement]]
+id = "Fixed infinite plenitude roster leaves the residual report probability unidentified"
+lean = "Plenitude.ObservationalUnderdetermination"
+paraphrase = "On one fixed roster Bool x Nat in which each report type has infinitely many instances, every strictly interior report probability is realized by a normalized product measure giving positive mass to every instance. No function of the fixed possibility profiles, roster and type map returns that probability across these measures."
+definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e"]
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "A warranted physical generator, measure and observer-selection rule that fixes the residual observational likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4."
+blocker = "The control shows only that bare plenitude with infinite repetition does not fix the likelihood; no physical measure, observer rule, designer likelihood or actual designer is derived."
+
+[[statement]]
+id = "Nested exhaustive type cutoffs give every positive rational relative frequency"
+lean = "Plenitude.CutoffUnderdetermination"
+paraphrase = "For positive naturals a and b, retaining the first a(n+1) instances of one type and b(n+1) of the other gives nested finite stages that eventually include every instance, and the uniform relative count of the first type is a/(a+b) at every stage."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "A physically warranted cutoff or regularization that fixes the residual observational likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4."
+blocker = "The control shows only that nested exhaustive enumerations of one infinite roster do not fix a frequency; it neither selects nor refutes any physical cutoff measure."
+
+[[statement]]
+id = "Positive observer-cell weights realize every interior conditional likelihood"
+lean = "Plenitude.ObserverWeightUnderdetermination"
+paraphrase = "Unit weights on the two observer cells of an existing three-cell sampling row recover its observer-conditioned likelihood; when the other-observer cell has positive mass, suitable positive weights give every strictly interior rational likelihood."
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "An independently warranted observer-weighting or record-yield rule that fixes the observer-conditioned likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4."
+blocker = "The control shows only that unconstrained positive weights do not fix the likelihood; it does not show that any admissible weighting rule is unavailable."
+
+[[statement]]
+id = "Countable carrier with infinite event and complement admits every interior event probability"
+lean = "Plenitude.ArbitraryInteriorMass"
+paraphrase = "On every countable carrier with measurable singletons, an event that is infinite and has an infinite complement receives each strictly interior probability from some normalized measure giving positive mass to every point. Carrier and event cardinality do not fix the probability; a probability is not thereby shown unavailable."
+definitions = ["3a22aef4-1160-41b3-b0d7-f2883f439d4e"]
+
+[statement.connection_plan]
+target_statement_id = "8626f8a5-9531-5da7-9ebd-f901e74b1129"
+missing_bridge = "A warranted measure on the relevant universe or world carrier that fixes the event probability used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4."
+blocker = "The lemma shows only that countable carriers and infinite partitions do not determine a probability; it derives no physical prior, designer likelihood or actual designer."
+
+[[argument]]
+id = "Product sampling laws on one plenitude roster leave the report probability unidentified"
+theorem = "observationalUnderdetermination"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Fixed infinite plenitude roster leaves the residual report probability unidentified"
+rule = "Evaluate Bernoulli-geometric product measures and apply the identifiability criterion"
+meaning = "The roster Bool x Nat repeats each type through an injection from Nat. For interior p the product of a Bernoulli(p) report law and a geometric(1/2) index law is a probability with positive point masses and true-fiber mass p. Rates 1/100 and 99/100 share all scope data but differ in that mass, so the scope data do not identify it."
+
+[[argument]]
+id = "Rate-weighted nested cutoffs of one roster give constant arbitrary frequencies"
+theorem = "cutoffUnderdetermination"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Nested exhaustive type cutoffs give every positive rational relative frequency"
+rule = "Count the two finite type slices at each stage"
+meaning = "For positive a and b the stage-n slices are initial segments of lengths a(n+1) and b(n+1); they are nested, index k appears by stage k, and the relative count of the first slice is a/(a+b) at every stage."
+
+[[argument]]
+id = "Observer-cell reweighting of a sampling row reaches every interior likelihood"
+theorem = "observerWeightUnderdetermination"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Positive observer-cell weights realize every interior conditional likelihood"
+rule = "Solve the weighted likelihood equation for positive weights"
+meaning = "Unit weights give the existing likelihood. With positive evidence and other-observer masses, the weights p/w0 and (1-p)/w1 give weighted likelihood p for each interior rational p."
+
+[[argument]]
+id = "Transport of the product control gives every interior mass on countable carriers"
+theorem = "arbitraryInteriorMass"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "Countable carrier with infinite event and complement admits every interior event probability"
+rule = "Push the Bernoulli-geometric product forward along a fiber-preserving bijection"
+meaning = "A bijection from Bool x Nat sends the true fiber onto the event and the false fiber onto its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p."

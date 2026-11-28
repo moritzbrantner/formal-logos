@@ -1,0 +1,15 @@
+{
+  "id": "acec134f-4954-4531-a46f-1cc51ee76532",
+  "label": "The all-admissible family separates member grounding from sufficiency",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "eeead2f5-d26f-4cb4-9bc2-13b147a15620",
+  "inference_ids": [
+    "4786ae41-8f5b-4185-b3f0-ded34081dfe9"
+  ],
+  "meaning": "With every profile admissible and noesis requiring its own lack, the sufficiency direction holds and member grounding fails: the strengthening is strict. A structural interpretation only.",
+  "definition_ids": [
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

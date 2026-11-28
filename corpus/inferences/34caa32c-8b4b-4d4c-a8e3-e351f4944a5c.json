@@ -1,0 +1,10 @@
+{
+  "id": "34caa32c-8b4b-4d4c-a8e3-e351f4944a5c",
+  "label": "Guidance table, by computation (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "e4a72e8f-07e7-4891-878d-64226da0b9ce",
+  "rule": "Evaluate the definitions on the finite carrier; the blind and fixed rows use respectBlindNotGuided and fixedNotGuided",
+  "meaning": "raised differs from base only in d's fit weight. The good-tracking profile favours c over d at base, where fit weighs d above c but c is better overall, and d over c at raised: guided. The fit-blind profile favours c over d at base by the extra respect and, being blind to fit, still favours c at raised (respectBlindNotGuided): not guided. The fixed favouring of c over d never favours d over c: not guided. The fit nature favours d over c at base, so the fit reason is not outweighed for it. The second-order standard holds of the good-tracking over the fit-blind profile in every scenario, since the first tracks overall betterness and the second does not (they differ at raised). The guidance verdicts depend on the profile and the value structure only (guidanceOfTracking, guidanceLabelIndependent).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

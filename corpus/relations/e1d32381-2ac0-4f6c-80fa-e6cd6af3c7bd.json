@@ -1,0 +1,10 @@
+{
+  "id": "e1d32381-2ac0-4f6c-80fa-e6cd6af3c7bd",
+  "label": "Test by ChainInstantiation.controls (42890b45)",
+  "subject_kind": "result",
+  "subject_id": "6c8cd838-b1a1-521f-860e-9289b89f0e60",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "42890b45-9325-56d3-8ae4-a6202e8c6ba6",
+  "note": "For each bound, `SameWindow` makes the infinite profile and `finite bound` agree on existence and cause edges inside that finite window. In the fully populated infinite profile `x + 1` is a causal predecessor of every `x` at `()`. The certificate proves `¬ WellFounded (infinite.Causes ())`, which falsifies `WellFoundedPredecessors` instantiated with that relation."
+}

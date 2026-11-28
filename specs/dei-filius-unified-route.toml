@@ -92,13 +92,3 @@ predicate = "tests"
 object_kind = "argument"
 object_id = "85fc8c5a-5aab-4c6d-b775-1848c069faef"
 note = "One two-bearer interpretation jointly satisfies all fifteen sufficiency premises and the recorded upstream leaves. Bearer true has the nine and the result checks the full typed attribute bundle for that same bearer."
-
-[[relation]]
-id = "b49d700f-a07d-46f9-9786-76a84d7fa02e"
-label = "Test by DeiFiliusUnifiedRoute.controls (669aca2b)"
-subject_kind = "result"
-subject_id = "33bd6aed-5cd6-42d0-8466-107cb181c33a"
-predicate = "tests"
-object_kind = "argument"
-object_id = "669aca2b-fbcb-48b1-9905-46d615fd3500"
-note = "With excluded middle, the four-role fixture at world false and the constant source essence map jointly satisfy the unified-root premise bundle. The result checks every typed attribute of its selected source."

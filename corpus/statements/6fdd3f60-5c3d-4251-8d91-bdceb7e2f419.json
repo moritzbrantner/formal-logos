@@ -1,0 +1,10 @@
+{
+  "id": "6fdd3f60-5c3d-4251-8d91-bdceb7e2f419",
+  "label": "At w, a power for p is a power for any q holding at every accessible p-world",
+  "paraphrase": "OPEN bridge (analyst formulation, unattributed): at w, for every being y and propositions p and q, if q holds at every world accessible from w at which p holds, then a PowerFor of y at w for p is a PowerFor of y at w for q. Reading: an exercise issuing in p obtaining issues in q obtaining. Cost: any power is then a power for whatever holds at every accessible world.",
+  "lean_declaration": "TruthCore.Causality.SelectionScope.PowerForMonotoneAt",
+  "definition_ids": [
+    "578e81cd-d0fb-4921-9a02-7e250d5310cb",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ]
+}

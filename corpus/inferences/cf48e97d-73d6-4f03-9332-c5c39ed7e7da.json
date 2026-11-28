@@ -1,0 +1,12 @@
+{
+  "id": "cf48e97d-73d6-4f03-9332-c5c39ed7e7da",
+  "label": "The strong mode step entails the weak mode step (inference)",
+  "input_statement_ids": [
+    "b9143dd2-a012-4b21-a992-0656d7b8d0d0"
+  ],
+  "output_statement_id": "47b51faf-50fc-4d64-9d1f-9db83117643b",
+  "rule": "Instantiate the strong version at the potential mode",
+  "meaning": "Strength order registration: if the virtual mode is above every other way of having a perfection, it is above the potential mode. Application only; it establishes neither. Strictness: a separate stipulated mode order in the impersonal-source controls, unrelated to the source's frame, satisfies the weak version and falsifies the strong.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

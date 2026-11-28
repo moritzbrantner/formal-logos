@@ -8,9 +8,10 @@
     "2e31f6cf-433e-5e11-bb65-233499985668",
     "183b48d2-1753-583d-aef9-4199cff86231",
     "85a4aa8b-11cc-5aeb-b5a6-3f163178002d",
-    "7cf63236-9c12-41bc-bf20-6fbce7a121db"
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6"
   ],
-  "resolution": "Scott's variant and Gödel's 1970 variant define 'essence' differently, and their statements and results keep the two apart. Scott's ess (DEF-ESSENCE-SCOTT) requires the bearer to have the essence, and its inclusion quantifies over all individuals; Gödel's 1970 Ess. (DEF-ESSENCE-GOEDEL-1970) drops that conjunct and quantifies over existing individuals. They are separate Lean declarations, `TruthCore.Isabelle.AFP.GoedelGod.Essence` and `TruthCore.Isabelle.AFP.NotesOnGoedel.GoedelVariantHOML1.Essence`, and no statement treats one as the other. The difference is what the paired results SCOTT-EMPTY-PROPERTY-NOT-ESSENCE and GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE show, and it is what makes the 1970 axioms inconsistent (GOEDEL-1970-INCONSISTENT) while Scott's are satisfiable. Neither is the Thomist essence. Thomistic essence as nature/quiddity in the attribute readings is distinct from either modal essence definition; the claim of identity with esse is separate from this term’s definition. `FilteredEssence` (DEF-FILTERED-ESSENCE) is a stipulated experiment that filters comparison properties in Scott's structure; it neither changes the original Scott definition nor supplies an historical or metaphysical theory of essence. ESSENCE_5 (`TruthCore.Modal.ModalGrounding.EssentialTruth`, #1887) is the Finean essential-truth relation: it lies in the nature of x that a world-proposition holds. It is distinct from the q.3 a.4 represented essence (ESSENCE_3): the only passage between them is the explicit OPEN premise that whatever has its represented esse equal to its essence has its own existence in its nature, listed as a sense bridge where an argument uses both.",
+  "resolution": "Scott's variant and Gödel's 1970 variant define 'essence' differently, and their statements and results keep the two apart. Scott's ess (DEF-ESSENCE-SCOTT) requires the bearer to have the essence, and its inclusion quantifies over all individuals; Gödel's 1970 Ess. (DEF-ESSENCE-GOEDEL-1970) drops that conjunct and quantifies over existing individuals. They are separate Lean declarations, `TruthCore.Isabelle.AFP.GoedelGod.Essence` and `TruthCore.Isabelle.AFP.NotesOnGoedel.GoedelVariantHOML1.Essence`, and no statement treats one as the other. The difference is what the paired results SCOTT-EMPTY-PROPERTY-NOT-ESSENCE and GOEDEL-1970-EMPTY-PROPERTY-IS-ESSENCE show, and it is what makes the 1970 axioms inconsistent (GOEDEL-1970-INCONSISTENT) while Scott's are satisfiable. Neither is the Thomist essence. Thomistic essence as nature/quiddity in the attribute readings is distinct from either modal essence definition; the claim of identity with esse is separate from this term’s definition. `FilteredEssence` (DEF-FILTERED-ESSENCE) is a stipulated experiment that filters comparison properties in Scott's structure; it neither changes the original Scott definition nor supplies an historical or metaphysical theory of essence. ESSENCE_5 (`TruthCore.Modal.ModalGrounding.EssentialTruth`, #1887) is the Finean essential-truth relation: it lies in the nature of x that a world-proposition holds. It is distinct from the q.3 a.4 represented essence (ESSENCE_3): the only passage between them is the explicit OPEN premise that whatever has its represented esse equal to its essence has its own existence in its nature, listed as a sense bridge where an argument uses both. ESSENCE_6 (`TruthCore.Causality.RootClosure.ProfileEssentialCondition`, #2145) is a Finean nature-relative notion of a different arity: it lies in the nature of y that x's profile of real determinations satisfies a condition, with a condition on sets of determinations as its content, not a world-proposition, and two place arguments where ESSENCE_5 has one; it is used where an essential exclusion must be stated for profiles that no world realizes. No passage between ESSENCE_5 and ESSENCE_6 is asserted.",
   "term_label": "ESSENCE",
   "senses": [
     {
@@ -58,6 +59,30 @@
         {
           "declaration": "TruthCore.Modal.ModalGrounding.EssentialExclusionAccount",
           "parameter": "Essential"
+        }
+      ]
+    },
+    {
+      "id": "3dadbd16-4db4-4578-891f-ac58dd8b7494",
+      "label": "ESSENCE_6",
+      "definition_id": "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+      "lean_declaration": "TruthCore.Causality.RootClosure.ProfileEssentialCondition",
+      "lean_parameters": [
+        {
+          "declaration": "TruthCore.Causality.RootClosure.EssenceGroundedRootProfileModality",
+          "parameter": "Ess"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsPositive",
+          "parameter": "Ess"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsCarried",
+          "parameter": "Ess"
+        },
+        {
+          "declaration": "TruthCore.Causality.RootClosure.RootEssentialConditionsFactive",
+          "parameter": "Ess"
         }
       ]
     }

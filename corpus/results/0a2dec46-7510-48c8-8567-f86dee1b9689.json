@@ -1,0 +1,11 @@
+{
+  "id": "0a2dec46-7510-48c8-8567-f86dee1b9689",
+  "label": "Rate-weighted nested cutoffs of one roster give constant arbitrary frequencies",
+  "argument_id": "372c1552-cde0-4315-a9a3-6f63058383e9",
+  "challenge_module": "TruthCore.Results.Science.FineTuningInformation.Challenge",
+  "solution_module": "TruthCore.Results.Science.FineTuningInformation.Solution",
+  "theorem": "TruthCore.Results.Science.FineTuningInformation.cutoffUnderdetermination",
+  "comparator_config": "results/0a2dec46-7510-48c8-8567-f86dee1b9689/comparator.json",
+  "status": "solution-present",
+  "description": "For positive a and b the stage-n slices are initial segments of lengths a(n+1) and b(n+1); they are nested, index k appears by stage k, and the relative count of the first slice is a/(a+b) at every stage."
+}

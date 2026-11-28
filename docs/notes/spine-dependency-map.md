@@ -225,6 +225,79 @@ Computed frontier delta against the audited main: open root premises
 479 → 479 (340 bare, 93 supported, 46 stated); support alternatives 373 → 373;
 lowest-cost diagnostic 16 → 16; added alternatives 0; no change.
 
+## Bottleneck ranking for the warrant phase (2026-11-27)
+
+Owner direction 2026-11-27 (#2103, #143): the curation pass is over, and the
+warrant of the shared bottleneck premises comes first. Computed on main
+`03c3fd7ad` with `truth bottlenecks` (route semantics in `truth/README.md`,
+"`bottlenecks`"): for the Catholicism root with `--stage 1 --stage 2`, and for
+`--frontier-root STMT-GOD-EXISTS`. A route *needs* a premise when it is a leaf of
+the expanded route or when every verified derivation of a proved leaf needs it.
+These counts describe shared dependency, not merit, and they are recorded only
+to choose what to assess.
+
+**Collapsing presentations.** Strength siblings, mutually derived statements
+and premises sharing one warrant are one family. A family's count is the union
+of the routes that need any of its open members; members that the expansion
+derives (proved, not open) carry no count of their own. "Appears in the expanded
+derivations" is meant: each count leaves the direct options of stated leaves in
+place. Logical primitives and stipulated frame properties are listed separately.
+(Revised after the independent challenge of #2166: union counts replace the
+most-needed member, the grades-ascent family is added, and degree calibration is
+merged with the eminent-comparative gap, which the possession assessment shows
+to be one missing specification.)
+
+| Family (members) | GOD_4 routes (of 20) | Catholicism routes (of 28) | Kind |
+| --- | --- | --- | --- |
+| Causal possession: `376d6a5a`, `2c0b9bd7`, `d0fc96b7`, with `d5a94eb1`, `c11369aa` and the reception inputs `cdb79aa6`, `39a4c28c` | 16 | 28 | substantive; selected first ([assessment](causal-possession-bottleneck.md)); direct stage-one God-route uses of "more such" are only at esse (except the older `1dff22d0` and `892db443`, which have siblings `c201b61a` and `d0c022f8`); stage two also takes preexistence `64498e7e`, whose derivation `6b609ddc` uses it at every perfection with a cause of being as cause |
+| Degree calibration and the eminent comparative: `98755509`, `ac72bbfe`, `ed766869`, `9eaa3b6e`, `e433b6f5`, `f6677834`, `a961a13e`, `fd2c8710` | 18 | 28 | mixed: representation calibrations plus the substantive `fd2c8710`; carries the exceeding step `7030af77` and with it the esse comparative that the possession assessment locates as stage one's load |
+| Priority and existential dependence: `47aff057`, `c0d99549`, `e0088de9`, `57c5ed67`, `2e248016`, `2068f91c` | 18 | 28 | substantive; `47aff057` assessed 2026-11-18 ("sound on priority in being"), next test a respect split of SIMPLY_PRIOR_1 |
+| Composition: `86f10ec3`, `6b80cfe4`, `58445bd6`, `fbee7f15`, `b67c6bb9`, `cc0f7879`, `f5db1796` | 16 | 28 | substantive (`86f10ec3`, `fbee7f15`); `6b80cfe4`, `58445bd6` graded strong or moderate in modal-spine |
+| Productive path and ledger: `14539ae8`, `4c32ba60`, `abceb0a7`, `00719dce`, `9968af58`, `88b2caf5`, `dc619ad6` | 16 | 27 | substantive, on the productive-history routes |
+| Grades ascent: `5cda1946` (distinct-CAUSE_2 chains for each perfection are well-founded), `f29a6b53` (what has a perfection and is exceeded in it has it from a distinct cause) | 12 | 23 | substantive; with possession they give the grades maximum `6c27657f` (`c201b61a`) |
+| Participation and reception: `9da93cd4`, `efe134d4`, `3e890700`, `7fcfcee8`, `14325c83`, `bc1810e5`, `7de89edb`, `1304b462` | 11 | 28 | substantive; graded in the 2026-11-18 cluster assessment of causal-perfection-transfer |
+| Modal existence: `a62975a9`, `c85117b0`, `546975ef`, `82eeeb3c`, `ada25623` | 11 | 2 | substantive, GOD_4-root routes only |
+| Classical attributes: `bb3d4417`, `c7c32f20`, `dc3ec456`, `fa3f08a8`, `8d73ef90`, `e919fe2e`, `dfc3cbae`, `3317e074`, `0471efe6`, `10b2b0ed`, `35777f40`, `d61eda33` | 1 | 28 | substantive, stage two |
+
+**Candidate primitives, listed separately with their scope.**
+
+- Definitional readings of act and potency: `c85e8ef5` (Metaphysics IX.6's
+  analysis of potency, stated), `ca84f62d` (q.5 a.1, perfect insofar as in act,
+  stated) and `196e6606` (q.4 a.2). Needed by 18 of the 20 GOD_4 routes; they fix
+  vocabulary, and their open question is the IN_ACT sense they are read in
+  (DISAMB-IN-ACT), not an independent warrant.
+- Stipulated frame properties of the selected PLG theory: `2bdf810f`,
+  `b6784d40`, `d1c47547` (11 GOD_4 routes). Their scope is that selected frame.
+- Excluded middle `ee4ab504`: logical background.
+
+**Curation-pass candidates checked, not assumed.** `75974d26` (God's reach over
+actual concreta), `cce5a30e` (cross-world persistence of GOD_4), the lackability
+premises `89f0d0d5` and `f856b295`, and the holding–motion bridges `ac93d55a` and
+`e2f44380` are not open premises reaching either root in this computation. The
+cogito anti-brute-root premise `f8dafcc7` (six consuming arguments) and "began
+or homogeneous" `ac376e28` (one) are open but on no root route. They are
+not ranked bottlenecks; their warrant questions stay with their own routes.
+
+**Why possession first.** Priority (`47aff057`) is needed by slightly more
+GOD_4 routes, but it already has a reviewed 2026-11-18 assessment and a named
+next test. The act and potency definitions are candidate primitives. The
+possession family had no grade ("not graded: standing depends on the
+unregistered fork", modal-spine). It appears in the expanded derivations of all
+28 Catholicism routes (direct options remain) and joins three apparently
+independent ways (motion, grades, causal maximum). Its high count partly
+reflects strength-order expansion; see the
+[assessment, §1](causal-possession-bottleneck.md#1-which-premise-is-actually-load-bearing).
+The assessment's consumer audit splits the follow-up into two targets:
+
+1. Preexistence `64498e7e` for stage two, with the transfer premise
+   `f8ba2429` that all its derivations share.
+2. The esse comparative for stage one: the order model at esse plus strict
+   primacy, the claim `18561596` that a maximum in being has no distinct cause
+   of its being, and the degree-calibration premises at esse.
+
+The priority family (respect split of SIMPLY_PRIOR_1) and composition
+(`86f10ec3`, `fbee7f15`) follow.
+
 ## Research attempts citing this note
 
 - [Act priority at a first being from Metaphysics Theta.8: substance routes, plenitude, rivals](../../corpus/attempts/124ff6a9-008f-4e40-8af6-6df906f3d7d2.json)

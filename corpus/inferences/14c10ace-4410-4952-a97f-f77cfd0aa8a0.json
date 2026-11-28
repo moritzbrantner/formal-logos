@@ -1,0 +1,10 @@
+{
+  "id": "14c10ace-4410-4952-a97f-f77cfd0aa8a0",
+  "label": "Transport of the product control gives every interior mass on countable carriers (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
+  "rule": "Push the Bernoulli-geometric product forward along a fiber-preserving bijection",
+  "meaning": "A bijection from Bool x Nat sends the true fiber onto the event and the false fiber onto its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

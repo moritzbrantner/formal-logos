@@ -1,0 +1,11 @@
+{
+  "id": "b945e56e-b327-4737-9ba2-62e2e721e9e0",
+  "label": "Nested exhaustive type cutoffs give every positive rational relative frequency",
+  "paraphrase": "For positive naturals a and b, retaining the first a(n+1) instances of one type and b(n+1) of the other gives nested finite stages that eventually include every instance, and the uniform relative count of the first type is a/(a+b) at every stage.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.CutoffUnderdetermination",
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "A physically warranted cutoff or regularization that fixes the residual observational likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4.",
+    "blocker": "The control shows only that nested exhaustive enumerations of one infinite roster do not fix a frequency; it neither selects nor refutes any physical cutoff measure."
+  }
+}

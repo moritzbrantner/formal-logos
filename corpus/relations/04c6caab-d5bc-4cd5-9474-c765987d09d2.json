@@ -1,0 +1,10 @@
+{
+  "id": "04c6caab-d5bc-4cd5-9474-c765987d09d2",
+  "label": "Determination on choice cells tests the existential PSR for contingents",
+  "subject_kind": "result",
+  "subject_id": "54e1279c-543d-4cfe-8811-5a66a3a33216",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "Tests what an invariant reason of the kind the existential PSR admits can explain about a contingent outcome: the realized range, and no contrast within it."
+}

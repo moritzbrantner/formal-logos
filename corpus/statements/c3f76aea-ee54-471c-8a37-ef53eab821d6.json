@@ -1,0 +1,14 @@
+{
+  "id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
+  "label": "Countable carrier with infinite event and complement admits every interior event probability",
+  "paraphrase": "On every countable carrier with measurable singletons, an event that is infinite and has an infinite complement receives each strictly interior probability from some normalized measure giving positive mass to every point. Carrier and event cardinality do not fix the probability; a probability is not thereby shown unavailable.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.ArbitraryInteriorMass",
+  "definition_ids": [
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "A warranted measure on the relevant universe or world carrier that fixes the event probability used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4.",
+    "blocker": "The lemma shows only that countable carriers and infinite partitions do not determine a probability; it derives no physical prior, designer likelihood or actual designer."
+  }
+}

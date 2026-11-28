@@ -1,0 +1,12 @@
+{
+  "id": "0687eb1d-fe5b-4d0c-bf0d-58fd411c7a5c",
+  "label": "Rigidity of concrete GOD_4 presence gives persistence",
+  "argument_id": "92839cf2-e86b-4802-a169-61d479357bb9",
+  "challenge_module": "TruthCore.Results.Modal.ModalOntologicalCase.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalOntologicalCase.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalOntologicalCase.persistsOfRigid",
+  "comparator_config": "results/0687eb1d-fe5b-4d0c-bf0d-58fd411c7a5c/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order backing result (instantiation): rigidity of concrete GOD_4 presence entails the persistence bridge.",
+  "transcription": "instantiation"
+}

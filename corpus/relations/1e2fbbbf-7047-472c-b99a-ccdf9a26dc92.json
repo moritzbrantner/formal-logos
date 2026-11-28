@@ -1,0 +1,10 @@
+{
+  "id": "1e2fbbbf-7047-472c-b99a-ccdf9a26dc92",
+  "label": "Test by StoppingPoints.stoppingMap (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "0b57c4fd-2ac3-5953-9607-92a7defb8fa2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the supplied fact c in the first stopping core. Every fact in necessaryStop is true in both accessible worlds from false, so any supplied c fails that premise. The other premises NoBrute at false, factivity, necessitation and well-founded reasons at false hold."
+}

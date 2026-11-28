@@ -1,0 +1,24 @@
+{
+  "id": "aa4298d6-9a7f-4087-93c0-7442de963928",
+  "label": "Positive exclusion makes esse LIMITED_ESSE_1, from joint compossibility",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "69a5dcdc-a7c2-4cf6-b973-4d78320bf341",
+    "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"
+  ],
+  "conclusion_statement_id": "dc7514e6-ccac-4d8d-bd73-56e7a98b5292",
+  "inference_ids": [
+    "7cbe9680-c819-46e0-ae46-7fad2656ffcd"
+  ],
+  "meaning": "Fix a bearer x whose real-determination profile is admissible, and a pure k that occurs in some admissible profile while no admissible profile contains x's determinations and k. By excluded middle x has limited esse or not. If not, each determination of x is pure: excluded middle on its purity, and an impure one would limit x's esse by the determination-to-esse bridge. Joint compossibility makes x's profile with k added admissible, contradicting the exclusion. So x has limited esse. The L bridge in the formal-limitation sense is thereby derived from two premises that mention no absence. The main theorem uses no axioms. In the Comparator companion esseControls (three Mathlib axioms), with nothing limited, the joint-conflict family keeps the determination-to-esse bridge and fails the conclusion (joint compossibility fails there by structuralControls), and the finite-mode profile fails the determination-to-esse bridge and the conclusion (joint compossibility holds for that family).",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f"
+  ]
+}

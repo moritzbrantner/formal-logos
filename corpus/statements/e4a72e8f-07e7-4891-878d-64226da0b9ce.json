@@ -1,0 +1,11 @@
+{
+  "id": "e4a72e8f-07e7-4891-878d-64226da0b9ce",
+  "label": "Guidance table: an outweighed reason raised alone guides good-tracking, not blind or fixed favouring",
+  "paraphrase": "Analyst formulation on one finite carrier: two candidates c and d, two respects (fit, and extra content that fit does not record) with graded weights, and two scenarios. In base, d weighs 2 and c 1 in fit, c weighs 3 and d 0 in the extra respect, and c is better overall (sum 4 against 2); in raised only d's fit weight is raised (to 6), and d is better overall. At base, for the fit reason for d over c: (1) raised raises d in fit alone; (2) the good-tracking profile, which the personal source and the imitability-exemplar rival share, is guided by that outweighed reason (it favours d over c at raised); (3) a fit-blind profile that follows the extra respect alone meets the outweighed condition and is not guided; (4) a favouring fixed to c over d meets the outweighed condition and is not guided; (5) a nature following fit alone does not favour c over d at base, so for it the reason is not outweighed; (6) with favourings as their own determinations, the second-order standard ranks the good-tracking profile over the fit-blind one in every scenario. Which account a profile represents is an interpretive assignment; the test is profile-level, so it gives the personal source and the rival the same verdict. A finite structural surrogate; no apprehension or simplicity is typed.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicGuidance.Control.GuidanceTable",
+  "definition_ids": [
+    "35ab5a34-4c6a-4327-97a2-a739a4263257",
+    "96f1dfe9-ff9f-41a1-aeec-37746dde1256",
+    "58b2e4b3-8295-473c-a5ca-dbb008768a24"
+  ]
+}

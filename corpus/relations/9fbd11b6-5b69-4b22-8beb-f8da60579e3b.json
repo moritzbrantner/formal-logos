@@ -1,0 +1,10 @@
+{
+  "id": "9fbd11b6-5b69-4b22-8beb-f8da60579e3b",
+  "label": "Test by the dependence reading of the mode premise",
+  "subject_kind": "argument",
+  "subject_id": "bf86f181-f1ac-442c-958e-ca889ffca75c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "791fa216-ce40-5e7d-82c5-0bd5fe245446",
+  "note": "On the dependence reading given by the sentence's own ground, 791fa216 follows from 7067553d, so it carries no load there; the load is in 2f6b9eff."
+}

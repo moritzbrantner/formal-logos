@@ -1,0 +1,12 @@
+{
+  "id": "2d18adb6-9572-42af-8f0e-a03a53997e80",
+  "label": "Exclusion-free profiles are admissible, from member grounding (inference)",
+  "input_statement_ids": [
+    "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+  ],
+  "output_statement_id": "63e88cef-e95b-4350-a0e2-4107e51caa90",
+  "rule": "Take the right-to-left direction of the biconditional",
+  "meaning": "Member grounding says a profile is admissible exactly when it is exclusion-free; its right-to-left direction is that every exclusion-free profile is admissible. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the strictness row has every profile admissible and noesis requiring its own lack: the sufficiency direction holds and member grounding fails, so the weak version is strictly weaker on that assignment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
