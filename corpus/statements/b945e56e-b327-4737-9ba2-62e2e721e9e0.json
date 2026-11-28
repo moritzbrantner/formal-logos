@@ -1,0 +1,20 @@
+{
+  "id": "b945e56e-b327-4737-9ba2-62e2e721e9e0",
+  "label": "Nested exhaustive type cutoffs give every rational frequency strictly between zero and one",
+  "paraphrase": "For positive naturals a and b, the stages retaining the first a(n+1) true-type and b(n+1) false-type instances of the roster Bool x Nat form an exhaustion, and the relative frequency of the true type is a/(a+b) at every stage and in the limit. These values are exactly the rationals strictly between zero and one.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.CutoffUnderdetermination",
+  "definition_ids": [
+    "189cfe30-cb3f-43c8-be97-f212d8773a74",
+    "cb975bcc-de7f-4d49-9738-1b988400b6dd",
+    "0f153481-5415-4940-9a22-e91fe5a80005",
+    "5c03a3af-49c0-4fc1-916a-59f38e39352c"
+  ],
+  "disambiguation_ids": [
+    "4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "A physically warranted cutoff or regularization that fixes the residual observational likelihood used in the fine-tuning comparison, then an independently warranted designer inference (unbuilt) and identification of the inferred witness with GOD_4.",
+    "blocker": "The control shows only that nested exhaustive enumerations of one infinite roster do not fix a frequency; it neither selects nor refutes any physical cutoff measure."
+  }
+}

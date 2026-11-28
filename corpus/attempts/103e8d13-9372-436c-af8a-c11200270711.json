@@ -1,0 +1,32 @@
+{
+  "id": "103e8d13-9372-436c-af8a-c11200270711",
+  "label": "Plenitude does not fix the residual observational probability",
+  "date": "2026-11-28",
+  "statement_ids": [
+    "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "2db2a6c0-6815-470c-a77f-6a548a2285aa",
+    "b945e56e-b327-4737-9ba2-62e2e721e9e0",
+    "dea28154-e726-46e6-ad33-67a1bf384afe",
+    "c3f76aea-ee54-471c-8a37-ef53eab821d6"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Analyst mathematics, attribution deferred. Draft authored in PR #2143 (author model unrecorded); repaired, registered and verified here. Question: does an infinite population of universes fix the probability of a residual observation? Verified answer for the encoded models: no. (1) On one roster Bool x Nat with each type repeated infinitely, Bernoulli(p) x geometric(1/2) product measures give every interior p positive point mass and true-fiber mass p, so the fixed roster, type map and supplied possibility profiles do not identify that mass. (2) Nested exhaustive finite cutoffs give relative frequency a/(a+b) for positive a and b, which is every rational strictly between zero and one. (3) Positive reweighting of the two observer cells of an existing sampling row reaches every interior rational likelihood when the other-observer cell has positive mass; with that cell absent the construction fails, preserving the #1381 screening-off boundary. (4) Pushing (1) forward along a fiber-preserving surjection gives the shared lemma: on every countable carrier, finite or infinite, with a nonempty event and nonempty complement each interior event probability has a point-positive normalized measure. The finite case gives the same non-identification; there the normalized counting measure is additionally available, so infinity matters only for the absence of a uniform default (#2142 NoUniform). This is the single copy of the interior-mass lemma; #2142 reuses it. Limits: these are non-identification results for bare carriers, cutoffs and weights. They do not show that no probability is warranted: a physically warranted generator, measure or observer rule can still fix a prediction, as the reviewed #1569 causal-entropic comparison does under its assumptions. The corollaries no_scope_decoder (total_factor_iff form of the third conjunct of (1)) and threshold_not_evidence_only (the #736 EvidenceOnly criterion applied to the probability-at-least-one-half proposition) are proved in the Solution but not registered, since both follow directly from the scope data being constant across the compared measures. Next test: whether competing physically warranted measures and record proxies agree on residual bins beyond observer viability, and whether an independently justified design likelihood bounds the same probabilities (#1734). Independent review 2026-11-28 (c1c79c1e6): Lean matched its types and nothing was smuggled. Findings and repairs: (P1) the connection plans called the designer inference existing; none exists and no fine-tuning node is on a root path, so the plans now say an independently warranted designer inference (unbuilt). (P2) cutoff label overstated positive rationals; now rationals in (0,1). The non-identification conjunct of (1) is trivial in form because the scope data are constant in p; the note and docstring now say so, and that the data omit the index order a natural-density rival would read (giving 1/2). The interior-mass lemma's Infinite hypotheses were idle; weakened to Nonempty (Challenge regenerated, proof by surjections). Definition records added for interior rate, weighted likelihood, cutoff stage, observation law and scope data; the pointwise-positive definition relabelled (any measure, not only discrete). Cutoff restated on the shared Exhaustion, frequency and HasDensity (Mathlib Tendsto) vocabulary of the new neutral Logic.CarrierProbability module, which also holds PointFullSupport, InteriorRate and NormalizedAdditive. The four senses of probability are recorded in the probability-assignment disambiguation (4d54ff26) and tagged on the statements; no bridge between senses is added.",
+  "evidence": [
+    "22182838-cb8e-465d-b522-05eb10800b05",
+    "0a2dec46-7510-48c8-8567-f86dee1b9689",
+    "757378ea-72f7-466f-9387-a5fc4de43828",
+    "cb2b9ac7-8d8a-441b-9685-95a719346af3",
+    "PR-2143"
+  ],
+  "workers": [
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2143"
+    }
+  ]
+}
