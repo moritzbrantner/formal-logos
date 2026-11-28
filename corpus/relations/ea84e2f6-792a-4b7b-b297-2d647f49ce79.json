@@ -1,0 +1,10 @@
+{
+  "id": "ea84e2f6-792a-4b7b-b297-2d647f49ce79",
+  "label": "Test by the q.7 a.1 controls of limitation only through reception",
+  "subject_kind": "argument",
+  "subject_id": "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1304b462-4a10-5dd0-995a-db5feb21d98e",
+  "note": "On the measure reading a source with only being is limited without being received, so 1304b462 fails there."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "6493063d-843a-40d4-8d3b-61ac5cf2382b",
+  "label": "Positively fixed root absences, from no unexplained absence at roots (inference)",
+  "input_statement_ids": [
+    "9281317d-1f0a-4522-b91c-58cc07652e92"
+  ],
+  "output_statement_id": "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+  "rule": "An absence that is not unexplained is fixed at the admissibility level, whatever reasons it has",
+  "meaning": "If no actual root has an unexplained absence, then every absence of an actual root, with or without an admitted reason, is one that no admissible profile adds to the root's determinations, which is the first disjunct of a positively fixed absence. It holds for every arena, lack map and requirement relation. So the derivation of E from the bridge is a relocation. The main theorem uses no axioms. In the Comparator companion lackReasonControls, row 3 (the base arena, no reasons for lacks) satisfies the bridge vacuously while E fails, so the order is strict on that assignment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

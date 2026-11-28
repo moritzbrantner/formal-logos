@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.PossibiliaContent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PossibiliaContent.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.PossibiliaContent.rootCriterionOfCriterion"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

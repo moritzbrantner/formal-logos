@@ -1,0 +1,11 @@
+{
+  "id": "419e24af-22fb-46b5-998e-8b715cb43d15",
+  "label": "Actual roots apprehend, from finality and the root criterion",
+  "argument_id": "588e1dfb-6a46-4550-bcf2-d463bd2eac4a",
+  "challenge_module": "TruthCore.Results.Causality.PossibiliaContent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PossibiliaContent.Solution",
+  "theorem": "TruthCore.Results.Causality.PossibiliaContent.actualRootsApprehendFromRootCriterion",
+  "comparator_config": "results/419e24af-22fb-46b5-998e-8b715cb43d15/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w. Commitment (e) in its weakest favouring form gives r a favouring determination phi; every favouring of an actual root is good-general, so phi is; the root cognition criterion then gives r an apprehended content about some candidate. The same composition as the existing route through the cognition criterion 3b40009e, with that criterion replaced by its restriction to actual roots, so the route from the conceptualist derivation reaches 3a32d91c without 3b40009e or d1fb6414. That route is a re-presentation of the same dispute, not additional evidence: the noncognitive imitability-exemplar rival (control row 2) holds every premise of the conceptualist derivation except the conceptualist premise and denies every apprehension at the root, so on the route's instances it denies both that premise and the root criterion; given the rest the root criterion is equivalent only to a weakened existential form, and the conceptualist premise, even restricted to the route, is strictly stronger; the instances the route uses (a non-real stand-in contained in a simple root, for a non-present candidate of a value-dependent pair with distinct stand-ins) are also instances of d1fb6414, and A4 denies apprehension of them under either premise; and the route shares lane C's five individuation premises with the route through d1fb6414. The main theorem uses no axioms."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "29789ca3-23df-44ec-b3ea-bb645e06353b",
+  "label": "Thomas Aquinas, Summa theologiae I q.4 a.2, first proof, read for the perfections the cause produces",
+  "statement_id": "d0fc96b7-fd2d-504e-912f-925de3b1e6ed",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.4 a.2 co., first proof: quidquid perfectionis est in effectu, oportet inveniri in causa effectiva",
+  "interpretation_of": "50df1fd8-8c2a-5dd5-8f9b-33f7994f51c6",
+  "interpretation": "Sibling reading of AQUINAS-ST-I-Q4-A2-PERFECTION-IN-CAUSE-A. It keeps that claim's reading of 'effect' as a thing whose being the cause causes. It differs in two ways. (1) Perfection scope: it reads 'quidquid perfectionis est in effectu' as the perfections the effective cause produces in that thing. The passage grounds the principle in 'effectus praeexistit virtute in causa agente', the effect as this agent produces it. The sibling claim instead reads every perfection the thing has, which needs the further premise that the cause of a thing's being produces each of them. (2) Mode: it constrains only the cause's act, 'vel secundum eandem rationem … vel eminentiori modo', with one inclusive InAct on the cause side. The sibling's statement uses one InAct on both sides. The passage states its principle for every effective cause, univocal or equivocal ('ut homo generat hominem'; the sun). This reading restricts it to causes of a thing's being, which is narrower. The 'more perfect mode' sentence that follows, and the application 'omnium rerum perfectiones' to God as first cause, are not part of this reading.",
+  "attribution": "The passage states that whatever perfection is in the effect must be found in the effective cause, univocally or more eminently; read with 'effect' as a thing whose being the cause causes and the perfection as one the cause produces in it, it states that whatever causes a thing's being has, formally or eminently, every perfection it causes in that thing, which is the premise.",
+  "status": "formalized"
+}

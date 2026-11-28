@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.InquiryClosure.inquiryScopeMap"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

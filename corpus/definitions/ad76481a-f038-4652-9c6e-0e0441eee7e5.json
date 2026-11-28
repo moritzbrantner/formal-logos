@@ -1,0 +1,9 @@
+{
+  "id": "ad76481a-f038-4652-9c6e-0e0441eee7e5",
+  "label": "Own being as esse tantum: the nature of x is being itself",
+  "term": "own being as esse tantum",
+  "definition": "`OwnBeingByQuiddity F A x`: the nature of x is the respect esse itself ('cuius quiditas est ipsum suum esse', De ente cap.3; 'esse tantum'). Read with content identity of respects, so a creature whose existence is really identical with its essence (Suárez's account) is not thereby its own being in this sense.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.OwnBeingByQuiddity",
+  "note": "Stipulative analyst definition, attribution deferred; navigated from ST I q.4 a.1 ad 3, q.3 a.4 co. and De ente capp.3-4 (Baur/Koch), read in the materialized witnesses (docs/notes/rdep-to-ract.md)."
+}

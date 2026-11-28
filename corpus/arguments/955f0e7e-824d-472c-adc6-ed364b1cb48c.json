@@ -1,0 +1,23 @@
+{
+  "id": "955f0e7e-824d-472c-adc6-ed364b1cb48c",
+  "label": "The q.7 a.1 bridge load map, checked",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0c1a3ec8-f374-4669-9b79-d43ab70bc439",
+  "inference_ids": [
+    "d17665da-e56e-437d-8a4c-65eb2d54715e"
+  ],
+  "meaning": "Premise-free. The q.7 a.1 bridge yields the locus-(b) composite from 7338142d, 1304b462 and 'unlimited esse has every pure perfection'; on the measure reading the last premise is analytic (by excluded middle), so the content moves to 1304b462. A certificate of where the load sits, not of warrant.",
+  "definition_ids": [
+    "6ced5205-e6a4-585e-950e-3b22e7c9ef01",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "5dc08b95-ca15-52ab-b8cd-2b558e9a13f7",
+    "f971eabf-d723-46c4-a34a-35a5af154abb"
+  ],
+  "disambiguation_ids": [
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7"
+  ]
+}

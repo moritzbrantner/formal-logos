@@ -1,0 +1,8 @@
+{
+  "id": "ee620fc3-118f-4279-89b8-c9bfa70cac34",
+  "label": "Own capacity to apprehend: the bearer itself is able to apprehend a content",
+  "term": "own capacity to apprehend (CanApprehend g c)",
+  "definition": "CanApprehend g c: g itself is able to apprehend the content c, so that its exercise would be g's own act of apprehension. It is NOT 'g can cause some being to apprehend c' (productive power) and not an exemplar form that norms another knower. It is a declared primitive relation between a being and a content.",
+  "basis": "stipulative",
+  "note": "Stipulative analyst notion (#1731), attribution deferred. Lean has no declaration for it: it is the unconstrained parameter CanApprehend of WisdomSelfCapacity and SelfCapacityExercisedOrPotent (TruthCore.Causality.WholePowerPerfection). Nothing in the type separates the own capacity from a productive one; the distinction rests on this intended reading and is an open semantic obligation (attempt d3a0e98a). The #1892 standing rival sets it equal to its own actual apprehension, which is empty."
+}

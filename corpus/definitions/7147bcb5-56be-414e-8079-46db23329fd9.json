@@ -1,0 +1,24 @@
+{
+  "id": "7147bcb5-56be-414e-8079-46db23329fd9",
+  "label": "MIRROR_2: the global mirror as CPT conjugation, a map on worlds",
+  "term": "global mirror image (CPT conjugation)",
+  "definition": "MIRROR_2. CPTConjugation W is a structure with one field image : W → W. image v is the CPT conjugate of the world v: every spatial arrangement reflected (P), every particle replaced by its antiparticle (C) and the history run in reverse (T). It is intended to reverse spatial handedness; whether it does at w is the open premise 314f6b15 (cptId in the controls realizes its denial). It is an explicitly identified PRIMITIVE of TruthCore.Modal.MirrorCollapse; Lean fixes only its type, and nothing in Lean says which features the map preserves.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.CPTConjugation",
+  "note": "Stipulated for #2145 lane M as the sense of the registered mirror argument (contingentFromChiralMirror, argument term_senses MIRROR = MIRROR_2); distinguished from MIRROR_1 (spatial reflection P, DEF 567674e6) in disambiguation dec35f6f. Physics background, navigation only and no attributed claim: local Lorentz-invariant quantum field theory is invariant under CPT, so creaturely law-natures give no violation of preservation at the CPT image, unlike P. The owner's left/right example survives as the CPT-mirror: the CPT image of a world with a left hand has a right hand made of antimatter, its history run in reverse. The CPT-sense premises are EssentialTruthsPreservedByCPTAt, HandednessReversedByCPTAt and ChiralAtCPTImageAt, the generic premises at τ.image.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "image maps each world to its CPT conjugate; a model supplies the map.",
+    "examples": [
+      "The CPT conjugate of the actual world: every chiral molecule replaced by the antimatter molecule of opposite handedness, the history run in reverse."
+    ],
+    "exclusions": [
+      "Spatial reflection P alone (MIRROR_1), which keeps charge and the direction of time.",
+      "A translation or rotation, which preserves handedness."
+    ],
+    "open_obligations": [
+      "Whether the CPT image of the actual world is a distinct world. Relationalism about global spatial orientation rejects a global handedness feature (denying 314f6b15) but does not identify the CPT image with the actual world, since the image also exchanges matter and antimatter and reverses the history; identity with the whole CPT image (τ.image w = w) needs an additional explicit identification commitment, such as charge/time-reversal relationalism or the qualitative identity of CPT-related worlds as wholes.",
+      "Whether any nature contains an orientation that the CPT image violates (EssentialTruthsPreservedByCPTAt)."
+    ]
+  }
+}

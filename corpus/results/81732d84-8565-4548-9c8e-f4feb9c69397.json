@@ -1,0 +1,11 @@
+{
+  "id": "81732d84-8565-4548-9c8e-f4feb9c69397",
+  "label": "Joint compossibility from exclusion-free admissibility and pure requirements",
+  "argument_id": "11bcadef-a655-4bbf-83d0-159cb860dbe3",
+  "challenge_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootPerfectionIntellect.Solution",
+  "theorem": "TruthCore.Results.Causality.RootPerfectionIntellect.jointCompossibilityOfExclusionFreeAdmissibility",
+  "comparator_config": "results/81732d84-8565-4548-9c8e-f4feb9c69397/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an admissible profile q of pure determinations and a pure k admissible somewhere. Every member of q with k added is pure, and every subset of it consists of pure determinations, so by the purity premise no member requires the lack of any subset; the profile is exclusion-free, hence admissible. The proof does not use that q or k is admissible: under the two premises every profile of pure determinations is admissible, and with the requirement relation left free the pair is equivalent to exactly that (sufficiencyPremisesIffAllPure). The derivation therefore relocates joint compossibility into requirement form; it adds no warrant beyond the localization of incompatibility in what a member requires, which lives in the intended reading of the requirement relation, and the purity premise's rationale (DEF-PURE-PERFECTION) is the one already recorded for joint compossibility. The main theorem uses no axioms. The Comparator companion constitutiveControls (three Mathlib axioms; the five #1970 determinations) takes the triple family, where a, b and noesis are never had together while every pure pair is admissible. With no requirement relation the sufficiency direction fails and the purity premise holds; with noesis requiring the joint lack of a and b, member grounding holds and the purity premise fails; joint compossibility fails in both."
+}

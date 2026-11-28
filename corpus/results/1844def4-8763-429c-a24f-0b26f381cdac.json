@@ -1,0 +1,11 @@
+{
+  "id": "1844def4-8763-429c-a24f-0b26f381cdac",
+  "label": "No unexplained absence at roots, from the root lack PSR, reasons in natures and carriage",
+  "argument_id": "a567c327-6f05-4acf-ae98-06f8a5939cb4",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.noUnexplainedAbsenceFromEssentialLackReasons",
+  "comparator_config": "results/1844def4-8763-429c-a24f-0b26f381cdac/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w and a determination d it lacks. The lack facts and the PSR for root lack facts give the lack an admitted reason; the reason-essence thesis gives an ESSENCE_6 condition on r's profile failing at every profile containing r's determinations and d. Every admissible profile containing r's determinations is exclusion-free (necessity direction of member grounding), so carriage (LE) puts the condition there (positiveEssenceFromCarriage). Hence no admissible profile adds d to r's determinations, so the sense bridge holds (factorization) and E follows by noUnexplainedAbsenceFromPositiveLackReasons. Unlike the essentialist route 4fef9522 it uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1). The rival with a bare negative clause 'lacks noesis' meets the PSR, the lack facts, the reason-essence thesis and the necessity direction, and denies carriage: the load is on LE, as on route 4fef9522 through 10f44921. The main theorem uses no axioms. The Comparator companion lackReasonEssenceControls (three Mathlib axioms; same carrier) gives a positive witness and, for each premise, a row where it fails, the other four hold and E fails. The rows are assignments of the stated relations, not models of essence or explanation."
+}

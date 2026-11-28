@@ -1,0 +1,20 @@
+{
+  "id": "d6113a5b-1505-4901-b619-076b21be978e",
+  "label": "Worldwise deletion and a necessary concretum are incompatible",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "31640849-834c-4ac7-ae5e-1c728a5d8503",
+  "inference_ids": [
+    "cc6356d1-60ae-4eec-9158-7806b840dda5"
+  ],
+  "meaning": "Given worldwise deletion on a profile's Ontic and concreteness predicate and a concrete x existing at w and at every world accessible from w, deletion at w gives an accessible world u lacking x, while x exists at u. A premise-free certificate of the incompatibility recorded by the attacks relation e8a48d7f; it decides neither statement.",
+  "definition_ids": [
+    "10a7b462-bc9a-4ec6-ab78-1242816a5331",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "38b92bb6-33ae-5817-85c6-b5a1afa63bd1",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "baddf770-36bf-542f-bb3c-2297342d5452"
+  ],
+  "disambiguation_ids": [
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

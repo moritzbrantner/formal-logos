@@ -1,0 +1,19 @@
+{
+  "id": "d1fb6414-976e-4833-908d-17787cca2502",
+  "label": "A CONTAINED_IN_1 individuating stand-in guiding value-dependent favouring is apprehended",
+  "paraphrase": "OPEN containment-recognition bridge, analyst formulation, attribution deferred: for every bearer b with a favouring determination of profile phi, every scenario s and candidates z, w: if phi depends on betterness (read as value) with end-realization held fixed (BECAUSE_OF_GOODNESS_2) for z over w or for w over z at s, z is not a present input at s, b's stand-in for z is contained in b (CONTAINED_IN_1), and it differs from b's stand-in for w, then that stand-in is a content about z that b contains intentionally (CONTAINED_IN_2, Lean ContainsIntentionally: contained, about some candidate, and apprehended by b). In the Lean type the antecedent's containment is ContainsGenerically (CONTAINED_IN_1) and the consequent is ContainsIntentionally, so this is the only premise of its argument reaching both senses. Given the other premises of the registered derivation every good-general bearer meets its antecedent, so its added antecedent conditions narrow nothing there; with those premises it is strictly stronger than the cognition criterion (the criterion implies its weakened form, the weakened form with those premises gives the criterion, and on the control carrier the criterion and those premises hold while this bridge fails). It is the passage from generic to intentional containment. A virtual reading of the containment (CONTAINED_IN_3: a power to produce z, or a mode in which the bearer is imitable by z, not apprehended) denies it; nothing in the Lean types beyond Apprehends separates the two readings.",
+  "lean_declaration": "TruthCore.Causality.AxiarchicFoundation.ContainedStandInIsApprehended",
+  "definition_ids": [
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded",
+    "fae7bbb8-931c-4a95-9f44-1d59921d1c83",
+    "b28d7e04-694b-442b-a42b-65f39190956f",
+    "c917dda9-f382-48fa-8cc1-a0b9e609c164",
+    "c82c75e9-1786-43f1-8e0d-1b295ae5699a",
+    "07f3fb85-6036-4e42-8eb8-a18db846719f",
+    "3ece6dfe-c033-4546-b7d4-94ef48a235df"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "4c3751a6-6b32-47f2-89c4-d094dabe5613"
+  ]
+}
