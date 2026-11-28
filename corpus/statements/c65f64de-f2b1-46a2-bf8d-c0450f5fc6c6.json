@@ -1,0 +1,11 @@
+{
+  "id": "c65f64de-f2b1-46a2-bf8d-c0450f5fc6c6",
+  "label": "Distinct actual caused esse is exercised as giving in the selected world",
+  "paraphrase": "OPEN, analyst formulation. At the selected world w, if x is distinct from g and in act as to esse and g causes x's esse, then g gives x being at some moment of w. The case predicate for act in esse and tenseless CausesIn stay distinct from world-relative giving.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.ActualEsseCausesGiveAt",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

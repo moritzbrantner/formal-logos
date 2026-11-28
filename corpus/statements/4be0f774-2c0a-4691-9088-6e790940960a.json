@@ -1,0 +1,11 @@
+{
+  "id": "4be0f774-2c0a-4691-9088-6e790940960a",
+  "label": "Distinct actual giving by WILL_CAPACITY_VERSUS_WILLED_GIVING_3 has an operative plan at w",
+  "paraphrase": "OPEN, analyst formulation. At w, for each distinct x in act in esse that g gives being by an owned rational power, some plan is apprehended as good by g, actually governs that giving and meets its requirements in that giving's context. Plans can be shared between effects.",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.RationalGivingHasPlan",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ]
+}

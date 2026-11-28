@@ -1,0 +1,10 @@
+{
+  "id": "ec43daeb-56ed-4a2d-ba12-7c4570e0cf07",
+  "label": "Test by For any selected candidate, global well-founded actual-c for The profile's selected re (1)",
+  "subject_kind": "result",
+  "subject_id": "a76dc25b-fba0-5c07-8f61-00c0a8ce1a6d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Tests the strictly local well-foundedness scope on the fixed selected candidate's ancestry cone while the global model fails it."
+}

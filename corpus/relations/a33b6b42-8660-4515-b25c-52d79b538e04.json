@@ -1,0 +1,10 @@
+{
+  "id": "a33b6b42-8660-4515-b25c-52d79b538e04",
+  "label": "Test by A two-world, one-individual S5 model satisfies Scott's A1a, A1b, A2, A3 and A4 and makes a…",
+  "subject_kind": "result",
+  "subject_id": "426e96a6-7001-5390-9fae-c5e4f15d0161",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "37a67a9e-31a7-5243-902b-fd3260fd5526",
+  "note": "Tests omitting A5 from the Scott argument in a finite S5 interpretation retaining A1a through A4 while T3 fails."
+}

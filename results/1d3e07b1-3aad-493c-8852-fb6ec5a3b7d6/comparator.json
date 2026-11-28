@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.History.DisclosureIdentification.Challenge",
+  "solution_module": "TruthCore.Results.History.DisclosureIdentification.Solution",
+  "theorem_names": [
+    "TruthCore.Results.History.DisclosureIdentification.boundary"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

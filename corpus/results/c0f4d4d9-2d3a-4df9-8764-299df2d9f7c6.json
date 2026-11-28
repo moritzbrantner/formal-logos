@@ -1,0 +1,11 @@
+{
+  "id": "c0f4d4d9-2d3a-4df9-8764-299df2d9f7c6",
+  "label": "One governing beneficiary standard suffices for GOD_4 recipient willing",
+  "argument_id": "2cf82e04-a0dd-473f-b1bd-4bda9e3424ad",
+  "challenge_module": "TruthCore.Results.Causality.BenefitPlanWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.BenefitPlanWitness.Solution",
+  "theorem": "TruthCore.Results.Causality.BenefitPlanWitness.recipientOfSomeGoverningPlan",
+  "comparator_config": "results/c0f4d4d9-2d3a-4df9-8764-299df2d9f7c6/comparator.json",
+  "status": "solution-present",
+  "description": "Coverage supplies some governing plan, so the weaker omission premise supplies a governing plan rejecting the edited assessment. If this latter plan did not require the credit, each of its required clauses would survive the edit. Recognition of the required credit in the latter plan yields recipient willing."
+}

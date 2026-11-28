@@ -1,0 +1,10 @@
+{
+  "id": "12bd4f46-3e7f-476c-99d5-8939ce375735",
+  "label": "Test by KTB route frame is the KT route frame plus symmetry",
+  "subject_kind": "result",
+  "subject_id": "3e0e4f55-093f-4e26-ab80-2928ece4e2af",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "60795e6e-1fe1-5c55-9718-bc2a22867244",
+  "note": "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+}

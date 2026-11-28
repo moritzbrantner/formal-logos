@@ -93,3 +93,43 @@ conclusion = "Experience finite omission and competing-source controls"
 rule = "Existential elimination and construction over finite experience tokens"
 meaning = "Analyst conditional finite experience reconstruction. No premise truth or theological identification established. See dedicated note for exact model scope and remaining gap."
 senses = { GOD = "GOD_4", RECOGNIZABLE_REVELATION = "RECOGNIZABLE_REVELATION_1" }
+
+[[relation]]
+id = "Test by Experience finite controls"
+label = "Test by Experience finite controls"
+subject_kind = "result"
+subject_id = "27a66a4d-6693-458b-8232-f87b6cc1a870"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5f5995c2-c827-4b60-805a-04d3ce2d4b14"
+note = "Tests omitting the reverse capability bridge in the finite root profile retaining calibration, identification and GOD_4 coverage."
+
+[[relation]]
+id = "Test by Experience finite controls for Experience occurrence without defeater"
+label = "Test by Experience finite controls for Experience occurrence without defeater"
+subject_kind = "result"
+subject_id = "27a66a4d-6693-458b-8232-f87b6cc1a870"
+predicate = "tests"
+object_kind = "statement"
+object_id = "81f8599d-0b97-4b88-b0c5-99f1036f19e4"
+note = "Tests omitting actual occurrence from the finite recognition reconstruction, retaining local calibration and identification."
+
+[[relation]]
+id = "Test by Experience finite controls for Experience theological identification"
+label = "Test by Experience finite controls for Experience theological identification"
+subject_kind = "result"
+subject_id = "27a66a4d-6693-458b-8232-f87b6cc1a870"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a897a12d-4a42-42e8-9b4b-4ee119c08191"
+note = "Tests omitting identification by retaining occurrence and calibration in the finite profile without recognized GOD_4."
+
+[[relation]]
+id = "Test by Experience finite controls for Experience local calibration"
+label = "Test by Experience finite controls for Experience local calibration"
+subject_kind = "result"
+subject_id = "27a66a4d-6693-458b-8232-f87b6cc1a870"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ecd2eb8d-e245-4679-b7e9-7a265309d992"
+note = "Tests omitting calibration by retaining occurrence and theological identification in the finite profile without recognized GOD_4."

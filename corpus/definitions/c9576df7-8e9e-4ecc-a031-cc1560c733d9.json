@@ -1,0 +1,9 @@
+{
+  "id": "c9576df7-8e9e-4ecc-a031-cc1560c733d9",
+  "label": "Concrete GOD_4 presence at a world",
+  "term": "concrete GOD_4 present at a world",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodConcretePresent",
+  "definition": "GodConcretePresent σ m x v holds when x satisfies the case signature's primitive IsGod (GOD_4, DEF-GOD-OF-CLASSICAL-THEISM), x is concrete under the case profile's concrete field, and x exists at world v under the profile's Ontic. IsGod and concreteness do not vary with the world; only existence does.",
+  "note": "Analyst formulation for the modal ontological route (#2103, lane F), attribution deferred. Concreteness is stated as a separate conjunct because world-relative existence and de re necessity do not entail it (#2106). Used as the presence extension of DeDicto/DeRe of #435."
+}

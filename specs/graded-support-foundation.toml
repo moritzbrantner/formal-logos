@@ -95,6 +95,7 @@ id = "Well-founded necessary support union, from rigid ascent in esse and no inf
 theorem = "unionWFOfAscent"
 premises = ["Support between NECESSARY_2 concreta at any admitted world ascends in esse", "No infinite ascent in esse among NECESSARY_2 concreta"]
 conclusion = "STMT-CONCRETE-NECESSARY-UNION-WF"
+strong_version_needed = { "78945dde-2e6b-4e40-9383-ecb615208930" = "Asymmetry permits infinite ascent, so support edges can form an infinite ascending chain in the same grade. The proof needs well-foundedness to transfer it to the support union." }
 axioms = []
 rule = "Subrelation of the inverse image of a well-founded relation: each cross-world union edge is one ascent step"
 meaning = "Derives J2 of the join without the one-way no-novel-edge condition, actual well-founded grounding or reflexive access. Every edge of the cross-world union of support among necessary concreta is, by the rigid ascent premise, a step up in the one world-invariant comparative MoreIn esse, which has no infinite ascent among necessary concreta. Because the grade takes no world argument, edges at different worlds are measured by one order, which is what the world-varying rivals deny. Relation to the no-novel-edge route: ascent with no infinite ascent does not imply no-novel-edge (Control.OffWorldAscent); with a freely chosen grade, the no-novel-edge bundle implies the graded form (unionWFOfNoNovel composed with gradedOfUnionWF); for the fixed MoreIn esse the other direction is not certified. Conditional consequence only; no premise is established."
@@ -104,6 +105,7 @@ id = "No mutual necessary support, from rigid ascent in esse and no infinite asc
 theorem = "mutualSupportExcludedByGrade"
 premises = ["Support between NECESSARY_2 concreta at any admitted world ascends in esse", "No infinite ascent in esse among NECESSARY_2 concreta"]
 conclusion = "No two NECESSARY_2 concreta support each other, each at some admitted world"
+strong_version_needed = { "78945dde-2e6b-4e40-9383-ecb615208930" = "This preserved proof establishes union well-foundedness through unionWFOfAscent before excluding mutual support. The endpoint alone follows from restricted grade asymmetry via MutualSupportAsymmetry.noMutualSupport (68220715-e56a-469e-8cba-7d159e696fcd)." }
 axioms = []
 rule = "Composition of unionWFOfAscent with the existing mutualSupport_excludes"
 meaning = "Prices the mutual-support rival of J2 by a different premise from no-novel-edge: if support between necessary concreta, at any admitted world, ascends one rigid comparative with no infinite ascent, two necessary concreta cannot support each other at two worlds, since each would be more in esse than the other. A holder of the rival must deny that support between necessary beings tracks one world-invariant grade of being with no infinite ascent. A conditional exclusion; neither the premises nor the rival is established or refuted."
@@ -247,3 +249,33 @@ object_kind = "statement"
 object_id = "No infinite ascent in esse among NECESSARY_2 concreta"
 verification_result_id = "No infinite ascent among necessary concreta, from no infinite ascent in being"
 note = "Same comparative and respect. The weak version constrains only concreta necessary from the selected world. Strictness is not certified here."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked"
+label = "Test by Graded-foundation controls, checked"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78945dde-2e6b-4e40-9383-ecb615208930"
+note = "Tests existence of a compatible well-founded ascending grade in the rotating triangle and rooted pair, both of which contain cross-world return paths."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked for An incoming direct existential-support edge be (1)"
+label = "Test by Graded-foundation controls, checked for An incoming direct existential-support edge be (1)"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bd983df2-058a-5503-89a1-bbebe87f958b"
+note = "Tests whether rigid grade ascent suffices for actual edge transport with the only support edge at the nonactual world."
+
+[[relation]]
+id = "Test by Graded-foundation controls, checked for Whenever an actual concretum a grounds an actu (1)"
+label = "Test by Graded-foundation controls, checked for Whenever an actual concretum a grounds an actu (1)"
+subject_kind = "result"
+subject_id = "5dbba779-432b-4d3a-bd4a-11b14086ef63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d96105fb-8c4d-5e56-b3c7-2cb77a447c2b"
+note = "Tests whether well-founded grounding and a well-founded grade suffice for actual-edge ascent by reversing the grade on the same two-world profile."

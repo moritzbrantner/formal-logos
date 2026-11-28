@@ -1,0 +1,10 @@
+{
+  "id": "1b10a3c8-f21e-492c-b2fc-3b4f05455ce6",
+  "label": "Source support for OccurringThoughtIsModification",
+  "subject_kind": "claim",
+  "subject_id": "bffbe4cf-d80f-4cb7-bf30-2e9a75e8057e",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+  "note": "This treats the named exercises as dependent modes of a thinking thing. Show that each occurring episode in the selected domain is such a mode and that this dependence classifies the episode as Modification rather than a self-standing event in the modeled ontology."
+}

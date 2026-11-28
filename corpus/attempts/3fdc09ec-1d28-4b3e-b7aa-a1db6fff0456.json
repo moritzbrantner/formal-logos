@@ -1,0 +1,42 @@
+{
+  "id": "3fdc09ec-1d28-4b3e-b7aa-a1db6fff0456",
+  "label": "Extract benefit and end commitments from an operative giving standard",
+  "statement_ids": [
+    "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+    "2f9a99cc-6cd4-4253-a112-e31dad6cd686",
+    "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+    "bb3d4417-b2f6-4310-9433-21ff2e386780"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "A same-giver successfully operative standard, distinct rejection tests on its fulfillment description, and local semantic recognitions derive recipient willing and exercise-to-direction. Satisfaction of every required clause would survive the respective omission if that role were optional. Fixed rational giving with apprehension but no use tests coverage. Operative giving with only an end-placement and with only a benefit tests the two rejections separately. On the full profile each recognition can fail separately. These controls are structural surrogates. The existing recipient application consumes the recipient bridge. The direction assembly uses the independently supplied capacity-to-exercise result. The former universal direction bridge is a Lean specialization with possession and actual exercise as separate antecedents. Authority remains additional. See Practical specification checkpoint in docs/notes/divine-love-goodness-bridge.md.",
+  "blocker": "The derivations are conditional. Establish a practical standard independently of its output, show its operative responsibility for this giving in esse, and determine whose good and which end are required in that standard. Knowledge of a creature in its own nature would additionally require identifying the knower with the giver and showing actual evaluative and productive use.",
+  "evidence": [
+    "e8ca49db-51b4-41c4-884c-91114870689a",
+    "785a4e63-9c0f-4d9c-8745-b4cebc2c5cde",
+    "41390135-b6db-4afe-b318-31bacd4423fe",
+    "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+    "PR-2020"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    }
+  ]
+}

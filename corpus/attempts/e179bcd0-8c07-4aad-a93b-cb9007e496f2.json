@@ -1,0 +1,31 @@
+{
+  "id": "e179bcd0-8c07-4aad-a93b-cb9007e496f2",
+  "label": "Calibrations for duration and temporal causal attribution",
+  "statement_ids": [
+    "7d6a77be-86d9-519b-a40f-49f332a2e989",
+    "92f8f0c4-f45b-5ae4-ba23-22b4dbd182d8",
+    "a1d4003f-92b6-510a-95f5-e282afad92fa",
+    "a35acca8-cc3e-51ff-98f1-4491d3f0c119"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "7d6a77be-86d9-519b-a40f-49f332a2e989 (Variant): cddbd5b0 uses local failure of the endless-life calibration together with named coverage to select the Boethian alternative. A primitive Eternal mismatch on endless life suffices locally. The direct Boethian calibration avoids the exclusion. Retain the elimination comparison.\n\n92f8f0c4-f45b-5ae4-ba23-22b4dbd182d8 (Variant): 99f75c91 uses selected-time calibration failure on the same profile, together with coverage. ComposerTemporalDefinitionFork.pastBuilder verifies the distinction in an admitted past construction fixture. A direct existential-time calibration bypasses the exclusion. Retain the same-profile temporal variant.\n\na1d4003f-92b6-510a-95f5-e282afad92fa (Variant): 99f75c91 uses an explicit two-option temporal menu on the same attribution, which can omit e.g. a stipulated attribution holding at no admitted activity time. The existing remainder control keeps the menu from being automatic. Direct existential-time calibration suffices without the menu. Retain the menu only for elimination.\n\na35acca8-cc3e-51ff-98f1-4491d3f0c119 (Variant): 99d3480d consumes same-bearer recognition from BoethianEternal to the supplied Eternal predicate. fb5a7e59 projects this direction from the stronger biconditional. Recognition is already the weaker premise needed there and the case can retain it as a separate option. Retain the weaker recognition premise and its registered strength projection.",
+  "evidence": [
+    "f69342ea-bd48-5ef4-b816-f9e8ac91bde7",
+    "5eb212da-7d2f-51ca-84e0-9377649dbb98",
+    "7cebad1e-bec2-58aa-bce8-5d76b9dfdc3f",
+    "604a26f7-26d1-59fc-9c30-b6ecb66ac38a",
+    "PR-2048"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

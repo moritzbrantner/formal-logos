@@ -1,0 +1,10 @@
+{
+  "id": "48c78b39-f123-4da6-9513-a2ab805738be",
+  "label": "Test by Finite grades frames separate total-cause containment from q.4 a.2 preexistence",
+  "subject_kind": "result",
+  "subject_id": "b704a38d-f87d-45ff-83e7-6a280c0ca53f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "64498e7e-7f10-54a0-9ec0-c65e6076de1f",
+  "note": "Tests independence of preexistence and respect-wise total-cause containment, with separate finite cases using partial causes and the distinction between causing being and causing a perfection."
+}

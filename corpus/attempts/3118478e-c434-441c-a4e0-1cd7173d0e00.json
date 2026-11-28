@@ -1,0 +1,43 @@
+{
+  "id": "3118478e-c434-441c-a4e0-1cd7173d0e00",
+  "label": "Universal esse giving through rational exercise: priority and one-power routes",
+  "statement_ids": [
+    "123d394b-11ce-449a-a8b6-7fda5a254a6d",
+    "a94c5dfc-c722-49fe-a242-dd39409b079d",
+    "bb3d4417-b2f6-4310-9433-21ff2e386780",
+    "cacec490-efba-4aba-bcfb-8545922fa8dd"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The priority route gives owned rational exercise at each distinct actual effect from firstness, a simply prior intellect for non-rational giving, classified exercise of an owned power, and the adapter from tenseless esse causation to giving at w. The one-power route reuses b5b84276 with one-power simplicity for qualifying universal causes and the same adapter. Omission controls retain a universal cause with intellect and will, including ownership of a rational power. Fixed non-rational exercise disputes the natural-priority premise in the structural profile. Fixed rational exercise separates exercise from modal freedom, effect direction, recipient-good willing and NarDerivation's fixity-to-required-means rule. Assembly transcriptions apply the open direction and recipient-willing bridges to 123d394b and a94c5dfc, used respectively by the LORD_2 route and the recipient-willing input of LORD_3. Both targets remain open with source support. bb3d4417 still needs its causal-subjection-to-dominion rationale. The through-will checkpoint in docs/notes/divine-love-goodness-bridge.md records the scope, rival comparison and provisional warrant.",
+  "blocker": "Rational exercise is an effect-indexed classification. The strongest unresolved question is what shows that apprehended content actually governs universal esse production for each effect. Test per-effect practical specification against the same fixed output with mere foresight or adoption of a whole order, and distinguish direction from willing good to that recipient. For the priority route, test the foundational non-rational disposition rival and whether causal asymmetry and simple priority give firstness on this scope.",
+  "evidence": [
+    "bc375179-5b86-4094-87e1-96ef9a39780f",
+    "e916eae9-a493-408f-b3d0-9ef91b4be3ad",
+    "7556889e-c216-4bc8-89e9-453c7d664bda",
+    "0b35a571-6a3b-4b2c-8da9-c3e8f9d061ce",
+    "decd967f-3ecb-4bca-8d69-cd365ed30f9f",
+    "e9ec97c2-ecf7-414e-906d-c15e7de65888",
+    "78b94fbf-e025-4084-a529-2102fd8b98a8",
+    "7ab92b2d-2471-43f6-af1b-a8dee675ec50"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2019"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2019"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b484462e-12c2-4fa6-b79a-2955cf75d940",
+  "label": "Source qualification for 46132461 from reading 3d17ecdd",
+  "subject_kind": "claim",
+  "subject_id": "68b62c1a-d4e9-592a-b656-f1796741ef65",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "46132461-9a9b-498f-b3d9-304e2f3ac57e",
+  "note": "The report identifies Hempel's abandonment of a purely deductive observation-sentence test following the difficulties of overexclusion and trivial verification. It qualifies retaining that implementation of the case criterion. It gives no reason by itself to discard every non-deductive notion of empirical relevance."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "a240b1f2-8f99-44de-9092-204fafbf36cd",
+  "label": "Test by Recover the missing requirements and exact witnesses from each giving-plan denial",
+  "subject_kind": "result",
+  "subject_id": "839a93fa-8011-46c7-9215-b126b93d40e7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4be0f774-2c0a-4691-9088-6e790940960a",
+  "note": "Checks the exact failure condition for operative plan coverage at a selected world with fixed rational giving."
+}

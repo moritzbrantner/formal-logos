@@ -9,6 +9,11 @@ lean = "PrefixComparison"
 definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "7aefc429-5425-44d6-8757-ec8bf55f17fb", "425ae4bc-d5f0-4ebc-99b7-2645c947f497", "77b06e8c-9266-4801-b3cb-2ce1dd9d13e6"]
 paraphrase = "Starting at recipient zero on the same natural-number roster, an audit of the first k complete lists of the endless chain matches the finite-depth world n exactly when k ≤ n. Thus every finite prefix matches both the endless relation and a sourced relation with a supplierless ancestor of zero. If the next complete list is empty at depth d, only sourced depth d matches that record within these classes. Under one fixed proper nonnegative prior on the finite depths, the matching prefix has finite-class likelihood one minus the cumulative mass below k and endless likelihood one. With fixed positive class weights, sufficiently long prefixes favor the endless class by any prescribed finite positive factor, but there is no cutoff uniform over proper priors: at each length, concentrating at that depth gives likelihood one. A full-support geometric prior gives positive likelihood (1/2)^k and rules out preference by every factor at any one finite k."
 
+[statement.connection_plan]
+target_statement_id = "3008c7db-0236-4b03-9da7-f41ea8d8cac1"
+missing_bridge = "For each actual esse bearer, identify a finite audit on the same ActualEsseCause roster whose observed lists certify a path to a named ancestor and every incoming edge at that ancestor, including a complete empty supplier list there. Then apply the existing finite certificate theorem on that roster."
+blocker = "A prefix of singleton lists fits both a sourced chain and the endless chain. Likelihood discrimination within fixed classes supplies neither an empty list nor completeness for actual esse causes. No observation mapping that certifies complete actual esse lists, or coverage by such audits for each bearer, is established."
+
 [[statement]]
 id = "888066cf-0aa1-4a75-a86c-c47e1652e9c8"
 label = "Nested records from one supplier audit update by conditional likelihood"

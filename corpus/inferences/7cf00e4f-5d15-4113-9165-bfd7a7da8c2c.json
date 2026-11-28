@@ -1,0 +1,14 @@
+{
+  "id": "7cf00e4f-5d15-4113-9165-bfd7a7da8c2c",
+  "label": "Intellectual universal giving by rational exercise, from one power (inference)",
+  "input_statement_ids": [
+    "c65f64de-f2b1-46a2-bf8d-c0450f5fc6c6",
+    "6bcb6b1a-6a4a-423d-864e-2d02368bd5c7",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9"
+  ],
+  "output_statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+  "rule": "Convert the causal edge to giving and apply the rational exercise result at the same bearer",
+  "meaning": "The adapter supplies giving at w. The universal-scope premise supplies one power for the same intellectual cause. The earlier result from one power then supplies its owned rational exercise for each giving at w. This composition shares the adapter with the priority route.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "f08753fa-30e1-4b98-a1f7-24c2f644953b",
+  "label": "Recorded rival for 523917cf from reading 76f32ae6",
+  "subject_kind": "statement",
+  "subject_id": "76f32ae6-dc8a-4d83-8d48-59d420fb9dc5",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "523917cf-d978-5a15-87fc-61186d7e59de",
+  "note": "Van Inwagen offers a substantive restriction on the existence of composite objects: components must jointly constitute a life. For an application to oppose the actual fusion premise, the selected parts would have to fail that life condition and the formal sum must require composition in this sense. No exclusion of the selected fusion is established here."
+}

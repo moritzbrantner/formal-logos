@@ -1,0 +1,225 @@
+[batch]
+vocab = "TruthCore.Causality.RootPerfectionIntellect"
+results = "TruthCore.Results.Causality.RootPerfectionIntellect"
+
+[[statement]]
+id = "44e39691-9c30-4d4e-8a7d-254f18a3ec97"
+label = "The determination wisdom is a pure perfection"
+lean = "WisdomIsPure"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "04d7652c-25df-46b0-8bef-2b619664855b"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the determination wisdom (read as the bearer's own subject-grounded apprehension, not productive or exemplary wisdom) is a pure perfection: an actuality that involves no potency, limitation or reception (DEF-PURE-PERFECTION). It uses the same purity parameter as 'every actual concrete root has every pure perfection', so no sense passage is involved. The Lean type is only Pure wisdom for one token; what makes that token intellectual is not its name but the separate open bridge that a subsistent bearer of it can apprehend a true content about itself."
+
+[[statement]]
+id = "d41af47e-4252-4843-875c-f4a3cfc6d260"
+label = "A subsistent bearer of wisdom can apprehend a true content about itself"
+lean = "TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.WisdomSelfCapacity"
+definitions = ["3aba5f19-f48d-50db-bc57-93ba2e99f845", "ee620fc3-118f-4279-89b8-c9bfa70cac34", "04d7652c-25df-46b0-8bef-2b619664855b"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: every being that is its own being and has the determination wisdom has its own capacity (CanApprehend, the bearer's own ability, not a power to make another apprehend) for some content that is about it and correct of it. It is a capacity, not an exercise. Productive or virtual possession of wisdom does not supply it."
+
+[[statement]]
+id = "d73266a0-6ae2-40b7-ae1f-dc03d56e41a1"
+label = "An own being's unexercised self-directed capacity leaves it in potency in understanding"
+lean = "TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.SelfCapacityExercisedOrPotent"
+definitions = ["ee620fc3-118f-4279-89b8-c9bfa70cac34", "3ea2762f-1a85-5059-b4e7-d29f192b16b6"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every being that is its own being and every content about it that it can itself apprehend, either it actually apprehends that content or it is in potency in the designated understanding respect. Potency is the independently supplied InPotency (DEF-INDEPENDENT-POTENCY), not 'capable and not actually'; under that reading a dormant self-directed capacity without potency is a coherent assignment, so the bridge is substantive."
+
+[[statement]]
+id = "03a5e479-2bad-400f-83cd-7781a6625f12"
+label = "True self-apprehension by an own being is cognitively grounded"
+lean = "TruthCore.Causality.WholePowerPerfection.WisdomSelfUnderstanding.TrueSelfApprehensionGrounded"
+definitions = ["e1c85e81-7fb9-41c3-83c9-970ce40fa2d5"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: whenever a being that is its own being actually apprehends a content about itself that is correct of it, that apprehension is cognitively grounded: its truth is grounded in the intelligible object, not a successful register reading or a lawlike output. It need not be discursive or temporally acquired."
+
+[[statement]]
+id = "00d02e10-d650-4ef8-a061-1d4b25d15964"
+label = "Every PURE_ACT_1 actual root has intrinsic self-knowledge"
+lean = "PureActRootsKnowThemselves"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "a49e4cf1-ca4f-5519-9724-892af257cedb", "3ea2762f-1a85-5059-b4e7-d29f192b16b6", "e1c85e81-7fb9-41c3-83c9-970ce40fa2d5"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: every actual concrete root of the selected grounding relation at w that is PURE_ACT_1 (in potency in no respect of the independently supplied potency predicate) has intrinsic self-knowledge: some content about it and correct of it that it itself actually apprehends, with cognitive grounding. It does not say that any root is in pure act, that there is a root, or that the root knows anything other than itself."
+
+[[statement]]
+id = "8ba44d60-7fbf-48e3-b052-26b0ac7688b1"
+label = "Every GOD_4 with intrinsic self-knowledge HAS_INTELLECT_1"
+lean = "GodIntrinsicSelfKnowledgeIsIntellect"
+definitions = ["88f9f6e8-997b-5f7d-afa1-c501954c3807", "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4", "e1c85e81-7fb9-41c3-83c9-970ce40fa2d5"]
+paraphrase = "OPEN recognition bridge, analyst formulation, attribution deferred: every g that is GOD_4 and has intrinsic self-knowledge (a true, actually apprehended, cognitively grounded content about itself) satisfies the unary HAS_INTELLECT_1. It reads such self-knowledge as sufficient for intellect; it does not say that intellect requires it. It also carries the intellectual, as against sensory, grade of HAS_INTELLECT_1 (intellectual cognition as distinguished from sense): nothing in intrinsic self-knowledge itself distinguishes the grades."
+
+[[statement]]
+id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+label = "A profile is admissible exactly when no member requires the lack of members"
+lean = "MemberGroundedAdmissibility"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the constitutive reading of the admissible intrinsic profile family. A set of real determinations is admissible exactly when it is exclusion-free: no member d and subset S of the set are such that d requires the lack of S. Every inadmissibility is then attributed to some member's requirement of a lack. It is neutral about purity. Because exclusion-freedom is inherited by subsets, it makes the family downward closed and admits the empty profile, so it excludes both irreducibly holistic prohibitions (no member's requirement accounts for them) and requirements of presence (a member that needs another alongside it, or a family that requires a determination in every profile). It does not identify the primitive family with the defined notion; it states that they coincide."
+
+[[statement]]
+id = "Every exclusion-free profile is admissible"
+lean = "ExclusionFreeAdmissible"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: the sufficiency direction of member-grounded admissibility. Every set of real determinations in which no member requires the lack of some of its members is an admissible intrinsic profile. Read contrapositively, every inadmissible profile fails exclusion-freedom, so (classically) some member of it requires the lack of some of its members: it localizes every inadmissibility in a member's requirement of a lack. What it omits is the necessity direction, that every admissible profile is exclusion-free, which makes every member's requirement of a lack binding (a profile containing one is inadmissible). With the requirement relation left free, it and 'no pure determination requires the lack of pure determinations' are jointly equivalent to 'every profile of pure determinations is admissible'."
+
+[[statement]]
+id = "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+label = "No pure determination requires the lack of pure determinations"
+lean = "PureRequiresNoPureLack"
+definitions = ["65e38ffa-5a1c-55d0-935c-6538d843b780", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every pure determination d and every set S of pure determinations, d does not require the lack of S. It covers a single excluded determination and a joint lack alike. Its rationale is DEF-PURE-PERFECTION: requiring the lack of a positive actuality would be a limitation of the requirer. It is the requirement-form counterpart of joint compossibility, not independent of it: under member grounding and pure admissibility, joint compossibility gives it for every finite set (finiteConverse)."
+
+[[argument]]
+id = "57d42ac6-5d9d-48db-b7d9-377870c4679b"
+label = "PURE_ACT_1 roots know themselves, from every pure perfection and pure wisdom"
+theorem = "pureActRootsKnowThemselvesFromPurity"
+comparator_theorems = ["stepOneControls"]
+premises = ["a30c5963-cb81-5366-aab0-2454363e18f7", "26e8e6ed-964e-55ef-a9fd-756164aad6a7", "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd", "44e39691-9c30-4d4e-8a7d-254f18a3ec97", "d41af47e-4252-4843-875c-f4a3cfc6d260", "d73266a0-6ae2-40b7-ae1f-dc03d56e41a1", "03a5e479-2bad-400f-83cd-7781a6625f12"]
+conclusion = "00d02e10-d650-4ef8-a061-1d4b25d15964"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Instantiate every pure perfection at the pure wisdom; unlimitedness gives own being; capacity, exercise-or-potency with pure act, and grounding give intrinsic self-knowledge"
+meaning = "Fix an actual root r at w that is in potency in no respect. Actual roots have no represented limiting principle, so the open premise that an unlimited being is its own being makes r its own being. Every actual root has every pure perfection, and wisdom is pure, so r has wisdom. The capacity bridge gives r its own capacity for a true content c about itself. The exercise-or-potency bridge says r apprehends c or is in potency in the understanding respect; pure act excludes the second. The grounding bridge makes the true apprehension cognitively grounded. So r has intrinsic self-knowledge. The proof applies the existing actualRootSelfKnowledgeFromWisdom unchanged; the q.4 a.2 whole-power premises are not used, because 'every actual root has every pure perfection' replaces them, so every producer of that statement feeds this step. The main theorem uses no axioms. The Comparator companion stepOneControls (propext, Quot.sound; two beings, the source the only actual root at true) gives a positive witness and, for each of the seven premises, an assignment where it fails, the six others hold and the conclusion fails. In the exercise row the source can apprehend its own content, does not, and is in potency in no respect; that is an assignment only because potency is the independently supplied predicate. The assignments say nothing about what wisdom, apprehension or grounding metaphysically are."
+
+[[argument]]
+id = "01a7d598-60a6-4635-87d5-b9748c473cb0"
+label = "GOD_4 HAS_INTELLECT_1 from a PURE_ACT_1 root's self-knowledge and finite reach"
+theorem = "godHasIntellectFromRootPerfection"
+comparator_theorems = ["stepTwoControls"]
+premises = ["593d7307-c8e1-5863-9776-a26cfe09d20c", "75974d26-9483-4e1b-81a9-693a90ee9d0f", "00d02e10-d650-4ef8-a061-1d4b25d15964", "8ba44d60-7fbf-48e3-b052-26b0ac7688b1"]
+conclusion = "29818edd-9f5a-5414-baa2-9a7d0c8abf18"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Identify each GOD_4 with the pure-act actual root by finite grounding reach, apply root self-knowledge, then the recognition bridge"
+meaning = "Some n is an actual concrete root at w, necessary, first and in potency in no respect. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n, and since n has no actual concrete ground the path is trivial, so g = n (namedRootOfReach). The root-level premise gives n intrinsic self-knowledge, and the recognition bridge gives g HAS_INTELLECT_1. The q.14 immateriality premise of the existing intellect routes is not used. The main theorem uses no axioms. The Comparator companion stepTwoControls (propext, Quot.sound; same carrier) gives a positive witness and, for each of the four premises, an assignment where it fails, the three others hold and GOD_4 HAS_INTELLECT_1 fails: the root in potency (root self-knowledge then holds vacuously), GOD_4 naming the effect, which is no ancestor of the root, the root without self-knowledge, and self-knowledge without the HasIntellect predicate."
+
+[[argument]]
+id = "Exclusion-free profiles are admissible, from member grounding"
+label = "Exclusion-free profiles are admissible, from member grounding"
+theorem = "exclusionFreeAdmissibleOfMemberGrounding"
+comparator_theorems = ["constitutiveControls"]
+premises = ["6bba8431-d3f7-47f5-85cf-8c69d32b082f"]
+conclusion = "Every exclusion-free profile is admissible"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Take the right-to-left direction of the biconditional"
+meaning = "Member grounding says a profile is admissible exactly when it is exclusion-free; its right-to-left direction is that every exclusion-free profile is admissible. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the strictness row has every profile admissible and noesis requiring its own lack: the sufficiency direction holds and member grounding fails, so the weak version is strictly weaker on that assignment."
+
+[[argument]]
+id = "Joint compossibility from exclusion-free admissibility and pure requirements"
+label = "Joint compossibility from exclusion-free admissibility and pure requirements"
+theorem = "jointCompossibilityOfExclusionFreeAdmissibility"
+comparator_theorems = ["constitutiveControls"]
+premises = ["Every exclusion-free profile is admissible", "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"]
+conclusion = "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Every member of the extended profile is pure, so no member requires the lack of a subset; the sufficiency direction makes the profile admissible"
+meaning = "Fix an admissible profile q of pure determinations and a pure k admissible somewhere. Every member of q with k added is pure, and every subset of it consists of pure determinations, so by the purity premise no member requires the lack of any subset; the profile is exclusion-free, hence admissible. The proof does not use that q or k is admissible: under the two premises every profile of pure determinations is admissible, and with the requirement relation left free the pair is equivalent to exactly that (sufficiencyPremisesIffAllPure). The derivation therefore relocates joint compossibility into requirement form; it adds no warrant beyond the localization of incompatibility in what a member requires, which lives in the intended reading of the requirement relation, and the purity premise's rationale (DEF-PURE-PERFECTION) is the one already recorded for joint compossibility. The main theorem uses no axioms. The Comparator companion constitutiveControls (three Mathlib axioms; the five #1970 determinations) takes the triple family, where a, b and noesis are never had together while every pure pair is admissible. With no requirement relation the sufficiency direction fails and the purity premise holds; with noesis requiring the joint lack of a and b, member grounding holds and the purity premise fails; joint compossibility fails in both."
+
+[[argument]]
+id = "Pure determinations admissible, from exclusion-free admissibility and pure requirements"
+label = "Pure determinations admissible, from exclusion-free admissibility and pure requirements"
+theorem = "pureAdmissibleOfExclusionFreeAdmissibility"
+comparator_theorems = ["constitutiveControls"]
+premises = ["Every exclusion-free profile is admissible", "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"]
+conclusion = "ee287fd3-3890-4739-8407-a27d7c81191d"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "The singleton of a pure determination is exclusion-free"
+meaning = "For a pure k, its singleton consists of pure determinations, so by the purity premise k does not require the lack of any subset of it; the sufficiency direction makes the singleton admissible, so k occurs in an admissible profile. The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), the family that admits no profile containing noesis fails the sufficiency direction with no requirement relation, and fails the purity premise when noesis requires its own lack; pure admissibility fails in both. A family in which noesis requires the presence of an impure articulation (the articulation objection's form) is a further option that neither premise pair accommodates; there pure admissibility holds and joint compossibility fails (Lean-only presenceRequirement)."
+
+[[argument]]
+id = "Root profiles admissible, from exclusion-free admissibility and root purity"
+label = "Root profiles admissible, from exclusion-free admissibility and root purity"
+theorem = "rootProfilesAdmissibleOfExclusionFreeAdmissibility"
+comparator_theorems = ["constitutiveControls"]
+premises = ["Every exclusion-free profile is admissible", "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6", "3b39e0ba-eb4a-5708-90d0-c2706094d43c"]
+conclusion = "0a9d3a40-4777-4352-a4b4-2126c0055924"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "An actual root's profile consists of pure determinations, so it is exclusion-free and admissible"
+meaning = "Fix an actual root r at w. Every real determination of r is pure (strict pure actuality at roots), so by the purity premise no member of r's profile requires the lack of any subset of it, and the sufficiency direction makes the profile admissible. The #2153 anchoring family (finite profiles of natural numbers) is member-grounded when every determination requires the lack of every infinite set, but no requirement relation gives it the sufficiency direction together with the purity premise while every determination is pure (Lean-only anchorFamilyGrounding). The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), a root profile containing the nonpure limiter and noesis keeps the sufficiency direction and the purity premise but fails root purity and admissibility, and the all-pure root profile in the triple family is inadmissible while the sufficiency direction fails (no requirement relation) or the purity premise fails (noesis requiring the joint lack of a and b)."
+
+[[relation]]
+id = "Member-grounded admissibility strengthens exclusion-free admissibility"
+label = "Member-grounded admissibility strengthens exclusion-free admissibility"
+subject_kind = "statement"
+subject_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Every exclusion-free profile is admissible"
+verification_result_id = "Exclusion-free profiles are admissible, from member grounding"
+strictness_result_id = "The all-admissible family separates member grounding from sufficiency"
+note = "Same Admissible family and RequiresLack relation. The strong version is a biconditional; the weak one is its right-to-left direction, which is all the three derivations use. The strictness row of constitutiveControls (every profile admissible, noesis requiring its own lack) satisfies the weak version and fails the strong one; the certified difference is the necessity direction, every admissible profile is exclusion-free."
+
+[[statement]]
+id = "Every admissible profile is exclusion-free"
+lean = "AdmissibleIsExclusionFree"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "Difference statement of member-grounded admissibility over its sufficiency direction (#1598), OPEN, not asserted: every admissible intrinsic profile is exclusion-free, so no member of an admissible profile requires the lack of some of its members. It is the necessity direction of member grounding, the part that makes every member's requirement of a lack binding: a profile containing one is inadmissible."
+
+[[statement]]
+id = "Member grounding holds exactly when sufficiency and its difference hold"
+lean = "MGOverSufficiencyExact"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "For every carrier, admissible family and requirement relation: a profile is admissible exactly when exclusion-free if and only if every exclusion-free profile is admissible and every admissible profile is exclusion-free. A premise-free comparison; it asserts none of the three statements."
+
+[[statement]]
+id = "The all-admissible family with self-excluding noesis separates member grounding from sufficiency"
+lean = "Control.StrictSeparates"
+definitions = ["3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "88f7c656-f484-4737-a872-b2d78c604322"]
+paraphrase = "On the five #1970 determinations, with every profile admissible and noesis requiring its own lack, every exclusion-free profile is admissible while member grounding fails (the profile containing noesis is admissible but not exclusion-free). A structural assignment only."
+
+[[argument]]
+id = "Member grounding is sufficiency plus its difference"
+theorem = "mgOverSufficiencyExact"
+axioms = []
+premises = []
+conclusion = "Member grounding holds exactly when sufficiency and its difference hold"
+rule = "Split the biconditional into its two directions and recombine"
+meaning = "Certified difference (#1598) of the registration 'member-grounded admissibility strengthens exclusion-free admissibility', with no background: member grounding holds iff its sufficiency direction holds and every admissible profile is exclusion-free. Premise-free and constructive; it asserts none of the statements compared."
+description = "Premise-free equivalence certificate for the strength comparison of member grounding over its sufficiency direction. Establishes no premise."
+
+[[argument]]
+id = "The all-admissible family separates member grounding from sufficiency"
+theorem = "strictSeparates"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+premises = []
+conclusion = "The all-admissible family with self-excluding noesis separates member grounding from sufficiency"
+rule = "Finite check (row 8 of constitutiveControls)"
+meaning = "With every profile admissible and noesis requiring its own lack, the sufficiency direction holds and member grounding fails: the strengthening is strict. A structural interpretation only."
+description = "Strictness control for member grounding over its sufficiency direction. Establishes no premise."
+
+[[relation]]
+id = "Member grounding over sufficiency: certified difference"
+subject_kind = "statement"
+subject_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+predicate = "strength_comparison"
+object_kind = "statement"
+object_id = "Every exclusion-free profile is admissible"
+comparison_spec = "mgOverSufficiency"
+delta_statement_id = "Every admissible profile is exclusion-free"
+evidence_result_ids = { implication = "Exclusion-free profiles are admissible, from member grounding", equivalence = "Member grounding is sufficiency plus its difference" }
+separator = { setting = "Control.strictSetting", result_id = "The all-admissible family separates member grounding from sufficiency" }
+statement_parameter_indices = { stronger = [0, 1, 2], weaker = [0, 1, 2], delta = [0, 1, 2] }
+note = "Difference of member grounding over its sufficiency direction: member grounding adds exactly that every admissible profile is exclusion-free (the necessity direction). No background. The separator is a finite interpretation."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.mgOverSufficiencyExact (6bba8431)"
+label = "Test by RootPerfectionIntellect.mgOverSufficiencyExact (6bba8431)"
+subject_kind = "result"
+subject_id = "bae83585-0656-4bde-aff5-9d45bc3d70ea"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+note = "Premise-free certificate: member grounding holds exactly when its sufficiency direction and its necessity direction (every admissible profile is exclusion-free) hold. It decomposes the premise into the part the derivations use and the part they do not. Definitional; no evidential weight."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.strictSeparates (6bba8431)"
+label = "Test by RootPerfectionIntellect.strictSeparates (6bba8431)"
+subject_kind = "result"
+subject_id = "d6bfcd0d-d172-46ef-9b55-3183678903e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6bba8431-d3f7-47f5-85cf-8c69d32b082f"
+note = "With every profile admissible and noesis requiring its own lack, the sufficiency direction holds and member grounding fails: member grounding is strictly stronger than what the derivations use."
+
+[[relation]]
+id = "Test by RootPerfectionIntellect.strictSeparates (89c988d9)"
+label = "Test by RootPerfectionIntellect.strictSeparates (89c988d9)"
+subject_kind = "result"
+subject_id = "d6bfcd0d-d172-46ef-9b55-3183678903e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Every admissible profile is exclusion-free"
+note = "In the separating assignment the necessity direction fails (the admissible profile containing self-excluding noesis is not exclusion-free) while the sufficiency direction holds, so the difference is not implied by the sufficiency direction."

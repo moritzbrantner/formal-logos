@@ -1,0 +1,22 @@
+{
+  "id": "1cb16a7f-9c11-4cf0-96f8-c2ffb2307df7",
+  "label": "Effect individuation by exact provenance or occupancy of the fixed role",
+  "term": "effect individuation across replacement worlds",
+  "term_label": "EFFECT_INDIVIDUATION",
+  "sense_definition_ids": ["a36adbd0-b558-4efc-bd73-4479ddcf1698", "e7cffaa0-bccd-49ee-b1cf-0e730e418151"],
+  "resolution": "Both criteria track the same role and actual reference output. Given the same raw candidate profile, precise candidate provenance matters to the first criterion, while the second takes the presence of any candidate for the role to suffice. The resulting existence predicates disagree at the backup world. These are scope-specific readings of what the tracked effect designates, without an exhaustiveness claim.",
+  "senses": [
+    {
+      "id": "dabadd62-2cf6-4741-85df-779987285d94",
+      "label": "EFFECT_INDIVIDUATION_1",
+      "definition_id": "a36adbd0-b558-4efc-bd73-4479ddcf1698",
+      "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.OriginIndividuation"
+    },
+    {
+      "id": "f01658fa-9e15-4361-b1ef-ddc6f152617f",
+      "label": "EFFECT_INDIVIDUATION_2",
+      "definition_id": "e7cffaa0-bccd-49ee-b1cf-0e730e418151",
+      "lean_declaration": "TruthCore.Modal.WitnessPreservationIndividuation.RoleIndividuation"
+    }
+  ]
+}

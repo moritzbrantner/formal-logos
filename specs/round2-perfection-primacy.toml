@@ -186,6 +186,7 @@ meaning = "Derives the batch 1 bridge that a distinct cause does not have the pe
 [[argument]]
 id = "EFFICIENT-CAUSE-NOT-DEPENDENT-FROM-ASYMMETRY"
 theorem = "efficientCauseNotDependent"
+strong_version_needed = {"8b2561cd-3743-536d-a110-3352fdb0c6b9" = "The dependence-asymmetry premise applies only to distinct bearers. It needs distinctness of the given efficient cause and its effect. The weak premise may give a different incoming cause and leave the given edge diagonal."}
 premises = ["STMT-EFFECT-DEPENDS-FOR-BEING-ON-EFFICIENT-CAUSE", "STMT-NOTHING-IS-EFFICIENT-CAUSE-OF-ITSELF", "STMT-DISTINCT-BEINGS-NOT-MUTUALLY-DEPENDENT"]
 conclusion = "STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT"
 rule = "Reductio, universal instantiation and modus ponens"
@@ -271,3 +272,263 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-PERFECTIONS-ARE-MODES-OF-BEING"
 note = "q.4 a.2 co. says the perfections of all things pertain to the perfection of being, since things are perfect insofar as they have being in some way. The premise reads 'pertain to the perfection of being' as 'is a mode of the thing's being' (DEF-MODE-OF-BEING) for every perfection a thing has in act. The claim is kept as prose and records that ad 3 distinguishes participation in being from participation in every mode; the premise does not settle that."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for If x depends for its bein (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for If x depends for its bein (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "000e1f65-6e74-5519-bbf3-300d5f61ada8"
+note = "Tests omitting this premise in the encoded nonmutualDependenceSuffices argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Distinct beings never dep (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Distinct beings never dep (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c"
+note = "Tests omitting this premise in the encoded efficientCauseNotDependent argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Everything other than p h (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Everything other than p h (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "11e24b50-06bc-5e2e-b9b6-a4e4dc421237"
+note = "Tests omitting this premise in the encoded othersAreCreatures argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Every bearer of LIMITATIO (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Every bearer of LIMITATIO (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1304b462-4a10-5dd0-995a-db5feb21d98e"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for The esse of every CREATUR (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for The esse of every CREATUR (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "29e71e43-1d34-5008-8811-897fbddda209"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Whatever has its being by (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Whatever has its being by (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2b25a78c-abad-50d9-abb9-31a753409192"
+note = "Tests omitting this premise in the encoded othersAreCreatures argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for A total cause of a thing' (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for A total cause of a thing' (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2f6b9eff-84a1-5310-9abb-19985f3282c3"
+note = "Tests omitting this premise in the encoded universalCauseTransfers argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for For every y, perfection r (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for For every y, perfection r (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3e890700-3a15-5dd5-bc71-ec03d3466139"
+note = "Tests omitting this premise in the encoded causePerfectionNotReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for An efficient cause does n (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for An efficient cause does n (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "47b151ca-f500-5a7c-80d4-33bb90247ee3"
+note = "Tests omitting this premise in the encoded causePerfectionNotReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Whatever causes the being (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Whatever causes the being (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5e281daf-e8a5-5995-bc3f-94e142319e28"
+note = "Tests omitting this premise in the encoded universalCauseTransfers argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Everything other than the (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Everything other than the (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "612078bf-5a68-5542-8b7b-f862f816ece0"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for OPEN Lean-bound reading o (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for OPEN Lean-bound reading o (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "791fa216-ce40-5e7d-82c5-0bd5fe245446"
+note = "Tests omitting this premise in the encoded universalCauseTransfers argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Every received esse is limited"
+label = "Test by Finite interpretations for the eight derivations of roun for Every received esse is limited"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7de89edb-e3a8-59ee-9740-8d0ce7c8ea24"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for If y does not depend for (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for If y does not depend for (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8ab3d114-d6e2-5f6d-805b-ae901f56d39b"
+note = "Tests omitting this premise in the encoded nonmutualDependenceSuffices argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Nothing is the efficient (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Nothing is the efficient (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8b2561cd-3743-536d-a110-3352fdb0c6b9"
+note = "Tests omitting this premise in the encoded efficientCauseNotDependent argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for If y can be without x and (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for If y can be without x and (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97fa3a0b-eb23-5fb1-9741-c1f09fb72206"
+note = "Tests omitting this premise in the encoded nonmutualDependenceSuffices argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for If x has r by participati (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for If x has r by participati (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9da93cd4-e4ed-536b-8302-4e7acd0e02ed"
+note = "Tests omitting this premise in the encoded causedPerfectionReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for A greater degree of any p (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for A greater degree of any p (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9eaa3b6e-ad2f-5776-ab26-03cfa9f54ad8"
+note = "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for OPEN analyst premise: for (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for OPEN analyst premise: for (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a961a13e-6caf-5864-ba84-10773f0c8b2e"
+note = "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Whatever is CREATURE_2 (c (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Whatever is CREATURE_2 (c (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b7d4eede-ab50-5522-8902-f33238fa234d"
+note = "Tests omitting this premise in the encoded othersAreCreatures argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Whatever c efficiently ca (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Whatever c efficiently ca (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c0d99549-799c-5a01-9b59-75fe88550b26"
+note = "Tests omitting this premise in the encoded efficientCauseNotDependent argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Causing another's perfect (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Causing another's perfect (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e0088de9-28eb-533c-a1e7-662f780cc0e2"
+note = "Tests omitting this premise in the encoded causePerfectionNotReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for OPEN reading of ST I q.7 (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for OPEN reading of ST I q.7 (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e2462fa8-1958-5ab7-827d-fb99c2175f02"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for If c, distinct from x, ca (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for If c, distinct from x, ca (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "efe134d4-be4e-528e-83c3-dfd6685e2608"
+note = "Tests omitting this premise in the encoded causedPerfectionReceivedInEffect argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Having r without limitati (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Having r without limitati (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f6677834-6328-5588-a288-0e0d815876ff"
+note = "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Finite interpretations for the eight derivations of roun for Whatever has LIMITED_ESSE (1)"
+label = "Test by Finite interpretations for the eight derivations of roun for Whatever has LIMITED_ESSE (1)"
+subject_kind = "result"
+subject_id = "27d0aa1f-bd7c-5946-b886-0dea80ab650e"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fd2c8710-988f-527f-a81a-2566fe10e3f9"
+note = "Tests omitting this premise in the encoded nothingElseReachesPrimary argument, with the other premises retained and the conclusion false in each corresponding control."

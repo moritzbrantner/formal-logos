@@ -1,0 +1,15 @@
+{
+  "id": "8eea76f9-e194-4f9a-a3ff-90ed8e8cf1ae",
+  "label": "Second Way from distinct efficient incoming witnesses (inference)",
+  "input_statement_ids": [
+    "a4250680-fbfc-5413-aeab-151b2933d128",
+    "bd050ab8-3cfa-4db8-a990-a4595834afb9",
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5",
+    "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+  ],
+  "output_statement_id": "6105565d-f711-5198-a3d4-d63ec972b046",
+  "rule": "Well-founded descent on effects using a distinct incoming witness at each step",
+  "meaning": "Given an effect, choose a distinct incoming cause. If it has no incoming cause of any kind in the same efficient relation it is first. Otherwise the per se premise makes it a predecessor that is also an effect. Well-foundedness contradicts the absence of any first cause, using the observed effect to begin. The endpoint is double-negated.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

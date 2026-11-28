@@ -1,0 +1,10 @@
+{
+  "id": "d7c273eb-defc-45da-8c7b-1d6270a7f075",
+  "label": "Test by One exact three-node, one-world interpretation exports a for Actual CONCRETE_AND_ABSTR (1)",
+  "subject_kind": "result",
+  "subject_id": "50d7e527-f464-516a-ab1d-bcb6c04d0753",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "39f7c63d-b372-564c-b18a-ed09d02dda9a",
+  "note": "Tests substituting maximal-target asymmetry for full asymmetry in the constructive three-node model with an actual maximal root and reciprocal nonmaximal dependents."
+}

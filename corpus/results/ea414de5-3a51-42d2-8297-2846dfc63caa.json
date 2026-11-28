@@ -1,0 +1,11 @@
+{
+  "id": "ea414de5-3a51-42d2-8297-2846dfc63caa",
+  "label": "Finite onset-only giving with explanation, origin and RECEIVES_ESSE_AT_2",
+  "argument_id": "c321b0d3-6cdb-4226-bf6a-9c9bed3add10",
+  "challenge_module": "TruthCore.Results.Causality.ConcurrentGiving.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ConcurrentGiving.Solution",
+  "theorem": "TruthCore.Results.Causality.ConcurrentGiving.jointInertia",
+  "comparator_config": "results/ea414de5-3a51-42d2-8297-2846dfc63caa/comparator.json",
+  "status": "solution-present",
+  "description": "Closed control over a single interpretation. Onset-only giving is compatible there with momentary explanation, origin accompaniment, standing receipt, non-self-giving, contact and concurrence, as well as the cessation law, foundation, irreflexivity and term coexistence. The three productive bridges, weak concurrent actualization and the universal sustaining reading all fail in that frame."
+}

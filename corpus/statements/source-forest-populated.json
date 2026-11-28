@@ -1,9 +1,9 @@
 {
   "id": "c638c6f7-31e2-53a4-9668-bb23b88cc04e",
-  "label": "The selected graph has an actual node when instantiated by actualGraph m w",
+  "label": "The selected graph has at least one node",
   "legacy_id": "STMT-SOURCE-FOREST-POPULATED",
   "lean_declaration": "TruthCore.Causality.SourceForest.Populated",
-  "paraphrase": "Open population premise: the selected graph has an actual node when instantiated by actualGraph m w.",
+  "paraphrase": "Open population premise: the selected graph has at least one node. When the graph is actualGraph at w, its node is an existent at w. When the graph is the actual concrete grounding graph at w, its node is an existent classified as concrete at w. The abstract graph property alone supplies neither interpretation.",
   "definition_ids": [
     "f64856c0-6d2c-5c5d-97ef-9895039d8c27",
     "1dff2d68-1348-5e7e-8ee7-248af63c8c53",

@@ -1,0 +1,63 @@
+{
+  "id": "befe92b7-2bf7-483d-856f-1f106eec8c7e",
+  "label": "Exact shared strict-order test for existential production",
+  "statement_ids": [
+    "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+    "83ec280a-b8bb-40de-b16a-d43385461054",
+    "37ae2e51-468c-5051-81ca-dfc6ae91f7b5",
+    "66b7ac36-56a9-5907-8dc2-3dfb69100c9c",
+    "d07314a3-ac99-58df-8fa1-e21f0d53db5d",
+    "e9da0216-07df-5c7f-b9e8-475d12671f59",
+    "8550ca62-92d1-5ef0-af17-9de5bf272262",
+    "1d1f5ac4-011e-461a-b8bd-14409b5dddf9"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "On a fixed exercise profile the required bearer and product edges have a common transitive irreflexive extension exactly when they have no nonempty finite closed walk. The acyclic graph therefore supports the existing exclusion and its diagonal CAUSE_4 route. Two separate strict orders can coexist with self-production and an irreflexive, nontransitive union. A four-edge cycle through two distinct producers obstructs the common order even without direct self-production. Actual enabling power supports bearer co-actuality. Independent availability of that actuality and genuinely supplying the product's being favor strict priority in the same existential reading. Strictness and composition are prima facie commitments for that interpretation. PRIOR_1 and PRIOR_5 do not supply the mixed-token assignments. Smith's simultaneous mutual origination is the live challenge to the embeddings. Spinoza's existence through essence and holistic constitutive explanation require separate assessment. See docs/notes/unique-feedback-explanation-311.md#can-bearer-and-production-priority-share-one-strict-order-2026-11-26. The second pass keeps distinct productive suppliers for each bearer and varies only one diagonal origin attribution. The loop defeats global acyclicity even with both exercise bridges satisfied. Denial of the weak bridge requires a self-originating bearer with no occurring exercise of its own producing its being. On the fixed reciprocal profile each priority law can be the only law to fail. For the seven provisional judgments, rival costs and revision conditions see docs/notes/unique-feedback-explanation-311.md#which-denial-does-reciprocal-first-actuality-support-2026-11-26 and the matchedOrigins, deniedDiagonalIff and priorityAlternatives controls in TruthCore/Causality/ReciprocalOriginTest.lean.",
+  "blocker": "For application, justify the two embeddings in one independently defended strict existential order or give a simultaneous-origin account supplying the actual powers and identity-preserving cycle. For the whole-bearer case, either justify the part-to-whole exercise and coming-to-be-to-being bridges, or (the alternative reopening condition) establish a same-whole CAUSE_4 self-edge and show that every qualifying productive exercise belongs solely to proper parts; a whole-borne exercise producing that whole's being instead satisfies the diagonal bridge and shifts the dispute to the priority premises. No philosophical premise is established by the extension criterion.",
+  "evidence": [
+    "e60831c7-14fd-5225-9471-060dffa50386",
+    "4421bfcd-63b3-4855-87e3-3e9893525352",
+    "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8",
+    "d8585999-be0f-491d-abc6-ecc8e6afa08c",
+    "6106152e-0bcb-43be-b6b4-9a24b794f62f",
+    "7f355eb0-7687-4b20-8aed-2ba9f15978fa",
+    "e61a7881-72cc-4aad-98d7-07b17501cb9d",
+    "PR-2022",
+    "PR-2026",
+    "PR-2043"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2026"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2026"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2043"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2043"
+    }
+  ]
+}

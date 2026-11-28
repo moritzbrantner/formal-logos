@@ -1,0 +1,35 @@
+{
+  "id": "55c9bf7e-8825-4634-9988-2352c019ce76",
+  "label": "Reject a direct inference from known good output to beneficiary willing",
+  "statement_ids": [
+    "3655f59f-9ab4-4c5d-8fb2-474810d29418",
+    "de6a0f86-dfc5-4941-be2c-dfe3ad81a9a8",
+    "9671be2f-191d-4c1e-b3c5-6faed1b34f28"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "rejected",
+  "summary": "From rational power in actual use plus correct apprehension it is tempting to move directly to productive use of the apprehended content. The foreseen assignment satisfies a fully specified apprehended plan without the plan specifying the exercise. It concerns apprehension of an evaluated standard, not full knowledge in the q.14 own-nature statement. The proposed application of that separate knowledge statement would need the same knower, efficacy of that knowledge in the selected giving, and a match between the standard and the recipient. Even practical direction for the sake of another end does not supply recipient benefit. An implication from rational giving or general apprehension straight to a case predicate would relocate the disputed content into an application premise.",
+  "evidence": [
+    "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+    "PR-2020"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2020"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "c8276d2b-afdc-4902-9f4d-cffa34efc947",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for The profile's selected re (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21",
+  "note": "Tests omitting this premise in the encoded asymmetricFromWF argument, with the other premises retained and the conclusion false in each corresponding control."
+}

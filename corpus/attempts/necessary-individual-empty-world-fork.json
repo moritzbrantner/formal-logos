@@ -10,12 +10,22 @@
   ],
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Formalized a root-presence bridge as an exact biconditional: a de-re fixed witness equals a shared witness at every populated successor together with the separately required population of every successor. Constructed a universal-accessibility three-world finite interpretation with an accessible empty presence extension, root shared across both populated histories, causal coverage for every present nonroot and no two-edge causal chain. This refutes any bare inference from finite rooted histories to de-re necessity under the stipulated frame. Constructed a second two-world interpretation preserving both populated histories exactly while excluding the empty extension, where the same root is necessary. Lean compilation and independent Rust Comparator verified all three results with no permitted axioms on CI run 902 (head c99448e6); the logical conclusions are conditional on their explicitly supplied interpretations. Not an attributed source claim, an unrestricted PSR countermodel, or a metaphysical possibility assertion.",
+  "summary": "Formalized a root-presence bridge as an exact biconditional: a de-re fixed witness equals a shared witness at every populated successor together with the separately required population of every successor. Constructed a universal-accessibility three-world finite interpretation with an accessible empty presence extension, root shared across both populated histories, causal coverage for every present nonroot and no two-edge causal chain. This refutes any bare inference from finite rooted histories to de-re necessity under the stipulated frame. Constructed a second two-world interpretation preserving both populated histories exactly while excluding the empty extension, where the same root is necessary. Lean compilation and independent Rust Comparator verified all three results with no permitted axioms on CI run 902 (head c99448e6); the logical conclusions are conditional on their explicitly supplied interpretations. Not an attributed source claim, an unrestricted PSR countermodel, or a metaphysical possibility assertion.\n\nCuration pass 2, lane D (#2103, 2026-11-27). 18ea04bd and abfc2e61 retain separate dispositions. The first model has root zero in both populated histories and an accessible empty history, falsifying DeDicto. The second restricts the same presence assignments to the populated histories and witnesses DeDicto and one shared bearer there. The exact de-dicto and shared-root inputs of this bridge are off the root path.",
   "evidence": [
     "fdd6ca66-de32-5e2f-9a0a-7c71ff332480",
     "18ea04bd-dda8-5dd5-a576-2211e6c93776",
     "abfc2e61-b9d6-5918-bfbb-82cbedfcd606",
     "PR-504"
   ],
-  "blocker": "Only the philosophical bridges remain open: justify which worlds are genuinely accessible, whether an empty presence extension is admissible, and which existence-PSR or causal-dependence principle (if any) warrants a necessarily existent root."
+  "blocker": "Only the philosophical bridges remain open: justify which worlds are genuinely accessible, whether an empty presence extension is admissible, and which existence-PSR or causal-dependence principle (if any) warrants a necessarily existent root.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2124"
+    }
+  ]
 }

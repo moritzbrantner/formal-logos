@@ -1,0 +1,10 @@
+{
+  "id": "e91429c4-554b-4e44-8119-040ba2fa8e7c",
+  "label": "Test by Targeted reliability undercutter finite controls",
+  "subject_kind": "result",
+  "subject_id": "eea262e9-35fb-4779-9aae-8eea32fee146",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ed122f4c-8a51-4310-813c-fe8db8a2f2d3",
+  "note": "Tests restriction to a sole supporting basis in the fixed two-basis assessment by comparing local undercutting and residual support for the target."
+}

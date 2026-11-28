@@ -9,10 +9,20 @@
   "date": "2026-10-28",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Reused #456 without recertifying its model from scratch and #462 alternating-effects controls. Added an activated-response Ontic adapter, a separately stipulated world-invariant directed marker, and three exact omitted implication tests. A local manifestation rule yields necessary activity given necessary capacity; the rule is an open philosophical commitment. Necessary activity alone leaves a contingent effect and a nonnecessary true proposition. Intrinsic-power realist objection, rejected marker-as-full-power identification, and source-attribution boundary are preserved in docs/bearer-capacity-exercise.md. No source search or attribution was performed; no root premises changed.",
+  "summary": "Reused #456 without recertifying its model from scratch and #462 alternating-effects controls. Added an activated-response Ontic adapter, a separately stipulated world-invariant directed marker, and three exact omitted implication tests. A local manifestation rule yields necessary activity given necessary capacity; the rule is an open philosophical commitment. Necessary activity alone leaves a contingent effect and a nonnecessary true proposition. Intrinsic-power realist objection, rejected marker-as-full-power identification, and source-attribution boundary are preserved in docs/bearer-capacity-exercise.md. No source search or attribution was performed; no root premises changed.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). da80929e remains unplaced. The response ontology retains the same necessarily existing bearer. The stipulated directed-power marker directed v false true holds at both worlds. The activated response is positive only at true, so the modeled causal edge from false to true occurs only there. The off-path ManifestationRule is the bridge from local possession to local exercise.",
   "evidence": [
     "da80929e-41a6-5552-9b55-a4df109539c1",
     "8a2f7305-939b-5ff7-b059-9e755e84b391",
     "PR-618"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2137"
+    }
   ]
 }

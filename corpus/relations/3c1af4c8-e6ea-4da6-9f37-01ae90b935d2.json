@@ -1,0 +1,10 @@
+{
+  "id": "3c1af4c8-e6ea-4da6-9f37-01ae90b935d2",
+  "label": "Source support for 608a262d from Monadology §32",
+  "subject_kind": "claim",
+  "subject_id": "0e1bffc2-b521-52f0-9926-2c227d94dc57",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "608a262d-08fe-4dfd-9413-67e2ecf35b84",
+  "note": "The principle in §32 requires a sufficient reason for the truth in question, even when unknown. Show that a world-indexed contingent existent gives rise to a fact in this source scope and that its sufficient reason supplies a token for that very existence fact in the model’s explains relation."
+}

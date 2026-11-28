@@ -1,0 +1,10 @@
+{
+  "id": "823fcf0a-e199-4ceb-aa6f-efdc68287204",
+  "label": "Test by For arbitrary worlds, individuals, Kripke frames, bearer for The selected individual a (1)",
+  "subject_kind": "result",
+  "subject_id": "56015ea9-b23d-5bce-a2fe-f9d142e2e1b4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f062ef5f-82a4-58d4-86bc-b1eb0d8943a1",
+  "note": "Tests specialization of both filtered quantifiers to unrestricted Scott when every intensional property is admitted."
+}

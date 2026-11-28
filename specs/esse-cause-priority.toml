@@ -91,3 +91,33 @@ conclusion = "Esse-cause priority controls: joint witness, bridge omissions and 
 axioms = []
 rule = "Explicit Bool interpretations checked by case analysis"
 meaning = "Controls for the esse-cause priority batch: a joint witness of both priority bridges with a nonvacuous esse cause; omission models for each priority bridge and for the caused-esse premise; a joint witness of the scope statements with both bridges; and a model where distinct-esse-cause priority holds while efficient-cause priority on the same relation fails. Model-witnessed facts about these interpretations only; no interpretation is claimed metaphysically possible."
+
+[[relation]]
+id = "Test by Esse-cause priority controls, checked"
+label = "Test by Esse-cause priority controls, checked"
+subject_kind = "result"
+subject_id = "0de15acc-6313-4111-a6a5-9ef5487f1a0f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7a63a3fe-a29f-5282-8106-79fedcb10d08"
+note = "Tests omission of this premise from actualEsseCausePriority in the typed esse-cause and actual-grounding omission profiles."
+
+[[relation]]
+id = "Test by Esse-cause priority controls, checked for A distinct esse CAUSE_2 of an actual CONCRET (1)"
+label = "Test by Esse-cause priority controls, checked for A distinct esse CAUSE_2 of an actual CONCRET (1)"
+subject_kind = "result"
+subject_id = "0de15acc-6313-4111-a6a5-9ef5487f1a0f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b50fb858-ca2e-48fa-a111-84ac761976d3"
+note = "Tests omitting the caused-esse input of the distinct-cause priority inference in the dedicated scope interpretation."
+
+[[relation]]
+id = "Test by Esse-cause priority controls, checked for An actual concretum's distinct esse CAUSE_2 (1)"
+label = "Test by Esse-cause priority controls, checked for An actual concretum's distinct esse CAUSE_2 (1)"
+subject_kind = "result"
+subject_id = "0de15acc-6313-4111-a6a5-9ef5487f1a0f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"
+note = "Tests omission of this premise from actualEsseCausePriority in the typed esse-cause and actual-grounding omission profiles."

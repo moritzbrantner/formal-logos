@@ -1,0 +1,19 @@
+[batch]
+vocab = "TruthCore.Causality.SelectedConeSupply"
+results = "TruthCore.Results.Causality.SelectedConeSupplyControls"
+
+[[statement]]
+id = "cf18717c-558d-4855-8ef9-0372eeb70fe0"
+label = "No infinite walk characterizes cone WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3"
+lean = "ConeWalkCriterion"
+definitions = ["a1b2e330-388f-4120-bc5c-969642317792", "9c6e4314-2e35-52ff-951e-db752a3c8ce2"]
+paraphrase = "For every world and actual concrete recipient in the supplied profile, the complete actual concrete grounding cone is well-founded exactly when no Nat-indexed upstream walk starts at that recipient. Consecutive vertices follow actual concrete grounding edges, and vertices may repeat."
+
+[[argument]]
+id = "Characterize complete cone well-foundedness by anchored upstream walks"
+theorem = "coneWalkCriterion"
+premises = []
+conclusion = "cf18717c-558d-4855-8ef9-0372eeb70fe0"
+rule = "Apply the accessibility criterion for descending chains and inherit accessibility along finite paths"
+meaning = "Mathlib relates accessibility to the absence of an unrestricted descending chain from the selected actual node. Restricting to that node's complete upstream cone preserves accessibility, since finite ancestors inherit it and the complete cone contains their actual concrete predecessors. Companion checks compare cone-local acyclicity with injective regress denial, natural-number ranking with source paths and one-step joining, and selected transfer accounting with an infinite same-recipient regress. The per se applications require separate relation-inclusion inputs on the cone carrier."
+axioms = ["propext", "Classical.choice", "Quot.sound"]

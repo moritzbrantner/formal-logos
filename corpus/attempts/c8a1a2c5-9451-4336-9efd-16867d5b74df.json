@@ -1,0 +1,33 @@
+{
+  "id": "c8a1a2c5-9451-4336-9efd-16867d5b74df",
+  "label": "Whatever undergoes change is in potency in some way",
+  "statement_ids": [
+    "ed993287-249f-5bd1-ad0d-430acdf698f2"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The first reason for divine immutability requires potency in what changes. Ad 1 distinguishes change of a subject in potency from a broader use of motion for immanent operations such as understanding and willing.",
+  "blocker": "The subject of genuine change supplies the potency bearer, against a reading that locates all such potency outside it. The route additionally needs any ChangesBetween witness to denote genuine change, and InPotency in the exact respect of that change. The article’s first reason concludes potency in some way. Creation and the boundary of a subject’s existence require their own coverage argument.",
+  "evidence": [
+    "deb846f5-b30a-4535-8b8c-fc14184f7c21",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

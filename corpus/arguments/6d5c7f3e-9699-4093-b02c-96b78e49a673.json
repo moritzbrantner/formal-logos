@@ -1,0 +1,22 @@
+{
+  "id": "6d5c7f3e-9699-4093-b02c-96b78e49a673",
+  "label": "Global part existence restricts to the selected fusion scope",
+  "premise_statement_ids": [
+    "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e"
+  ],
+  "conclusion_statement_id": "3423b8ec-a37c-4755-b9b1-173da5249d6e",
+  "inference_ids": [
+    "ab653471-0f62-4437-a15e-441e2d00836d"
+  ],
+  "meaning": "Apply global part existence to the actual sum in the first case and the actual causal bearer in the second case, using the same order.",
+  "definition_ids": [
+    "84b1dc2c-48e6-5465-af21-48015fbf3cbe",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "a5dc3398-60e8-4748-8967-6169fcf94eaf",
+    "d7c8fc33-25df-4667-9e11-a9b2074a617e"
+  ],
+  "disambiguation_ids": [
+    "6ded9b1f-94fc-5f81-8e71-24ce27962165",
+    "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
+  ]
+}

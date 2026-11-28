@@ -1,0 +1,10 @@
+{
+  "id": "1d1f5ac4-011e-461a-b8bd-14409b5dddf9",
+  "label": "Required bearer and production edges have no finite closed walk",
+  "paraphrase": "OPEN analyst premise for the given occurrence, bearer and production-of-being data. The union of the required bearer-to-occurring-act and occurring-productive-act-to-product edges has no nonempty finite closed walk on Sum B E.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.RequiredEdgesAcyclic",
+  "definition_ids": [
+    "57a30b7d-c51e-4b28-83ac-b7e924b7ace4",
+    "20a4bee8-3701-40ed-a63e-bf683ca4eb14"
+  ]
+}

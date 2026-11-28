@@ -1,0 +1,10 @@
+{
+  "id": "12ad6dc2-75a1-4908-be91-7c9c0e6d6d1c",
+  "label": "Modal ontological certified difference tests rigidity",
+  "subject_kind": "result",
+  "subject_id": "572b601e-0ed2-4385-9aec-2a93742bb88f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e3c64b61-df23-410e-bb2f-b56bfb58ecd0",
+  "note": "Certifies exactly what rigidity adds over the persistence bridge: accessible uniqueness of concrete GOD_4 whenever one exists at the standpoint, with no background."
+}

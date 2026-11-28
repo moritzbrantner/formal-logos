@@ -1,0 +1,10 @@
+{
+  "id": "c6644e62-f6f3-4d13-b2fb-ffe17192d4c4",
+  "label": "The q.14 remainder is an alternative to named calibration coverage",
+  "subject_kind": "statement",
+  "subject_id": "aab4aa90-053d-5f11-853a-45a923e92610",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "aefa1bf1-099b-575c-958e-05cff58df51c",
+  "note": "Remaining denies each disjunct of NamedMenu on the same model, event profile and receiver scope. The existing populated remainder interpretation witnesses failure of all three calibrations in that dictionary. This alternative concerns the named menu only. It supplies no verdict on all accounts of intellectual reception or on the actual first cause."
+}

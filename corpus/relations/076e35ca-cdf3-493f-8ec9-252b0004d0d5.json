@@ -1,0 +1,10 @@
+{
+  "id": "076e35ca-cdf3-493f-8ec9-252b0004d0d5",
+  "label": "Test by Populated actual esse chain separation verified",
+  "subject_kind": "result",
+  "subject_id": "1c69c33c-8882-4ff4-b8b8-064cd66b8eae",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e0dae79f-c042-5a08-a148-725d0468df91",
+  "note": "Tests extending the direct-causal goodness guarantee to finite grounding ancestry on the reused Q44 three-bearer chain."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "a736ec54-3bac-439f-98d7-4391191d44b0",
+  "label": "At most one maximum in being, from the necessary root identified with every maximum",
+  "premise_statement_ids": [
+    "d6549981-ba9d-53ac-9e0f-f578f3947d82"
+  ],
+  "conclusion_statement_id": "5a594b1e-09b6-592c-862d-473874a6c49c",
+  "inference_ids": [
+    "4089c2a6-ff41-469c-937c-199c1639fc53"
+  ],
+  "meaning": "The premise d6549981 supplies one n that is an actual root of the selected relation at w, exists at every world accessible from w (NECESSARY_2), is necessary per se in the tertia via's modal reading (NECESSARY_4), and is identical with every y that is maximal in being under the same InAct, MoreIn and esse (IsMaximumIn, MAXIME_ENS_1). Given maxima x and y, the identity clause gives x = n and y = n, so x = y. That is AtMostOneMaximeEns for the same InAct, MoreIn and esse. Only the identity clause is used. Its standalone form, that some n equals every maximum, is equivalent to the conclusion on an inhabited carrier and is not a separate corpus statement, so no weaker non-circular premise is available. The step does not pass between the two NECESSARY senses or the two grounding senses: the premise carries both about the same witness, from its upstream derivation (isNecessaryOfNecessaryAt, and rootness defined as having no actual concrete ground), and the proof discards those clauses. Scope: InAct and MoreIn are not world-indexed; the bridge module reads them at w, and the conclusion is about those same predicates. The argument adds a support option for 5a594b1e whose warrant runs through the necessary-root route and the tertia via convergence (the population, restricted well-foundedness and contingent-grounding premises of either producer, 6b75bdf8 globally at w or 6971850e on one selected ancestry cone, with excluded middle, the necessity-cause bridge d29cebca, d9fad785, 79281639 and 3c468121, all upstream of d6549981). It shares d9fad785 with the genus-causation support ef122ccf and replaces that argument's d5a94eb1 (a cause of a quality is more such) with the necessary-root premises. It does not assert that anything is maximal in being.",
+  "definition_ids": [
+    "a2a8de58-42e0-5481-b7fb-848ae8602036"
+  ],
+  "disambiguation_ids": [
+    "83264cf5-01fe-52fc-9a00-eeb024f6496e",
+    "c529e8d3-43e3-53a8-a82f-3955e9815265"
+  ],
+  "sense_bridges": [
+    {
+      "term": "NECESSARY",
+      "from": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
+      "to": "7db71fb6-3f3b-49fc-9152-d214b3032ff8",
+      "statement_id": "d6549981-ba9d-53ac-9e0f-f578f3947d82"
+    },
+    {
+      "term": "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT",
+      "from": "9232f675-db0a-474c-9f00-d8e5aba69ef7",
+      "to": "556515c9-1fcc-4ea0-b85d-2a4cad7eff79",
+      "statement_id": "d6549981-ba9d-53ac-9e0f-f578f3947d82"
+    }
+  ]
+}

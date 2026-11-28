@@ -1,0 +1,10 @@
+{
+  "id": "5927b008-1936-4989-8bdc-869ed25dbef4",
+  "label": "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei F for Whatever is in POTENCY_1 (1)",
+  "subject_kind": "result",
+  "subject_id": "2de8c08d-9dc3-478b-9304-919a43435f20",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ad49ea00-287e-4c7c-8ab6-fe222d16d493",
+  "note": "Tests omission of this premise from nineGiveDeiFiliusLivingFromPureAct in the pure-act life interpretation and the restricted life-sense comparison."
+}

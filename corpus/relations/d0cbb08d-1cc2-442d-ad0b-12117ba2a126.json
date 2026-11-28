@@ -1,0 +1,10 @@
+{
+  "id": "d0cbb08d-1cc2-442d-ad0b-12117ba2a126",
+  "label": "Test by ExplanatoryAdequacy.core (c72a1f4c)",
+  "subject_kind": "result",
+  "subject_id": "94ae21f5-ec46-575f-90f2-dec9ce70c27a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c72a1f4c-a424-5232-a87b-fa8ea44e47e0",
+  "note": "Omit foundation of the contingent-reason relation. At world 0 the target has member 0 as a reason and every member n has member n+1 as a reason. The target and those members are contingent, the account is reason-closed, and all its reasons for contingent members vary across accessible worlds."
+}

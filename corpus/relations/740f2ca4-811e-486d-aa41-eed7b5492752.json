@@ -1,0 +1,10 @@
+{
+  "id": "740f2ca4-811e-486d-aa41-eed7b5492752",
+  "label": "Test by Local description control",
+  "subject_kind": "result",
+  "subject_id": "bccd668f-50b3-4b45-a101-5d7352a60356",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "446e5de8-6477-460d-8288-a4c294c36d83",
+  "note": "Tests nonvacuity of local name-free definability on Bool with a unary marker selecting true."
+}

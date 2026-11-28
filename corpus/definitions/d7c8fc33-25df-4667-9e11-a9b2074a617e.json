@@ -1,0 +1,9 @@
+{
+  "id": "d7c8fc33-25df-4667-9e11-a9b2074a617e",
+  "label": "Parthood scope of a selected fusion and its actual causes",
+  "term": "Parthood scope of a selected fusion and its actual causes",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.SelectedFusionPart",
+  "definition": "At w, p is a part of the selected sum, or a part of some actual cause of that same sum. Both part predicates are the same reflexive partial order.",
+  "basis": "stipulative",
+  "note": "The scope stays in the original ontology and includes the sum and its actual causes themselves by reflexivity."
+}

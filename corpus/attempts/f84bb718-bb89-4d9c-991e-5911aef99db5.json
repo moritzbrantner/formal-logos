@@ -1,0 +1,25 @@
+{
+  "id": "f84bb718-bb89-4d9c-991e-5911aef99db5",
+  "label": "Root links from Gottfried Wilhelm Leibniz, Monadology",
+  "statement_ids": [
+    "fd0230f2-8e2c-56cc-b1ab-1170606a3691"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§§39–45: Leibniz appeals to a necessary universal substance on which all else depends in arguing to unlimited reality. Applying the argument to the target requires showing that its same esse-identical, noncomposite bearer realizes that universal dependence and that Leibniz's absence of limits entails the target's specified perfection bounds.",
+  "evidence": [
+    "ec3bfcb9-5529-5447-8a8e-5adc9d9d91c8",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

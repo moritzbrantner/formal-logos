@@ -212,6 +212,31 @@ pub struct SemanticsArgs {
     pub definitions: Vec<String>,
 }
 
+/// The `workers` options.
+#[derive(Default)]
+pub struct WorkerArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--authored-only-by MODEL`
+    pub authored_only_by: Option<String>,
+    /// `--open`
+    pub open: bool,
+}
+
+/// The `bottlenecks` options (it also reads `--limit` and
+/// `--authored-only-by`).
+#[derive(Default)]
+pub struct BottleneckArgs {
+    /// Whether any of them was given.
+    pub flags: bool,
+    /// `--stage N`, repeatable.
+    pub stages: Vec<u64>,
+    /// `--min-arguments N`
+    pub min_arguments: Option<usize>,
+    /// `--min-routes N`
+    pub min_routes: Option<usize>,
+}
+
 /// Every option of every command, parsed in one pass in token order.
 pub struct Args {
     pub machine: bool,
@@ -246,11 +271,17 @@ pub struct Args {
     pub countermodel: CountermodelArgs,
     pub without: Vec<String>,
     pub compare_premises: bool,
+    /// `--gate` (`orphans --base REV`): fail on new unplaced results.
+    pub gate: bool,
     pub sweep: SweepArgs,
     pub discover: DiscoverArgs,
     /// `--module MODULE`, repeatable (`countermodel` takes one, `prove-sweep`
     /// any number).
     pub modules: Vec<String>,
+    pub workers: WorkerArgs,
+    pub bottlenecks: BottleneckArgs,
+    /// `--list-isolated N` (`connectivity`)
+    pub list_isolated: Option<usize>,
 }
 
 /// The `countermodel` options (`--all` is the shared research flag).
@@ -313,7 +344,7 @@ pub struct Accepts {
     pub frontier: bool,
     /// `--base` and `--head`
     pub revisions: bool,
-    /// `--base` alone (`thickness`, `orphans`)
+    /// `--base` alone (`thickness`, `orphans`, `connectivity`)
     pub base: bool,
     /// `--from` and `--for`
     pub issues: bool,
@@ -368,9 +399,13 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
         countermodel: CountermodelArgs::default(),
         without: Vec::new(),
         compare_premises: false,
+        gate: false,
         sweep: SweepArgs::default(),
         discover: DiscoverArgs::default(),
         modules: Vec::new(),
+        workers: WorkerArgs::default(),
+        bottlenecks: BottleneckArgs::default(),
+        list_isolated: None,
     };
     let mut args = args.iter();
     while let Some(arg) = args.next() {
@@ -572,6 +607,48 @@ pub fn parse(args: &[OsString]) -> Result<Args, Failure> {
                 parsed.without.push(value.to_owned());
             }
             "--compare-premises" => parsed.compare_premises = true,
+            "--gate" => parsed.gate = true,
+            "--open" => {
+                parsed.workers.flags = true;
+                parsed.workers.open = true;
+            }
+            "--authored-only-by" => {
+                parsed.workers.flags = true;
+                parsed.workers.authored_only_by = Some(
+                    args.next()
+                        .and_then(|value| value.to_str())
+                        .filter(|value| !value.trim().is_empty())
+                        .ok_or_else(|| usage("--authored-only-by requires a model name"))?
+                        .to_owned(),
+                );
+            }
+            "--list-isolated" => {
+                let value = args.next().and_then(|value| value.to_str());
+                parsed.list_isolated = Some(
+                    value
+                        .and_then(|value| value.parse().ok())
+                        .ok_or_else(|| usage("--list-isolated requires a non-negative integer"))?,
+                );
+            }
+            "--stage" | "--min-arguments" | "--min-routes" => {
+                parsed.bottlenecks.flags = true;
+                let value = args.next().and_then(|value| value.to_str());
+                let bottlenecks = &mut parsed.bottlenecks;
+                match arg {
+                    "--stage" => bottlenecks.stages.push(number(value, arg)? as u64),
+                    _ => {
+                        let count =
+                            value.and_then(|value| value.parse().ok()).ok_or_else(|| {
+                                usage(format!("{arg} requires a non-negative integer"))
+                            })?;
+                        if arg == "--min-arguments" {
+                            bottlenecks.min_arguments = Some(count);
+                        } else {
+                            bottlenecks.min_routes = Some(count);
+                        }
+                    }
+                }
+            }
             "--omit" | "--module" | "--theorem" => {
                 let value = args
                     .next()
@@ -819,7 +896,7 @@ impl Args {
         }
         if !accepts.frontier_root && self.frontier_root_set() {
             return Err(usage(
-                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context and unused-premises",
+                "--frontier-root applies only to thickness, frontier, frontier-diff, next-steps, orphans, dossier, context, unused-premises, workers and bottlenecks",
             ));
         }
         if !accepts.orphans && (self.senses || self.group_by.is_some()) {
@@ -840,7 +917,7 @@ impl Args {
             return Err(usage(if accepts.base {
                 "--head applies only to frontier-diff"
             } else {
-                "--base applies only to frontier-diff, thickness and orphans; --head only to frontier-diff"
+                "--base applies only to frontier-diff, thickness, orphans and connectivity; --head only to frontier-diff"
             }));
         }
         if !accepts.issues && self.issues.own() {

@@ -1,0 +1,37 @@
+{
+  "id": "138eabc0-b26e-4f8f-b80a-b984632a6d95",
+  "label": "Root links from David Hume, A Treatise of Human Nature",
+  "statement_ids": [
+    "c70e0bd4-40e9-5e43-8450-9c0a929ea69d",
+    "b92eeb0b-4312-5505-8389-cd279b3c64e4",
+    "7591bf88-7c54-5932-82b9-debdec504904",
+    "d93fadf4-580e-5ef7-906b-684258e94646",
+    "4f1bea90-3ef9-5590-809c-032547f5b62e",
+    "de8e3d60-a5ef-57c8-8f12-96df29118512",
+    "b05c83c3-d5e4-584d-970a-613fc221dda7"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I.3.3, §3 (SBN 79–80): Hume describes representing absence at one moment and presence at the next without representing a productive principle. This limits any argument for the originating-cause clause based solely on the inseparability of the ideas. To bear on truth in the formal histories, imaginative separation would have to warrant an admissible history with an originating moment and no cause there. I.3.3, §3 (SBN 79–80): The §3 conclusion withholds refutation of uncaused beginning by mere ideas. Its immediate consequence concerns an a priori defense of this premise. Falsifying the concrete originating-cause clause requires an uncaused concrete beginning in the operative history semantics. I.3.3, §4 (SBN 80): Hume rejects treating the alleged absurdity of an uncaused determinate onset as independent proof of the absurdity of uncaused existence. A defense of the case's first-moment cause needs a noncircular reason why onset at that moment requires a giver. I.3.3, §§1–2 (SBN 78–79): Hume withholds intuitive certainty from the maxim under his comparison-of-ideas account and allows a further infallible relation to be proposed. Other defenses of the originating-cause premise, including the adequacy of its concrete witness and first-moment requirements, remain separate. I.3.3, §§5–7 (SBN 80–82): Hume distinguishes excluding all causes from self-production or treating nothing as a producer. The distinction blocks an inference from no self-origination alone to an external originator. The case needs an independent causal applicability claim before excluding the self case yields another cause. I.3.6, §11 (SBN 91–92): The Treatise denies rational proof of the move from observed conjunction to unobserved cases even if power is granted. This bears on the explanatory role of custom. It does not show that all relevant transitions occur or that reliance under the formal trigger conditions is entitled. I.3.6, §13 (SBN 92–93): Hume explicitly allows sustained attention without the associated transition. This restricts a reading of the causal role of association as exceptionless. To transfer the example one must compare that general association with the case's repeated-conjunction trigger and expectation predicate.",
+  "evidence": [
+    "cee01f60-096c-5374-a4e7-2f56d490e2ca",
+    "1610c5ed-7430-59ed-a338-7d9858b8107d",
+    "21ef805c-edc0-51c3-968c-2f113675f8a9",
+    "69e5b21b-eead-5310-93e5-d745fd30fe96",
+    "64f115bf-4568-52c9-9c39-4c8462a152e8",
+    "d64c357d-9af9-52c1-b8df-4c0d47f6d63c",
+    "b480f466-5489-5738-bae8-65219c87e496",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

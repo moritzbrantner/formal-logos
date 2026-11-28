@@ -18,12 +18,14 @@ use truth::{
 mod args;
 mod attribution_check;
 mod bind_check;
+mod bottlenecks;
 mod bridge_experiments;
 mod bridges;
 mod brief;
 mod check;
 mod configuration_report;
 mod configurations;
+mod connectivity;
 mod context;
 mod countermodel;
 mod currentness;
@@ -58,6 +60,7 @@ mod territory;
 mod thickness;
 mod tree;
 mod unused_premises;
+mod workers;
 
 pub use args::{Accepts, Args};
 
@@ -67,7 +70,8 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
        truth [--root PATH] [--json] thickness [--queue | --base REV] [--frontier-root STATEMENT]
        truth [--root PATH] [--json] frontier [--reaching-root] [--routes] [--frontier-root STATEMENT] [--fixture FILE]
        truth [--root PATH] [--json] frontier-diff --base REV [--head REV] [--frontier-root STATEMENT]
-       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family | --senses | --base REV]
+       truth [--root PATH] [--json] orphans [--frontier-root STATEMENT] [--by module|family [--all] | --senses | --base REV [--gate]]
+       truth [--root PATH] [--json] connectivity [--frontier-root STATEMENT] [--list-isolated N | --base REV]
        truth [--root PATH] [--json] bridges --constants FILE (--queue-file FILE | --target ID)...
              [--targets N] [--top K] [--pool M]
        truth [--root PATH] [--json] related STATEMENT [--limit N]
@@ -129,6 +133,9 @@ pub const HELP: &str = "Usage: truth [--root PATH] [--json] status
              [--module PREFIX]... [--premise STATEMENT]... [--limit N]
              [--premise-pool closed|proved|all] [--candidates N]
              [--heartbeats N] [--batch N] [--jobs N] [--zipperposition PATH] [--write-spec PATH]
+       truth [--root PATH] [--json] workers [--authored-only-by MODEL] [--open] [--frontier-root STATEMENT]
+       truth [--root PATH] [--json] bottlenecks [--stage N]... [--min-arguments N] [--min-routes N] [--limit N]
+             [--authored-only-by MODEL] [--frontier-root STATEMENT]
 
 An ID, STATEMENT, TARGET or --target may be a uuid, a legacy id (STMT-...) or a label.
 dossier and context compute the frontier in-process, or read it from FILE, written by
@@ -164,6 +171,7 @@ pub const COMMANDS: &[Command] = &[
     frontier::COMMAND,
     frontier_diff::COMMAND,
     orphans::COMMAND,
+    connectivity::COMMAND,
     bridges::COMMAND,
     related::COMMAND,
     dossier::COMMAND,
@@ -202,6 +210,8 @@ pub const COMMANDS: &[Command] = &[
     countermodel::COMMAND,
     prove_sweep::COMMAND,
     discover::COMMAND,
+    workers::COMMAND,
+    bottlenecks::COMMAND,
 ];
 
 /// Parses `args` and runs the command it names.
@@ -265,6 +275,24 @@ pub fn run(args: &[OsString]) -> Output {
                     "--without and --compare-premises apply only to synthesis",
                 ))
             }
+            Some(command)
+                if args.workers.flags
+                    && !(command.name == "workers"
+                        || (command.name == "bottlenecks" && !args.workers.open)) =>
+            {
+                Err(usage(
+                    "--authored-only-by applies only to workers and bottlenecks; --open only to workers",
+                ))
+            }
+            Some(command) if args.list_isolated.is_some() && command.name != "connectivity" => {
+                Err(usage("--list-isolated applies only to connectivity"))
+            }
+            Some(command) if args.gate && command.name != "orphans" => {
+                Err(usage("--gate applies only to orphans --base"))
+            }
+            Some(command) if args.bottlenecks.flags && command.name != "bottlenecks" => Err(usage(
+                "--stage, --min-arguments and --min-routes apply only to bottlenecks",
+            )),
             Some(command) if args.semantics.flags && command.name != "semantics" => Err(usage(
                 "--conclusion, --definition and --bridge apply only to semantics",
             )),

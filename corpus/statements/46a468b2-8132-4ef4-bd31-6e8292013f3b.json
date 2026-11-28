@@ -1,0 +1,13 @@
+{
+  "id": "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+  "label": "Actual root choice histories map to accessible worlds retaining the same root",
+  "paraphrase": "OPEN, analyst formulation. For every actual root g of the selected grounding relation at w, each history through the selected decision moment maps to a world accessible from w where g exists. The map need not cover every accessible world or fix the setup.",
+  "lean_declaration": "TruthCore.Causality.GivingChoice.RootHistoriesAdmissible",
+  "definition_ids": [
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680"
+  ]
+}

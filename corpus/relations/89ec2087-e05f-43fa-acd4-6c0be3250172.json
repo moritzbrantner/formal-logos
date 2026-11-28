@@ -1,0 +1,10 @@
+{
+  "id": "89ec2087-e05f-43fa-acd4-6c0be3250172",
+  "label": "Test by Six schema controls witness actual cut-off with capabili for If the distinguished actu (1)",
+  "subject_kind": "result",
+  "subject_id": "ce059df8-6c75-59e6-9a7c-2457395ed327",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "78f0ee30-2c2f-5223-9d80-a936735abdf0",
+  "note": "Tests persistence of sharp cutoff using a selected actual setting with cutoff and a separate admissible recognition setting."
+}

@@ -9,12 +9,16 @@
   "work_urn": "http://scta.info/resource/TAca84",
   "edition_urns": [
     "http://scta.info/resource/TAca84-d1e103/cod-cnLxE4",
+    "http://scta.info/resource/TAca84-d1e108/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e1158/cod-cnLxE7",
     "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e128/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e139/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e144/cod-cnLxE4",
+    "http://scta.info/resource/TAca84-d1e149/cod-cnLxE4",
+    "http://scta.info/resource/TAca84-d1e159/cod-cnLxE4",
+    "http://scta.info/resource/TAca84-d1e180/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e273/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e278/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e283/cod-cnLxE4",
@@ -25,9 +29,10 @@
     "http://scta.info/resource/TAca84-d1e72/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e77/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e82/cod-cnLxE4",
+    "http://scta.info/resource/TAca84-d1e87/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e92/cod-cnLxE4",
     "http://scta.info/resource/TAca84-d1e97/cod-cnLxE4"
   ],
   "catalog_url": "http://scta.info/resource/TAca84",
-  "notes": "Use the conventional pars/quaestio/articulus locator as the human citation; `co.` marks the corpus (respondeo) of an article and `ad n` the reply to objection n. There is no CTS URN for the Summa, so the work and edition identifiers are SCTA (Scholastic Commentaries and Texts Archive) resource URIs: SCTA transcribes each quaestio as its own expression, and `edition_urns` lists the canonical manifestation of each pinned quaestio. The pinned witness is the SCTA LombardPress diplomatic TEI transcription of the Leonine edition (Opera omnia, vol. 4, Rome 1888), witness `cod-cnLxE4`, by Jeffrey C. Witt, CC BY-NC-SA 4.0. The owner accepted this witness, including its NonCommercial-ShareAlike license and draft status, as the theology base witness on 2026-10-23 (issue #143). The transcription keeps OCR residue of the Leonine apparatus markers (stray quotation marks, `?`, `^`, `$e` for `se`, and one stray full stop in `aliud. movens`); read those as noise, not as text. Unpinned Corpus Thomisticum pages remain orientation aids only. The Latin witness for I q.80 a.1–2 is separately pinned as a web snapshot of its Leonine 1889/Busa/Alarcón edition, with its own copyright notice and extraction hash; it is not identified with an absent SCTA transcription. Questions without a pinned SCTA witness may be cited from the English Dominican translation (2nd rev. ed. 1920) on New Advent, pinned as a web snapshot (#154; so far I q.104 a.1 and I q.105 a.5); such claims carry basis translation, and a web snapshot may not cover a range a pinned Latin witness covers."
+  "notes": "Use the conventional pars/quaestio/articulus locator as the human citation; `co.` marks the corpus (respondeo) of an article and `ad n` the reply to objection n. There is no CTS URN for the Summa, so the work and edition identifiers are SCTA (Scholastic Commentaries and Texts Archive) resource URIs: SCTA transcribes each quaestio as its own expression, and `edition_urns` lists the canonical manifestation of each pinned quaestio. The pinned witness is the SCTA LombardPress diplomatic TEI transcription of the Leonine edition (Opera omnia, vol. 4, Rome 1888), witness `cod-cnLxE4`, by Jeffrey C. Witt, CC BY-NC-SA 4.0. The owner accepted this witness, including its NonCommercial-ShareAlike license and draft status, as the theology base witness on 2026-10-23 (issue #143). The transcription keeps OCR residue of the Leonine apparatus markers (stray quotation marks, `?`, `^`, `$e` for `se`, and one stray full stop in `aliud. movens`); read those as noise, not as text. Corpus Thomisticum supplies a separately pinned Leonine 1889 web witness for I q.104 a.3, with its own edition notice and selector. The Latin witness for I q.80 a.1–2 is separately pinned as a web snapshot of its Leonine 1889/Busa/Alarcón edition, with its own copyright notice and extraction hash; it is not identified with an absent SCTA transcription. Questions without a pinned SCTA witness may be cited from the English Dominican translation (2nd rev. ed. 1920) on New Advent, pinned as a web snapshot (#154; so far I q.104 a.1 and I q.105 a.5); such claims carry basis translation, and a web snapshot may not cover a range a pinned Latin witness covers."
 }

@@ -1,0 +1,10 @@
+{
+  "id": "05e41203-73bd-4e5b-9e35-348ca14ad43a",
+  "label": "Source qualification for 21d6f7cc from reading e5bc0254",
+  "subject_kind": "claim",
+  "subject_id": "9915bc2a-70a8-562b-a9eb-8511233a1adb",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "21d6f7cc-1af2-54c8-8202-2b443ebb9bef",
+  "note": "The survey tests whether the respondent would extend causal expectation to a hypothetical beginning of a partless angel. Using the affirmative answer requires independent reason for the conditional and then for applying it to other partless contingents, including the selected case."
+}

@@ -16,3 +16,13 @@ premises = []
 conclusion = "A2 actual source endpoint obstruction"
 rule = "Explicit finite interpretation"
 meaning = "The only individual exists in the only world, making contingency impossible and local causality vacuous. Its empty full ancestor graph fails headless coverage, and it is a necessary isolated graph source with no outgoing actual edge. The obstruction to the necessary-concrete node is that the supplied Profile's concrete predicate is unconstrained by Ontic: abstractProfile sets concrete to fun _ => False. Any Profile with an empty concrete predicate refutes NecessaryConcreteAt, and hence the bridge from actual source necessity to the necessary-concrete root-route node, regardless of the A2 inputs; those inputs are realized jointly here only to show they do not themselves fix concreteness. The missing piece is an explicit calibration of concreteness to the causal source, not a defect of the source-composition inputs. No capability-to-exercise direction or original sense completion is asserted."
+
+[[relation]]
+id = "7f79080f-c0e3-4627-a551-61c267b749de"
+label = "Test by SurveySourceEndpointControls.endpointObstruction (c1d16add)"
+subject_kind = "result"
+subject_id = "4fe18ea3-6e78-4d06-b9f0-c8fe88cc3482"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c1d16add-865b-4ac6-a790-4e6e85fe0ac5"
+note = "Omit source productivity in the sole self-accessing world. Its one existing bearer has no incoming cause from an existing bearer and no outgoing cause. Accessible-causer concreteness holds vacuously. The selected profile has an empty concrete predicate and hence no necessary concrete witness."

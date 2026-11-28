@@ -1,0 +1,10 @@
+{
+  "id": "d38cf01f-9a63-43c0-96af-7c49f9446260",
+  "label": "Test by Q44 essential-source finite controls, checked for Selected p is actual with its repres (1)",
+  "subject_kind": "result",
+  "subject_id": "7cdc011d-037c-4a23-b748-f4311ebc5cd3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745",
+  "note": "Tests omission of qualification of the selected witness in the populated q.44 profile."
+}

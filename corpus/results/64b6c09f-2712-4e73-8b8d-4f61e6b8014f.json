@@ -1,0 +1,12 @@
+{
+  "id": "64b6c09f-2712-4e73-8b8d-4f61e6b8014f",
+  "label": "All-time efficient irreflexivity gives its self-uniter restriction",
+  "argument_id": "dc6cfab2-2473-46bd-9405-3000139548fd",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.uniterOfAllTime",
+  "comparator_config": "results/64b6c09f-2712-4e73-8b8d-4f61e6b8014f/comparator.json",
+  "status": "solution-present",
+  "description": "Any temporal edge is witnessed at an admitted time. Apply the old ban there, including when the bearer is a self-uniter.",
+  "transcription": "assembly"
+}

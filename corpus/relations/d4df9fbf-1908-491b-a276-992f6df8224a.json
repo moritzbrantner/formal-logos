@@ -1,0 +1,10 @@
+{
+  "id": "d4df9fbf-1908-491b-a276-992f6df8224a",
+  "label": "Test by SubjectFocalRoles.controls (78c24896)",
+  "subject_kind": "result",
+  "subject_id": "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "78c24896-0ecc-4309-a9d9-e271cf36e082",
+  "note": "Omit the bridge from the supplied creature predicate to secondary status. Set Creature to the entire four-bearer carrier. This selects subject1, which is substantial and not secondary. The common center and productive-cause bridge remain in force, but subject0 does not cause subject1."
+}

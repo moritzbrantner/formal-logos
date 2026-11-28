@@ -329,3 +329,14 @@ an independently selected reading task. No historical winner is selected here.
 
 - [Cluster reassessment of immaterial-intellect and director-recognition premises (#1751)](../corpus/attempts/386cc16c-8b34-416a-ab16-30bf3eaf949c.json)
 - [Rejected attributing strict primacy to ST I q.3 a.5 ad 2: approach to God and denial of a…](../corpus/attempts/strict-primacy-reading.json)
+
+## Two source routes to genus exclusion (2026-11-26)
+
+ST I q.3 a.5 applies both an act–potency account of genus and constituting
+difference and an esse–essence argument to proper genus membership. The case
+needs the selected GOD_4 witness to lack the relevant potency or to realize the
+identity of esse and essence under the indicated genus reading. De ente's
+categorical versus propositional uses of being leave the separate bridge to esse
+in re open.
+
+[Thomas Aquinas reading attempt](../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Thomas Aquinas unlinked attempt](../corpus/attempts/c6549f7c-fc20-4b5a-95e1-08635a146c8d.json).

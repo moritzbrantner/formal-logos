@@ -1,0 +1,10 @@
+{
+  "id": "41194913-4e6a-47d2-a473-13e2bbab1163",
+  "label": "Aquinas I q.3 a.2 bears on distinct material constituents",
+  "subject_kind": "claim",
+  "subject_id": "b1ec5d01-ed3a-4961-9180-966bd1351a43",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "cc0f7879-dba8-5b47-ab8d-3905d1e518a6",
+  "note": "The source distinguishes matter as the receiver and form as what perfects the composite. The route additionally needs matter and form to be represented as numerically distinct witnesses to ConstituentOf on the same Principle carrier."
+}

@@ -1,0 +1,34 @@
+{
+  "id": "b6564db1-0de8-4177-80cd-394f14c32704",
+  "label": "Contingent truths have sufficient reasons",
+  "statement_ids": [
+    "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The support edge uses the pinned Latta translation of §32, which states the general sufficient-reason principle. The distinction of contingent truths in §33 and application in §36 are context. §§37–38 are further context on a final reason beyond the contingent series.",
+  "blocker": "The principle in §32 requires a sufficient reason for the truth in question, even when unknown. Show that a world-indexed contingent existent gives rise to a fact in this source scope and that its sufficient reason supplies a token for that very existence fact in the model’s explains relation.",
+  "evidence": [
+    "0e1bffc2-b521-52f0-9926-2c227d94dc57",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

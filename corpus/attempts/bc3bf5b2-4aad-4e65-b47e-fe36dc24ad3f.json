@@ -1,0 +1,46 @@
+{
+  "id": "bc3bf5b2-4aad-4e65-b47e-fe36dc24ad3f",
+  "label": "Root links from Unattributed website author, Necessary Being interactive survey",
+  "statement_ids": [
+    "d9f0874e-5ba8-5d6f-bea0-bef01836c9fa",
+    "73038871-3253-5d67-b895-d93291742236",
+    "d52637d4-ef30-568e-8e19-8cd8000c280a",
+    "e5bc0254-4261-5780-af3a-0d3fa0eafcdd",
+    "20512890-eed7-5b23-9f01-1e3298b77e1c",
+    "81910509-0b00-5242-9870-22ab70d1899d",
+    "81089332-1082-5b96-940d-25691abb16d0",
+    "551e13d0-d8a1-5d7f-a236-c1b04a545749",
+    "49958bf6-f0b5-5aa2-9f4e-951f3ef5fd62",
+    "46880625-ff26-5df7-9628-46d3891c00cf",
+    "374b2de5-1cae-5b4c-a74a-b0615fd650d2"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "A10P1B, complete size/causal-difference question and cause title; negative-answer continuation to P1C: The proposed negative size answer removes one candidate class distinction on the reconsideration path. Applying the causal default still needs an actual reason to extend the observations across sizes and to the selected first contingent, with counter-reasons retained. A10P1C, complete shape/causal-difference question and cause title; negative-answer continuation to P1D: The proposed negative shape answer removes a candidate class distinction on this path. It leaves the empirical warrant for size and shape irrelevance and the applicability of the default to a selected first contingent open. A10P1D, complete parts/causal-difference question and cause title; distinct negative and affirmative/uncertain continuations: The negative parts answer is one survey branch, alongside affirmative and uncertain answers. The default still needs support for disregarding part structure in the relevant causal domain, and an applicability bridge for the first contingent. A10P1D2, full hypothetical beginning-partless-angel question and cause title, with P1D continuation as context: The survey tests whether the respondent would extend causal expectation to a hypothetical beginning of a partless angel. Using the affirmative answer requires independent reason for the conditional and then for applying it to other partless contingents, including the selected case. A10P1D3, full conditional partless-default question and cause/rule-of-thumb titles, recalling P1D2’s hypothetical beginning case: The conditional generalization is proposed for respondents on the hypothetical angel path. Assessing it requires evidence that the relevant cause applies across other partless things and that a first contingent falls in that reference class. A10P1E, author’s qualified appears transition and full arbitrary-X question with cause/contingent/rule-of-thumb titles: The arbitrary-X prompt elicits a defeasible default and explicitly invites dissent or uncertainty. Its application to a first contingent requires representative selection with respect to causal eligibility and a reason why the selection of the first case does not defeat that default. A10P3C, specific keeping-this-definition-in-mind causal-default question and rule-of-thumb/cause titles: This version re-asks the defeasible default under the automatic-actuality classification. It can transfer the original default only if the revised contingency class and the possible first contingent preserve the evidence supporting the original induction and its exceptions. A1c, step 3: The A1 proof explicitly assumes the respondent's unqualified causal report and applies it to the alleged contingent sum. The case needs the same contingent class and qualifying cause in the selected world. The report itself supplies no independent evidence of that global actual coverage. A1c, step 5: The survey excludes self-causation of coming to exist and separately excludes production solely by one's own parts. Applying the first clause requires the survey's cause of coming to exist to match the case's originating relation on the same bearer. The parts clause would require a further mereological bridge. A2C, step 9: A2 invokes the earlier unqualified report to classify a possible uncaused chain head as noncontingent. Its use for the selected actual coverage claim needs a bridge from the survey's qualified cause and contingent classes to existing individuals and their existing causes at that world. Definition page, stipulation following two conditions: The survey stipulates N implying necessarily N. A10's possibility-to-actuality step still requires the axiom at the relevant accessible world, a suitable return accessibility law, and a bridge between the base nominal definition and A10's selected notion of a necessary being. Definition page, two numbered conditions: The survey's nominal test combines possible causal capability and impossibility of ever failing to exist. Transferring A1's conclusion to the case requires deriving the case's rigid-world necessity and actual existence for the same cause of the whole. The source's temporal and modal clauses alone do not identify that witness.",
+  "evidence": [
+    "51ae5d09-3fd6-5520-b8da-99edf27fc83f",
+    "6fb88b40-8e35-59d3-b3e6-a125631de5fb",
+    "c9f76aad-a86e-5658-88c1-a885e2d4bc5c",
+    "9915bc2a-70a8-562b-a9eb-8511233a1adb",
+    "663ce43d-1352-5612-9023-fcccd8e085a0",
+    "6df9a65c-e512-569b-83c9-23a635d87312",
+    "13b1e98d-e2ba-5bd9-b0d6-2dc3744d9e16",
+    "be9715f8-e6d8-5c86-9e36-3d122d3dfa36",
+    "194b1e45-e217-5eef-877f-7ab8a8233e5f",
+    "8895a07f-e4e1-5bd5-acff-83196f9c804b",
+    "ed1ca28e-7565-5355-bc26-99691dbbb589",
+    "7bb7c49b-a06a-59f7-bdde-88adc1c788b1",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

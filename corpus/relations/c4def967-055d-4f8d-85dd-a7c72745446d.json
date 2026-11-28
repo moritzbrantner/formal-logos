@@ -1,0 +1,10 @@
+{
+  "id": "c4def967-055d-4f8d-85dd-a7c72745446d",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for Every actual contingent c (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3ef67739-a427-582b-9eaa-af6410b9c3d3",
+  "note": "Tests omitting this premise in the encoded contingentGroundedViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ae5cf0a3-3707-49d5-9502-c8ffc13e3150",
+  "label": "Global contingent absence by roster coverage and local transitivity (inference)",
+  "input_statement_ids": [
+    "d65fb12b-7a85-479a-8c40-4b10f8b3c7c8",
+    "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+    "9574ad92-9949-40ee-baf3-e8aec590dc7d"
+  ],
+  "output_statement_id": "0dc833c1-3b2f-4769-a09e-531f0da12455",
+  "rule": "Lift a putative replacement's absence witness and contradict joint absence at the same world",
+  "meaning": "Take the accessible world where the actual contingent concrete roster is absent. If a concrete being were contingent there, coverage would put it at w and local transitivity would make its absence witness accessible from w. It would therefore be contingent at w and excluded from that very world.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

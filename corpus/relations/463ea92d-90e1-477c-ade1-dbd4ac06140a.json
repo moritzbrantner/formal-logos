@@ -1,0 +1,10 @@
+{
+  "id": "463ea92d-90e1-477c-ade1-dbd4ac06140a",
+  "label": "Aquinas I q.6 a.1 bears on perfection and desirability",
+  "subject_kind": "claim",
+  "subject_id": "ca4e711d-ed9d-4345-8780-70d1a53b915d",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "060e7a1a-6c3d-5c8f-b67b-2d0a78044642",
+  "note": "The source says the effect seeks its own perfection and, in doing so, seeks to participate in the agent’s likeness. The target predicates desirability in a supplied respect of a bearer and leaves the desiring subject unspecified. Even the forward direction needs an account of the shift from the effect seeking its own perfection to the specified bearer being desirable in the supplied respect. The converse requires separate warrant."
+}

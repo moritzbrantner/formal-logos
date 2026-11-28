@@ -1,0 +1,10 @@
+{
+  "id": "77e11d76-1b2a-409e-ab00-086b3d316854",
+  "label": "Test by Mere-conservation rival of universal perfection transfer survives, checked",
+  "subject_kind": "result",
+  "subject_id": "cf59b546-0dfe-4a34-ab95-334a04690d9e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b26c10a0-983d-5a88-aa03-cc601bc1ddc6",
+  "note": "Tests the selected premise in the following setting. Same InAct, CausesIn and esse as the premise; three members, two respects. Control.Tier with conserveAct and conserveCause in Control.MereConservationSurvives; mereConservationSurvives proves the listed conjuncts. Control.conserveAct and conserveCause with esse = false: the rival and ResidualPerfectionTransfer hold; CauseOfBeingCausesEveryPerfection fails. Consumer tested: CausalPerfectionTransfer.reconstruction."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "7a61dab4-167d-4d85-9700-1979a8fa1556",
+  "label": "Test by Exceeded-god rival of God's maximality in being survives, checked",
+  "subject_kind": "result",
+  "subject_id": "fcabe1f1-8e44-4660-866d-32eb0d7026ca",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4c79298d-ee09-5e99-9ced-1be92c19b4cc",
+  "note": "Tests the selected premise in the following setting. Same IsGod, InAct, MoreIn and esse as the premise; two members, one respect. Control.demiurgeGod with demiurgeAct, demiurgeMore, demiurgeCause in Control.ExceededGodSurvives; exceededGodSurvives proves the listed conjuncts. Control.demiurgeGod, demiurgeAct, demiurgeMore, demiurgeCause, with Composite := demiurgeGod: the rival, CompositeHasAUnitingCauseReading and CauseOfQualityInAnotherIsMoreSuchReading hold; GodIsSimple fails. Consumer tested: StageTwo.GodIsSimple.godIsSimple."
+}

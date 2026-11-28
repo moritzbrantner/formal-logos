@@ -1,0 +1,10 @@
+{
+  "id": "a4786845-ba46-4dac-96f6-bfdef267dcd4",
+  "label": "Test by Matched giving assignments for an undestroyed contingent receiver",
+  "subject_kind": "result",
+  "subject_id": "a638195c-6867-44e9-a6d7-680f22a187d8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "52b05849-88b3-4f44-b81b-768850f9ed12",
+  "note": "Tests standing-receipt correlativity on the same actual history, holding receipt and origin-or-inertia explanation fixed and varying only concurrent giving."
+}

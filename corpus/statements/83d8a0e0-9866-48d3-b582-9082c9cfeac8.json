@@ -1,0 +1,12 @@
+{
+  "id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+  "label": "Universal causes with HAS_INTELLECT_1 and HAS_WILL_1 give by rational exercise at w",
+  "paraphrase": "For every g with HAS_INTELLECT_1 and HAS_WILL_1 that causes the being of every other being in act as to esse, and each such distinct effect x, g gives x being at w by exercising an owned rational power. This is the agency-overlay sense of through will. The type does not establish practical determination by apprehended content, recipient-directed willing or freedom to refrain.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.IntellectualUniversalCausesGiveRationallyAt",
+  "definition_ids": [
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "587e1e14-dd3b-4c15-a46b-a747832b0f89",
+  "label": "Test by Unrestricted quotient generation loses the concrete-abstract contrast",
+  "subject_kind": "result",
+  "subject_id": "ec0e9808-a86a-4d94-b906-85a85dfc4189",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "64b877b5-dff5-4fd0-a84b-ceb37e3595de",
+  "note": "Tests dropping the fixed-presentation requirement by constructing a faithful one-class presentation for any chosen bearer."
+}

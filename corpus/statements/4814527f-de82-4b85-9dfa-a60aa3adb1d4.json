@@ -1,0 +1,18 @@
+{
+  "id": "4814527f-de82-4b85-9dfa-a60aa3adb1d4",
+  "label": "Fixed rational giving separates operative planning, recipient benefit and placement toward an end",
+  "paraphrase": "In the shared two-world fixed rational assignment, the foreseen profile appraises and satisfies the full standard but lacks operative plan coverage. The bare-output profile governs the giving but passes both edits as sufficient descriptions, so both rejection premises fail. A plan requiring only the distinct recipient's end-placement or only its benefit respectively validates just the corresponding bridge, with both recognition rules satisfied in each assignment. The full profile admits both conclusions, and switching off either distinct recipient relation separately falsifies its recognition rule and bridge while preserving the other assumptions and conclusion. Both case relations are populated at the source.",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.Control.Controls",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ]
+}

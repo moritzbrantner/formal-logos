@@ -104,3 +104,14 @@ statement, no closure of an objective-truth frontier, and no completion of
 #247. The open work is philosophical justification of those stronger
 commitments, including the relevance of the chosen proposition domain and
 frame, rather than another assumed bridge hidden inside a proof.
+
+## Originating causes and the scope of the challenge (2026-11-26)
+
+Treatise I.3.3 separates the ideas of beginning and cause, rejects an inference
+from exclusion of all causes to self-production, and addresses the appeal to a
+determinate time and place. It qualifies a mere-ideas or circular defense of the
+originating-cause premise. The latter requires a concrete beginning with a first
+moment and a giver there. A metaphysical counterexample needs a bridge from the
+describable case to an admissible history without that giver.
+
+[David Hume reading attempt](../corpus/attempts/138eabc0-b26e-4f8f-b80a-b984632a6d95.json).

@@ -1,0 +1,10 @@
+{
+  "id": "324f14ed-cf39-465b-8a26-752b691cbd5e",
+  "label": "Source qualification for 4557ccdd from reading b6b45b7f",
+  "subject_kind": "claim",
+  "subject_id": "b76d461e-f52f-5738-a4dd-70ec419ce951",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "4557ccdd-956d-5645-82d5-9c4701556636",
+  "note": "Socrates distinguishes opposed predications of participants from claims that the Forms themselves are contradictory. The case needs separately indexed qualities and an account of how the same participant bears each, rather than transferring a joint predication to a Form."
+}

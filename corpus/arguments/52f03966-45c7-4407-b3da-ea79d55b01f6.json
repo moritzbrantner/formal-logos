@@ -1,0 +1,26 @@
+{
+  "id": "52f03966-45c7-4407-b3da-ea79d55b01f6",
+  "label": "The holder gives differently when it gives at least one actual contingent being",
+  "premise_statement_ids": [
+    "906f5c39-2a63-4dc2-955d-a00cfd8a976b",
+    "6ea2a9c5-d472-4dd6-9fe5-094d9a611d7f",
+    "3ef41442-431a-4bed-83bd-4458ed623f5f"
+  ],
+  "conclusion_statement_id": "5cf75a6b-c3be-4ed5-acdf-c163383dd7f2",
+  "inference_ids": [
+    "d11d41a6-7394-4c35-91e0-15312cc57bb4"
+  ],
+  "meaning": "For each holder, pick an actual contingent recipient of its giving. At the accessible world of joint absence where that holder exists, this recipient is absent. Factivity rules out the same giving there, so the recipients of its giving differ between these worlds. The result uses the same holder and recipient without requiring actual giving to the rest of the roster.",
+  "definition_ids": [
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "1b8baf77-84fa-5513-a138-7fa14840dd87",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "bf7eddca-8291-4744-8470-379babcd7781"
+  ],
+  "disambiguation_ids": [
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "35fa7162-6cb3-52e1-ac5b-66afc318c74f"
+  ]
+}

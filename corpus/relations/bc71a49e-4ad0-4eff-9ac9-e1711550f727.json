@@ -1,0 +1,10 @@
+{
+  "id": "bc71a49e-4ad0-4eff-9ac9-e1711550f727",
+  "label": "Test by Stable-law positive entitlement and excluded-future control",
+  "subject_kind": "result",
+  "subject_id": "506707fb-adc0-4671-8726-c5cd97d2f466",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "394faa75-70cd-4883-9847-3227fd84d53f",
+  "note": "Tests omission of the second future in the stable copy-law cell with the same strong norm and positive entitlement."
+}

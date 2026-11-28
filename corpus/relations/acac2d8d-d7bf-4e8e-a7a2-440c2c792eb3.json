@@ -1,0 +1,10 @@
+{
+  "id": "acac2d8d-d7bf-4e8e-a7a2-440c2c792eb3",
+  "label": "Test by Finite interpretations for the ten derivations of round for Every Church-criterion soc (1)",
+  "subject_kind": "result",
+  "subject_id": "d3dd4601-36f0-51a2-a5f4-29fc87e49e84",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d13f6ca0-0b66-5f86-8994-0e2c91deafbf",
+  "note": "Tests omitting this premise in the encoded churchJointFromAspects, churchVisibleFromAspects, spiritualFailsFromInvisibleCommunion, namedChurchCoverageFromAspects arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

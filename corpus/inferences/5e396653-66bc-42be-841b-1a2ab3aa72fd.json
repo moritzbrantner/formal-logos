@@ -1,0 +1,18 @@
+{
+  "id": "5e396653-66bc-42be-841b-1a2ab3aa72fd",
+  "label": "Actual-root favourings are good-general, from nonlimitation and one favouring (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "a30c5963-cb81-5366-aab0-2454363e18f7",
+    "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "e2357adc-6946-47a0-b39b-8efe1805d214",
+    "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"
+  ],
+  "output_statement_id": "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+  "rule": "Excluded middle on good-generality; one favouring makes a non-good-general favouring exclude the good-generality token; the structural L then gives a limiting principle that actual roots lack",
+  "meaning": "Fix an actual root r at w and a favouring determination favours phi of r. By excluded middle, phi is good-general or not. Suppose not. Any admissible profile containing r's actual profile and the good-generality token is realized by one favouring psi; favours phi is in it, so phi = psi, and the token makes psi good-general, a contradiction. So r's admissible actual profile (root-profile admissibility) excludes good-generality, which is pure and, by pure admissibility, admissible somewhere. The structural L bridge (a bearer whose admissible profile excludes an admissible pure determination has a represented limiting principle; its distinct simply prior being is the shared CausalityFrame's PriorSimply, PRIOR_1) gives r a limiting principle, which actual roots lack. No premise mentions an absence or its explanation: the excluding determination is the favouring itself, so the #2153 E premise (no unexplained absence at roots) is not used. The main theorem uses no axioms. The Comparator companion favouringControls (three Mathlib axioms; the #2153 two-being carrier with the Lane 2b profiles) gives a positive witness and, for each non-logical premise, a row where it fails, the others hold and a root with the D-directed favouring fails the conclusion; two rows for L show which of its inputs fails when the D-directed favouring is counted impure (RootPurity) or pure (joint compossibility). The assignments say nothing about what favouring, purity or admissibility metaphysically are.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

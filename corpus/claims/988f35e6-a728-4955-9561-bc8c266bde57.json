@@ -1,0 +1,14 @@
+{
+  "id": "988f35e6-a728-4955-9561-bc8c266bde57",
+  "label": "Aquinas, I q.19 a.10 co. and ad 2: Divine free choice",
+  "statement_id": "8a21449f-d1ac-473d-9719-b8358eb85aa5",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.19 a.10 co. and ad 2",
+  "interpretation": "The body refers back to the distinction in q.19 a.3 between absolute and suppositional necessity. It excepts God's necessary willing of his own goodness. The second reply explains that the alternative at issue is willing a thing to be or not to be, without requiring the capacity to will sin.",
+  "status": "formalized",
+  "attribution": "The passage states that God has free choice with respect to what he wills without absolute necessity and with respect to such things can will a thing to be or not to be, which is the premise.",
+  "definition_ids": [
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "08fb5a3e-2836-4abe-9b28-f54e7811da9e"
+  ]
+}

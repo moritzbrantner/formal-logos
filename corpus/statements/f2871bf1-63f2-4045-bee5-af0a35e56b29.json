@@ -1,0 +1,18 @@
+{
+  "id": "f2871bf1-63f2-4045-bee5-af0a35e56b29",
+  "label": "The composition step is real otherness plus reception, and stage (b) supplies real otherness",
+  "paraphrase": "Premise-free, over every grades frame and principle sort. (1) The content form of the second unde (89d82643) gives its real-otherness form. (2) Real otherness of whatever is not esse tantum, with the real-otherness form, gives back the content form. (3) If at most one being has its esse really identical with its essence, and some such being is esse tantum, then whatever is not esse tantum has real otherness. (4) The non-existential bridge OWN_BEING_2 => OWN_BEING_1 (whatever has its esse really identical with its essence is esse tantum) gives real otherness by itself. Caution on (3): its existential premise, a real-identity being that is esse tantum, is close to the GOD_4 conclusion that 29e71e43 serves on the esse-root routes, so support for real otherness through (3) would beg the question there; (4) is the form that does not. Formally immediate; it locates the load, it does not supply warrant.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.CompositionStepUnbundled",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "97c4f504-4792-43c6-9f61-ae23df732d5f",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "87f9e331-d75e-41c5-994f-125c4969deb5",
+    "ad76481a-f038-4652-9c6e-0e0441eee7e5"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198",
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "1bff3cb4-f73b-42d4-ba2c-ff782e9df39b"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "88ed1181-929b-4f71-a287-26d61e593793",
+  "label": "Root links from Thomas Aquinas, In octo libros Physicorum Aristotelis expositio",
+  "statement_ids": [
+    "19b68341-a901-5169-b491-f56aa4fb5ac2"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "VII, lect. 1 nn. 886-889: whatever is moved is moved by some other: Aquinas's commentary argues that a divisible mobile whose whole motion depends on motion of the parts cannot move itself primarily and per se. The case needs a bridge from that analysis to each indexed respect of the routed movement, including which intrinsic mover counts as distinct from what moves in that respect.",
+  "evidence": [
+    "cc55748d-85e1-5038-996d-a15adfc6628e",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

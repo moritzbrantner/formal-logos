@@ -1,0 +1,10 @@
+{
+  "id": "863d1a56-d7c0-4ec4-ba66-221998bd6335",
+  "label": "Source support for 5e76cbf7 from I q.77 a.6 co. and ad 2–3",
+  "subject_kind": "claim",
+  "subject_id": "afac47a6-76ad-4b1f-9c1f-48be6246f6c3",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "5e76cbf7-9033-549c-9ec3-328746219b46",
+  "note": "To instantiate the existential, identify an actual proper accident with a respect r and show that the subject x is the same bearer at both ends and that its qualified active contribution gives the reflexive CausesIn x x r."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "4f6a9708-616d-46a1-9277-662379dcd5fe",
+  "label": "Test by One permitted anchor is definable across Unit and Bool",
+  "subject_kind": "result",
+  "subject_id": "1af0faf6-7e8d-4099-90ce-cb22719c61cf",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "e611886f-2a21-448d-8069-a9d87f63494e",
+  "note": "Tests nonvacuity with equality to the single permitted anchor in the varying Unit and Bool carriers."
+}

@@ -173,3 +173,13 @@ conclusion = "2c9a963f-4c4a-402a-bd0c-f017e25ec413"
 axioms = []
 rule = "Explicit one-being interpretations, checked by unfolding"
 meaning = "Nonvacuity: the premises of nineGiveDeiFilius are jointly satisfiable with a being that has the nine and every Dei Filius attribute. Necessity in that theorem: for each of its ten premises except goodness-is-actuality, a one-being interpretation satisfies all the others and the nine at the one being, while some Dei Filius attribute fails there; so none of those nine premises is supplied by the rest. Strictness: an interpretation where the field interpretation holds vacuously (no Dei Filius being) while the old sufficiency premise fails. Model-witnessed facts about these interpretations only; they show where each premise is needed, not that it is false or doubtful."
+
+[[relation]]
+id = "Test by One-being controls for the Dei Filius sufficiency bridges, checked"
+label = "Test by One-being controls for the Dei Filius sufficiency bridges, checked"
+subject_kind = "result"
+subject_id = "8eb47d7a-bc24-4acd-a6b3-73ce84e24f11"
+predicate = "tests"
+object_kind = "argument"
+object_id = "1fa790f2-9e45-4861-a9b7-cdbd2139c69d"
+note = "Tests joint satisfiability of the attribute-field premises in a profile with one candidate bearing the nine and every Dei Filius attribute."

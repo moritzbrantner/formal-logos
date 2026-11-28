@@ -1,0 +1,31 @@
+{
+  "id": "3b7990e5-b783-47d4-b47e-25160e2f2d91",
+  "label": "Classifier arrival locally Euclidean in Lean, pending sense metadata repair",
+  "statement_ids": [
+    "62b4a40a-919e-5da4-998c-131c386b7361",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "95fb2244-dd53-5e3a-9658-4a317078fc9b",
+    "0391e4d0-d998-5dfa-84bb-6b0ca0450938",
+    "fb7dac91-f7cc-560e-95cc-d5cb80201bdc",
+    "b19ffd92-01bd-5c0b-9643-e7407137ea5e"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The classifier separation proof uses the accessibility input only in transferring existence and necessity of the same c from accessible v to w and its successors. A Lean prototype replaced that transfer with ActualEuclidean.necessaryAtOrigin and compiled. The legacy classifier inputs list source-backed supply and well-foundedness senses absent from the predicates. Even after narrowing those links in a local experiment, the preflight treats the classifier's concrete-existence property and its separate backward-closure law as rival senses of one term. The legacy Consumer 15374d2f stays authoritative for that bundle.",
+  "evidence": [
+    "eefabfd5-7e32-5fee-9771-c2e65e3daa65",
+    "PR-2022"
+  ],
+  "blocker": "Distinguish the co-used classifier and backward-closure declarations in the sense index before registering the exact local sibling. No premise maps the two predicates as rival senses.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    }
+  ]
+}

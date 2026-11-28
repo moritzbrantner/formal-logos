@@ -1,0 +1,10 @@
+{
+  "id": "c041fe20-df09-4b6f-9fee-eca5ee660d3e",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Whatever is more such tha (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c11369aa-7c3d-5dea-8421-535d5b4b3104",
+  "note": "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+}

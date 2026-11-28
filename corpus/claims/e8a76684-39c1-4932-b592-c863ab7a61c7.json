@@ -1,0 +1,13 @@
+{
+  "id": "e8a76684-39c1-4932-b592-c863ab7a61c7",
+  "label": "III.66 n. 2 [26153] — An agent gives esse insofar as it is a being in act",
+  "statement_id": "06565423-9d9e-4866-b94d-3e0c39613b12",
+  "source_id": "0292b788-8058-5069-afde-4a19b82b5604",
+  "locator": "III.66 n. 2 [26153]",
+  "interpretation": "Aquinas uses this premise and divine conservation to explain how inferior agents give being by divine power. The First Way treats an actual mover reducing a patient from potency to act. SCG III.66 explicitly applies the actuality condition to giving esse.",
+  "status": "formalized",
+  "attribution": "The passage states that an agent gives esse only insofar as it is a being in act, which is the premise.",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72"
+  ]
+}

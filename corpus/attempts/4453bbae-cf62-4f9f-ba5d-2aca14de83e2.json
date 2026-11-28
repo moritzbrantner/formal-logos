@@ -1,0 +1,36 @@
+{
+  "id": "4453bbae-cf62-4f9f-ba5d-2aca14de83e2",
+  "label": "Verificationist self-application connection plan",
+  "statement_ids": [
+    "12527c0e-3a83-5639-91e4-3eab30b2ec23",
+    "18b8adb3-fdd4-57c0-8125-64f0c7e2ebe9",
+    "32a7695e-6ccc-5d98-9c52-bbbd539d7f50",
+    "4e72c49e-1089-559e-9f35-7776071d0818",
+    "6dc3f04a-5420-58bd-91f1-569b41c94ef1",
+    "8c15181f-fbc7-538c-bcce-1e5381247d2f",
+    "92ad4e06-5b99-529d-9501-5a86917dbfa4",
+    "a2b1e855-ac29-532d-a3e7-ac8d4d585150",
+    "af40d9a3-0007-50be-94fb-2d22068c03dd",
+    "fd01a8b5-1b6b-5c08-a1e6-915528fa12cc"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The dilemma requires its formulation to belong to its own scope, lack analyticity and lack the chosen verifiability. V4 adoption-as-rule can deny self-scope. To connect this objection to the case, first show which criterion, if any, excludes the exact GOD_4 assertion and resolve self-scope for that criterion. Introduced in 83bc8f4d1, c23db91c4.",
+  "evidence": [
+    "0bd651df-63c6-5b96-90df-4b488b1735f1",
+    "PR-2086",
+    "ce6e9222-bdda-5174-abe4-afb152e1ec77"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

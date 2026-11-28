@@ -1,0 +1,10 @@
+{
+  "id": "b47ee95c-8ca6-47c5-9175-3897c23c530c",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Bearers exercise intellec (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8cf54bde-0c97-5428-9179-0d567293675d",
+  "note": "Tests omitting this premise in the encoded bearerExistsFromOperationAndEsse argument, with the other premises retained and the conclusion false in each corresponding control."
+}

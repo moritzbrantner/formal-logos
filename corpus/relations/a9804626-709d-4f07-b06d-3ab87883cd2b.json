@@ -1,0 +1,10 @@
+{
+  "id": "a9804626-709d-4f07-b06d-3ab87883cd2b",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Every existent has causal power",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "ae68972c-175a-5e68-86fb-f69fa30e2054",
+  "note": "Tests omitting this premise in the encoded existingInActAtFromEleaticPower, existentInActFromEleaticPower arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

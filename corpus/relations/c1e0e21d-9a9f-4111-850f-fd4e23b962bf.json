@@ -1,0 +1,10 @@
+{
+  "id": "c1e0e21d-9a9f-4111-850f-fd4e23b962bf",
+  "label": "Test by Finite models for the modal-principle branches of the NE for B schema: whatever is tru (1)",
+  "subject_kind": "result",
+  "subject_id": "ee82c652-d18e-5583-ac14-8982ddc3ac9c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "98bede5a-c5ff-5c26-9af0-10d526d422e2",
+  "note": "Tests omission of this premise from forkKTB in the corresponding hand-written modal frames for the KTB fork."
+}

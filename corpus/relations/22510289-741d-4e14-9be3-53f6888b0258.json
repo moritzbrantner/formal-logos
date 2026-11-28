@@ -1,0 +1,10 @@
+{
+  "id": "22510289-741d-4e14-9be3-53f6888b0258",
+  "label": "Test by Finite interpretations for the seven derivations of caus for Whatever moves a thing in (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92",
+  "note": "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+}

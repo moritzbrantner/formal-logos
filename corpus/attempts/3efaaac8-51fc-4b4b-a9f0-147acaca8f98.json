@@ -1,0 +1,33 @@
+{
+  "id": "3efaaac8-51fc-4b4b-a9f0-147acaca8f98",
+  "label": "Retained readings from Ludwig Wittgenstein, Logisch-philosophische Abhandlung / Tractatus Logico-Ph",
+  "statement_ids": [
+    "6ddb4cc1-7ed8-5759-acb8-b386060cb889"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "TLP 6.44, Nicht wie die Welt ist, ist das Mystische, sondern dass sie ist: Tractatus 6.44 supplies the contrast between how the world is and that it is in docs/wittgenstein.md. It remains context for the discussion of the mystical. Applying it to the case needs a separate inference from that contrast to an intelligible claim about the world or God.",
+  "evidence": [
+    "e05a0ed0-e356-5bbd-9a36-47b6ec207e15",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

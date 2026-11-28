@@ -1,0 +1,10 @@
+{
+  "id": "3491e3f4-01d3-4d0a-beda-f4a9b54fe88a",
+  "label": "Source qualification for da9bddcf from reading ea7a327d",
+  "subject_kind": "claim",
+  "subject_id": "50c0a403-3cac-5aba-814b-4a19f6463c19",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "da9bddcf-ef37-54b4-9ce5-b109d6f1d2c3",
+  "note": "The rod-end example gives a difference between inertial observers in whether spatially separated clocks are synchronous. Transfer requires the case tokens to admit that sort of separation and the equal-clock premise to be invariant or expressly frame relative. The example does not establish frame dependence of every causal pair."
+}

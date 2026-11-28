@@ -1,0 +1,10 @@
+{
+  "id": "eb78284a-3e28-459a-b0db-fa5f2a357285",
+  "label": "Test by Controls for the LIVING_2-to-LIVING_1 route at the Dei Filius root, checked",
+  "subject_kind": "result",
+  "subject_id": "2de8c08d-9dc3-478b-9304-919a43435f20",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1773079b-236a-5f7d-b1e9-fb8f23202341",
+  "note": "Tests omission of this premise from nineGiveDeiFiliusLivingFromPureAct in the pure-act life interpretation and the restricted life-sense comparison."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "1c732d82-b4eb-411e-ac60-cbaa52fee469",
+  "label": "Source qualification for f54cc1ad from reading 9f9b341f",
+  "subject_kind": "claim",
+  "subject_id": "b75776db-ebfc-5eb0-98b3-ac323c9c4726",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "f54cc1ad-8913-52ec-abf1-be30f76a03bc",
+  "note": "Sellars's restriction is directed at describing and explaining the world. A conclusion that every existent is natural additionally requires delimiting which entities count as scientific and defending why that domain exhausts the ontology in the case's sense."
+}

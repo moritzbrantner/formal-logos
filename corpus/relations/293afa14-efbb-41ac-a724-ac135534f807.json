@@ -1,0 +1,10 @@
+{
+  "id": "293afa14-efbb-41ac-a724-ac135534f807",
+  "label": "Test by Four priority-route omissions and fixed rational exercise, checked",
+  "subject_kind": "result",
+  "subject_id": "decd967f-3ecb-4bca-8d69-cd365ed30f9f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "012f5c10-72e7-48a6-a56e-cb880fbd6776",
+  "note": "Tests omission of this premise from rationalGivingOfPriority in the corresponding shared-frame assignment with the same CAUSE_2 edge and assigned intellect and will."
+}

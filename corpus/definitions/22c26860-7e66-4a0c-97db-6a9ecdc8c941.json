@@ -1,0 +1,9 @@
+{
+  "id": "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+  "label": "Exclusion-free profile: no member requires the joint lack of some members",
+  "term": "exclusion-free profile (ExclusionFree RequiresLack q)",
+  "definition": "ExclusionFree RequiresLack q, for a set q of real determinations: for every d in q and every subset S of q, d does not require the lack of S (RequiresLack d S fails). It is the constitutive counterpart of the primitive admissible family: a profile is ruled out only by what one of its members requires to be lacking. Exclusion-freedom is inherited by subsets, so a family defined by it is downward closed and contains the empty profile; it cannot express irreducibly holistic prohibitions or requirements of presence (a member that needs another alongside it). It is not the primitive Admissible itself; the claims that the two coincide (MemberGroundedAdmissibility) or that every exclusion-free profile is admissible (ExclusionFreeAdmissible) are separate open premises.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.ExclusionFree",
+  "note": "Stipulative analyst notion (#2145), attribution deferred. Hand-rolled rather than Mathlib's Set.Pairwise, which is binary and skips the diagonal: this notion is n-ary (S is a set) and lets a determination exclude itself. Exclusion-freedom is inherited by subsets (exclusionFreeMono)."
+}

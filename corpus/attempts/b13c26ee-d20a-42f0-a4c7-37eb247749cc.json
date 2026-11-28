@@ -1,0 +1,34 @@
+{
+  "id": "b13c26ee-d20a-42f0-a4c7-37eb247749cc",
+  "label": "Intellectual life is more perfect through self-direction to ends",
+  "statement_ids": [
+    "8d2ac441-9b89-45ee-b8f6-db3522e0bafa"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I q.18 a.3 treats intellectual self-direction as a mode of life and recognizes that humans also receive determination from another in some respects. The route concludes D.Lives g of each HasIntellect bearer, including a bearer whose intellectual capacity is unexercised.",
+  "blocker": "Show what warrants D.Lives g, the primitive that IntellectualIsLiving predicates of each HasIntellect g, in its stated sense of operating from oneself without being moved by another in that operation. This requires an account of a bearer whose intellectual capacity is unexercised.",
+  "evidence": [
+    "28c5ac67-5b7e-4aa7-a081-b84ad0ad1f64",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

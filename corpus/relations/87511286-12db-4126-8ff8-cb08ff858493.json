@@ -1,0 +1,10 @@
+{
+  "id": "87511286-12db-4126-8ff8-cb08ff858493",
+  "label": "Test by Finite interpretations for the two sense forks: for each for Act is prior to POTENCY_1 (1)",
+  "subject_kind": "result",
+  "subject_id": "f6e67b12-0e1a-512f-a34b-c05112ecef6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "197ac723-487c-5fa2-8800-4b441d322014",
+  "note": "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+}

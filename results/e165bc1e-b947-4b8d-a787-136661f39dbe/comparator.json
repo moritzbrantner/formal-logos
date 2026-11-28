@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Modal.ModalPowerHolder.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalPowerHolder.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Modal.ModalPowerHolder.jointAbsenceOfFiniteRoster"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

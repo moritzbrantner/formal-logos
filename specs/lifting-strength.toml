@@ -171,3 +171,43 @@ evidence_result_ids = { implication = "Necessary-predecessor lifting entails no 
 separator = { setting = "nonActualEdgeSetting", result_id = "Non-actual-edge control separates lifting from no contingent ground" }
 statement_parameter_indices = { stronger = [0, 1, 2, 3, 4], weaker = [0, 1, 2, 3, 4], delta = [0, 1, 2, 3, 4] }
 note = "Difference of lifting and no contingent ground: lifting adds exactly that possible support edges into necessary individuals recur as present edges at the actual world. No background is needed. The other bridge, no novel necessary support, is not this delta: it would need the source's actual existence, which ActualReflexive supplies in lifting_of_two_bridges. The separator is a finite interpretation."
+
+[[relation]]
+id = "Test by Contingent-source control separates lifting from no novel necessary support"
+label = "Test by Contingent-source control separates lifting from no novel necessary support"
+subject_kind = "result"
+subject_id = "ebf458e9-a57c-4461-bed4-0eae6ed33c6f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+note = "Strictness control: in the contingent-source model no novel necessary support holds and lifting fails, so no novel necessary support does not entail lifting."
+
+[[relation]]
+id = "Test by Lifting is no contingent ground plus actual recurrence of support edges"
+label = "Test by Lifting is no contingent ground plus actual recurrence of support edges"
+subject_kind = "result"
+subject_id = "ec1e60f9-2c2f-4889-a822-4fdeee231da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by Lifting is no novel necessary support plus necessary and actual supporters"
+label = "Test by Lifting is no novel necessary support plus necessary and actual supporters"
+subject_kind = "result"
+subject_id = "477d7396-687a-4699-819b-7e7b3fa01771"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+note = "Checks the exact decomposition of the stronger statement into the weaker version and the registered delta under the comparison's shared interpretation."
+
+[[relation]]
+id = "Test by Non-actual-edge control separates lifting from no contingent ground"
+label = "Test by Non-actual-edge control separates lifting from no contingent ground"
+subject_kind = "result"
+subject_id = "585b4324-9fe9-40b3-95e4-fd373de917c6"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2a9378b4-3dad-591b-a88e-1907a79f1fa5"
+note = "Strictness control: in the non-actual-edge model no contingent ground of the necessary holds and lifting fails, so no contingent ground does not entail lifting."

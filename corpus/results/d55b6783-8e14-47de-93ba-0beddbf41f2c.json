@@ -1,0 +1,11 @@
+{
+  "id": "d55b6783-8e14-47de-93ba-0beddbf41f2c",
+  "label": "Evaluate matched controls for existential and universal benefit omission",
+  "argument_id": "eb3a8255-8529-4060-a0d3-a743b869a9df",
+  "challenge_module": "TruthCore.Results.Causality.BenefitPlanWitness.Challenge",
+  "solution_module": "TruthCore.Results.Causality.BenefitPlanWitness.Solution",
+  "theorem": "TruthCore.Results.Causality.BenefitPlanWitness.controls",
+  "comparator_config": "results/d55b6783-8e14-47de-93ba-0beddbf41f2c/comparator.json",
+  "status": "solution-present",
+  "description": "The second plan's operative use is switched while the requirements, apprehension, assignment of realization, goodness, direction and willing for the same g and x are held fixed. The final checks switch off willing for the distinct recipient while preserving self-willing. These are structural non-entailment and joint-satisfiability tests in the assignment."
+}

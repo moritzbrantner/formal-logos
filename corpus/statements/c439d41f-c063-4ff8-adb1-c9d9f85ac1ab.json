@@ -1,0 +1,9 @@
+{
+  "id": "c439d41f-c063-4ff8-adb1-c9d9f85ac1ab",
+  "label": "PLG consistency is equivalent to the absence of a strict step with a weak return",
+  "paraphrase": "For each populated atom type and each supplied set of PLG sequents, that exact set is consistent if and only if no initial strict step has a finite return path of initial steps of any kind. A return of length zero counts.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.ConsistencyCriterion",
+  "definition_ids": [
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ]
+}

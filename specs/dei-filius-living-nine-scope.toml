@@ -123,3 +123,23 @@ object_id = "Whatever has the nine SIMPLE_4, PERFECT_2, INFINITE_1 attributes is
 verification_result_id = "Whatever has the nine is LIVING_2, from every POTENCY_1-free being being LIVING_2"
 strictness_result_id = "Controls for the nine-restricted self-operation premises, checked"
 note = "Same InPotency and LivesAt. The strong version constrains every pure act; the weak one only pure acts that also have the other eight of the nine. Control.Controls part 2: a lifeless pure act without intellect satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Controls for the nine-restricted self-operation premises, checked"
+label = "Test by Controls for the nine-restricted self-operation premises, checked"
+subject_kind = "result"
+subject_id = "64165d34-9103-4fbf-8d6a-0421768baf91"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1773079b-236a-5f7d-b1e9-fb8f23202341"
+note = "Tests the converse strength implication in the registered interpretation. Same InPotency and LivesAt. The strong version constrains every pure act; the weak one only pure acts that also have the other eight of the nine. Control.Controls part 2: a lifeless pure act without intellect satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Controls for the nine-restricted self-operation premises for Whatever is in potency in (1)"
+label = "Test by Controls for the nine-restricted self-operation premises for Whatever is in potency in (1)"
+subject_kind = "result"
+subject_id = "64165d34-9103-4fbf-8d6a-0421768baf91"
+predicate = "tests"
+object_kind = "statement"
+object_id = "45030701-91da-588f-b602-dca6c15e761a"
+note = "Tests the converse strength implication in the registered interpretation. Same InPotency and Operates. The strong version constrains every pure act; the weak one only pure acts that also have the other eight of the nine (including intellect and will). Control.Controls part 1: an inert pure act without intellect satisfies the weak version and falsifies the strong one."

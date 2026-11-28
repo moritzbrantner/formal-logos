@@ -1,0 +1,27 @@
+{
+  "id": "a8c7250d-9a65-4794-a97b-40263e2b0f6d",
+  "label": "Root links from Plato, Theaetetus",
+  "statement_ids": [
+    "f8105408-9881-5592-a32a-070d18a4e4be",
+    "4675f288-6bb1-563f-8296-d0d83ee5af30"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "171d-172b: Socrates's restricted defense gives up unrestricted application in favour of a demarcated domain of appearances and city determinations. The universal retorsion must be retested for whether the thesis and its denial themselves fall in that restricted domain. 172b: The defense distinguishes the just and holy as held by cities from what turns out advantageous. Applying the universal countercase to it requires showing that the disputed content falls in the conventional domain, with a fixed city and time.",
+  "evidence": [
+    "07d148d5-ad03-5639-8019-34733e163311",
+    "ce141265-737e-5932-b182-ca3b7ed61efd",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

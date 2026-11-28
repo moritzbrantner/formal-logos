@@ -1,0 +1,11 @@
+{
+  "id": "495ca112-e611-4e18-9d50-4613ecf615d6",
+  "label": "Exact difference of the global and selected fusion calibrations",
+  "argument_id": "c0ba8e95-2e44-4cd1-beb0-b461d9e43944",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.calibrationExactDifference",
+  "comparator_config": "results/495ca112-e611-4e18-9d50-4613ecf615d6/comparator.json",
+  "status": "solution-present",
+  "description": "The global policy applies to actual individuals in either scope. Conversely, an actual individual is either in SelectedFusionPart or outside it, so the corresponding conjunct supplies its concreteness. The partition uses classical excluded middle and zero background assumptions."
+}

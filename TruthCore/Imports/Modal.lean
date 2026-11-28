@@ -4,6 +4,7 @@ module
 public import TruthCore.Modal.A5HistoryScope
 public import TruthCore.Modal.AccessibilityComponents
 public import TruthCore.Modal.ActualReasonWitness
+public import TruthCore.Modal.ActualRecipientReplacement
 public import TruthCore.Modal.ActualistDomains
 public import TruthCore.Modal.ActualistDomainsCertificate
 public import TruthCore.Modal.BResearch
@@ -12,6 +13,8 @@ public import TruthCore.Modal.BoundedMetricPastControl
 public import TruthCore.Modal.ChoiceContext
 public import TruthCore.Modal.Convergence
 public import TruthCore.Modal.ConvergenceCertificate
+public import TruthCore.Modal.CounterfactualSelection
+public import TruthCore.Modal.CounterfactualSelectionControls
 public import TruthCore.Modal.CounterpartNecessity
 public import TruthCore.Modal.CounterpossibleConservativity
 public import TruthCore.Modal.CreationDecisionComparison
@@ -38,7 +41,10 @@ public import TruthCore.Modal.KResearch
 public import TruthCore.Modal.Kripke
 public import TruthCore.Modal.LimitationPossibility
 public import TruthCore.Modal.LimitationSeparation
+public import TruthCore.Modal.MirrorCollapse
 public import TruthCore.Modal.ModalGrounding
+public import TruthCore.Modal.ModalOntologicalCase
+public import TruthCore.Modal.ModalPowerHolder
 public import TruthCore.Modal.NecessaryBeingMeasure
 public import TruthCore.Modal.NecessaryContingentActivity
 public import TruthCore.Modal.NecessaryIfConnectivity
@@ -59,9 +65,12 @@ public import TruthCore.Modal.RevisionUptake
 public import TruthCore.Modal.RigidDesignation
 public import TruthCore.Modal.S4Research
 public import TruthCore.Modal.S5Research
+public import TruthCore.Modal.STIT
 public import TruthCore.Modal.SelectedEffectBridge
 public import TruthCore.Modal.SimplicityCollapse
 public import TruthCore.Modal.StandardCorrespondenceCertificate
 public import TruthCore.Modal.TResearch
 public import TruthCore.Modal.TemporalHistory
+public import TruthCore.Modal.WillChoiceCensus
+public import TruthCore.Modal.WitnessPreservationIndividuation
 public import TruthCore.Modal.WorldwiseExplanation

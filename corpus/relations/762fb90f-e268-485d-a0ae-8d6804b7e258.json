@@ -1,0 +1,11 @@
+{
+  "id": "762fb90f-e268-485d-a0ae-8d6804b7e258",
+  "label": "Global efficient no-self-cause strengthens distinct incoming coverage",
+  "subject_kind": "statement",
+  "subject_id": "8b2561cd-3743-536d-a110-3352fdb0c6b9",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "bd050ab8-3cfa-4db8-a990-a4595834afb9",
+  "verification_result_id": "29292861-8212-4156-9bc0-9ae97ccc2a1e",
+  "note": "On the same selected-time relation the weak premise allows a diagonal when a distinct incoming edge is also present. The accident control witnesses strictness."
+}

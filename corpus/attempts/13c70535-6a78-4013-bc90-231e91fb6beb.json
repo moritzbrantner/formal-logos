@@ -1,0 +1,28 @@
+{
+  "id": "13c70535-6a78-4013-bc90-231e91fb6beb",
+  "label": "Candidate cognitive-meaning calibrations connection plan",
+  "statement_ids": [
+    "0d838ee8-03ae-5e06-95fe-f6e1ff9bbaae",
+    "d9165b55-2141-5868-8312-9d53e2fe2f8b",
+    "f418bba9-ce7d-5c43-9387-6819e7b403f5",
+    "f6a63520-bc15-5a3b-a55f-1894cd69bb2d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The verificationist calibrations and all-meaningful option compare whole extensions in a supplied scope. Interpret a definite divine content in that scope before treating any calibration as an objection or answer to the case.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

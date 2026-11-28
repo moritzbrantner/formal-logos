@@ -1,0 +1,25 @@
+{
+  "id": "1534f774-3375-4a3b-8f39-54d2158ddb79",
+  "label": "Root links from Thomas Aquinas, Summa contra gentiles",
+  "statement_ids": [
+    "18085727-7d45-58a3-8af2-497518c8d6a3"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I.28 [8]: SCG I.28 proposes a most-perfect measure within each genus and treats God as measure of beings on the premise that God is his own esse. The route needs its selected perfection to admit a measure of that kind, and approach to the measure must track the represented degrees with the measure among the selected bearers.",
+  "evidence": [
+    "b41fab98-4429-5308-94e4-48f1748a7cdd",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

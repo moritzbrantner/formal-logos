@@ -1,0 +1,10 @@
+{
+  "id": "d43e66d3-0fc4-4c28-bec5-fd827b4e7b8d",
+  "label": "Fixed-bearer act and fact substitution controls checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "d757805c-0a42-4265-8ead-f170463895a7",
+  "rule": "Extension criterion and explicit finite judgments",
+  "meaning": "Apply extensionCriterion to the fixed-slot judgment, test the conditional-exercise model and a changed judgment on the same frame, and apply exerciseInNatureGivesEssentialExistence to the world-predicate projection of the changed judgment.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

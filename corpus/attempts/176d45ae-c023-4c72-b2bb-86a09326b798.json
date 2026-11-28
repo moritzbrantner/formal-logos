@@ -1,0 +1,68 @@
+{
+  "id": "176d45ae-c023-4c72-b2bb-86a09326b798",
+  "label": "A finite strict-giver withdrawal contrast for the productive bridge",
+  "statement_ids": [
+    "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+    "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "The finite SCM comparison in docs/notes/sustaining-vs-existential-inertia.md, section Finite interventions and the productive bridge, holds the recorded earlier input fixed. Mechanism.single_channel_contrast proves natural report agreement for every context and separates response to one cut: at the all-true context the current input is forced false and the responsive model loses its output, while the context-based model retains it. A separate control establishes full observational parity with different interventional masses even when distinct exogenous noise coordinates are independent. Neither control equates a channel with a strict giver or a Boolean readout with presence of a received-esse bearer. The old inducer-free account remains the positive standing rival. Its causal requirement on existential cessation and the classification of withdrawal are still open. The calibrated contrast now maps each mechanism to a directed pair in one frame, fixes the same onset, and separates the current giving bit from the later presence bit. Given that calibration, the background response and a reason for continuing presence yield an instance falsifying the productive bridge in that frame. The responsive loss gives an instance falsifying the cessation law if the interval is independently inducer-free. This is a conditional diagnostic. Both accounts retain their prior warrant; the inertia proposal rests on earlier actuality and the inducer-free persistence law rather than the contextual lookup.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 00a7e616 remains unplaced. CalibratedContrast requires a supplied background Calibration, a principle with E bearer principle, and a reason for the bearer's presence at later in the cut history. Under those hypotheses the bearer is present there, the cut disables the selected giver, and every other giver is absent from that giving relation at that moment, so ExplanationNeedsGiver fails. A responsive Calibration yields absence at later and failure of the inducer law. The certificate computes the readouts, with each history-level conclusion conditional on its supplied hypotheses.",
+  "blocker": "The finite equations do not supply independently warranted strict-giving and history calibration. For one received bearer, specify an admissible pair and criteria for tracking the bearer and detecting nonexercise independent of its fate, then check that the cut preserves its onset and loss conditions, excludes all alternative givers, and preserves a reason if the bearer survives. Explained survival revises the universal bridge within that interpretation. Calibrated inducer-free loss favors sustaining for that case; generalization requires a scope bridge. If withdrawal itself independently qualifies as a loss inducer, the loss comparison leaves the persistence law standing.",
+  "evidence": [
+    "PR-2091",
+    "00a7e616-3154-4db7-8d66-af4536384df7",
+    "PR-2094"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2091"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2094"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2094"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2135"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "d86c9de9-25be-488b-b3b7-69f5f4eb80b8",
+      "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+    ],
+    "scope": "Finite strict-giver withdrawal for a begun received-esse bearer, with both histories calibrated in one frame at fixed onset, origin and independently characterized loss conditions.",
+    "assessment": "The checked contrast makes the test precise. Explained inducer-free survival with no one exercising strict giving to that bearer at the cut endpoint supplies a counterinstance to the productive bridge in the calibrated frame. Inducer-free loss instead supplies a counterinstance to the cessation law in that frame. Direct conservation remains positively motivated for direct causes of being, and the inertia account retains its case from earlier actuality and an independently warranted law of cessation. The Boolean contrast leaves their relative warrant open in the absence of an independently justified calibration. For concurrent actualization 76d2cc96: a calibrated present received bearer with no giver at that endpoint would falsify both the weak and the strong form there; that inference needs no explanation witness, which is needed only to falsify d86c9de9. Inducer-free loss alone establishes neither form of concurrent actualization. The earlier assessment of 76d2cc96 keeps its independent scope.",
+    "next_test": "Identify one begun received bearer across an admissible pair, fix its onset and origin, and justify detection of nonexercise of strict giving independent of the later presence report. Exclude competing givers and loss inducers at the matching scope. Explained survival would revise the productive bridge in that interpretation. Inducer-free loss would favor sustaining for that case; broader warrant needs a scope bridge.",
+    "note": "docs/notes/sustaining-vs-existential-inertia.md#13-finite-interventions-and-the-productive-bridge",
+    "reviewed_revision": "dfbea133f53da25380f908d9a6694730498739b2",
+    "review": "unreviewed",
+    "publication": "unpublished",
+    "evidence": "Draft PR-2094, with a checked conditional contrast. Independent semantic challenge of the application and assessment remains pending.",
+    "supersedes": "None. This assessment concerns the calibration test and retains the earlier positive warrant and its qualifications."
+  }
+}

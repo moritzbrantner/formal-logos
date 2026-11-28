@@ -1,0 +1,31 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+    "source_url": "https://www.corpusthomisticum.org/sth1084.html",
+    "sha256": "sha256:4b2ce10c68ccca2aa93c2ed1d7a4dc5bc0fff877025dc232ee83bc1f0495f623",
+    "encoding": "iso-8859-1",
+    "language": "lat",
+    "retrieved_at": "2026-11-06T11:24:32Z",
+    "license": "Latin text: Leonine edition; electronic transcription by Roberto Busa, reviewed by Enrique Alarcón. The page claims ©2019 Fundación Tomás de Aquino, all rights reserved for this electronic edition. Only metadata, hashes, locators and short incipits are committed."
+  },
+  "passages": [
+    {
+      "id": "c8835568-28f3-459e-a6fd-7e717e9debbb",
+      "label": "Thomas Aquinas, Summa theologiae, I q.85 a.2",
+      "locator": "I q.85 a.2",
+      "claim_locator_prefixes": [
+        "I q.85 a.2 "
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "32022"
+        },
+        "to": {
+          "anchor": "32030"
+        }
+      },
+      "text_sha256": "sha256:5247b91f89a9ba80f0f4346e95e65336e722ba9ae839de00ea2a27092123e818"
+    }
+  ]
+}

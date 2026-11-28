@@ -1,0 +1,48 @@
+[batch]
+vocab = "TruthCore.Causality.GivingPlanExceptions"
+results = "TruthCore.Results.Causality.GivingPlanExceptions"
+
+[[statement]]
+id = "Exact exception witnesses for six selected-world giving-plan principles"
+lean = "Exceptions"
+paraphrase = "For fixed interpretations and world, six separate equivalences describe failure of coverage, either benefit omission principle, end omission, and either recognition. Coverage fails exactly when some distinct recipient in act in esse is given being by an owned rational power at the selected world and no plan governs that giving. Failure of the one-plan benefit test needs a governed divine giving lacking the requirement in every governing plan. Failure of the universal benefit or end test needs one eligible governing plan lacking the benefit clause or all the recipient's end clauses respectively. A recognition exception needs the required role and failure of its matching case relation. The witnesses need not coincide."
+definitions = ["DEF-ESSE", "DEF-GOD-OF-CLASSICAL-THEISM", "DEF-GOVERNMENT-DIRECTION-TO-END", "08b826db-2d9c-48e5-b69c-d4ac54088518", "bace3032-dfa4-4193-9408-30f584e6fe6d", "fbd163ad-ec01-45d1-a749-f90a1de6ea37", "a84afabf-d6e6-424d-a792-2fa874c466a5"]
+
+[[argument]]
+id = "Recover the missing requirements and exact witnesses from each giving-plan denial"
+theorem = "exceptions"
+premises = []
+conclusion = "Exact exception witnesses for six selected-world giving-plan principles"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Use satisfaction of the governing standard to isolate the omitted role"
+meaning = "Given a governing plan, all its requirements are realized. Its edited description therefore still meets the standard exactly when none of the removed clauses was required. Apply this fact and classical quantifier duality within each principle's own restrictions."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses from each giving-plan denial"
+label = "Test by Recover the missing requirements and exact witnesses from each giving-plan denial"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4be0f774-2c0a-4691-9088-6e790940960a"
+note = "Checks the exact failure condition for operative plan coverage at a selected world with fixed rational giving."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses fro for A giving plan rejects wit (1)"
+label = "Test by Recover the missing requirements and exact witnesses fro for A giving plan rejects wit (1)"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b1d7825e-a1ae-4f86-af2e-1b9819055e0f"
+note = "Checks when the end-placement requirement fails in the governing-plan interpretation."
+
+[[relation]]
+id = "Test by Recover the missing requirements and exact witnesses fro for A GOD_4 giving plan rejec (1)"
+label = "Test by Recover the missing requirements and exact witnesses fro for A GOD_4 giving plan rejec (1)"
+subject_kind = "result"
+subject_id = "839a93fa-8011-46c7-9215-b126b93d40e7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "df6c64a6-02dc-414a-be8e-dccd035b8872"
+note = "Checks the exact failure condition for universal benefit omission in the governing-plan interpretation."

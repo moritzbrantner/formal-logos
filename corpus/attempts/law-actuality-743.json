@@ -10,7 +10,7 @@
   "date": "2026-10-30",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "New #743 discriminator varies two individually deterministic, uniquely solvable laws and quantifies over every prefix-invariant law estimator. Both mathematical histories have explicit coherent state population; neither law can be uniformly identified from the shared finite prefix. Composes exact whole-vector HistorySelection.no_selection/characterization and #704 ChainInstantiation.controls. Full-data, one-candidate and empty-realization omissions prevent overclaiming. No reproof of #737 fixed forecast/openFuture countermodels. Sources, exact theorem inventory, rejected interpretations, proof boundaries and remaining bridge persist in docs/notes/law-actuality-743.md. Initial interactive proof failed on reserved prefix identifier and ambiguous opened Certificate/Omissions names; corrected without changing frozen Challenge or statement types.",
+  "summary": "New #743 discriminator varies two individually deterministic, uniquely solvable laws and quantifies over every prefix-invariant law estimator. Both mathematical histories have explicit coherent state population; neither law can be uniformly identified from the shared finite prefix. Composes exact whole-vector HistorySelection.no_selection/characterization and #704 ChainInstantiation.controls. Full-data, one-candidate and empty-realization omissions prevent overclaiming. No reproof of #737 fixed forecast/openFuture countermodels. Sources, exact theorem inventory, rejected interpretations, proof boundaries and remaining bridge persist in docs/notes/law-actuality-743.md. Initial interactive proof failed on reserved prefix identifier and ambiguous opened Certificate/Omissions names; corrected without changing frozen Challenge or statement types.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 1f678ab6 remains unplaced. At cutoff n, the reading at n+1 identifies the law when the estimator drops UsesRecord. The separate emptyRealization keeps the two formal solution equations while carrying no present bearer at any world or time. Prefix invariance and realization of a formal solution concern distinct off-path interfaces.",
   "blocker": "Actual concrete applicability/governance or best-system truth, independently defended candidate exclusion, and fallible epistemic entitlement remain OPEN. STMT-ULTIMATE-GROUND-EPISTEMIC-NECESSITY and #467 are not discharged.",
   "evidence": [
     "f2164c77-b4f4-510b-a542-eb8ed95b3205",
@@ -18,5 +18,15 @@
     "4b8f07db-2a50-5826-ac09-083f0e088d64",
     "6c8cd838-b1a1-521f-860e-9289b89f0e60",
     "PR-748"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2136"
+    }
   ]
 }

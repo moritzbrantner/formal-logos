@@ -1,0 +1,11 @@
+{
+  "id": "14f373d9-8abe-42b8-8180-25e8299cf3f9",
+  "label": "René Descartes, Principia philosophiae",
+  "kind": "primary_text",
+  "author": "René Descartes",
+  "work": "Principia philosophiae",
+  "citation_system": "part and article number",
+  "catalog_url": "https://fr.wikisource.org/wiki/Principes_de_la_philosophie",
+  "work_urn": "urn:truth-core:work:descartes-principles",
+  "notes": "The AT VIII-1 scan and Veitch's translation have separate passage manifests for the relevant sections of Part I. The French catalog link is a navigation aid."
+}

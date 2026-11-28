@@ -1,0 +1,18 @@
+{
+  "id": "01743c2e-1df2-4dfd-b8f1-0dfb6b0a6935",
+  "label": "Necessary concrete productive source with Euclidean access at the selected world (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "ef69a630-2277-56be-86ca-f05f8193093a",
+    "1b1462e6-c285-448c-87e2-3053bc05a341",
+    "2b20b5af-d653-56ba-8001-35903fb3d1ea",
+    "ec3f7cc9-a48b-5672-a09e-a652c3477348",
+    "c1d16add-865b-4ac6-a790-4e6e85fe0ac5",
+    "e2104271-bf96-4d07-af55-5bcb7871f9e7"
+  ],
+  "output_statement_id": "b19ffd92-01bd-5c0b-9643-e7407137ea5e",
+  "rule": "Obtain an accessible actual source and transport its necessity with selected-world successor access",
+  "meaning": "On the same Ontic, failed headless coverage supplies an existing source at an accessible v. The local causal principle and excluded middle give necessity there. Outgoing activity and the concreteness dictionary classify that same source at v. Euclidean access at w and reflexivity of w carry the source's existence to w and to each of its successors. Causal activity and sourcehood are used only at v.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

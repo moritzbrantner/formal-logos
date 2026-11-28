@@ -1,0 +1,9 @@
+{
+  "id": "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c",
+  "label": "Selection-function semantics for a counterfactual conditional",
+  "term": "set-valued selection at an origin",
+  "definition": "For an origin and an antecedent extension, the selector returns a set of worlds. The conditional holds if every selected world satisfies the consequent. An empty selection therefore verifies either polarity vacuously. Selection is extensional in the antecedent extension.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.CounterfactualSelection.Would",
+  "note": "Analyst semantics for #2052. Success, centering, accessible coverage and nonemptiness for possible antecedents are separate properties. A selection can use accessibility, ranks, or an externally specified intervention outcome, whose adequacy as a causal intervention is open. World selection supplies neither causal production nor strict grounding."
+}

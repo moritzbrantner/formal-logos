@@ -1,0 +1,11 @@
+{
+  "id": "9655a913-2a81-426f-aa3f-64dcdafa9c16",
+  "label": "A source with only being against the q.7 a.1 bridge: controls, checked",
+  "argument_id": "5fc76be7-2fee-4d7a-8aa7-b9aa3941e600",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.q7Controls",
+  "comparator_config": "results/9655a913-2a81-426f-aa3f-64dcdafa9c16/comparator.json",
+  "status": "solution-present",
+  "description": "One source with only being, read with the role and the measure reading of limitation: each reading makes a different premise of the q.7 a.1 bridge fail. A structural surrogate."
+}

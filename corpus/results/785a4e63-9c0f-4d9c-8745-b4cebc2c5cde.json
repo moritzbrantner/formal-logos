@@ -1,0 +1,11 @@
+{
+  "id": "785a4e63-9c0f-4d9c-8745-b4cebc2c5cde",
+  "label": "Direction of each rationally given actual effect, from the operative standard",
+  "argument_id": "9203e79c-0211-41c5-a0e4-8a2c4392d926",
+  "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
+  "theorem": "TruthCore.Results.Causality.PracticalSpecification.effectDirectionOfPracticalSpecification",
+  "comparator_config": "results/785a4e63-9c0f-4d9c-8745-b4cebc2c5cde/comparator.json",
+  "status": "solution-present",
+  "description": "Choose the operative standard for the same giver and effect. If there were no case-directed end, any requirement for an end-placement of that effect would contradict the recognition premise. Every requirement would survive the edit, against rejection. This yields some end for the effect in the direction relation. No common end or recipient-directed benefit is needed."
+}

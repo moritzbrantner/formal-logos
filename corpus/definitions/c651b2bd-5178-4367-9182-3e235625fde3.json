@@ -1,0 +1,9 @@
+{
+  "id": "c651b2bd-5178-4367-9182-3e235625fde3",
+  "label": "Global actual concreteness on a fixed profile",
+  "term": "Global actual concreteness on a fixed profile",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.ProfileExistentConcreteAt",
+  "definition": "Every candidate existing at w is concrete in m. The predicate applies EveryExistentConcreteAt to m.ontic and m.concrete.",
+  "basis": "stipulative",
+  "note": "A definitionally equal application of the existing global calibration, aligned with the profile parameter of the local calibration for the strength checker."
+}

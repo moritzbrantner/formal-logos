@@ -1,0 +1,10 @@
+{
+  "id": "dfdff2fc-916e-49a0-9a99-adc514acc061",
+  "label": "Source qualification for 0d563c5b from reading 50c2b918",
+  "subject_kind": "claim",
+  "subject_id": "e6300451-980d-504b-8f6e-911b6ef787e7",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "0d563c5b-413a-5463-b556-adbb34bf458e",
+  "note": "The compact Euclidean histories in the Hartle–Hawking proposal supply a concrete contrast with ordinary prior-time causation. Application to the case would require an adequate history of the selected spacetime whole and a reason why lacking an earlier physical boundary excludes the specified broader causal relation."
+}

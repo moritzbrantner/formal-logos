@@ -1,0 +1,10 @@
+{
+  "id": "c06baa45-dc64-4bb7-b4ee-8554e88302ac",
+  "label": "Test by Controls.controls (7a6a368f)",
+  "subject_kind": "result",
+  "subject_id": "a8aced0e-08dc-5224-9dbd-7bfb406fbc3a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7a6a368f-7fd1-4818-b89e-facfcf53d50b",
+  "note": "Test the stronger strict forward condition. Both Bool event tokens occur at clock value zero and each has an edge to the other. The no-backward condition holds, but these edges fail strict clock increase."
+}

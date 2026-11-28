@@ -1,0 +1,11 @@
+{
+  "id": "0a62d923-f704-4dc7-8496-24614a5ce14b",
+  "label": "GOD_2 to GOD_4 by reference to a common maximum",
+  "argument_id": "31e93031-c8d4-4b83-a1eb-25117b7e5de7",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.FirstSourceIdentification.summaFromCommonMaximum",
+  "comparator_config": "results/0a62d923-f704-4dc7-8496-24614a5ce14b/comparator.json",
+  "status": "solution-present",
+  "description": "Conditional reference agreement of GOD_2 and GOD_4 in the stated inclusion direction. Identifies each selected GOD_2 bearer with a previously supplied GOD_4 witness by common maximum uniqueness."
+}

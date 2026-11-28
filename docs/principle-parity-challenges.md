@@ -914,3 +914,15 @@ The note is the existing #1532 handoff. Formal consequences and model boundaries
 above reuse unchanged artifacts; no fresh Lean certification is claimed. Parent
 semantic challenge of this complete proposed outcome and final-head CI remain
 required before treating the new synthesis as reviewed support.
+
+## Reasons for choosing among tied alternatives (2026-11-26)
+
+In the third Leibniz–Clarke exchange a uniform relocation distinguishes
+positions only under a suitable reading of absolute place. Clarke allows will
+alone to explain a selection among indifferent alternatives. Leibniz treats a
+global translation preserving relative situations as lacking a differentiating
+reason under the absolute-space supposition. Application to the case requires
+individuating the placement facts and fixing whether exercise of will meets the
+contrastive standard.
+
+[Gottfried Wilhelm Leibniz and Samuel… reading attempt](../corpus/attempts/68156929-3ca1-4da8-92cf-28d0935ba203.json), [Gottfried Wilhelm Leibniz reading attempt](../corpus/attempts/f84bb718-bb89-4d9c-991e-5911aef99db5.json).

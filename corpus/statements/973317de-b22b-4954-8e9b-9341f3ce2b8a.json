@@ -1,0 +1,12 @@
+{
+  "id": "973317de-b22b-4954-8e9b-9341f3ce2b8a",
+  "label": "Flow exit links WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_2 and WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3",
+  "paraphrase": "Every positive entry of the fixed ledger follows a Profile.grounds edge among actual concreta at this world. The sum over all ordered pairs of those bearers is finite. A positive entry into the specified recipient has no return path of positive entries.",
+  "lean_declaration": "TruthCore.Causality.SelectedConeSupply.SelectedThroughputExit",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2",
+    "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

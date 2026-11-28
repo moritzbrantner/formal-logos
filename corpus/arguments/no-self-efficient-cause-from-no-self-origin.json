@@ -17,5 +17,8 @@
   ],
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
-  ]
+  ],
+  "strong_version_needed": {
+    "0a2f1846-e8cd-5082-9566-39b4ae8082fc": "The conclusion forbids every efficient diagonal. The weaker bridge permits a diagonal when a distinct incoming edge is also present. Argument 2e28021c uses that weaker bridge to derive distinct incoming coverage."
+  }
 }

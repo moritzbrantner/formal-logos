@@ -1,0 +1,10 @@
+{
+  "id": "6a9f29ab-5e55-457d-8ca5-a1732d30f7df",
+  "label": "Test by Finite interpretations for the two sense forks: for each for Every use of 'prior' on t (1)",
+  "subject_kind": "result",
+  "subject_id": "f6e67b12-0e1a-512f-a34b-c05112ecef6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c3ae2148-fa13-57e9-a233-d6ad67f159a8",
+  "note": "Tests omission of this premise from actSimplyPriorBySenseFork in the finite priority interpretation selecting the sense branch that the omitted input would have closed."
+}

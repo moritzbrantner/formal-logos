@@ -105,3 +105,43 @@ conclusion = "30a8373c-5188-581b-b746-e319d71311e4"
 rule = "Immediate composition of open bridges"
 transcription = "assembly"
 meaning = "Transcription: applies the openly supplied subject-to-CausesIn bridge to the common-center edge obtained from creature applicability. The candidate role semantics alone supplies none of these bridges. This is a conditional instance of the existing root interface, not a new independent efficient-causal derivation, premise establishment or full BEING_4 completion."
+
+[[relation]]
+id = "8aa6abdc-6b82-4502-b6e9-68d3feee3160"
+label = "Test by SubjectFocalRoles.controls (fbd40037)"
+subject_kind = "result"
+subject_id = "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c"
+predicate = "tests"
+object_kind = "argument"
+object_id = "fbd40037-b8f4-4c10-a2ad-b74f33faa917"
+note = "At the sole world, both substances and both accidents exist. Under common, both selected creatures are secondary and inhere in subject0. The subjectCause relation records each of those dependences as an esse cause, jointly witnessing the three bridge premises."
+
+[[relation]]
+id = "04c6d66e-ce8b-4ea2-bb4b-33ff506aea3f"
+label = "Test by SubjectFocalRoles.controls (78c24896)"
+subject_kind = "result"
+subject_id = "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "78c24896-0ecc-4309-a9d9-e271cf36e082"
+note = "Omit the bridge from the supplied creature predicate to secondary status. Set Creature to the entire four-bearer carrier. This selects subject1, which is substantial and not secondary. The common center and productive-cause bridge remain in force, but subject0 does not cause subject1."
+
+[[relation]]
+id = "9910c394-8013-4825-b913-0faa1470c651"
+label = "Test by SubjectFocalRoles.controls (2fa04c4f)"
+subject_kind = "result"
+subject_id = "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2fa04c4f-6390-4ae1-afba-0800d3b0765c"
+note = "Omit the common-center premise for subject0. Under split, the second accident inheres in subject1 and the first in subject0. Both selected creatures are secondary and receive productive causation from their respective subjects, but subject0 does not cause the second accident."
+
+[[relation]]
+id = "a8b8ae8e-a18d-4643-a422-ed3bac656788"
+label = "Test by SubjectFocalRoles.controls (9bbbe1ef)"
+subject_kind = "result"
+subject_id = "7ac7d5bf-e4ec-4c60-9d84-6fb8e340058c"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9bbbe1ef-d07b-4baa-87e1-05cb3ff488aa"
+note = "Omit the subject-to-productive-cause bridge. Keep the two selected creatures secondary in subject0 under common and set CausesIn to the empty relation. The common-center and creature premises hold and neither accident has the required cause from subject0."

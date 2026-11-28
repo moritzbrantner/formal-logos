@@ -1,0 +1,10 @@
+{
+  "id": "fe616125-4e22-499d-8f05-fe819b69d420",
+  "label": "Test by ContingencyGrounding.controls (38394aad)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "38394aad-234f-402c-994f-3d451636c15b",
+  "note": "Witness R1 and the receiver reading together in uncausedX at true. Both bearers exist and x is contingent. Its esse is received in the principle false, which is in receptive potency to the esse-principle true."
+}

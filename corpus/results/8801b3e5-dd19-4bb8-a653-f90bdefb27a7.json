@@ -1,0 +1,11 @@
+{
+  "id": "8801b3e5-dd19-4bb8-a653-f90bdefb27a7",
+  "label": "Composite cause of being from the restricted temporal self-uniter ban",
+  "argument_id": "157a5c52-33fe-4454-bbeb-ce896f755992",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.NoSelfCauseScope.compositionOfNoSelfUniter",
+  "comparator_config": "results/8801b3e5-dd19-4bb8-a653-f90bdefb27a7/comparator.json",
+  "status": "solution-present",
+  "description": "Two distinct components give a uniter. If it is the composite, temporal composer coverage gives precisely the diagonal excluded on its tuple. The same distinct uniter then causes the composite's esse by the separate uniting-to-esse premise."
+}

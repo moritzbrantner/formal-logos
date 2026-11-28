@@ -7,7 +7,9 @@
     "sha256": "sha256:c3d23024a96a24943bd4c87bdd85e543958cdb4d464a9ba51c40e41e18811951",
     "encoding": "utf-8",
     "language": "eng",
-    "license": "Public domain in the US (1922 publication); Project Gutenberg License for the ebook. No Wayback fallback is pinned yet; the snapshot is fragile to live-page drift. Only hashes, locators and a short incipit are committed."
+    "license": "Public domain in the US (1922 publication); Project Gutenberg License for the ebook. Wayback capture 20261107233304 pinned (byte-identical; formal-logos issue #2013, 2026-11-26). Only metadata and short incipits are committed.",
+    "wayback_url": "https://web.archive.org/web/20261107233304id_/https://www.gutenberg.org/files/5740/5740-pdf.pdf",
+    "wayback_sha256": "sha256:c3d23024a96a24943bd4c87bdd85e543958cdb4d464a9ba51c40e41e18811951"
   },
   "passages": [
     {

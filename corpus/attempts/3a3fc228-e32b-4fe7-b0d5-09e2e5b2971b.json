@@ -1,0 +1,31 @@
+{
+  "id": "3a3fc228-e32b-4fe7-b0d5-09e2e5b2971b",
+  "label": "Root links from Peter Railton, Moral Realism",
+  "statement_ids": [
+    "56421a6e-7887-5435-9e03-a6bd2ff9a919",
+    "5f15a9b4-3ea9-59dd-91f4-95d1c6d6cff8",
+    "f5d0ade5-56e1-52ce-867f-5d802c1c8dd1",
+    "ca79fcde-1b83-5910-a9f9-a0b3c8924590"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "pp. 165, 182–183, §§I and III: objective but relational properties: Railton describes a relational natural basis for evaluative facts that can differ from what appraisers believe about them. Applying this to the target requires the relevant moral facts to have that independence with respect to the selected appraisers and attitudes, as distinct from independence from every fact about people. pp. 175–176, §III: reduction basis, idealization and explanation: Railton's reduction basis makes objective-interest ascriptions correct and explains the idealized response. Extending that direction to the case's moral thought and talk requires mapping the interests to the selected moral property and establishing the same explanatory order there. pp. 201–204, §V: limitations, obligation and reasons: Railton's account gives a reason to separate instrumental rationality for a particular agent from moral obligation. Applying it to the formal example needs a genuinely obligatory act under impartial justification and an agent lacking an instrumental reason for that very act. pp. 204–205, §VI: reforming definitions and assessment: Railton treats the adequacy of a proposed reduction as answerable to its evaluative role and empirical explanatory success. The formal ascription clause still needs a defended identification of the ascribed natural property with the appropriate evaluative fact.",
+  "evidence": [
+    "f7dcdd86-cd3d-579b-ab74-542db73363f0",
+    "6b8e734b-1119-546c-8ef4-e81a63574557",
+    "25d94c29-59a7-5b98-ab47-8694d2d59cf6",
+    "817f6760-b841-5db3-a714-3a8c1e609390",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

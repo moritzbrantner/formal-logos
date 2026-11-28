@@ -1,0 +1,10 @@
+{
+  "id": "5b70b188-5d40-4eb3-82ae-7a7608a87bab",
+  "label": "Source qualification for 096e6131 from reading 55d54d49",
+  "subject_kind": "claim",
+  "subject_id": "bc9cee87-3991-5af2-bed8-95a4896f9d67",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "096e6131-a286-57d1-af74-c8a285e39b15",
+  "note": "The later remark explains the appearance of denying mental processes and explicitly avoids that inference. The target's rejection of a private-language proposal needs no denial of occurring mental processes."
+}

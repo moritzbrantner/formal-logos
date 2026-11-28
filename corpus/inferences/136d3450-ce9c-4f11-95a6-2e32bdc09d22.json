@@ -1,0 +1,13 @@
+{
+  "id": "136d3450-ce9c-4f11-95a6-2e32bdc09d22",
+  "label": "Selected-world calibration gives an underived CONCRETE_6 witness (inference)",
+  "input_statement_ids": [
+    "d236f537-dd57-50ec-9676-cee87b19242a",
+    "0e02cd69-8fb0-4859-8287-937440c84b5b"
+  ],
+  "output_statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976",
+  "rule": "Existential elimination, selected-world concreteness calibration and restriction to concrete supporters",
+  "meaning": "For the supplied Profile, take the witness of NecessarilyUnderived with its support parameter fixed to that Profile's grounds. Apply the calibration at w to the same witness's existence there. Keep its de re necessity relative to w and specialize the incoming-edge exclusion at every admitted world to existing concrete candidates. The two sense links record this passage from the broader underived bundle to the restricted ground exclusion and its retained modal conjunct. The separate calibration is needed for an unspecified witness. In the omission control the necessary underived bearer is classified as nonconcrete while the actually present concrete bearer is contingent.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

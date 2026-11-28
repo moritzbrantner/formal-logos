@@ -20,7 +20,7 @@ results = "TruthCore.Results.Causality.DeiFiliusLordBlessed"
 id = "123d394b-11ce-449a-a8b6-7fda5a254a6d"
 label = "Whatever HAS_INTELLECT_1, HAS_WILL_1 and causes the being of all directs all else to an end"
 lean = "UniversalIntellectualCauseDirectsAll"
-paraphrase = "Open bridge, analyst formulation, unattributed. Whatever has intellect (HAS_INTELLECT_1), has will (HAS_WILL_1) and causes the being of every other being in act as to being (IsCreatorOfAll) directs each other being in act as to being to some end (Directs g x e, the quinta via / q.103 relation). The three are separate conjuncts: the antecedent does not say that the being causes THROUGH its intellect and will (definition 92c03350 leaves freedom of the act unencoded). After ST I q.22 a.2: every agent acts for an end, and the ordering of effects to that end extends as far as the causality of the first agent extends. That reason presupposes intellectual, voluntary agency (cf. q.19 a.4, God causes by will, not by necessity of nature), so the bridge also carries an unstated step: a being with intellect and will that causes the being of all does so through them. The relevant alternative is necessary emanation by an intellect (a first intellect from which everything else proceeds by necessity of its nature, not by choice); no independent justification for it is on file, and it is recorded as a named alternative, not as an objection. Restricted to a cause of the being of ALL others. The side effects on file (effects outside an intelligent agent's intention) all involve a particular cause, and their mechanism, according to q.22 a.2 ad 1 (attributed, unpinned), is the concurrence of other causes not ordered by that cause; that mechanism is absent when one cause gives being to everything else. This is a reason from the cited reply, not a logical consequence of the antecedent. It does not say how the direction is carried out (immediately or through intermediaries, q.103 a.6), what the being knows of each thing (it says nothing about the mode of cognition), nor that the end is the same for all. Control part 4: without it, a being with the nine directs and governs nothing and is not LORD_2."
+paraphrase = "Open bridge, analyst formulation, unattributed. Whatever has intellect (HAS_INTELLECT_1), has will (HAS_WILL_1) and causes the being of every other being in act as to being (IsCreatorOfAll) directs each other being in act as to being to some end (Directs g x e, the quinta via / q.103 relation). The three are separate conjuncts: the antecedent does not say that the being causes THROUGH its intellect and will (definition 92c03350 leaves freedom of the act unencoded). The pinned ST I q.22 a.2 co. supports the narrower divine case (claim 7ab92b2d-2471-43f6-af1b-a8dee675ec50): every agent acts for an end, and the ordering of effects to that end extends as far as the causality of the first agent extends. That reason presupposes intellectual, voluntary agency (cf. q.19 a.4, God causes by will, not by necessity of nature), so the bridge also carries an unstated step: a being with intellect and will that causes the being of all does so through them. The relevant alternative is necessary emanation by an intellect (a first intellect from which everything else proceeds by necessity of its nature, not by choice); no independent justification for it is on file, and it is recorded as a named alternative, not as an objection. Restricted to a cause of the being of ALL others. The side effects on file (effects outside an intelligent agent's intention) all involve a particular cause, and their mechanism, according to the pinned ST I q.22 a.2 ad 1, is the concurrence of other causes not ordered by that cause; that mechanism is absent when one cause gives being to everything else. This is a reason from the cited reply, not a logical consequence of the antecedent. It does not say how the direction is carried out (immediately or through intermediaries, q.103 a.6), what the being knows of each thing (it says nothing about the mode of cognition), nor that the end is the same for all. Control part 4: without it, a being with the nine directs and governs nothing and is not LORD_2."
 definitions = ["DEF-HAS-INTELLECT", "DEF-HAS-WILL", "92c03350-6809-497d-b123-2ffb11c0e0c1", "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1"]
 disambiguations = ["DISAMB-IN-ACT", "DISAMB-INTELLECT-AND-SENSE-COGNITION"]
 
@@ -168,3 +168,23 @@ object_id = "Whatever is BLESSED_2 is BLESSED_1"
 verification_result_id = "PERFECT_2 intellect being BLESSED_1 gives BLESSED_2 being BLESSED_1"
 strictness_result_id = "Controls for the typed LORD_2 and BLESSED_2 readings, checked"
 note = "Same InAct, HasIntellect and MostBlessed. The strong version gives BLESSED_1 to every perfect being with intellect; the weak one only to such a being that is also good as to being and in act in understanding. Control part 3: a perfect intellectual being not in act in understanding satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Controls for the typed LORD_2 and BLESSED_2 readings, checked"
+label = "Test by Controls for the typed LORD_2 and BLESSED_2 readings, checked"
+subject_kind = "result"
+subject_id = "8306684c-ca33-474b-b212-fd7013c3783a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bb3d4417-b2f6-4310-9433-21ff2e386780"
+note = "Tests the converse strength implication in the registered interpretation. Same InAct, CausesIn, esse and IsLord. The strong version gives LORD_1 to every cause of the being of all; the weak one only to such a cause that also governs everything else. Control part 2: a cause of the being of all that governs nothing satisfies the weak version and falsifies the strong one."
+
+[[relation]]
+id = "Test by Controls for the typed LORD_2 and BLESSED_2 readings, ch for Whatever is PERFECT_2 and (1)"
+label = "Test by Controls for the typed LORD_2 and BLESSED_2 readings, ch for Whatever is PERFECT_2 and (1)"
+subject_kind = "result"
+subject_id = "8306684c-ca33-474b-b212-fd7013c3783a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dc3ec456-9fd1-4e1a-8690-c529fe831ee2"
+note = "Tests the converse strength implication in the registered interpretation. Same InAct, HasIntellect and MostBlessed. The strong version gives BLESSED_1 to every perfect being with intellect; the weak one only to such a being that is also good as to being and in act in understanding. Control part 3: a perfect intellectual being not in act in understanding satisfies the weak version and falsifies the strong one."

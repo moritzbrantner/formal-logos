@@ -1,0 +1,14 @@
+{
+  "id": "8b0b86f4-e2d0-4c54-89bb-9d428445358a",
+  "label": "Aquinas, I q.16 a.5 ad 1: God knows all complex objects in one simple act",
+  "statement_id": "dd1348f7-f1bb-4528-87b3-b6bf99907b7d",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.16 a.5 ad 1",
+  "interpretation": "The reply preserves divine knowledge of complex contents while denying composition and division as operations in the divine intellect. The body grounds divine truth in the identity of his being and understanding and gives that understanding as the measure and cause of every other being and intellect.",
+  "status": "formalized",
+  "attribution": "The passage states that in his simple act of understanding God judges all things and knows all complex objects of understanding, which is the premise.",
+  "definition_ids": [
+    "0fa78db2-05d6-5c3e-b8c9-04124ccc5776",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4"
+  ]
+}

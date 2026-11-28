@@ -15,7 +15,7 @@
   ],
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Broader alternative-edge audit found four consequential semantic-scope issues. Checked exact joint truth-as-provability/composition package with populated signed thoughts; removed false rival edge. Derived exact negative realist-order sibling from unchanged full anti-order plus existing OPEN asymmetry and moral witness; retained empty/populated compatibility and neither controls. Reclassified raw TLP/general arguability and PLA text-reading edges as interpretive attacks; new typed natural-theology profile separates meaningfulness, candidate/world-premise admission, consequence, independently OPEN warrant and finite-observation standards, with exact negative projection explicitly transcription and meaningful-but-unarguable populated control. Rejected treating opposite explanation directions as automatically incompatible, identifying finite profiles with historical accounts, conflating nonsense/falsity or logical consequence/warrant, and claiming named readings exhaustive. Actual-record synthetic-refutation regressions reproduce legacy false closure and verify corrected targets stay open; no actual raw rival refutation or floor change. Exact findings, proof boundaries and remaining profile/source/roster/criterion blockers persist in docs/notes/semantic-rival-scope.md.",
+  "summary": "Broader alternative-edge audit found four consequential semantic-scope issues. Checked exact joint truth-as-provability/composition package with populated signed thoughts; removed false rival edge. Derived exact negative realist-order sibling from unchanged full anti-order plus existing OPEN asymmetry and moral witness; retained empty/populated compatibility and neither controls. Reclassified raw TLP/general arguability and PLA text-reading edges as interpretive attacks; new typed natural-theology profile separates meaningfulness, candidate/world-premise admission, consequence, independently OPEN warrant and finite-observation standards, with exact negative projection explicitly transcription and meaningful-but-unarguable populated control. Rejected treating opposite explanation directions as automatically incompatible, identifying finite profiles with historical accounts, conflating nonsense/falsity or logical consequence/warrant, and claiming named readings exhaustive. Actual-record synthetic-refutation regressions reproduce legacy false closure and verify corrected targets stay open; no actual raw rival refutation or floor change. Exact findings, proof boundaries and remaining profile/source/roster/criterion blockers persist in docs/notes/semantic-rival-scope.md.\n\nCuration pass 2, lane D (#2103, 2026-11-27). f35bcedf remains unplaced. Its toy profile has meaningful divine content and a formal candidate argument, but the candidate lacks its independent warrant condition. This tests the registered off-path candidate-warrant condition 1b56e1aa, with the stipulated domain held fixed.\n\nCuration pass 2, lane D batch 3 (#2103, 2026-11-27). 6fc3b602 remains unplaced. The inhabited moral slice contains the sole Unit content. Setting both explanation directions true there witnesses failure of ExplanatoryOrderAsymmetric. With Moral empty, asymmetry and both orders hold vacuously. On the populated slice with both directions false, asymmetry holds while each universal order fails. The exact orders and the asymmetry premise are off path.",
   "evidence": [
     "74f123ce-4e4f-5d02-b505-95a0d8a5e4ce",
     "a8d322f6-1627-5ba3-ae84-e5a723cd4eb2",
@@ -23,5 +23,23 @@
     "d0b1c36d-f2c8-5594-a94f-e47bed6545b0",
     "f35bcedf-88b8-59bf-9896-ffe1bfc0a3f7",
     "PR-1149"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2123"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2140"
+    }
   ]
 }

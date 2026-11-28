@@ -1,0 +1,10 @@
+{
+  "id": "22b43dc9-ccdc-4ae0-8613-6e2c88e04251",
+  "label": "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Ash'arite (1)",
+  "subject_kind": "result",
+  "subject_id": "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6948dde0-64ef-550b-ae3c-d30b3e113986",
+  "note": "Tests omission of this premise from movedOnlyAsInPotencyFromAshariteRefutation in the finite Asharite moved-without-potency interpretation."
+}

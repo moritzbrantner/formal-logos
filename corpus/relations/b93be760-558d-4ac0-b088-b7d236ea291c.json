@@ -1,0 +1,10 @@
+{
+  "id": "b93be760-558d-4ac0-b088-b7d236ea291c",
+  "label": "Source qualification for bc260b57 from reading b05c83c3",
+  "subject_kind": "claim",
+  "subject_id": "b480f466-5489-5738-bae8-65219c87e496",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "bc260b57-ed4c-5298-afb5-5e3056c0a241",
+  "note": "Hume explicitly allows sustained attention without the associated transition. This restricts a reading of the causal role of association as exceptionless. To transfer the example one must compare that general association with the case's repeated-conjunction trigger and expectation predicate."
+}

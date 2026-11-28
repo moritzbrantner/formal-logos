@@ -1,0 +1,11 @@
+{
+  "id": "776497c3-1617-484e-9e8b-ab9581a55e81",
+  "label": "A necessary CONCRETE_6 individual from the locally calibrated fusion",
+  "argument_id": "5ef4e323-8685-47f4-9909-40e904e4c131",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.necessaryConcrete",
+  "comparator_config": "results/776497c3-1617-484e-9e8b-ab9581a55e81/comparator.json",
+  "status": "solution-present",
+  "description": "Deny any actual NECESSARY_2 concretum. A necessary part of the chosen actual sum or of any of its actual causes would exist by the local actual-part policy and be concrete by the local calibration, contradicting the denial. The actual sum therefore gets a cause with actual endpoints. Its cause has no necessary parts, so it belongs to the selected fusion family. The upper-bound clause makes the cause a part of the sum, hence they overlap, contradicting causal nonoverlap. The conclusion does not identify the concrete necessary witness with the selected sum or its cause. The actual Sum2 premise explicitly fixes its family by the no-necessary-parts predicate."
+}

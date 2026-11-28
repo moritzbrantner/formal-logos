@@ -1,0 +1,10 @@
+{
+  "id": "dbd4ba4e-c007-4549-b062-7ff02ee84d78",
+  "label": "Matched giving assignments for an undestroyed contingent receiver (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "34e4ff72-0ab4-4c76-9f37-4ccc361f1aa1",
+  "rule": "Reuse the necessary-origin witness and evaluate both giving assignments at the same moments",
+  "meaning": "A model comparison with the explanation relation, presence, receiver and standing receipt held fixed. Contingency is witnessed by non-origination in the accessible alternative, without any instance of existential loss.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

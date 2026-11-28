@@ -315,3 +315,223 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-C381-TAUGHT-EACH-ARTICLE-AS-REVEALED"
 note = "Article 1 opens with 'we believe' (Pisteuomen), which governs the whole creed. That the council thereby taught each article as revealed, rather than professed it, is the analyst's reading; only article 1's claim is cited."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus' self-ascribed auth (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus' self-ascribed auth (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "02bcb70d-f2f5-52af-b050-3a033999a0f9"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Whatever the Council of C (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Whatever the Council of C (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0434c90e-18e8-590a-bc84-25c6d8a452c3"
+note = "Tests omitting this premise in the encoded creedProposedFromC381 argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Open historical premise, (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Open historical premise, (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "067cd417-4570-5684-a514-d9af55267442"
+note = "Tests omitting this premise in the encoded selectedChurchFromAttestation argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The narrative reports Jes (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The narrative reports Jes (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0b7130f1-144a-5129-b99a-647303a06d7f"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Commission reports from t (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Commission reports from t (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1d693b5c-ea47-5df4-baae-d034bfddba42"
+note = "Tests omitting this premise in the encoded commissionReportsFromTestimony argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for A society that holds a go (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for A society that holds a go (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1f4478a7-e1e0-5d55-a2ee-80c298bc62d6"
+note = "Tests omitting this premise in the encoded selectedChurchFromCommissionReports argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Mark reports Jesus predic (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Mark reports Jesus predic (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2f888484-d6a6-59ce-9d39-0ede9cd9228f"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkTrial, stageFourFromMarkTrial arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Matthew 28 and John 21 co (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Matthew 28 and John 21 co (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b01545c-78ae-5b26-b55b-d346b9c3c720"
+note = "Tests omitting this premise in the encoded commissionReportsFromTestimony argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Mark reports Jesus affirm (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Mark reports Jesus affirm (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "759acbc1-17ea-50b4-905c-3aacea988e7e"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkTrial, stageFourFromMarkTrial arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus rose from the de (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus rose from the de (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7feeb087-3873-5a85-aa20-39cba2e91a92"
+note = "Tests omitting this premise in the encoded resurrectionConfirmsMandateFromRaising argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The Council of Constantin (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The Council of Constantin (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "828bbf3f-cb29-5dc2-ac2b-731a81fe2226"
+note = "Tests omitting this premise in the encoded creedProposedFromC381 argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus gave a governing (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus gave a governing (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "87b911fb-fcb0-5bb7-87d4-6abfcaa0db0c"
+note = "Tests omitting this premise in the encoded selectedChurchFromCommissionReports argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus said every content (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus said every content (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "888895ec-e4f4-5fb1-87d1-14b1b2a2906c"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkTrial, stageFourFromMarkTrial arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for A God's raising Jesus, if (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for A God's raising Jesus, if (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "bb88731c-c42e-53e0-a138-49e72ad40eb6"
+note = "Tests omitting this premise in the encoded resurrectionConfirmsMandateFromRaising argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus himself affirmed (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for If Jesus himself affirmed (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ca658204-d3b4-5ecd-a1fe-1a37d033c615"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkTrial, stageFourFromMarkTrial arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for In asserting the authorit (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for In asserting the authorit (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d090355c-98ac-5ba0-a570-152e5eb7e626"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The Catholic Church is a (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for The Catholic Church is a (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d453e09f-fb59-595e-92a3-150339d36c71"
+note = "Tests omitting this premise in the encoded christsChurchIsCatholicFromUniqueness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Report-to-event premise: (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Report-to-event premise: (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "da573220-03c0-5361-a1d7-e117e78e2b77"
+note = "Tests omitting this premise in the encoded selectedChurchFromCommissionReports argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Whatever authority assert (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Whatever authority assert (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dee1f771-7330-5df2-8f8f-86009d9283b2"
+note = "Tests omitting this premise in the encoded pilotClaimsFromMarkForgiveness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Any two visible societies (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Any two visible societies (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e0e35789-1b8d-5fd7-a5a5-b5ab20d20fee"
+note = "Tests omitting this premise in the encoded christsChurchIsCatholicFromUniqueness argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for John 20.21–23 is independ (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for John 20.21–23 is independ (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e2dfc958-eccf-549a-897e-fbb85b5b1b67"
+note = "Tests omitting this premise in the encoded selectedChurchFromAttestation argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus rose from the dead (1)"
+label = "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus rose from the dead (1)"
+subject_kind = "result"
+subject_id = "47011ff0-25d2-587e-844a-17d6b1a7b11f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f93a88f9-d8f9-5b2a-99ae-b0dea250403f"
+note = "Tests omitting this premise in the encoded stageFourFromMarkTrial argument, with the other premises retained and the conclusion false in each corresponding control."

@@ -38,6 +38,7 @@ disambiguations = ["b4da30a9-86f7-57cc-a0c9-17b5dd216ccd"]
 [[argument]]
 id = "Acyclic exercises and finite identity fibres exclude a return by backward lifting"
 theorem = "actualIdentityAncestryAcyclicOfExerciseLifting"
+strong_version_needed = { "9c717c08-4046-42d8-ae8b-763ef6b1b394" = "Finiteness supplies a minimal exercise in the inhabited eligible fibre under strict exercise reachability. The inhabited-fibre sibling alone only gives an exercise and does not give a minimal one." }
 comparator_theorems = ["liftActualEssePath"]
 premises = [
   "The eligible exercise relation has no nonempty finite directed cycle",
@@ -61,3 +62,13 @@ rule = "Check each exercise model against the same reciprocal actual esse-supply
 meaning = "Reuse the established acyclic three-token feedback and acyclic successor-chain examples. In three-token feedback the actual edge B → A cannot lift at A₀, despite the projected pair B₁ → A₂. In the alternating chain the successor exercise supplies every target and is borne by the other bearer. The even indices give an infinite fibre over the actual identity bearer. Both models project exactly to the reciprocal actual esse-supply relation whose two-edge return goes through that same identity. This certifies separations between the stated assumptions under their formal interpretations."
 [argument.senses]
 EVENT_CAUSATION_ENTITY_FEEDBACK_SIMULTANEITY = "EVENT_CAUSATION_ENTITY_FEEDBACK_SIMULTANEITY_3"
+
+[[relation]]
+id = "Test by Finite feedback and an unbounded chain test exercise lifting"
+label = "Test by Finite feedback and an unbounded chain test exercise lifting"
+subject_kind = "result"
+subject_id = "88a50d6f-636a-40bb-b952-fe811a9bf6b9"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4bd2d25b-27c6-4cfe-9b5f-bfa11511c176"
+note = "Tests the backward prior-exercise lifting in an acyclic actual-identity cause interpretation and checks how separate acyclic chains behave."

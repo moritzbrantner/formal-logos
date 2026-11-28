@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.LocalActualFusion.calibrationStrictness"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

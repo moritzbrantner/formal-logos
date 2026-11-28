@@ -1,0 +1,10 @@
+{
+  "id": "3073c536-3ddf-4276-942f-01f8d3b7884e",
+  "label": "Test by Comparison and omission bundle for Thinker-local anti-brute-root principle: every conc (1)",
+  "subject_kind": "result",
+  "subject_id": "a94fd849-9264-5497-b9d1-1828cf81744a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae",
+  "note": "Tests omission of this premise from necessaryConcreteAncestor in the assigned thinker or ancestry profile retaining the other nonlogical inputs and with no necessary concrete ancestor."
+}

@@ -25,7 +25,14 @@ use std::{
 type Obj = Map<String, Value>;
 type Res<T> = Result<T, String>;
 
-const ENTITY_KINDS: &[&str] = &["argument", "claim", "inference", "source", "statement"];
+const ENTITY_KINDS: &[&str] = &[
+    "argument",
+    "claim",
+    "inference",
+    "result",
+    "source",
+    "statement",
+];
 const MATHLIB_PERMITTED_AXIOMS: &[&str] = &["propext", "Classical.choice", "Quot.sound"];
 const FLOOR_BASES: &[&str] = &["common_ground", "observation", "retorsion"];
 /// `legacy_uuid("statement", "STMT-EXCLUDED-MIDDLE")`.
@@ -1276,18 +1283,12 @@ fn validate_attempt(
     if !string(attempt, "summary").is_some_and(|summary| !summary.trim().is_empty()) {
         return Err("summary must be a non-empty string".into());
     }
-    let pr = |reference: &str| {
-        reference.strip_prefix("PR-").is_some_and(|number| {
-            number.starts_with(|c: char| ('1'..='9').contains(&c))
-                && number.chars().all(|c| c.is_ascii_digit())
-        })
-    };
     let references = attempt.get("evidence").and_then(Value::as_array);
     if !references.is_some_and(|references| {
         references.iter().all(|reference| {
             reference
                 .as_str()
-                .is_some_and(|reference| evidence.contains(reference) || pr(reference))
+                .is_some_and(|reference| evidence.contains(reference) || pr_reference(reference))
         })
     }) {
         return Err(
@@ -1304,6 +1305,90 @@ fn validate_attempt(
     }
     if string(attempt, "outcome") == Some("blocked") && blocker.is_none() {
         return Err("blocked attempts require a blocker".into());
+    }
+    if let Some(workers) = attempt.get("workers") {
+        validate_attempt_workers(workers)?;
+    }
+    Ok(())
+}
+
+/// A `PR-<positive number>` reference.
+fn pr_reference(reference: &str) -> bool {
+    reference.strip_prefix("PR-").is_some_and(|number| {
+        number.starts_with(|c: char| ('1'..='9').contains(&c))
+            && number.chars().all(|c| c.is_ascii_digit())
+    })
+}
+
+const WORKER_ROLES: &[&str] = &["author", "repair", "review"];
+const WORKER_FIELDS: &[&str] = &["role", "provider", "model", "effort", "date", "pr"];
+
+/// The optional attempt `workers` list (owner direction, 2026-11-26): who
+/// worked on the attempt, one appended entry per agent and role.
+fn validate_attempt_workers(workers: &Value) -> Res<()> {
+    let workers = workers
+        .as_array()
+        .filter(|workers| !workers.is_empty())
+        .ok_or("workers must be a non-empty list when present")?;
+    for (index, worker) in workers.iter().enumerate() {
+        let at = format!("workers[{index}]");
+        let worker = worker
+            .as_object()
+            .ok_or_else(|| format!("{at} must be an object"))?;
+        if let Some(field) = worker
+            .keys()
+            .find(|key| !WORKER_FIELDS.contains(&key.as_str()))
+        {
+            return Err(format!(
+                "{at} has unknown field {field}; allowed: {}",
+                WORKER_FIELDS.join(", ")
+            ));
+        }
+        let nonempty = |field: &str| {
+            worker
+                .get(field)
+                .and_then(Value::as_str)
+                .is_some_and(|text| !text.trim().is_empty())
+        };
+        if !worker
+            .get("role")
+            .and_then(Value::as_str)
+            .is_some_and(|role| WORKER_ROLES.contains(&role))
+        {
+            return Err(format!(
+                "{at}.role must be one of {}",
+                WORKER_ROLES.join(", ")
+            ));
+        }
+        for field in ["provider", "model"] {
+            if !nonempty(field) {
+                return Err(format!("{at}.{field} must be a non-empty string"));
+            }
+        }
+        if worker.contains_key("effort") && !nonempty("effort") {
+            return Err(format!(
+                "{at}.effort must be a non-empty string when present"
+            ));
+        }
+        if !worker
+            .get("date")
+            .and_then(Value::as_str)
+            .is_some_and(iso_date)
+        {
+            return Err(format!(
+                "{at}.date must be an ISO calendar date (YYYY-MM-DD)"
+            ));
+        }
+        if let Some(pr) = worker.get("pr")
+            && !pr.as_str().is_some_and(pr_reference)
+        {
+            return Err(format!(
+                "{at}.pr must be a PR-<positive number> reference when present"
+            ));
+        }
+    }
+    if !distinct(workers) {
+        return Err("workers must not contain duplicate entries".into());
     }
     Ok(())
 }
@@ -1640,6 +1725,47 @@ fn validate_settlement_actions(statement: &Obj) -> Res<()> {
     Ok(())
 }
 
+/// The optional `connection_plan` of a statement (AGENTS.md, "Connect every
+/// library to the case"): a statement outside the root's component names the
+/// root-route statement it is meant to reach, the missing bridge and the
+/// blocker. `truth connectivity --base` requires it of new disconnection.
+pub(crate) fn validate_connection_plan(statement: &Obj, statements: &HashSet<&str>) -> Res<()> {
+    let Some(plan) = statement.get("connection_plan") else {
+        return Ok(());
+    };
+    let plan = plan
+        .as_object()
+        .ok_or("connection_plan must be an object")?;
+    if let Some(field) = plan
+        .keys()
+        .find(|key| !CONNECTION_PLAN_FIELDS.contains(&key.as_str()))
+    {
+        return Err(format!(
+            "connection_plan has unknown field {field}; allowed: {}",
+            CONNECTION_PLAN_FIELDS.join(", ")
+        ));
+    }
+    for field in CONNECTION_PLAN_FIELDS {
+        if !string(plan, field).is_some_and(|value| !value.trim().is_empty()) {
+            return Err(format!(
+                "connection_plan.{field} must be a non-empty string"
+            ));
+        }
+    }
+    let target = text(plan, "target_statement_id");
+    if !statements.contains(target) {
+        return Err(format!(
+            "connection_plan.target_statement_id {target} is not a known statement id"
+        ));
+    }
+    if target == text(statement, "id") {
+        return Err("connection_plan.target_statement_id must name another statement".into());
+    }
+    Ok(())
+}
+
+const CONNECTION_PLAN_FIELDS: [&str; 3] = ["target_statement_id", "missing_bridge", "blocker"];
+
 fn validate_case_split(
     result: &Obj,
     statements: &HashSet<&str>,
@@ -1748,26 +1874,53 @@ fn validate_argument_derivation(
 }
 
 fn validate_premise_program_relation(path: &str, relation: &Obj) -> Res<()> {
-    let expected: Option<(&[&str], &str)> = match text(relation, "predicate") {
+    let predicate = text(relation, "predicate");
+    let expected: Option<(&[&str], &[&str])> = match predicate {
         "alternative_to" | "instance_of_schema" | "strengthens" => {
-            Some((&["statement"], "statement"))
+            Some((&["statement"], &["statement"]))
         }
-        "refutes" | "root_route" => Some((&["argument"], "statement")),
-        "attacks" => Some((&["argument", "claim", "statement"], "statement")),
-        "supports" => Some((&["claim"], "statement")),
+        "refutes" | "root_route" => Some((&["argument"], &["statement"])),
+        "attacks" => Some((&["argument", "claim", "statement"], &["statement"])),
+        "supports" => Some((&["claim"], &["statement"])),
+        // A control, model, countermodel or consistency check names what it
+        // tests. It is navigation, not warrant: `frontier` ignores it.
+        "tests" => Some((&["argument", "result"], &["argument", "statement"])),
         _ => None,
     };
-    let Some((subjects, object)) = expected else {
+    let Some((subjects, objects)) = expected else {
+        if [
+            text(relation, "subject_kind"),
+            text(relation, "object_kind"),
+        ]
+        .contains(&"result")
+        {
+            return Err(format!(
+                "{path}: only a tests relation may have a result endpoint"
+            ));
+        }
         return Ok(());
     };
     if !subjects.contains(&text(relation, "subject_kind"))
-        || text(relation, "object_kind") != object
+        || !objects.contains(&text(relation, "object_kind"))
     {
         return Err(format!(
-            "{path}: {} relates {} to {object}",
-            text(relation, "predicate"),
-            subjects.join("/")
+            "{path}: {predicate} relates {} to {}",
+            subjects.join("/"),
+            objects.join("/")
         ));
+    }
+    if predicate == "tests" {
+        if text(relation, "subject_kind") == text(relation, "object_kind")
+            && text(relation, "subject_id") == text(relation, "object_id")
+        {
+            return Err(format!("{path}: tests relates a record to itself"));
+        }
+        if relation
+            .get("note")
+            .is_some_and(|note| note.as_str().is_none_or(|note| note.trim().is_empty()))
+        {
+            return Err(format!("{path}: a tests note must be nonempty text"));
+        }
     }
     Ok(())
 }
@@ -2653,6 +2806,11 @@ fn validate(
         }
         validate_self_evident(path, fields, &claim_ids, &result_ids, &statement_ids)?;
         validate_settlement_actions(fields).map_err(|error| format!("{path}: {error}"))?;
+        validate_connection_plan(fields, &statement_ids)
+            .map_err(|error| format!("{path}: {error}"))?;
+        if let Some(plan) = fields.get("connection_plan").and_then(Value::as_object) {
+            validate_prose_ids(path, plan, &["missing_bridge", "blocker"], &citable)?;
+        }
         used_definitions.extend(validate_term_links(
             path,
             fields,
@@ -2892,6 +3050,7 @@ fn validate(
                 "statement" => &statement_index,
                 "claim" => &claim_index,
                 "inference" => &inference_index,
+                "result" => &result_index,
                 _ => &argument_index,
             };
             if !index.contains_key(id) {
@@ -4549,5 +4708,188 @@ mod tests {
             relations.push(comparison(extra));
             assert_eq!(strength_difference_warnings(&refs(&relations)).len(), 3);
         }
+    }
+
+    #[test]
+    fn connection_plans_are_optional_and_validated() {
+        let statements = HashSet::from(["S", "T"]);
+        let validate = |plan: Option<serde_json::Value>| {
+            let mut statement = obj(serde_json::json!({"id": "S", "paraphrase": "s"}));
+            if let Some(plan) = plan {
+                statement.insert("connection_plan".into(), plan);
+            }
+            validate_connection_plan(&statement, &statements)
+        };
+        assert_eq!(validate(None), Ok(()));
+        let plan = |target: &str, bridge: &str| {
+            serde_json::json!({"target_statement_id": target,
+                "missing_bridge": bridge, "blocker": "No typed vocabulary yet."})
+        };
+        assert_eq!(validate(Some(plan("T", "S implies T."))), Ok(()));
+        for (plan, error) in [
+            (serde_json::json!([]), "connection_plan must be an object"),
+            (
+                plan("T", " "),
+                "connection_plan.missing_bridge must be a non-empty string",
+            ),
+            (
+                serde_json::json!({"target_statement_id": "T", "missing_bridge": "b"}),
+                "connection_plan.blocker must be a non-empty string",
+            ),
+            (
+                plan("U", "b"),
+                "connection_plan.target_statement_id U is not a known statement id",
+            ),
+            (
+                plan("S", "b"),
+                "connection_plan.target_statement_id must name another statement",
+            ),
+            (
+                serde_json::json!({"target_statement_id": "T", "missing_bridge": "b",
+                    "blocker": "x", "issue": 1}),
+                "connection_plan has unknown field issue; allowed: target_statement_id, missing_bridge, blocker",
+            ),
+        ] {
+            assert_eq!(validate(Some(plan)), Err(error.to_owned()));
+        }
+    }
+
+    fn attempt_with(workers: Option<serde_json::Value>) -> Obj {
+        let mut attempt = obj(serde_json::json!({
+            "id": "0299cc44-5678-4dc9-9a7a-999efb640fba",
+            "statement_ids": ["S"],
+            "date": "2026-11-26",
+            "kind": "derivation",
+            "outcome": "succeeded",
+            "summary": "A derivation.",
+            "evidence": ["PR-1"],
+        }));
+        if let Some(workers) = workers {
+            attempt.insert("workers".into(), workers);
+        }
+        attempt
+    }
+
+    #[test]
+    fn attempt_workers_are_optional_and_validated() {
+        let statements = HashSet::from(["S"]);
+        let evidence = HashSet::new();
+        let validate = |workers| validate_attempt(&attempt_with(workers), &statements, &evidence);
+        assert_eq!(validate(None), Ok(()));
+        let author = serde_json::json!({"role": "author", "provider": "codex",
+            "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2020"});
+        let repair = serde_json::json!({"role": "repair", "provider": "claude",
+            "model": "claude-opus-5-5", "date": "2026-11-26"});
+        assert_eq!(validate(Some(serde_json::json!([author, repair]))), Ok(()));
+        for (workers, error) in [
+            (
+                serde_json::json!([]),
+                "workers must be a non-empty list when present",
+            ),
+            (
+                serde_json::json!({"role": "author"}),
+                "workers must be a non-empty list when present",
+            ),
+            (
+                serde_json::json!(["author"]),
+                "workers[0] must be an object",
+            ),
+            (
+                serde_json::json!([author, {"role": "writer", "provider": "codex",
+                    "model": "m", "date": "2026-11-26"}]),
+                "workers[1].role must be one of author, repair, review",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": " ", "model": "m",
+                    "date": "2026-11-26"}]),
+                "workers[0].provider must be a non-empty string",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex",
+                    "date": "2026-11-26"}]),
+                "workers[0].model must be a non-empty string",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "effort": "", "date": "2026-11-26"}]),
+                "workers[0].effort must be a non-empty string when present",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-31"}]),
+                "workers[0].date must be an ISO calendar date (YYYY-MM-DD)",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-26", "pr": "2020"}]),
+                "workers[0].pr must be a PR-<positive number> reference when present",
+            ),
+            (
+                serde_json::json!([{"role": "review", "provider": "codex", "model": "m",
+                    "date": "2026-11-26", "agent": "astra"}]),
+                "workers[0] has unknown field agent; allowed: role, provider, model, effort, date, pr",
+            ),
+            (
+                serde_json::json!([author, author]),
+                "workers must not contain duplicate entries",
+            ),
+        ] {
+            assert_eq!(validate(Some(workers)), Err(error.to_owned()));
+        }
+    }
+
+    #[test]
+    fn tests_relations_take_a_result_or_argument_subject() {
+        let relation = |subject_kind: &str, object_kind: &str, extra: Value| {
+            let mut relation = serde_json::json!({"id": "REL", "subject_kind": subject_kind,
+                "subject_id": "S", "predicate": "tests", "object_kind": object_kind,
+                "object_id": "O"});
+            if let (Some(relation), Value::Object(extra)) = (relation.as_object_mut(), extra) {
+                relation.extend(extra);
+            }
+            relation.as_object().cloned().unwrap()
+        };
+        let none = Value::Null;
+        for (subject, object) in [
+            ("result", "statement"),
+            ("result", "argument"),
+            ("argument", "statement"),
+            ("argument", "argument"),
+        ] {
+            assert_eq!(
+                validate_premise_program_relation("r", &relation(subject, object, none.clone())),
+                Ok(())
+            );
+        }
+        let noted = relation(
+            "result",
+            "statement",
+            serde_json::json!({"note": "omits it"}),
+        );
+        assert_eq!(validate_premise_program_relation("r", &noted), Ok(()));
+        assert_eq!(
+            validate_premise_program_relation("r", &relation("statement", "statement", none)),
+            Err("r: tests relates argument/result to argument/statement".to_owned())
+        );
+        let blank = relation("result", "statement", serde_json::json!({"note": " "}));
+        assert_eq!(
+            validate_premise_program_relation("r", &blank),
+            Err("r: a tests note must be nonempty text".to_owned())
+        );
+        let mut itself = relation("argument", "argument", Value::Null);
+        itself.insert("object_id".into(), "S".into());
+        assert_eq!(
+            validate_premise_program_relation("r", &itself),
+            Err("r: tests relates a record to itself".to_owned())
+        );
+        // A result endpoint belongs to `tests` alone.
+        let mut other = relation("result", "statement", Value::Null);
+        other.insert("predicate".into(), "supports".into());
+        assert!(validate_premise_program_relation("r", &other).is_err());
+        other.insert("predicate".into(), "logically_equivalent_to".into());
+        assert_eq!(
+            validate_premise_program_relation("r", &other),
+            Err("r: only a tests relation may have a result endpoint".to_owned())
+        );
     }
 }

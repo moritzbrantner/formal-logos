@@ -1,0 +1,25 @@
+{
+  "id": "14607c5b-297c-4145-9d17-e499fcfad7c9",
+  "label": "Root links from Hannes Leitgeb and André Carus, Rudolf Carnap",
+  "statement_ids": [
+    "2c6f6902-1bec-51c7-9bea-c49009562e95"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§7, \"Quine rejected Carnap’s internal/external distinction, which in Quine’s view relied on an analytic/synthetic distinction\": The existing Quine objection to Carnap is attached through Carnap’s internal/external distinction. The report disputes the analytic/synthetic dependency, and the same entry records a reply challenging that reconstruction. The relation supplies no evidence by itself of a defect in the case’s own existence claim.",
+  "evidence": [
+    "ac605db2-1a33-5964-b699-2b6e5ac15c1a",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

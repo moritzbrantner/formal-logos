@@ -40,3 +40,13 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Populated Boolean dependence counterinterpretations, with and without PLG consistency"
 meaning = "Omitting consistency permits all sequents; omitting the mapping leaves counterfactual dependence unconstrained even alongside a consistent Fine theory, so dependence for being and formal strict ground do not mix without the bridge. This prevents the result from being misreported as a theorem about arbitrary dependence or intrinsic metaphysical priority."
 sense_mixing_control = true
+
+[[relation]]
+id = "Test by Mutual-dependence omission controls for strict-grounding interpretation"
+label = "Test by Mutual-dependence omission controls for strict-grounding interpretation"
+subject_kind = "result"
+subject_id = "4bb9685c-42fb-4427-9d89-496f78394b62"
+predicate = "tests"
+object_kind = "statement"
+object_id = "42756c07-03cd-4b54-8ed6-ed6c1a5132aa"
+note = "Tests omitting the intended dependence-to-strict-ground mapping while retaining consistency of the Fine-style theory, leaving counterfactual dependence unlinked."

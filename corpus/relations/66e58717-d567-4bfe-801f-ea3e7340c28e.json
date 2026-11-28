@@ -1,0 +1,10 @@
+{
+  "id": "66e58717-d567-4bfe-801f-ea3e7340c28e",
+  "label": "Test by Formal fact: none of the eight act/POTENCY_1 premises sh for Nothing has actuality exc (1)",
+  "subject_kind": "result",
+  "subject_id": "51ab02bc-b328-555e-bfd9-4ee0d716c3d4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7067553d-cad9-5d79-b6b2-912e35051530",
+  "note": "Tests omission of the actuality-only-insofar-as-being premise from the eight-premise package retaining sensible motion and per se regress."
+}

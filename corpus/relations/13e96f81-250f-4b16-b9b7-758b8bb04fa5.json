@@ -1,0 +1,10 @@
+{
+  "id": "13e96f81-250f-4b16-b9b7-758b8bb04fa5",
+  "label": "Test by GroundedBeginnings.controls (bf18a0d0)",
+  "subject_kind": "result",
+  "subject_id": "d3d432c9-4a65-466d-9dff-5e4dc6f9d24a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bf18a0d0-f43c-49a6-9876-0dbdf5c5f98a",
+  "note": "Omit well-foundedness among concrete bearers absent at the earlier moment and present later. The history at true starts with an empty bottom moment, and every later-present integer bearer is grounded by the preceding integer bearer, which is also present after bottom."
+}

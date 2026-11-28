@@ -1,0 +1,10 @@
+{
+  "id": "a4453b0c-8ffe-44b7-9d57-831772ed79de",
+  "label": "Test by Required-edge acyclicity characterizes strict extension",
+  "subject_kind": "result",
+  "subject_id": "d8585999-be0f-491d-abc6-ecc8e6afa08c",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "e267588f-2746-484f-a3fd-155a809591a8",
+  "note": "Checks the strict-order extension used by the self-production inference for arbitrary fixed bearer and production data."
+}

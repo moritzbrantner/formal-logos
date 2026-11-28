@@ -1,0 +1,10 @@
+{
+  "id": "209d055b-b168-4c97-bc0d-d677b2eae5ab",
+  "label": "Test by Finite boundaries of the self-cause exclusions",
+  "subject_kind": "result",
+  "subject_id": "0505143b-7a9a-4236-a53c-7c5a5f2aa5d0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3715f518-89a7-5815-8416-990fb686a837",
+  "note": "Tests the self-motion bridge in the finite proper-motor/patient and aggregate-lift assignments."
+}

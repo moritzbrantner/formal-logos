@@ -1,0 +1,11 @@
+{
+  "id": "645be66f-1072-4205-92b5-05c3fa65dfbb",
+  "label": "One individual persists across successors under finite population cover",
+  "argument_id": "76a01e95-7dba-4b10-ae6e-a8bdee48c930",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.FiniteCoverNecessaryIndividual.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.FiniteCoverNecessaryIndividual.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.FiniteCoverNecessaryIndividual.necessaryIndividualOfFiniteCover",
+  "comparator_config": "results/645be66f-1072-4205-92b5-05c3fa65dfbb/comparator.json",
+  "status": "solution-present",
+  "description": "Registers the existing finite_cover_deRe derivation. On one frame, population predicate and base world, excluded middle, accessible-successor existence, absence amalgamation, finite population cover and de dicto population imply that one individual is present at every accessible world. Concrete divine witness identification requires further premises."
+}

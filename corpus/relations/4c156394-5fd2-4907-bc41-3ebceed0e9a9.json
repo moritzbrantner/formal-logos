@@ -1,0 +1,11 @@
+{
+  "id": "4c156394-5fd2-4907-bc41-3ebceed0e9a9",
+  "label": "Esse calibration supplies its CONCRETE_6 direction strength order",
+  "subject_kind": "statement",
+  "subject_id": "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "2d9807a5-ebff-45fd-972f-e241f18713d4",
+  "verification_result_id": "4ead4ca3-7296-4b5c-bced-21e95d684581",
+  "note": "On the projected profile the biconditional also requires CONCRETE_6 to imply esse in re. The implication carries the same concrete predicate, InAct and esse. Grounding data are immaterial to this calibration."
+}

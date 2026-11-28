@@ -1,0 +1,10 @@
+{
+  "id": "3847180b-647f-4b0b-9ded-ee25a3d444ad",
+  "label": "Test by Finite interpretations for the two sense forks: for each for Every use of 'cause' on t (1)",
+  "subject_kind": "result",
+  "subject_id": "f6e67b12-0e1a-512f-a34b-c05112ecef6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "048eac8a-c325-52ad-9627-3f5431eea846",
+  "note": "Tests omission of this premise from noSelfEfficientCauseBySenseFork in the finite causation interpretation selecting the sense branch that the omitted input would have closed."
+}

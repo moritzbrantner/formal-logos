@@ -29,3 +29,13 @@ premises = []
 conclusion = "Addressed echo positive witness and four history omission controls"
 rule = "Stipulated addressed echo history analysis"
 meaning = "One inhabited genuine response satisfies the stipulated attribution bundle. Leaked-access forgery, replay, insertion and successful guessing preserve exactly the visible transcript while respectively violating exclusivity, freshness, integrity and access discipline; each fails AuthoredNow. These five histories are a selected structural protocol model, not exhaustive actual alternatives. Analyst formulation, attribution deferred. Target STMT-RECOGNIZABLE-REVELATION-ANALYSIS; conditional application bridge remains open, see docs/notes/revelation-positive-recognition.md."
+
+[[relation]]
+id = "Test by Addressed echo positive witness and four history omission controls by construction"
+label = "Test by Addressed echo positive witness and four history omission controls by construction"
+subject_kind = "result"
+subject_id = "a59937a6-d8b9-4245-9b2c-677f8ede89c0"
+predicate = "tests"
+object_kind = "argument"
+object_id = "514b965e-292b-42fc-a443-a559f30f1373"
+note = "Tests the candidate-attribution conditions in genuine, forgery, replay, insertion and guess histories with the same visible response."

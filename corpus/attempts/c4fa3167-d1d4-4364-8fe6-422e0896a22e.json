@@ -1,0 +1,53 @@
+{
+  "id": "c4fa3167-d1d4-4364-8fe6-422e0896a22e",
+  "label": "Aquinas on free giving, conservation and contingent absence",
+  "statement_ids": [
+    "d1593e5c-38ff-46a9-9bbb-cede6f825bc9",
+    "f0ac2f76-62fe-4b9b-8427-e0ca8d7a3cef",
+    "94393b5b-8950-4a52-aef1-50cd09232e64",
+    "95bf8780-0e3c-49ba-b636-2274e2997a30"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The earlier comparison with the Dominican translation is now checked in the pinned Corpus Thomisticum Leonine witness of I q.104 a.3. In the body God freely produces creatures, conserves them by continuing to give being, and can withdraw that giving. If he withdrew it, the creatures concerned would cease to be. Ad 1 and ad 3 distinguish withdrawal from an action with non-being as its direct effect. In the separately pinned Latin I q.19 a.10 co. and ad 2 supplies divine free choice about whether a creature is, a.7 ad 4 distinguishes suppositional fixity from absolute necessity, and a.8 co. and replies ascribe contingency or necessity of effects to the efficacy of divine will and different proximate causes.",
+  "blocker": "Match the fixed giver and same receiver to the indexed exercise and show that withholding would terminate the receiver’s esse for each pair covered by the type. The article gives no general grounding of global or roster-relative joint absence in a bearer’s power, and no distribution principle from a collective power to power over each member.",
+  "evidence": [
+    "988f35e6-a728-4955-9561-bc8c266bde57",
+    "9f1c968f-ba49-4181-ba42-08bbc34ff1cf",
+    "PR-2044"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
+    }
+  ]
+}

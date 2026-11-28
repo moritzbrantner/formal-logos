@@ -1,0 +1,10 @@
+{
+  "id": "81c7a827-a270-42b4-86af-5c800fbc3896",
+  "label": "Test by Controls for the MUTABLE and GOD sense forks for MUTABLE fork summary: immutable in on (1)",
+  "subject_kind": "result",
+  "subject_id": "6df6e803-d83f-5fca-b4ca-3b714defa5a1",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "77c3850f-919b-5837-9399-85c34313f80c",
+  "note": "Tests mixing the mutability readings in a finite covered but nonexclusive use profile whose joint no-change conclusion fails."
+}

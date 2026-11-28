@@ -1,0 +1,35 @@
+{
+  "id": "d4fb8678-8dd5-4683-96e0-c1bc873ac9bd",
+  "label": "Reading Aquinas’s participation commentary",
+  "statement_ids": [
+    "9da93cd4-e4ed-536b-8302-4e7acd0e02ed"
+  ],
+  "date": "2026-11-26",
+  "kind": "source-search",
+  "outcome": "succeeded",
+  "summary": "The pinned Turin 1954 lectio 2 distinguishes particular-to-universal, subject-to-accident or matter-to-form, and effect-to-cause participation. Aquinas’s effect-to-cause example is the same air receiving the sun’s light below the brightness it has in the sun. The same analysis cannot be read as assigning a single potency-to-act relation to all three kinds.",
+  "blocker": "Determine which modes fall under ParticipatesIn and show that the participant itself is the potency receiving the same perfection for every relevant ReceivedIn instance.",
+  "evidence": [
+    "PR-2024",
+    "03e73ae6-6d82-4e21-86f8-1ad06bf5a648",
+    "PR-2044"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
+    }
+  ]
+}

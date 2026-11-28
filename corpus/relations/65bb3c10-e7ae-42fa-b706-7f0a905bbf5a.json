@@ -1,0 +1,10 @@
+{
+  "id": "65bb3c10-e7ae-42fa-b706-7f0a905bbf5a",
+  "label": "Test by Selected ancestry uniqueness nonvacuity and omissions for One member of selected’s com (1)",
+  "subject_kind": "result",
+  "subject_id": "e9c3abb0-e798-473a-a1e0-ef11a38ed720",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "177b9b54-212d-5162-b288-d0cb70899f3d",
+  "note": "Tests omitting this premise in the encoded uniqueRoot argument, with the other premises retained and the conclusion false in each corresponding control."
+}

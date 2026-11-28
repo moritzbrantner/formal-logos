@@ -1,0 +1,10 @@
+{
+  "id": "dc21962f-6eba-46a0-a2ec-6d60ddaf3bc5",
+  "label": "Test by Six schema controls witness actual cut-off with capability and nonactual shared recognition…",
+  "subject_kind": "result",
+  "subject_id": "ce059df8-6c75-59e6-9a7c-2457395ed327",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3f303e5a-a3b2-57f4-accb-207139bf9d52",
+  "note": "Tests the realization premise in the finite situation profile where the capability holds without a correct admitted recognition move."
+}

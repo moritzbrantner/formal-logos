@@ -1,0 +1,10 @@
+{
+  "id": "e5020fcc-ce8e-4086-a325-51fc7fa0fe92",
+  "label": "Source qualification for 438caf34 from reading ef798211",
+  "subject_kind": "claim",
+  "subject_id": "3c17915b-386e-5257-b5f6-8484d7248435",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "438caf34-80d5-51bf-806a-d5e7c127e088",
+  "note": "Hume's wording includes a counterfactual gloss alongside succession of similar cases. Transferring results about the test's intervention semantics to that gloss requires a defended interpretation of dependence and a comparison of the relata and interventions. The gloss does not identify the two."
+}

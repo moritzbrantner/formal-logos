@@ -1,0 +1,12 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.FirstPersonWitness.Challenge",
+  "solution_module": "TruthCore.Results.Logic.FirstPersonWitness.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.FirstPersonWitness.existenceFromAssertion",
+    "TruthCore.Results.Logic.FirstPersonWitness.bearingHere",
+    "TruthCore.Results.Logic.FirstPersonWitness.assertionWitness",
+    "TruthCore.Results.Logic.FirstPersonWitness.populationFromAssertion"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

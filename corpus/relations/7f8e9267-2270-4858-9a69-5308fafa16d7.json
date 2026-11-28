@@ -1,0 +1,10 @@
+{
+  "id": "7f8e9267-2270-4858-9a69-5308fafa16d7",
+  "label": "Test by ExistenceIngredient.mixedCertificate (9e43b06d)",
+  "subject_kind": "result",
+  "subject_id": "126a02d7-e961-5823-b842-95bb4ca2f8a0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9e43b06d-62f3-5f2a-9599-c19df184bd5c",
+  "note": "For the supplied Unit target, the single admitted record has an essential-existence contributor and a nonexistential enabler. They are both autonomous under the supplied label predicate. This witnesses all clauses of the full-record ground premise while retaining both members."
+}

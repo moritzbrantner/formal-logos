@@ -1,0 +1,10 @@
+{
+  "id": "f664b92c-b421-44b3-813e-bb4d2dae1405",
+  "label": "Recover the missing requirements and exact witnesses from each giving-plan denial (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "c0a1536a-b43f-47b5-b6fb-4cd5203b153e",
+  "rule": "Use satisfaction of the governing standard to isolate the omitted role",
+  "meaning": "Given a governing plan, all its requirements are realized. Its edited description therefore still meets the standard exactly when none of the removed clauses was required. Apply this fact and classical quantifier duality within each principle's own restrictions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

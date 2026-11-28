@@ -1,0 +1,26 @@
+{
+  "id": "eae3d62e-e276-4d84-9c9c-ba4d08e39aaf",
+  "label": "Indexed physical specification connection plan",
+  "statement_ids": [
+    "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5",
+    "e611886f-2a21-448d-8069-a9d87f63494e"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "A varying-carrier definability claim requires correspondence of the intended ground across the admitted profiles and calibration to physicality. Uniform syntax on the family does not supply either.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

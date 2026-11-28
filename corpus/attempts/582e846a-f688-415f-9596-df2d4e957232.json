@@ -1,0 +1,30 @@
+{
+  "id": "582e846a-f688-415f-9596-df2d4e957232",
+  "label": "Strict order and nonstrict degree connection plan",
+  "statement_ids": [
+    "51bb0eeb-f3fb-5ce1-9e11-a127788f8506",
+    "9b7e39ea-f8d1-5762-add4-8d3b880652f1",
+    "d104c7e0-3e5b-53d2-9437-8e8a1024be8d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "This certificate applies to two values of a linear order. The root's MoreIn relation is primitive. A representation must preserve the selected respect and prove that MoreIn corresponds to strict comparison of the assigned degrees before order asymmetry can carry over. Introduced in e230c1d4a.",
+  "evidence": [
+    "8486f47d-4ab4-503e-aebd-08e65b112b71",
+    "8a9a4e69-5bc2-57ac-a3f8-281b6fbdfeaf",
+    "PR-2086",
+    "ebdd9c00-2231-5e80-96a9-55b377a2ead6"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target a4814f25-84b0-560e-870a-eb3a23a6a35b. The scoped bridge described in the summary remains open."
+}

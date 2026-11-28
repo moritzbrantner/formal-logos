@@ -1,0 +1,10 @@
+{
+  "id": "b93888aa-2191-4903-b67b-e55d54ff0970",
+  "label": "Test by ContingentAtomicity.control (cf4364f6)",
+  "subject_kind": "result",
+  "subject_id": "7720b17a-1731-5b6e-8497-f5fe26c53801",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cf4364f6-81c6-5018-95e4-178353d2a2b3",
+  "note": "At false the strict ontology has a contingent simple point and necessary gunk. Each gunk node has a strictly smaller gunk part and no minimal part, so atomicity of the full selected domain fails while atomicity of its contingent members holds."
+}

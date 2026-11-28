@@ -1,0 +1,10 @@
+{
+  "id": "2d2901f9-0929-44c5-b031-d5e19f8d9d97",
+  "label": "Source qualification for 12605639 from reading 0a855093",
+  "subject_kind": "claim",
+  "subject_id": "76f71662-72d7-56c9-a008-e55b54243159",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "12605639-82ad-5434-9171-7c30107b3dfd",
+  "note": "Late Phillips as reported allows constitutive dependence on nonreligious life and denies a general premise-to-conclusion account of that dependence. It leaves individual instances of shared evidential justification open, so an application to sharp cut-off would need a stronger exclusion premise."
+}

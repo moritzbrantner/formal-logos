@@ -1,0 +1,11 @@
+{
+  "id": "c10c1536-846b-4445-a8e6-634718136d52",
+  "label": "The proper scope of the selected fusion calibration",
+  "argument_id": "74bdb95b-1cd7-452d-936f-161ae1e1b3ae",
+  "challenge_module": "TruthCore.Results.Causality.LocalActualFusion.Challenge",
+  "solution_module": "TruthCore.Results.Causality.LocalActualFusion.Solution",
+  "theorem": "TruthCore.Results.Causality.LocalActualFusion.calibrationStrictness",
+  "comparator_config": "results/c10c1536-846b-4445-a8e6-634718136d52/comparator.json",
+  "status": "solution-present",
+  "description": "All actual candidates are not required to be concrete. In the fixed order, only false lies under the chosen sum false, and no candidate is a cause. The actual candidate false is concrete and true exists at the actual world without being concrete. This checks strictness of the calibration alone, separately from the fusion and causal assumptions."
+}

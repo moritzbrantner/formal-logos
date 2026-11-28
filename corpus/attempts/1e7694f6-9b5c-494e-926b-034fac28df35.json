@@ -1,0 +1,33 @@
+{
+  "id": "1e7694f6-9b5c-494e-926b-034fac28df35",
+  "label": "Retained readings from Unattributed website author, Necessary Being interactive survey",
+  "statement_ids": [
+    "ff153719-4eb5-5120-b036-f2cc91f09d77"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "Definition page, 'A comment about possible' and following paragraphs: The objective-possibility definition cites this reading. Using it in an accessibility premise requires specifying the necessities that constrain the relevant candidate histories and connecting compatibility with those necessities to the chosen accessibility relation.",
+  "evidence": [
+    "24b1c89a-6be2-5501-a0c7-e26c34fa6b34",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

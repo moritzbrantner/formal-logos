@@ -1,0 +1,30 @@
+{
+  "id": "0ac8b7ac-c7cc-4824-b19a-ad848790bf5d",
+  "label": "Participation selector proposals connection plan",
+  "statement_ids": [
+    "38dc490a-01b8-58b3-88c6-d36e32873b10",
+    "44c4d05a-b95f-58c4-b453-6e2f96f714e8",
+    "738828f3-26d8-5842-a520-1023534349e9",
+    "a8306016-8497-5953-af0f-fd4ef1370892",
+    "ca5b76af-39fd-5c00-a4ef-e933ba4d5879",
+    "df4553c6-a1db-5b71-9308-6025ea939e76"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Defend the selective base for a particular quality and give a separate directed explanation. Coextension alone does not supply grounding. An immanent feature, a productive cause and an exemplar may play different roles.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 64498e7e-7f10-54a0-9ec0-c65e6076de1f. The scoped bridge described in the summary remains open."
+}

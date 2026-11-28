@@ -1,0 +1,20 @@
+{
+  "id": "104d94f9-c6f0-4878-9898-1b02b438a257",
+  "label": "Two governing-plan profiles separate beneficiary credit, intrinsic goodness and recipient willing",
+  "paraphrase": "In the fixed two-world rational exercise, the same distinct recipient actually has esse and is good in that respect. Both profiles can retain recipient willing, an end-directed governing plan and both recognition rules. The instrumental plan defeats the universal benefit test in both profiles. Using the second plan supplies an existential benefit witness. Apprehending and fulfilling it without using it leaves even that existential test false, including when recipient willing is assigned. With willing removed just at the distinct recipient, benefit recognition still holds in the instrumental-only profile and fails in the two-plan profile, and the recipient bridge fails.",
+  "lean_declaration": "TruthCore.Causality.BenefitPlanWitness.Control.Comparison",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5",
+    "4c8f0e6b-7ef6-5be5-851c-cdf4f0301546",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

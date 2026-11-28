@@ -1,0 +1,11 @@
+{
+  "id": "ac062be2-1f2b-4481-8f91-852dcdd33bb7",
+  "label": "Certify consistency of the selected PLG theory from its absence of strict returns",
+  "argument_id": "4bd8457a-2c92-4d47-bcb6-d32fda38af75",
+  "challenge_module": "TruthCore.Results.Causality.SelectedPlgTheory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedPlgTheory.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.consistentOfNoStrictReturn",
+  "comparator_config": "results/ac062be2-1f2b-4481-8f91-852dcdd33bb7/comparator.json",
+  "status": "solution-present",
+  "description": "An initial weak step includes its source's predecessor set in its target's set. For strict steps that inclusion is proper by the no-return premise. Each initial sequent satisfies the rank reading and the existing soundness theorem covers every encoded PLG rule. The population premise supplies an atom whose strict self-sequent is underivable in the very same set."
+}

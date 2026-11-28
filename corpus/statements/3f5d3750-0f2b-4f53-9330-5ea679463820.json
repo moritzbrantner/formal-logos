@@ -1,0 +1,9 @@
+{
+  "id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "label": "Existential loss coverage is equivalent to persistence throughout inducer-free intervals",
+  "paraphrase": "For every supplied history, preorder and loss-inducer predicate, the all-interval cessation law is equivalent classically to persistence from presence at s to presence at each later t when no inducer occurs in (s,t].",
+  "lean_declaration": "TruthCore.Explanation.InducerFreePersistence.IntervalEquivalence",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e"
+  ]
+}

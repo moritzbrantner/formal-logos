@@ -1,0 +1,41 @@
+{
+  "id": "62f2f15a-1c94-4af3-b771-fef59967535f",
+  "label": "Root links from Plato, Parmenides",
+  "statement_ids": [
+    "b6b45b7f-7b3c-5474-a921-d6ceb3780a14",
+    "702126ae-6bf4-5e9c-8378-370f6479c112",
+    "71b729b3-b71a-5b0a-9341-3f2693e67aeb",
+    "1b520a04-e191-5965-a726-235fc32714d2",
+    "ccafa6f6-450d-59b7-a7bf-4da823dfc985",
+    "47e76508-e0fe-5fea-beae-17c91caffbf1",
+    "0466bde5-60d3-5be1-96e9-071a1fe04712",
+    "f1eda342-13a1-5aa4-ac9d-efe85fee1397",
+    "20457010-3642-5c2f-b3ba-d063f974a22e"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "129a–e: Socrates distinguishes opposed predications of participants from claims that the Forms themselves are contradictory. The case needs separately indexed qualities and an account of how the same participant bears each, rather than transferring a joint predication to a Form. 130b–e: Socrates agrees to some classes of Forms and hesitates or declines others in the dialogue. The admitted quality domain must be specified before the formation rule applies. The passage does not give a general admission rule for natural kinds, artifacts or every common predicate. 131b: Socrates's day analogy supplies a way of conceiving presence in many places without dividing the item present. It qualifies a move from multiple participation to distributed constitutiveness. Applying the analogy requires an account of the relevant shared presence and why it involves neither parts of the Form nor constitution of the participants. 131c–e: Parmenides adds problems for the specific divided-part proposals for largeness, equality and smallness. Extending the objections to the general indivisibility premise needs a common interpretation of proper parts of Forms and an independent reason that the size relations apply to every admitted Form. 132a–b: At 132a–b Parmenides invites the same comparison over Greatness itself and other great things, and obtains another Form. Extending this move to arbitrary eligible lists needs a stable same-kind predication and eligibility rule, including repeated introductions without a change of quality. 132b–c: Socrates tentatively proposes Forms as thoughts present only in souls, offering unity by a different account of their existence. The case needs a defended theory of intentional objects and participation to determine whether the proposal survives Parmenides's questions and really replaces independent Forms. 134a–b: On the dialogue's strong isolation reading, knowledge relates only to objects on its own side. This identifies a restriction that would block cross-domain knowing. It would need independent warrant and an application to divine knowledge through its essence before it could count against the Thomistic claim. 134b: The human mode in this Platonic isolation argument is on the non-intelligible side. A challenge to shared knowability would require treating human natural reasoning here as subject to the same domain closure, including a defense against reasoning from effects without direct apprehension of Forms. 134c–d: The dialogue considers divine knowledge as belonging to the most exact domain. The hypothesized mode must be shown to have exclusive domain closure and be the knowing through essence of the same God before it has consequences for knowledge of creatures.",
+  "evidence": [
+    "b76d461e-f52f-5738-a4dd-70ec419ce951",
+    "3a221563-077a-525e-9ba9-006d06051de4",
+    "4114b7da-d5b1-5dec-9369-fa64bd5c4cb6",
+    "ecf771c4-adeb-5137-8b9a-f4098cfca882",
+    "1264a994-eb69-5245-a8f3-9ef828f5415d",
+    "5655235a-1068-5da1-b3e7-9a20a2f2bb81",
+    "a558cfb0-6fa3-5da7-8663-ee5a6187b779",
+    "3141c202-951a-59ea-b72e-f50b4e355d94",
+    "8a75b851-29a3-5b9c-9de4-4ef7562ab702",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

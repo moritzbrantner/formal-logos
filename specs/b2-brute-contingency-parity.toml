@@ -50,7 +50,7 @@ disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY", "DISAMB-BRUTE-EXIS
 id = "B2 support options, the brute-contingency rival and their boundaries"
 lean = "B2SupportControls"
 paraphrase = "Premise-free laws and finite models (logical boundaries, not metaphysical possibility). Laws: each of the two support bundles (local existence PSR for contingents with BX1 and BX2; contingents concrete with the grounding closure and the ground-to-esse-cause bridge) gives B2; the local existence PSR for all existents gives its contingent-only form; the brute-contingency rival excludes B2, the contingent existence PSR and each support bundle; under BX1 a being with an own-nature reason token (NECESSARY_EXISTENCE_BY_OWN_NATURE_4) at w is not contingent at w; for the own-nature model read through essence-esse identity, BX1 at w is exactly B6 at w; and in the ofModel arena embedding a being's existence fact is a brute contingent truth exactly when the being is contingent and its existence has no reason. Models over the existing first-mover frames at the reading world: (1) the brute first mover with no reasons: BX1 and BX2 hold, the existence PSR and B2 fail, and the rival holds with the First Way's mover as witness; (2) own-nature reasons: the existence PSR and BX2 hold, BX1 and B2 fail, the mover contingent with an own-nature token; (3) the moved thing as a non-causing occasion: the existence PSR and BX1 hold, BX2 and B2 fail; (4) a conserved mover with that occasion causing its esse: all three hold and B2 holds; (5) B2 without the existence PSR; (6) B2 without BX1; (7)-(9) one omission model for each premise of the grounding support; (10) its nonvacuity model."
-definitions = ["e7302a28-f9fc-4961-811f-bf58bd86c28d", "7cff4318-201a-430d-9680-10f5148a3b01", "8eea5215-bb68-4608-b6f8-5368d17617d4", "DEF-NO-BRUTE-EXISTENCE-AT", "DEF-PSR-REASON", "DEF-PSR-RESTRICTED-SCOPE", "DEF-PSR-STRENGTH-ARENA", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-ESSENCE-THOMISTIC-NATURE", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-CONCRETE-ESSE-IN-RE", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING"]
+definitions = ["e7302a28-f9fc-4961-811f-bf58bd86c28d", "7cff4318-201a-430d-9680-10f5148a3b01", "8eea5215-bb68-4608-b6f8-5368d17617d4", "DEF-NO-BRUTE-EXISTENCE-AT", "DEF-PSR-REASON", "DEF-PSR-RESTRICTED-SCOPE", "DEF-PSR-STRENGTH-ARENA", "DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-ESSENCE-THOMISTIC-NATURE", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-CONCRETE-ESSE-IN-RE", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "32606882-e6e0-43b5-8c81-3b2afd3473e0"]
 disambiguations = ["DISAMB-CAUSE", "DISAMB-KANT-CONTINGENCY", "DISAMB-ESSENTIAL-VS-ACCESSIBLE-EXISTENCE", "DISAMB-BRUTE-EXISTENCE-AND-GROUNDING", "DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 
 [[statement]]
@@ -188,3 +188,83 @@ object_kind = "statement"
 object_id = "The stance cannot meet its demand for reasons why and accept the fact as a brute contingent truth"
 verification_result_id = "Excluding unreasoned acceptance excludes the brute contingent rival"
 note = "Backed by the verified one-step weakening: a brute contingent truth has no reason."
+
+[[relation]]
+id = "599a9836-6011-4617-872b-aaaea9477f78"
+label = "Test by BruteContingencyParity.b2SupportControls (608a262d)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "608a262d-08fe-4dfd-9413-67e2ecf35b84"
+note = "Omit existence-reason coverage for beings contingent at the reading world true. The bruteFirst frame has no reason tokens admitted for the contingent mover's existence. The no-self and reason-to-cause clauses hold vacuously, and no distinct CAUSE_2 supplies the mover's esse."
+
+[[relation]]
+id = "6bae32b8-a31b-49d8-a8ff-a2aafaedbf59"
+label = "Test by BruteContingencyParity.b2SupportControls (6c6191dc)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "6c6191dc-082d-4417-b675-b32d4fab4573"
+note = "Omit the exclusion of reasons about the very contingent bearer. At true the first mover's own intrinsic token covers its existence in bruteFirst. Coverage and the reason-to-cause clause for reasons about other bearers hold, while the mover lacks a distinct CAUSE_2 of esse."
+
+[[relation]]
+id = "fbd2ba9c-012b-4360-8338-d5873440067e"
+label = "Test by BruteContingencyParity.b2SupportControls (0e44041e)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0e44041e-4591-4aad-857a-f6748032f142"
+note = "Omit the bridge from an existence reason about another bearer to that bearer causing esse. At true the reason model assigns the contingent mover an occasion token about the moved bearer in bruteFirst, while the esse-cause relation is empty. Contingent-existence coverage and the no-self clause hold."
+
+[[relation]]
+id = "189adc5e-0797-4df6-a27c-ad1016e9409d"
+label = "Test by BruteContingencyParity.b2SupportControls (a8823bd2)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "argument"
+object_id = "a8823bd2-a474-4aeb-be9d-1a68fab09c0c"
+note = "In conserved at true the moved bearer is both the subject of the occasion token for the contingent mover's existence and a distinct CAUSE_2 of its esse. The coverage, no-self and reason-to-cause premises hold jointly."
+
+[[relation]]
+id = "d2993a35-73d4-40e6-a46b-de177a22ab49"
+label = "Test by BruteContingencyParity.b2SupportControls (a1a00ab5)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a1a00ab5-4376-47f7-9e24-341d53800309"
+note = "Omit concreteness of the contingent bearer. In bruteFirst at true the concrete and grounding predicates are empty, so concrete contingent grounding and the ground-to-esse-cause bridge hold vacuously. The contingent mover lacks a distinct CAUSE_2 of esse."
+
+[[relation]]
+id = "7c435c27-0737-4e1c-b54c-fcf9b885f877"
+label = "Test by BruteContingencyParity.b2SupportControls (c71c068c)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c71c068c-bbae-5ed5-a99d-70b155c8d239"
+note = "Omit selected-world concrete contingent grounding. In bruteFirst at true the mover is contingent and concrete, but grounds are absent. The ground-to-esse-cause bridge holds vacuously and the mover lacks a distinct CAUSE_2 of esse."
+
+[[relation]]
+id = "0212cec0-04e6-4867-99ab-22c6b9a78573"
+label = "Test by BruteContingencyParity.b2SupportControls (98efaa9e)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "statement"
+object_id = "98efaa9e-1c91-4e52-8c0d-faf03d4f8372"
+note = "Omit the bridge from selected-world concrete grounding to a distinct CAUSE_2 of esse. In bruteFirst at true the moved bearer is assigned as ground of the contingent concrete mover, but no esse-cause edge is assigned."
+
+[[relation]]
+id = "28da962b-afea-4c5a-adb2-b60c82214987"
+label = "Test by BruteContingencyParity.b2SupportControls (d82b02af)"
+subject_kind = "result"
+subject_id = "4c79358e-1872-41a5-8a34-7c57eaeec756"
+predicate = "tests"
+object_kind = "argument"
+object_id = "d82b02af-f6a1-4bed-9619-ff121a351ec9"
+note = "In conserved at true the contingent mover is concrete and the moved bearer is its existing ground and distinct CAUSE_2 of esse. The concreteness, grounding and bridge premises hold on this one profile."

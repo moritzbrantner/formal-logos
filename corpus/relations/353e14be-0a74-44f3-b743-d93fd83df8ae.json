@@ -1,0 +1,10 @@
+{
+  "id": "353e14be-0a74-44f3-b743-d93fd83df8ae",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Nothing has actuality exc (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "7067553d-cad9-5d79-b6b2-912e35051530",
+  "note": "Tests the selected premise in the following setting. Same InAct predicate and esse respect; one world, one being, two respects. Control.actualityWithoutBeing in Control.Certificate, first conjunct of controls. Other premise of Round2ExistenceAct.existingInActAtFromSomeAct holds: every existent at the one world is in act in some respect. Its conclusion (every existent is in act in esse) fails."
+}

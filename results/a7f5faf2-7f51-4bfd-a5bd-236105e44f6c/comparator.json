@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Case.Catholicism.GoedelDeadEndExclusion.noDeadEndOfPositivity"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

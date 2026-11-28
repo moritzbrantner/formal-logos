@@ -1,0 +1,31 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "92f270ed-d812-4f0e-bb9d-e8c9af009833",
+    "source_url": "https://www.corpusthomisticum.org/cbh.html",
+    "retrieved_at": "2026-11-26T15:31:51Z",
+    "sha256": "sha256:5d06363e9ec887ca18ae29135d0c21b1853c9152bb0f48899d9a45915e4c7b2d",
+    "encoding": "iso-8859-1",
+    "language": "lat",
+    "license": "Underlying print text Marietti (Turin, 1954); rights in it not established. Electronic edition © 2019 Fundación Tomás de Aquino (Corpus Thomisticum, ed. Enrique Alarcón), all rights reserved for this electronic edition. Local research copy; no redistribution permission asserted. Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt. No matching Wayback fallback was supplied with this witness."
+  },
+  "passages": [
+    {
+      "id": "3b74c897-e6b4-4a34-8f56-6d6c8577c081",
+      "label": "In De ebdomadibus lectio 2 in the Turin edition",
+      "locator": "Lectio 2 (Turin 1954, Corpus Thomisticum 84829–84830)",
+      "claim_locator_prefixes": [
+        "Lectio 2, discussion of participare"
+      ],
+      "html_selector": {
+        "from": {
+          "anchor": "84829"
+        },
+        "to": {
+          "anchor": "84830"
+        }
+      },
+      "text_sha256": "sha256:6c40b910c8cc9da1ff9d397a4a5f1cf778bf50da36bb3216cea28834b4dfe953"
+    }
+  ]
+}

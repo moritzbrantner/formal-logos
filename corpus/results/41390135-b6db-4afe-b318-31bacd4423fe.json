@@ -1,0 +1,12 @@
+{
+  "id": "41390135-b6db-4afe-b318-31bacd4423fe",
+  "label": "Universal intellectual causes direct every actual effect, through exercise and direction",
+  "argument_id": "dd409cc3-9115-4951-8eb6-c86577b1e6ac",
+  "challenge_module": "TruthCore.Results.Causality.PracticalSpecification.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PracticalSpecification.Solution",
+  "theorem": "TruthCore.Results.Causality.PracticalSpecification.directsAllFromExerciseDirection",
+  "comparator_config": "results/41390135-b6db-4afe-b318-31bacd4423fe/comparator.json",
+  "status": "solution-present",
+  "description": "Assembly transcription. At the same qualifying universal giver and distinct actual recipient, the first premise supplies the actual rational exercise and the second supplies an end to which the giver directs the effect.",
+  "transcription": "assembly"
+}

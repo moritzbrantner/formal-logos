@@ -467,6 +467,9 @@ pub struct AttemptEntry {
     pub statement_ids: Vec<String>,
     pub summary: Value,
     pub blocker: Value,
+    /// The attempt's appended `workers` entries (who worked on it, in which role).
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub workers: Vec<Value>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -1047,6 +1050,7 @@ pub fn context_pack(
                 .collect(),
             summary: get(attempt, "summary"),
             blocker: get(attempt, "blocker"),
+            workers: crate::workers::entries(attempt).to_vec(),
         })
         .collect();
     // Preserve the spelling actually used by the candidate. A shared legacy name
@@ -1910,6 +1914,11 @@ pub fn format_context(pack: &ContextPack, limit: i64) -> String {
                     pyfmt::short(a.blocker.as_str(), WIDTH)
                 ));
             }
+            rendered.extend(
+                a.workers
+                    .iter()
+                    .map(|worker| format!("    worker: {}", crate::workers::line(worker))),
+            );
             rendered
         },
         |a| vec![a.attempt_id.clone()],

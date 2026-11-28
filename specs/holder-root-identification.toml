@@ -126,3 +126,93 @@ conclusion = "Holder-root identification: laws, nonvacuity, necessary-through-an
 rule = "General laws and explicit finite models"
 meaning = "Premise-free: three laws (holders are necessary; the dichotomy of root or necessary-through-another under a common root; identification with NAR) and finite models (theist nonvacuity, the necessary-through-another holder, omissions of argument 1, two roots, omissions of argument 5). Model-witnessed separations only; no premise is established and no reality claim is made."
 description = "Premise-free laws and models for the holder-root identification batch. Sense-mixing control: they relate NECESSARY_2, MODAL_CONTINGENCY_1, the willed-giving and HAS_WILL_1 senses and both POWER senses without a bridge premise. Establishes no premise."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked"
+label = "Test by Holder-root identification controls checked"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0050b6ed-3c7d-4d6a-b97a-417837d76184"
+note = "Tests the corresponding will-argument omission in the explicit fixed holder profile retaining the other inputs."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Every NECESSARY_2 actual concretum is (1)"
+label = "Test by Holder-root identification controls checked for Every NECESSARY_2 actual concretum is (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "43651417-cd19-43d7-8f70-8def61acb0f0"
+note = "Tests the NAR premise on the necessary-through-another holder while retaining the other step-one conditions."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Any two actual CONCRETE_6 roots of the (1)"
+label = "Test by Holder-root identification controls checked for Any two actual CONCRETE_6 roots of the (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "49fdec01-cb92-48cf-90c5-9de7761121f2"
+note = "Tests the at-most-one-root input on the two-root profile where both actual necessary roots hold the power."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for At most one being has power for the ac (1)"
+label = "Test by Holder-root identification controls checked for At most one being has power for the ac (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "5f93d4f0-3780-45f6-9d65-da8ced71c922"
+note = "Tests the uniqueness input on a willed non-GOD_4 holder alongside a distinct GOD_4 holder without will."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Whatever has a rational power HAS_WILL_1"
+label = "Test by Holder-root identification controls checked for Whatever has a rational power HAS_WILL_1"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "65e0179f-55d4-4b77-98ba-4b5b26f2d404"
+note = "Tests the corresponding will-argument omission in the explicit fixed holder profile retaining the other inputs."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for A power for the actual contingent conc (1)"
+label = "Test by Holder-root identification controls checked for A power for the actual contingent conc (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "906f5c39-2a63-4dc2-955d-a00cfd8a976b"
+note = "Tests holder necessity with the contingent holder c under the remaining step-one inputs."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Whatever has at w a power for the join (1)"
+label = "Test by Holder-root identification controls checked for Whatever has at w a power for the join (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a6906cab-59c4-4938-b6d1-991369e8ffb0"
+note = "Tests holder concreteness with the necessary nonconcrete holder under the remaining step-one inputs."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Whatever has power for the actual cont (1)"
+label = "Test by Holder-root identification controls checked for Whatever has power for the actual cont (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "b517ca3e-503e-4346-b0e0-7b99ad4e875d"
+note = "Tests holder presence by admitting a holder only in the nonactual world while retaining the other step-one conditions."
+
+[[relation]]
+id = "Test by Holder-root identification controls checked for Some holder of power for the actual co (1)"
+label = "Test by Holder-root identification controls checked for Some holder of power for the actual co (1)"
+subject_kind = "result"
+subject_id = "d8073ba0-ff27-479a-adbe-05086acb1da1"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fdd2b1cf-503b-4241-aaa1-2e4a06db5723"
+note = "Tests dropping the anti-chance input in the holder profile where the other will-argument inputs hold."

@@ -1,0 +1,10 @@
+{
+  "id": "8a0b354f-57bc-4171-ae9e-a36f62b2f162",
+  "label": "Test by Test common finite ancestry on the existing mediated-optimum creator profile",
+  "subject_kind": "result",
+  "subject_id": "1e652b87-fba4-4653-801e-1911fbd4b957",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "96082032-91f1-586b-9db8-e42edbb5e52e",
+  "note": "Tests nonvacuity on the actual concrete grounding graph with a d-to-g-to-c chain and a single source."
+}

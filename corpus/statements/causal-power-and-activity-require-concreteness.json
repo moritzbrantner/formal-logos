@@ -5,7 +5,6 @@
   "paraphrase": "Owner framework commitment: At the selected world w, (1) every candidate individual with causal power at w is concrete, and (2) every individual that causes anything at w is concrete. 'Concrete' has the adopted sense of #1103 (DEF-CONCRETE-ESSE-IN-RE: having esse in re), which is not defined through causal power; the Lean proposition takes the concreteness predicate as a parameter, and an intended instantiation supplies that sense. Power is a capacity that need not be exercised. The direct outgoing-causation clause is retained independently, not inferred through an assumed exercise-to-power interface. With abstract/concrete disjointness, these clauses exclude abstract powers and outgoing abstract causation. No materiality, spatial location, concrete-to-power converse, inability to be caused, existential coverage, or necessity is included.",
   "lean_declaration": "TruthCore.Causality.CausalPowerConcreteness.OwnerCommitmentAt",
   "definition_ids": [
-    "632ad5ee-e94f-574d-bb37-c02b774984f4",
     "d662ee50-cdd3-517b-bd8a-024dca5929d0",
     "1709a759-7962-5df2-a56f-9bd0e20d3692",
     "4088655a-8c5b-5533-b93d-ec4a4f767108",

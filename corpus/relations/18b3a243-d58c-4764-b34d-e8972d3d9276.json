@@ -1,0 +1,10 @@
+{
+  "id": "18b3a243-d58c-4764-b34d-e8972d3d9276",
+  "label": "Test by NecessaryConcreteRouteBridge.necessaryRouteControls (d29cebca)",
+  "subject_kind": "result",
+  "subject_id": "d492d6e9-e381-5628-ba20-18e7855c322d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d29cebca-ee1c-5bd8-9080-f7226770e809",
+  "note": "Omit the bridge from a distinct cause of necessity to actual concrete grounding. Both concrete candidates exist at the sole world. False causes the necessity of true, but the only ground edge goes from true to false."
+}

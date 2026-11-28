@@ -610,50 +610,10 @@ are supplied to the program. It tests the positive replacement's
 functional contribution and its remaining burden rather than
 pretending to implement genuine thought in a small program.
 
-```python
-from itertools import product
+Lean checks all configurations of the actual conditions, cue, report
+and preference. [Consent census](../../TruthCore/Causality/PhysicalGroundControls.lean#L46) · [Selected cases](../../TruthCore/Causality/PhysicalGroundControls.lean#L55)
 
-def case_duty(harm, consent):
-    return harm and consent != "C"
-
-def reason_route(represented_harm, represented_consent, wants_proceed):
-    valid_consent = represented_consent == "C"
-    conclusion = represented_harm and not valid_consent
-    return conclusion, (not conclusion and wants_proceed)
-
-def bypass(represented_harm, represented_consent, wants_proceed):
-    return wants_proceed and (
-        not represented_harm or represented_consent == "C")
-
-def benefit_only(represented_harm, wants_proceed):
-    return wants_proceed and not represented_harm
-
-rows = []
-for harm, consent, cue, report, wants_proceed in product(
-    (False, True), ("none", "B", "C"), (False, True),
-    ("none", "B", "C"), (False, True)
-):
-    actual = case_duty(harm, consent)
-    believed, action = reason_route(cue, report, wants_proceed)
-    assert action == bypass(cue, report, wants_proceed)
-    accurate = (harm, consent) == (cue, report)
-    if accurate:
-        assert believed == actual
-        assert not (actual and action)
-    rows.append((actual, believed, action,
-                 benefit_only(cue, wants_proceed), accurate))
-
-assert len(rows) == 72
-assert sum(x[4] for x in rows) == 12
-assert sum(x[0] != x[1] for x in rows) == 32
-assert sum(x[2] != x[3] for x in rows) == 6
-assert reason_route(True, "C", True) == (False, True)
-assert reason_route(True, "B", True) == (True, False)
-assert reason_route(True, "B", False) == (True, False)
-assert reason_route(False, "B", True) == (False, True)
-```
-
-Executed all 72 configurations locally. The reason-route and bypass
+Lean checks all 72 configurations. The reason-route and bypass
 outputs agree in every row, including errors. In all 12 accurate
 input rows the reason-route decision respects the stipulated duty.
 In 32 of the 72 rows the represented duty differs from the actual
@@ -1025,50 +985,20 @@ of distinct intelligible aspects, not merely appeal to multiple
 descriptions by observers. The toy control neither equates intentional
 roles with causal roles nor shows either account metaphysically possible.
 
-### 4. Executed local diagnostics
+### 4. Finite diagnostics checked in Lean
 
-The following JavaScript reproduces the checked comparison. Bit masks
-only encode the selected inventory. The same-realizer assignments test
-only structural consistency of the displayed conditions, not metaphysical
-possibility, actuality of a proposed first being, or any existing Lean
-theorem's validity.
+Lean checks all nonempty families of profiles on the three inventory bits.
+It verifies the wisdom condition for a maximal profile when the relevant
+extension exists, and counts 1,024 profile cases, 369 maximal cases, 376
+local extensions without prior wisdom and 80 cross-profile separators.
+The four probes distinguish the assigned truth conditions (TT, FT, TF, FF).
+Two true contents share the same subject, object, form, operation and
+realizer in the one-constituent fixture.
+[Inventory census](../../TruthCore/Causality/PhysicalGroundControls.lean#L88) · [Articulation control](../../TruthCore/Causality/PhysicalGroundControls.lean#L119)
 
-```javascript
-const assert=(b,msg)=>{if(!b)throw Error(msg)};
-const vals=[0,1,2,3,4,5,6,7], wisdom=4;
-const subset=(a,b)=>(a&b)===a;
-let cases=0,strict=0,local=0,cross=0;
-for(let mask=1;mask<256;mask++){
-  const F=vals.filter(x=>mask&(1<<x));
-  for(const b of F){
-    const max=!F.some(t=>t!==b&&subset(b,t));
-    const ext=F.some(t=>subset(b|wisdom,t));
-    const elsewhere=F.some(t=>t&wisdom);
-    assert(!max||!ext||!!(b&wisdom),"maximal + local compatibility implies wisdom");
-    if(!(b&wisdom)&&max&&elsewhere&&!ext)cross++;
-    if(!(b&wisdom)&&ext){assert(!max,"extension not maximal");local++}
-    if(max)strict++;
-    cases++;
-  }
-}
-const probes=[{received:false,composed:false},{received:true,composed:false},
-  {received:false,composed:true},{received:true,composed:true}];
-const contents=[p=>!p.received,p=>!p.composed];
-assert(probes.some(p=>contents[0](p)!==contents[1](p)),"distinct truth conditions");
-assert(contents.every(f=>f(probes[0])),"actual both true");
-const n="source", bearer=n, object=n, form=n, operation=n, constituents=[n];
-const aware=contents.map((f,i)=>({content:i,truth:f(probes[0]),
-  subject:bearer,object,form,operation,realizer:n}));
-assert(aware.every(r=>r.subject===r.object&&r.object===r.form&&
-  r.form===r.operation&&r.truth),"same bearer, act, object, form");
-assert(aware.length===2&&new Set(aware.map(r=>r.realizer)).size===1&&
-  constituents.length===1,"non-injective content realization");
-console.log({cases,strict,local,cross,probeRows:probes.map(p=>contents.map(f=>f(p)))});
-```
-
-Results: cases = 1024, strict (maximal profile cases) = 369,
-local = 376, cross = 80; truth-condition rows TT, FT, TF, FF.
-All assertions passed in the analyst JavaScript execution.
+The bit masks encode the selected inventory. The shared realizer tests
+the consistency of this structural assignment. Metaphysical possibility
+and the actuality of a first being still require separate evidence.
 
 ### 5. Connect the support proposal to the personal-source endpoint
 
@@ -1138,3 +1068,74 @@ The recorded profile and role diagnostics establish the displayed finite compari
 ## Research attempts citing this note
 
 - [Subsistent wisdom and same-source intrinsic self-understanding bridge test](../../corpus/attempts/d3a0e98a-8c92-4236-92bb-a3e22d49b172.json)
+
+## Identifying the source from the represented actual history
+
+The [#2051 boundary](../../corpus/results/38ebb0ba-2e44-44a2-8bb1-61617e0b5200.json)
+compares the same designated maximum in the existing #468 ladder. The
+admissibility profile requires its necessary underived signature and
+the five structural premises. Pair each route with a #1867 copy/toggle
+schedule and observe the entire generated Boolean trace. Adjacent bits
+determine whether that step copied or toggled, so the full trace
+recovers the schedule in this class. A law that agrees on the actual
+input but differs on an unvisited input is outside the copy/toggle
+restriction. The trace provides no test of such differences by itself.
+
+The intellectual and simple impersonal assignments use the same fixed
+copy schedule, so they agree at every recorded time and give opposite
+HAS_INTELLECT_1 and HAS_WILL_1 values at the designated root. The
+source predicates come from the #468 route. Their relation to the
+schedule is unspecified, which is precisely why a schedule can be
+paired with either route. This control supplies a formal failure of
+identification on the stated admissible class. The restriction by
+the existing immateriality-to-intellect and intellect-to-will premises
+retains the intellectual witness, and both attributes are true on
+every remaining model. The work of ruling out rivals in that
+restriction comes from the added premises.
+
+At matched scope ask what accounts for the particular actual order,
+including its laws and any selecting exercise, as in the
+[whole-series comparison](../../corpus/attempts/a5958e25-0904-46cb-a9e8-62ca5f3f5286.json)
+and [#311](unique-feedback-explanation-311.md). The controlled output
+here is a single represented trace. The richer explanatory question
+requires the full order and a credible account of its actuality.
+
+| Account | Positive proposal and outstanding demand at that scope |
+| --- | --- |
+| Personal necessary source | Reasons and understood goods make an order intelligible, and actual agent-causal exercise could select it without a necessarily obtaining reason alone entailing it. A tied optimum shows why permissibility and actual selection are distinct. The productive exercise, its same-bearer attribution and why it provides an adequate stopping point still need warrant. Intellect and will as capacities do not establish that exercise. |
+| Necessary impersonal ground | A necessarily existing source with a constitutive constraint or a genuine productive power could explain common stable structure. If independently necessary content entails a unique whole order on the same accessible domain, it conflicts with any actual contingency of that order. A nonnecessitating power can preserve alternatives and then owes an account of actual exercise or structural determination, assessed under the same demand as personal selection. |
+| Brute stable order or primitive law | Stable laws and initial conditions can explain derivative events and sustain calibrated local induction while taking their own actuality as primitive. A best-system account instead earns descriptive and predictive economy from the stable mosaic. Both leave the ultimate why-this-order demand unsatisfied if that demand is warranted. The existing #1867 stable and finite-change controls bear specifically against inferring unrestricted law schedules from lack of an ultimate explanation. This wider option is assessed here without treating it as a witness to the #468 necessary-source signature. |
+
+**Provisional assessment.** Output parity gives no ranking on the
+specified record. Reason-guided choice offers a positive contrastive
+proposal where independently warranted reasons and genuine exercise
+are available. The same record gives no comparative basis for judging
+whether that proposal succeeds here, whether impersonal determination
+does, or whether an ultimate explanation is required. Neither rival's
+falsity or relative probability follows from the equality of the
+records. The quantity identified by a schedule reconstruction is an
+actual transition code, so it carries no conclusion about absence of
+explanation.
+
+**OPEN applicability bridge.** Show that the same designated source
+actually produces or determines the selected whole order under an
+independently specified account of production or determination. For
+identification by reports, specify feasible public observations or
+interventions, their measurement rules and why, against the strongest
+matched impersonal alternative, every same-history pair with
+different attributes disagrees on at least one permitted report. No
+source intervention is presently justified. The distinct laboratory
+control in `IdentifiabilityExamples.Surgery` splits a fiber when a
+public input is changed, using the existing response mechanisms.
+It leaves the availability of a source-sensitive experiment open.
+
+Reopen the comparison on a positive same-source exercise with
+independently supported reasons, a defended constraint that rules out
+one rival while preserving the same explanatory scope, or a calibrated
+report meeting the separation test. Prior positive routes via
+nonreceptive self-apprehension and attribute recognition retain their
+scopes. The typed `tests` edge targets the immateriality-to-intellect
+premise on the stage-two route. It supplies a scope diagnostic and
+carries no premise discharge.
+
+[Identifiability attempt](../../corpus/attempts/e2b70b2f-b6c8-4e46-b85a-c417aecfdcf6.json)

@@ -1,0 +1,10 @@
+{
+  "id": "a957517d-5af6-4959-b816-860d75c272a4",
+  "label": "Test by Finite interpretations for the eight root-wiring derivat for Negation of the Scotist r (1)",
+  "subject_kind": "result",
+  "subject_id": "6e7d86fe-21e0-537d-9ad7-ca2d3a5cd010",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f6003a4c-fc27-5b0a-acf9-97515d131755",
+  "note": "Tests omission of this premise from notActAndPotencyFromRefutation in the finite act-and-potency interpretation of the rival."
+}

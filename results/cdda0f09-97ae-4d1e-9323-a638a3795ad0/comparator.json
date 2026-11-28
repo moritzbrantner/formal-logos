@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Ontology.EssenceActFactInvariance.Challenge",
+  "solution_module": "TruthCore.Results.Ontology.EssenceActFactInvariance.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Ontology.EssenceActFactInvariance.fixedBearerControls"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

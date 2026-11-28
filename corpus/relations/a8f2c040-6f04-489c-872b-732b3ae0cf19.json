@@ -1,0 +1,10 @@
+{
+  "id": "a8f2c040-6f04-489c-872b-732b3ae0cf19",
+  "label": "Test by Sustaining-causation controls checked for Every cause of a thing's being is a CAUSE_OF (1)",
+  "subject_kind": "result",
+  "subject_id": "b12b253b-7031-41f3-ac3f-42b7bad3d166",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "23e04ae5-98ed-4464-8f9b-dc0dfbad0caa",
+  "note": "Tests the sustaining interpretation by comparing the models of the presence and lasting-ground routes with originating-only causation."
+}

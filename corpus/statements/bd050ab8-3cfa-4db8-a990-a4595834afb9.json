@@ -1,0 +1,9 @@
+{
+  "id": "bd050ab8-3cfa-4db8-a990-a4595834afb9",
+  "label": "Every efficient effect has a distinct EFFICIENT_CAUSING_2 cause",
+  "paraphrase": "OPEN analyst premise. At the selected time, if a bearer is efficiently caused in some respect, it has at least one numerically distinct efficient cause in some respect. The two respects may differ. This is an incoming-witness requirement.",
+  "lean_declaration": "TruthCore.Case.Catholicism.NoSelfCauseScope.EffectsHaveDistinctCauses",
+  "definition_ids": [
+    "69c0b23e-54c7-57a1-871f-839c6e5514c6"
+  ]
+}

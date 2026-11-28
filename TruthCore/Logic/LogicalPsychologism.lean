@@ -3,6 +3,7 @@ module
 public import TruthCore.Logic.EpistemicReasons
 public import TruthCore.Logic.ReflectiveCoherence
 public import TruthCore.Results.Logic.CorrectionCriterion.Solution
+public import Mathlib.Data.Rat.Defs
 
 /-!
 # Acceptance and validity under a fixed interpretation
@@ -239,5 +240,99 @@ theorem offDiagonalSelectsMaterial (f : Bool → Bool → Bool)
   funext p q
   cases p <;> cases q <;>
     simp [materialTable, h00, h01, h10, h11]
+
+end TruthCore.Logic.LogicalPsychologism
+
+namespace TruthCore.Logic.LogicalPsychologism
+
+def valuations : List Valuation := [(false, false), (false, true), (true, false), (true, true)]
+
+def truePremises (r : Rule) (w : Valuation) : Bool :=
+  (if r = .mp then atomP w else atomQ w) && impPQ w
+
+def failures (r : Rule) : List Valuation :=
+  valuations.filter fun w => truePremises r w && !(conclusion r w)
+
+def boolMaps : List (Bool → Bool) :=
+  (List.range 4).map fun n b => n.testBit b.toNat
+
+def classifiers (mp ac : Bool) : List (Bool → Bool) :=
+  boolMaps.filter fun classify => classify mp && !classify ac
+
+theorem finiteRules :
+    failures .mp = [] ∧ failures .ac = [(false, true)] ∧
+    truePremises .mp (true, true) ∧ truePremises .ac (true, true) ∧
+    conclusion .mp (true, true) ∧ conclusion .ac (true, true) ∧
+    ∀ mp ac, (classifiers mp ac).length = (if mp = ac then 0 else 1) := by
+  decide +kernel
+
+def scopes : List (List Valuation) :=
+  (List.range 16).map fun n =>
+    (valuations.zip (List.range 4)).filterMap fun (w, bit) =>
+      if n.testBit bit then some w else none
+
+theorem properScopeCount :
+    (scopes.filter fun scope => !scope.isEmpty && scope.length != 4).length = 14 := by
+  decide +kernel
+
+/-- Every proper scope has the same nonvacuous omission witness used in the
+enumeration. The existing general theorem supplies the exact counterexample. -/
+theorem valuationOmission (scope : Valuation → Prop) (v : Valuation) (omitted : ¬ scope v) :
+    ∃ q : Content,
+      restrictedEntails sem scope (fun p => p = (fun _ => true)) q ∧
+      ¬ TruthCore.Logic.ReflectiveCoherence.Entails sem (fun p => p = (fun _ => true)) q :=
+  omittedValuationFalsePositive sem scope (fun _ => true) (fun _ => rfl) v omitted
+    ⟨fun w => decide (w ≠ v), fun _ => Iff.of_eq decide_eq_true_eq⟩
+
+def transition (p q c : Bool) : Bool × Bool × Bool :=
+  (p || (q && c), q || (p && c), c)
+
+/-- Indexed in order (false,false), (false,true), (true,false), (true,true). -/
+def table (n : Nat) : Valuation → Bool := fun (p, q) => n.testBit (2 * p.toNat + q.toNat)
+
+def tables : List Nat := List.range 16
+
+def mpTest (f : Content) : Bool := valuations.all fun (p, q) => !(p && f (p, q)) || q
+def acTest (f : Content) : Bool := valuations.all fun (p, q) => !(q && f (p, q)) || p
+
+theorem connectiveCensus :
+    (valuations.flatMap fun (p, q) => [false, true].map (transition p q)).length = 8 ∧
+    (∀ b : Bool, materialTable b b ∧ equivalenceTable b b ∧
+      transition b b (materialTable b b) = transition b b (equivalenceTable b b)) ∧
+    (∀ i ∈ tables, mpTest (table i) = !table i (true, false) ∧
+      acTest (table i) = !table i (false, true)) ∧
+    (tables.filter fun i => table i (false, false) && table i (true, true) && mpTest (table i)) =
+      [9, 11] ∧
+    (∀ w ∈ valuations, table 9 w = equivalenceTable w.1 w.2 ∧
+      table 11 w = materialTable w.1 w.2) ∧
+    acTest (table 9) ∧ ¬ acTest (table 11) ∧
+    ¬ table 9 (false, true) ∧ table 11 (false, true) := by
+  decide +kernel
+
+def mass (n : ℚ) (w : Valuation) : ℚ :=
+  if w = (true, true) then (n - 3) / n else 1 / n
+
+def selectedMass (n : ℚ) (p : Content) : ℚ :=
+  ((valuations.filter p).map (mass n)).sum
+
+def acConditionalError (n : ℚ) : ℚ :=
+  selectedMass n (fun w => truePremises .ac w && !atomP w) /
+    selectedMass n (truePremises .ac)
+
+theorem reliabilitySamples :
+    ∀ n ∈ ([4, 10, 100, 1000, 1000000] : List ℚ),
+      selectedMass n (fun _ => true) = 1 ∧
+      (∀ w ∈ valuations, 0 < mass n w) ∧
+      acConditionalError n = 1 / (n - 2) ∧ 0 < acConditionalError n ∧
+      selectedMass n atomP = (n - 2) / n ∧
+      1 - acConditionalError n = (n - 3) / (n - 2) ∧
+      (selectedMass n atomP < 1 - acConditionalError n ↔ 4 < n) := by
+  decide +kernel
+
+theorem uniformReliability :
+    tables.all (fun i => tables.all fun j =>
+      let error := fun w => table i w && !table j w
+      decide (selectedMass 4 error = 0) == valuations.all (fun w => !error w)) = true := by
+  decide +kernel
 
 end TruthCore.Logic.LogicalPsychologism

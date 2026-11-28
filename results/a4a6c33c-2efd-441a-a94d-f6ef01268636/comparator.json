@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.IntellectualAppetite.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntellectualAppetite.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.IntellectualAppetite.godHasWillFromAppraisedForm"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "88e2451e-323d-43da-a598-42454b0d8261",
+  "label": "Fixed-content calibration and actual access yield divine assent accuracy",
+  "argument_id": "5649f573-fdcb-4167-8b20-94e4fbf0d839",
+  "challenge_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.Solution",
+  "theorem": "TruthCore.Results.Causality.FixedContentDoxasticVeracity.accurateFromFixedContent",
+  "comparator_config": "results/88e2451e-323d-43da-a598-42454b0d8261/comparator.json",
+  "status": "solution-present",
+  "description": "Keep the content, its supplied world interpretation, its report, and the bearer fixed. The calibration links the actual legacy assent to independently assented content and then to its box. The actual edge gives the content's truth at actuality. Disquotation and the matching report recover the original proposition."
+}

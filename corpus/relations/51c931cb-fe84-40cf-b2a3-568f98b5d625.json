@@ -1,0 +1,10 @@
+{
+  "id": "51c931cb-fe84-40cf-b2a3-568f98b5d625",
+  "label": "Test by In the specified Bool setting, the implication from broa for Every generated thing tha (1)",
+  "subject_kind": "result",
+  "subject_id": "21204333-0998-5b5c-a891-702902ace5ab",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5c2aeb5a-042c-5fd6-999c-10ac39de6834",
+  "note": "The Bool relation with only the false-to-false pair makes broad-to-distinct implication vacuous at the uncaused true point while falsifying the local delta at false; the named delta is not a disguised conditional W → S."
+}

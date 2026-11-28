@@ -1,0 +1,36 @@
+{
+  "id": "30b8b2d9-d43c-4246-8017-26c4e4493324",
+  "label": "Cartesian adequacy has a qualified cause scope",
+  "statement_ids": [
+    "3845020d-f64b-4a4f-8734-e8069a80e36a"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "The pinned witnesses confirm the rejection of the unrestricted reading. Second Replies axiom IV names the first and adequate cause. Axiom V requires a cause containing the idea’s objective reality formally or eminently. Meditation III §§14–15 starts with the efficient and total cause and allows one idea to arise from another while requiring a first archetype. These passages support containment at a qualified cause and leave partial-cause adequacy open.",
+  "blocker": "Supply a total or adequate cause and map its formal-or-eminent containment to the same modeled respect. A universal conclusion over partial ObjCause witnesses needs a separate justification.",
+  "evidence": [
+    "PR-2024",
+    "4bbbf389-5cea-44ee-8862-8df801fb2ba1",
+    "50f9d560-0938-4469-9b25-3def1243e86c",
+    "PR-2044"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2044"
+    }
+  ]
+}

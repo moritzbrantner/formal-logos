@@ -1,0 +1,10 @@
+{
+  "id": "f5eae19e-b2bd-4996-b208-328408561c90",
+  "label": "Source support for 33fc6c10 from reading df1eb9e2",
+  "subject_kind": "claim",
+  "subject_id": "5018b210-25d9-5f4d-89a1-201c3775cdf3",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "33fc6c10-b5b4-50b5-86fe-75a73a894ed3",
+  "note": "Newton describes uniform rectilinear motion as a state retained unless impressed forces change it. To bear on the target, the state/transition distinction must track being moved in the specified respect. The law's form does not supply an actual force-free body or rule out sustaining causes of being."
+}

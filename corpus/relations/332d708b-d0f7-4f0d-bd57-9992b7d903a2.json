@@ -1,0 +1,10 @@
+{
+  "id": "332d708b-d0f7-4f0d-bd57-9992b7d903a2",
+  "label": "Test by Conceptual existence boundary finite separations for Nuclear profile transfers to cand (1)",
+  "subject_kind": "result",
+  "subject_id": "b5b39d22-7a92-4bc1-9d42-60af1a486aee",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "89c44bcb-7b76-4ac3-8fb7-4b3c6201351a",
+  "note": "Tests omission of this premise from existingExemplar in the finite feature and Unit candidate interpretations of the existence account."
+}

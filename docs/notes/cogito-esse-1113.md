@@ -855,9 +855,8 @@ For the adopted esse interpretation, `ExistingInActAt` gives hAct b hE. The witn
 ### Matched rival controls
 
 The following are selected finite interpretation controls, not metaphysical
-possibility or source claims. The first four Lean controls are reused;
-the last two additional controls are mathematical assignments with their
-finite quantifiers checked in Python, not Lean-certified.
+possibility or source claims. The first four Lean controls are reused.
+The last two assignments are checked by the linked Lean declarations.
 
 - `CogitoSubject.subjectlessControl` and `nonSubstantialBearerModel`:
   keep occurrence fixed, remove attribution or substance. For the
@@ -902,34 +901,14 @@ finite quantifiers checked in Python, not Lean-certified.
   distinct subject. This is not a model of a thesis defining
   intellectual exercise as attribution to a *distinct* bearer.
 
-Small executable check (analyst controls only; run with Python 3):
-
-```python
-from itertools import product
-W, B = {0, 1}, {"a", "b"}
-access = set(product(W, W))
-exists = {(0, "a"), (1, "b")}
-concrete = B
-occurs, understands = {"e"}, {"e"}
-bears = {("a", "e")}
-act = {("a", "esse"), ("a", "understanding")}
-grounds = set()
-state = {(0, "a", 0): "question", (0, "a", 1): "grasp"}
-assert all(any((w, b) in exists for b in concrete) for w in W)
-assert not any(all((v, b) in exists for v in W if (0, v) in access)
-               for b in concrete)
-assert any(e in understands and (b, e) in bears and (0, b) in exists
-           and (b, "understanding") in act and (b, "esse") in act
-           for e in occurs for b in B)
-assert state[0, "a", 0] != state[0, "a", 1] and not grounds
-actual = {"e"}
-possible = {"e"}
-assert actual and not (possible - actual)
-```
-
-Execution passed in the research environment. This checks the explicitly
-listed finite properties only, not arbitrary corpus predicates, theorem
-bindings or the general conservative-extension proof.
+Lean checks both additional fixtures. The split population retains
+the actual grasp, both act respects and the distinct ordered stage
+labels, while its proper grounds are empty and neither candidate is
+necessary at the actual world. The single-event profile has an actual
+occurrence and coincident possible and actual extensions, with empty
+distinct-bearing, substance and proper-ground relations. The general
+conservative-extension argument is a separate question.
+[Split population](../../TruthCore/Logic/CogitoRivalControls.lean#L42) · [Single event](../../TruthCore/Logic/CogitoRivalControls.lean#L69)
 
 ### Provisional judgment and downstream destinations
 
@@ -1035,8 +1014,231 @@ accepted the [witness comparison](#which-occurrence-supplies-the-witness) at
 particular questioning at w₀. The [attempt](../../corpus/attempts/cogito-concrete-world-536.json)
 records the review and the remaining #543 obligations.
 
-The finite Python control checks the listed model properties. The existing
+The linked finite Lean controls check the listed model properties. The existing
 [cogito/esse](../../corpus/attempts/cogito-esse-1113.json) and
 [thought/change](../../corpus/attempts/cogito-physics-thought-change-subject.json)
 results retain their reviewed scopes. This local application reuses #1980
 and leaves the formal premise frontier unchanged.
+
+## Retaining the performer of this assertion or doubt (2026-11-26)
+
+This is an analyst reconstruction of the first-person witness. It extends the
+[earlier token comparison](#which-occurrence-supplies-the-witness) by keeping
+the **performer** in the witness alongside the realizer. The earlier event
+representation and the new bearer route differ on what inhabits the world.
+In the assertion route the asserter is already a candidate in the bearer
+domain. In the doubt route an explicit assignment picks a candidate for each
+act, with no existential import from that assignment alone. In both cases
+agency is interpreted as the matching performance, realization and
+selected-world occurrence. The premise that the agent bears the episode
+remains separate from this dictionary.
+
+### Sufficient premises for the same token
+
+1. Perform the act with the specified content. A reader can silently ask
+   whether any thinking is now occurring and attend to that very questioning.
+   This supplies a candidate instance of performed doubt `95c5138f` and
+   grounds the local realization of `1722a80f` when thought includes cognitive
+   questioning. Alternatively, intentionally assert a selected content, fixing
+   the assertion of that content and its cognitive realizer
+   (`b45ca9db`, `1edfc1d1`). Attending to one act warrants the instance for
+   that act. The registered agency inputs quantify over every asserter of the
+   content, or every performed doubt of the kind, in the supplied
+   interpretation; an application that restricts them to this occasion must
+   say so explicitly. Reading a quotation aloud or observing a speech
+   marker can supply the same words without this assertion. In either
+   application `OccursAt w` must track the actual standpoint of the
+   performance. A report about a different occasion needs independent grounds
+   for matching the occasion. If occurrence and world-indexed occurrence are
+   supplied as independent predicates, `eb7c7da6` suffices to locate the same
+   realization (see `calibrateDoubt`). That universal is dispensable when the
+   realization premise is already interpreted at the chosen world.
+2. The performer bears this very episode (the local instance of `c2fa06f2`).
+   On the thin reading of bearing, the subject is whatever actually undergoes
+   this questioning as its exercise. Addressing the question, trying an answer,
+   and correcting it as part of one exercise give prima facie grounds for
+   attributing the token to the inquirer. This is a defensible primitive for
+   immanent inquiry under a factive agency reading. It leaves open whether the
+   inquirer is a person, an organized process or a substance. A label, a
+   narrator, an enabling cause, or a matching episode in a different candidate
+   supplies no warrant for identification. The first-person models below
+   distinguish apparent ownership from the attribution this premise requires.
+3. A bearer actually undergoing that episode exists where the episode occurs
+   (the local instance of `f8b47cda`). The positive warrant is existential import
+   of actual exemplification: if this exercise is borne by the candidate here,
+   there is a bearer of it here. A relation that assigns a fictional subject to
+   an actual thought is a different relation. Likewise, cross-world
+   counterpart indexing can link a candidate elsewhere to a local occurrence
+   without making it the actual bearer. These interpretations undercut an
+   application of the bridge if they explain the apparent attribution. They
+   give no substantive objection to the bridge for genuine bearing at the
+   world of occurrence. The existence proof needs only the instance for the
+   chosen bearer and episode. It licenses neither uniqueness nor persistence.
+4. On the adopted esse profile, classify that same existent using the one-way
+   selected-world contract `0436de86`. A different model of world-relative
+   existence may admit abstract residents, for which membership in the
+   existence extension does not supply act of esse. The first-person evidence
+   warrants the instance only on a faithful in-re reading of genuine
+   performance. `bearingHere` uses the two pointwise conditionals at the
+   chosen token and bearer. The registered arguments reuse the existing
+   general presence rule and export only `SomeExistent (m.ExistsAt w)`.
+   `assertionWitness` and `doubtWitness` additionally retain the realizer,
+   performer, bearing, existence and CONCRETE_6 classification together.
+
+The designated-meditator inputs `22954087` and `b0fd6cc1` already supply
+occurrence and bearing on the aligned Cartesian dictionary, as recorded in
+[the consolidation](../../corpus/attempts/0596124f-4712-4c66-864b-a86a86bd19f8.json).
+To use either for this application, identify the designated candidate with the
+actual inquirer, and apply the presence and classification steps to their
+episode. That identification fixes the bearer, but these inputs say only that
+this bearer bears some occurring thought, which could be a different thought at
+the same world. For local existence, locating the supplied episode at `w` and
+applying presence suffices. For the same-performance conclusion, one must
+additionally establish that this episode realizes the selected assertion or
+doubt, or supply bearing directly for that realizer. The modification premise `5581cd7f` supplies a different path, via
+the thesis that modifications have bearers. It is dispensable for the
+performance path. Likewise, `bbfacacc` and `ac0a151f` can route a realized
+assertion through experienced occurrence to a bearer. They require
+phenomenality and leave the identity of that bearer with the asserter open.
+`13b5b929` supports existence of the representative and allows an event-only
+route. Its witness can be the episode itself. Identification of that
+representative with the performer needs a separate reason.
+
+### Matched accounts and formal controls
+
+| Account of this questioning | What it grants | Exact point at issue and support for the alternative |
+|---|---|---|
+| Thin performer | One cognitive event with this content, present access, and an actual agent exercising it. | Correcting and continuing the very inquiry supplies positive warrant for thin, token-level attribution. An organized inquirer can satisfy this role on several ontologies. |
+| Impersonal thought, the Lichtenberg-style alternative | The questioning occurs, with the same content and cognitive function. | Treat the apparent subject expression as an impersonal way to register an occurrence, as in reporting a flash. The grammar therefore cannot warrant `c2fa06f2` or the bearer existential. This supplies an undercutter of an inference from grammatical self-reference, while leaving open whether the performance itself has an agent. |
+| Organized bundle | Present questioning, answer and correction are related occurrences. | Their continuity can come from retention of the question and integration with the next response. This challenges `5581cd7f` read as requiring a substrate, because the organization does explanatory work that positing an additional bare owner alone does not explain. If the organized process counts as the performer it also grants thin bearing. A strictly bearerless bundle needs a reason why its integrated activity never qualifies as thin bearing. |
+| Illusion of a substantial self | There is questioning and a representation attributing it to a unified self. | A self-model can bind question, memory and response, while simplifying or misidentifying the process doing the work. This undercuts inferring a persistent or simple self from how an episode appears. It can reject a reading of `22954087` on which the meditator is that represented substantial self. The mechanism still permits an actual process as the bearer. Phenomenal illusionism concerns a different reading, of `Experienced` in the `bbfacacc` branch; this mechanism gives no independent ground for failure of that premise, so it is recorded as an untested reading with no adverse weight. |
+
+These are proposed replacement mechanisms for the same local exercise,
+with historical attribution deferred. Orientation only: Lichtenberg,
+*Sudelbuch K*, K 76, Hume, *Treatise* 1.4.6, and Frankish,
+*Illusionism as a Theory of Consciousness*. Descartes' Meditation II and
+*Principles* I §§52–53 remain witness leads, alongside the existing
+Meditation III attempts.
+
+The [Lean controls](../../TruthCore/Results/Logic/FirstPersonWitness/Solution.lean)
+use one act, one episode, one candidate and two worlds. In
+`bearerlessControl` doubt is performed and realized here, with empty bearing
+and failed alignment. Presence is vacuous and there is no concrete resident
+here. In `nonconcretePerformerControl` the performer bears the local episode
+and exists here, while the esse extension is empty and classification fails.
+In `elsewherePerformerControl` the episode and its concrete performer are
+present only at the other world. The presence rule is satisfied, while
+selected-world realization fails. In `presenceOmissionControl` the episode
+occurs here and the performer bears it, but the only existence assignment is
+at the other world and the presence rule fails. The empty extensions and the
+world indices are explicit stipulations. These fixtures isolate distinct
+inferential failures. They supply no empirical or metaphysical evidence that
+an actual immanent inquiry could have those profiles.
+
+**Provisional assessment.** Present questioning warrants occurrence and, where
+attributed to the actual inquirer exercising it, strongly supports an existing
+thin bearer of this token. The scope is the genuine realized performance at
+its own world. A negation of all thought occurrence is false if performed by
+an occurring thought. A denial of distinct substantial ownership can instead
+be formulated without contradicting its performance. The positive accounts
+agree about occurrence and disagree on what the organization of one exercise
+requires. Reopen thin attribution if a rival explains question retention,
+correction and recognition of the same exercise while giving a criterion
+under which the realizing process itself fails to qualify as the agent. The
+stronger claim that the bearer is distinct from the organized process still
+requires a discriminating ownership criterion. Concreteness remains
+conditional on classification of this existent in the adopted profile.
+
+**Downstream use.** Both assemblies export `43253cd8` for the existing
+`43f09b83` and `56f68b40` steps into the direct-esse route `fc46b7f9`. The
+exact same-bearer witness in the companions can be used for the thinker
+argument only with its own ancestry and anti-brute premises on the same
+profile. `sameBearerContingency` adds an accessible world where **that bearer**
+is absent. A different bearer in another world, change in the same bearer,
+or the mere conceivability of absence is insufficient. Neither the selected
+performance nor its existence supplies an actual grounding edge. The new
+assemblies provide conditional routes and leave the live performance and
+ontology warrants open.
+
+The [same-performer attempt](../../corpus/attempts/64604b4d-dfa8-4946-92d9-fb90f3374719.json)
+records the local assessment and its reopening conditions. The
+[alternative witness attempt](../../corpus/attempts/4f86edaa-2700-42ec-8b66-2f08ff44c138.json)
+records the separate applications of designated meditation, modification,
+representation and phenomenal bearing.
+
+### Testing denials at the performing token (2026-11-26, second-pass working note)
+
+Fix the world of the putative inquiry, the question it addresses and the
+episode offered as its performance. There are two different tests even at
+that world. What would falsify the premise? Could this very performance
+supply the falsifying instance? On a classical reading the negation of
+a universal realization bridge needs one qualifying failure. Another
+performer's successful realization leaves that failure available.
+
+| Premise | Positive warrant and scope | What the denial commits its proponent to | Evidence that changes the assessment |
+| --- | --- | --- | --- |
+| Someone asserts this content (b45ca9db) | An actual avowal supplies the existential directly. Inquiry can proceed by entertaining a question. | A rehearsal or quotation can reproduce the words without undertaking their commitment. A denial about content Q is ordinarily a different content from Q. | Check whether the speaker endorses Q here, as distinct from quoting it. Retraction presupposes an earlier commitment only if the retraction concerns that very utterance. |
+| Each performed suspension, question or direct denial about thought occurrence has a thought realizing it (1722a80f) | Genuinely entertaining the question, suspending judgment on it or deliberately denying thought occurrence each warrants a cognitive episode for that act. | The denial of the universal requires one qualifying performance with no matching occurring thought. Reciting a script alone supplies no evidence that its speaker performed any of the three acts. | Identify a qualifying performance and test whether its alleged realizer belongs to that very act. No substantive counterinstance identified on the deliberative reading. |
+| Assertion realization (1edfc1d1) | Formulating and defending an answer supports realization by the present speaker. The universal includes every asserter of this content. | Standing institutional assertions can be renewed through delegated publication. A mismatch arises if the institution qualifies as asserter while realization requires an episode by that institution and excludes delegated performance. | Specify the criterion of institutional realization and apply it to the same publication. Personal reflection settles only the personal instance. |
+| Someone suspends judgment, questions or directly denies that thought occurs (95c5138f) | Actually performing any one of these acts directly supplies the existential witness. | Someone can assert that nobody performs any qualifying act without performing one. Someone who genuinely denies that thought occurs thereby performs a qualifying act and falsifies the existential negation. | Check which content the speaker addresses and whether they actually suspend judgment, question or deny thought occurrence. Use this same extension for 1722a80f. |
+| The designated meditator thinks (22954087) | Revision warrants an episode. Attribution to the designated meditator gains warrant when evidence identifies that candidate as its bearer. | Self-model error preserves the revision while misidentifying its subject. This challenges the premise only if `me` designates the represented self. | Determine which candidate `me` designates. Retention and correction are common to the organized-process and thin-bearer accounts. |
+| The agent of an episode bears it (c2fa06f2) | Strong when agency means immanent exercise by this subject. | A commissioning principal and the person exercising judgment can differ. This explains failure under responsibility-based agency. Extending it to immanent exercise requires evidence that the principal qualifies under that same relation. | Compare who can revise the judgment in exercising it with who can authorize its publication. No substantive failure identified from delegation alone under the immanent reading. |
+| Every occurring thought is a modification (5581cd7f) | A revised judgment can be understood as a mode or accident of the inquirer. That reading supports classification of this episode. | An organized bundle can classify the revision as a self-standing event related to earlier events by retention. Denying the universal requires one occurring episode outside the unary classification `Modification e`. | Seek a criterion distinguishing a mode from a self-standing event within the same organized sequence. If the episode is a modification, the inference to a bearer uses the separate premise e6d842fb. |
+
+An occurring thought can express the false content that no thought occurs.
+If this very thought realizes a denial of occurrence at its own world, its
+occurrence falsifies the denial there. Strict contradiction requires the
+additional claim that the denial is true at that world. This is the truth
+condition proved by [`noAccurateDenial`](../../TruthCore/Results/Logic/PerformedDenial/NoAccurateDenial/Solution.lean#L14).
+Epistemic self-undermining concerns the reasons offered: a denier who relies
+on endorsement as a reason to eliminate every endorsement owes an account
+of that reliance. Occurrence as a precondition of inquiry makes a third,
+narrower point. Genuinely considering the question is itself a cognitive
+exercise whatever answer one gives.
+
+For this same exercise, the [matched accounts](#matched-accounts-and-formal-controls)
+assign different significance to the subject of the sentence. Impersonal
+thought preserves occurrence and challenges the inference from grammatical
+subject to bearer. An organized bundle preserves retention and correction
+while challenging a distinct substrate. Those observations count equally
+for the bundle and the thin bearer until a criterion distinguishes them;
+the organized process may itself qualify as that bearer. Self-model error
+preserves revision and bears on 22954087 only if `me` designates the
+represented self. Phenomenal illusionism targets `Experienced` in the separate
+bbfacacc branch and leaves cognitive realization available. As in the
+[eliminativism entry, row 12](#e-recorded-objections-and-rivals-classified),
+eliminating folk endorsement leaves qualifying inquiry available if the
+replacement explains how a reason prompts correction of the answer.
+Source attribution remains deferred.
+
+The [compiled scope controls](../../TruthCore/Results/Logic/FirstPersonWitness/Solution.lean)
+test the seven denials in three interpretations:
+
+- `realizedTokenWithFailedBridges` fixes one content and two candidates.
+  Both qualify in each of the assertion and doubt interpretations. The first
+  has a realization here and the second lacks one. Consequently both universal
+  bridges fail, no-occurrence is false here, and no-occurrence is true at
+  the other world. The two interpretations share a realization relation by
+  stipulation. The model assigns no semantic content to a token. Calling
+  the performance a denial of no-occurrence requires that additional reading.
+- `otherContentWithoutSelectedPerformance` witnesses an assertion of another
+  content with an occurring realization, alongside the absence of both an
+  assertion of the selected content and a performed doubt about thought.
+  Reasoning about the two absences need not instantiate either missing act.
+- `otherBearerAttribution` gives the sole occurring episode to the candidate
+  distinct from the designated meditator. Assigning agency to the meditator
+  falsifies the alignment rule, and the empty modification classification
+  falsifies the modification rule. In particular, `5581cd7f` has the unary
+  conclusion `Modification e`; it takes a separate rule to infer a bearer.
+  The example stipulates the relations. Observing an integrated episode
+  favors thin attribution only if the tracking evidence identifies which
+  candidate actually exercises the revision.
+
+A warranted stopping point is recognition of this present exercise while
+one is genuinely reconsidering a reason. No selected propositional content,
+universal rule of agency, phenomenal classification or substantial owner is
+a necessary condition of inquiry established by these tests. The exact next
+discriminator for the existence route is whether tracking who retains and
+corrects this token independently identifies its bearer at this world.
+Presence, concrete classification and the cosmological ancestry premises
+retain their own obligations.

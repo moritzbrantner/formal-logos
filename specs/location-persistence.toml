@@ -1,0 +1,34 @@
+[batch]
+vocab = "TruthCore.Explanation.LocationPersistence"
+results = "TruthCore.Results.Explanation.LocationPersistence"
+
+[[statement]]
+id = "An anchored stationary location preserves location and dated presence"
+lean = "AnchoredLocation"
+definitions = ["6e811e85-b983-5988-b20a-f4f3ee83c50e", "6788dada-f316-5cc3-8376-e64c512b1a0e"]
+paraphrase = "For any designated bearer in one temporal history, assume that every reported location entails the bearer's presence on that date, that its location trace is stationary at every adjacent pair, and that it has a reported place at one supplied date. Then at every date that same place is reported and the bearer is present. This analyst control concerns dated presence only and assumes no giving relation."
+
+[[argument]]
+id = "Stationarity transports a location anchor and its presence presupposition"
+theorem = "anchoredLocation"
+comparator_theorems = ["samePresenceDifferentLocation"]
+premises = []
+conclusion = "An anchored stationary location preserves location and dated presence"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Transport the location anchor by stationarity and project presence by soundness"
+meaning = "Reuse constant_of_stationary to derive equality of every reported location with the anchor. Soundness then gives the presence of the same bearer at the same date. The shared premise about location reports applies only to a supplied trace, and is not a premise of existential inertia or a source of actuality without a location anchor."
+description = "The anchored result transports a reported place under stationarity and projects the same bearer's presence through soundness. Its certified companion witnesses two sound traces for one everlasting bearer, with distinct Boolean places p and q. Both traces report p at date 0, the stationary trace reports p at date 1, and the other trace reports q at date 1. Both dates have positive location reports in each trace."
+
+[[statement]]
+id = "Same everlasting presence and reported start admit different reported destinations"
+lean = "ReportedLocationContrast"
+definitions = ["4b4e5631-b2c6-5c76-ac4a-2615eb87e17d", "6788dada-f316-5cc3-8376-e64c512b1a0e"]
+paraphrase = "There are two sound traces of one everlasting bearer and two distinct Boolean places p and q. Both traces report p at date 0. One trace is stationary and reports p at date 1. The other reports q at date 1. Every named endpoint has a positive report."
+
+[[statement]]
+id = "External things reading on the actuality of a distinct bearer"
+paraphrase = "Analyst interpretation with attribution deferred. The question is whether a persistence explanation for one bearer x can explain why a distinct bearer y exists at any date. The per-bearer law by itself leaves this open, since applying it to y uses y's prior presence. A cross-bearer origin or support reason would supply a further input."
+
+[[statement]]
+id = "External things reading on externally conditioned persistence"
+paraphrase = "Analyst interpretation with attribution deferred. The question is whether a bearer can continue to exist only under certain external conditions. An external protector may secure the no-loss background without giving the bearer its being. No substantive objection identified to the conditional persistence law from external conditioning alone. An independently established ongoing strict giver would pose a separate question about existential dependence."

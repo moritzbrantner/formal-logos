@@ -1,0 +1,25 @@
+{
+  "id": "c64522fa-a0f9-473d-8107-d2ca9379722c",
+  "label": "Non-self origin to exercise delta connection plan",
+  "statement_ids": [
+    "319284ab-bbf4-4788-8339-5649ee18f928"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The recorded exact difference concerns distinct origin links under CAUSE_4. Using it for a present existential support edge needs a justified relation-preserving map from origin to present production.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 86efed1a-f353-5b5d-9431-df7fc643ace1. The scoped bridge described in the summary remains open."
+}

@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.ExistentialRegressConnection.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ExistentialRegressConnection.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.ExistentialRegressConnection.actualRegressFromPresentEfficientRegress"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

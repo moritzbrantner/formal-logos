@@ -1,0 +1,11 @@
+{
+  "id": "a638195c-6867-44e9-a6d7-680f22a187d8",
+  "label": "Matched giving assignments for an undestroyed contingent receiver",
+  "argument_id": "33c9a6d6-1565-4299-8df4-41ad78d0cd0f",
+  "challenge_module": "TruthCore.Results.Explanation.InducerFreePersistence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InducerFreePersistence.Solution",
+  "theorem": "TruthCore.Results.Explanation.InducerFreePersistence.matchedAssignments",
+  "comparator_config": "results/a638195c-6867-44e9-a6d7-680f22a187d8/comparator.json",
+  "status": "solution-present",
+  "description": "A model comparison with the explanation relation, presence, receiver and standing receipt held fixed. Contingency is witnessed by non-origination in the accessible alternative, without any instance of existential loss."
+}

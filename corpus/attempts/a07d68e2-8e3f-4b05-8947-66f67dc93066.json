@@ -1,0 +1,26 @@
+{
+  "id": "a07d68e2-8e3f-4b05-8947-66f67dc93066",
+  "label": "Witness access for Alex O'Connor, Frank Turek thinks that Evil proves God's existence",
+  "statement_ids": [
+    "d9ecadf8-6f8a-57ec-b050-4baa82aeadae"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "Alex O'Connor, \"Frank Turek thinks that Evil proves God's existence\" (Alex O'Connor, 2016-08-23), 01:56–02:06: the evil that people refer to when they try to criticize the idea of an omni benevolent God is objective whereas I would argue that it's absolutely not: The original caption span requires a matching export from producer revision 13eba74e. The supplied cache has no such export.",
+  "evidence": [
+    "e52d69cd-96a4-5b53-aaa4-761175136c60",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ],
+  "blocker": "Inspect the required pinned passage before deciding its relation to the case."
+}

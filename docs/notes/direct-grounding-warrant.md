@@ -217,48 +217,17 @@ is a structural localization of the disputed requirement, not independent
 warrant for it. A concrete root may itself remain abstractly supplied, so the
 result does not establish an absolutely unborrowed source.
 
-Finite evidence: all 4,164 one-world profiles on 1–3 actual candidates, every
-concreteness assignment and every directed relation (including loops), satisfied
-both (supplier concreteness ⇒ (CCR ↔ borrowed reality)) and
-((borrowed reality ∧ candidate path bridge) ⇒ CCR). This is exhaustive only for
-that finite scope. Infinite profiles, absent candidates and general equivalence
-are not certified by enumeration. No corpus result or premise status changes.
-The exact reproducible Python experiment follows; it is evidence in this note,
-not a second status registry.
-
-```python
-from itertools import product
-
-def evaluate(n,C,E):
- def grounds(y,x): return (y,x) in E
- roots={x for x in C if not any(grounds(y,x) for y in C)}
- reach=set(roots)
- while True:
-  nxt=reach|{x for x in C if any(grounds(y,x) for y in reach)}
-  if nxt==reach: break
-  reach=nxt
- subsets=[{i for i in range(n) if mask>>i&1} for mask in range(1<<n)]
- gc=lambda S:S<=C and all(y in S for x in S for y in C if grounds(y,x))
- sc=lambda S:S<=C and all(y in S for x in S for y in range(n) if grounds(y,x))
- ccr=not any(S and gc(S) and not S&roots for S in subsets)
- br=not any(S and sc(S) and all(any(grounds(y,x) for y in range(n)) for x in S) for S in subsets)
- conc=all(y in C for x in C for y in range(n) if grounds(y,x))
- repair=all(x in reach for x in C if any(grounds(y,x) for y in range(n) if y not in C))
- return ccr,br,conc,repair
-count=0
-for n in range(1,4):
- for cm in range(1<<n):
-  C={x for x in range(n) if cm>>x&1}
-  for em in range(1<<(n*n)):
-   E={(y,x) for y in range(n) for x in range(n) if em>>(y*n+x)&1}
-   ccr,br,conc,repair=evaluate(n,C,E)
-   assert not conc or ccr==br
-   assert not (br and repair) or ccr
-   count+=1
-print('Profiles checked:',count)
-for label,C,E in [('mixed-root',{0,1},{(0,1),(2,1)}),('abstract-root',{0,1},{(0,1),(2,0),(2,1)}),('abstract-cycle',{0,1},{(0,1),(1,0),(2,0),(2,1)})]:
- print(label,evaluate(3,C,E))
-```
+Lean checks the count of 4,164 one-world assignments on one to three
+actual candidates, including loops and empty concrete populations.
+The existing general theorems verify both conditional tests uniformly
+on these assignments: supplier concreteness implies CCR iff borrowed
+reality, and borrowed reality with the localized bridge implies CCR.
+The latter application uses excluded middle. The two rooted examples
+satisfy CCR, borrowed reality and the localized bridge while failing
+supplier concreteness. The abstract-supplied cycle satisfies borrowed
+reality and fails the other three conditions. Some actual supplier may
+be abstract even where its recipient is a concrete root.
+[Assignment count](../../TruthCore/Causality/MixedSupplierCensus.lean#L35) · [Application of the registered theorems](../../TruthCore/Causality/MixedSupplierCensus.lean#L42) · [Rooted controls](../../TruthCore/Causality/MixedSupplierCensus.lean#L71) · [Cycle control](../../TruthCore/Causality/MixedSupplierCensus.lean#L90)
 
 Proposed assessment: the blanket bridge is stronger than these mixed examples
 need. The localized bridge improves compatibility with abstract co-grounds but

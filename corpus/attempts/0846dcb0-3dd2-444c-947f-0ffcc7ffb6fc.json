@@ -1,0 +1,38 @@
+{
+  "id": "0846dcb0-3dd2-444c-947f-0ffcc7ffb6fc",
+  "label": "Existing restrictions for self-origin, receipt, temporal persistence and will",
+  "statement_ids": [
+    "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+    "83ec280a-b8bb-40de-b16a-d43385461054",
+    "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7",
+    "65f3d0c7-cc3d-4ce3-a4a9-6fa38bf722cb",
+    "c2253c71-771f-5a48-b4b1-b20792821281",
+    "db54a1a6-7e59-5378-939d-fa38be38db9e",
+    "6e4b519b-e766-4dbe-a046-aab8082cb484",
+    "55892476-1e99-444b-a6bd-5430b0f115c4"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "The corpus already records self-edge specialization and the diagonal-only no-self-origin argument, identity-scoped reception from unrestricted own-essence reception, global persistence implying the uniter's restricted persistence and the uniter route using that weak premise, and same-set-up rational variation implying its invariant-set-up sibling with a restricted will argument. The unrestricted premises still serve as strength inputs and direct assumptions. These comparisons reuse the exact Lean results and add no duplicate route or independent premise warrant.",
+  "evidence": [
+    "4421bfcd-63b3-4855-87e3-3e9893525352",
+    "9598a73d-7db6-4fe3-8c9a-114e21dc1ed8",
+    "e7c251a4-7a12-4643-a2cb-9c050f17394c",
+    "fa21a69c-f965-5ab3-8644-ba2460f4c049",
+    "623a85d6-cf29-56df-98d7-92357fc21103",
+    "16002747-35ec-4509-830e-5c38b0224dba",
+    "51ea3a40-319a-4838-a222-d31d1a14f33f",
+    "PR-2022"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2022"
+    }
+  ]
+}

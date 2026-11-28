@@ -1,0 +1,38 @@
+{
+  "id": "405eaef0-fe3b-41a3-8fc3-eaf3c64a41e3",
+  "label": "Intellectual universal giving by rational exercise, from one power",
+  "premise_statement_ids": [
+    "c65f64de-f2b1-46a2-bf8d-c0450f5fc6c6",
+    "6bcb6b1a-6a4a-423d-864e-2d02368bd5c7",
+    "5c1aba17-d224-49fd-a31c-728a54ac63a9"
+  ],
+  "conclusion_statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+  "inference_ids": [
+    "7cf00e4f-5d15-4113-9165-bfd7a7da8c2c"
+  ],
+  "meaning": "The adapter supplies giving at w. The universal-scope premise supplies one power for the same intellectual cause. The earlier result from one power then supplies its owned rational exercise for each giving at w. This composition shares the adapter with the priority route.",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0",
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "211a6432-8b8f-53ed-85e3-75173bb15b24",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "fdeb7757-10db-4fa7-91a4-6c15ee5100d2"
+  ],
+  "sense_bridges": [
+    {
+      "term": "WILL_CAPACITY_VERSUS_WILLED_GIVING",
+      "from": "916b63e7-d8d8-49ba-9d42-9ad19c1fa090",
+      "to": "438df309-f7a6-4c68-bd90-c44a960900f9",
+      "statement_id": "83d8a0e0-9866-48d3-b582-9082c9cfeac8",
+      "role": "conclusion"
+    }
+  ],
+  "disambiguation_ids": [
+    "8b3d47bc-7fee-4936-99ad-6561aedc657a"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "25e78c36-f729-4e36-ba09-8dc47994fb4d",
+  "label": "Test by Epistemic authority finite controls for Some supplied preference alternative lacks the (1)",
+  "subject_kind": "result",
+  "subject_id": "2930b66a-b5e3-4f3f-b2d3-758d84c0e54d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d9f96be1-e2bb-4446-8cb5-b75330323dfc",
+  "note": "Tests omitting availability of indifference from the goal-relative exclusion argument when every preference has the accuracy aim."
+}

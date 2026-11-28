@@ -1,0 +1,10 @@
+{
+  "id": "35049edd-7da2-4da7-9eb8-a6067ab1507d",
+  "label": "Test by Finite interpretations for the thirteen derivations of r for If x depends for its bein (1)",
+  "subject_kind": "result",
+  "subject_id": "59d1be21-3572-5381-8674-06d17ec79c97",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "da8e6b60-4dab-5858-9c8d-f6e84c821970",
+  "note": "Tests omitting this premise in the encoded asymmetricViaDependence argument, with the other premises retained and the conclusion false in each corresponding control."
+}

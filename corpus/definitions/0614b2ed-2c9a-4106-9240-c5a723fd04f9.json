@@ -1,0 +1,9 @@
+{
+  "id": "0614b2ed-2c9a-4106-9240-c5a723fd04f9",
+  "label": "Admissible route profile for the actual-history comparison",
+  "term": "Admissible route profile for the actual-history comparison",
+  "definition": "A route and its copy/toggle schedule enter the comparison when the route satisfies the common #468 necessary underived signature and structural premises and its designated root is maximal.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Alternatives.ActualHistoryIdentification.admitted",
+  "note": "Formal profile for a controlled comparison. Real admissibility and the source-to-schedule production or determination rule are OPEN."
+}

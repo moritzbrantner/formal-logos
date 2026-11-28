@@ -1,0 +1,10 @@
+{
+  "id": "bf355e6b-a14a-4ec5-ab4f-0ae3f6f01897",
+  "label": "Test by Seven Fifth Way omission controls for There are natural bodies, and every natural body (1)",
+  "subject_kind": "result",
+  "subject_id": "65ac635d-f5c7-481a-9f70-b882f0502477",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "658814de-ffeb-5824-afdd-2797e5cdad42",
+  "note": "Tests omission of this premise from firstMover in the corresponding finite no-director, two-archer, or no-moves fixture, with the remaining inputs retained."
+}

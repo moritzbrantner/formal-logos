@@ -1,0 +1,13 @@
+{
+  "id": "3c65e0cb-f991-42e8-8cb3-e65435e47a82",
+  "label": "Aquinas, I q.12 a.1 co.: A thing is knowable in itself according to its actuality",
+  "statement_id": "391fbc23-30d9-45d9-af27-b8037956db93",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.12 a.1 co.",
+  "interpretation": "The opening reason for God's supreme intelligibility is actuality, explicitly distinguished from accessibility to a particular intellect. The second reply contrasts indefinite matter with unlimited form. The parallel at I q.14 a.3 co. applies the same principle to divine self-knowledge.",
+  "status": "formalized",
+  "attribution": "The passage states that each thing is knowable in itself according to the way in which it is in act, which is the premise.",
+  "definition_ids": [
+    "5b196f1c-210d-450e-b3f1-33e214f9f45d"
+  ]
+}

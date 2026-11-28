@@ -1,0 +1,10 @@
+{
+  "id": "bba0559d-061b-4666-84ec-caf07e85604b",
+  "label": "Compare three fixed PLG presentations for the same labelled Boolean dependence edge (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "964a3045-0d96-4d48-a8ba-97111c809b7a",
+  "rule": "Apply the strict-step and return-path tests to the two labels",
+  "meaning": "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

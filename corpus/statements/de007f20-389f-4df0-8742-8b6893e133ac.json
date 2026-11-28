@@ -1,0 +1,10 @@
+{
+  "id": "de007f20-389f-4df0-8742-8b6893e133ac",
+  "label": "Consistent PLG derives strict partial grounds exactly along paths with a strict step",
+  "paraphrase": "For each consistent PLG set and any two atoms, the strict partial sequent is derivable if and only if there is a finite antecedent-to-consequent path through the assumptions with at least one strict step. Full sequents contribute a step for each antecedent.",
+  "lean_declaration": "TruthCore.Causality.SelectedPlgTheory.StrictDerivabilityCriterion",
+  "definition_ids": [
+    "5d9a94e0-d64b-53ca-b9cc-504735060e0a",
+    "df5284cb-8f1f-5b61-9b1c-ee4c1544b469"
+  ]
+}

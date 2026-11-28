@@ -1,0 +1,33 @@
+{
+  "id": "5616e398-cd62-4a54-96b5-7c434b358e10",
+  "label": "Separate form orientation from an appetitive principle",
+  "statement_ids": [
+    "8554d4f7-2c78-53f5-97c4-dffed1148941"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "An intelligible form and apprehended good can be populated while the form-relative orientation fails in the finite contemplator. Where orientation holds, the q.80 soul-power calibration still demands more than a primitive inclination. See docs/intellectual-appetite-source.md#intellectual-appetite-willing-and-self-operation-2026-11-26.",
+  "blocker": "Show that orientation answers to the good as apprehended rather than following a natural form independently of apprehension.",
+  "evidence": [
+    "a4a6c33c-2efd-441a-a94d-f6ef01268636",
+    "PR-2031"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2031"
+    }
+  ]
+}

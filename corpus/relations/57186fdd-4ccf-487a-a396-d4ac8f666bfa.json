@@ -1,0 +1,10 @@
+{
+  "id": "57186fdd-4ccf-487a-a396-d4ac8f666bfa",
+  "label": "Test by Finite interpretations for the eight derivations of roun for OPEN analyst premise: for (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a961a13e-6caf-5864-ba84-10773f0c8b2e",
+  "note": "Tests omitting this premise in the encoded unlimitedPossessionExceedsLimited argument, with the other premises retained and the conclusion false in each corresponding control."
+}

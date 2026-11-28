@@ -1,0 +1,11 @@
+{
+  "id": "e916eae9-a493-408f-b3d0-9ef91b4be3ad",
+  "label": "Intellectual universal giving by rational exercise, from one power",
+  "argument_id": "405eaef0-fe3b-41a3-8fc3-eaf3c64a41e3",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.rationalGivingOfOnePower",
+  "comparator_config": "results/e916eae9-a493-408f-b3d0-9ef91b4be3ad/comparator.json",
+  "status": "solution-present",
+  "description": "The adapter supplies giving at w. The universal-scope premise supplies one power for the same intellectual cause. The earlier result from one power then supplies its owned rational exercise for each giving at w. This composition shares the adapter with the priority route."
+}

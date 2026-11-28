@@ -1,0 +1,34 @@
+{
+  "id": "d1be103a-0b77-4d5b-b74a-0bb346c7e2a2",
+  "label": "A separate created intelligence is composed of its quiddity and received esse",
+  "statement_ids": [
+    "f5db1796-20b1-5eef-8953-ef549815e989"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "De ente cap.3 [69874] treats the quiddity of a separate created intelligence as potential with respect to the act of being received from the first being. This received act is that by which the intelligence subsists.",
+  "blocker": "Show that the quiddity and the received act by which the intelligence subsists map to essenceOf and esseOf, respectively, and count as ConstituentOf the same bearer. Extend the resulting joint constitution to the route’s domain of things with distinct values.",
+  "evidence": [
+    "e11ffb48-e8c2-4bce-b26f-d8cfefc62698",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

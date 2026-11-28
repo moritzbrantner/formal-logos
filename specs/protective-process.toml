@@ -67,3 +67,13 @@ coverage = "Only the stated finite ordinary-process candidate; the original pres
 exclusivity = "No exhaustive or exclusive metaphysical fork asserted; one agent may protect and productively act through distinct episodes."
 gap = "An intervention's physical realization and a faithful original indirect-preservation interpretation remain open; productive receipt of this same bearer's esse is absent altogether."
 next_step = "Retain both original allowances. Model a positive productive contribution separately before attempting a same-bearer conservation-to-CausesIn bridge; never infer it from protective success."
+
+[[relation]]
+id = "Test by Protective process safety and omission controls"
+label = "Test by Protective process safety and omission controls"
+subject_kind = "result"
+subject_id = "728562fb-12b4-4e77-aa5b-4e8be8e6c35d"
+predicate = "tests"
+object_kind = "statement"
+object_id = "069f5d05-0427-46c3-8ead-d7df4a6b859a"
+note = "Tests the selected premise in the following setting. One fixed Model Bool Bool Stage; the identical bearer true and shared initial ready state; only sampled times 0,1,2. finite model with flame 0=ready, flame 1=burning, flame 2=lost; guarded 0=ready and guarded n=safe for n>0. A terminal flame edge is populated on the baseline, while guard safety has all explicit inputs. Controls first conjunct: Interrupted finite false flame guarded 0; Admissible, LossCovered, NoBypass and ProtectedInterval for finite/blockFlame/guarded/2/true."

@@ -1,0 +1,10 @@
+{
+  "id": "e76515eb-c5ce-416c-be0d-17b18bee1316",
+  "label": "Test by Selected ancestry uniqueness nonvacuity and omissions for The genus principle at being (1)",
+  "subject_kind": "result",
+  "subject_id": "e9c3abb0-e798-473a-a1e0-ef11a38ed720",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7",
+  "note": "Tests omitting this premise in the encoded uniqueRoot argument, with the other premises retained and the conclusion false in each corresponding control."
+}

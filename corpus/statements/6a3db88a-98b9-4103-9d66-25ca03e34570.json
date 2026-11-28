@@ -1,0 +1,14 @@
+{
+  "id": "6a3db88a-98b9-4103-9d66-25ca03e34570",
+  "label": "The MIRROR_2 image of the actual world satisfies every ESSENCE_5 truth the actual world does",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: orientation-free natures under CPT conjugation (MIRROR_2), at w only. For every being x and world-proposition φ, if it lies in the nature of x that φ and φ holds at w, then φ holds at the CPT image τ.image w. No nature contains a condition that the actual arrangement meets and its CPT image violates. Under essence grounding necessity at w, world-level essence-grounded possibility and factivity it is equivalent to the accessibility of the CPT image (Lean-only pres_iff_mirrorPossible at τ.image, certificate clause 9), so its warrant is exactly the warrant for 'the CPT-mirror world is possible'. Local Lorentz-invariant quantum field theory is invariant under CPT (physics background, navigation only), so creaturely law-natures give no violation. The MIRROR_1 counterpart (spatial reflection P) is not recorded as a statement and no argument uses it: on dispositional essentialism it is doubtful, since the weak interaction is not reflection-invariant and the P-image violates law-grounding natures of creaturely kinds (option 1 at a creature). A nature containing a primitive orientation, or an essential truth about which of two incongruent counterparts is realized, denies it. It says nothing about natures at other worlds.",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.EssentialTruthsPreservedByCPTAt",
+  "definition_ids": [
+    "7cf63236-9c12-41bc-bf20-6fbce7a121db",
+    "7147bcb5-56be-414e-8079-46db23329fd9"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "dec35f6f-156a-489e-a542-7681a8ab2530"
+  ]
+}

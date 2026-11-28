@@ -1,0 +1,10 @@
+{
+  "id": "b3c95fb9-f1a9-49da-a829-7eca1c6ca21d",
+  "label": "Test by Actual-giver presence controls checked",
+  "subject_kind": "result",
+  "subject_id": "b8454bf9-e9c9-45e0-8860-d14f03c8e604",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2f9b4acb-4bd5-4adb-91ac-8935f46f2e69",
+  "note": "Tests the converse strength implication in the registered interpretation. The actual-giver endpoint implies B2 by the single-premise projection a78a8169 (drop the presence of the cause at w). Strict: in the absent-source frame B2 holds and the endpoint fails (presence controls). The exact difference (#1598 strength comparison) is not certified here. Neither statement is established by the relation."
+}

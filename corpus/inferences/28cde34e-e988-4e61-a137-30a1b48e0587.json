@@ -1,0 +1,10 @@
+{
+  "id": "28cde34e-e988-4e61-a137-30a1b48e0587",
+  "label": "Finite RECEIVES_ESSE_AT_1 contrast of onset and present receipt (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "539c6e2d-c632-4e13-9a43-6290bef515ec",
+  "rule": "Evaluate the passion interpretation of receipt on the two-moment causality frame",
+  "meaning": "Closed control over the passion interpretation. Receipt at onset and correlativity hold. Present-tense receipt and weak concurrent actualization fail.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

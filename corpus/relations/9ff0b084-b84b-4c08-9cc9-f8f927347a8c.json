@@ -1,0 +1,10 @@
+{
+  "id": "9ff0b084-b84b-4c08-9cc9-f8f927347a8c",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Jesus rose from the dead (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f93a88f9-d8f9-5b2a-99ae-b0dea250403f",
+  "note": "Tests omitting this premise in the encoded stageFourFromMarkTrial argument, with the other premises retained and the conclusion false in each corresponding control."
+}

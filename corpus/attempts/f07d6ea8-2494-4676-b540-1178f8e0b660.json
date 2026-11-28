@@ -1,0 +1,25 @@
+{
+  "id": "f07d6ea8-2494-4676-b540-1178f8e0b660",
+  "label": "Endless-life calibration connection plan",
+  "statement_ids": [
+    "56c7f0d2-073e-59df-aae3-226020660796"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Boundaryless temporal life can be successive. A common-bearing comparison must fix the admitted time order and life predicate and test eternal non-successive possession separately.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target a35acca8-cc3e-51ff-98f1-4491d3f0c119. The scoped bridge described in the summary remains open."
+}

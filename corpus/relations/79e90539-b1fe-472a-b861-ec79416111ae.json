@@ -1,0 +1,10 @@
+{
+  "id": "79e90539-b1fe-472a-b861-ec79416111ae",
+  "label": "Test by Holder-root identification controls checked",
+  "subject_kind": "result",
+  "subject_id": "d8073ba0-ff27-479a-adbe-05086acb1da1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0050b6ed-3c7d-4d6a-b97a-417837d76184",
+  "note": "Tests the corresponding will-argument omission in the explicit fixed holder profile retaining the other inputs."
+}

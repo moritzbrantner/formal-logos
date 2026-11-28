@@ -145,3 +145,13 @@ predicate = "alternative_to"
 object_kind = "statement"
 object_id = "0266eac2-3fad-43eb-a1f1-e784c5356105"
 note = "A rival to WN only conditionally: with SS, a rational exercise and an optimal complete-output family that fixes some given being, it would make WN fail (not proved here). Unrefuted; G1 does not bear on it."
+
+[[relation]]
+id = "Test by Optimizing-giving laws, tied and mediated optimum models, checked"
+label = "Test by Optimizing-giving laws, tied and mediated optimum models, checked"
+subject_kind = "result"
+subject_id = "f0eb2f96-e313-4310-9c13-7064bcf13e1b"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8269797e-4c7b-4c33-8ed6-b1e5262885cc"
+note = "Tests extending the fixed-output exclusion from direct root giving to mediated ancestry on the d-to-g-to-c interpretation, with a selected optimum among the direct gifts."

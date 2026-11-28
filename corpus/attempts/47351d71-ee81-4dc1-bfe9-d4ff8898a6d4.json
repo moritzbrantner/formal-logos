@@ -1,0 +1,29 @@
+{
+  "id": "47351d71-ee81-4dc1-bfe9-d4ff8898a6d4",
+  "label": "Root links from Richard N. Boyd, How to be a Moral Realist",
+  "statement_ids": [
+    "56421a6e-7887-5435-9e03-a6bd2ff9a919",
+    "19766eb9-8d8b-5430-88f5-f971b93eaa36",
+    "b5554e65-ff84-58d2-87c3-49f15dabcce9"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "reprint §1.1, pp. 307–308: independence from moral opinions: Boyd's naturalist realism allows objective evaluative facts whose bases involve people and circumstances while the facts remain independent of appraisers' views. The application needs the target's moral facts and exact appraiser-attitude independence to correspond to that account. reprint §4.7, pp. 340–342: sympathy and rational choice: Boyd allows an informed yet indifferent agent and treats ordinary motivational links as contingent. Applying this separation to the case's good act requires showing that lack of motivation also means lack of the specified instrumental reason for that act. The proposed psychology alone does not entail that reason claim. reprint §§3.6–3.8 and 4.5, pp. 320–325 and 335–338: Boyd's causal-reference account proposes that diverse conceptions can refer to one naturally defined moral goodness without analytic synonymy. The application needs a successful link from the selected ascription to that referent and independent warrant that the natural property realizes the relevant moral role.",
+  "evidence": [
+    "1736393d-5e66-512b-9226-a2089d35303f",
+    "8b78c43d-1742-55b6-ac18-8dffb49da81f",
+    "bf097963-af60-531a-9c75-25a36a3d5199",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

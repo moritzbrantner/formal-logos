@@ -1,0 +1,10 @@
+{
+  "id": "f1353e08-17d5-489b-b8d2-fc99330cafb8",
+  "label": "Test by Finite interpretations for the fourteen derivations of r for Whoever bears an episode (1)",
+  "subject_kind": "result",
+  "subject_id": "7ebb0ab0-4022-5113-9810-67b4afa60cfc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c8394eaf-3110-503d-881f-6fc49f7430c3",
+  "note": "Tests omitting this premise in the encoded thoughtIsExerciseFromOpining argument, with the other premises retained and the conclusion false in each corresponding control."
+}

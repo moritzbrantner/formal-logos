@@ -1,0 +1,10 @@
+{
+  "id": "31b8bff5-b149-41d0-9cd6-379b3da314c7",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Open premise, the fuller (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf",
+  "note": "Tests the selected premise in the following setting. Same full nominal description and proper-sense predicate; one being, one respect, one name. Control.namingFails in Control.Certificate. Other two premises of NameApplicationTransfer.Description.properDescriptionExcluded hold: the practice's name refers to no being, and proper application is preserved by practice reference. A unique fully described being exists, so the theorem's conclusion (the full description is excluded) fails."
+}

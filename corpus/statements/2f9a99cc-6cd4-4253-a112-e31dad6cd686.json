@@ -1,0 +1,11 @@
+{
+  "id": "2f9a99cc-6cd4-4253-a112-e31dad6cd686",
+  "label": "Distinct actual giving by WILL_CAPACITY_VERSUS_WILLED_GIVING_3 directs the effect to an end",
+  "paraphrase": "At the selected w, for every giver and distinct recipient in act in esse, if the giver gives the recipient being by an owned rational power, some end is one to which that giver directs that effect. The direction depends on the exercised giving, with no possession-only, intellect or universal causal coverage hypothesis.",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.RationalGivingDirects",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "bace3032-dfa4-4193-9408-30f584e6fe6d",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1"
+  ]
+}

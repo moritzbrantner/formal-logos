@@ -13,3 +13,27 @@ conclusion = "STMT-GOD-EXISTS"
 kind = "bridge"
 status = "mapped"
 note = "OPEN: empirical sampling and calibration, actual designer existence, and identification with GOD_4. Evidence gain alone entails none of these."
+
+[[node]]
+id = "Observer-conditioned binary report information criterion"
+text = "With an interior comparison prior, zero mutual information is equivalent to equal conditional report probabilities"
+[[node]]
+id = "Screened and separating fine-evidence reports at unequal model weights"
+text = "Measure-theoretic controls for identical and distinct observer-conditioned report laws"
+[[node]]
+id = "Binary fine-evidence report has zero Brier gain exactly at zero information"
+text = "Agreement of the zero conditions under the coherent binary update equations"
+[[node]]
+id = "907aafab-960d-4290-bd08-b955f1f10f4c"
+text = "Existing Bayesian binary accuracy gain certificate"
+[[edge]]
+premises = ["907aafab-960d-4290-bd08-b955f1f10f4c", "Observer-conditioned binary report information criterion"]
+conclusion = "Binary fine-evidence report has zero Brier gain exactly at zero information"
+kind = "derivation"
+status = "proved"
+[[edge]]
+premises = ["Observer-conditioned binary report information criterion"]
+conclusion = "STMT-GOD-EXISTS"
+kind = "bridge"
+status = "mapped"
+note = "OPEN: independently calibrate matched observer-conditioned origin models, warrant an actual-designer inference, and identify that witness with GOD_4. The controls test the statistical step."

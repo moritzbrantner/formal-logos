@@ -33,3 +33,13 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 conclusion = "A shared reachability profile fixes neither route composition nor intellect"
 rule = "Two explicit route models on one shared graph interpretation"
 meaning = "There are two specified routes on Nat, each pairing a graph interpretation with PhysicalGround.Route parameters, that have the same anchor and the same extension for every restricted path formula (the anchor reaches exactly the even numbers), and both satisfy the ST I q.14 a.1 reading Route.Immaterial; in the first the anchor is composite and has intellect, in the second it is neither composite nor has intellect. Independence inside this candidate language only: no mapping of the language to an original ground is supplied, so the root-route step is neither refuted nor supported."
+
+[[relation]]
+id = "Test by One reachability formula defines a non-trivial target on Nat and Bool"
+label = "Test by One reachability formula defines a non-trivial target on Nat and Bool"
+subject_kind = "result"
+subject_id = "bf3f1048-b4b6-4e38-9d0e-0216d54ff3b7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3ff52bf2-165b-497b-b7ad-4acf1ca8bee5"
+note = "Tests nonvacuity with nonconstant targets, defining the even numbers on the Nat step-two graph and only the anchor on the edgeless Bool graph."

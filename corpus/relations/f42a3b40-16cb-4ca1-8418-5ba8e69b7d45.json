@@ -1,0 +1,10 @@
+{
+  "id": "f42a3b40-16cb-4ca1-8418-5ba8e69b7d45",
+  "label": "Test by ContingencyGrounding.controls (20d5fecd)",
+  "subject_kind": "result",
+  "subject_id": "cafd9800-2fee-4fb6-a52f-bec0f1479d7f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "20d5fecd-950e-42f8-8dc9-3014491ff6ae",
+  "note": "Omit power grounding for actual bearers contingent at the reading world. At true in bruteFirst, f is contingent and incorruptible simply, and no bearer has POWER_OVER_ESSE_1 over f. The other four C2 route premises hold."
+}

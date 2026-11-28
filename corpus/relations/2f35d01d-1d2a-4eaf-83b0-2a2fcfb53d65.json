@@ -1,0 +1,10 @@
+{
+  "id": "2f35d01d-1d2a-4eaf-83b0-2a2fcfb53d65",
+  "label": "Test by Frame-class strictness controls, checked for The accessibility relation of the route's (1)",
+  "subject_kind": "result",
+  "subject_id": "bffe3578-9ae5-4fe5-9bad-594ee928797d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "873d057f-e58e-53cc-a054-093f7c5a4238",
+  "note": "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. S5 adds transitivity to KTB; the reflexive symmetric non-transitive path is KTB and not S5."
+}

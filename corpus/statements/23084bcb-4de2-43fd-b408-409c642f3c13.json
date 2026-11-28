@@ -1,0 +1,12 @@
+{
+  "id": "23084bcb-4de2-43fd-b408-409c642f3c13",
+  "label": "The inertial receiver has an origin-conditional nature that does not entail existence",
+  "paraphrase": "Extend the matched giving assignments by a concrete nonempty nature dictionary. Its sole essential truth for the receiver says that if it exists at the designated slice, its distinct originator gave it being at moment 1. This proposition holds in both worlds, while the receiver is absent in one. No essential truth of the receiver entails its existence on this assignment.",
+  "lean_declaration": "TruthCore.Explanation.InertialReceiverNature.ReceiverNatureControl",
+  "definition_ids": [
+    "316780ef-70da-498f-8893-317cb35ca80b",
+    "181bb18f-72a4-4cb1-b5c0-9a70f5af2bb5",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "54bdb2f0-aa66-489f-ae06-174dd668d424"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "83b91c73-7f8e-49e9-b890-c4c261709347",
+  "label": "Root cognition criterion, from the unrestricted cognition criterion",
+  "argument_id": "2a8fd3b0-0cb9-4aae-9ca9-29e24a570df7",
+  "challenge_module": "TruthCore.Results.Causality.PossibiliaContent.Challenge",
+  "solution_module": "TruthCore.Results.Causality.PossibiliaContent.Solution",
+  "theorem": "TruthCore.Results.Causality.PossibiliaContent.rootCriterionOfCriterion",
+  "comparator_config": "results/83b91c73-7f8e-49e9-b890-c4c261709347/comparator.json",
+  "status": "solution-present",
+  "description": "The cognition criterion says that every bearer with a good-general favouring apprehends some content about some candidate; an actual root is such a bearer when it has a good-general favouring. This verifies the strength order from the criterion to its restriction to actual roots. The main theorem uses no axioms."
+}

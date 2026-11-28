@@ -1,0 +1,10 @@
+{
+  "id": "9dc25156-0bb4-4793-a4fb-0a98f40f1f1b",
+  "label": "Source support for b241b5ca from reading 49958bf6",
+  "subject_kind": "claim",
+  "subject_id": "194b1e45-e217-5eef-877f-7ab8a8233e5f",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "b241b5ca-e790-5145-bc9a-4154e266bb55",
+  "note": "The survey excludes self-causation of coming to exist and separately excludes production solely by one's own parts. Applying the first clause requires the survey's cause of coming to exist to match the case's originating relation on the same bearer. The parts clause would require a further mereological bridge."
+}

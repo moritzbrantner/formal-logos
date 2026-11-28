@@ -1,0 +1,25 @@
+{
+  "id": "18a75892-5c49-409a-b297-5cbb7a644222",
+  "label": "Accessible absence coverage rules out being without a source of dependence",
+  "premise_statement_ids": [
+    "2bdb0be1-85dc-45a6-a8d0-c45fe46bb361",
+    "06047f4c-ce98-4a33-a3f2-84fcf476d86e",
+    "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"
+  ],
+  "conclusion_statement_id": "000e1f65-6e74-5519-bbf3-300d5f61ada8",
+  "inference_ids": [
+    "41159fbd-2fd3-4c63-b194-7714e0eb4735"
+  ],
+  "meaning": "Conditional support for the existing dependence-to-real-impossibility premise. If x depends for its being on y and could exist without y, the realization premise supplies an accessible contrast world. Coverage selects it, so soundness implies x is absent there, contradicting the witness. The three assumptions are explicit. Accessibility stays distinct from intervention outcomes, and the argument leaves the shared dependence primitive and the strict-ground map untouched.",
+  "definition_ids": [
+    "d0b06beb-e8cb-5cb8-af2f-bc7f8cc004b2",
+    "bf26b9b2-41ed-55b0-9557-dae90ab9b81f",
+    "c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"
+  ],
+  "disambiguation_ids": [
+    "23dd6f32-b456-4963-adb3-7befbf0dc4fb"
+  ],
+  "strong_version_needed": {
+    "06047f4c-ce98-4a33-a3f2-84fcf476d86e": "Full coverage is a consequent-independent selection policy: it is specified without knowing which effect is at issue. The weaker witness-preservation premise suffices for the conclusion and is used by the sibling argument (docs/notes/counterpossible-conservativity.md)."
+  }
+}

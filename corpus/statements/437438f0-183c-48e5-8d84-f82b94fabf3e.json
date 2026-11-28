@@ -1,0 +1,11 @@
+{
+  "id": "437438f0-183c-48e5-8d84-f82b94fabf3e",
+  "label": "Required beneficiary credit in operative giving counts as CREATURE_WILLING_1",
+  "paraphrase": "OPEN, analyst formulation. At w, if a successfully governing plan of giving to x requires counting a respect r as good for x, g wills that good to x in CREATURE_WILLING_1. Subordinate concern is allowed, and the rule does not identify any particular plan or requirement.",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.RequiredBenefitIsWilled",
+  "definition_ids": [
+    "08b826db-2d9c-48e5-b69c-d4ac54088518",
+    "fbd163ad-ec01-45d1-a749-f90a1de6ea37",
+    "a84afabf-d6e6-424d-a792-2fa874c466a5"
+  ]
+}

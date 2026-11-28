@@ -1,0 +1,10 @@
+{
+  "id": "b77182f5-42b4-4b26-9c3d-d1207ae48695",
+  "label": "Test by Giver-of-being controls, checked for If an actual concretum x depends for its being on (1)",
+  "subject_kind": "result",
+  "subject_id": "cd075a84-bb64-4c05-a592-21072621d30f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+  "note": "Tests omission of dependence-to-grounding with the universal dependence assignment and empty grounding."
+}

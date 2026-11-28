@@ -1,0 +1,10 @@
+{
+  "id": "70b7258c-d0ab-4a93-9c28-4975b7e1b569",
+  "label": "Test by Finite interpretations for the eight derivations of roun for Whatever causes the being (1)",
+  "subject_kind": "result",
+  "subject_id": "27d0aa1f-bd7c-5946-b886-0dea80ab650e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5e281daf-e8a5-5995-bc3f-94e142319e28",
+  "note": "Tests omitting this premise in the encoded universalCauseTransfers argument, with the other premises retained and the conclusion false in each corresponding control."
+}

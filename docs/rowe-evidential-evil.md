@@ -475,3 +475,13 @@ for verification, source scope and unchanged formal status.
 ## Research attempts citing this note
 
 - [Owner-directed definition comparison, attribution deferred](../corpus/attempts/evil-emotivism-use-boundary.json)
+
+## Three caption witnesses awaiting the pinned export (2026-11-26)
+
+The three O'Connor claims remain available as existing records. Deciding their
+source relations requires the matching caption export and comparison of
+objective evil, the scale of suffering, and power and will to remove evil with
+the relevant case propositions. The local export candidates do not have the
+pinned producer revision.
+
+[Alex O'Connor access attempt](../corpus/attempts/a07d68e2-8e3f-4b05-8947-66f67dc93066.json), [Alex O'Connor access attempt](../corpus/attempts/0ba9326c-43c3-4b95-b21a-e56c91216ab2.json), [Alex O'Connor access attempt](../corpus/attempts/a7a7c5de-089e-4402-9f02-ae9926874e84.json).

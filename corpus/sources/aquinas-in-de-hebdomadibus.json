@@ -1,0 +1,11 @@
+{
+  "id": "92f270ed-d812-4f0e-bb9d-e8c9af009833",
+  "label": "Thomas Aquinas, Expositio libri Boetii De ebdomadibus",
+  "kind": "primary_text",
+  "author": "Thomas Aquinas",
+  "work": "Expositio libri Boetii De ebdomadibus",
+  "citation_system": "lectio and Corpus Thomisticum anchor",
+  "catalog_url": "https://www.corpusthomisticum.org/cbh.html",
+  "work_urn": "urn:truth-core:work:aquinas-in-de-hebdomadibus",
+  "notes": "Lectio 2 is pinned from Corpus Thomisticum's electronic edition of the Turin 1954 text. This witness is distinct from the Leonine edition."
+}

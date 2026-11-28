@@ -1,0 +1,10 @@
+{
+  "id": "d2285972-a332-43ce-b20c-d6d180f3c1bd",
+  "label": "Test by Ideal consensus comparison has compatibility and omission controls",
+  "subject_kind": "result",
+  "subject_id": "04d31815-72a0-4c1c-a209-25a7ac84c180",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "50b0a5e4-ef0c-4358-84a1-cb663303cd44",
+  "note": "Tests omission of universal approval in the omission-artifact ideal consensus profile."
+}

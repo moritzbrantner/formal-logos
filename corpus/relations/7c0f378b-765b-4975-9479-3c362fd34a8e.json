@@ -1,0 +1,10 @@
+{
+  "id": "7c0f378b-765b-4975-9479-3c362fd34a8e",
+  "label": "Test by Possession-sensitive appetite populated omissions",
+  "subject_kind": "result",
+  "subject_id": "4afe8379-f369-422a-bdf7-bc0d1cb582aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0a8c56f8-ffe3-4fdb-9efc-8b108d601762",
+  "note": "Tests omission of this premise from capacity in the fixed populated possession-state profile with the other capacity input retained."
+}

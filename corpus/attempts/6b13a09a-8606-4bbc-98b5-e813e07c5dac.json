@@ -1,0 +1,25 @@
+{
+  "id": "6b13a09a-8606-4bbc-98b5-e813e07c5dac",
+  "label": "Becoming versus being cause connection plan",
+  "statement_ids": [
+    "cd708f8c-8d76-55dd-99a1-6529a6cd2b7e"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "A cause of coming to be need not cause esse at the selected world. The documented control separates the two predicates. A rooted alternative needs a matched account of continuing being, or a distinct origin-to-esse bridge with independent justification.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 7561e216-900f-53f1-9e22-d74427758cd6. The scoped bridge described in the summary remains open."
+}

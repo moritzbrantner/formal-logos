@@ -1,0 +1,11 @@
+{
+  "id": "839358ce-a242-4356-8fd8-75a4067980c7",
+  "label": "Selected-world CONCRETE_6 from weak calibration and named elimination",
+  "argument_id": "210f93d4-a6a0-4978-ae2d-25077fce318e",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.WeakEsseCalibration.namedElimination",
+  "comparator_config": "results/839358ce-a242-4356-8fd8-75a4067980c7/comparator.json",
+  "status": "solution-present",
+  "description": "Keep the same supplied causal frame, power and concreteness predicates. The fork either supplies the owner condition or a selected countercase. Named coverage takes that countercase to a named one, and named failure excludes each of the three cases. The one-direction calibration is used in the structural fork. The grounds field has no role."
+}

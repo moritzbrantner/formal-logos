@@ -1,0 +1,10 @@
+{
+  "id": "a47bd107-e2cb-48b8-b887-4163b91be7df",
+  "label": "Test by Finite interpretations for the nine derivations of round for Every NECESSARY_1 being i (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d483248e-677b-5120-989c-ccc30debac75",
+  "note": "Tests omitting this premise in the encoded necessityFromPerfection argument, with the other premises retained and the conclusion false in each corresponding control."
+}

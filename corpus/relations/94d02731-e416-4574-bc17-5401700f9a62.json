@@ -1,0 +1,10 @@
+{
+  "id": "94d02731-e416-4574-bc17-5401700f9a62",
+  "label": "Esse-loop control tests lackable being lacks every act",
+  "subject_kind": "result",
+  "subject_id": "544bc129-3ee9-4b17-b4ba-8ff42ad61f3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f856b295-6f8f-40e8-aa64-236b3ab9aa85",
+  "note": "Comparator companion controls, part 3 (esseLoop): the unlosable first holder, HeldActsAreLackable and 6e2176cd hold; LackableBeingLacksEveryAct and the MOTION_3 first-holder conclusion fail, since the first holder could lack being but not its operative act and is held as to being."
+}

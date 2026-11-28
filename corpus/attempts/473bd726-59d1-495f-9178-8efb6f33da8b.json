@@ -1,0 +1,26 @@
+{
+  "id": "473bd726-59d1-495f-9178-8efb6f33da8b",
+  "label": "Scope of the adjacent per se and actual-grounding bridge premises",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "adb951c1-db12-48bf-be7b-a152b8e27021",
+    "f10d5632-ee55-5c6a-b972-809363b8c50c",
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42",
+    "0f5b53ef-0872-597b-b2f0-fc22b8df600a",
+    "7a63a3fe-a29f-5282-8106-79fedcb10d08",
+    "2047d14b-7f50-4e46-9284-8972d135ef9e"
+  ],
+  "kind": "reading",
+  "outcome": "blocked",
+  "summary": "The supplied-PLG tests concern sequents over labels and furnish neither world-local grounding nor priority in act. Per se history inclusion can be obtained by selection, provided the other history conditions concern that same relation. Per se dependence alignment still requires existential, as opposed to instrumental-mover, links. The two directions between D and actual grounding need their own world-local calibration, and the distinct D map cannot establish actual grounding irreflexivity on the diagonal. For the grounding-to-dependence converse, the quality example applies only to profiles admitting bearer-level edges on quality-level evidence. For existential grounds alone the remaining question is whether the selected counterfactual follows. The six exact boundaries are recorded in docs/notes/distinct-dependence-strict-ground-route.md#adjacent-premises-in-the-triage-cluster.",
+  "blocker": "Test one independently specified case of actual existential supply on the same carrier, world and respect. Show which per se links supply being, which facts represent that supply, and whether the grounding profile and priority relation agree there, including a separate diagonal test if irreflexivity is used.",
+  "evidence": [
+    "d09f6268-93bf-4a00-af60-c57fc2353825",
+    "cc7dd608-8551-4045-8bfb-5a7643a9314a",
+    "PR-2025"
+  ],
+  "workers": [
+    {"role": "author", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"},
+    {"role": "repair", "provider": "codex", "model": "gpt-6.2-sol", "effort": "high", "date": "2026-11-26", "pr": "PR-2025"}
+  ]
+}

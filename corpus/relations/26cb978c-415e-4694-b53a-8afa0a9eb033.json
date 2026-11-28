@@ -1,0 +1,10 @@
+{
+  "id": "26cb978c-415e-4694-b53a-8afa0a9eb033",
+  "label": "Empty recipient population tests selected actual concreteness",
+  "subject_kind": "result",
+  "subject_id": "a82ffbcd-37b5-4a58-be8d-a53cd3cc5c9f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "adb5020c-f115-5a26-a736-343ec2fc9d68",
+  "note": "Omit actual concreteness of the selected recipient. The other structural conditions can hold over every actual concrete recipient on an empty actual inventory, with no concrete necessary witness."
+}

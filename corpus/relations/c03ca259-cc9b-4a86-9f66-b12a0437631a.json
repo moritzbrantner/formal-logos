@@ -1,0 +1,10 @@
+{
+  "id": "c03ca259-cc9b-4a86-9f66-b12a0437631a",
+  "label": "Source qualification for b90c4dd1 from reading eaa3ec6d",
+  "subject_kind": "claim",
+  "subject_id": "b1c57851-d6e4-5321-bb85-661051489029",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "b90c4dd1-88d9-4afe-8455-4152d7836c99",
+  "note": "Kant's distinction between transcendental meaning and determining transcendental use qualifies an application that takes pure causal concepts to determine supersensible objects. The case requires a separate warrant for a cause outside possible sensible experience and a match of the causal senses."
+}

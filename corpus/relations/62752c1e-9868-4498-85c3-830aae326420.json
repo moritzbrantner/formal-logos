@@ -1,0 +1,10 @@
+{
+  "id": "62752c1e-9868-4498-85c3-830aae326420",
+  "label": "Test by Giver-of-being controls, checked for Whatever has esse in re is CONCRETE_6 in the profile",
+  "subject_kind": "result",
+  "subject_id": "cd075a84-bb64-4c05-a592-21072621d30f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2d9807a5-ebff-45fd-972f-e241f18713d4",
+  "note": "Tests omission of the esse-to-concreteness implication on the profile with every bearer actual and only one concretum."
+}

@@ -1,0 +1,12 @@
+[batch]
+vocab = "TruthCore.Causality.ComparativePerfectionScale"
+results = "TruthCore.Results.Causality.ComparativePerfectionScale"
+
+[[argument]]
+id = "Possession and exact esse calibration give strict degree tracking"
+theorem = "moreInBeingTracksDegreeOfExactCalibration"
+premises = ["STMT-MORE-IN-MATCHES-DEGREE-EVERYWHERE", "STMT-MORE-SUCH-HAS-THE-PERFECTION"]
+conclusion = "STMT-MORE-IN-BEING-TRACKS-DEGREE"
+transcription = "assembly"
+rule = "Specialize possession at esse and take the forward direction of the exact calibration"
+meaning = "This assembly transcription specializes possession at esse and takes the forward direction of exact calibration. For the same comparison at esse and the same supplied value map, possession supplies the left bearer's having esse and the forward direction of exact calibration supplies its strictly greater degree. The lesser comparand need not have esse."

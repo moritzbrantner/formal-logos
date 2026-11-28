@@ -1,0 +1,11 @@
+{
+  "id": "2f9866e3-a768-40a2-b166-eb1a277d1fff",
+  "label": "Carried closure separates positive ESSENCE_6 at roots from carriage",
+  "argument_id": "fed0df64-d451-4030-81ab-de28fd364ca1",
+  "challenge_module": "TruthCore.Results.Causality.RootClosure.Challenge",
+  "solution_module": "TruthCore.Results.Causality.RootClosure.Solution",
+  "theorem": "TruthCore.Results.Causality.RootClosure.carriedClosureSeparates",
+  "comparator_config": "results/2f9866e3-a768-40a2-b166-eb1a277d1fff/comparator.json",
+  "status": "solution-present",
+  "description": "Strictness control for positivity of root essences over carriage. Establishes no premise."
+}

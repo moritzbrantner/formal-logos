@@ -1,0 +1,10 @@
+{
+  "id": "3380207c-4b1c-4bb5-a0f0-0b428339a2f8",
+  "label": "Test by Finite controls: departed-builder production satisfies t for Strong open framework tra (1)",
+  "subject_kind": "result",
+  "subject_id": "db60a52a-da4e-5e93-9767-774629d36119",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c2253c71-771f-5a48-b4b1-b20792821281",
+  "note": "Tests whether uniter-only persistence suffices for global persistence using the supported boundary profile."
+}

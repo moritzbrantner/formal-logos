@@ -1,0 +1,10 @@
+{
+  "id": "1d3f1a3a-f03a-4fd2-bcef-5742612d2d31",
+  "label": "Test by Joint-satisfiability model of the LORD_3 Dei Filius root route, checked",
+  "subject_kind": "result",
+  "subject_id": "80920b5c-eabe-40aa-86c7-b11231531913",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "625e9993-f850-432a-8fc8-b3b813c7b35f",
+  "note": "Tests joint satisfiability of the unified root bundle in its designated root model under explicit excluded middle."
+}

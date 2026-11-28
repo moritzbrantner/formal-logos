@@ -1,0 +1,10 @@
+{
+  "id": "6c45019d-61f7-45a6-9278-1e670f3560ee",
+  "label": "Test by Possession-sensitive appetite populated omissions for Local appetitive calibration",
+  "subject_kind": "result",
+  "subject_id": "4afe8379-f369-422a-bdf7-bc0d1cb582aa",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "8ebbc2ba-5ceb-418f-8970-962936e383db",
+  "note": "Tests omission of this premise from capacity in the fixed populated possession-state profile with the other capacity input retained."
+}

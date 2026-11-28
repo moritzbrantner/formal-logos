@@ -2423,6 +2423,27 @@ productive role in this same simple source. The live historical test still
 requires an independently warranted reporting domain or retention mechanism
 for one event class, interval and recipient inference.
 
+## The law of the prefix and the law of the successor (#2103)
+
+`HistoryObservationLaws.scheduleBoundary` (result `8888779b`) uses
+`NoFoundationLawChaos.lawSwitch` on the fixed copy and delayed-toggle schedules.
+Their deterministic laws of the observed prefix coincide for any cutoff
+through the switch date. The exact observation laws of the switching successor
+differ. The same past evidence can therefore support different prospective
+tests within this stipulated pair. The observation-law equality concerns
+the prefix experiment, while the governing rules differ at the switch.
+Each law is a point mass for one schedule and supplies no odds between them.
+
+The [recombination attempt](../../corpus/attempts/6d1c811e-ef70-4cc6-8e98-9e9dabc5547e.json)
+records the missing premise from no scope-ground to admissible alternatives at
+fixed evidence, and the
+[exposure attempt](../../corpus/attempts/c3d8f7e1-e40c-407a-bad9-873a5e24b896.json)
+records the weaker tests that need only a differing later bit or enough adjacent
+pairs. One may test admission of a specific divergent successor before taking
+on finite recombination or infinite-prefix closure. A claim of epistemic
+undermining would still need an entitlement standard whose scope includes the
+retained channel and the newly admitted alternative.
+
 ## Research attempts citing this note
 
 - [Finite recombination and prefix closure separate full-law arbitrariness](../../corpus/attempts/6d1c811e-ef70-4cc6-8e98-9e9dabc5547e.json)

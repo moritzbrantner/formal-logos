@@ -1,0 +1,10 @@
+{
+  "id": "f7c09332-db4a-49d8-9df7-a329ee5c3ae5",
+  "label": "Test by NecessaryConcreteRouteBridge.necessaryRouteControls (86efed1a)",
+  "subject_kind": "result",
+  "subject_id": "d492d6e9-e381-5628-ba20-18e7855c322d",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "86efed1a-f353-5b5d-9431-df7fc643ace1",
+  "note": "Omit the bridge from distinct simple priority to actual concrete grounding. Both concrete candidates exist at the sole world. True is simply prior to false, but the only ground edge goes from false to true."
+}

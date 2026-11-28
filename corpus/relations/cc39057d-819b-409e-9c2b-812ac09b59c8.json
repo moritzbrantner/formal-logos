@@ -1,0 +1,10 @@
+{
+  "id": "cc39057d-819b-409e-9c2b-812ac09b59c8",
+  "label": "Test by Root existence guard controls",
+  "subject_kind": "result",
+  "subject_id": "d6ffede9-3cb9-44bf-8f3c-eec93db069bd",
+  "predicate": "tests",
+  "object_kind": "argument",
+  "object_id": "b7946610-9304-4b67-8639-50c94009d6de",
+  "note": "Tests the actual-root guard using the existing positive root fixture and the empty-ExistsAt Unit fixture whose box-existence is vacuously true."
+}

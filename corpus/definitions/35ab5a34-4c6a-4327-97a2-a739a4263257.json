@@ -1,0 +1,9 @@
+{
+  "id": "35ab5a34-4c6a-4327-97a2-a739a4263257",
+  "label": "Outweighed reason: weighs more in one respect, worse overall, and not favoured",
+  "term": "outweighed reason (Outweighed)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.AxiarchicGuidance.Outweighed",
+  "definition": "Outweighed w good φ s r x y: at scenario s, respect r weighs y above x (w s r x < w s r y, with w s r z the graded weight of candidate z in respect r), yet overall x is better than y (good s x y) and the profile φ favours x over y. Respect weights and overall betterness are parameters, read as value; no aggregation rule is typed in general (the control uses the sum). Example: a plan better for one recipient and worse overall, passed over. Non-example: a respect in which the favoured candidate also weighs more.",
+  "note": "Stipulative analyst notion (#2145 premise lane C, round 3), attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Counterfactual guidance and self-application against imitability exemplars'."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "006f49e8-4c68-424d-9403-9f025185b555",
+  "label": "Classify strict partial derivability by paths in a consistent PLG presentation",
+  "argument_id": "46e0cf30-5f54-429e-9556-afc204d8bbef",
+  "challenge_module": "TruthCore.Results.Causality.SelectedPlgTheory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedPlgTheory.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.strictDerivabilityCriterion",
+  "comparator_config": "results/006f49e8-4c68-424d-9403-9f025185b555/comparator.json",
+  "status": "solution-present",
+  "description": "For soundness, the path invariant tracks every antecedent of full sequents individually. Cut concatenates paths, and reverse subsumption supplies strict paths for every antecedent. Consistency makes the explosion case impossible. For completeness, each represented path yields a strict partial sequent via the mixed transitivity rules."
+}

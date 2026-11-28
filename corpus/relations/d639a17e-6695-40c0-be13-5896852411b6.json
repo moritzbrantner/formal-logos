@@ -1,0 +1,10 @@
+{
+  "id": "d639a17e-6695-40c0-be13-5896852411b6",
+  "label": "Test by Finite interpretations for the round 3 Cogito/existence- for Actual CONCRETE_AND_ABSTR (1)",
+  "subject_kind": "result",
+  "subject_id": "b9c3f090-3bf2-5c96-ae3e-c18a1d63cd3b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "47e323f2-3405-5caf-a192-201eb1e02f76",
+  "note": "Tests omitting this premise in the encoded actualGroundingWFFromFiniteRank, borrowingEscapeFromFiniteRank arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

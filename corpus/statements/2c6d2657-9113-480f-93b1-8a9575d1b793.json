@@ -1,0 +1,12 @@
+{
+  "id": "2c6d2657-9113-480f-93b1-8a9575d1b793",
+  "label": "Separate strict priorities allow one occurring act to produce its own bearer",
+  "paraphrase": "On Unit bearers and Unit acts the sole act occurs and produces the sole bearer. The bearer and product priority requirements each hold in an irreflexive transitive relation, using separate relations. The required edge relation is irreflexive and nontransitive, and no common irreflexive transitive extension exists.",
+  "lean_declaration": "TruthCore.Causality.ExistentialPriorityOrder.SplitPriorityControl",
+  "definition_ids": [
+    "57a30b7d-c51e-4b28-83ac-b7e924b7ace4",
+    "20a4bee8-3701-40ed-a63e-bf683ca4eb14",
+    "d6aed40f-2703-4cf5-852a-369fbacd085c",
+    "eee784e7-d27d-5ccd-835b-2e03b344b7f8"
+  ]
+}

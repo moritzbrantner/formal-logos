@@ -1,0 +1,9 @@
+{
+  "id": "4295a4ac-0a5a-4ea7-88b3-8a3551415dd5",
+  "label": "Actual concreteness outside the selected fusion scope",
+  "term": "Actual concreteness outside the selected fusion scope",
+  "lean_declaration": "TruthCore.Causality.LocalActualFusion.OutsideFusionActualConcreteAt",
+  "definition": "Every candidate existing at w that is outside SelectedFusionPart for the supplied sum satisfies m.concrete.",
+  "basis": "stipulative",
+  "note": "The complement of the local calibration on the same profile, order, world and sum. There is no existence assumption for outside candidates."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "316fa523-efe7-49c1-839e-6faa96ba6ae9",
+  "label": "Necessary holder of global-absence power with selected-world Euclidean access",
+  "argument_id": "6b719286-cbad-49a8-b4d0-54963933870c",
+  "challenge_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Challenge",
+  "solution_module": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.Solution",
+  "theorem": "TruthCore.Results.Case.Catholicism.PremiseRestrictions.globalAbsencePowerAt",
+  "comparator_config": "results/316fa523-efe7-49c1-839e-6faa96ba6ae9/comparator.json",
+  "status": "solution-present",
+  "description": "The global-absence power-content, grounding, initiating-history and concreteness predicates are unchanged. The global absence possibility and actual contingency give a holder at w. Initiator presence puts that holder in a successor v with no contingent concrete beings. If any successor u of w lacked it, the edge from v to u given by EuclideanAt at w would make it contingent at v. Excluded middle gives necessary existence at w. The result keeps the global power content."
+}

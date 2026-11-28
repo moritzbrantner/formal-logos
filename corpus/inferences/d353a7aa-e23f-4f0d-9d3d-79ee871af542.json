@@ -1,0 +1,14 @@
+{
+  "id": "d353a7aa-e23f-4f0d-9d3d-79ee871af542",
+  "label": "Distinct efficient incoming coverage from no CAUSE_4 self-origin (inference)",
+  "input_statement_ids": [
+    "a6965d7b-332d-4790-a208-2eb60f78e38f",
+    "b241b5ca-e790-5145-bc9a-4154e266bb55",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"
+  ],
+  "output_statement_id": "bd050ab8-3cfa-4db8-a990-a4595834afb9",
+  "rule": "Split identity of the selected witness and eliminate the self-origin disjunct",
+  "meaning": "A distinct incoming edge already witnesses the consequent. If the selected witness is diagonal, the explicit bridge gives either another incoming cause or a CAUSE_4 diagonal. The origin exclusion removes the latter; the proof leaves the original efficient self-edge intact.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

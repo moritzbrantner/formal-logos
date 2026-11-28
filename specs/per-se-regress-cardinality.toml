@@ -17,3 +17,13 @@ conclusion = "Second Way controls for successor orientation and finite cycles"
 axioms = ["propext", "Classical.choice", "Quot.sound"]
 rule = "Interpret the same successor rule in both directions and compare with an alternating cycle"
 meaning = "Both Nat interpretations designate exactly the efficient edges with caused sources as per se and use the corresponding strict priority order. Decreasing Nat rank proves accessibility in the rooted interpretation, while f(n) = x + n gives each x an upstream chain in the converse interpretation. The latter chain is injective by the existing acyclic chain theorem. Alternating the two Boolean bearers of a cycle gives a repeated traversal with no self-edges and no injection from Nat into its carrier. These controls distinguish whether a descent repeats, how many bearers it needs, and whether a fixed roster has a first efficient cause. They test the exact regress premise 97f5850f-62bc-5e43-a0c1-dd1033d08fc9 in mathematical interpretations and do not establish causal applicability or equal explanatory adequacy."
+
+[[relation]]
+id = "6a5c031c-e816-49fd-b8d3-753507c24f77"
+label = "Test by PerSeRegressCardinality.successorOrientationAndFiniteCycle (97f5850f)"
+subject_kind = "result"
+subject_id = "844a12de-ccf7-4e47-a30e-0fee51765eef"
+predicate = "tests"
+object_kind = "statement"
+object_id = "97f5850f-62bc-5e43-a0c1-dd1033d08fc9"
+note = "Omit accessibility of the per se cause relation in the Second Way. The reversed Nat successor edge retains the other four formal premises and is acyclic, but each bearer has an infinite upstream per se chain and there is no first efficient cause."

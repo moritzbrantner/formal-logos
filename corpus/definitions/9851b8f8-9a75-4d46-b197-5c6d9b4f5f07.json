@@ -1,0 +1,9 @@
+{
+  "id": "9851b8f8-9a75-4d46-b197-5c6d9b4f5f07",
+  "label": "DOXASTIC_BELIEF_1: actual assent in the legacy divine-veracity frame",
+  "term": "legacy assent in divine veracity",
+  "basis": "stipulative",
+  "definition": "V.Believes g p is the primitive relation of a bearer actually assenting to a proposition in the legacy divine-veracity vocabulary.",
+  "lean_declaration": "TruthCore.Causality.NamingVeracityBatch1.Veracity.Believes",
+  "note": "Projection of the existing Veracity structure. Its extension is independently supplied, with no actual truth or accessibility condition built in."
+}

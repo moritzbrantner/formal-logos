@@ -1,0 +1,11 @@
+{
+  "id": "decd967f-3ecb-4bca-8d69-cd365ed30f9f",
+  "label": "Four priority-route omissions and fixed rational exercise, checked",
+  "argument_id": "b574abef-cd6e-4b16-b433-4a817a614e58",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.controls",
+  "comparator_config": "results/decd967f-3ecb-4bca-8d69-cd365ed30f9f/comparator.json",
+  "status": "solution-present",
+  "description": "The created effect is always actual and the tenseless esse edge always holds. Absence of giving or absence of an exercise assignment shows why the respective adapter or classification input matters. The fixed non-rational exercise meets firstness and violates natural priority; assigning priority to the effect instead makes natural priority true and firstness false. With the fixed rational exercise all four inputs hold. Empty end and recipient-willing relations test the further applications, and with no required means the same rational fixed exercise violates WN. These are structural assignments to the shared frame and agency overlay."
+}

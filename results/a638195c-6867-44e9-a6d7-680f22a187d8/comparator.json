@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Explanation.InducerFreePersistence.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InducerFreePersistence.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Explanation.InducerFreePersistence.matchedAssignments"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

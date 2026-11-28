@@ -1,0 +1,11 @@
+{
+  "id": "bc375179-5b86-4094-87e1-96ef9a39780f",
+  "label": "Intellectual universal giving by rational exercise, from priority",
+  "argument_id": "15aec982-767a-42d9-b33e-eb7a19c6fb89",
+  "challenge_module": "TruthCore.Results.Causality.ThroughWill.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ThroughWill.Solution",
+  "theorem": "TruthCore.Results.Causality.ThroughWill.rationalGivingOfPriority",
+  "comparator_config": "results/bc375179-5b86-4094-87e1-96ef9a39780f/comparator.json",
+  "status": "solution-present",
+  "description": "For each distinct actual effect, the esse adapter gives an actual giving and the classifier gives an owned power exercised in it. The non-rational branch supplies a distinct prior intellect, contradictory to firstness of the same universal cause. The rational branch supplies the typed exercise. The independent premises carry application to actual esse, classification, metaphysical priority, and the scope of firstness."
+}

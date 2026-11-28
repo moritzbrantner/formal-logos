@@ -1,0 +1,14 @@
+{
+  "id": "7ab92b2d-2471-43f6-af1b-a8dee675ec50",
+  "label": "I q.22 a.2: Divine providence orders every creature to an end",
+  "statement_id": "e348280d-0933-4cc9-84c7-c8e2ed941862",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.22 a.2 co.",
+  "interpretation": "The first argument extends ordering to the range of the first agent's effects, including their individuating principles. It includes each creature insofar as it participates in being. I q.22 a.1 excludes God himself, the ultimate end, from what is ordered to an end. The second argument appeals to God's knowledge of particulars and the analogy of art. The first reply explains how another cause can interfere with the order of a particular cause. I q.22 a.1 ad 2–3 distinguish the plan of order from its execution and say that providence presupposes willing the end.",
+  "status": "formalized",
+  "attribution": "The passage states that God orders every creature, including each individual insofar as it participates in being, to an end, which is the premise.",
+  "definition_ids": [
+    "92c03350-6809-497d-b123-2ffb11c0e0c1",
+    "c53b5fbe-121a-5d59-8e29-0f9f7eea85b1"
+  ]
+}

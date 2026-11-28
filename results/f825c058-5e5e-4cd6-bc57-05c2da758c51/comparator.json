@@ -1,0 +1,17 @@
+{
+  "challenge_module": "TruthCore.Results.Logic.FirstPersonWitness.Challenge",
+  "solution_module": "TruthCore.Results.Logic.FirstPersonWitness.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Logic.FirstPersonWitness.existenceFromDoubt",
+    "TruthCore.Results.Logic.FirstPersonWitness.doubtWitness",
+    "TruthCore.Results.Logic.FirstPersonWitness.populationFromDoubt",
+    "TruthCore.Results.Logic.FirstPersonWitness.calibrateDoubt",
+    "TruthCore.Results.Logic.FirstPersonWitness.sameBearerContingency",
+    "TruthCore.Results.Logic.FirstPersonWitness.bearerlessControl",
+    "TruthCore.Results.Logic.FirstPersonWitness.nonconcretePerformerControl",
+    "TruthCore.Results.Logic.FirstPersonWitness.elsewherePerformerControl",
+    "TruthCore.Results.Logic.FirstPersonWitness.presenceOmissionControl"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

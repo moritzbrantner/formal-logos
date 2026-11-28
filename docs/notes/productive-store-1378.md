@@ -106,6 +106,14 @@ the bearer's existence is underived or necessary. `Ontic.ExistsAt` and Causes
 are primitive; necessary existence quantifies over the supplied accessible
 worlds, not over energy budgets. Quantitative numbers have no world index here.
 
+Applying the ledger results to the per se regress question requires a map
+from the caused-as-caused relation in
+`NoInfinitePerSeEfficientCauseSeriesReading` to the accounted resource flows.
+The proposed application would need to show that each relevant link transmits
+the same resource under a justified boundary and demand profile. The ledger
+types quantify over stocks and intervals. Deriving accessibility of the causal
+relation from the quantitative bound remains open.
+
 Existing #734 `Supply` is inductively generated from intrinsic contributions
 and entire contributor groups; `LocalPower` is an unselected fixed-point law.
 Its `Escape` is a separate open cut principle; nothing in this ledger derives

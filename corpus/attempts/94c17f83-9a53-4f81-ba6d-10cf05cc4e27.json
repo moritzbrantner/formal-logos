@@ -1,0 +1,28 @@
+{
+  "id": "94c17f83-9a53-4f81-ba6d-10cf05cc4e27",
+  "label": "Stable logical content and truth profiles connection plan",
+  "statement_ids": [
+    "2da913fd-d8f7-5eb2-b933-886bd2461b4d",
+    "cb9ecf3a-8c6d-5062-84a1-12068f87aac4",
+    "dbf0c4c2-9d64-5b2a-a18f-4342dcbdc723"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "One stable designated logical sentence excludes global profile variation in the supplied interpretation. It leaves local variation and does not show that the God-existence assertion is stable or that stability sets its truth value. Map the content to a profile and compare actual truth with endorsement-invariant status. Introduced in 2088c07d5.",
+  "evidence": [
+    "80b7281d-0b3e-5b79-965e-c91eae16c5d9",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

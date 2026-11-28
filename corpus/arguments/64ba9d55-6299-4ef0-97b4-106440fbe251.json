@@ -1,0 +1,22 @@
+{
+  "id": "64ba9d55-6299-4ef0-97b4-106440fbe251",
+  "label": "GOD_4 HAS_WILL_1 through an inclination following an apprehended good",
+  "premise_statement_ids": [
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "700215cd-e9b9-465c-9075-fd6583f197eb",
+    "69bbed47-72f4-4ca0-a925-05f7969cfa03",
+    "6f3f1c14-9d10-4bfa-bdc0-6dfae1d0554a"
+  ],
+  "conclusion_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
+  "inference_ids": [
+    "c69dc888-a672-431f-a810-10d7508ec514"
+  ],
+  "meaning": "For each GOD_4, use its intellect to obtain an actualizing intelligible form under which it apprehends a good. The restricted inclination law supplies an orientation following that very form in that same bearer. The guarded recognition premise gives HAS_WILL_1 for that bearer. The conclusion is possession of will. Any act, rational giving or possible withholding requires further hypotheses.",
+  "definition_ids": [
+    "13f88c69-3e85-507f-9e0d-b1f6ca32baed",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "fb2759f7-aecb-4921-9f82-61de72a45245"
+  ]
+}

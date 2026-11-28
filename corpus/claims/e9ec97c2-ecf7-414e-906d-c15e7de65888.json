@@ -1,0 +1,18 @@
+{
+  "id": "e9ec97c2-ecf7-414e-906d-c15e7de65888",
+  "label": "I q.19 a.4: GOD_4 produces through intellect and will (HAS_INTELLECT_1, HAS_WILL_1)",
+  "statement_id": "cacec490-efba-4aba-bcfb-8545922fa8dd",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.19 a.4 co.",
+  "interpretation": "The three reasons appeal to the priority of intellectual over natural agents, the determinate action of a natural agent together with God's unlimited perfection, and the intellectual way in which effects preexist in God. The fourth reply distinguishes direction by knowledge, command by will and execution by power.",
+  "status": "formalized",
+  "attribution": "The passage states that the divine will is the cause of things, whose determinate effects proceed from God according to his intellect and will, which is the premise.",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836"
+  ],
+  "disambiguation_ids": [
+    "c0fda0ee-3508-5101-94ba-043e3eb28b0e"
+  ]
+}

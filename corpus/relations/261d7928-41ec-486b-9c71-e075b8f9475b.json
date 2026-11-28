@@ -1,0 +1,10 @@
+{
+  "id": "261d7928-41ec-486b-9c71-e075b8f9475b",
+  "label": "Test by Frame-to-schema strictness controls, checked",
+  "subject_kind": "result",
+  "subject_id": "ee7281ec-bb0c-4ee0-9161-f127f6a9ad31",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "60795e6e-1fe1-5c55-9718-bc2a22867244",
+  "note": "Tests the converse strength implication in the registered interpretation. Same route Profile and frame. The B schema is equivalent to symmetry (B correspondence of the ConvergenceCertificate); KTB adds reflexivity (the KT frame premise, equivalently the T schema). The one-world frame with no edge validates B and is not KTB. Verified with o instantiated as m.ontic."
+}

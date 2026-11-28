@@ -1,0 +1,10 @@
+{
+  "id": "d8c9a35f-0160-4662-af56-b349a5317345",
+  "label": "Test by ModalGroundingActualAbsence.actualAbsenceControls (18e5bd4e)",
+  "subject_kind": "result",
+  "subject_id": "6cf3a8ce-9dff-434d-affb-787923538830",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "18e5bd4e-8178-468e-b867-fbaf9c5988ad",
+  "note": "Omit joint absence of those concreta that are contingent at the origin. In vanCleveFrame at (true, true), both origin-contingent candidates can individually be absent, but every accessible world has at least one of them. The remaining nonlogical premises hold with no powers assigned."
+}

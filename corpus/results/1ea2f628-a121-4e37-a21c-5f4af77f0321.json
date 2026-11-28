@@ -1,0 +1,11 @@
+{
+  "id": "1ea2f628-a121-4e37-a21c-5f4af77f0321",
+  "label": "Compare three fixed PLG presentations for the same labelled Boolean dependence edge",
+  "argument_id": "c8f48529-feb7-4105-b8c4-b95ef4229197",
+  "challenge_module": "TruthCore.Results.Causality.SelectedPlgTheory.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectedPlgTheory.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectedPlgTheory.presentationControls",
+  "comparator_config": "results/1ea2f628-a121-4e37-a21c-5f4af77f0321/comparator.json",
+  "status": "solution-present",
+  "description": "The weak-only and strict-forward presentations each consist of one full sequent. The return control adds exactly one reverse weak full sequent and keeps both labels and the dependence edge fixed. These are formal tests of the encoded premises."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "951bfd03-8f9e-48fa-b78e-11c571279ce5",
+  "label": "Test by For every typed domain, including an empty one, the identity-characterization of a definite…",
+  "subject_kind": "result",
+  "subject_id": "59875e1a-89a8-5c0e-9bba-7faa20a50ed7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "79154228-f519-5cb9-a011-2b45ea260497",
+  "note": "Checks the identity characterization against joint existence and uniqueness in every typed domain, including the empty domain."
+}

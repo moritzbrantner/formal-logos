@@ -1,0 +1,10 @@
+{
+  "id": "5a285e8a-a53a-431a-a0fd-9f701b2da248",
+  "label": "Screened and separating reports test the information criterion",
+  "subject_kind": "result",
+  "subject_id": "05180ad2-fb54-4fdf-9e4d-7fd5e6323303",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "27379412-f94e-44b0-8e29-1b548bc142d1",
+  "note": "At one interior prior the two concrete row pairs witness equality and inequality of the conditional likelihoods, with the corresponding zero and positive information values."
+}

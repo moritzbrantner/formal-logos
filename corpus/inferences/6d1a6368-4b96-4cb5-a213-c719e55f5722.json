@@ -1,0 +1,12 @@
+{
+  "id": "6d1a6368-4b96-4cb5-a213-c719e55f5722",
+  "label": "A beneficiary requirement in every governing plan suffices for one witness (inference)",
+  "input_statement_ids": [
+    "df6c64a6-02dc-414a-be8e-dccd035b8872"
+  ],
+  "output_statement_id": "1733629b-f6d4-4804-9a9b-1af74e2747c0",
+  "rule": "Use the existing governing plan as the omission witness",
+  "meaning": "For the same actual distinct recipient, obtain a governing plan from the antecedent. Since the universal rejection test applies to it, this plan witnesses the existential test.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

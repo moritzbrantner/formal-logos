@@ -1490,6 +1490,17 @@ objection to the first two, and the grade of `732302a1` attaches to the reading,
   times are not worlds, and q.104's timeless action is not a temporal
   sequence.
 
+**Source update (2026-11-26).** The Latin witnesses for I q.8 aa.1–2 and
+q.12 aa.1, 7 have now been pinned and read. The
+[presence reading](../corpus/attempts/6e7a5155-3613-4d07-af31-b615013994ea.json)
+supports the contact and immensity applications through immediate ongoing
+esse-giving. The
+[incomprehensibility reading](../corpus/attempts/853b34a0-2933-4336-b329-1afed3e1dd94.json)
+supports the divine case and the qualitative connection between actuality
+and knowability. The stronger applications still require the scope and sense
+bridges stated in those records. The reviewed grades above describe the
+evidence available at the time of that assessment.
+
 **Revision conditions.**
 
 - An independently justified standing productive-dependence account for a
@@ -1654,3 +1665,14 @@ or warrant promotion.
 ## Research attempts citing this note
 
 - [Reread materialized plato phaedo 99 and full aquinas st i q104 a1 en; read Phaedo98 and Aristotle…](../corpus/attempts/existential-support-reality-correspondence-20261031.json)
+
+## Aquinas on three kinds of duration (2026-11-26)
+
+ST I q.10 distinguishes proper eternity from even beginningless and endless
+time, and distinguishes aevum from both. The case needs to map absence of
+succession to the whole life of the selected bearer, keep the living-witness
+requirement, and defend its calibration of primitive Eternal. The q.9
+distinction also leaves the relation between received esse and a creature's
+intrinsic mutability open.
+
+[Thomas Aquinas reading attempt](../corpus/attempts/e1970646-f032-4195-b150-e6aeeae51420.json), [Thomas Aquinas unlinked attempt](../corpus/attempts/2455b4fd-b607-44e0-bf73-308ca00e0051.json).

@@ -1,0 +1,10 @@
+{
+  "id": "973ffea7-2ef7-4485-8701-ef2b61e75b5a",
+  "label": "Test by Finite interpretations with one component for Act is SIMPLY_PRIOR_1 to POTENCY_1: what (1)",
+  "subject_kind": "result",
+  "subject_id": "77d2339e-c0d5-5527-95cd-29c539cf72d1",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4d3261a-3239-5b44-9953-64ab1b0ed762",
+  "note": "Tests omission of this premise from noComponentFirst in the one-component interpretation in which the component becomes first in being."
+}

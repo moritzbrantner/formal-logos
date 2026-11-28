@@ -1,0 +1,10 @@
+{
+  "id": "9ba829f4-4690-47c0-840b-08f8fc21e22e",
+  "label": "Test by Three exact populated two-role assignments: an edge from for Every causer of the selec (1)",
+  "subject_kind": "result",
+  "subject_id": "3f98370d-d53a-5931-98ee-be63381ddafb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "41e17b00-09de-5a6d-a0ea-a1aed538244b",
+  "note": "Tests whether a generic edge to the actual whole enforces cause presence by comparing the absent-causer, actual-causer and no-edge assignments."
+}

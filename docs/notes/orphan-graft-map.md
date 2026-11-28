@@ -506,7 +506,7 @@ methodological norm also needs a rationale connecting those observations
 to the normative restriction, not just successful applications of the
 method. These are live disputes, not refutations of all empiricism.
 
-**Finite discriminating test (executed in Python, not Lean).** Take two
+**Finite discriminating test checked in Lean.** Take two
 contents L (the logical claim), Q (an observational claim), and two bases
 D (non-observation-dependent), O (observation-dependent). Fix S(L,D)
 and S(Q,O) true, vary the two remaining sufficiency entries, and vary
@@ -521,18 +521,8 @@ The eight cases were enumerated:
 | 1 | 0 | true | false | true | true |
 | 1 | 1 | true | false | true | false |
 
-Reproduce the finite test (no dependencies):
-
-```python
-from itertools import product
-for lo, qd, global_scope in product((False, True), repeat=3):
-    S = {"L": {"D": True, "O": lo}, "Q": {"D": qd, "O": True}}
-    scope = ("L", "Q") if global_scope else ("Q",)
-    exists = all(not any(S[p].values()) or S[p]["O"] for p in scope)
-    exclusive = all(not S[p]["D"] for p in scope)
-    assert exists == (lo if global_scope else True)
-    assert exclusive == (False if global_scope else not qd)
-```
+Lean checks the existential and exclusive verdicts across the eight
+scope and sufficiency assignments. [Scoped basis test](../../TruthCore/Logic/ScopedSufficientBasis.lean#L24)
 
 In particular, L having both bases and Q having its empirical basis is
 a populated control for why a deductive proof alone does not contradict
@@ -632,3 +622,36 @@ and invalid reconstructions, and the status of any defeaters for that
 basis. For an absolute-truth application, defend the direction of capture
 for that very content. Neither the replay nor the Boolean enumeration
 measures a person's grasp or licenses the proposed capture.
+
+## Curation pass 2 follow-up (2026-11-27)
+
+The metadata prune anticipated above was applied to the unique-classical-God
+bundle and the necessary, potency-free first root. Each record now links the
+propositions used in its type. The primitive attribute field has a separate
+definition record, and the reviewed bundle audits track the revised scope.
+
+- The [classical attribute compositions](../../specs/attribute-hub-connections.toml)
+  transfer the field along the unique God witness's identity, and derive the
+  field using separately proved unity, perfection and first-being potency
+  exclusion. The nine-to-field premise remains explicit in the latter route.
+  Assembling a unique witness from the universal field and then transferring
+  back to the field would be circular.
+- The [necessary first-root composition](../../specs/necessary-first-attribute-connection.toml)
+  identifies the potency-free first bearer with the positive attribute witness
+  by uniqueness of actual roots at the same world in the same grounding
+  profile. The transported potency exclusion supplies immutability and
+  eternity. A second [same-witness composition](../../specs/necessary-negative-attribute-connection.toml)
+  takes the negative attribute package directly and transports its potency
+  exclusion, noncomposition and remoteness. One producer of that package
+  takes the first-root proposition as input, and the whole-roster producer
+  derives that same subargument internally.
+- The [existential regress composition](../../specs/existential-regress-connection.toml)
+  places the existential series upstream of the per se actual-esse regress
+  through the existing efficiency bridge. Its independent support uses the
+  existential regress directly or derives it via the wider efficient series.
+  Producer `0d89840b` starts from the per se actual-esse regress and gives a
+  cycle. Its separate placement plan records a forward ancestry use. Producer
+  `c6a1167b` takes the broader efficient-series regress and the sense inclusion.
+  The existential-to-actual edge bridge thus retains a connection plan through
+  independent predecessor coverage. The holding plans require matching modal
+  lackability and grounding calibrations.

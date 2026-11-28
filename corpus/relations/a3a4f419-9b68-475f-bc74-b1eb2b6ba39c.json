@@ -1,0 +1,10 @@
+{
+  "id": "a3a4f419-9b68-475f-bc74-b1eb2b6ba39c",
+  "label": "Test by Finite interpretations for the seven derivations of caus for If c, distinct from x, ca (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d0b76fb9-5374-5cbf-93b6-2b5444dab441",
+  "note": "Tests omitting this premise in the encoded causeOfQualityMoreSuch argument, with the other premises retained and the conclusion false in each corresponding control."
+}

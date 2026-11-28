@@ -1,0 +1,13 @@
+{
+  "id": "94beffce-a3a6-4880-a3f8-b91e2f50eb32",
+  "label": "A selected actual mover supplies another MOTION_1 mover (inference)",
+  "input_statement_ids": [
+    "6b9fedc2-6fea-530b-bc6d-116a5d307a54",
+    "811fe80c-3bdd-5e41-9f1b-f94bec9178ef"
+  ],
+  "output_statement_id": "5588083c-55e5-57ce-91ff-67db25fe80fc",
+  "rule": "Extract the actual mover and rule out its identity with the patient",
+  "meaning": "The patient lacks the completed actuality in the specified respect. The selected mover has it. Identity of the bearers would contradict this under the same act predicate. Neither whole actuality from part actuality nor universal exclusion of diagonal motion is used.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

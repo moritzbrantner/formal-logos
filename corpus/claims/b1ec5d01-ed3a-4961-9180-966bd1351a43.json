@@ -1,0 +1,14 @@
+{
+  "id": "b1ec5d01-ed3a-4961-9180-966bd1351a43",
+  "label": "Aquinas, I q.3 a.2 co.: A material composite is perfected through its form",
+  "statement_id": "100dddc4-f479-4234-99a9-83ee0310541b",
+  "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+  "locator": "I q.3 a.2 co.",
+  "interpretation": "In the second argument Aquinas distinguishes the receiving role of matter from the perfecting role of form. The third reply describes individuation by matter for forms receivable in matter, and treats a subsistent form separately.",
+  "status": "formalized",
+  "attribution": "The passage states that a thing composed of matter and form is perfect and good through its form insofar as its matter participates in the form, which is the premise.",
+  "definition_ids": [
+    "e4869e8d-0b75-4287-92c3-6356ecf5df55",
+    "1945c2e7-89f1-4d43-b984-9a1853dfcc6e"
+  ]
+}

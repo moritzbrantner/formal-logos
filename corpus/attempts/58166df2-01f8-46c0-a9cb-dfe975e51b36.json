@@ -1,0 +1,25 @@
+{
+  "id": "58166df2-01f8-46c0-a9cb-dfe975e51b36",
+  "label": "Root links from J. B. Hartle and S. W. Hawking, Wave function of the Universe",
+  "statement_ids": [
+    "50c2b918-ff50-5609-ab97-a11e41caeefc"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "pp. 2960–2961, abstract and §I: The compact Euclidean histories in the Hartle–Hawking proposal supply a concrete contrast with ordinary prior-time causation. Application to the case would require an adequate history of the selected spacetime whole and a reason why lacking an earlier physical boundary excludes the specified broader causal relation.",
+  "evidence": [
+    "e6300451-980d-504b-8f6e-911b6ef787e7",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

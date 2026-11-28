@@ -1,0 +1,10 @@
+{
+  "id": "bcac723a-6512-4673-b1e0-31f42526fb05",
+  "label": "Test by Restated-premise controls, checked for Whatever has its being by participation has a c (1)",
+  "subject_kind": "result",
+  "subject_id": "554f060b-f097-4729-b90a-196d535448ac",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "2b25a78c-abad-50d9-abb9-31a753409192",
+  "note": "Checks definitional equivalence of the two participated-esse other-cause formulations at the same parameters."
+}

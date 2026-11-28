@@ -1,0 +1,10 @@
+{
+  "id": "aa81bc30-1a1d-41f3-9698-470c425ef815",
+  "label": "Test by Finite operational controls certify: actual-stable implies the truth component while both…",
+  "subject_kind": "result",
+  "subject_id": "b0ae9897-6c8e-57de-8b92-d852600f9cf8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "326adc2f-b56d-58af-802e-9bf3a6f46c61",
+  "note": "Tests the converse strength implication in the registered interpretation. Actual-stable calibration entails the forward truth-component bridge under the same frame. The explicit actual-only and remaining controls have the bridge without actual-stable calibration. The external-evil composition uses only the weak bridge; no actual-stable commitment is silently imported."
+}

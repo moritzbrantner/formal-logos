@@ -1,0 +1,10 @@
+{
+  "id": "d10222e4-d959-4115-a7a0-bb58d316996e",
+  "label": "Source qualification for 438caf34 from reading 7833f762",
+  "subject_kind": "claim",
+  "subject_id": "927fc397-906d-5f6e-b17c-d01781c0362e",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "438caf34-80d5-51bf-806a-d5e7c127e088",
+  "note": "The first definition adds temporal succession and similar-object recurrence. The observational equality part of the test uses a supplied repeatable record and does not encode those requirements by itself. An application needs the same relata, succession and similarity classes."
+}

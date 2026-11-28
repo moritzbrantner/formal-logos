@@ -1,0 +1,10 @@
+{
+  "id": "de8f1565-1bd7-4745-86e0-6f41489b1414",
+  "label": "Test by Rivals of the fourteen stage-two attribute premises surv for Act is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "120dd28f-c1e6-4fa2-8acf-26d0c1d5162a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4d3261a-3239-5b44-9953-64ab1b0ed762",
+  "note": "Tests the selected premise in the following setting. Same InAct, InPotency and PriorSimply predicates; one being, one respect. Control.potencyPrior in Control.Certificate. Other premise of FirstBeingNoPotency.firstBeingNoPotency holds: nothing is in act and in potency in the same respect. Its conclusion (a first being is in potency in no respect) fails."
+}

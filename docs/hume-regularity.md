@@ -233,3 +233,14 @@ produce exactly the same 15,017-character normalized text and manifest hash.
 The raw PDF hash, source claim locator, formal results and extraction adapter
 are unchanged. This preserves the complete cited argument while excluding an
 unconsulted, version-sensitive formula; no alternate expected hash is accepted.
+
+## The scope of the three formulations (2026-11-26)
+
+Enquiry VII's succession clause, counterfactual gloss, and transition of thought
+describe different aspects of the causal reading. The intervention tests apply
+only on a matching interpretation of the relata, temporal order and
+counterfactual. A single observed succession leaves the originating giver open.
+Bird's disposition-based law account adds a positive rival to the best-system
+view, subject to the essential-disposition and exception conditions.
+
+[David Hume reading attempt](../corpus/attempts/6e5246a7-2464-49a5-86c2-31abf8277776.json), [Alexander Bird reading attempt](../corpus/attempts/d996fa6d-47db-4599-8fa3-822c0b4de9a1.json).

@@ -280,3 +280,223 @@ predicate = "supports"
 object_kind = "statement"
 object_id = "STMT-GREATEST-DEGREE-CAUSES-ALL-IN-EVERY-GENUS"
 note = "maxime tale in aliquo genere ... est causa omnium quae sunt illius generis is said of any genus. The statement quantifies over every perfection with a per-respect degree family deg; that family, and reading each genus as a perfection with its own degree scale, are the analyst's (gap)."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Truth said of things is i (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Truth said of things is i (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "1568610e-4df8-5f90-8200-8446b1cda8fb"
+note = "Tests omitting this premise in the encoded asToBeingSoToTruthFromIntelligibility argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN reading of ST I q.16 (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN reading of ST I q.16 (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "2a0e7f12-b07a-5a60-9e25-9ca67f7bb490"
+note = "Tests omitting this premise in the encoded asToBeingSoToTruthFromIntelligibility argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Every CREATURE_1 having t (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Every CREATURE_1 having t (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "30a8373c-5188-581b-b746-e319d71311e4"
+note = "Tests omitting this premise in the encoded greatestCausesFromOrderedPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN reading of ST I q.3 (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN reading of ST I q.3 (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "331f4751-598a-5f67-ab1f-eb4a12d17bf5"
+note = "Tests omitting this premise in the encoded strictCalibrationFromApproachMeasure, approachToPrimaryFromDegreeMeasure arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for For all beings, being mor (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for For all beings, being mor (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "38cf20d9-1069-5d7c-a366-21b5f6e08bfe"
+note = "Tests omitting this premise in the encoded approachToPrimaryFromDegreeMeasure argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Some bearer of the select (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Some bearer of the select (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b078622-0815-5f3c-9bc0-703de1c53a68"
+note = "Tests omitting this premise in the encoded directedFromGreatestBearer argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Everything other than the (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Everything other than the (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "612078bf-5a68-5542-8b7b-f862f816ece0"
+note = "Tests omitting this premise in the encoded greatestCausesFromOrderedPrimary argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Among selected-perfection (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Among selected-perfection (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "70508140-d427-5a99-9be0-ae12ac905302"
+note = "Tests omitting this premise in the encoded greatestCausesFromMaximalPrinciple argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Whatever is GOD_4 is the (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Whatever is GOD_4 is the (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "710dafa5-b329-5909-89ac-3f888081dcef"
+note = "Tests omitting this premise in the encoded godMaximalFromPrimaryOfBeing argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for The supplied more-in-bein (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for The supplied more-in-bein (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "7dfa068a-9974-5fcd-ba23-fac4dee2fc70"
+note = "Tests omitting this premise in the encoded gradesAtBeingFromNoInfiniteAscent argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for BEING_2 is graded by appr (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for BEING_2 is graded by appr (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "82286a91-a610-52d2-9f28-2cc459a75ac7"
+note = "Tests omitting this premise in the encoded gradesAtBeingFromApproach, godMaximalFromPrimaryOfBeing, strictCalibrationFromApproachMeasure, greatestCausesFromOrderedPrimary arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN every-respect versio (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN every-respect versio (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "88b2caf5-03c9-5125-a206-3f39aed61fc4"
+note = "Tests omitting this premise in the encoded maximumInGenusFromGreatestEveryGenus argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN analyst calibration: (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN analyst calibration: (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "98755509-18d3-5282-bd66-47202d916266"
+note = "Tests omitting this premise in the encoded moreSuchFromPositiveDegree argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Any two bearers of the se (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Any two bearers of the se (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "a59a925d-b58f-5188-9573-94d251233d61"
+note = "Tests omitting this premise in the encoded directedFromComparableDegrees argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Whatever stands strictly (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Whatever stands strictly (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ac72bbfe-a355-5179-9e29-0a6e565eb79e"
+note = "Tests omitting this premise in the encoded moreSuchFromPositiveDegree argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Whatever is more such tha (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Whatever is more such tha (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c11369aa-7c3d-5dea-8421-535d5b4b3104"
+note = "Tests omitting this premise in the encoded gradesAtBeingFromNoInfiniteAscent, greatestCausesFromMaximalPrinciple, approachToPrimaryFromDegreeMeasure arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for What is maximal in a GENU (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for What is maximal in a GENU (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d9fad785-40ab-555a-a1c1-5e39c9d50497"
+note = "Tests omitting this premise in the encoded greatestCausesFromMaximalPrinciple argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN every-respect versio (2)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN every-respect versio (2)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dc619ad6-11f3-5734-b258-3156b976fc31"
+note = "Tests omitting this premise in the encoded maximumInGenusFromGreatestEveryGenus argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Strict primacy: everythin (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Strict primacy: everythin (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "dd732014-f3f1-5ded-b8dc-5dbcd3f2b71c"
+note = "Tests omitting this premise in the encoded gradesAtBeingFromApproach, godMaximalFromPrimaryOfBeing, greatestCausesFromOrderedPrimary, approachToPrimaryFromDegreeMeasure arguments, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for OPEN analyst calibration: (2)"
+label = "Test by Interpretations for the twelve derivations of the round- for OPEN analyst calibration: (2)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e433b6f5-f24a-5172-b528-8419d2c49027"
+note = "Tests omitting this premise in the encoded maximumInGenusFromGreatestEveryGenus argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for Something is more a being (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for Something is more a being (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "e462cf2f-0961-5cb8-9634-23e6558afd65"
+note = "Tests omitting this premise in the encoded approachToPrimaryFromDegreeMeasure argument, with the other premises retained and the conclusion false in each corresponding control."
+
+[[relation]]
+id = "Test by Interpretations for the twelve derivations of the round- for No represented degree of (1)"
+label = "Test by Interpretations for the twelve derivations of the round- for No represented degree of (1)"
+subject_kind = "result"
+subject_id = "f67bf7a3-78dd-5e01-8c50-d99012a8ba63"
+predicate = "tests"
+object_kind = "statement"
+object_id = "ed766869-09b3-529a-ad3d-f817a931b5a3"
+note = "Tests omitting this premise in the encoded moreSuchFromPositiveDegree argument, with the other premises retained and the conclusion false in each corresponding control."

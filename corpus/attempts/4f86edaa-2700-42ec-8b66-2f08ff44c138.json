@@ -1,0 +1,56 @@
+{
+  "id": "4f86edaa-2700-42ec-8b66-2f08ff44c138",
+  "label": "Alternative cogito witnesses and the identity of the performer",
+  "date": "2026-11-26",
+  "statement_ids": [
+    "22954087-d5fb-4bd3-bcb7-5d5167016988",
+    "b0fd6cc1-8907-5ec6-b0b4-598848314bf2",
+    "5581cd7f-43b3-5aa1-b18d-36b8a44a9681",
+    "13b5b929-dfc0-4ce0-8b3b-f00430024030",
+    "bbfacacc-6f44-4ca0-b9ba-75962a2a1d2e",
+    "ac0a151f-a023-4e54-8c38-2feec136df1d"
+  ],
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "The two designated-meditator propositions coincide on the aligned Cartesian fields and are stronger than bare occurrence. Applying them to an actual performance requires identifying the designated candidate with the actual inquirer. The modification route depends on reading the episode as a modification, so the organized-bundle explanation of continuity matters to its application. The phenomenal route needs actual experience and only supplies some bearer, leaving identity with the asserter open. A self-model can misidentify the owner of an episode while permitting a thin actual process bearer. The representation route supplies the episode's existent representative and can use an event. It supplies the performer only with further identification. The primary-source cues from previous work remain leads for later witness acquisition. Review 2026-11-26: the designated-meditator inputs fix the bearer but only that it bears some occurring thought; for the same-performance conclusion, also establish that the supplied episode realizes the selected assertion or doubt, or supply bearing for that realizer.",
+  "blocker": "A stronger owner distinct from the organized process needs a criterion that distinguishes the accounts of the same episode. Descartes source attributions remain deferred.",
+  "evidence": [
+    "6085452e-de8c-421d-a0e6-ee8fac0700b4",
+    "f825c058-5e5e-4cd6-bc57-05c2da758c51",
+    "PR-2034"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2034"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2034"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-26",
+    "statement_ids": [
+      "13b5b929-dfc0-4ce0-8b3b-f00430024030",
+      "bbfacacc-6f44-4ca0-b9ba-75962a2a1d2e",
+      "ac0a151f-a023-4e54-8c38-2feec136df1d"
+    ],
+    "scope": "Identity with the same performer in the phenomenal and representative branches",
+    "assessment": "Neither some bearer of the phenomenal realizer nor an existent episode representative identifies the performer. The organized occurrence can supply a thin bearer if its exercise counts as agency, and the phenomenal route leaves substantial ownership open. The existential consequence through the representative is warranted where that representative tracks this particular event at its actual world.",
+    "next_test": "The comparison requested in #1007 now distinguishes token-level performance, apparent ownership and the episode as representative. Reopen on a criterion that decides whether the organized occurrence itself qualifies as a thin performer, or on an independently warranted identification of the representative with a different bearer.",
+    "note": "docs/notes/cogito-esse-1113.md#retaining-the-performer-of-this-assertion-or-doubt-2026-11-26",
+    "reviewed_revision": "c0ee8f47bcc11a0a1b14d0e2216bccbe5ad51091",
+    "review": "unreviewed",
+    "publication": "published",
+    "evidence": "PR-2034 draft and the compiled witness and control declarations at c0ee8f47. Independent semantic review is pending.",
+    "supersedes": "The instruction in the #1007 current assessment to begin comparing first-person attribution with the impersonal event at matching scope. The earlier assessment of phenomenal bearing and the separate representation result still apply."
+  }
+}

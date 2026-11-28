@@ -1,0 +1,25 @@
+{
+  "id": "efd79558-e605-4cbb-922f-e2da51a7262e",
+  "label": "Root links from Thomas Uebel, Vienna Circle",
+  "statement_ids": [
+    "3d17ecdd-d1ba-5d18-8eac-beb37db10c7f"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§3.1, \"useless to continue to search for an adequate criterion of testability in terms of deductive relationships to observation sentences\": The report identifies Hempel's abandonment of a purely deductive observation-sentence test following the difficulties of overexclusion and trivial verification. It qualifies retaining that implementation of the case criterion. It gives no reason by itself to discard every non-deductive notion of empirical relevance.",
+  "evidence": [
+    "68b62c1a-d4e9-592a-b656-f1796741ef65",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

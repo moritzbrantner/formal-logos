@@ -1,0 +1,10 @@
+{
+  "id": "8013e614-2201-4c37-b44f-ea74f485c76d",
+  "label": "Test by Actual grounding quantitative controls checked",
+  "subject_kind": "result",
+  "subject_id": "d4cceb07-f9ff-4a49-a6d8-b5b59e693123",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "5adb2dc9-54bc-4727-8821-b4dbb94d5220",
+  "note": "Tests the selected premise in the following setting. Identical reverse-successor grounds y x iff y=x+1, selected (), no varying frame or bearer identity. Control.descending with S=0,L=0,epsilon=0 in Control.Certificate; controls proves lower bound, gap, failed positivity, failed Nat rank and failed ActualGroundingWF. Fixed Control.descending, Unit world, Nat all actual/concrete; S=0,L=0,epsilon=0 retains lower bound and uniform gap while positivity fails."
+}

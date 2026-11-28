@@ -1,0 +1,10 @@
+{
+  "id": "c0e21fdc-bd2d-48af-bf6d-8ea7d18dabff",
+  "label": "Test by Finite interpretations for the nine derivations of round for Whoever is attributed an (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "54b0131b-96f2-51b6-b47d-87a0b7f2219c",
+  "note": "Tests omitting this premise in the encoded inhabitedFromProduction argument, with the other premises retained and the conclusion false in each corresponding control."
+}

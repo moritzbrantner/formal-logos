@@ -1,0 +1,66 @@
+{
+  "id": "9d6f93e5-d6ac-4bae-b892-e2d9e3e86029",
+  "label": "Divine self-comprehension does not supply participant comprehension",
+  "statement_ids": [
+    "06410834-141f-4035-8a30-14f8a18c3139"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "rejected",
+  "summary": "Read the pinned Leonine witness at ST I q.14 a.3 co. and ad 1–2. The object is God himself. Aquinas concludes that God knows himself as perfectly as he is knowable, because his power to know matches his actuality of being. Ad 1 distinguishes inclusion of another from cognitive self-comprehension. Nothing in this article distributes comprehension to each actual participant of a chosen source. The related q.12 claims document the qualitative criterion and the created-knower limit. Follow-up (2026-11-26). I q.14 aa.5–6 was tested. A.6 gives positive support from God's proper knowledge of the own nature and differentiating perfections of each creature, grounded in their containment in the divine essence. Ad 1 makes the distinction between object and mode of knowing explicit. It does not give the measured comprehension threshold for each participant.",
+  "blocker": "Identify the selected source with the divine knower and defend a bridge from proper knowledge of the creature to a witnessed degree reaching its full intrinsic knowability.",
+  "evidence": [
+    "3c65e0cb-f991-42e8-8cb3-e65435e47a82",
+    "ba924bce-a588-4dd5-b400-e7dad76d99ba",
+    "PR-2017",
+    "c141f1dc-f6bd-45a8-a028-b3b8f42b21fb"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2017"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2017"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2017"
+    },
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    }
+  ]
+}

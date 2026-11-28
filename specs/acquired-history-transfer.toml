@@ -60,3 +60,13 @@ conclusion = "The application press populates ranked acquisition histories and a
 rule = "Identify direct and mediated inputs and enumerate actual non-esse outcomes at distinct bearers"
 meaning = "The source drive supplies both the stroke and the separate signal; the stroke supplies the imprint at a higher rank. A universal giver must be the source since no incoming productive record ends at its esse. Enumeration then covers the distinct bearers' actual respects. The transfer frame already interprets causal responsibility as productive path credit. This interpretation is deliberately substantive and finite."
 axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[[relation]]
+id = "Test by Populate acquisition-history assumptions with the operative press and its patient"
+label = "Test by Populate acquisition-history assumptions with the operative press and its patient"
+subject_kind = "result"
+subject_id = "f6f7968d-5ed4-4ba9-ac3e-d6a6c1258722"
+predicate = "tests"
+object_kind = "statement"
+object_id = "14539ae8-d014-4931-95c0-2f309e94f986"
+note = "Tests joint nonvacuity of the ranked-input history with the covered stroke, imprint and indicator on the existing press profile."

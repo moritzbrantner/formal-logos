@@ -1,0 +1,37 @@
+{
+  "id": "daabd904-66a0-4a5c-baf0-1a1e2f8edf6c",
+  "label": "Existing temporal inferences in the Third Way",
+  "statement_ids": [
+    "01d2c386-4aca-547b-9272-773c7d9677fc",
+    "07be8312-c659-55b5-8dd3-5846ce337532",
+    "80bcb357-1295-52ad-b0c6-416c3341fbf7"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "TERTIA-VIA-SUCCESSION-REQUIRES-INFINITE-PAST derives occupancy at every time up to now as an intermediate conclusion, uses succession to obtain an earlier time, and discharges the succession assumption. TERTIA-VIA-FINITE-PAST-HORN constructs the witness of coming to be anew under its finite-past and temporal premises.",
+  "evidence": [
+    "PR-2086",
+    "ee45a741-a388-5280-88b1-631266adb9e5",
+    "9c6fb380-babe-599d-97e8-73a9d5cddd08"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Applications outside those arguments' temporal assumptions require an explicit match for the clock, occupancy and first-instant coming-to-be conditions."
+}

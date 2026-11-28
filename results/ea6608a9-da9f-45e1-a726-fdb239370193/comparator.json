@@ -1,0 +1,10 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Challenge",
+  "solution_module": "TruthCore.Results.Causality.NamedRootStructuralAttributes.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.NamedRootStructuralAttributes.intellectOfReach",
+    "TruthCore.Results.Causality.NamedRootStructuralAttributes.reachOmission"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

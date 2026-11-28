@@ -1,0 +1,11 @@
+{
+  "id": "7678a298-0952-430f-a416-0ea22e77fd41",
+  "label": "Universal benefit omission strengthens existence of one benefit-omission witness",
+  "subject_kind": "statement",
+  "subject_id": "df6c64a6-02dc-414a-be8e-dccd035b8872",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "1733629b-f6d4-4804-9a9b-1af74e2747c0",
+  "verification_result_id": "4870c7bf-c5cb-4452-9a56-26338649eda6",
+  "note": "At the same g, x, w and plan interpretation, the universal test applies to any existing witness. The mixed-plan control displays why the reverse implication can fail."
+}

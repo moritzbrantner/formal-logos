@@ -1,0 +1,10 @@
+{
+  "id": "f0c2d19f-19e9-408a-9712-bdcefea46128",
+  "label": "Truthful selective lists test the scope of the source channel guarantee",
+  "subject_kind": "argument",
+  "subject_id": "49202ada-d9bb-4a22-855f-bfd57d8edfdb",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "389db8f3-19c9-48c6-a6c7-c778f13895e2",
+  "note": "The source-channel conclusion certifies truth of received positive content. This control tests an extension from that conclusion to identifying event occurrences under selective reporting. It uses no divine signature or source-channel realization and leaves the positive-record guarantee intact."
+}

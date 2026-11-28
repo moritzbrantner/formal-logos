@@ -2344,8 +2344,9 @@ impl<'a> Frontier<'a> {
     }
 }
 
-/// Python `item_depth`: an open premise's depth under the current rule.
-fn item_depth(item: &Value) -> String {
+/// Python `item_depth`: an open premise's depth (`bare`, `supported` or
+/// `stated`) under the current rule.
+pub fn item_depth(item: &Value) -> String {
     let depth = item["depth"].as_str().unwrap_or_default();
     if depth == LEGACY_SOURCED || depth == STATED {
         let ids = |field: &str| -> HashSet<&str> {
@@ -3692,6 +3693,37 @@ mod tests {
         );
         // Establishing S alone drops the route cost by one.
         assert_eq!(frontier.probe("S")["ARG-ROOT"], 1);
+    }
+
+    /// A `tests` relation is navigation: it names what a control, model or
+    /// countermodel tests, and carries no warrant. Adding such relations, on
+    /// open, closed, stated and root statements and on arguments, leaves the
+    /// whole frontier report unchanged.
+    #[test]
+    fn tests_relations_leave_the_frontier_unchanged() {
+        let plain = fixture();
+        let mut tested = fixture();
+        let endpoints = [
+            ("result", "RES-NF", "statement", "F"),
+            ("result", "RES-T", "statement", "S"),
+            ("argument", "ARG-NF", "statement", "A"),
+            ("argument", "ARG-T", "argument", "ARG-ROOT"),
+            ("result", "RES-B", "statement", "ROOT"),
+            ("argument", "ARG-C", "statement", "NF"),
+        ];
+        for (index, (subject_kind, subject, object_kind, object)) in endpoints.iter().enumerate() {
+            tested.relations.extend(records(vec![json!({
+                "id": format!("REL-TESTS-{index}"), "subject_kind": subject_kind,
+                "subject_id": subject, "predicate": "tests", "object_kind": object_kind,
+                "object_id": object, "note": "a control of this node"})]));
+        }
+        for next_steps in [false, true] {
+            let (plain, tested) = (plain.records(), tested.records());
+            assert_eq!(
+                Frontier::new("ROOT", &tested, &[]).report(next_steps),
+                Frontier::new("ROOT", &plain, &[]).report(next_steps)
+            );
+        }
     }
 
     /// ROOT <- W; S strengthens W through ARG-REG; optionally the weak

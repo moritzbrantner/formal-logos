@@ -1,0 +1,12 @@
+{
+  "id": "d7410627-ccb9-4ce9-bb8c-f07768c400cf",
+  "label": "All-time efficient irreflexivity gives its self-uniter restriction (inference)",
+  "input_statement_ids": [
+    "d15ded6f-1895-5d2d-b967-a14165c49bda"
+  ],
+  "output_statement_id": "2e69fa9d-733f-4ef8-9e1f-22dbc2e820bf",
+  "rule": "Instantiate the global exclusion at the witnessed time",
+  "meaning": "Any temporal edge is witnessed at an admitted time. Apply the old ban there, including when the bearer is a self-uniter.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

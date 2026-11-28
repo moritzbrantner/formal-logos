@@ -1,0 +1,11 @@
+{
+  "id": "79cacb4f-66ad-46fe-b71e-f4fc913e0378",
+  "label": "Two composition kinds strictly strengthen the matter-form inclusion",
+  "subject_kind": "statement",
+  "subject_id": "d7741cdc-881b-5bda-85ce-d70223162f78",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "6a9199b7-6c64-4496-ac3b-30505b1658a4",
+  "verification_result_id": "b14bb21a-174e-4863-aabd-6b4f886990a5",
+  "note": "Projection with the same matter-form and composite predicates. The Comparator companion checks the failure of the reverse entailment for fixed differing maps."
+}

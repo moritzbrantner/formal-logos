@@ -1,0 +1,10 @@
+{
+  "id": "f5ef0329-8096-4ff1-b4ec-d7bbbb9facc3",
+  "label": "Test by There are coherent finite typed models with an actually for Aquinas' first proof in ST (1)",
+  "subject_kind": "result",
+  "subject_id": "019e2e71-9b4d-5405-b7d3-f8ba19a590c6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "be639b3f-a4b7-5ec0-a9be-accfd8d42598",
+  "note": "Tests omission of this premise from distinctEsseExternalFromExhaustion in the q.3 a.4 profile with the remaining causal input retained and the external-cause conclusion false."
+}

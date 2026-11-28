@@ -1,0 +1,39 @@
+[batch]
+vocab = "TruthCore.Case.Catholicism.FirstSourceIdentification"
+results = "TruthCore.Results.Case.Catholicism.FirstSourceIdentification"
+
+[[statement]]
+id = "Every GOD_2 bearer is maximal in being in the selected Fourth Way profile"
+lean = "SummaGodIsMaximum"
+paraphrase = "Open analyst premise. Every bearer of the GOD_2 predicate in the older stage-one routes is a MAXIME_ENS_1 for the selected Fourth Way profile. This is the reverse inclusion to the statement that every maximum is GOD_2. It supplies no bearer."
+definitions = ["DEF-GOD-AS-NAMED-IN-THE-SUMMA", "a2a8de58-42e0-5481-b7fb-848ae8602036"]
+disambiguations = ["DISAMB-GOD", "4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[statement]]
+id = "Every GOD_3 bearer is maximal in being in the selected Fourth Way profile"
+lean = "CalledGodIsMaximum"
+paraphrase = "Open analyst premise. Everyone called God by the selected community is a MAXIME_ENS_1 for the selected Fourth Way profile. Even if the community names a bearer of the full description, this premise also requires that its use excludes every nonmaximum. It supplies no bearer."
+definitions = ["DEF-GOD-WHAT-ALL-UNDERSTAND", "a2a8de58-42e0-5481-b7fb-848ae8602036"]
+disambiguations = ["DISAMB-GOD", "4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
+
+[[argument]]
+id = "GOD_2 to GOD_4 by reference to a common maximum"
+theorem = "summaFromCommonMaximum"
+premises = ["Every GOD_2 bearer is maximal in being in the selected Fourth Way profile", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "STMT-AT-MOST-ONE-MAXIMUM-IN-BEING", "STMT-GOD-EXISTS"]
+conclusion = "e165f4aa-e872-5e2f-8211-52d40df114cc"
+sense_bridges = [{term = "GOD", from = "GOD_2", to = "GOD_4", statement_id = "e165f4aa-e872-5e2f-8211-52d40df114cc", role = "conclusion"}]
+axioms = []
+rule = "Existential elimination, uniqueness of a maximum and substitution"
+meaning = "Assume a GOD_4 bearer exists, both predicates select only maxima in the same sense and profile, and any two maxima are identical. An arbitrary GOD_2 bearer is then identical with the existing GOD_4 bearer and is GOD_4. This gives the stated direction of the sense bridge. Using the result to support GOD_4 existence through the same bridge would be circular."
+description = "Conditional reference agreement of GOD_2 and GOD_4 in the stated inclusion direction. Identifies each selected GOD_2 bearer with a previously supplied GOD_4 witness by common maximum uniqueness."
+
+[[argument]]
+id = "GOD_3 to GOD_4 by reference to a common maximum"
+theorem = "usageFromCommonMaximum"
+premises = ["Every GOD_3 bearer is maximal in being in the selected Fourth Way profile", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "STMT-AT-MOST-ONE-MAXIMUM-IN-BEING", "STMT-GOD-EXISTS"]
+conclusion = "6d85b363-58ec-5a8a-9e20-58a93d188ea5"
+sense_bridges = [{term = "GOD", from = "GOD_3", to = "GOD_4", statement_id = "6d85b363-58ec-5a8a-9e20-58a93d188ea5", role = "conclusion"}]
+axioms = []
+rule = "Existential elimination, uniqueness of a maximum and substitution"
+meaning = "Assume a GOD_4 bearer exists, both the actual use of the selected community and GOD_4 select only maxima in the same sense and profile, and any two maxima are identical. Every GOD_3 bearer is then identical with the existing GOD_4 bearer and is GOD_4. Using the result to support GOD_4 existence through the same bridge would be circular."
+description = "Conditional reference agreement of GOD_3 and GOD_4 in the stated inclusion direction. The actual community-wide restriction to maxima is a premise."

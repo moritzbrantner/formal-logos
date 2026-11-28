@@ -404,7 +404,7 @@ architecture. Material and substrate supply are fixed. The environmental
 challenge family removes either 0 or 2 reserve units per step; supplied support
 is specified separately. No developmental transition is modeled.
 
-The native reference regime has `drive=1, help=0, regulator=0, loss=0`, with
+The native reference regime has `drive=1, help=0, regulator=0, loss=0, recruited=0`, with
 barrier and both sites present. Its broader regulation regime permits
 recruitment and the stated reserve challenges. These are two regimes of the
 same stipulated class; compensation is not permission to change the bearer or
@@ -467,32 +467,19 @@ bridge theorem.
 
 ### Checkable slice, provisional judgment and next test
 
-The finite calculation was checked with Python, not certified by Lean. The
-check covered the six displayed trajectories; delayed compensation from reserve
-2; equal aided traces separated by the native demand probe; all four normal
-invariant transitions; the two shock trajectories; the reserve bound and
-signal-independence for all 5,760 encoded state/input pairs; and all twelve
-positive-reserve/native-capacity cases for the reference threshold. The core
-step is reproduced here so the calculations can be repeated without a new
-implementation dependency:
+Lean checks the recurrence using `ArrangementDynamics.run` for ordered
+interventions. It verifies the six displayed trajectories, delayed
+compensation from reserve 2, the native demand probe, the four invariant
+transitions and both shock trajectories. The reserve bound and signal
+independence hold throughout the 5,760 state/input pairs before choosing
+a signal bit. The threshold theorem checks all twelve positive-reserve,
+native-capacity cases.
+[Trajectories](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L59) · [Demand probe](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L69) · [Shock trajectories](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L81) · [Invariant transitions](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L86) · [Bound and signal independence](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L107) · [Reference threshold](../../TruthCore/Metaethics/OrganizationalMaintenance.lean#L112)
 
-```python
-def step(s, cap=2, drive=1, regulator=1, help_rate=0, loss=0, emission=0):
-    reserve, barrier, native, backup, recruited = s
-    inflow = cap * drive * native + 2 * recruited * backup + help_rate
-    drain = 2 + 2 * (1 - barrier)
-    r = min(4, max(0, reserve - loss + inflow - drain))
-    rebuilt = int(r > 0)
-    return r, rebuilt, rebuilt, rebuilt, regulator * rebuilt * int(r <= 2)
-```
-
-The useful formalizable slice would instantiate these finite states and inputs,
-reuse `ArrangementDynamics.run` for histories, and prove the invariant and the
-explicit failure/compensation traces. A faithful implementation would retain
-capacity, exercise, environmental support and bearer identity separately. It
-would not replace the causal equations with an opaque `Organized` assumption
-and then assume that organization entails the desired good. No such result is
-registered here; the existing toolchain was not ready for fresh certification.
+The model retains capacity, exercise and environmental support as separate
+inputs and holds the stipulated bearer fixed. Its recurrence and traces
+formalize the proposed maintenance mechanism. Evaluation under `DueFor`
+still requires the proposed normative interpretation.
 
 The provisional judgment is positive but scoped. Present organization can
 provide substantive, intervention-sensitive grounds for some biological
@@ -724,8 +711,8 @@ an alleged intention with no defended formative relevance does likewise.
 The next source-level test concerns that same productive relation and
 beneficiary, rather than another proof that a component can maintain a system.
 No new formal consequence, empirical reanalysis or root-premise discharge is
-claimed here. The earlier finite recurrence retains its recorded Python-only
-verification status. Independent reviewer `/root/finality_semantic_review`
+claimed here. The earlier finite recurrence is now checked by the linked
+Lean module. Independent reviewer `/root/finality_semantic_review`
 accepted this scope and warrant assessment, the integrated synthesis, the
 three current records and the actual PR body with qualifications at
 `a66f3ff30e42a0325b0dba7105e32e45dedf69cc`, with no unresolved substantiated

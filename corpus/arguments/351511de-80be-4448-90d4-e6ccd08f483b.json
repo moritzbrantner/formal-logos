@@ -1,0 +1,19 @@
+{
+  "id": "351511de-80be-4448-90d4-e6ccd08f483b",
+  "label": "Recover the Boolean schedule and test root-attribute identification in matched routes",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "582769fa-8501-4421-8282-ea6c74202628",
+  "inference_ids": [
+    "bc03776b-fd4b-40c1-bcb9-83ccc4d9a66c"
+  ],
+  "meaning": "Adjacent Boolean values recover the actual switch in the supplied copy/toggle schedule. The #468 ladder supplies two admitted roots with equal generated traces and opposite attributes. The #468 maximum theorems determine the attributes after the explicit profile restriction. The augmented-map criterion follows by comparing the coordinates of the supplied reports.",
+  "definition_ids": [
+    "00c49e05-c665-4434-9add-ca2ba2f0a1e9",
+    "0614b2ed-2c9a-4106-9240-c5a723fd04f9",
+    "7011ffa0-1d24-4e36-84e2-714a38cbdeac",
+    "dace8e73-8b5b-5378-8e62-17d534413168",
+    "88bc0655-9dd0-5879-ba1b-3fca9f86c1f4",
+    "7c64b499-6dba-5e03-bdf3-5acea95d8836",
+    "dcf6e171-f867-45cc-8a1f-9966629d1a91"
+  ]
+}

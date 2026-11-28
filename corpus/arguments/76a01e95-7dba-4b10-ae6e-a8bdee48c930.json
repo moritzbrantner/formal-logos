@@ -1,0 +1,27 @@
+{
+  "id": "76a01e95-7dba-4b10-ae6e-a8bdee48c930",
+  "label": "One individual persists across successors under finite population cover",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "390ac3ab-48ec-596e-9890-4d2364e81cf9",
+    "09e9333a-d596-5ee1-99ce-80f1bad4a0ba",
+    "b9bf4eb8-ccac-5960-a8c7-c01bf24fbb33",
+    "7570cdf8-56b1-58dc-951d-e987959c2d29"
+  ],
+  "conclusion_statement_id": "b62deb46-c451-5971-a569-cc5c0f44a398",
+  "inference_ids": [
+    "2ffe9f2f-1384-4f2a-a94a-2bac724e0723"
+  ],
+  "meaning": "Registers the existing finite_cover_deRe derivation. On one frame, population predicate and base world, excluded middle, accessible-successor existence, absence amalgamation, finite population cover and de dicto population imply that one individual is present at every accessible world. Concrete divine witness identification requires further premises.",
+  "definition_ids": [
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "5dcbf9ee-d1a6-5238-8941-9a116508f291",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "e1ff44df-ed97-5990-8424-1abd720f23ea",
+    "baddf770-36bf-542f-bb3c-2297342d5452",
+    "96b756de-1ba1-594b-ba05-ac63da55f63f"
+  ],
+  "disambiguation_ids": [
+    "7507d645-874d-5434-add8-2f49c2801d36"
+  ]
+}

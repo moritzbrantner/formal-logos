@@ -1,0 +1,10 @@
+{
+  "id": "a4f00f28-fab0-45be-b6be-ca00a70d8bdb",
+  "label": "Source qualification for 49542121 from reading ee185100",
+  "subject_kind": "claim",
+  "subject_id": "239b07b1-84fa-5ea8-9256-c7caa0bae0e6",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "49542121-caa6-576e-aa84-3a1546397388",
+  "note": "On the reported Ayer criterion a word used as if it named a nonempirical person can symbolize something only in empirically verifiable propositions. Applying this to the case requires showing that its naming use falls under that requirement and whether its form and evidence meet it."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b226481a-f7bc-49f2-8413-eb9ee60bdb4c",
+  "label": "Test by NecessaryIfExistent.controls (62b4a40a)",
+  "subject_kind": "result",
+  "subject_id": "ceeb12bd-8442-511a-995f-a105e953887e",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "62b4a40a-919e-5da4-998c-131c386b7361",
+  "note": "Omit Euclidean access. In ascending at false, both true and false are accessible, and true cannot access false. The boxed conditional holds because G holds only at true and its sole successor is true. G is possible from false via true, and necessity fails at the accessible world false."
+}

@@ -1,0 +1,66 @@
+{
+  "snapshot": {
+    "kind": "web_snapshot",
+    "source_id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+    "source_url": "https://archive.org/download/oeuvresdedescar07desc/oeuvresdedescar07desc.pdf",
+    "retrieved_at": "2026-11-26T15:31:45Z",
+    "sha256": "sha256:3b56324cff1ef95cb2b9ea6b45bf78d7683efb831dfd8d579e64176260ebf400",
+    "encoding": "utf-8",
+    "language": "lat",
+    "license": "Published 1904; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer (long s often read as f). Witness bytes from Formal Logos Sources PR #26; retrieved_at records the UTC timestamp of local object receipt. No matching Wayback fallback was supplied with this witness."
+  },
+  "passages": [
+    {
+      "id": "14fd4266-f52d-4d9e-a27a-7089afbd6379",
+      "label": "Meditation II in the Adam–Tannery scan",
+      "locator": "Meditatio II, AT VII 28–29 (1904 scan)",
+      "claim_locator_prefixes": [
+        "Meditatio II, AT VII 28–29 (1904 scan)"
+      ],
+      "pdf_pages": {
+        "first": 58,
+        "last": 59
+      },
+      "text_sha256": "sha256:4813dbfd33d1683798e374930e0bbd89c2f4aeb3b0cdeceead0df54ee41ab1ef"
+    },
+    {
+      "id": "fafbd4c5-47af-4ab4-96da-96993df52d8b",
+      "label": "Meditation III in the Adam–Tannery scan",
+      "locator": "Meditatio III, AT VII 40–47 (1904 scan)",
+      "claim_locator_prefixes": [
+        "Meditatio III, AT VII 40–47 (1904 scan)"
+      ],
+      "pdf_pages": {
+        "first": 70,
+        "last": 77
+      },
+      "text_sha256": "sha256:e500b9d896c8851f2bd9c33f86969ba92a9acbba2b7d998c51420a2a758daf05"
+    },
+    {
+      "id": "6cc90a01-e5d9-4a39-b8ae-3358efab9a0b",
+      "label": "Second Replies in the Adam–Tannery scan",
+      "locator": "Second Replies, geometrical exposition, AT VII 160–166",
+      "claim_locator_prefixes": [
+        "Second Replies, AT VII 165–166, axioms IV–V"
+      ],
+      "pdf_pages": {
+        "first": 190,
+        "last": 196
+      },
+      "text_sha256": "sha256:5bf8372cde65758d8e84a7a201facab5860aa645e868eac0b5d19d36ef863230"
+    },
+    {
+      "id": "870fbe1a-23fd-402f-b7de-1bce0a7efa98",
+      "label": "Second Replies, Proposition II in the Adam–Tannery scan",
+      "locator": "Second Replies, AT VII 167, Proposition II, demonstration",
+      "claim_locator_prefixes": [
+        "Second Replies, AT VII 167, Proposition II, demonstration"
+      ],
+      "pdf_pages": {
+        "first": 197,
+        "last": 197
+      },
+      "text_sha256": "sha256:8848d6f4d7cc39de9885c9c31f2fb3b1bb9c373c42782070e11e48afe2550b7d"
+    }
+  ]
+}

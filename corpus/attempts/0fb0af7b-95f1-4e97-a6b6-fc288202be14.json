@@ -1,0 +1,27 @@
+{
+  "id": "0fb0af7b-95f1-4e97-a6b6-fc288202be14",
+  "label": "Root links from Plato, Republic",
+  "statement_ids": [
+    "f66c7282-a9f7-5d05-904f-bb0e3ad8249e",
+    "a2680104-23c6-58ae-a891-a94afa28195e"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "479a–e: The Republic contrasts the shifting appearance of sensible instances with the stable intelligible objects being discussed. Applying this contrast to the case needs a reason the apparent variability cannot be explained only by changing comparison respects, and a scope bridge to its admitted Forms. 598a–b: The painter imitates the appearance of an artifact rather than its Form or the artifact as it is. The example distinguishes kinds of directed imitation and qualifies any move from resemblance or appearance-copying alone to the target's reliance on an intelligible exemplar.",
+  "evidence": [
+    "878aa108-7bb7-5fd6-af1c-8ca3ecf92c74",
+    "4db6b358-fa4d-57e6-aed6-7c9dcc5c674f",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

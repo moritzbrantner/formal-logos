@@ -1,0 +1,15 @@
+{
+  "id": "3268a24a-5262-4738-a82f-06c4d57a6134",
+  "label": "NAR from admissible root cells and exclusion of NECESSARY_2 recipient withholding (inference)",
+  "input_statement_ids": [
+    "0c27f65a-6a6b-438a-b96c-b2bab9f21ac3",
+    "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9",
+    "bf7b9a2d-d98f-49a4-a236-c963c4830693"
+  ],
+  "output_statement_id": "43651417-cd19-43d7-8f70-8def61acb0f0",
+  "rule": "Apply common-root reach and eliminate the grounded case by the recipient cell exclusion",
+  "meaning": "For any NECESSARY_2 actual concretum, common-root reach either identifies it as the root or gives the root as its ground. In the grounded case the selected cell has an admissible representative by the two STIT premises, contradicting recipient exclusion with the same profile, frame and map. Only root and reach are used from the intellectual common-root premise. Instantiating the exclusion with rigidity reuses the original composed N1 assumptions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

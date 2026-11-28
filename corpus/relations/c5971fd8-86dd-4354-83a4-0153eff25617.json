@@ -1,0 +1,10 @@
+{
+  "id": "c5971fd8-86dd-4354-83a4-0153eff25617",
+  "label": "Test by Finite interpretations for the nine derivations of round for Whenever y moves x as mov (1)",
+  "subject_kind": "result",
+  "subject_id": "9b1c8d31-2458-5ece-9902-ea7dd0371d6c",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "9c252f24-3d84-5246-9551-2637c0fe6379",
+  "note": "Tests omitting this premise in the encoded perSeMoverLinkFromEfficientCausing argument, with the other premises retained and the conclusion false in each corresponding control."
+}

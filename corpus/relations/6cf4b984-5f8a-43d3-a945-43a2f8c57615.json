@@ -1,0 +1,10 @@
+{
+  "id": "6cf4b984-5f8a-43d3-a945-43a2f8c57615",
+  "label": "Test by WorldIndexedSources.checks (96d25c42)",
+  "subject_kind": "result",
+  "subject_id": "63553c9a-e7fd-5326-9ca4-a467e9658c05",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "96d25c42-71aa-5fa0-841d-9aa62d91e1be",
+  "note": "Omit the restriction on contingent supporters in the named-causer profile. At world 0, existing true causes necessary false, while true is absent at accessible world 2. The necessary-only union is empty and every world has well-founded causes. The designated false candidate fails all-world underivedness."
+}

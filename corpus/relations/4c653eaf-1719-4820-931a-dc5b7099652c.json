@@ -1,0 +1,10 @@
+{
+  "id": "4c653eaf-1719-4820-931a-dc5b7099652c",
+  "label": "Test by Changing-direct-support actual-path application certificate",
+  "subject_kind": "result",
+  "subject_id": "021068fa-6203-4e54-ab4f-1330189d1cd3",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1f61f12c-2b5c-5871-bf56-03c65844ae30",
+  "note": "Tests the converse strength implication in the registered interpretation. Same Profile, actual world and grounding interpretation. The single-premise theorem certifies the implication; the named populated control separates the commitments."
+}

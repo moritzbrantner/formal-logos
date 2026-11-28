@@ -1,0 +1,10 @@
+{
+  "id": "7b9f42c7-8bed-4b56-9432-e201336c37a6",
+  "label": "Test by Finite controls on GOD_4 uniqueness by esse causation, checked",
+  "subject_kind": "result",
+  "subject_id": "4f934468-3157-4d9f-b606-35832ae1c9af",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c",
+  "note": "Tests omission of this premise from oneFromNonmutualDependence in the finite esse-causation and dependence profiles retaining the other nonlogical inputs."
+}

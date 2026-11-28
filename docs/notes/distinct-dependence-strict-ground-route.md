@@ -68,8 +68,10 @@ Disambiguation `23dd6f32-b456-4963-adb3-7befbf0dc4fb`
   is "the light in the air depends on the shining sun".
 - "Ground" takes sense 2 only: Fine's formal strict partial ground on
   uninterpreted atoms.
-- The argument passes from sense 1 to sense 2 only through the OPEN map
-  premise, which is listed as a `sense_bridges` premise.
+- The direct-assumption route crosses from sense 1 to sense 2 at the OPEN map
+  premise `42756c07`. The strict-path route assumes the OPEN alignment
+  `b6784d40` as its crossing premise and derives the map by PLG rules. Both leave
+  the interpretation of the labels as existence facts open.
 - The `controls` argument (missing map) shows that the two senses do not mix
   without that premise.
 
@@ -78,15 +80,17 @@ interpretations of the map remain open and untyped:
 
 - **(a) Constitutive/metaphysical ground of existence facts.** This is Fine's
   non-causal metaphysical explanation, and it is the reading the rationale below
-  appeals to. On it, the definition's **own paradigm edge is not covered**: the
-  sun's existing is not standardly a partial ground of the light's existing. The
-  light's existence is grounded in its constituents, and the sun is its cause.
-  So the map would have to be restricted to a non-causal relation of receiving
-  esse, not stated for the broad `D`.
+  appeals to. On it, whether the definition's own paradigm edge is covered is
+  open (reassessed 2026-11-26, [negation tests](#negation-tests-on-the-same-labelled-edge-2026-11-26)):
+  the illumination case supports a local direction of causal supply, but gives
+  no warrant that the sun's existence fact partly grounds the light's. If it
+  does not, the map would have to be restricted to a non-causal relation of
+  receiving esse, not stated for the broad `D`.
 - **(b) Natural/causal-production ground.** Here PLG is applied as the logic
-  common to all grounding relations. On this reading the paradigm edge is
-  covered, but the "constitutive explanatory direction" rationale does not
-  apply. The map's warrant then reduces to the asymmetry of efficient causal
+  common to all grounding relations. On this reading the paradigm edge's local
+  causal direction is supported, though applying the formal map still requires
+  warranted steps between the selected labels, and the "constitutive
+  explanatory direction" rationale does not apply. The map's warrant then reduces to the asymmetry of efficient causal
   dependence for being (compare `STMT-EFFICIENT-CAUSE-NOT-DEPENDENT-ON-EFFECT`),
   strengthened to acyclicity.
 
@@ -523,3 +527,388 @@ moves between its roles in the required direction.
 ## Research attempts citing this note
 
 - [Cluster reassessment of dependence, simple-priority and grounding leaves of the prima via (#1751)](../../corpus/attempts/9d71e28d-d492-4797-9221-45fa517a6e6b.json)
+
+## Testing a supplied PLG theory
+
+Date 2026-11-26. This test fixes the exact assumption set `S`, the bearer
+relation `D` and the fact labelling. The existing representation result chooses
+a theory to fit the projected dependence steps. The new results can inspect an
+independently supplied theory without replacing any of its assumptions.
+[Formal attempt](../../corpus/attempts/59b796b6-d240-43f1-b8c2-25c79e8a07b7.json)
+
+Read a full sequent as contributing an arrow from **each** antecedent to its
+consequent for this test. A partial sequent contributes its one arrow. Arrows
+from strict sequents count as both strict and weak. An empty full antecedent
+contributes no arrow. The two tests are:
+
+1. **Consistency on a populated atom type.** No strict arrow may have a finite
+   return path using arrows of any kind. A return of length zero counts. An
+   all-weak cycle does not violate this test. For each atom, its rank is the set
+   of atoms reaching it by zero or more weak steps. All members of `S` satisfy
+   the rank interpretation: weak steps preserve inclusion and strict steps
+   increase it properly because the target cannot reach back. Rank soundness
+   covers every encoded PLG rule, so any strict self-sequent is underivable.
+   A strict arrow with a return instead derives a strict self-sequent and
+   hence every sequent. [Consistency criterion](../../corpus/results/00f2cd7c-c0a7-4eef-b57a-e59bde59b204.json)
+2. **Dependence map.** Each distinct `D(x,y)` must have a finite path from
+   `label(y)` to `label(x)` with at least one strict step. The path suffices
+   by the PLG subsumption and transitivity rules. Consistency makes the
+   condition necessary too: induction on derivations tracks which initial
+   paths reach the consequent from each antecedent. Cut composes weak paths,
+   reverse subsumption requires strict paths for each antecedent, and
+   consistency rules out using explosion. [Strict derivability criterion](../../corpus/results/006f49e8-4c68-424d-9403-9f025185b555.json)
+
+The consistency argument records population as a separate premise. An empty atom
+type satisfies the no-return condition vacuously but has no sequent to witness
+consistency. On the stated domain, the two tests give support options for `fea5942a` and `42756c07` in
+the nonmutuality and Second Way consumers. On the same fixed `S`, the map
+orients every distinct step, consistency excludes strict self-grounding,
+and PLG composes successive strict grounds transitively. This need not make
+`D` itself transitive: the target can derive composite grounds even if
+`D` records only direct steps. The existing natural-number witness shows
+that an infinite descent can satisfy the two conditions. On the diagonal,
+mapping a self-dependence step would demand a strict self-sequent and
+contradict consistency. The four-bearer control above shows why keeping
+distinct labels on individual paths still allows collisions across paths.
+[Consistency support](../../corpus/results/ac062be2-1f2b-4481-8f91-852dcdd33bb7.json)
+· [Map support](../../corpus/results/945d3606-d6ac-4e5e-a9fd-d95d1dd508e1.json)
+
+The two-label control holds `D(true,false)` and identity labelling fixed.
+With just the weak full sequent `{false} ≤ true`, the theory is consistent
+but cannot map that edge. With just `{false} < true` it is consistent and
+does map the edge. Adding `{true} ≤ false` preserves the map and makes the
+theory inconsistent. The third case cannot be detected by looking for cycles
+among strict assumptions alone. These are results about the stated formal
+presentations. [Boolean control](../../corpus/results/1ea2f628-a121-4e37-a21c-5f4af77f0321.json)
+
+### Warrant at matching scope
+
+For the same proposed supplier and effect in one respect, ask what explains
+why the effect exists there and whether the supply runs in one direction.
+The case for a strict reading is strongest when the effect's very existence
+can be traced to the supplier's operation and the same account of the
+supplier's existence does not refer back to the effect. The observed
+light-supply example gives a local reason to look for an oriented relation.
+This reason does not select constitutive grounding, a global theory of
+existence facts, or a bound on its ancestry.
+
+- **Modal existence requirement.** The positive account is preservation
+  of the implication from the existence of the dependent to that of the
+  required being across the selected worlds. The existing
+  `ModalRequiresExistence` lemma shows that a necessary being is required
+  by any bearer in that sense. Two distinct necessary bearers therefore
+  require one another while strict PLG in a consistent theory cannot map
+  the pair both ways. This challenges the map when the sole warrant for
+  a strict step is modal co-instantiation. It leaves efficient-causal
+  `D` distinct: using the result against that `D` would require a reason
+  to identify the causal reading with the purely modal one. Modal
+  implication captures constraints on co-existence and supplies no
+  directional account of actual production in the light case.
+- **Causal explanation without constitutive grounding.** In a sustaining
+  illumination case, tracing the emitter's operation and the resulting
+  light explains why that light is present. The supplier's existence
+  by itself does not suffice for that causal account: the operation
+  matters. A local grounding skeptic can accept this directional causal
+  account and reject the claim that there is in addition a constitutive
+  ground between bare existence facts. This targets the interpretation
+  of the strict paths and their labels, even if the causal direction and
+  the syntax are granted. It leaves open whether an interpretation in
+  causal supply is adequate for the selected class of existence facts.
+  The local account gives no explanation of why there is an entire
+  upstream series of suppliers.
+
+**Provisional assessment.** The exact test separates an omission of an
+orientation in `S` from an incompatible combination of assumptions in
+`S`. A separately motivated strict presentation could add support to
+particular dependence edges. A presentation containing those edges by
+construction transfers the burden to the input orientation and its warrant.
+The repository has supplied examples of particular theories, but the root
+argument takes an arbitrary `S` and no independently specified existence-fact
+presentation is bound there. Both original claims remain available as direct
+options. Apply the tests next to a specified effect and a theory whose fact
+labels and assumptions are justified independently of the target dependence
+edge, including any weak sequents that could return from the effect. A path
+supported by actual same-respect supply would favor the causal reading.
+Evidence for constitutive explanation at that same scope could change the
+assessment of the stronger reading.
+
+### Adjacent premises in the triage cluster
+
+[Cluster attempt](../../corpus/attempts/473bd726-59d1-495f-9178-8efb6f33da8b.json)
+
+| Premise | Finding and remaining condition |
+|---|---|
+| `adb951c1` | Per se alignment needs distinct endpoints and evidence that the effect's *being* depends on this supplier. The hand can move the stick through a per se instrumental series while the stick continues to exist when it is released. A reading restricted to per se causes of esse avoids that example, with alignment still to be supplied on that narrower relation. |
+| `f10d5632` | Selecting the history relation to be the per se relation makes inclusion reflexive. Evidence of finite distinct ancestry and absence of loops must then concern that same selected history. An independently selected history needs a same-carrier inclusion check. |
+| `2e248016` | The direction from world-local dependence to actual-concrete grounding requires a reason to export `D` to the profile's selected relation. The unrestricted statement also maps `D(x,x)`; with actual grounding irreflexive it excludes reflexive `D` on a populated actual-concrete domain. The existing distinct sibling `a8298fbd` avoids that diagonal commitment. |
+| `0f5b53ef` | A quality-level explanation challenges the converse export only if the profile admits bearer-to-bearer grounding edges on that basis. For a profile restricted to existential grounds, the question is whether those grounds entail the selected dependence-for-being counterfactual. |
+| `7a63a3fe` | The priority bridge targets the profile's world-local ground and `PRIOR_1`. A strict order on PLG labels yields no such bridge. The required calibration is actual grounding to priority in act in the relevant respect on the same bearers. |
+| `2047d14b` | Self-grounding is excluded on a strict explanatory reading. In the world-local profile, any transfer from PLG would still need an explicit ground-to-PLG bridge **on the diagonal**, which the distinct map never supplies. The existing reflexive-requirement controls locate the competing reading. |
+
+## Negation tests on the same labelled edge (2026-11-26)
+
+Fix the supplier, recipient, their labels, and the entire assumption set before
+asking what the dependence edge explains. The two branches of the per se route
+use these inputs differently. Argument `4bd8457a` uses population and absence
+of a strict return for consistency. Argument `ea09d50b` uses path coverage to
+derive the map. The nonmutuality result requires consistency and the map on
+the same presentation. These two arguments supply one way to obtain those
+inputs; either input can also be assumed directly. The following judgments concern the baseline of PR #2025 and the
+[compiled negation tests](../../TruthCore/Models/SelectedPlgNegations.lean).
+
+**Population (`d1c47547`).** Strongly warranted in any application that
+supplies both a bearer in the labelling domain and a total label function;
+missing either input removes this proof of population and leaves it open. Applying the very same total label function to
+that bearer supplies the atom (`populatedAtBearer`). A skeptic about reifying
+existence facts can grant this mathematical witness and dispute its
+interpretation. The strongest literal denial is an empty language.
+`emptyPresentation` takes both carriers empty. Every path obligation and the
+no-return condition hold, but there is no sequent at all to witness PLG
+consistency. An empty target with a total labelling cannot retain the observed
+bearer. No substantive objection to population survives those two inputs.
+Reopen if the alleged witness and labelling belong to different domains or the
+application has yet to exhibit a bearer.
+
+**No strict return (`2bdf810f`).** Favor this condition for presentations of
+one-way supply whose weak steps all preserve the same order. A strict step
+then increases rank, so the reverse weak path cannot restore its starting
+rank. A rival can instead preserve reciprocal constraints, for example the
+co-existence requirements of two necessary bearers. Reciprocally weak edges
+alone are compatible with the test. An infinite strict descent alone is also
+compatible, as the earlier natural-number model shows. Denial requires a
+strict step *and* a finite weak return. Keeping one direction strict while
+admitting the return makes every sequent derivable in this calculus. That is
+a specific conflict with the route's consistency premise. The positive
+interdependence alternative (Thompson on holistic explanation; Bliss on
+circles and regress) holds that some reciprocal links do constitutive
+explanatory work. It challenges `42756c07` if both links belong to the
+selected `D`; if both are represented in PLG with at least one strict
+direction, the return violates `2bdf810f`. Acyclic infinite descent is a
+separate alternative: it leaves `2bdf810f` intact and bears on a downstream
+termination premise. Neither alternative supplies an example of the same
+illumination effect sustaining its own supplier. For the unspecified root presentation the judgment
+remains conditional. Inspect weak links as well as strict ones, or supply a
+rank independently warranted for every initial sequent.
+
+**Path coverage (`b6784d40`).** On a consistent presentation the exact price
+of denying coverage is one distinct dependent and supplier with no strict-step
+path in the required direction. The corresponding strict sequent is
+underivable (`missingMapIffUncovered`). The prior weak-only control realizes
+that denial while retaining the dependence edge. A causal investigator can
+have a positive reason for precisely such restraint: the emitter's operation
+explains the presence of light, while the proposed labels record just their
+existences. Omitting a strict step is defensible when the evidence supports
+the operation and the chosen presentation records no rule transferring it to
+those facts. This favors withholding unrestricted coverage. It gives no
+reason to deny a path whose initial steps already have that warrant. Reassess
+on an independently specified presentation, checking each strict step and
+both endpoint interpretations.
+
+**Parent map (`42756c07`).** The directed supply in the illumination case
+supports trying an oriented causal reading. The same evidence fits a local
+account in terms of emission and reception (Wilson-style specific dependence
+relations): emission and reception explain the specified light's presence
+while the emitter operates, which supports withholding the export from causal
+supply to a constitutive relation between bare existence facts, while leaving
+formal path coverage and partial constitutive ground open. Such an account owes an explanation
+of how the effect is sustained, but owes a *constitutive* ground only if there
+is a further reason that this particular existence fact has one. Pointing out
+that emission requires operation does not refute strict *partial* ground:
+the proposed supplier fact need not suffice on its own. The current evidence
+underdetermines that stronger interpretation. The Fine-style alternative
+holds that source-indexed essence can distinguish directions that necessary
+co-presence leaves symmetric. In the existing `directedNature` profile, modal
+co-existence is mutual even though the essence assignment is directional; the
+essence assignment is stipulated and the causal relation is empty, so the
+theorem tests the modal relation alone. `modalControlExcludesMap` excludes the strict map
+on that modal relation for **every** labelling and consistent presentation.
+This rules out mere modal requirement as a general warrant. Applying that
+result against the selected efficient-causal relation would require an
+identification that the illumination case does not provide.
+
+There is a second diagnostic for the parent. Keep the earlier Boolean edge
+and identity labels and supply just a strict self-step at the supplier.
+`loopMasksMissingPath` proves that the map holds while coverage and consistency
+both fail. Every initial step stays at the supplier, yet explosion derives
+the sequent about the recipient. Thus a successful derivation alone cannot
+serve as the discriminating evidence. Reassess the parent on an independently
+motivated consistent theory that explains why the supplier's *existence fact*
+partly grounds the recipient's, at the very respect and time for which the
+causal explanation is offered: once the supplier's operation, the time and the
+respect are fixed, what explanatory contribution does the supplier's
+*existence* still make? Until then the two bridges remain direct
+assumption options. Neither the modal control nor the cyclic presentation
+undermines a prerequisite of inquiry. Their conflicts are with identifiable
+route commitments under the specified readings.
+
+## Coextensive existence facts and the strict-ground map (#2058)
+
+The earlier modal control rules out a strict PLG map of **mutual modal
+requirement** in a consistent presentation. The
+[existence-content model](../../TruthCore/Models/HyperintensionalExistence.lean)
+keeps that same ontic frame and instead maps the stipulated directional
+nature relation. The inputs are the nature assignment from `directedNature`
+and the `strictForward` PLG assumptions from the Boolean control. The map
+orients the only membership edge from the fact in the nature to the fact
+about its bearer. Neither formal input is inferred from modal co-presence.
+
+### What the example discriminates
+
+- The two contents are existence facts indexed by distinct bearers. Both
+  are true at both worlds, so the boxed biconditional holds from every
+  origin. The frame meets the existing S5 conditions and has a contingent
+  world predicate. Rigid names pick out the bearers at both worlds and the
+  names never co-refer. Coextension thus does not require a syntactic
+  contrast between names for the same bearer.
+- The consistent PLG presentation derives a strict partial ground from the
+  supplier fact to the recipient fact and hence also derives the forward
+  weak partial ground. A weak return would turn that strict edge into strict
+  self-grounding by mixed transitivity. The weak-only presentation preserves
+  the forward weak edge and omits strict derivability. The orientation is a
+  hypothesis about the chosen formal presentation. Strict transitivity and
+  finite well-foundedness of consistent PLG apply here by the existing
+  [acyclicity result](../../TruthCore/Results/Modern/Fine/StrictGroundAcyclic/Solution.lean).
+- `InEssence` means that an existence fact belongs to a specified bearer's
+  nature. It holds of the supplier fact at the recipient bearer and fails
+  there for the recipient's own existence fact. The existing
+  `natureWithoutReason` assignment omits the supplier membership on the
+  identical ontic profile. Both are stipulated assignments. No warranted
+  instance of actual constitutive essence or dependence for being is supplied
+  by the Boolean examples.
+
+### When substitution is licensed
+
+Equality of contents gives ordinary substitution in any typed judgment.
+Agreement at every accessible world gives the same box and diamond verdicts
+at that origin. The [interpretation interface](../../TruthCore/Logic/ContentInterpretation.lean)
+reuses the equal-data criterion underlying `FinerContentCriterion`: a
+judgment in a fixed content slot factors through world predicates exactly
+when it is invariant on equal-extension fibers. Each selected PLG
+or essence judgment in `extensionCollapse` distinguishes these two inputs,
+which have equal extensions. Such a judgment therefore cannot factor
+through that projection. For the strict antecedent, substitution would
+produce strict self-grounding. For the weak consequent, substitution would
+transfer weak identity at the recipient label into the excluded weak
+return. For essence it would transfer membership to the recipient fact,
+which the selected profile omits.
+
+An extensional account can keep the world predicates as its entire content
+domain and explain the matching modal verdicts directly. It then owes
+either an independent account of the directional judgments or a reason to
+deny that those judgments are genuine. If it also keeps the strict PLG
+edge on those very extensions, the equal endpoints produce a strict
+self-edge, violating consistency. This is the exact cost of combining
+extensional identity with that PLG claim. The facts agree on world truth
+and are distinguished by the displayed judgments, so they are no
+counterexample to indiscernibility under every predicate. The claim that
+world truth exhausts admissible criteria of content identity is a further
+commitment. Neither the fact constructor nor the resulting PLG model
+establishes a real difference of essence. No substantive objection to the
+formal compatibility has been identified within the selected S5 and PLG
+semantics.
+
+### Connection and next test
+
+The target is [the distinct dependence map](../../corpus/statements/42756c07-03cd-4b54-8ed6-ed6c1a5132aa.json)
+(`42756c07`), between path coverage `b6784d40` and the Second Way
+accessibility premise `97f5850f`.
+
+**Fixed-label check.** The [worked Lean application](../../TruthCore/Causality/StrictGroundSupplyEdge.lean)
+keeps the supplier fact at label `false` and the recipient fact at label
+`true`. In `strictForward`, the initial strict full sequent with singleton
+antecedent gives the path's strict step. Both surrounding weak paths have
+length zero. The consistency criterion rules out a finite weak return,
+even one using strict steps as weak steps. On the same labels, `weakOnly`
+retains forward weak derivability and omits every strict-step path between
+the pair. The original modal profile is the same in both tests. Labelling
+by world extension would recover the modal verdicts and identify the two
+endpoints. Retaining the strict sequent on those identical labels would
+then give a strict self-sequent, which is incompatible with any consistent
+PLG theory. An extensional account can instead keep the modal verdicts and
+leave the strict explanatory claim out. This comparison concerns the
+coextensive pair in the model.
+
+The application calls `mapOfStrictPaths` and feeds its output into
+`foundedFromAncestralLabels`. The relation in the per se slot is the reverse
+of the stipulated nature relation and has the single supplier-to-recipient
+edge. Alignment follows from that choice and the distinct Boolean bearers.
+Finite ancestry labels follow from the Boolean label type. The ontic cause
+relation of `directedNature` is empty. This gives a worked instantiation of
+the existing four-premise composition and no new ground for anyone's
+acceptance of those premises in the Second Way.
+
+**Actual-edge assessment.** Reuse the illumination paradigm as an analyst
+case. Fix the emitter and the particular illumination at a receiving
+location, in the respect of being that very illumination. Distinguish the
+emission time from the reception time. The causal direction is supported
+by the explanatory roles of emission and reception: the emitter can
+persist when the beam is blocked, and the recipient light at that location
+depends on successful transmission. That evidence does not establish that
+illumination at reception time t depends on the emitter's existence at t.
+At a positive distance, light already in transit can arrive after the
+emitter ceases operating. Concurrent existential supply is therefore the
+first open test: a case must show that the effect's existence at t depends
+on the supplier's existence at the same t. The partial-ground question
+below applies only to a case that passes that test. Fix the proposed
+labels to the existence of that emitter and the existence of that
+illumination, each at its stated time. The evidence traces the emitter's *activity* to the effect.
+A causal presentation that labels the activity or transmitted light can
+use that evidence directly, but substitutes a different antecedent for the
+selected existence fact. A strict partial ground need not suffice alone,
+so the need for operation leaves room for a contribution by the existence
+fact. Establishing that contribution would require a same-case account of
+what the supplier's existence adds as a partial explanation of the effect's
+existence, beyond the fact that a bearer exists whenever it operates. For
+the constitutive reading, the account would also have to identify the
+supplier fact as a constituent of the recipient fact's explanation.
+
+The illumination case favors a directed causal account at its own scope.
+A causal account in terms of activity and transmission has positive
+support there and can omit any constitutive edge between the two existence
+facts. The existing evidence leaves the proposed strict edge unlicensed
+on those exact labels. The Boolean nature assignment shows compatibility
+with coextension and supplies no independent warrant for that edge.
+Reopen when a specified actual case supports the explanatory role of both
+fact labels at the same time and in the same respect. On that evidence,
+justify the initial sequents in one presentation and check the whole set
+for weak returns, including return paths introduced by other cases.
+
+**Scope of any extension.** For the existing route, coverage must range
+over every distinct `D` edge in the selected domain, using the same
+labelling and consistent theory. Applying that map to the per se series
+requires `adb951c1` on the independently selected relation: each of its
+links must concern distinct bearers and supply being in that respect.
+A sustaining cause of motion can leave the instrument's being untouched,
+so evidence about the motion cannot license that alignment. Restricting
+the relation to per se causes of esse still requires evidence that it is
+the relation needed in the Second Way and that the same path justification
+applies throughout. Finiteness of upstream labels for each effect is a
+separate obligation.
+
+To use a PLG path for world-local `ActualConcreteGround`, first identify
+the corresponding concrete bearers and their fact labels at the selected
+world. Then justify the implication from derivability on those labels to
+the profile's `grounds` relation on those same bearers, including the
+supplier's actuality and concreteness. Even such an implication on distinct
+pairs would serve only the scope of `a8298fbd`. The unrestricted
+`2e248016` still requires a separate account of self-dependence. On a
+reflexive `D` it requires world-local self-grounding for actual concreta,
+which conflicts with an irreflexive reading of that world-local ground.
+No transport is assumed here.
+
+There is no new graph edge or premise change. The missing bridge is
+independent evidence for an actual existence-fact orientation.
+[Supply-edge attempt](../../corpus/attempts/0463b5e3-dac4-4e22-a359-c6f7eaa264a5.json)
+
+For the [esse–essence identity question](existence-in-essence-identity.md),
+the result motivates checking substitution **inside** the nature judgment.
+It does not test the particular act–fact link (`3a2af70f`) or the
+exercise-in-the-nature condition (`823d4312`). A direct test needs a
+fixed bearer with those act and fact representations, a common
+content interpretation, and an independent reason that the selected
+nature judgment is invariant under that particular substitution.
+The toy nature membership also does not supply an adequate intrinsic
+explanation or the individuation premise of the simplicity/uniqueness
+route.
+
+[Attempt record](../../corpus/attempts/db5a4c34-3174-4467-819d-49ac28f9b902.json)

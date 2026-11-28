@@ -36,12 +36,16 @@ public import TruthCore.Results.Explanation.GroundingBaseline.Core.Solution
 public import TruthCore.Results.Explanation.GroundingBaseline.Reduct.Solution
 public import TruthCore.Results.Explanation.GroundingBaseline.Solution
 public import TruthCore.Results.Explanation.HistorySelection.Solution
+public import TruthCore.Results.Explanation.InducerFreePersistence.Solution
+public import TruthCore.Results.Explanation.InertialReceiverNature.Solution
+public import TruthCore.Results.Explanation.InquiryClosure.Solution
 public import TruthCore.Results.Explanation.JointCondition.Solution
 public import TruthCore.Results.Explanation.JointContingencyLocalization.Solution
 public import TruthCore.Results.Explanation.JointCooperation.Solution
 public import TruthCore.Results.Explanation.JointGroundEffectContingency.Solution
 public import TruthCore.Results.Explanation.LawActuality.Solution
 public import TruthCore.Results.Explanation.LimitPersistenceLaw.Solution
+public import TruthCore.Results.Explanation.LocationPersistence.Solution
 public import TruthCore.Results.Explanation.MechanismInterventionParity.Solution
 public import TruthCore.Results.Explanation.NecessaryFactBoundary.Solution
 public import TruthCore.Results.Explanation.NecessaryUltimateSource.Solution

@@ -1,0 +1,10 @@
+{
+  "id": "b2ba2eca-b8e7-4a45-ae83-69524bea89e7",
+  "label": "Source qualification for cdc7a58f from reading bcdb9a97",
+  "subject_kind": "claim",
+  "subject_id": "c580477d-db12-5177-ae41-d633d3530ae2",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "cdc7a58f-0c17-41d9-8d9d-18b6ad5c6cc6",
+  "note": "Russell acknowledges existential and general facts without a complete analysis of them by the formula. His limitation prevents treating the propositional-function paraphrase alone as an exhaustive account of a case existence fact. A further connection between those facts and the case's reality feature is open."
+}

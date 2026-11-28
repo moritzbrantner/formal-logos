@@ -1,0 +1,34 @@
+{
+  "id": "2ce3364a-0862-499c-a555-53c3286a52fe",
+  "label": "Seeking or resting in the intellectually apprehended good belongs to will",
+  "statement_ids": [
+    "f586a11b-dbda-53d1-9c21-8d75da74056f"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I q.19 a.1 links will to the intellectually apprehended good through seeking when the good is absent and resting when possessed. The linked disambiguation distinguishes this source analogy from treating divine willing as a passive power of the soul.",
+  "blocker": "The body treats intellectually apprehended good as an object of will, rather than requiring deficient seeking. Applying this to the target requires every appetitive principle satisfying FollowsIntellect to amount to that orientation to intellectually apprehended good, and the orientation to warrant HasWill for the same bearer without treating divine willing as a distinct passive capacity.",
+  "evidence": [
+    "1abe51c0-a149-402b-9e48-313ee158a2fe",
+    "PR-2024"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    },
+    {
+      "role": "repair",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2024"
+    }
+  ]
+}

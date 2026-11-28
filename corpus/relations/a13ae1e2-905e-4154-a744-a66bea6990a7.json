@@ -1,0 +1,10 @@
+{
+  "id": "a13ae1e2-905e-4154-a744-a66bea6990a7",
+  "label": "Source qualification for 552054cf from reading 31ef93be",
+  "subject_kind": "claim",
+  "subject_id": "6b8a5e69-0906-5ebd-b014-8a5b6a3f1e62",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "552054cf-6a9d-56f6-bd5f-7e7f377793c5",
+  "note": "The coupled droplets instantiate abiotic pattern formation under diffusion and reaction, with unexpected patterns requiring model extension. Applying this to the selected teleonomy premise needs the patterns to count as end-directed in the relevant sense and a bridge from laboratory setup to the relevant natural domain."
+}

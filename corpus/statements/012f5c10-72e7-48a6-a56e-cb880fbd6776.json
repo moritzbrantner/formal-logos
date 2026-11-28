@@ -1,0 +1,11 @@
+{
+  "id": "012f5c10-72e7-48a6-a56e-cb880fbd6776",
+  "label": "Giving at the selected world exercises an owned power of a classified mode",
+  "paraphrase": "OPEN, analyst formulation. Every giving at w exercises some owned power p of its giver, with rationality or its negation for that p. Other exercised powers are allowed. This is selected-world coverage, with the disjunction explicit.",
+  "lean_declaration": "TruthCore.Causality.ThroughWill.GivingHasClassifiedPowerAt",
+  "definition_ids": [
+    "582f44c3-7778-4806-b385-e1eff852ac5e",
+    "b8061228-9131-40f2-83bd-cb7d719bd0a0",
+    "62dfa893-b633-4513-9790-8f9a0a3087e0"
+  ]
+}

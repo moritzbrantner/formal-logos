@@ -1,0 +1,28 @@
+{
+  "id": "6e53abeb-4627-4923-85d3-84fae1001b63",
+  "label": "Possession-sensitive response connection plan",
+  "statement_ids": [
+    "0a8c56f8-ffe3-4fdb-9efc-8b108d601762",
+    "8ebbc2ba-5ceb-418f-8970-962936e383db",
+    "ae0e6c36-e279-4a46-be5e-5ff323a3399a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The local Boolean pattern distinguishes seeking an absent end from retaining a possessed one. Instantiate for an actual bearer and one apprehended good, defend the availability of the matching response, and justify why this is an intellectual appetite in the route's HAS_WILL_3 sense. Introduced in 98bf96b7d.",
+  "evidence": [
+    "0032977e-e4be-4e0f-84b8-84dce7094882",
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target f586a11b-dbda-53d1-9c21-8d75da74056f. The scoped bridge described in the summary remains open."
+}

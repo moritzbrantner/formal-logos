@@ -1,0 +1,25 @@
+{
+  "id": "f4c4d466-dd78-4b45-b782-f34b9736f193",
+  "label": "Equality at the degree boundary connection plan",
+  "statement_ids": [
+    "b69b0592-9e4f-5fb8-986b-f189eee01b9d"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The equality case witnesses a difference between strict order and nonstrict comparison for the same ordered values. Reuse the exact order certificate only after giving the Fourth-Way primitive MoreIn a degree representation and specifying what tied bearers are allowed.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target a4814f25-84b0-560e-870a-eb3a23a6a35b. The scoped bridge described in the summary remains open."
+}

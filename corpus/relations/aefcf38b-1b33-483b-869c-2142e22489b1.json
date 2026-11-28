@@ -1,0 +1,10 @@
+{
+  "id": "aefcf38b-1b33-483b-869c-2142e22489b1",
+  "label": "Test by Controls of the round-3 Christ-and-Church batch: one fin for Mark reports Jesus affirm (1)",
+  "subject_kind": "result",
+  "subject_id": "47011ff0-25d2-587e-844a-17d6b1a7b11f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "759acbc1-17ea-50b4-905c-3aacea988e7e",
+  "note": "Tests omitting this premise in the encoded pilotClaimsFromMarkTrial, stageFourFromMarkTrial arguments, with the other premises retained and the conclusion false in each corresponding control."
+}

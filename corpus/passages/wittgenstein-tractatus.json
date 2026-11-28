@@ -7,7 +7,9 @@
     "sha256": "sha256:52158eed80f03552c257e22dca26e1684588814554481242be94063ce9c6061f",
     "encoding": "utf-8",
     "language": "deu",
-    "license": "Public domain: the German text (Wittgenstein died 1951) is out of copyright in the EU and wherever the term is 70 years after the author's death or less, and the 1922 edition with the Ogden translation is in the public domain in the United States; distributed by Project Gutenberg under the Project Gutenberg License (checked 2026-11-05). Only hashes, locators and a short incipit are committed. Two fetches on 2026-11-05 gave identical bytes. No Wayback fallback: web.archive.org refused connections from the pinning environment."
+    "license": "Public domain: the German text (Wittgenstein died 1951) is out of copyright in the EU and wherever the term is 70 years after the author's death or less, and the 1922 edition with the Ogden translation is in the public domain in the United States; distributed by Project Gutenberg under the Project Gutenberg License (checked 2026-11-05). Only hashes, locators and a short incipit are committed. Two fetches on 2026-11-05 gave identical bytes. Wayback capture 20261001142825 pinned (byte-identical; formal-logos issue #2013, 2026-11-26). Only metadata and short incipits are committed.",
+    "wayback_url": "https://web.archive.org/web/20261001142825id_/https://www.gutenberg.org/files/5740/5740-t/5740-t.tex",
+    "wayback_sha256": "sha256:52158eed80f03552c257e22dca26e1684588814554481242be94063ce9c6061f"
   },
   "passages": [
     {

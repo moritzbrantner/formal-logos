@@ -1,0 +1,10 @@
+{
+  "id": "78c4709d-5c53-4cdb-80cb-069afd8e3d2f",
+  "label": "Test by RotatingPotentialCausers.checks (6af3bd73)",
+  "subject_kind": "result",
+  "subject_id": "3e004803-4095-5e1d-a587-8cb46745bf69",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6af3bd73-f2bc-5018-ba2f-ec7f97d6c059",
+  "note": "Omit well-foundedness of the union of support among bearers necessary from false. In rotating both bearers exist at both worlds, and the two worlds reverse the only support edge. The present-source relation is well-founded at each world, but the union has a two-cycle even though both necessary bearers hold the other-directed potential role."
+}

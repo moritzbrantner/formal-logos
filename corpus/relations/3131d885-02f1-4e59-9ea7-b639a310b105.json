@@ -1,0 +1,10 @@
+{
+  "id": "3131d885-02f1-4e59-9ea7-b639a310b105",
+  "label": "Test by Graded-foundation controls, checked for Whenever an actual concretum a grounds an actu (1)",
+  "subject_kind": "result",
+  "subject_id": "5dbba779-432b-4d3a-bd4a-11b14086ef63",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d96105fb-8c4d-5e56-b3c7-2cb77a447c2b",
+  "note": "Tests whether well-founded grounding and a well-founded grade suffice for actual-edge ascent by reversing the grade on the same two-world profile."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "0f214e33-b131-48dd-b916-4e046c3b5ae3",
+  "label": "Test by Comparison and omission bundle for Thinker-local well-foundedness: every bearer of an (1)",
+  "subject_kind": "result",
+  "subject_id": "a94fd849-9264-5497-b9d1-1828cf81744a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3a2bb5f9-70c1-5f3f-9798-ac250deffa90",
+  "note": "Tests omission of this premise from necessaryConcreteAncestor in the assigned thinker or ancestry profile retaining the other nonlogical inputs and with no necessary concrete ancestor."
+}

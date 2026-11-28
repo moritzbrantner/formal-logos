@@ -1,0 +1,10 @@
+{
+  "id": "2d69e4b6-67e2-4188-a64b-06dea90aefd3",
+  "label": "Test by Matched controls for the practical specification of fixe for A giving plan rejects wit (1)",
+  "subject_kind": "result",
+  "subject_id": "6a0df6b9-d7d5-4612-8dc0-ee12b98dfbb5",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "b1d7825e-a1ae-4f86-af2e-1b9819055e0f",
+  "note": "Tests omission of the end rejection rule with the operative bare-output plan and the other relations fixed."
+}

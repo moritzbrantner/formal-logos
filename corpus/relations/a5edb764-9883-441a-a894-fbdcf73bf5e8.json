@@ -1,0 +1,10 @@
+{
+  "id": "a5edb764-9883-441a-a894-fbdcf73bf5e8",
+  "label": "Source support for ObjectiveRealityIsCaused",
+  "subject_kind": "claim",
+  "subject_id": "50f9d560-0938-4469-9b25-3def1243e86c",
+  "predicate": "supports",
+  "object_kind": "statement",
+  "object_id": "0747e4f3-5296-4353-af67-2dd86c740a5e",
+  "note": "The source requires a cause for an idea’s particular objective reality. For every occurring episode and each modeled perfection it represents, show why that respect carries the objective reality in the causal principle and why its source supplies ObjCause for that very episode and respect."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "17bdd967-780b-481a-9465-22aa3a16937d",
+  "label": "Scoped absolute truth and exemption connection plan",
+  "statement_ids": [
+    "5c18a8c4-c908-5397-b429-44c20b48c87e",
+    "a249ccbc-af64-5e4e-bf51-2b636a7d7481",
+    "b20ea84d-b227-5f76-a898-c8467dd57442",
+    "de454f1e-652d-5ab3-8888-3259bc829b60"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "The retorsion and truth-ascent results depend on the supplied absolute-truth predicate, the scope assignment and disquotation. To challenge the case, establish that its exact God-existence content is in the local scope and that its truth satisfies the same capture rule. The consistent exempted or merely relative reading stays distinct. Introduced in 3da0ef7cd.",
+  "evidence": [
+    "PR-2086",
+    "dbc2fb38-580c-5f0c-813d-767076523c8b",
+    "e17c96e9-17dc-58b3-8600-4f0165a18beb"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 8626f8a5-9531-5da7-9ebd-f901e74b1129. The scoped bridge described in the summary remains open."
+}

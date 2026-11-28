@@ -131,3 +131,43 @@ conclusion = "The same necessary source and copying channel work without represe
 axioms = []
 rule = "Retain the same causes and channel while interpreting all represented attitudes and plans as empty"
 meaning = "Applies the same exact-value production guarantee without attributing cognition or assertion to the source. The empty mental relations are explicitly disclosed and not mistaken for empty causation; the positive cognitive control restores them. Necessity is stipulated on a universal frame and is not what proves record truth. Comparison beyond these functional conditions remains a philosophical application question."
+
+[[relation]]
+id = "Test by The unchanged causal copying mechanism admits an attitude-free control"
+label = "Test by The unchanged causal copying mechanism admits an attitude-free control"
+subject_kind = "result"
+subject_id = "8de536c8-8d38-4787-acc6-fa01a94c72fc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "12c60e82-fa46-434a-9c92-ec22ccdabcfd"
+note = "Tests the exact-value copying guarantee in the original populated causal history with absent assertion, assent and plans."
+
+[[relation]]
+id = "Test by Four source-to-channel omissions break record guarantees"
+label = "Test by Four source-to-channel omissions break record guarantees"
+subject_kind = "result"
+subject_id = "cbc30caf-c329-4f25-b5e2-eedbb1befe28"
+predicate = "tests"
+object_kind = "statement"
+object_id = "389db8f3-19c9-48c6-a6c7-c778f13895e2"
+note = "Tests whether an informed truthful asserting source suffices while independently varying assertoric plans, causal realization, exact truth transport and coverage in populated histories."
+
+[[relation]]
+id = "Test by Populated truthful-production positive control"
+label = "Test by Populated truthful-production positive control"
+subject_kind = "result"
+subject_id = "add4c236-3c26-4173-8aae-55a3fceea7a2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "389db8f3-19c9-48c6-a6c7-c778f13895e2"
+note = "Tests joint nonvacuity of the source-to-record guarantee in the two admitted histories with actual causal tokens and distinct readouts."
+
+[[relation]]
+id = "Test by Semantic preservation is strictly weaker than identical decoded content"
+label = "Test by Semantic preservation is strictly weaker than identical decoded content"
+subject_kind = "result"
+subject_id = "4f173774-99ca-4bc5-b02a-de7adc5a956f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "c7c0ccda-a540-43f5-bad5-1e9b25eb2ca7"
+note = "Tests necessity of exact content transport using the same two histories with a flipped tag, unchanged truth and sound readout."

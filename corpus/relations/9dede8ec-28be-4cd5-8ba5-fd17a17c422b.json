@@ -1,0 +1,10 @@
+{
+  "id": "9dede8ec-28be-4cd5-8ba5-fd17a17c422b",
+  "label": "Test by Formal fact: none of the eight act/POTENCY_1 premises sh for Act is SIMPLY_PRIOR_1 to (1)",
+  "subject_kind": "result",
+  "subject_id": "51ab02bc-b328-555e-bfd9-4ee0d716c3d4",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "a4d3261a-3239-5b44-9953-64ab1b0ed762",
+  "note": "Tests omission of act priority from the eight-premise package retaining sensible motion and per se regress."
+}

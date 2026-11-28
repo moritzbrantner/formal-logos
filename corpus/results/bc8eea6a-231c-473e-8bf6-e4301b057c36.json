@@ -1,0 +1,11 @@
+{
+  "id": "bc8eea6a-231c-473e-8bf6-e4301b057c36",
+  "label": "Modal ontological case controls",
+  "argument_id": "d5a0bb94-9aac-48db-9d46-0f722fe7015c",
+  "challenge_module": "TruthCore.Results.Modal.ModalOntologicalCase.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ModalOntologicalCase.Solution",
+  "theorem": "TruthCore.Results.Modal.ModalOntologicalCase.controls",
+  "comparator_config": "results/bc8eea6a-231c-473e-8bf6-e4301b057c36/comparator.json",
+  "status": "solution-present",
+  "description": "Omission controls for the boxed conditional, possibility and persistence premises, a nonvacuity model of the whole argument, and a strictness model where persistence holds and rigidity fails, and a model where the conclusion holds and persistence fails."
+}

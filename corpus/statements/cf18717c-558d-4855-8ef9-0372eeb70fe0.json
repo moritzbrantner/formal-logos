@@ -1,0 +1,10 @@
+{
+  "id": "cf18717c-558d-4855-8ef9-0372eeb70fe0",
+  "label": "No infinite walk characterizes cone WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT_3",
+  "paraphrase": "For every world and actual concrete recipient in the supplied profile, the complete actual concrete grounding cone is well-founded exactly when no Nat-indexed upstream walk starts at that recipient. Consecutive vertices follow actual concrete grounding edges, and vertices may repeat.",
+  "lean_declaration": "TruthCore.Causality.SelectedConeSupply.ConeWalkCriterion",
+  "definition_ids": [
+    "a1b2e330-388f-4120-bc5c-969642317792",
+    "9c6e4314-2e35-52ff-951e-db752a3c8ce2"
+  ]
+}

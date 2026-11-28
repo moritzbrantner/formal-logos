@@ -1,0 +1,33 @@
+{
+  "id": "1db59ef0-d120-4f39-a5a9-d7de091322dc",
+  "label": "Root links from Ludwig Wittgenstein, Über Gewißheit",
+  "statement_ids": [
+    "3288a854-00d2-522d-be9f-85d8c97ddb12",
+    "3643f318-3f71-51d0-84b3-a5f8c91fa29f",
+    "17db4fcc-33b9-5561-871d-949b6e119af7",
+    "2385080d-798a-5fd3-9418-aa5a91248267",
+    "a4686b65-0326-5754-9b41-f8daeecdd362"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "§151, Moore weiß nicht, was er zu wissen behauptet, aber es steht für ihn fest: The Moore example distinguishes what investigators hold fixed as part of doubting from knowledge grounded by another belief. It provides a possible account of a stopping point for credentialing. Transfer needs those hinge-like practices to count as an active reason in the case and an independent reason for accepting that stopping policy. §204, das Ende aber ist nicht, daß uns gewisse Sätze unmittelbar als wahr einleuchten: Wittgenstein gives a positive stopping point for justification in acting rather than a further prior belief. It rivals the universal prior-belief requirement if applied to the same reasons. The case needs to show which practices provide usable credentials in the selected inquiry. §205, Wenn das Wahre das Begründete ist, dann ist der Grund nicht wahr, noch falsch: The passage distinguishes the ground of an epistemic practice from what the practice grounds only on the supposition that truth is grounded. An application to credentialing needs an interpretation of that antecedent and a reason for treating the ground here as outside truth-aptness. It supplies no categorical denial. §94, mein Weltbild habe ich nicht, weil ich mich von seiner Richtigkeit überzeugt habe: An inherited, changeable background helps establish which claims are judged true or false without itself being adopted by prior conviction of correctness. The credentialing application must identify which such background is indispensable to the particular inquiry and distinguish revising it from revising claims within it. §§35-36, »Es gibt physikalische Gegenstände« Unsinn ... läßt sich ein Satz »Es gibt physikalische Gegenstände« nicht bilden: Wittgenstein treats 'physical object' here as a logical concept and distinguishes teaching its use from making an empirical assertion that objects exist. To apply that limit needs a semantic analysis of the case's natural predicate and of whether its existential claim expresses a comparable framework-level use.",
+  "evidence": [
+    "b4fe21b5-de80-59b6-8f95-c8e4dcaa7710",
+    "74fba185-29fe-51c2-a7c6-739f2d470da5",
+    "bd00e33d-144d-50cf-97b0-941676699bea",
+    "9af031b3-7cef-519a-b3b4-fcd304819daf",
+    "f288d9ba-ca52-5e10-956b-d50f2a538257",
+    "PR-2085"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2085"
+    }
+  ]
+}

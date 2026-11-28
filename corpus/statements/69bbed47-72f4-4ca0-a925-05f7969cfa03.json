@@ -1,0 +1,11 @@
+{
+  "id": "69bbed47-72f4-4ca0-a925-05f7969cfa03",
+  "label": "GOD_4 has an inclination following an actualizing form under which it apprehends a good",
+  "paraphrase": "Open analyst premise. For each GOD_4, whenever an intelligible form actualizes that bearer and it apprehends something as good under that form, it has an orientation following that form. Formally, appraisal and inclination are linked only by the shared form index; the premise does not encode that the orientation follows because the good is apprehended under that aspect, which remains an open interpretation. No act of pursuit or production is asserted.",
+  "lean_declaration": "TruthCore.Causality.IntellectualAppetite.AppraisedFormInclines",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "13f88c69-3e85-507f-9e0d-b1f6ca32baed",
+    "fb2759f7-aecb-4921-9f82-61de72a45245"
+  ]
+}

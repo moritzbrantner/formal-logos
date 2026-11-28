@@ -679,6 +679,11 @@ evidence against any premise.
 
 ### Overall provisional judgment
 
+The [November 26 scope investigation](load-bearing-terms.md#no-self-cause-scope-in-the-two-ways-and-temporal-composition-2026-11-26)
+adds a distinct-mover route that bypasses the three self-motion leaves below.
+It uses one actual mover and the patient's lack of completed act. The earlier
+assessment below remains the account of the universal-actuality route.
+
 Under the fixed meanings, the motion core is a coherent, positively motivated
 conditional route. Its premise nodes also have direct source options, which
 remain; they add warrant options and take no leaf off the computed route.

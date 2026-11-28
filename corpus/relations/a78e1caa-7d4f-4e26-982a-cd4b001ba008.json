@@ -1,0 +1,10 @@
+{
+  "id": "a78e1caa-7d4f-4e26-982a-cd4b001ba008",
+  "label": "Test by PluralRootConfluence.control (1a575754)",
+  "subject_kind": "result",
+  "subject_id": "3f074065-19d2-588c-9ff5-5c919376f5b6",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "1a575754-6316-5d66-ac5b-db8fb4cf1aef",
+  "note": "Omit upstream confluence on the actual graph at false. All five bearers are present and the graph is weakly connected and well-founded. The instrument has upstream paths to left and right, and neither source has any further upstream edge, so those paths cannot join."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "d3d3df15-adab-4ae7-81d5-d11ac6f7927b",
+  "label": "Test by Finite interpretations for the seven derivations of caus for A whole is in act in a re (1)",
+  "subject_kind": "result",
+  "subject_id": "86d080aa-4c6e-5f85-a86e-333c805d0093",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f1a124b6-5df4-5488-9411-5f85f9fee173",
+  "note": "Tests omitting this premise in the encoded nothingMovesExceptInAct argument, with the other premises retained and the conclusion false in each corresponding control."
+}

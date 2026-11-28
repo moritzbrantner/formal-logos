@@ -1,0 +1,10 @@
+{
+  "id": "ae8767e1-ce31-4a34-a1bb-4afc8fa56811",
+  "label": "Test by There exists a two-world universal-accessibility frame w for The selected individual a (1)",
+  "subject_kind": "result",
+  "subject_id": "ee09d362-d734-59f9-a4ed-7ef75cb4a497",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "bee440a1-d534-50b4-96da-8d7ef3f4ae25",
+  "note": "Tests substituting invariant-filtered for unrestricted Scott NE in the same two-world universal interpretation."
+}

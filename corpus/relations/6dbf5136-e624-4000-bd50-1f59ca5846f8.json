@@ -1,0 +1,10 @@
+{
+  "id": "6dbf5136-e624-4000-bd50-1f59ca5846f8",
+  "label": "Test by Three exact finite controls: compatible productive set/F for Relevance of a supplied m (1)",
+  "subject_kind": "result",
+  "subject_id": "105ad261-8897-573c-b403-0a1bd42acc13",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "67db8146-10d8-56ed-a0ad-52b7348397a1",
+  "note": "Tests the requirement that mathematical relevance count as productive in the anchored assignment with relevant nonproductive mathematics."
+}

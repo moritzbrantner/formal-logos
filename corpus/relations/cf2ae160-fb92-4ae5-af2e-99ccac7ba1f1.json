@@ -1,0 +1,10 @@
+{
+  "id": "cf2ae160-fb92-4ae5-af2e-99ccac7ba1f1",
+  "label": "Test by An inhabited semantic profile separates identity from an invalid inference",
+  "subject_kind": "result",
+  "subject_id": "b203c461-805a-4572-b966-ba3a7886d561",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3e6a8e08-7bac-47f2-b67c-00471dcbcf69",
+  "note": "Tests global invalidity in the Boolean truth profile witnessing both valid identity and an invalid inference from true to false."
+}

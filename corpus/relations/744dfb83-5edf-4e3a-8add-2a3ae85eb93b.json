@@ -1,0 +1,10 @@
+{
+  "id": "744dfb83-5edf-4e3a-8add-2a3ae85eb93b",
+  "label": "Test by Witness-local hiddenness controls verified",
+  "subject_kind": "result",
+  "subject_id": "c76bf052-c7a6-4438-b8e4-f7f26bac0fb2",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "16fde4e8-1801-4758-8207-f5ac611f3876",
+  "note": "Tests omission of witness-only openness in inhabited-God controls and compares the qualified sufficient-reason reply with unqualified opening at the same gap."
+}

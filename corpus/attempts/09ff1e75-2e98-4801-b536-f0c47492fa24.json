@@ -1,0 +1,26 @@
+{
+  "id": "09ff1e75-2e98-4801-b536-f0c47492fa24",
+  "label": "C* and the esse cause of a moved mover",
+  "statement_ids": [
+    "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "a1df8f1a-cfef-42fd-8f4c-f35ca4d32b57 (Bridge): 465b721b requires a distinct esse cause for y if y moves another and is moved in any respect. MoversExistAt (bd0a4f81) and ExistingInActAt (0436de86) supply the missing actuality of that same mover on a matching world and CausalityFrame. Movement-to-potency (4be9a4ac) and the composition-to-esse-cause pair (d8024a38, ca07cae9) compiled in a local Lean probe when the same potency predicate is substituted. Semantics preflight still detects POTENCY_1 versus POTENCY_2. The conclusion genuinely links CAUSE_1 to CAUSE_2, but has no potency occurrence and cannot serve as that second bridge. Check an adopted POTENCY_1 instance of the composition premise or justify a same-subject, same-respect passive-potency bridge before certifying the consequence.",
+  "evidence": [
+    "9a15e352-3f16-4e5c-b827-d44ecc311f3b",
+    "PR-2048"
+  ],
+  "blocker": "The promising bundle supplies actuality in esse but does not yet justify passing from POTENCY_1 in the movement premise to POTENCY_2 in the composition premise.",
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2048"
+    }
+  ]
+}

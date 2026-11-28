@@ -1,0 +1,9 @@
+{
+  "id": "dcf6e171-f867-45cc-8a1f-9966629d1a91",
+  "label": "Complete generated Boolean history",
+  "term": "Complete generated Boolean history",
+  "definition": "A trace beginning at true and updated at each natural-number step by the supplied schedule, copying the previous bit when the switch is false and toggling it when true.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Alternatives.ActualHistoryIdentification.history",
+  "note": "Analyst readout for the represented history, reusing the #1867 copy/toggle generator. Its coverage of the actual order and connection to the source exercise are OPEN."
+}

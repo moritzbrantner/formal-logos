@@ -1,0 +1,10 @@
+{
+  "id": "0e835995-e99c-46df-92ff-e73a74f9e190",
+  "label": "Source qualification for 4557cd02 from reading 58901e0a",
+  "subject_kind": "claim",
+  "subject_id": "184911f4-00c4-549e-a6f6-497fb1e5fc5f",
+  "predicate": "qualifies",
+  "object_kind": "statement",
+  "object_id": "4557cd02-11b8-5847-bf15-3575678e6c71",
+  "note": "The source explains how a quasi-realist can discuss a moral judgment as mistaken from within moral theorizing. It gives the intended role for error in the formal comparison. Applying the model requires its truth and error predicates to express that role, which leaves a stronger robust-error interpretation open."
+}

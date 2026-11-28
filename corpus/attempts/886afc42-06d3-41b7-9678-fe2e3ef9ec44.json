@@ -1,0 +1,26 @@
+{
+  "id": "886afc42-06d3-41b7-9678-fe2e3ef9ec44",
+  "label": "Two objective-truth calibrations connection plan",
+  "statement_ids": [
+    "468e6755-22ce-54f7-8e1b-16f14b0d905b",
+    "767bffe0-cc1f-5bbe-8da7-be2dada2aa4a"
+  ],
+  "date": "2026-11-26",
+  "kind": "derivation",
+  "outcome": "blocked",
+  "summary": "Actual truth without stability and stable truth status without actuality are separate calibrations. Evaluate both on the same admitted external evil premise and endorsement family before comparing conclusions about its objectivity.",
+  "evidence": [
+    "PR-2086"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2086"
+    }
+  ],
+  "blocker": "Connection target 1aa52dcb-7d39-507c-89ce-73629cdc0abd. The scoped bridge described in the summary remains open."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "627f23ba-bbac-4d35-8a7e-8aa15db5f64b",
+  "label": "Aquinas on actual understanding and its limits across knowers",
+  "statement_ids": [
+    "64e174b3-3efb-510e-81cc-34bc054a9898",
+    "4728d5f4-d7a4-460c-aecc-37c6279ece9f",
+    "7db53cde-911c-48ec-ab4f-054a00288148",
+    "bc7130d0-176e-4cb6-bc0b-5023b1ede4da",
+    "ea1c35a5-6c8b-41f4-8029-aea2166d74cf"
+  ],
+  "date": "2026-11-26",
+  "kind": "reading",
+  "outcome": "succeeded",
+  "summary": "I q.14 a.4 gives actually exercised understanding for God. Q.14 a.2 expressly allows a human intellect in potency to understanding and locates actual exercise in its being informed, so the divine instance is shared by the unrestricted premise and its recorded rival. The rival allows an intellect with capacity before any exercise. The divine case gives no discriminating source support for 64e174b3, and the human case limits the attribution. Its actual/potential contrast is evidence for a reading of the separate capacity disjunction, without settling the independent potency predicate. Q.12 a.4 concerns the limit of natural power and expressly admits elevation by grace. Q.7 a.2 distinguishes absolute from qualified infinity in creatures. Q.16 a.5 ad 1 gives simple divine knowledge of complex contents, alongside the body's identification of God with first truth.",
+  "blocker": "Fix the natural versus elevated knower and justify the common act and knowing scales before importing degree bounds. In the veracity interface identify the carrier for complex intelligibles and justify the Present mapping. For unrestricted actual understanding distinguish capacity from current operation.",
+  "evidence": [
+    "11a3d3e5-8d05-4334-85cc-45bccd636db0",
+    "d21d4ecd-4bcd-460a-b946-5ddbc34b8ed7",
+    "e4c3bba6-39bc-4f0f-9cae-1a57e99f5c76",
+    "8b0b86f4-e2d0-4c54-89bb-9d428445358a",
+    "fe3c0586-d406-4035-a605-1c1bd65a0d04"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "review",
+      "provider": "codex",
+      "model": "gpt-6.2-astra",
+      "effort": "high",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    },
+    {
+      "role": "repair",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "date": "2026-11-26",
+      "pr": "PR-2018"
+    }
+  ]
+}

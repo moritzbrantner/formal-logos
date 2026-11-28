@@ -34,3 +34,11 @@ The procession clause is not justified by projecting Latin *processio* into Gree
 The two source readings have independent statement identities: Catholic-profession proposal category and Greek-Symbol reception. Two `supports` relations connect them to the existing root premise, with precise limitations. No result is invented merely to transcribe the claims.
 
 The proposal premise changes from bare to sourced through these support relations, but is still open. The formal open statement IDs are unchanged. The First-Way route selector, Creed propositions, authority truth bridge and stage 6 identity remain unchanged.
+
+## Creed text and the conciliar premise (2026-11-26)
+
+The pinned Greek form confesses the contents of articles 3–7 and 9–12. These
+readings bear on what the council taught in the creed. Matching each confession
+to the corresponding case predicate, attributing the form to the council, and
+showing that the act taught each article as revealed remain the application
+steps. See the [Creed reading attempt](../corpus/attempts/c55a062a-3452-4d6c-93ef-0771667da4ff.json).
