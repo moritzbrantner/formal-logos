@@ -1,7 +1,7 @@
 {
   "id": "a25f78a8-0d9a-4350-9801-b63772631c19",
   "label": "No all-subsets probability measure invariant under every permutation",
-  "paraphrase": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result.",
+  "paraphrase": "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result. The all-subsets hypothesis is essential: on an uncountable carrier the countable/co-countable probability measure is permutation-invariant on its restricted sigma-algebra.",
   "lean_declaration": "TruthCore.Modal.ProbabilityUnderdetermination.NoAllSubsetsPermutationMeasure",
   "definition_ids": [
     "41d1ffc6-c326-4422-a5ff-03336ff964ec",

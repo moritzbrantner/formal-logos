@@ -36,7 +36,7 @@ blocker = "The mathematical controls show that bare carrier, truth partition and
 id = "fb7d133e-f0ac-44bd-9ea7-792b079c352f"
 label = "No normalized finitely additive set function invariant under all permutations"
 lean = "NoPermutationProbability"
-paraphrase = "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required."
+paraphrase = "On every infinite carrier, no normalized finitely additive real-valued function defined on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required; the function must be defined on every subset."
 definitions = ["75aec723-335c-4012-887c-745871b5e580", "79abfef0-cda2-419f-9845-4e66c0f1e265"]
 disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
@@ -49,7 +49,7 @@ blocker = "The mathematical controls show that bare carrier, truth partition and
 id = "a25f78a8-0d9a-4350-9801-b63772631c19"
 label = "No all-subsets probability measure invariant under every permutation"
 lean = "NoAllSubsetsPermutationMeasure"
-paraphrase = "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result."
+paraphrase = "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result. The all-subsets hypothesis is essential: on an uncountable carrier the countable/co-countable probability measure is permutation-invariant on its restricted sigma-algebra."
 definitions = ["41d1ffc6-c326-4422-a5ff-03336ff964ec", "79abfef0-cda2-419f-9845-4e66c0f1e265"]
 disambiguations = ["4d54ff26-0a45-4dc8-a1eb-6a447b87d3ad"]
 
@@ -125,7 +125,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 premises = []
 conclusion = "fb7d133e-f0ac-44bd-9ea7-792b079c352f"
 rule = "Mathematical proof in Lean with Mathlib"
-meaning = "On every infinite carrier, no normalized finitely additive real-valued function on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required."
+meaning = "On every infinite carrier, no normalized finitely additive real-valued function defined on the entire power set is invariant under preimages by every permutation. Nonnegativity and countable additivity are not required; the function must be defined on every subset."
 
 [[argument]]
 id = "7b663dd5-f92a-4563-bbeb-328a081e103f"
@@ -135,7 +135,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 premises = []
 conclusion = "a25f78a8-0d9a-4350-9801-b63772631c19"
 rule = "Mathematical proof in Lean with Mathlib"
-meaning = "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result."
+meaning = "On an infinite carrier with every subset measurable, no Mathlib probability is invariant under all carrier permutations; its finite real set values would contradict the finitely additive result. The all-subsets hypothesis is essential: on an uncountable carrier the countable/co-countable probability measure is permutation-invariant on its restricted sigma-algebra."
 
 [[argument]]
 id = "33f16a7a-f823-435a-b12f-5d025b82033f"
