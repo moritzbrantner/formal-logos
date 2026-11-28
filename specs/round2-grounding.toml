@@ -160,7 +160,6 @@ meaning = "If y is simply prior to x, x depends for its being on y (necessary di
 id = "SIMPLY-PRIOR-GROUND-VIA-ESSE-CAUSE"
 definitions = ["DEF-ACT", "DEF-ACTUAL-CONCRETE-GROUND-ANCESTRY", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-CAUSE-OF-PERFECTION", "DEF-CONCRETE-ESSE-IN-RE", "DEF-ESSE", "DEF-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-ROUTE-BRIDGE-MODAL-READING", "DEF-SIMPLE-PRIORITY"]
 theorem = "simplyPriorGroundViaEsseCause"
-strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x." }
 premises = ["STMT-SIMPLY-PRIOR-IS-CAUSE-OF-BEING", "STMT-SIMPLE-PRIORITY-RELATES-ACTUAL-CONCRETA", "STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND"]
 conclusion = "STMT-SIMPLY-PRIOR-IS-ACTUAL-CONCRETE-GROUND"
 rule = "Universal instantiation and modus ponens"
@@ -170,7 +169,6 @@ meaning = "Composes the stage-one premise that the simply prior causes the esse 
 id = "NECESSITY-CAUSE-GROUND-VIA-ESSE-CAUSE"
 definitions = ["DEF-ACT", "DEF-ACTUAL-CONCRETE-GROUND-ANCESTRY", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-CAUSE-OF-PERFECTION", "DEF-CONCRETE-ESSE-IN-RE", "DEF-ESSE", "DEF-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-NECESSARY-PER-SE", "DEF-ROUTE-BRIDGE-MODAL-READING"]
 theorem = "necessityCauseGroundViaEsseCause"
-strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x." }
 premises = ["STMT-NECESSITY-CAUSE-CAUSES-ESSE", "STMT-NECESSITY-CAUSE-RELATA-ACTUAL-CONCRETE", "STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND"]
 conclusion = "STMT-NECESSITY-CAUSES-ARE-ACTUAL-CONCRETE-GROUNDS"
 rule = "Universal instantiation and modus ponens"

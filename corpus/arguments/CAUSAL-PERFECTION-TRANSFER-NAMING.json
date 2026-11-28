@@ -43,6 +43,6 @@
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
   ],
   "strong_version_needed": {
-    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m = m'` (in atMostOneMaximeEns), an identity question about two maxima in being (m = m'), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to m = m' in AtMostOneMaximeEns.atMostOneMaximeEns, reached through CausalPerfectionTransfer.naming. There uniqueness of maxima in being is proved before any maximum is named GOD_4 (the naming premise takes uniqueness as an antecedent), so neither side is a GOD_4 candidate at that point. LocalLogic (ca432e24) decides only whether a bearer in act is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

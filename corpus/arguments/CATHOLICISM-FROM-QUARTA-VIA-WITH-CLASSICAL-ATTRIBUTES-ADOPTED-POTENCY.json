@@ -90,7 +90,7 @@
   "strong_version_needed": {
     "6c27657f-a2bf-5c1d-963c-c154b66bfa85": "The proof applies the grades premise at the respect verum (truth): QuartaVia.quartaVia finds a maximum in truth and only then passes to being by MostTrueIsMostBeingReading. The weak version GradesToMaximumAtBeing (e4e6b0cd) gives a maximum only in the respect esse.",
     "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in GodIsInfinite.godIsInfinite), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct.",
-    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m = m'` (in atMostOneMaximeEns), an identity question about two maxima in being (m = m'), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to m = m' in AtMostOneMaximeEns.atMostOneMaximeEns, reached through MaximeEnsIsGodViaFullDescription.maximeEnsIsGodViaFullDescription. There uniqueness of maxima in being is proved before any maximum is named GOD_4 (the naming premise takes uniqueness as an antecedent), so neither side is a GOD_4 candidate at that point. LocalLogic (ca432e24) decides only whether a bearer in act is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   },
   "term_senses": {
     "GOD": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a"

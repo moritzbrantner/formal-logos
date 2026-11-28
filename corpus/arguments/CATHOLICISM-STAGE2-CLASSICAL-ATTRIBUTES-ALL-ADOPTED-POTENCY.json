@@ -65,7 +65,6 @@
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
   ],
   "strong_version_needed": {
-    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in GodIsInfinite.godIsInfinite), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct.",
-    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m = m'` (in atMostOneMaximeEns), an identity question about two maxima in being (m = m'), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in GodIsInfinite.godIsInfinite), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct."
   }
 }

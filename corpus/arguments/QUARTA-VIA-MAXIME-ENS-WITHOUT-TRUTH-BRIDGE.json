@@ -35,7 +35,7 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b"
   ],
   "strong_version_needed": {
-    "6c27657f-a2bf-5c1d-963c-c154b66bfa85": "The proof applies the grades premise at the respect verum (truth): QuartaVia.quartaVia finds a maximum in truth and only then passes to being by MostTrueIsMostBeingReading. The weak version GradesToMaximumAtBeing (e4e6b0cd) gives a maximum only in the respect esse.",
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85": "QuartaViaMaximumInBeing.maximeEnsCausesBeingOfAll applies the grades premise at the respect verum (hApproach verum hVerum) to obtain a maximum in truth t. ActualityOnlyInsofarAsBeing then makes t a bearer of esse, which actualCore needs in the unbounded branch, where the premise is applied at esse. The weak version GradesToMaximumAtBeing (e4e6b0cd) is only the esse instance, and its antecedent (grades in esse) is supplied by no premise: GradesFoundInThingsReading gives grades in bonum, verum and nobile only. So it yields neither t nor a maximum in esse.",
     "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, MoreIn esse y x` (in actualFork); `∃ m, TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn InAct MoreIn esse m` (in actualFork). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

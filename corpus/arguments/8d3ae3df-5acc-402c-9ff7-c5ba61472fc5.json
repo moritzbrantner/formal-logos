@@ -57,6 +57,6 @@
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
   ],
   "strong_version_needed": {
-    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle (not just double-negation elimination) to `y = n` (in rootIntellectWillOfNonlimitation), the esse–essence identity of an actual root, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof (in rootIntellectWillOfNonlimitation) applies excluded middle to y = n, the identity of an arbitrary being with the actual root n. It also decides p.esseOf n = p.essenceOf n, where the negative branch is absurd, i.e. double-negation elimination. The theorem has no GOD_4 predicate, so the root n is not a GOD_4 candidate and neither use falls under LocalLogic. LocalLogic (ca432e24) decides only whether a bearer in act is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

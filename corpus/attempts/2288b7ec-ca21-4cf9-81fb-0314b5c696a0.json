@@ -24,6 +24,7 @@
     "b699ecfb-08f7-5864-a671-1205c8f5792f",
     "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e",
     "be90bb15-c2ce-44cd-ae2d-5ec6dc4c24c9",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3",
     "cf4364f6-81c6-5018-95e4-178353d2a2b3",
     "cffad050-e86d-48b8-b04b-be47fcc1352d",
     "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d",
@@ -42,7 +43,7 @@
   "date": "2026-11-28",
   "kind": "derivation",
   "outcome": "succeeded",
-  "summary": "Audit of the 986 (argument, strong premise) pairs behind the truth check warnings of #1017 (#1517, #1519) at main 722f5eab2. A proof-use trace of each result theorem, followed through the lemmas it calls, was read with the Solution sources. For 644 pairs the Solution uses something the registered weak version lacks, and the reason is now recorded in the argument's strong_version_needed. For the 342 pairs on the strong statements listed here, every use lies inside the weak version's scope (or the premise is unused). They are left as warnings, as re-route candidates; frozen Challenges and results are unchanged. The candidate table, grouped by strong → weak statement with argument ids, adapters and sibling results, is in docs/notes/strength-consumer-audit.md. A weak-suffices verdict is not Lean-checked unless it cites an existing sibling result proving the same conclusion from the weak version. The rest need a Lean re-proof, and some an adapter, before re-routing. A recorded reason describes this Solution's use, not the impossibility of another proof. Neither outcome changes the truth status of any target.",
+  "summary": "Audit of the 986 (argument, strong premise) pairs behind the truth check warnings of #1017 (#1517, #1519) at main 722f5eab2. A proof-use trace of each result theorem, followed through the lemmas it calls, was read with the Solution sources. For 637 pairs the Solution uses something the registered weak version lacks, and the reason is now recorded in the argument's strong_version_needed. For the 349 pairs on the strong statements listed here, every use lies inside the weak version's scope (or the premise is unused). They are left as warnings, as re-route candidates; frozen Challenges and results are unchanged. The candidate table, grouped by strong → weak statement with argument ids, adapters and sibling results, is in docs/notes/strength-consumer-audit.md. A weak-suffices verdict is not Lean-checked unless it cites an existing sibling result proving the same conclusion from the weak version. The rest need a Lean re-proof, and some an adapter, before re-routing. A recorded reason describes this Solution's use, not the impossibility of another proof. After an independent review, seven reasons were removed as false (godIsOne excluded-middle family; two esse-cause consumers whose relata premise supplies the cause's concreteness) and moved to the weak-suffices list, and the wording of twelve was corrected; see the note's review-repair section. Neither outcome changes the truth status of any target.",
   "evidence": [],
   "workers": [
     {

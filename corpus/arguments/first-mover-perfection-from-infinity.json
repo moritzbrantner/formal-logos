@@ -31,6 +31,6 @@
     "567c3e74-9514-52d9-b3b6-f5a3af078784"
   ],
   "strong_version_needed": {
-    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle (not just double-negation elimination) to `esseOf f = essenceOf f` (in firstMoverPerfectionFromInfinity), the esse–essence identity of a first mover, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof decides `esseOf f = essenceOf f` by excluded middle (in firstMoverPerfectionFromInfinity). The negative branch ends in contradiction, so double-negation elimination would do. But the bearer is a first mover, which is not a GOD_4 candidate (the theorem has no GOD_4 predicate for it), and LocalLogic (ca432e24) gives double-negation elimination only for a GOD_4 candidate's esse–essence identity. LocalLogic otherwise decides only identity between a bearer in act and a GOD_4 candidate."
   }
 }

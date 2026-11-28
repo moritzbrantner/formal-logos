@@ -25,19 +25,20 @@ Where a model or control shows that the weak version fails outright (for example
 
 - A recorded reason is a fact about how this Solution uses the strong premise. It does not show that no other proof could use the weak version, except where it cites a model or control.
 - A weak-suffices verdict is not Lean-checked unless it cites an existing sibling result that proves the same conclusion from the weak version. The others need a Lean re-proof before any frozen Challenge or result is re-routed; some also need an adapter (stated per group below).
+- Instances inside a called lemma are recorded in the lemma's own variables when the lemma's result is bound and applied later. Such instances must be judged at the calling argument's call site; the review repair below re-checked this for every excluded-middle identity reason.
 - The trace does not see uses hidden in tactic-generated auxiliary definitions without values; none was reported for the 511 theorems traced.
 
 ## Outcome categories
 
-- **reason recorded** (644 pairs, 456 arguments): the reason is in the argument's `strong_version_needed`. Spec-generated arguments were edited in `specs/*.toml` and regenerated with `argument_batch.py records --write --fix`; the others in `corpus/arguments/*.json`.
-- **weak suffices** (342 pairs): no field was added, so the `truth check` warnings remain as the re-route queue (below).
+- **reason recorded** (637 pairs, 452 arguments): the reason is in the argument's `strong_version_needed`. Spec-generated arguments were edited in `specs/*.toml` and regenerated with `argument_batch.py records --write --fix`; the others in `corpus/arguments/*.json`.
+- **weak suffices** (349 pairs): no field is added, so the `truth check` warnings remain as the re-route queue (below).
 - **undecided** (0 pairs).
 
 | strong | lean declaration | reason | weak suffices |
 |---|---|---|---|
-| ee4ab504 | `ExcludedMiddle` | 348 | 23 |
+| ee4ab504 | `ExcludedMiddle` | 343 | 28 |
 | d9fad785 | `MaximumInGenusCausesAllInGenusReading` | 1 | 71 |
-| cb1cdea9 | `EsseCauseIsActualConcreteGround` | 64 | 0 |
+| cb1cdea9 | `EsseCauseIsActualConcreteGround` | 62 | 2 |
 | d5a94eb1 | `CauseOfQualityInAnotherIsMoreSuchReading` | 2 | 62 |
 | d7741cdc | `MatterFormAndEsseEssenceAreCompositionsReading` | 56 | 8 |
 | 64498e7e | `PerfectionsOfEffectPreexistInCauseReading` | 1 | 58 |
@@ -111,6 +112,23 @@ Where a model or control shows that the weak version fails outright (for example
 | df6c64a6 | `DivinePlanRejectsBenefitOmission` | 0 | 1 |
 | ff30c214 | `UnrestrictedRecombinationAt` | 1 | 0 |
 
+## Review repair (2026-11-28)
+
+An independent review sampled 49 recorded reasons and traced each failing template through every argument sharing it. It found two causes. (1) Excluded-middle uses inside called lemmas had been judged by the lemma's own variables, not by the values at the calling argument's call site. (2) A catch-all clause ("not otherwise available") had been attached without checking the argument's other premises. Dispositions:
+
+- **False, now weak suffices (7).**
+  - ExcludedMiddle reached only through `GodIsOne.godIsOne`, i.e. at two GOD_4 candidates in act: bc0cff0b, 1f42ffcd, 51fd6d58, 732e38d5, 79252a71. For 79252a71 the sibling `StageTwo.ClassicalAttributesLocalLogic.godHasClassicalAttributes` exists.
+  - EsseCauseIsActualConcreteGround, where the relata premise supplies the cause's actual concreteness: 8cbf4314, c46635b3.
+- **Overstated, reworded with the same disposition (10).**
+  - "Not just double-negation elimination" (dcea77db, d154f88d, 7d8bbdcb, cd08e567, 8cd65c20, 3ce6c1a4, efb33d4b). The reason now says it holds because the bearer is not a GOD_4 candidate.
+  - The verum template (18dae702, 7217cf65, e2a7ffb3). It now names `QuartaViaMaximumInBeing.maximeEnsCausesBeingOfAll` / `actualCore`.
+- **Sweep over all remaining reasons of the two kinds.**
+  - *Excluded-middle identity reasons.* Constant reachability was computed for every argument citing `AtMostOneMaximeEns`. Only the five above reach it solely through `godIsOne`. The other 24 reach it through `MaximeEnsIsGod.maximeEnsIsGod`, `MaximeEnsIsGodViaFullDescription.maximeEnsIsGodViaFullDescription` or `CausalPerfectionTransfer.naming`, where uniqueness is proved before naming. Their text now states that call path.
+    - Further hits: 8d3ae3df and d17a98c3 had a garbled text, calling `y = n` an esse–essence identity, and a double-negation-elimination pattern on the root's identity. Both were rewritten; the disposition holds.
+    - The 21 reasons citing bare-variable predicates were checked: none of those theorems has a GOD_4 predicate.
+  - *EsseCauseIsActualConcreteGround.* The premises of all remaining 62 consumers were scanned. Only the two above supply the cause's actual concreteness. Root-, maximum- and witness-type premises (NecessaryPerfectRootAt, AtMaximalTarget, GreatestBeingDegreeAttained, DeEnteFirstSourceIsActualRootAt, UniqueNecessaryActualRootAt) were read at their use sites, where the cause is an arbitrary maximum, greatest bearer or uniting cause.
+  - *Verum template.* All 38 consumers have only `GradesFoundInThingsReading` (bonum, verum, nobile) as a grades source, so no premise supplies grades in esse.
+
 ## Weak suffices: candidate re-routes
 
 Grouped by strong → weak statement. Within a group, arguments that share one finding are listed together. A *sibling* is an existing result proving the same conclusion from the weak version; *re-proof needed* marks a sketch; *caveat* names an adapter a re-route needs.
@@ -133,8 +151,12 @@ Grouped by strong → weak statement. Within a group, arguments that share one f
 - 07d16972 0acc8761 100fd420 18dae702 1a88e3e9 1b0b6233 1f42ffcd 279e9475 2b96f446 2dc44ef4 34293f25 3b0f4fa5 3d06eda4 3e86eea5 44782677 51fd6d58 53819d8a 57cedd02 5d2c8320 661ce61d 678ff65f 6c6549ae 7217cf65 732e38d5 79252a71 7be49bc0 87ba10fe 93b55dd2 aad2f961 abccd997 ac6c9243 bed2cc9f c1834d8b c80c6911 c8aa7df3 d49eccc1 d6e5072d e02bea79 f7cff910 fa24c576 fd1f7e75: Every use (directly or in maximeEnsIsGodViaFullDescription, godIsSupremelyGood, goodFromGodCause or godExistsFromMaximeEnsCausingAll) applies the premise at a cause m/g that causes all in its genus at esse (hCauses / hGenus esse m hMax / GodCausesBeingOfAllOthers) and at an effect x ≠ m/g (hOther or hn). That is exactly the antecedent of UniversalCauseTransfersPerfections (b26c10a0) on the same InAct, CausesIn and esse. Evidence: trace: all instances (m|g|f ; x ; r ; ⋯) inside those lemmas; e.g. MaximeEnsIsGodViaFullDescription/Solution.lean:44-45.
 - 827fa9cd: The proof passes the premise to goodFromSource only as (fun c _ x r _ => hPerfections c x r), i.e. it derives and uses UniversalCauseTransfersPerfections (b26c10a0) inline. The weak version can be taken directly. Evidence: AttributesFromEsse/Solution.lean:191-192.
 
-### ee4ab504 `ExcludedMiddle` → `LocalLogic` (ca432e24): 23
+### ee4ab504 `ExcludedMiddle` → `LocalLogic` (ca432e24): 28
 
+- 1f42ffcd: Excluded middle reaches two-maxima identity only through GodIsOne.godIsOne, which instantiates AtMostOneMaximeEns at (g', g): two GOD_4 candidates, both in act in esse by hMaximal. That is inside LocalLogic's first conjunct (ca432e24) at the theorem's GOD_4 predicate. The other instances, x = g in godIsPerfect (hx : InAct x r) and esseOf g = essenceOf g in godIsInfinite, are also covered: the latter's negative branch is absurd, so double-negation elimination suffices. Caveat: the theorem has no esseOf/essenceOf maps, so only LocalLogic's first conjunct is used, and a re-route must supply those maps or a first-conjunct sibling statement. Evidence: Reach analysis: atMostOneMaximeEns reached only via GodIsOne.godIsOne; independent review S6 (2026-11-28).
+- 51fd6d58 732e38d5: Excluded middle reaches two-maxima identity only through GodIsOne.godIsOne, which instantiates AtMostOneMaximeEns at (g', g): two GOD_4 candidates, both in act in esse by hMaximal. That is inside LocalLogic's first conjunct (ca432e24) at the theorem's GOD_4 predicate. The other instances, x = g in godIsPerfect (hx : InAct x r) and esseOf g = essenceOf g in godIsInfinite, are also covered: the latter's negative branch is absurd, so double-negation elimination suffices. Evidence: Reach analysis: atMostOneMaximeEns reached only via GodIsOne.godIsOne; independent review S6 (2026-11-28).
+- 79252a71: Excluded middle reaches two-maxima identity only through GodIsOne.godIsOne, which instantiates AtMostOneMaximeEns at (g', g): two GOD_4 candidates, both in act in esse by hMaximal. That is inside LocalLogic's first conjunct (ca432e24) at the theorem's GOD_4 predicate. The other instances, x = g in godIsPerfect (hx : InAct x r) and esseOf g = essenceOf g in godIsInfinite, are also covered: the latter's negative branch is absurd, so double-negation elimination suffices. The checked sibling StageTwo.ClassicalAttributesLocalLogic.godHasClassicalAttributes already proves this conclusion with LocalLogic in place of ExcludedMiddle. Evidence: Reach analysis: atMostOneMaximeEns reached only via GodIsOne.godIsOne; independent review S6 (2026-11-28).
+- bc0cff0b: Excluded middle reaches two-maxima identity only through GodIsOne.godIsOne, which instantiates AtMostOneMaximeEns at (g', g): two GOD_4 candidates, both in act in esse by hMaximal. That is inside LocalLogic's first conjunct (ca432e24) at the theorem's GOD_4 predicate. Caveat: the theorem has no esseOf/essenceOf maps, so only LocalLogic's first conjunct is used, and a re-route must supply those maps or a first-conjunct sibling statement. Evidence: Reach analysis: atMostOneMaximeEns reached only via GodIsOne.godIsOne; independent review S6 (2026-11-28).
 - ad86a700 b420c497 b8b176cf f34268a3: The excluded-middle hypothesis is never used in the proof (the trace finds no occurrence; e.g. the binder is _hEM). Any weaker version, or none, suffices: the premise could be dropped rather than weakened. Evidence: trace: UNUSED.
 - 70b9fa04: EM is used only at x = g in godIsPerfect, with hg : IsGod g and hx : InAct x r, all within LocalLogic (ca432e24) instantiated at the theorem's GOD_4 predicate. Caveat: the theorem has no esseOf/essenceOf maps, so only LocalLogic's first conjunct is used, and a re-route must supply those maps or a first-conjunct sibling statement. Evidence: trace EM instances; source inspected.
 - ea6317cf: EM is used only at x = g in perfectFromGodCause, with hg : IsGod g and hx : InAct x r, all within LocalLogic (ca432e24) instantiated at the theorem's GOD_4 predicate. Caveat: the theorem has no esseOf/essenceOf maps, so only LocalLogic's first conjunct is used, and a re-route must supply those maps or a first-conjunct sibling statement. Evidence: trace EM instances; source inspected.
@@ -245,6 +267,11 @@ Grouped by strong → weak statement. Within a group, arguments that share one f
 - dd09ba2e: Applied only at (e, m), where e is the common uncaused cause, identity e he hu gives esseOf e = essenceOf e, and he and hm.1 give both in act. That is exactly the antecedent of IdentityCauseAscent p MoreIn (8176a284). Evidence: AggregateEsseCause/Solution.lean:98-125.
 - f4df2153: Applied only at the common source n, which has esse = essence by hSource. SourceScopedAscent.maximalCausesFromIdentityAscent (arg 0609389b) is the same proof with IdentityCauseAscent (8176a284). Evidence: MaximalFromEsseSource/Solution.lean:22-40 vs SourceScopedAscent/Solution.lean:61-80.
 
+### cb1cdea9 `EsseCauseIsActualConcreteGround` → `ActualEsseCauseIsActualGround` (b17a8954): 2
+
+- 8cbf4314: The cause y is supplied with its actual concreteness by SimplePriorityRelatesActualConcreta: (hRel y x hp).1 gives ActualConcrete y, and .2 gives ActualConcrete x. So ActualEsseCauseIsActualGround (b17a8954) suffices: ⟨hy.1, hy.2, hWeak y x hy hx hne (hCause y x hp)⟩. Re-proof needed; not yet checked in Lean. Evidence: Round2Grounding/Solution.lean (simplyPriorGroundViaEsseCause); independent review S31 (2026-11-28).
+- c46635b3: The cause c is supplied with its actual concreteness by NecessityCauseRelataActualConcrete: (hRel c x hc).1 gives ActualConcrete c, and .2 gives ActualConcrete x. So ActualEsseCauseIsActualGround (b17a8954) suffices: ⟨hcA.1, hcA.2, hWeak c x hcA hx hne (hCause c x hc)⟩. Re-proof needed; not yet checked in Lean. Evidence: Round2Grounding/Solution.lean (necessityCauseGroundViaEsseCause); independent review S31 (2026-11-28).
+
 ### 0edc0b38 `GodLoves` → `ActualGodLoves` (5e5aa271): 1
 
 - 7d96f15a: GodLoves is used only at s.actual (hLove s.actual hGod), which is exactly ActualGodLoves (5e5aa271). Evidence: Hiddenness/NoGod/Solution.lean:14.
@@ -295,23 +322,26 @@ Grouped by strong → weak statement. Within a group, arguments that share one f
 
 ## Re-pinned bundle-audit rows
 
-Adding `strong_version_needed` changes the record bytes of these 16 audited arguments, so `bundle_audit.py` required review. Each was re-inspected: only the field was added, and premises, conclusion, inferences, meaning and term links are unchanged. The `reviewed_sha256` was updated and the `finding` appended with a dated re-inspection note.
+Changing `strong_version_needed` changes the record bytes of audited arguments, so `bundle_audit.py` required review. Each row was re-inspected, its `reviewed_sha256` updated, and its `finding` appended with a dated note.
 
-| audit | argument | record |
-|---|---|---|
-| classical-attributes-migration.json | 1f42ffcd | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES.json` |
-| classical-attributes-all-migration.json | 07d16972 | `corpus/arguments/CATHOLICISM-QUARTA-VIA-CLASSICAL-WITNESS.json` |
-| classical-attributes-all-migration.json | 79252a71 | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES-ALL.json` |
-| classical-attributes-all-migration.json | 53819d8a | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES-IDENTITY.json` |
-| classical-attributes-all-migration.json | 5d2c8320 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-Q11-NATURE.json` |
-| classical-attributes-all-migration.json | d49eccc1 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json` |
-| naming-first-mover-migration.json | acdcf1dd | `corpus/arguments/AQUINAS-ST-I-Q2-A3-FIRST-MOVER-IS-MAXIME-ENS.json` |
-| naming-first-mover-migration.json | db6ab332 | `corpus/arguments/AQUINAS-ST-I-Q2-A3-FIRST-MOVER-IS-MAXIME-ENS-IDENTITY.json` |
-| naming-first-mover-migration.json | 3e86eea5 | `corpus/arguments/AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD-VIA-FULL-DESCRIPTION.json` |
-| naming-first-mover-migration.json | 3b0f4fa5 | `corpus/arguments/CATHOLICISM-FROM-EFFICIENT-REGRESS-WITH-CLASSICAL-ATTRIBUTES.json` |
-| naming-first-mover-migration.json | 1a88e3e9 | `corpus/arguments/CATHOLICISM-FROM-EFFICIENT-REGRESS-WITH-CLASSICAL-ATTRIBUTES-IDENTITY.json` |
-| naming-first-mover-migration.json | 44782677 | `corpus/arguments/CATHOLICISM-FROM-PRIMA-VIA-WITH-CLASSICAL-ATTRIBUTES.json` |
-| naming-first-mover-migration.json | 57cedd02 | `corpus/arguments/CATHOLICISM-FROM-PRIMA-VIA-WITH-CLASSICAL-ATTRIBUTES-IDENTITY.json` |
-| naming-first-mover-migration.json | fd1f7e75 | `corpus/arguments/CATHOLICISM-STAGE1-VIA-FULL-DESCRIPTION.json` |
-| naming-first-mover-migration.json | d49eccc1 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json` |
-| naming-first-mover-migration.json | aad2f961 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS-IDENTITY.json` |
+- First pass: only the field was added.
+- Review repair: a reason was withdrawn (1f42ffcd, whose record is back to its pre-change content; 79252a71) or reworded with its call path.
+
+| audit | argument | record | change |
+|---|---|---|---|
+| classical-attributes-migration.json | 1f42ffcd | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES.json` | field added; reason withdrawn |
+| classical-attributes-all-migration.json | 07d16972 | `corpus/arguments/CATHOLICISM-QUARTA-VIA-CLASSICAL-WITNESS.json` | field added; reason reworded |
+| classical-attributes-all-migration.json | 79252a71 | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES-ALL.json` | field added; reason withdrawn |
+| classical-attributes-all-migration.json | 53819d8a | `corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES-IDENTITY.json` | field added |
+| classical-attributes-all-migration.json | 5d2c8320 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-Q11-NATURE.json` | field added; reason reworded |
+| classical-attributes-all-migration.json | d49eccc1 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json` | field added; reason reworded |
+| naming-first-mover-migration.json | acdcf1dd | `corpus/arguments/AQUINAS-ST-I-Q2-A3-FIRST-MOVER-IS-MAXIME-ENS.json` | field added |
+| naming-first-mover-migration.json | db6ab332 | `corpus/arguments/AQUINAS-ST-I-Q2-A3-FIRST-MOVER-IS-MAXIME-ENS-IDENTITY.json` | field added |
+| naming-first-mover-migration.json | 3e86eea5 | `corpus/arguments/AQUINAS-ST-I-Q2-A3-MAXIME-ENS-IS-GOD-VIA-FULL-DESCRIPTION.json` | field added; reason reworded |
+| naming-first-mover-migration.json | 3b0f4fa5 | `corpus/arguments/CATHOLICISM-FROM-EFFICIENT-REGRESS-WITH-CLASSICAL-ATTRIBUTES.json` | field added |
+| naming-first-mover-migration.json | 1a88e3e9 | `corpus/arguments/CATHOLICISM-FROM-EFFICIENT-REGRESS-WITH-CLASSICAL-ATTRIBUTES-IDENTITY.json` | field added |
+| naming-first-mover-migration.json | 44782677 | `corpus/arguments/CATHOLICISM-FROM-PRIMA-VIA-WITH-CLASSICAL-ATTRIBUTES.json` | field added; reason reworded |
+| naming-first-mover-migration.json | 57cedd02 | `corpus/arguments/CATHOLICISM-FROM-PRIMA-VIA-WITH-CLASSICAL-ATTRIBUTES-IDENTITY.json` | field added |
+| naming-first-mover-migration.json | fd1f7e75 | `corpus/arguments/CATHOLICISM-STAGE1-VIA-FULL-DESCRIPTION.json` | field added; reason reworded |
+| naming-first-mover-migration.json | d49eccc1 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS.json` | field added; reason reworded |
+| naming-first-mover-migration.json | aad2f961 | `corpus/arguments/CATHOLICISM-STAGES-ONE-TWO-SAME-WITNESS-IDENTITY.json` | field added |
