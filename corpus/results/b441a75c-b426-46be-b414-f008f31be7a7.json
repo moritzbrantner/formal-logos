@@ -1,0 +1,11 @@
+{
+  "id": "b441a75c-b426-46be-b414-f008f31be7a7",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer exceeds concrete NECESSARY_2, checked",
+  "argument_id": "17a0acb5-5bdf-476f-a0d8-e9d30bd448a9",
+  "challenge_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Challenge",
+  "solution_module": "TruthCore.Results.Modal.ActualistContingencyRoute.Solution",
+  "theorem": "TruthCore.Results.Modal.ActualistContingencyRoute.controls",
+  "comparator_config": "results/b441a75c-b426-46be-b414-f008f31be7a7/comparator.json",
+  "status": "solution-present",
+  "description": "Control.Strictness on abstractDrop and concreteDrop: the weak version holds (at every world, respectively at world true) and the forward transfer fails, through the library's correspondence with increasing domains. On abstractDrop the contingency node fails at every world, by the existing notEveryNecessary. Model-witnessed strictness only; no interpretation is claimed metaphysically possible."
+}
