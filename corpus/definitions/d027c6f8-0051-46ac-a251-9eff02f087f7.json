@@ -1,0 +1,9 @@
+{
+  "id": "d027c6f8-0051-46ac-a251-9eff02f087f7",
+  "label": "CAN_BE_WITHOUT_2: some being's power can bring about a world with x and without y",
+  "term": "being able to be without another, through another's power",
+  "basis": "stipulative",
+  "definition": "ContrastThroughPower f CanBringAbout w x y: some being z can, by its power, bring about from w a world where x exists and y is absent. CanBringAbout z w v is an explicitly supplied PRIMITIVE: z's power suffices, from w, for v's obtaining. Intended case: a cause that can conserve an effect while the effect's usual proximate cause is absent makes the effect able to be without that cause in this sense. Non-example: if no being's power suffices for such a world, x cannot be without y in this sense.",
+  "lean_declaration": "TruthCore.Causality.CounterfactualDependence.ContrastThroughPower",
+  "note": "Analyst sense recorded for contrast with CAN_BE_WITHOUT_1 (b93d877f); no current statement or argument uses it. It parallels POSSIBLE_NOT_TO_BE_2 (possibility through another's power, disambiguation d25cee67) without being identified with it. No relation between CanBringAbout and the frame accessibility is assumed in either direction. Unread leads for whether Aquinas holds that a first cause can produce or conserve effects without their secondary causes: SCG III c. 99 and ST III q. 77 a. 1. They are cited from memory, not materialized, and nothing is attributed to them here."
+}

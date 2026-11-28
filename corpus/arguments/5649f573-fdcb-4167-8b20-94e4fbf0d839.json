@@ -9,7 +9,7 @@
   "inference_ids": [
     "747817e6-21bc-46f3-9c5e-f66986c37de1"
   ],
-  "meaning": "Keep the content, its supplied world interpretation, its report, and the bearer fixed. The calibration links the actual legacy assent to independently assented content and then to its box. The actual edge gives the content's truth at actuality. Disquotation and the matching report recover the original proposition.",
+  "meaning": "Re-presentation of divine assent accuracy, not independent support for it (#2103). Keep the content, its supplied world interpretation, its report, and the bearer fixed within the application. The calibration links the actual legacy assent to a content assented under the supplied relation and then to its box. The actual edge gives the content's truth at actuality. Disquotation and the matching report recover the original proposition. The content type, interpretation, report and assent relation are theorem parameters absent from the conclusion and pinned by no record. For any context with actual access, some choice of them satisfies the calibration exactly when 7dd8a624 holds (Lean fixedContentRepresentationIff), the defect unrestrictedRepresentationIff diagnoses for the superseded interface. The argument adds warrant only if those parameters are fixed by an independently interpreted content theory and an assent relation independent of the legacy assent. The frontier counts it as proving 7dd8a624 from open premises; that records no further warrant.",
   "definition_ids": [
     "9851b8f8-9a75-4d46-b197-5c6d9b4f5f07",
     "88f9f6e8-997b-5f7d-afa1-c501954c3807",

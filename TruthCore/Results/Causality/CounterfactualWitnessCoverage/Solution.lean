@@ -31,6 +31,24 @@ theorem dependence_excludes_being_without_of_witnesses {W B T R : Type}
   obtain ⟨v, _, hPresent, _, hSelected⟩ := preserve x y (realize x y hWithout)
   exact track x y hDepend hSelected hPresent
 
+/-- Structural boundary (#2103): with the selector free, soundness and witness
+preservation hold for some selector exactly when the conclusion holds with
+being-without read as accessible contrast. Not a registered result. -/
+theorem track_preserve_iff_strict {W B T R : Type} (f : CausalityFrame W B T R) (w : W) :
+    (∃ select, DependenceTracksSelectedAbsence f select w ∧
+        PreservesAccessibleAbsenceWitnesses f select w) ↔
+      DependenceExcludesBeingWithout f.DependsForBeing (AccessibleContrast f w) := by
+  constructor
+  · rintro ⟨select, track, preserve⟩ x y hDepend hContrast
+    obtain ⟨v, _, hPresent, _, hSelected⟩ := preserve x y hContrast
+    exact track x y hDepend hSelected hPresent
+  · intro strict
+    refine ⟨fun _ A v => f.history.ontic.frame.access w v ∧ v ∈ A, ?_, ?_⟩
+    · intro x y hDepend v hSelected hPresent
+      exact strict x y hDepend ⟨v, hSelected.1, hPresent, hSelected.2⟩
+    · rintro x y ⟨v, hAccess, hPresent, hAbsent⟩
+      exact ⟨v, hAccess, hPresent, hAbsent, hAccess, hAbsent⟩
+
 theorem witness_coverage_strictness : WitnessCoverageStrictness := by
   constructor
   · rintro x y ⟨v, hAccess, hPresent, hAbsent⟩

@@ -1,6 +1,6 @@
 {
   "id": "19a0417f-3e44-4500-83c2-4dac473922ac",
-  "label": "Admissible root withholding cells supply accessible per-effect withholding",
+  "label": "Admissible root withholding (WITHHOLD_1) cells supply accessible per-effect withholding (WITHHOLD_2)",
   "premise_statement_ids": [
     "46a468b2-8132-4ef4-bd31-6e8292013f3b",
     "0dd78706-e6f7-40a6-9232-eac3df1c0ae9"
@@ -9,19 +9,31 @@
   "inference_ids": [
     "0a01f834-5ec0-4b7e-a17a-559826affdd9"
   ],
-  "meaning": "For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion.",
+  "meaning": "Re-presentation of premise (a) in the choice register, not independent support for it (#2103). For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell (WITHHOLD_1) by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being (WITHHOLD_2). The proof uses the cell only at its representative, and 46a468b2 is the only passage from sense 1 to sense 2; no agentive content of sense 1 is carried into fbd0a6d3. With the branching frame, moment and world map unconstrained and at most one actual root (which a common actual root secures: uniqueRootOfCommonRoot), some representation satisfies both premises exactly when fbd0a6d3 holds (Lean cellsRepresentationIff, discrete partition). The argument adds warrant for fbd0a6d3 only if an independently fixed decision partition and world map are supplied. The frontier counts it as proving fbd0a6d3 from open premises; that records no further warrant. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion.",
   "definition_ids": [
+    "0772c968-5bd0-412f-ab83-cfc4f6bcc9c8",
     "62dfa893-b633-4513-9790-8f9a0a3087e0",
     "c57e2682-08e6-527e-950f-0fa0a7ff11ef",
     "1b8baf77-84fa-5513-a138-7fa14840dd87",
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "a1b2e330-388f-4120-bc5c-969642317792",
-    "c54f0922-eb5c-4abd-9bde-6586e4127424"
+    "c54f0922-eb5c-4abd-9bde-6586e4127424",
+    "dba7c7df-b469-47e5-8130-1a6641e326b7"
   ],
   "disambiguation_ids": [
-    "623ddbf6-9683-5361-bae4-e348a00ec680"
+    "623ddbf6-9683-5361-bae4-e348a00ec680",
+    "419a65c2-f095-44c9-8459-06e72c77fbcd"
   ],
   "strong_version_needed": {
-    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9": "The conclusion quantifies over every grounded actual concretum, including contingent recipients. Necessary-recipient coverage alone supplies no cell for that case."
-  }
+    "0dd78706-e6f7-40a6-9232-eac3df1c0ae9": "Recipient scope: the conclusion quantifies over every grounded actual concretum, including contingent recipients, and necessary-recipient coverage alone supplies no cell for that case. Cell strength: the proof does not use control over the whole cell, only the representative's own nonproduction (cstit_actual), so a one-history premise would suffice here; none is registered. The cell form is kept because it is the same statement the NAR arguments fccc4968 and 4d047904 and the strength order 57f97264 use, and because WITHHOLD_1 is the STIT content of withholding (c54f0922). With an unconstrained partition the two forms coincide for this conclusion (cellsRepresentationIff uses the discrete partition)."
+  },
+  "sense_bridges": [
+    {
+      "term": "WITHHOLD",
+      "from": "271a6878-a2dc-4426-9c93-96bec1342707",
+      "to": "eb004a66-1c07-4ef7-9cfc-412b610a316e",
+      "statement_id": "46a468b2-8132-4ef4-bd31-6e8292013f3b",
+      "role": "premise"
+    }
+  ]
 }

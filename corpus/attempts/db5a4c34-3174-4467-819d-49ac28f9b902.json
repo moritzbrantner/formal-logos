@@ -7,7 +7,7 @@
   "date": "2026-11-26",
   "kind": "countermodel",
   "outcome": "succeeded",
-  "summary": "Issue #2058 applies the earlier directedNature profile to bearer-indexed existence facts on its two-world S5 frame. The same coextensive pair has a strict PLG edge and its weak consequence in one consistent presentation; a weak return is underivable. A weak-only presentation omits the strict edge. The stipulated essence membership discriminates the same pair, and the earlier alternate profile omits this membership on the same ontic model. In the selected contexts no exact classifier of strict ground, weak ground or essence membership can depend only on the varying fact’s world predicate. Identifying the two labels in any consistent presentation forbids the selected strict edge. See TruthCore.Models.HyperintensionalExistence and the issue #2058 section of docs/notes/distinct-dependence-strict-ground-route.md.",
+  "summary": "Issue #2058 applies the earlier directedNature profile to bearer-indexed existence facts on its two-world S5 frame. The same coextensive pair has a strict PLG edge and its weak consequence in one consistent presentation; a weak return is underivable. A weak-only presentation omits the strict edge. The stipulated essence membership discriminates the same pair, and the earlier alternate profile omits this membership on the same ontic model. In the selected contexts no exact classifier of strict ground, weak ground or essence membership can depend only on the varying fact’s world predicate. Identifying the two labels in any consistent presentation forbids the selected strict edge. See TruthCore.Models.HyperintensionalExistence and the issue #2058 section of docs/notes/distinct-dependence-strict-ground-route.md.\n\nIndependent semantic challenge #2103 (2026-11-28) of PR-2087: no finding.",
   "evidence": [
     "PR-2025",
     "PR-2040",
@@ -21,6 +21,14 @@
       "model": "gpt-6.2-sol",
       "effort": "high",
       "date": "2026-11-26",
+      "pr": "PR-2087"
+    },
+    {
+      "role": "review",
+      "provider": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
       "pr": "PR-2087"
     }
   ]
