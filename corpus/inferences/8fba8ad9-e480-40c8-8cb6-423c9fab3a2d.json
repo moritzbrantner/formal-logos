@@ -1,0 +1,13 @@
+{
+  "id": "8fba8ad9-e480-40c8-8cb6-423c9fab3a2d",
+  "label": "In-root purity of requirements, from purity REQUIRES_LACK_1 and the sense bridge (inference)",
+  "input_statement_ids": [
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
+    "c5396a7f-5084-498f-8c52-28455ea500b8"
+  ],
+  "output_statement_id": "d83785e2-f572-4eb8-9098-0785da0e174d",
+  "rule": "A requirement in the root would be a requirement as such, which the purity of requirements excludes",
+  "meaning": "Fix an actual root r, a pure determination t of r and a set S of pure determinations. If t required, in r, the lack of S, then by the sense bridge t would require the lack of S as such, which the purity of requirements (0c8631bd) excludes. So the in-root purity premise is no stronger than 0c8631bd together with the bridge. It does not show the converse: a rival that denies the bridge can keep 0c8631bd and deny the in-root premise (simpleUnityCarriageMap, clause 3). No axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
