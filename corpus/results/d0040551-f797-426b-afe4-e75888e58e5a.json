@@ -1,0 +1,11 @@
+{
+  "id": "d0040551-f797-426b-afe4-e75888e58e5a",
+  "label": "Root lack PSR, from the unrestricted fact PSR",
+  "argument_id": "be0d93c7-2666-4c7c-82aa-b0c668f605cf",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.rootLackPSROfFactPSR",
+  "comparator_config": "results/d0040551-f797-426b-afe4-e75888e58e5a/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate: the unrestricted fact PSR implies the PSR for root lack facts. Establishes no premise."
+}

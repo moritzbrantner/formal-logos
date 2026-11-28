@@ -1,0 +1,13 @@
+{
+  "id": "88bfbcd6-7a27-4ad4-9674-f8883770ffb3",
+  "label": "CREATURE_1 reception from R-act1 and CREATURE_1 not being its own being, checked (inference)",
+  "input_statement_ids": [
+    "8c64b036-3db9-4143-9a8d-d7814cc84c79",
+    "21b08802-710a-4225-bb91-85ff73da80b1"
+  ],
+  "output_statement_id": "29e71e43-1d34-5008-8811-897fbddda209",
+  "rule": "Instantiate R-act1 at a creature",
+  "meaning": "A creature is not its own being, so by R-act1 its esse is received in some principle. A further support option for the creature-reception leaf of the esse-root routes, alongside its q.7 a.2 support; through the first derivation it rests on the two unde bridges.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "86237395-d998-4354-8301-a0370a832d40",
+  "label": "Test by the thin and act controls of R-act2",
+  "subject_kind": "argument",
+  "subject_id": "0a723259-d2e3-4daf-b9d6-72fbcf677411",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "254ee26f-01d5-4359-bdde-5779b6e80533",
+  "note": "R-act2 fails on the thin profile, where R-act1 and the reception and purity interfaces hold, and holds when the intensive reading is taken as purity."
+}

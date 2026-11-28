@@ -1,0 +1,12 @@
+{
+  "id": "0fe86082-8261-4dc2-9d77-15276d6c0032",
+  "label": "Cause-of-being possession entails its universal-source restriction (inference)",
+  "input_statement_ids": [
+    "d0fc96b7-fd2d-504e-912f-925de3b1e6ed"
+  ],
+  "output_statement_id": "66252c05-49e7-4505-9644-e8f8ed823f1d",
+  "rule": "Drop the universality and distinctness antecedents",
+  "meaning": "Strength order registration: cause-of-being possession for every cause of being entails its restriction to universal causes and distinct effects. Application only; it establishes neither. Strictness is not certified here.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

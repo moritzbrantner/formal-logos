@@ -1,0 +1,11 @@
+{
+  "id": "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+  "label": "Every admissible profile is exclusion-free",
+  "paraphrase": "Difference statement of member-grounded admissibility over its sufficiency direction (#1598), OPEN, not asserted: every admissible intrinsic profile is exclusion-free, so no member of an admissible profile requires the lack of some of its members. It is the necessity direction of member grounding, the part that makes every member's requirement of a lack binding: a profile containing one is inadmissible.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.AdmissibleIsExclusionFree",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

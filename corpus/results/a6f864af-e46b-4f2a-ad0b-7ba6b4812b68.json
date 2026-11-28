@@ -1,0 +1,11 @@
+{
+  "id": "a6f864af-e46b-4f2a-ad0b-7ba6b4812b68",
+  "label": "Suárez's profile against the unbundled composition step: controls, checked",
+  "argument_id": "b7480e89-a3e2-4380-8553-9b8b52012540",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.unbundledControls",
+  "comparator_config": "results/a6f864af-e46b-4f2a-ad0b-7ba6b4812b68/comparator.json",
+  "status": "solution-present",
+  "description": "Two real-identity beings that are not esse tantum and receive nothing: the inline at-most-one formula and the bridge OWN_BEING_2 => OWN_BEING_1 fail, real otherness fails, the real-otherness form holds vacuously, the content form fails. Nothing about shared natures is modelled. A structural surrogate."
+}

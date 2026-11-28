@@ -1,0 +1,11 @@
+{
+  "id": "34e719e6-38d9-4ccc-88b0-4137f51aa92b",
+  "label": "Member grounding holds exactly when sufficiency and its difference hold",
+  "paraphrase": "For every carrier, admissible family and requirement relation: a profile is admissible exactly when exclusion-free if and only if every exclusion-free profile is admissible and every admissible profile is exclusion-free. A premise-free comparison; it asserts none of the three statements.",
+  "lean_declaration": "TruthCore.Causality.RootPerfectionIntellect.MGOverSufficiencyExact",
+  "definition_ids": [
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "88f7c656-f484-4737-a872-b2d78c604322"
+  ]
+}

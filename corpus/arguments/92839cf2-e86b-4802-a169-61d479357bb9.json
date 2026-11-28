@@ -1,0 +1,21 @@
+{
+  "id": "92839cf2-e86b-4802-a169-61d479357bb9",
+  "label": "Rigidity of concrete GOD_4 presence gives persistence",
+  "premise_statement_ids": [
+    "e3c64b61-df23-410e-bb2f-b56bfb58ecd0"
+  ],
+  "conclusion_statement_id": "cce5a30e-c72f-43e6-ba29-19f8be68feeb",
+  "inference_ids": [
+    "8775d6e4-8ff6-4ecd-9734-ea97374f9ad8"
+  ],
+  "meaning": "Same signature, profile and standpoint. If x is a concrete GOD_4 at w and some concrete GOD_4 y exists at an accessible v, rigidity gives y = x, so x exists at v. The backing result of the strength order rigidity strengthens persistence; the fixedPlusVisitor control shows the converse fails. Declared an instantiation of the vocabulary lemma.",
+  "definition_ids": [
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "a287fbf6-eef6-4588-8ea9-ecf8e44581e1",
+    "c03ce44d-f7e6-4eef-9082-304b40699395",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9"
+  ],
+  "weakening": true
+}

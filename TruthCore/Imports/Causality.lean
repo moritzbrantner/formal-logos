@@ -21,12 +21,15 @@ public import TruthCore.Causality.ActualityImportControls
 public import TruthCore.Causality.AncestorIndividuation
 public import TruthCore.Causality.AppetiteAppraisal
 public import TruthCore.Causality.AppetitePowerExercise
+public import TruthCore.Causality.AppetiteStandard
 public import TruthCore.Causality.AristotelianCauseModes
 public import TruthCore.Causality.AristotelianRivalRefutations
 public import TruthCore.Causality.AtomisticCausalSource
 public import TruthCore.Causality.AtomisticRequirementControl
 public import TruthCore.Causality.AtomisticUniversalCausePriority
 public import TruthCore.Causality.AttenuationFit
+public import TruthCore.Causality.AxiarchicFoundation
+public import TruthCore.Causality.AxiarchicGuidance
 public import TruthCore.Causality.BearerRegress
 public import TruthCore.Causality.BegunComingToBe
 public import TruthCore.Causality.BegunOrHomogeneousGiving
@@ -94,6 +97,7 @@ public import TruthCore.Causality.DependenceGroundingPriority
 public import TruthCore.Causality.DependenceOrderSenses
 public import TruthCore.Causality.DependenceStrictGroundMap
 public import TruthCore.Causality.DependenceStrictGroundMapStrength
+public import TruthCore.Causality.DependenceToActOfBeing
 public import TruthCore.Causality.DerivativeJointPower
 public import TruthCore.Causality.DirectEsseGenusOmissionControl
 public import TruthCore.Causality.DirectEsseRootGoodnessOmission
@@ -161,8 +165,10 @@ public import TruthCore.Causality.GroundingRegress
 public import TruthCore.Causality.HeadlessCausalAncestry
 public import TruthCore.Causality.HistoricalRemoval
 public import TruthCore.Causality.HolderRootIdentification
+public import TruthCore.Causality.HoldingFirstMover
 public import TruthCore.Causality.HoldingMotion
 public import TruthCore.Causality.IlluminationReceipt
+public import TruthCore.Causality.ImpersonalFoundationJoint
 public import TruthCore.Causality.IndexedSignalProvenance
 public import TruthCore.Causality.IndexedSignalReaper
 public import TruthCore.Causality.InertEmptiness
@@ -188,6 +194,8 @@ public import TruthCore.Causality.MetricGrimReaper
 public import TruthCore.Causality.MixedSupplierCensus
 public import TruthCore.Causality.ModalNecessaryBeingActuality
 public import TruthCore.Causality.ModalSenseSupport
+public import TruthCore.Causality.ModeOfBeingMiddleTerm
+public import TruthCore.Causality.MoreSuchSenseCollapse
 public import TruthCore.Causality.MotionMapsBatch1
 public import TruthCore.Causality.MotionMoverFork
 public import TruthCore.Causality.MutualSupportAsymmetry
@@ -219,6 +227,7 @@ public import TruthCore.Causality.OccurrenceUnderivedEssence
 public import TruthCore.Causality.OneDependenceOrder
 public import TruthCore.Causality.OperationLocalFiniteness
 public import TruthCore.Causality.OriginDeletion
+public import TruthCore.Causality.OriginDeletionIncompatibility
 public import TruthCore.Causality.OriginExerciseBridge
 public import TruthCore.Causality.OriginToleranceIdentity
 public import TruthCore.Causality.OwnerEndpointCalibration
@@ -238,6 +247,7 @@ public import TruthCore.Causality.PerfectionTransferGrounding
 public import TruthCore.Causality.PhysicalGroundControls
 public import TruthCore.Causality.PluralRootConfluence
 public import TruthCore.Causality.PossessionSensitiveAppetite
+public import TruthCore.Causality.PossibiliaContent
 public import TruthCore.Causality.PossibleCausalSourceNecessity
 public import TruthCore.Causality.PossibleCauseOfContingency
 public import TruthCore.Causality.PostCutStore
@@ -258,6 +268,7 @@ public import TruthCore.Causality.ProtectiveProcess
 public import TruthCore.Causality.PureActRoot
 public import TruthCore.Causality.PureActThisness
 public import TruthCore.Causality.PureIndiscernibility
+public import TruthCore.Causality.PurityCriteria
 public import TruthCore.Causality.Q44EssentialSource
 public import TruthCore.Causality.Q44SourceSupply
 public import TruthCore.Causality.QuantitativeTransferPaths
@@ -277,6 +288,7 @@ public import TruthCore.Causality.RelayFeedInventory
 public import TruthCore.Causality.RelaySourceRecognition
 public import TruthCore.Causality.RestatedPremises
 public import TruthCore.Causality.RivalRefutationsRound2
+public import TruthCore.Causality.RootClosure
 public import TruthCore.Causality.RootEssenceIdentity
 public import TruthCore.Causality.RootGroundComposition
 public import TruthCore.Causality.RootIntellectWill
@@ -285,6 +297,7 @@ public import TruthCore.Causality.RootIntellectWillPureAct
 public import TruthCore.Causality.RootIntellectWillPureActPlurality
 public import TruthCore.Causality.RootMultiplication
 public import TruthCore.Causality.RootPerfectionExclusion
+public import TruthCore.Causality.RootPerfectionIntellect
 public import TruthCore.Causality.RootPositiveIntellectWill
 public import TruthCore.Causality.RootPositiveIntellectWillControl
 public import TruthCore.Causality.RootPurity
@@ -367,6 +380,7 @@ public import TruthCore.Causality.UnderivedRootRoute
 public import TruthCore.Causality.UniqueFeedback
 public import TruthCore.Causality.UniqueRootQuartaControl
 public import TruthCore.Causality.UnityHandoff
+public import TruthCore.Causality.UniversalPreexistence
 public import TruthCore.Causality.UnlocatedRootNecessity
 public import TruthCore.Causality.UnmovedAtNoTime
 public import TruthCore.Causality.WholePowerClassification
