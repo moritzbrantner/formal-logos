@@ -9580,11 +9580,12 @@ repaired in the following commit:
    `NonRealContainmentIsApprehension` (`cde7f1dd`) applies to a negative
    clause contained in a simple nature, which would connect the SEAT denial to
    the cognition family.
-5. Coordinator follow-up, outside this lane's ownership: four existing
+5. Done (coordinator, owner-approved cross-lane edit): the four existing
    arguments that use LE (`44890767`, `a2560bca`, `a567c327`, `d25cad7b`)
-   should record `strong_version_needed` for LE over LE_own. Each needs full
+   now record `strong_version_needed` for LE over LE_own in
+   `specs/inquiry-closure.toml` and `specs/root-closure.toml`. Each needs full
    carriage, because its other premise or its conclusion concerns conditions
-   in any being's nature. `truth check` warns about this until they do.
+   in any being's nature.
 
 ## Research attempts citing this note
 
