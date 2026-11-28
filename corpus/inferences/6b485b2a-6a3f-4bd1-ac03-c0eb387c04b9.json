@@ -1,0 +1,10 @@
+{
+  "id": "6b485b2a-6a3f-4bd1-ac03-c0eb387c04b9",
+  "label": "Intrinsic identity and ranking limits, from simplicity and symmetry (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "5539cab9-0dac-4a1c-8f44-ca21820a5596",
+  "rule": "Apply constitutive simplicity, reuse unindividuatedNotFavoured, and transport ranking through a swap",
+  "meaning": "The laws expose exact extra premises under which differentiation collapses. Equality of real realizers is not equality of mode terms without injectivity. Factorization through the realizer alone is stronger than sharing a ground. Symmetry only constrains a proposed complete differentiating description. These are general conditional diagnostics, not assertions of those contested completeness conditions.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "74ec4d5b-81cc-4626-a4bf-0e478f473ca2",
+  "label": "Makers of a contingent fact are contingent by modal failure transport",
+  "argument_id": "8e22d25d-1ad1-44f5-a50d-e72e3dc1d2e3",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityGrounding.makersOfContingentFactAreContingent",
+  "comparator_config": "results/74ec4d5b-81cc-4626-a4bf-0e478f473ca2/comparator.json",
+  "status": "solution-present",
+  "description": "Reuses PSRStrength.failure_transport: a falsifying accessible world for the fact cannot contain a necessitating maker of that fact. Every such maker is actual and possibly absent. Only a necessary condition for makers is established. RootClosure.necessaryFactAnyMaker already shows why weak maker necessitation cannot infer necessity or relevance of a maker of a necessary fact."
+}

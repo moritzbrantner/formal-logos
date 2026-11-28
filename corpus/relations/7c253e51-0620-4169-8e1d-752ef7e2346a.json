@@ -1,0 +1,10 @@
+{
+  "id": "7c253e51-0620-4169-8e1d-752ef7e2346a",
+  "label": "Intrinsic identity laws test constitutive simplicity",
+  "subject_kind": "result",
+  "subject_id": "28f1b4f2-2468-4382-99ae-97498f1a98e0",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+  "note": "No distinction-to-composition inference is available without a real-realization injectivity premise. The analogous premise collapses distinct contents of one simple act too. This does not identify constitutive simplicity with stronger SIMPLE_4."
+}

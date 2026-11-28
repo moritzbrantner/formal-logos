@@ -1,0 +1,16 @@
+{
+  "id": "7b9166b9-6024-4408-80c5-9c57f84c294b",
+  "label": "No produced recipient fact-grounds the mode explaining its production",
+  "paraphrase": "For each actual giving exercise in the selected frame, its recipient's existence fact does not explain the selected mode/ranking fact in the SAME Arena at the SAME world. Conditional exclusion of effect-grounded productive modes, equally for ideas and noncognitive modes. It does not exclude all extrinsic bases or establish the source-of-differences bridge.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.NoEffectGroundedGivingAt",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "5a8bf165-162d-4255-9994-00affa41d9d5"
+  ],
+  "connection_plan": {
+    "target_statement_id": "69b9f887-582a-479c-924b-e7328f3930b4",
+    "missing_bridge": "For a merely produced stand-in of a non-present candidate in an own favouring, identify that SAME item with a recipient of giving being and show that its existence fact grounds the mode specification that explains its production in the selected strict priority relation. Instantiating the priority exclusion would then rule out that produced stand-in. None of these item-to-fact or production-to-giving identifications is built in.",
+    "blocker": "NoMerelyProducedStandIn quantifies over produced items; the present theorem excludes a direction of fact priority. The required mapping and the giving-to-fact bridge remain OPEN. Primitive source-nature modes need not satisfy the forbidden effect-grounding antecedent. The existing tests relation describes diagnostic relevance, not a registered derivation of the target."
+  }
+}

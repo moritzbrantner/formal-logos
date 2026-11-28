@@ -1,0 +1,15 @@
+{
+  "id": "f4ad70f6-9ad3-475f-9841-8b79f40ccfb5",
+  "label": "Effect-grounded productive modes are excluded by strict explanatory priority (inference)",
+  "input_statement_ids": [
+    "fb66f07f-d114-4c9e-8588-152ffa557e0a",
+    "5cd0b154-f9ce-4dfc-ac73-0477b33484fe",
+    "bbc8c9b5-2772-4701-ab67-5c3d84426749",
+    "0f5b7197-c3f2-46ea-ab5d-68e5d7d5a15c"
+  ],
+  "output_statement_id": "7b9166b9-6024-4408-80c5-9c57f84c294b",
+  "rule": "Compose mode-to-exercise with exercise-to-existence; an existence-to-mode edge closes a forbidden cycle",
+  "meaning": "Applies existing PriorityOmission.constitutionNotPriorOfWholeFirst in the SAME fact relation. The causal-to-fact bridge and relevance are explicit. This is not a proof that every extrinsic distinction is effect-grounded, nor a restatement of the recognition bridge: no apprehension predicate occurs. Its value is a conditional exclusion that binds personal effect-grounded ideas equally. Asymmetry is retained as the chosen strict-priority semantics although irreflexivity plus transitivity suffices.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "41350b46-3212-441b-8f89-ea7c27ab8604",
+  "label": "Every maker of the selected contingent fact is individually contingent",
+  "paraphrase": "Every M-maker of fact at w exists at w and is absent at an accessible world in the SAME Arena. The theorem assumes WorldImmanent, MakerNecessitation and fact-level Contingent. It neither asserts a maker nor identifies a mode with a produced being. The converse for necessary facts fails under these weak truthmaking conditions.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.EveryMakerContingentAt",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "aab6fdee-e29d-58d1-b7d7-baee6d81f73e",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109",
+    "97f37f5c-7f82-5077-9bb9-6cfc8673631d",
+    "0b881c57-d091-4c65-9a45-244f696ae29a"
+  ],
+  "connection_plan": {
+    "target_statement_id": "69b9f887-582a-479c-924b-e7328f3930b4",
+    "missing_bridge": "Map the selected fact to a candidate stand-in specification and its truthmaking bearers to the source or produced items in the existing favouring signature, with independently warranted modal availability and relevance, before using the maker classification to constrain the source-of-differences rationale. A direct target derivation is not claimed.",
+    "blocker": "Mode-specification facts need not be contingent, and makerControls shows that mere necessitation permits contingent makers of necessary facts. No item/fact or truthmaking/production identification is present. Thus an unrestricted inference from this modal classification to NoMerelyProducedStandIn is unsupported; the theorem remains a reusable planned application, already used inside the checked modal controls."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "0b881c57-d091-4c65-9a45-244f696ae29a",
+  "label": "Each bearer making the selected fact is individually contingent",
+  "term": "contingency of each maker of a selected fact",
+  "basis": "stipulative",
+  "definition": "EveryMakerContingentAt A M w fact requires ContingentAt A.ontic w b for every b with M w b fact: that SAME bearer exists at w and is absent at some accessible world. Making is the primitive bearer-to-fact relation from the existing truthmaker framework; it is not fact explanation or production. This universal predicate does not assert that there is any maker. Individual contingency and fact-level Contingent remain distinct.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.EveryMakerContingentAt",
+  "note": "The proof uses WorldImmanent for actual existence and MakerNecessitation to transport an accessible falsifier of the fact to an absence of its maker. It does not prove that a necessary fact has a necessary maker, that modes are relevant, or that possibilities produce anything."
+}
