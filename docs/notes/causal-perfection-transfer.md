@@ -10105,9 +10105,12 @@ apply to intellect, will and goodness on the classical side as well.
 
 The existing [identity and ranking laws](../../corpus/results/28f1b4f2-2468-4382-99ae-97498f1a98e0.json)
 already settle the logical identity point. Numerical equality in one type
-permits substitution; unequal predicates of literally identical terms are
-inconsistent. Equality of real realizers is different: a noninjective map
-can realize distinct formal roles in one nature. Different roles must retain
+permits substitution: if each determination is literally equal to the
+foundation, the determinations are equal to each other, and any fixed
+predicate or relation must treat those equal terms alike. This does not
+prevent the foundation from satisfying several different predicates.
+Equality of real realizers is different: a noninjective map can realize
+distinct formal roles in one nature. Different roles must retain
 their formal or relational indices. Bare common realization cannot by itself
 explain an asymmetric value order. This is the same demand for intentional
 contents and A4 modes; the present work does not duplicate those laws.
