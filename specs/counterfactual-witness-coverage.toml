@@ -6,8 +6,9 @@ definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
 [[statement]]
 id = "Selection preserves accessible effect-present source-absence witnesses"
 lean = "PreservesAccessibleAbsenceWitnesses"
-definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c"]
-paraphrase = "OPEN witness-preservation assumption at the supplied origin. For every effect and candidate source, if some accessible world has the effect present and the source absent, at least one accessible world with that same contrast is selected for the source-absence antecedent."
+definitions = ["c7d19067-3df4-48ef-b0a6-bf20cb4ba43c", "b93d877f-6055-493c-93d6-99cbd52ad4b7", "88302e83-898f-4308-8e8c-a8d1daa97ef4"]
+disambiguations = ["d3808588-cf71-4047-8417-d16156c04f47"]
+paraphrase = "OPEN witness-preservation assumption at the supplied origin. For every effect and candidate source, if some accessible world has the effect present and the source absent (CAN_BE_WITHOUT_1), at least one accessible world with that same contrast is selected for the source-absence antecedent. Jointly with soundness 2bdb0be1 and a free selector it is equivalent to 000e1f65 read as CAN_BE_WITHOUT_1 (track_preserve_iff_strict, #2103)."
 
 [[statement]]
 id = "Witness preservation can hold when full accessible absence coverage fails"
@@ -30,9 +31,9 @@ id = "Accessible witness preservation rules out being without a source of depend
 theorem = "dependence_excludes_being_without_of_witnesses"
 premises = ["2bdb0be1-85dc-45a6-a8d0-c45fe46bb361", "Selection preserves accessible effect-present source-absence witnesses", "11dc5069-a46b-47b5-ba97-bc9cf00c4b28"]
 conclusion = "STMT-DEPENDENCE-EXCLUDES-BEING-WITHOUT"
-disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb"]
+disambiguations = ["23dd6f32-b456-4963-adb3-7befbf0dc4fb", "d3808588-cf71-4047-8417-d16156c04f47"]
 rule = "Preserve a realized contrast witness, which then contradicts selected absence soundness"
-meaning = "Conditional support at the same origin. If a dependent effect could exist without its source, realization gives an accessible contrast witness. Preservation supplies a selected accessible contrast witness for the same pair. Dependence soundness excludes the effect there, contradicting its presence. This uses only witness preservation alongside the original realization and soundness premises."
+meaning = "Re-presentation at the same origin, not independent support for 000e1f65 (#2103). If a dependent effect could exist without its source, realization gives an accessible contrast witness. Preservation supplies a selected accessible contrast witness for the same pair. Dependence soundness excludes the effect there, contradicting its presence. This uses only witness preservation alongside the original realization and soundness premises. With the selector a free parameter, soundness and preservation hold for some selector exactly when 000e1f65 holds with being-without read as accessible contrast, CAN_BE_WITHOUT_1 (Lean track_preserve_iff_strict), so the warrant is that of the accessibility reading plus the realization bridge 11dc5069. The frontier counts the derivation as proving 000e1f65 from open premises; that records no further warrant."
 
 [[argument]]
 id = "Three-world strictness model for accessible absence coverage"

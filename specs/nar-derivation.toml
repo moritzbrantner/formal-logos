@@ -33,11 +33,11 @@ disambiguations = ["83264cf5-01fe-52fc-9a00-eeb024f6496e", "DISAMB-CONCRETE-ABST
 
 [[statement]]
 id = "fbd0a6d3-5ca6-4f17-8651-ed0d6989c747"
-label = "Every actual root withholds its giving of each grounded actual concretum at some accessible world"
+label = "Each actual root withholds (WITHHOLD_2) giving each grounded actual concretum at an accessible world"
 lean = "ActualRootsWithholdEachGrounded"
-paraphrase = "OPEN premise (a), analyst formulation, unattributed: for every actual root n of the selected grounding relation G at w and every actual concretum x that n grounds at w, there is a world accessible from w where n exists and does not give x being. #1897's two-way profile extended from the actual contingents to every being the root grounds, including any putatively NECESSARY_2 one; close to the theist-internal free-creation premise. Under (b2), factive giving, a common root, necessary roots and excluded middle it is equivalent to NAR (43651417): the same commitment in the giving register, not additional evidence."
-definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL"]
-disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
+paraphrase = "OPEN premise (a), analyst formulation, unattributed: for every actual root n of the selected grounding relation G at w and every actual concretum x that n grounds at w, there is a world accessible from w where n exists and does not give x being. #1897's two-way profile extended from the actual contingents to every being the root grounds, including any putatively NECESSARY_2 one; close to the theist-internal free-creation premise. Under (b2), factive giving, a common root, necessary roots and excluded middle it is equivalent to NAR (43651417): the same commitment in the giving register, not additional evidence. 'Withholds' is WITHHOLD_2, accessible per-effect non-giving with the root present (actualRootsWithholdEachGrounded_iff); no choice, control or agency is part of it. The choice-cell premises 0dd78706 and 46a468b2 re-present it in the STIT register (cellsRepresentationIff, #2103)."
+definitions = ["c57e2682-08e6-527e-950f-0fa0a7ff11ef", "a1b2e330-388f-4120-bc5c-969642317792", "62dfa893-b633-4513-9790-8f9a0a3087e0", "1b8baf77-84fa-5513-a138-7fa14840dd87", "DEF-KANT-ONTOLOGICAL-MODEL", "0772c968-5bd0-412f-ab83-cfc4f6bcc9c8"]
+disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA", "419a65c2-f095-44c9-8459-06e72c77fbcd"]
 
 [[statement]]
 id = "d164f730-95b4-4297-8978-9e5586f0b2ef"

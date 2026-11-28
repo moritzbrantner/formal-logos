@@ -121,7 +121,11 @@ theorem least_success [Preorder Rank] (rank : W → W → Rank) :
 
 /-- Lewis-style ordering clause without a limit assumption. Either A has
 no worlds in the evaluation domain, or some A-world is strictly closer than
-every A-world that falsifies Q. Restrict A first if using an accessible domain. -/
+every A-world that falsifies Q. Restrict A first if using an accessible domain.
+This matches Lewis's clause (some A-world such that every A-world at least as
+close is a Q-world) for total rankings. For a merely partial preorder,
+"strictly closer" is stronger than "not at least as close", so this clause
+implies Lewis's but not conversely. -/
 def LewisWould [Preorder Rank] (rank : W → W → Rank) (w : W) (A Q : Set W) : Prop :=
   (∀ v, v ∉ A) ∨ ∃ v ∈ A, ∀ u ∈ A, u ∉ Q → rank w v < rank w u
 
