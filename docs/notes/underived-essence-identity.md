@@ -1101,15 +1101,16 @@ lowest expanded-route cost 16 → 16, distinct verified support alternatives
 not a hand-reconstructed premise reduction. The new interpretation is a
 comparison/control, not an additional root-support route or premise defense.
 
-## #1554: what coverage must warrant (complete worker proposal, 2026-11-12)
+## #1554: what coverage must warrant (2026-11-12, repaired 2026-11-28)
 
 Baseline: `80dbecadccaaef2b5d6333fb4af1470c5a0a5806`, after fetching main
 and fast-forwarding the supplied clean checkout `7bc0bae9998d2bdc4672b760658370aeb2c5001b`.
 Reuse the merged #1571 spine map. This section owns transport, not #1553's
 CCR warrant, #484's compactness, or draft #1575's CCR decomposition. Shared
 conventions sourceRevision: `15f348b072188255da837578eaafc8a98f12fdf0`.
-This is a proposed semantic/warrant outcome for the parent's independent
-challenge, not a new certified result or reviewed coordinator judgment.
+This is a semantic/warrant outcome, not a new certified result. The post-merge
+independent challenge (2026-11-28) accepted the scope audit, the reduction and
+the control claims; its two repairs are in the rival and assessment subsections.
 
 ### Exact target and scope audit
 
@@ -1169,15 +1170,22 @@ standing mode. The current formal definitions do not identify the two.
 
 ### Positive rivals and descent into their commitments
 
-1. **Necessary bearers, variable dependence.** The existing rotating-triangle
-   certificate in `NecessarySupportCoverage` has universal access, all candidates
-   necessary, every world's grounding WF, full J1 and no cross-world reversed
-   pair, but no globally underived candidate. Each world has genuine local roots
-   in the stipulated relation; the positive account allows their dependence roles
-   to change. Its price is a cross-world ancestry overlay cycle, not local
-   circular explanation. To reject it, justify why modal role changes are
-   forbidden for existential support, or why the overlay must be founded. Local
-   asymmetry cannot supply that ban. The rooted-pair certificate conversely keeps
+1. **Necessary bearers, variable dependence: a formal alternative.** The
+   existing rotating-triangle certificate in `NecessarySupportCoverage` has
+   universal access, all candidates necessary, every world's grounding WF, full
+   J1 and no cross-world reversed pair, but no globally underived candidate.
+   Each world has local roots in the stipulated relation. A finite countermodel
+   shows only that coverage is needed on that interpretation. The independent
+   justification on file reaches less far than the rival needs. The read
+   sources in [modal-grounding-priority-950.md](modal-grounding-priority-950.md)
+   (Leuenberger 2014, §§I, III, IV; Richardson 2021, §6) support world-variable
+   *why-grounding*: grounding that does not necessitate, or that varies with
+   further facts. That note itself records that arbitrary rotating support need
+   not satisfy their conditions. No source or record on file motivates rotation
+   of *existential support* among necessary bearers. So rival 1 is recorded as
+   a formal alternative with no independent justification on file for its
+   specific mechanism. Its price would be a cross-world ancestry overlay cycle,
+   not local circular explanation. The rooted-pair certificate conversely keeps
    one global root while allowing an overlay cycle elsewhere, so a blanket union
    ban would exclude more than needed for the existential target.
 2. **Contingent realization of a necessary target.** `lateSupport` in
@@ -1202,20 +1210,41 @@ standing mode. The current formal definitions do not identify the two.
    question; no source claim or historical origin doctrine is asserted here.
 
 These are not three exclusive worldviews. A rival can combine essential origin
-with variable sustaining realization. Nor is the mathematical consistency of a
+with variable sustaining realization (rival 2). Nor is the mathematical consistency of a
 selected relational model a metaphysical possibility result. No accepted floor
 item or independent identity criterion inspected here refutes those combinations.
 
-### Proposed assessment, next test and work status
+### Assessment, next test and work status
 
 For the current exact join, support is **underdetermined at transport**, even
 conditional on granting the actual necessary-root package. Coverage supplies an alternative sufficient transport premise. It does not
 require supporter identity or union well-foundedness; full J1 plus union
 well-foundedness does not imply coverage, as the certified
 `NecessarySupportCoverage.Control.UncoveredEdgeControl` demonstrates. Calling it a standing dependence principle does not supply
-independent warrant. The positive modal-stability argument and the replacement
-account remain live; the existing controls discriminate their consequences but
-cannot adjudicate intended metaphysical applicability. This does not retract the
+independent warrant. The verdict rests on two things: (a) the positive
+modal-stability premise has prima facie warrant but no independent defense,
+and (b) rival 2, whose realization-versus-realizer distinction supplies a
+mechanism, still stands with its listed debts. Rival 1 adds no separate weight
+(it is a formal alternative). The existing controls discriminate the
+consequences but cannot adjudicate intended metaphysical applicability.
+
+*Prima facie assessment of modal stability.* The premise says that whether a
+thing's existence is supplied at all belongs to what the thing is, so it cannot
+be self-standing at one admissible situation and supported at another. Scope:
+the support-status of the same individual, not the identity of its supporters.
+For it: on the essence-based account of dependence that the esse-root route
+already uses, a thing receives esse because its essence is not its esse
+([esse-root-leaves.md](esse-root-leaves.md), the reception leaves). If that
+composition is essential, support-status inherits its modal stability. The
+ordinary judgment that a self-standing thing which becomes dependent has changed
+in kind points the same way, though more weakly. This warrant is not
+independent of the essence/esse premises: it is a shared dependency with that
+route, not additional evidence. Provisional: plausible conditional on the
+essence-based conception of dependence, and unestablished. It would be revised
+by an independent identity criterion that lets the same individual be
+self-standing in one situation and supported in another, for example rival 2
+with its identity and adequacy debts discharged, or by a reason to think
+essence/esse composition is itself world-relative. This does not retract the
 weaker necessary-ACTUAL-root route or establish/refute GOD_4 existence.
 
 Next discriminating test: take a downstream SAME-witness candidate and specify
@@ -1232,23 +1261,11 @@ not a failure to derive another actual root. Compactness stays with #484.
 
 Persisted outcome: exact scope discrimination and warrant diagnosis; no new
 vocabulary, proof, source attribution, statement, closure or premise change.
-The release binary is absent here; Python context/related/dossiers were used.
-The service accepted the canonical workspace binding at the baseline but rejected
-a shortened UUID; retry/CLI uses full identities. Shared preview imports were
-not reconciled, so no Lean preview evidence is claimed. Existing certificates
-above are reused on unchanged Lean inputs; new prose deductions remain uncertified.
-Parent semantic challenge and delivered-head CI remain required before integration.
-
-Offline corpus validation passed with existing warnings; attribution-check found
-no changed stating claims; whitespace check passed. Claim/type self-sweep covered
-the five f62e68f6 inputs, both J1 variants, the all-carrier-world scope, concrete
-support restriction and the exact limits of the reused controls. No new formal
-certificate is claimed for the prose equivalence. Computed Python `frontier-diff`
-against the baseline: 479 → 479 open root-reaching premises (340 bare, 93
-supported, 46 stated), support alternatives 373 → 373, added 0, diagnostic cost
-16 → 16; no change. This reuses the CLI's underlying corpus semantics with a
-disk-backed task-specific TMPDIR. No Lean input changed, so existing proof evidence
-is reused; final CI is pending on the reviewable draft.
+Existing certificates above are reused on unchanged Lean inputs; the prose
+equivalence of coverage and persistence of absence is not Lean-certified.
+Claim/type self-sweep covered the five f62e68f6 inputs, both J1 variants, the
+all-carrier-world scope, the concrete support restriction and the exact limits
+of the reused controls.
 
 ## Research attempts citing this note
 
