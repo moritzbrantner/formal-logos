@@ -328,9 +328,13 @@ rival defeat and adds no warrant to CCR or to the localized bridge. Reopen on
 a positive account of esse supplied by something without esse in re, or on a
 defended reading of `ExistsAt` that admits suppliers with no esse in re.
 
-On SUPPLY_EDGE_1, L does not select existence. The a↔b network is then a pure
-concrete rootless network: rival R1/R2 of attempt 4da08bd8 against borrowed
-reality, not a new mixed rival. Under the decomposition (`3f3cc37b`), the mixed
+On SUPPLY_EDGE_1, L does not select existence, but its edges stay in the
+selected relation: `PartialCoGround` still requires `m.grounds w L x`, and
+supply-closure counts every actual supplier whatever its sense. So {a, b} is
+not supply-closed and borrowed reality holds vacuously on this profile too; the
+mixed profile is **not** thereby a pure concrete rootless network. Reaching
+rival R1/R2 of attempt 4da08bd8 would need a different selected relation
+without L's edges, and no record justifies that deletion (Codex review of #2193). Under the decomposition (`3f3cc37b`), the mixed
 case bears only on the localized-bridge conjunct (a485166e) and on supplier
 concreteness (b28f3a70): borrowed reality holds there vacuously, because
 supply-closure excludes abstract-supplied members.
