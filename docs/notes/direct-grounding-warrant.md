@@ -1,7 +1,8 @@
 # Direct concrete grounding: warrant audit for #1553
 
-Proposed findings for the coordinator's independent semantic challenge; no new
-certification or overall research judgment is claimed. Shared semantic baseline:
+Warrant audit of closed-collection rootedness (CCR). The post-merge independent
+semantic challenge of #1575/#1576 (2026-11-28) and its repair are recorded in
+[the realization test](#general-certification-and-realization-test). Shared semantic baseline:
 `f9df3e2f7caf5fca6b31a465cbff5e655fedc394` (fetched main, 2026-11-12).
 The #1571 dependency map audited `d98066db300d5b02c2062c2a55d622a237ace49b`;
 its brief is reused, not silently treated as the newer revision's graph audit.
@@ -30,8 +31,7 @@ The controls result `66b54b88-8c2f-4d4b-8efe-ed67ed9b1e8c` and attempts
 [`14fb7669-48c1-4d38-b702-7ecdce2565b8`](../../corpus/attempts/14fb7669-48c1-4d38-b702-7ecdce2565b8.json) are reused. Existing proof evidence is
 not rerun or upgraded by this note. Inventory used `context 29398f60`,
 `related aca3baa1`, and dossiers for CCR, contingent grounding, borrowed
-reality, the supplier bridge and the join via `scripts/corpus.py` through
-`worker_env.py` (the release CLI is absent in this checkout).
+reality, the supplier bridge and the join.
 
 ## What the primitive must mean
 
@@ -58,7 +58,9 @@ concreteness follows from the primitive's name.
 **OPEN application obligations:** identify the supplied explanandum (a thing,
 its existence fact, activity or quantity); determine what makes an edge direct;
 justify the world/time abstraction and candidate inventory; distinguish partial
-from sufficient support; and explain why all relevant actual suppliers are
+from sufficient support (now two recorded senses, SUPPLY_EDGE_1 and
+SUPPLY_EDGE_2 of disambiguation `acb74cb3-033a-4f48-be16-9f593972ffb9`;
+the Profile edge itself stays neutral); and explain why all relevant actual suppliers are
 represented. CCR concerns every predicate collection of actual concreta, not
 merely observable, finite or experimentally isolated networks.
 
@@ -82,10 +84,10 @@ kept distinct from that registered theorem:
    collections coincide. For a member x of such a collection, every actual
    supplier is concrete by the bridge; conversely an actual concrete supplier
    is an actual supplier. The two no-root tests then coincide classically.
-   Consequently borrowed reality and CCR are classically equivalent under
-   this bridge. This converse is a proposed definition-unfolding deduction,
-   **not a new Lean-certified equivalence**. It supplies a precise follow-up
-   theorem obligation; this slice changes no proof files.
+   Consequently borrowed reality and CCR are equivalent under this bridge.
+   Result `de375db2-ec3d-46c9-bae4-297578d8a1fe`
+   (`ConcreteRootAccess.blanketEquivalence`) later certified this equivalence
+   constructively.
 
 This does not make a conceptual argument for borrowed reality worthless. It
 does prevent counting it as independent corroboration merely because it has a
@@ -151,7 +153,7 @@ beginning. The historical finite enumeration and additional models proposed in
 contingent effect requires no necessary outcome without a necessitating law.
 None of these distinctions supplies coverage or necessarily underivedness.
 
-Complete proposed outcome for review: retain CCR's strict weakness against
+Outcome of this audit: retain CCR's strict weakness against
 AGWF; retain the existing conditional necessary-concrete result; do not upgrade
 CCR's independent warrant on the basis of renamed borrowed reality, physical
 supply analogies, or the isolated-root control. The strongest positive rival is
@@ -159,24 +161,16 @@ a globally constrained rootless existential network; the beginningless
 contingent foundation remains a distinct rival to the separate contingent-grounding
 premise. No rival is defeated and no actual application is established.
 
-Parent should challenge the two collection-scope deductions and intermediary
-reading above, then choose the missing substantive dependency: an independently
-motivated realization/generation standard, or a mixed-ground account precise
-enough to test its concrete-supplier requirement. Certifying the proposed
-classical equivalence would check the dependency audit but not supply that
-warrant. This worker returns at that reassessment point: new shared semantics,
-proof ownership or external source investigation requires a scoped follow-up;
-none is silently added to the notes-only assignment. Attribution deferred; no
-source was materialized or author doctrine asserted.
+The independent challenge accepted the two collection-scope deductions and the
+intermediary reading above. The missing substantive dependency is an
+independently motivated generation standard for concrete existence; the mixed
+abstract-realizer variant is classified below. The certified equivalence
+`de375db2` checks the dependency audit but does not supply that warrant.
+Attribution deferred; no source was materialized or author doctrine asserted.
+Corpus, attribution and whitespace checks concern records and links, not
+philosophical truth.
 
-Validation boundary: corpus/attribution/whitespace checks concern records and
-links, not philosophical truth. Service health returned the supplied older
-preview HEAD; an explicit canonical-workspace dossier request returned this
-note's baseline HEAD. Lean preview was not used. No theorem, claim, Challenge,
-closure rule, transfer spec or metaethics record changes; required proof gates
-remain unchanged for any later proof implementation.
-
-## Mixed-supplier follow-up: complete proposed outcome for parent challenge
+## Mixed-supplier follow-up: finite profiles
 
 At canonical baseline `07ef9812984b85bc07b1030a322f0eff33db081f`, preserving
 parent repairs in attempt 4da08bd8 and definition 38b9012a, the following finite
@@ -205,8 +199,8 @@ abstract co-grounds on both root and nonroot concreta. Blanket supplier
 concreteness implies it vacuously; the first two profiles satisfy it while
 violating that blanket bridge. The third fails it.
 
-Proposed general deduction, pending Lean certification and semantic challenge:
-with borrowed reality this path bridge implies CCR. Take a nonempty rootless
+General deduction, later certified as result `2170237a-2347-4fa2-a691-0f8ec8e29e07`
+(`closedOfLocalized`): with borrowed reality this path bridge implies CCR. Take a nonempty rootless
 ground-closed concrete collection S. If a member has an abstract supplier,
 follow its finite root path backwards; ground closure puts the root in S,
 a contradiction. Otherwise every actual supplier of every member is concrete,
@@ -229,99 +223,139 @@ reality and fails the other three conditions. Some actual supplier may
 be abstract even where its recipient is a concrete root.
 [Assignment count](../../TruthCore/Causality/MixedSupplierCensus.lean#L35) · [Application of the registered theorems](../../TruthCore/Causality/MixedSupplierCensus.lean#L42) · [Rooted controls](../../TruthCore/Causality/MixedSupplierCensus.lean#L71) · [Cycle control](../../TruthCore/Causality/MixedSupplierCensus.lean#L90)
 
-Proposed assessment: the blanket bridge is stronger than these mixed examples
-need. The localized bridge improves compatibility with abstract co-grounds but
-still requires a defended concrete-root condition. The rootless primitive or
-globally constrained rival survives; satisfying structural constraints alone is
+Assessment: the blanket bridge is stronger than these mixed examples need. The
+localized bridge improves compatibility with abstract co-grounds but still
+requires a defended concrete-root condition. The rootless primitive or globally
+constrained concrete rival survives; satisfying structural constraints alone is
 not sufficient existential explanation. No accepted floor item refutes it here.
-Premise warrant remains independent of both the finite results and the proposed
-equivalence. Next: coordinator challenges this complete proposed outcome, then
-certify the general equivalence and localized bridge in a new sibling batch
-without modifying frozen Challenges. General deductions here remain uncertified;
-no new consequential finding is represented as independently reviewed.
+Premise warrant remains independent of both the finite results and the certified
+equivalence. The general equivalence and the localized bridge were certified in
+the sibling batch below without modifying frozen Challenges.
 
 ### Independent challenge: dependency of the localized bridge
 
 The localized bridge does not independently warrant rootedness. At one fixed
-profile, world and selected relation, classical inspection suggests CCR is
-equivalent to every actual concretum having a finite concrete-ground path from
-an ActualRoot. The set of concrete candidates unreachable from roots is
+profile, world and selected relation, CCR is equivalent under explicit excluded
+middle to every actual concretum having a finite concrete-ground path from an
+ActualRoot (result `e95cc1a9-d05d-478f-9001-4092d0abf059`). The set of concrete candidates unreachable from roots is
 ground-closed and rootless; conversely, closure propagates a finite root path
 back into a collection. CCR also implies borrowed reality without blanket
-supplier concreteness. These proposed deductions together give
-`CCR ↔ (borrowed reality ∧ localized bridge)`. All general equivalences remain
-uncertified. The decomposition permits mixed co-grounds but relocates, rather
+supplier concreteness (result `89f57749-a292-40bd-98aa-b953f57f7dd2`). Together
+these give `CCR ↔ (borrowed reality ∧ localized bridge)` (result
+`3f3cc37b-1f9f-4231-a8f9-9b06c287921d`). The decomposition permits mixed co-grounds but relocates, rather
 than discharges, the rootedness burden for abstract-supplied recipients.
 
 The independently reproduced enumeration covers one world, one to three
 candidates, all candidates actual, every concreteness assignment, directed
 relation including loops, and subset. It includes empty concrete populations,
 but not an empty candidate type or nonactual candidates. It supplies no general
-Lean theorem or metaphysical warrant. The next semantic test needs a positive
-mixed rootless realization account, distinguishing partial co-grounding from
-sufficient existential support; further enumeration cannot settle that warrant.
+Lean theorem or metaphysical warrant. Further enumeration cannot settle that warrant; the partial versus sufficient
+reading of the supplier edge is resolved in the next section.
 
-## General certification draft and realization test
+## General certification and realization test
 
-The sibling `ConcreteRootAccess` vocabulary and batch now draft the general
+The sibling `ConcreteRootAccess` vocabulary and batch (#1575) certify the general
 obligations at one fixed profile, world and relation. `RootAccess` starts at an
 ActualRoot (zero edges allowed) and takes finitely many supplier-to-recipient
 steps through actual concrete endpoints. There is no finiteness, inhabitedness,
-actuality-of-all-candidates or uniform length assumption. The proposed results
-are CCR iff universal access (explicit excluded middle), CCR implies borrowed
-reality (constructively, without supplier concreteness), CCR implies the
-localized bridge (explicit excluded middle), borrowed reality plus the localized
-bridge implies CCR (explicit excluded middle), and their equivalence. Blanket
-supplier concreteness separately gives CCR iff borrowed reality constructively.
-These are logical decompositions; CCR itself entails the localized bridge.
-They add support options without independently warranting CCR.
+actuality-of-all-candidates or uniform length assumption. The certified results
+are CCR iff universal access (`e95cc1a9`, explicit excluded middle), CCR implies
+borrowed reality (`89f57749`, constructively, without supplier concreteness),
+CCR implies the localized bridge (`17deb517-6bfa-46ec-b161-6c866bc25632`,
+explicit excluded middle), borrowed reality plus the localized bridge implies
+CCR (`2170237a`, explicit excluded middle), and their equivalence (`3f3cc37b`).
+Blanket supplier concreteness separately gives CCR iff borrowed reality
+constructively (`de375db2`). Universal access implies CCR constructively
+(`4f4fab04-0de2-4481-b2db-52ae972321a3`), and CCR implies universal access under
+excluded middle (`7637c090-1cfd-4823-8c2d-cca1fbeec771`).
 
-A sharper positive mixed rival uses two concrete recipients a,b and abstract
-structure L, with a supplying b, b supplying a, and L supplying both. Distinguish
-partial constraints `a=b` from a sufficient realization rule `L implies a and b`:
-the former admits both the all-zero and all-one Boolean assignments and does
-not select existence; the latter selects the positive assignment, conditional
-on L, without any concrete root. L's reality and the sufficient rule are open
-commitments, not explained by the equality constraints. Interpreting the edges
-as partial co-grounds permits this account; interpreting every edge as a
-separately sufficient existential supplier is a different, stronger account.
-Neither interpretation follows from Profile.grounds alone.
+These are logical decompositions, not independent support. Borrowed reality
+is now proved only from CCR: `89f57749` is classified `loop_back` (connected
+only) by `truth orphans`. The borrowed-and-supplier-concreteness route and the
+borrowed-and-localized route to CCR are circular until borrowed reality or the
+localized bridge gains support not routed through CCR. The results relating CCR,
+universal access, and borrowed reality with the localized bridge are equivalent
+reformulations of one assumption. Three routes enter this class from outside:
+actual grounding well-foundedness (result 02697d48), per se attenuation (result
+4a3b131f), and universal access `a9a13d38-2b4e-4a0b-9549-875e5af10e20` recovered
+from one finite ancestral source `8269797e` (result `a53edd5b`). The derivations
+of `8269797e` on file run through GOD_4 existence or back through universal
+access, so that third entry is not yet independent warrant either.
 
-An attempted exclusion by choosing the least fixed point of the equations
-selects zero, but that selects generative semantics rather than deriving it.
-Intervention tests on lamps test activity under external boundary conditions;
-they do not distinguish these accounts of existence as such. No independent
-exclusion has therefore been found within the accepted interpretation. The
-precise next discriminator is a defended sufficient-realization law or a
-substantive reason why existential support must be generated from concrete
-roots. No floor conflict or rival defeat is asserted. This is the complete
-new proposed outcome for the parent's semantic challenge; the earlier finite
-challenge is reused only for its unchanged finite scope. Final gate status is
-reported in the PR/handoff, not inferred from these proofs' presence.
+A sharper mixed rival uses two concrete recipients a,b and abstract structure L,
+with a supplying b, b supplying a, and L supplying both. Distinguish partial
+constraints `a=b` from a sufficient realization rule `L implies a and b`: the
+former admits both the all-zero and all-one Boolean assignments and does not
+select existence; the latter selects the positive assignment, conditional on L,
+without any concrete root. Neither interpretation follows from `Profile.grounds`
+alone. Disambiguation `acb74cb3-033a-4f48-be16-9f593972ffb9` now records the two
+readings as senses of the supply edge: SUPPLY_EDGE_1, partial co-ground
+(`ConcreteRootAccess.PartialCoGround`), and SUPPLY_EDGE_2, sufficient supply
+(`ConcreteRootAccess.SufficientSupply`). They exclude each other constructively
+and cover every actual edge under explicit excluded middle. The eight certified
+results quantify over the neutral edge and hold on either sense.
+
+**Classification under CONCRETE_6 (post-merge challenge, 2026-11-28).** Every
+statement of this batch reads `concrete` as CONCRETE_6, having esse in re, and
+`abstract` as its contradictory (disambiguation 623ddbf6, owner #1103). The
+realization rival then faces two horns.
+
+1. *L has esse in re.* Then L is CONCRETE_6. If L has no actual concrete
+   supplier, it is an ActualRoot; a and b have root access in one step and CCR
+   holds (`closedOfAccess`). The profile is a rooted model like limitGrounder
+   or rootedCycle, not a rival to CCR. If L has a concrete supplier, the
+   question moves to L's concrete ancestors, a concrete network assessed
+   against borrowed reality.
+2. *L lacks esse in re.* Then the mechanism has something without esse in re
+   sufficiently supplying esse in re (SUPPLY_EDGE_2). No record on file gives
+   an account of how that is done.
+
+The rival records no independent justification for horn 2: L's reality and the
+sufficient rule were left as open commitments. This is the configuration that
+[esse-root-leaves.md, (f) row 6](esse-root-leaves.md#f-recorded-objections-and-rivals-classified)
+already classifies, "an abstract cause of esse". So under CONCRETE_6 the mixed
+realization-law rival is classified **no substantive objection identified**.
+It stays a formal alternative: the abstract-supplied cycle
+`MixedSupplierCensus.cycleRow` satisfies borrowed reality and fails CCR, the
+localized bridge and supplier concreteness. This classification claims no
+rival defeat and adds no warrant to CCR or to the localized bridge. Reopen on
+a positive account of esse supplied by something without esse in re, or on a
+defended reading of `ExistsAt` that admits suppliers with no esse in re.
+
+On SUPPLY_EDGE_1, L does not select existence. The a↔b network is then a pure
+concrete rootless network: rival R1/R2 of attempt 4da08bd8 against borrowed
+reality, not a new mixed rival. Under the decomposition (`3f3cc37b`), the mixed
+case bears only on the localized-bridge conjunct (a485166e) and on supplier
+concreteness (b28f3a70): borrowed reality holds there vacuously, because
+supply-closure excludes abstract-supplied members.
+
+**Live discriminator.** The open comparison is borrowed reality (45890c84)
+against a pure concrete rootless fixed-point network. An attempted exclusion by
+choosing the least fixed point of the equations selects zero, but that selects
+generative semantics rather than deriving it. Intervention tests on lamps test
+activity under external boundary conditions; they do not distinguish these
+accounts of existence as such. What would discriminate is an independently
+motivated generation (realization) standard for concrete existence: a reason,
+not restated as "borrowed" versus "own" being, why the reality of a concrete
+network must be supplied from a source outside it. The rival's unread leads
+(grounding infinitism, coherentism) are recorded in attempt 4da08bd8. Neither
+side is defeated, and no floor conflict is asserted.
 
 The earlier “no premise change” statements describe the notes-only and finite
-stages above. The sibling batch changes the computed diagnostic: five support
-alternatives are added; borrowed reality moves from bare to `closed` (proved
-from open premises), reducing reaching-root open leaves from 479 to 478, while
-the lowest-cost expanded route remains 16 and no bare premises are added.
-This is the repository's distinction between `closed` and `established`, not an
-independent warrant gain or root establishment. The exact computed delta is
-included in the PR. No closure rule is changed.
+stages above. The sibling batch adds derivations, all inside the CCR
+equivalence class described above. Borrowed reality now has `closed` frontier
+status (proved from open premises), but its only derivation is from CCR
+(`loop_back`). This is the repository's distinction between `closed` and
+`established`, not an independent warrant gain or root establishment. No
+closure rule is changed.
 
-Prose reconciliation for the parent: the older CCR statement/spec says it
-“imposes no … finite-path condition.” The general equivalence now shows that
-this can only mean no separately stipulated path clause or uniform length
-bound, not absence of finite access as a consequence. The sibling batch and
-updated definition give the precise meaning. The existing frozen theorem types
-are unchanged; the parent should reconcile the older spec's prose in its owned
-batch rather than read it as a counterclaim to this equivalence.
+Item 2 of #1553 (the older “no … finite-path condition” prose) was reconciled
+in #1575: CCR's paraphrase and `specs/closed-grounding-roots.toml` read “no
+asymmetry or uniform path-length bound is imposed”.
 
-Local verification of the final proof inputs: focused Solution build succeeds;
-8 exact theorem bindings match with zero mismatches; all 8 Comparator runs
-accept with empty permitted-axiom lists and independent NanoDa acceptance.
-Corpus, offline attribution, bundle audit, generated-spec and whitespace checks
-pass. The final PR's CI supplies broader integration coverage; the new parent
-semantic challenge and independent applicability/warrant remain pending.
+Verification: the eight results were merged in #1575 with exact bindings,
+Comparator runs with empty permitted-axiom lists, independent NanoDa acceptance
+and CI. Independent applicability and warrant remain open, as stated above.
 
 ## Source assembly consumer (#1729, 2026-11-17)
 

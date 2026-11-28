@@ -1,0 +1,25 @@
+{
+  "id": "acb74cb3-033a-4f48-be16-9f593972ffb9",
+  "label": "Supply edge: partial co-ground or sufficient supply",
+  "term": "supply edge of the closed-collection Profile",
+  "sense_definition_ids": [
+    "e2dffa9a-a37f-45eb-b149-73ed9eb3a06d",
+    "6f44f695-4098-4a14-a583-bc41ffdde7cf"
+  ],
+  "resolution": "The Profile edge m.grounds used by CCR (aca3baa1-9be6-4720-a53d-22050e638561), borrowed reality (45890c84-1d33-4273-b0ea-0f75bfd67a33), supplier concreteness and the ConcreteRootAccess batch is neutral: every registered theorem there holds whichever sense an edge takes, and no statement selects one. The localized bridge (a485166e-4868-4a0f-b017-ab095c16e202) demands root access for every concrete recipient with any actual nonconcrete supplier, whatever the sense. The two senses matter for the rival comparison only. The motivation 'harmless abstract co-grounds' reads an abstract edge as SUPPLY_EDGE_1: the abstract supplier does not select existence, so a concrete network it constrains is assessed as a pure concrete network against borrowed reality. The mixed realization-law rival reads it as SUPPLY_EDGE_2: under CONCRETE_6 a nonconcrete sufficient supplier of esse owes an account of supplying esse without esse in re (docs/notes/esse-root-leaves.md, (f) row 6). No argument passes from one sense to the other; the senses exclude each other constructively and cover every actual edge only under explicit excluded middle (ConcreteRootAccess.partial_or_sufficient).",
+  "term_label": "SUPPLY_EDGE",
+  "senses": [
+    {
+      "id": "4b54df1d-7204-4378-8e5c-f2a73dcb434e",
+      "label": "SUPPLY_EDGE_1",
+      "definition_id": "e2dffa9a-a37f-45eb-b149-73ed9eb3a06d",
+      "lean_declaration": "TruthCore.Causality.ConcreteRootAccess.PartialCoGround"
+    },
+    {
+      "id": "883ea6cf-d332-4298-ab60-4cf7fe320d8c",
+      "label": "SUPPLY_EDGE_2",
+      "definition_id": "6f44f695-4098-4a14-a583-bc41ffdde7cf",
+      "lean_declaration": "TruthCore.Causality.ConcreteRootAccess.SufficientSupply"
+    }
+  ]
+}

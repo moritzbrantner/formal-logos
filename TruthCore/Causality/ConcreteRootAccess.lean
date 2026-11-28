@@ -22,10 +22,50 @@ def UniversalRootAccess (m : Profile W B) (w : W) : Prop :=
   ∀ x, ActualConcrete m w x → RootAccess m w x
 
 /-- Root access is demanded only for concrete recipients with an actual
-nonconcrete supplier. This permits partial abstract co-grounds. -/
+nonconcrete supplier. This permits actual nonconcrete suppliers of concrete
+recipients; it reads the edge neither as a partial co-ground
+(`PartialCoGround`) nor as a sufficient supplier (`SufficientSupply`). -/
 def LocalizedBridge (m : Profile W B) (w : W) : Prop :=
   ∀ x y, ActualConcrete m w x → m.ontic.ExistsAt w y →
     ¬ m.concrete y → m.grounds w y x → RootAccess m w x
+
+/-- SUPPLY_EDGE_1, partial co-ground: an actual supplier's edge to `x` at `w`
+whose existence does not guarantee `x`'s existence: at some world accessible
+from `w` the supplier exists and `x` does not. Reading worlds as the
+admissible existence assignments, the supplier constrains but does not select
+`x`'s existence (the note's `a = b` constraint admits the all-zero assignment).
+Analyst sense, attribution deferred; `Profile.grounds` itself stays neutral. -/
+def PartialCoGround (m : Profile W B) (w : W) (y x : B) : Prop :=
+  m.ontic.ExistsAt w y ∧ m.grounds w y x ∧
+    ∃ v, m.ontic.frame.access w v ∧ m.ontic.ExistsAt v y ∧ ¬ m.ontic.ExistsAt v x
+
+/-- SUPPLY_EDGE_2, sufficient supply: an actual supplier's edge to `x` at `w`
+such that at every world accessible from `w` where the supplier exists, `x`
+exists. This is the realization-rule reading `L implies a and b`. Strict
+implication over accessible worlds is a coarse proxy: it records that the
+supplier selects `x`'s existence, not how. Analyst sense, attribution deferred. -/
+def SufficientSupply (m : Profile W B) (w : W) (y x : B) : Prop :=
+  m.ontic.ExistsAt w y ∧ m.grounds w y x ∧
+    ∀ v, m.ontic.frame.access w v → m.ontic.ExistsAt v y → m.ontic.ExistsAt v x
+
+/-- The two edge senses exclude each other (constructive). -/
+theorem not_sufficient_of_partial {m : Profile W B} {w : W} {y x : B}
+    (h : PartialCoGround m w y x) : ¬ SufficientSupply m w y x := by
+  rintro ⟨-, -, hs⟩
+  obtain ⟨-, -, v, hv, hy, hx⟩ := h
+  exact hx (hs v hv hy)
+
+/-- Under excluded middle every actual edge takes one of the two senses. -/
+theorem partial_or_sufficient {m : Profile W B} {w : W} {y x : B}
+    (em : ∀ p : Prop, p ∨ ¬ p) (hy : m.ontic.ExistsAt w y) (hg : m.grounds w y x) :
+    PartialCoGround m w y x ∨ SufficientSupply m w y x := by
+  rcases em (∃ v, m.ontic.frame.access w v ∧ m.ontic.ExistsAt v y ∧
+      ¬ m.ontic.ExistsAt v x) with h | h
+  · exact Or.inl ⟨hy, hg, h⟩
+  · refine Or.inr ⟨hy, hg, fun v hv hyv => ?_⟩
+    rcases em (m.ontic.ExistsAt v x) with hx | hx
+    · exact hx
+    · exact absurd ⟨v, hv, hyv, hx⟩ h
 
 def RootAccessEquivalence (m : Profile W B) (w : W) : Prop :=
   ClosedGroundingCollectionsRooted m w ↔ UniversalRootAccess m w

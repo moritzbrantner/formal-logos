@@ -1,0 +1,10 @@
+{
+  "id": "e65f6adc-d7c9-46e0-b564-4eae489df988",
+  "label": "Root-access equivalence tests CCR",
+  "subject_kind": "result",
+  "subject_id": "e95cc1a9-d05d-478f-9001-4092d0abf059",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "aca3baa1-9be6-4720-a53d-22050e638561",
+  "note": "Tests whether universal finite concrete root access is independent support for CCR: under explicit excluded middle the two are equivalent at the same profile, world and relation, so the route through closedOfAccess adds no warrant beyond that of its premise."
+}

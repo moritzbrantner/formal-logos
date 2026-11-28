@@ -1,0 +1,9 @@
+{
+  "id": "e2dffa9a-a37f-45eb-b149-73ed9eb3a06d",
+  "label": "SUPPLY_EDGE_1: a supply edge whose supplier does not guarantee the recipient",
+  "term": "partial co-ground (supply edge)",
+  "definition": "SUPPLY_EDGE_1. Ordinary meaning: an actual supplier contributes to a recipient's existence without its presence by itself guaranteeing that existence; other contributors or conditions are needed. Over the #505 Profile (PartialCoGround m w y x): y exists at w, m.grounds w y x, and at some world v accessible from w, y exists and x does not. Reading accessible worlds as the admissible existence assignments, the supplier constrains but does not select the recipient's existence. Example (formal): an equality constraint a = b admits both the all-zero and the all-one assignment, so it selects neither. Non-example: the realization rule of SUPPLY_EDGE_2. Distinguished from the bare Profile edge, which is neutral between the senses, and from a complete cause (DISAMB-COMPLETE-CAUSE-PARTIAL-GROUND, a different term). It excludes SUPPLY_EDGE_2 constructively (not_sufficient_of_partial); every actual edge takes one of the two senses under explicit excluded middle (partial_or_sufficient).",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.ConcreteRootAccess.PartialCoGround",
+  "note": "Analyst sense introduced in the #1553 challenge repair, attribution deferred. It names the reading under which the localized bridge's motivation treats abstract suppliers as harmless co-grounds (docs/notes/direct-grounding-warrant.md). Strict nonimplication over accessible worlds is a coarse proxy for 'does not suffice'; whether accessible worlds represent the relevant existence alternatives is an OPEN application obligation. What would source it: a reading of partial or co-grounding in the grounding literature, not read here."
+}
