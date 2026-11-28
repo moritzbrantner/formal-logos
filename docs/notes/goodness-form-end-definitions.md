@@ -947,16 +947,16 @@ good" in general, and the identity model witnesses it. The reply denies only
 that this horn carries its alleged consequence, an independent external
 standard. In the identity model, literal horn 1 holds and consequence horn 1
 fails. So the precise claim is this. Read literally, the dilemma is exhaustive
-in the identity model, but as an *exclusive choice between an external
-standard and arbitrary command* it is false, because literal horn 1 does not
-carry the consequence. "Neither horn holds" is true only on reading 2. The
+in the identity model, but in that model (under its open identity premises) it
+fails as an *exclusive choice between an external standard and constitution by
+approval*, because literal horn 1 does not carry the consequence. "Neither horn holds" is true only on reading 2. The
 controls are a premise-free mixing control: they show that the passage from
 literal horn 1 to the external-standard consequence fails.
 
 Approval-only dependence plausibly holds in Thomism for everything distinct
 from God, since creatures depend on God through his will (ST I q.19 a.4, an
 unread lead). If so, the exemplar exit would be closed for classical theism,
-and the identity or dependent-nature exit is the one it takes. This is
+and classical theism, holding simplicity, takes the identity exit specifically (the dependent-nature exit denies simplicity). This is
 provisional, because it rests on an unread lead. The exemplar exit fits
 theists with a distinct standard grounded in the divine nature (Alston and
 Adams are unread leads).

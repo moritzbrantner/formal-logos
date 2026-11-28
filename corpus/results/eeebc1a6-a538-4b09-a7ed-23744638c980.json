@@ -1,6 +1,6 @@
 {
   "id": "eeebc1a6-a538-4b09-a7ed-23744638c980",
-  "label": "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and will-only dependence",
+  "label": "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and approval-only dependence",
   "argument_id": "8f102bd2-a54f-47cc-9fe3-8bc1269088d7",
   "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
   "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",

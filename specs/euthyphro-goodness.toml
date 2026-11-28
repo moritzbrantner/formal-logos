@@ -56,7 +56,7 @@ disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
 [[statement]]
 id = "The named approval account fails or coextends with the due-actuality account"
 lean = "ApprovalFailsOrCoincidesWithDue"
-paraphrase = "Open weak approval premise: in the fixed profile the named fixed-assessor approval account either does not correctly describe goodness, or has pointwise the same extension as the named due-actuality account. Given the other three correct-support inputs it is equivalent to the due-actuality thesis, so it has no warrant of its own beyond its disjuncts; replacing 50d8be94 by it shows that 50d8be94 was stronger than needed, not that the thesis gained support."
+paraphrase = "Open weak approval premise: in the fixed profile the named fixed-assessor approval account either does not correctly describe goodness, or has pointwise the same extension as the named due-actuality account. Given the other three correct-support inputs and excluded middle it is equivalent to the due-actuality thesis, so it has no warrant of its own beyond its disjuncts; replacing 50d8be94 by it shows that 50d8be94 was stronger than needed, not that the thesis gained support."
 definitions = ["2b760306-fed0-583e-b7b8-53a8a1d85676", "b9df0e5b-7d1e-5259-a5d5-910e85328aab", "ea819c3e-09bb-5000-85f8-e4b28e34aead"]
 disambiguations = ["f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"]
 
@@ -328,7 +328,7 @@ blocker = "No participation or likeness vocabulary links the dependence frame to
 
 [[argument]]
 id = "8f102bd2-a54f-47cc-9fe3-8bc1269088d7"
-label = "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and will-only dependence"
+label = "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and approval-only dependence"
 theorem = "hornsCoverFromDistinctness"
 premises = ["STMT-EXCLUDED-MIDDLE", "Goodness is distinct from God and from God's nature", "Other things that depend on God for what they are depend on his approval"]
 conclusion = "5bb03e95-b971-445a-beb9-c6ba1ccf706a"

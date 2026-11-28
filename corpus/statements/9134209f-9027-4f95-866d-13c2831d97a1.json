@@ -1,7 +1,7 @@
 {
   "id": "9134209f-9027-4f95-866d-13c2831d97a1",
   "label": "The named approval account fails or coextends with the due-actuality account",
-  "paraphrase": "Open weak approval premise: in the fixed profile the named fixed-assessor approval account either does not correctly describe goodness, or has pointwise the same extension as the named due-actuality account. Given the other three correct-support inputs it is equivalent to the due-actuality thesis, so it has no warrant of its own beyond its disjuncts; replacing 50d8be94 by it shows that 50d8be94 was stronger than needed, not that the thesis gained support.",
+  "paraphrase": "Open weak approval premise: in the fixed profile the named fixed-assessor approval account either does not correctly describe goodness, or has pointwise the same extension as the named due-actuality account. Given the other three correct-support inputs and excluded middle it is equivalent to the due-actuality thesis, so it has no warrant of its own beyond its disjuncts; replacing 50d8be94 by it shows that 50d8be94 was stronger than needed, not that the thesis gained support.",
   "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalFailsOrCoincidesWithDue",
   "definition_ids": [
     "2b760306-fed0-583e-b7b8-53a8a1d85676",
