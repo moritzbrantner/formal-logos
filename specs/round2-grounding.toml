@@ -141,6 +141,7 @@ disambiguations = ["DISAMB-CAUSAL-POWER-GROUNDING", "DISAMB-CAUSE"]
 id = "ESSE-CAUSE-GROUND-VIA-DEPENDENCE"
 definitions = ["DEF-ACT", "DEF-ACTUAL-CONCRETE-GROUND-ANCESTRY", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-CAUSE-OF-PERFECTION", "DEF-CONCRETE-ESSE-IN-RE", "DEF-DEPENDS-FOR-BEING", "DEF-ESSE", "DEF-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND", "DEF-KANT-ONTOLOGICAL-MODEL"]
 theorem = "esseCauseGroundViaDependence"
+strong_version_needed = { "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495" = "The proof applies it to a distinct esse cause given only c ≠ x and CausesIn c x esse. The weak version SustainingEsseCauseIsDependedOn (149ed837) also requires that the cause give x being at every moment and world at which x is (a History/BeingGiving antecedent). This theorem has no such vocabulary and no premise supplies it." }
 premises = ["STMT-ESSE-CAUSES-EXIST-AT", "STMT-ESSE-CAUSES-ARE-CONCRETE", "STMT-ESSE-EFFECT-DEPENDS-ON-ITS-CAUSE", "STMT-ACTUAL-DEPENDENCE-IS-GROUNDING"]
 conclusion = "STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND"
 rule = "Universal instantiation, conjunction introduction and modus ponens"
@@ -185,6 +186,7 @@ meaning = "A second route without causes of esse: what has its necessity caused 
 id = "CONTINGENT-GROUNDED-VIA-PARTICIPATION"
 definitions = ["DEF-ACT", "DEF-ACTUAL-CONCRETE-GROUND-ANCESTRY", "DEF-BRUTE-ROOT-RELATIVE-GROUNDING", "DEF-CAUSE-OF-PERFECTION", "DEF-CONCRETE-ESSE-IN-RE", "DEF-ESSE", "DEF-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND", "DEF-KANT-MODAL-CONTINGENCY", "DEF-KANT-ONTOLOGICAL-MODEL", "DEF-MODAL-FIXTURE-FRAME", "DEF-NECESSARY-INDIVIDUAL-DOMAIN", "DEF-PARTICIPATED-ESSE"]
 theorem = "contingentGroundedViaParticipation"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x." }
 premises = ["STMT-CONTINGENT-CONCRETUM-PARTICIPATES-ESSE", "STMT-PARTICIPATED-ESSE-HAS-DISTINCT-CAUSE", "STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND"]
 conclusion = "STMT-EVERY-CONTINGENT-GROUNDED-AT"
 rule = "Universal instantiation, existential elimination and introduction"
@@ -201,6 +203,7 @@ meaning = "The Kantian local causal principle supplies an existing distinct caus
 [[argument]]
 id = "CONTINGENT-GROUNDED-VIA-DEPENDENCE"
 theorem = "contingentGroundedViaDependence"
+strong_version_needed = { "2e248016-f8bf-5d8a-931e-7f9ebbb13e42" = "Applied at (y, x), where y is the actual concretum on which x depends, supplied by ActualContingentDependsOnActualConcretum. No premise gives y ≠ x (x may depend on itself), and the weak version ActualDistinctDependenceIsGrounding (a8298fbd) needs it." }
 premises = ["STMT-ACTUAL-CONTINGENT-DEPENDS-ON-ACTUAL-CONCRETUM", "STMT-ACTUAL-DEPENDENCE-IS-GROUNDING"]
 conclusion = "STMT-EVERY-CONTINGENT-GROUNDED-AT"
 rule = "Universal instantiation, existential elimination and introduction"

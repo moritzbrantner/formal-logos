@@ -20,6 +20,9 @@
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282",
     "205a39c3-915d-5fe4-8076-a9ff91329e08"
   ],
+  "strong_version_needed": {
+    "957a71fe-ba7e-5633-bef2-f5d287362fc5": "MaximeEnsIsGod is applied (directly or through FirstMoverIsMaximeEns.firstMoverIsMaximeEns) to an arbitrary m with IsMaximumIn InAct MoreIn esse m, which says only that nothing exceeds m. The weak version GodNamesTheUniqueMaximeEns (e39a4fce) also requires that every maximum in being equal m. No premise of this argument yields uniqueness of maxima: there is no cause-is-more-such premise."
+  },
   "definition_ids": [
     "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
     "a2a8de58-42e0-5481-b7fb-848ae8602036",

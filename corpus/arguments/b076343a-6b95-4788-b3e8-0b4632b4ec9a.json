@@ -33,5 +33,9 @@
     "002f42cb-3015-5644-80b3-d408538394e6",
     "c097f626-c39c-57cd-ade4-ebb2dd900a4c",
     "508617ab-cf24-5f3b-a387-64b3991359ec"
-  ]
+  ],
+  "strong_version_needed": {
+    "1e47e6db-da06-5a40-9ccf-fbd1f929c596": "The proof applies the premise to the selected mover g', given only that g' is moved in some respect r'' (from excluded middle on ∃ r'', MovedIn g' r''). No premise relates r'' to g' moving f in r'. The weak version SecondMoversMoveAsMovedInRelevantRespectReading (96da1d33) requires RelevantTo g' f r' r''.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ r, MovedIn f r`; `∃ r'', MovedIn g' r''`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

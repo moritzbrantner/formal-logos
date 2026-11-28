@@ -25,5 +25,8 @@
       "statement_id": "7f24ce4d-9d93-56dc-9bd6-2dd947c224e5",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "cdf897a8-5490-561a-b9d2-507486a3f192": "The proof uses the root n's own existence at every accessible world (hn : BoxExistsAt) to build the actualist-K node. NecessaryRootDeDictoK (0efe7b16) gives only that something exists at each accessible world, not n. NecessaryRootTertiaVia (32a2f51c) gives only ¬◇¬(n exists), which yields existence at each world only by double-negation elimination; this zero-axiom result (permitted_axioms []) has no excluded-middle premise."
+  }
 }

@@ -29,5 +29,9 @@
   "disambiguation_ids": [
     "637c53a7-2616-5c34-aa9a-9f7dd880eaed",
     "70af59cf-0351-5332-9c89-b80231412529"
-  ]
+  ],
+  "strong_version_needed": {
+    "cf4364f6-81c6-5018-95e4-178353d2a2b3": "The proof applies atomicity to an arbitrary population member x and to an arbitrary cause c of the covering whole, in a bare part order B with no worlds, existence or modality. The weak version ContingentAtomicParts (83fdeb19) is stated over an Ontic's actual individuals and gives atoms only below contingent ones. It cannot be stated in this theorem's vocabulary, and nothing here makes x or c contingent.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ c, G.edge c x` (in source); `TruthCore.Causality.AtomisticCausalSource.SourceExists G` (in source). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

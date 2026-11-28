@@ -39,5 +39,8 @@
       "role": "conclusion",
       "statement_id": "0bdcf366-29c7-5d45-b603-5c929dcad976"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "0e02cd69-8fb0-4859-8287-937440c84b5b": "The calibration is applied to the arbitrary existing witness n supplied by NecessarilyUnderived. The weak version SelectedActualFusionPartsConcreteAt (00c40c6f) covers only parts of one selected fusion sum (on a part order B lacks here), and no premise places n among them."
+  }
 }

@@ -25,5 +25,8 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "a59fd0ac-f276-528d-8dc3-c3eddd331ac7",
     "c097f626-c39c-57cd-ade4-ebb2dd900a4c"
-  ]
+  ],
+  "strong_version_needed": {
+    "8a22ae75-4198-5a32-ae52-bad2848a50a5": "Applied to y causing x in r, given only that y is itself efficiently caused by z in some respect r' (from the per se mover link). No premise relates r' to r. The weak version SecondEfficientCausesCauseAsCausedInRelevantRespectReading (446e3f2a) requires RelevantTo y x r r'."
+  }
 }

@@ -13,5 +13,8 @@
   "inference_ids": [
     "a6e3c066-cdbd-5cea-8644-dae8fa596ecd"
   ],
-  "meaning": "ST I q.2 a.3 co., quinta via before the scope step: each natural body is directed by some knower. Composes AQUINAS-ST-I-Q2-A3-QUINTA-VIA-ACTS-FOR-AN-END. Also verified: teleonomyModel (the arrow-and-archer premise is needed: bodies tend to the best and nothing directs them) and naiveScopeShiftFails (all premises hold, two archers each direct one body, and no single intelligent being directs all: the quinta via's literal conclusion does not follow from its stated premises)."
+  "meaning": "ST I q.2 a.3 co., quinta via before the scope step: each natural body is directed by some knower. Composes AQUINAS-ST-I-Q2-A3-QUINTA-VIA-ACTS-FOR-AN-END. Also verified: teleonomyModel (the arrow-and-archer premise is needed: bodies tend to the best and nothing directs them) and naiveScopeShiftFails (all premises hold, two archers each direct one body, and no single intelligent being directs all: the quinta via's literal conclusion does not follow from its stated premises).",
+  "strong_version_needed": {
+    "658814de-ffeb-5824-afdd-2797e5cdad42": "The universal conjunct hObs.2 is applied to an arbitrary natural body x (intro x hx), and the conclusion holds for every natural body. The weak version SomeNaturalBodiesActRegularlyForTheBestReading (fa37dde9) gives regular attainment of the best for one natural body only."
+  }
 }

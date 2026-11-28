@@ -52,6 +52,7 @@ meaning = "Sole-premise strength comparison on the exact actual esse-cause dicti
 [[argument]]
 id = "Maximal esse causality from the common uncaused cause, without CCR or composition"
 theorem = "maximalCausesOfCommon"
+strong_version_needed = { "9ff2814e-3ed6-4135-a574-12d11dcbbd19" = "The proof takes the one uncaused actual bearer e that causes the esse of every received actual being (⟨e, he, hu, hall⟩) and argues from that single common cause. The weak version ClosedActualEsseCollectionsRooted (20babef7) roots each closed collection of esse causes but supplies no single cause common to all received beings.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.ReceivedActual p y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["One uncaused actual bearer causes the esse of every received actual bearer", "457698e4-eb21-4561-ab32-eccbfb0a992e", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "cffad050-e86d-48b8-b04b-be47fcc1352d", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7"
 axioms = []

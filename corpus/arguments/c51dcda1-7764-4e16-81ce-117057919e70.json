@@ -85,5 +85,9 @@
       "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
       "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3": "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "EM is applied in maximumEqualsRoot to y = g (a maximum and the root g) before g is shown to be GOD_4: hGod is derived afterwards from hOnlyMaximum. LocalLogic (ca432e24) decides identity only with an established GOD_4 candidate."
+  }
 }

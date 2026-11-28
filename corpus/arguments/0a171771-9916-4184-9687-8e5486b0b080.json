@@ -31,5 +31,8 @@
       "statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
       "role": "premise"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "c36b509c-3057-40f5-ac0b-60751fb0cf27": "The path premise is applied to an arbitrary concrete supporter a of a necessary b, and the walk along the path then derives that a is necessary. NecessarySupportActualPaths (d0718714) presupposes NecessaryAt a, which is the conclusion here. NecessarySupportActuallyCovered (df42581f) gives only some actual ground of b, not a path from a."
+  }
 }

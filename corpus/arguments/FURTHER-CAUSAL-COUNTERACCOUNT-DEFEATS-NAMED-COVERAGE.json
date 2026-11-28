@@ -16,5 +16,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "32416dd1-c3ce-5180-bf06-1cabab088be7"
-  ]
+  ],
+  "strong_version_needed": {
+    "a94a02e3-5e86-59f6-aa17-ad7f7914c914": "The proof uses the second conjunct h.2 (¬ NamedCases f), contradicting it with the coverage hypothesis applied to h.1. The weak version SelectedCounter (fd141661) is only the first conjunct."
+  }
 }

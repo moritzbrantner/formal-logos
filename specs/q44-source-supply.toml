@@ -27,6 +27,7 @@ disambiguations = ["00e0d443-eb39-56a3-9179-9c8852ca4a2b", "1aef8986-ed29-564f-9
 [[argument]]
 id = "Q44 essential-source supply from actual identity ancestry and reception"
 theorem = "sourceSupply"
+strong_version_needed = { "b4987085-f7b0-4031-a795-364873d3c216" = "Composition is applied by Q44SourceSupply.causeOfChain along an arbitrary finite chain of actual esse causes (TransGen ActualEsseCause), at every link. The weak version PerSeComposition (7648194d) composes only when the later link is per se (PerSeActualEsseCause … AsCaused). This theorem has no AsCaused relation and no premise makes the chain links per se." }
 premises = ["cbb068e8-337d-5772-a3f9-10df457ba9fe", "3d01134d-0b03-4469-a81a-a18d6e179fa0", "Actual esse-cause responsibility composes along actual cause links", "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7", "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2", "14325c83-1c3f-5afb-b63f-52b0c2b2a326", "bc1810e5-1070-5585-9b0f-e17ca3547ac7"]
 conclusion = "de05072a-5db0-4a31-8e24-b18fedf01401"
 axioms = []
@@ -36,6 +37,7 @@ meaning = "Each participant is actual with distinct represented esse. Its existi
 [[argument]]
 id = "Q44 essential-source supply from the existing common ancestor and reception"
 theorem = "sourceSupplyFromCommon"
+strong_version_needed = { "b4987085-f7b0-4031-a795-364873d3c216" = "Composition is applied by Q44SourceSupply.causeOfChain along an arbitrary finite chain of actual esse causes (TransGen ActualEsseCause), at every link. The weak version PerSeComposition (7648194d) composes only when the later link is per se (PerSeActualEsseCause … AsCaused). This theorem has no AsCaused relation and no premise makes the chain links per se." }
 premises = ["cbb068e8-337d-5772-a3f9-10df457ba9fe", "c35b1a5c-6405-449b-993b-8196b2457e08", "Actual esse-cause responsibility composes along actual cause links", "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7", "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2", "14325c83-1c3f-5afb-b63f-52b0c2b2a326", "bc1810e5-1070-5585-9b0f-e17ca3547ac7"]
 conclusion = "de05072a-5db0-4a31-8e24-b18fedf01401"
 axioms = []
@@ -45,6 +47,7 @@ meaning = "Sibling retaining CommonEsseIsEssenceSource as a direct support optio
 [[argument]]
 id = "Selected q44 source supply by aligning the actual ancestor with p"
 theorem = "selectedSourceSupply"
+strong_version_needed = { "b4987085-f7b0-4031-a795-364873d3c216" = "Composition is applied by Q44SourceSupply.causeOfChain along an arbitrary finite chain of actual esse causes (TransGen ActualEsseCause), at every link. The weak version PerSeComposition (7648194d) composes only when the later link is per se (PerSeActualEsseCause … AsCaused). This theorem has no AsCaused relation and no premise makes the chain links per se." }
 premises = ["cbb068e8-337d-5772-a3f9-10df457ba9fe", "3d01134d-0b03-4469-a81a-a18d6e179fa0", "Actual esse-cause responsibility composes along actual cause links", "6dfe01ab-e3f2-5a4c-b102-701c161f2cf7", "7fcfcee8-86ab-5a16-84ad-124cf5e8f9b2", "14325c83-1c3f-5afb-b63f-52b0c2b2a326", "bc1810e5-1070-5585-9b0f-e17ca3547ac7", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "e2bfd1b1-7d5e-4be3-b5d4-f9db988c5745"]
 conclusion = "The selected p supplies a distinct actual own-being cause for every participant"
 axioms = []

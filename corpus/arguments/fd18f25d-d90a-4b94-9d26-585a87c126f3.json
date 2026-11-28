@@ -26,5 +26,8 @@
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "be54be36-3ce8-53f9-8168-50d1114e6c76"
-  ]
+  ],
+  "strong_version_needed": {
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42": "The proof applies the premise reflexively at (a, a) to show that unrestricted reflexive dependence excludes actual concreta. The weak version ActualDistinctDependenceIsGrounding (a8298fbd) covers only distinct c ≠ x."
+  }
 }

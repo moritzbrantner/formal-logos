@@ -31,6 +31,7 @@ meaning = "Both initial steps have a common extension by the local premise. Indu
 [[argument]]
 id = "Identify an actual root from existence and source agreement on its grounding graph"
 theorem = "uniqueActualOfSourceAgreement"
+strong_version_needed = { "dc397705-d727-419e-92f9-65d44e1ff15d" = "The proof extracts an actual root n (obtain ⟨n, hn⟩ := hRoot). The weak version WholeRosterNotTrapped (5c898d24) holds vacuously for an empty actual roster. It yields a root only together with an actual-population premise (InhabitedConcreteAt) and excluded middle (WholeRosterRootEquivalence.equivalence), and this argument lacks the population premise." }
 premises = ["dc397705-d727-419e-92f9-65d44e1ff15d", "861e20d6-7d65-5856-85cf-0cd0d0c167f3"]
 conclusion = "7ab0ddcb-cf48-5457-bee7-b6ea9c13b6b1"
 axioms = []

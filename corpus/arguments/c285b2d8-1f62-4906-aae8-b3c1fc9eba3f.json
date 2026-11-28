@@ -62,5 +62,9 @@
       "to": "57356a7a-ed0a-478f-abfc-2d47dd631135",
       "statement_id": "dd41c165-129a-59d3-84ce-bd13c0944901"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "dd41c165-129a-59d3-84ce-bd13c0944901": "Passes the premise to NecessarilyUnderived.PositiveUnion.checks, whose lemma not_not_underived_of_union_wellFounded applies it to support edges at an arbitrary world w (the support union over all worlds). The weak version ActualNoContingentConcreteSupport (84751fc2) covers support at the selected world only.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

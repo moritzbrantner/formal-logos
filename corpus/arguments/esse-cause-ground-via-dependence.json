@@ -44,5 +44,8 @@
     "34ddfede-ff4d-59ad-9882-4bcb490df9bb",
     "92df85d7-aae7-57ac-b84e-3780ade842f1",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
-  ]
+  ],
+  "strong_version_needed": {
+    "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495": "The proof applies it to a distinct esse cause given only c ≠ x and CausesIn c x esse. The weak version SustainingEsseCauseIsDependedOn (149ed837) also requires that the cause give x being at every moment and world at which x is (a History/BeingGiving antecedent). This theorem has no such vocabulary and no premise supplies it."
+  }
 }

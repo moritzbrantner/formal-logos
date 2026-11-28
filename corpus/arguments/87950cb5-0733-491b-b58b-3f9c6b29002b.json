@@ -28,5 +28,8 @@
       "statement_id": "c85e8ef5-3dc4-502d-90f8-da1429e33fd8",
       "role": "premise"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "c85e8ef5-3dc4-502d-90f8-da1429e33fd8": "The proof uses both directions of the biconditional: .mp (InPotency → CanBe ∧ ¬ InAct for arbitrary x, r) and .mpr (CanBe ∧ ¬ InAct → InPotency). None of the weak versions supplies the converse, and AnalysisOnMoved (d93acdf0) gives the forward direction only for moved things."
+  }
 }

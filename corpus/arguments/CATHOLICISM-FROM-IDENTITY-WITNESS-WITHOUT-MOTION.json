@@ -88,6 +88,10 @@
     "002f42cb-3015-5644-80b3-d408538394e6",
     "508617ab-cf24-5f3b-a387-64b3991359ec"
   ],
+  "strong_version_needed": {
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85": "The proof applies the grades premise at the respect verum (truth): QuartaVia.quartaVia finds a maximum in truth and only then passes to being by MostTrueIsMostBeingReading. The weak version GradesToMaximumAtBeing (e4e6b0cd) gives a maximum only in the respect esse.",
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in ClassicalAttributesIdentity.godHasClassicalAttributes), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct."
+  },
   "term_senses": {
     "GOD": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a"
   }

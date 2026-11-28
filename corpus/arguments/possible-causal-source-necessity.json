@@ -34,5 +34,9 @@
     "aee7e4c7-819b-5905-b363-813c06b7e92c",
     "7507d645-874d-5434-add8-2f49c2801d36",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "ef69a630-2277-56be-86ca-f05f8193093a": "Through sameSource, the causal principle is applied at an accessible world v where headless coverage fails (source_necessary_at m v …), not at the selected world w. The weak version SelectedActualCausalCoverage (d8a1fb16) covers contingent individuals at the selected world only.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ExistsAt z ↑s` (in source_necessary_at); `∃ y, (TruthCore.Causality.WorldSourceRegress.actualGraph m v).edge y x` (in no_sources_iff_headless). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

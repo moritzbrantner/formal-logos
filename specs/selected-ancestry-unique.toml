@@ -4,6 +4,7 @@ results = "TruthCore.Results.Causality.SelectedAncestryUnique"
 [[argument]]
 id = "Selected necessary ancestor determines the unique actual root"
 theorem = "uniqueRoot"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, more () y x` (in actualFork); `∃ m, TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn act more () m` (in actualFork). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["177b9b54-212d-5162-b288-d0cb70899f3d", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "da09703b-0b1e-5dca-9dd7-6c0c8d1610d7", "0436de86-6579-53f2-9ff5-2111ba44ebae", "cb1cdea9-eb6c-578c-8008-84e0d4107fd3", "e4e6b0cd-f61a-5605-a302-573c67cf063a"]
 conclusion = "91b085c4-f1c7-5ada-9848-8e7dc753313a"
 rule = "Shared maximum identifies every actual root"

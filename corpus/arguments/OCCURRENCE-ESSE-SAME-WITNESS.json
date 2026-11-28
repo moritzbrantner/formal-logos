@@ -61,5 +61,10 @@
     "5323527f-56a2-5d11-8a76-5b25461a61b4",
     "896d4cb9-3c62-5230-a499-f23feae9d204",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "3a2bb5f9-70c1-5f3f-9798-ac250deffa90": "Through ancestryRootForkWithRoot, the proof does Acc induction along the full ActualConcreteGround relation below the bearer (SelectedAncestry.rootForkOfAccessibility) to reach an ancestor with no actual concrete ground at all. The weak version ThinkingBearerPredecessorAccessible (debcd4e1) gives accessibility only for descent through distinct thinking predecessors and allows infinite descending chains of nonthinking grounds, so it yields no such root.",
+    "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae": "Applied to the contingent ground-root x of the bearer's ancestry, which the fork supplies with no claim that x bears an occurring thought. The weak version ThinkingBearerConeContingentGrounded (db72222b) grounds only contingent thinkers in the cone and permits an ungrounded nonthinking contingent ancestor.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `(TruthCore.Logic.CogitoEsse.profile o grounds p.InAct p.esse).ontic.ExistsAt v x` (in rootForkOfAccessibility); `TruthCore.German.Kant.CosmologicalInference.ContingentAt (TruthCore.Logic.CogitoEsse.profile o grounds p.InAct` (in rootForkOfAccessibility). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -19,5 +19,8 @@
   ],
   "disambiguation_ids": [
     "840d320e-ed3b-553b-b0dd-750c61c298ba"
-  ]
+  ],
+  "strong_version_needed": {
+    "62b4a40a-919e-5da4-998c-131c386b7361": "The conclusion AdmittedKnown quantifies over every world, and Euclideanness is applied at that arbitrary world w (intro p admissible w …; euclidean w u v …), not at the fixed actual world. EuclideanAt R actual (1b1462e6) covers successors of one world only."
+  }
 }

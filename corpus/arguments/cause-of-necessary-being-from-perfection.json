@@ -23,5 +23,8 @@
   "disambiguation_ids": [
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa"
-  ]
+  ],
+  "strong_version_needed": {
+    "f8ba2429-b4f1-5712-a4d3-798213963d34": "Applied to an arbitrary cause c of a being x's esse (hEvery c x nec hc …), with no claim that c is a universal cause or distinct from x. Neither weak version covers that case alone: UniversalCauseTransfersPerfections (b26c10a0) covers only universal causes with distinct effects, and ResidualPerfectionTransfer (5a4afaa5) only nonuniversal causes and self-effects."
+  }
 }

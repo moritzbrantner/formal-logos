@@ -31,5 +31,8 @@
       "statement_id": "c36b509c-3057-40f5-ac0b-60751fb0cf27",
       "role": "conclusion"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "dd41c165-129a-59d3-84ce-bd13c0944901": "Applied at an arbitrary admitted world v (hNoCont v a b ha hb hab) to upgrade every support edge to necessary-to-necessary support. The weak version ActualNoContingentConcreteSupport (84751fc2) covers support at the selected world only."
+  }
 }

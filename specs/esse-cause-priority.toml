@@ -39,6 +39,7 @@ definitions = ["DEF-CAUSE-OF-PERFECTION", "DEF-ESSE", "DEF-SIMPLE-PRIORITY", "DE
 [[argument]]
 id = "Actual esse CAUSE_2 is SIMPLY_PRIOR_1, from actual grounding"
 theorem = "actualEsseCausePriority"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x." }
 premises = ["STMT-ESSE-CAUSE-IS-ACTUAL-CONCRETE-GROUND", "STMT-ACTUAL-GROUNDING-IS-SIMPLE-PRIORITY"]
 conclusion = "A distinct esse CAUSE_2 of an actual CONCRETE_6 being at w is SIMPLY_PRIOR_1 to it"
 axioms = []

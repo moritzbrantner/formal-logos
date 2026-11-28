@@ -56,6 +56,7 @@ note = "Verified by the one-premise weaken result; strictness control changes th
 [[argument]]
 id = "Seven inherited Fifth Way premises assemble universal bundle"
 theorem = "pack"
+strong_version_needed = { "658814de-ffeb-5824-afdd-2797e5cdad42" = "The conclusion is the universal teleology bundle (Universal …), which contains the strong premise itself as a component (⟨hLack, hObs, …⟩). The weak version cannot fill that slot; WitnessLocalTeleology.weaken is the separate step to the witness-local bundle." }
 premises = ["efda546f-c3e5-5a68-990b-73f96258f75c", "658814de-ffeb-5824-afdd-2797e5cdad42", "070cef3e-cabc-56a5-9f78-af671d9ad194", "b43528e2-7188-56e9-941c-0d0cea7c03fb", "564ce19b-c9df-5031-b20e-3cb1baee124f", "11914511-b067-55d3-b8cc-094311021d08", "ee9e3056-7bc5-5c35-9fe3-bf8550f8c136"]
 conclusion = "Universal seven Fifth Way bundle"
 rule = "Conjunction introduction"

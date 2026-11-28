@@ -66,6 +66,7 @@ strong_version_needed = {"82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The existing 
 [[argument]]
 id = "Full J1 upgrades necessary-source paths to all-source paths"
 theorem = "upgradePaths"
+strong_version_needed = { "dd41c165-129a-59d3-84ce-bd13c0944901" = "Applied at an arbitrary admitted world v (hNoCont v a b ha hb hab) to upgrade every support edge to necessary-to-necessary support. The weak version ActualNoContingentConcreteSupport (84751fc2) covers support at the selected world only." }
 premises = ["dd41c165-129a-59d3-84ce-bd13c0944901", "Every NECESSARY_2 concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
 conclusion = "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"
 rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"
@@ -75,6 +76,7 @@ sense_bridges = [{"term" = "WORLD_RELATIVE_EXISTENCE_METAPHYSICAL_ESSE_NECESSITY
 [[argument]]
 id = "All-source actual paths propagate actual J1 to full J1"
 theorem = "noContingentOfActualPaths"
+strong_version_needed = { "c36b509c-3057-40f5-ac0b-60751fb0cf27" = "The path premise is applied to an arbitrary concrete supporter a of a necessary b, and the walk along the path then derives that a is necessary. NecessarySupportActualPaths (d0718714) presupposes NecessaryAt a, which is the conclusion here. NecessarySupportActuallyCovered (df42581f) gives only some actual ground of b, not a path from a." }
 premises = ["84751fc2-0179-49ce-b96a-04d95781d8bc", "Every concrete source of a NECESSARY_2 concretum has a nonempty actual grounding path"]
 conclusion = "dd41c165-129a-59d3-84ce-bd13c0944901"
 rule = "Actual guarded support paths, explicit source scope and existing transitive-closure well-foundedness"

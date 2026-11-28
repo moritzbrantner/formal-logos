@@ -39,5 +39,8 @@
   ],
   "term_senses": {
     "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
+  },
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneral good fitOf Present φ`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

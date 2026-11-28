@@ -65,5 +65,9 @@
       "to": "9bea9a43-3a87-4d62-86de-e5873aea62f8",
       "statement_id": "101bdd62-7cd0-5923-8f03-d9d443f4ba51"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "6c27657f-a2bf-5c1d-963c-c154b66bfa85": "The proof applies the grades premise at the respect verum (truth): QuartaVia.quartaVia finds a maximum in truth and only then passes to being by MostTrueIsMostBeingReading. The weak version GradesToMaximumAtBeing (e4e6b0cd) gives a maximum only in the respect esse.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "EM is applied (in firstMoverIsFirstBeing) to y = m, where y is any being simply prior to the maximum m. Nothing gives y in act in any respect, and LocalLogic (ca432e24) decides identity with a GOD_4 candidate only for bearers in act (InAct x r)."
+  }
 }

@@ -56,6 +56,7 @@ description = "Box K necessary-being node from the GOD_NAMING_1 node and the ope
 [[argument]]
 id = "GOD_NAMING_1 node from the box K node and the two transworld description bridges"
 theorem = "boxKToDesc"
+strong_version_needed = { "cdf897a8-5490-561a-b9d2-507486a3f192" = "The proof uses the root n's existence at each accessible world v (hNec v hv) to name n there. NecessaryRootDeDictoK (0efe7b16) gives only that something exists at each accessible world, not n. NecessaryRootTertiaVia (32a2f51c) gives only ¬◇¬(n exists), which yields existence at v only by double-negation elimination; this zero-axiom result has no excluded-middle premise." }
 premises = ["STMT-NECESSARY-ROOT-BOX-K", "Meeting the divine description is essential to the actual GOD_4 wherever it exists accessibly", "Only the actual GOD_4 could meet the divine description at an accessible world"]
 conclusion = "Necessary-being node, GOD_NAMING_1 reading: necessarily one existent meets the divine description"
 senses = {GOD_NAMING = "GOD_NAMING_1"}

@@ -90,6 +90,7 @@ disambiguations = ["a409105e-8389-46ce-b14b-bebbc2864198", "62ca3d65-8dd4-4187-a
 id = "a811f5a3-09ba-4648-ae0c-8e0e66c07649"
 label = "R-act1 from dependence through the two unde bridges, checked"
 theorem = "ractOneFromDependence"
+strong_version_needed = { "89d82643-cf45-4933-90b3-83a89f6210f2" = "Applied at x with only hNotOwn : A.quiddity x ≠ F.esse. The weak version ActualizedRealOtherQuiddityReceivesEsse (94036513) also requires ¬ EsseReallyIsEssence esseOf essenceOf x, over esse/essence maps this theorem does not have, and no premise supplies it." }
 definitions = ["82ab06d0-5328-4d85-b3a2-4a13532d9524", "97c4f504-4792-43c6-9f61-ae23df732d5f", "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168", "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72", "6ced5205-e6a4-585e-950e-3b22e7c9ef01", "4433942e-aaf6-55a9-b777-66e55638103d", "ad76481a-f038-4652-9c6e-0e0441eee7e5"]
 description = "Near-transcription (single application): given R-dep, the first unde and the nature in act, the second unde is equivalent to the reception half of R-act1 (undeLoadMap, conjunct 2), so the proof applies that bridge to deliver its own content; the limited half comes from 7de89edb. Own being is read as esse tantum (OWN_BEING_1, DEF ad76481a). Generic in the frame, so it holds on the dependence reading of 'actualized through' as well. It makes the commitment explicit and closes nothing by itself."
 transcription = "single_application"

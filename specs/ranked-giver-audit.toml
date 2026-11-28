@@ -11,6 +11,7 @@ definitions = ["5b19527d-9418-441e-820c-3c659ba7cb12", "c15c1634-6d70-4ecb-8b5b-
 [[argument]]
 id = "Certify one maximal giver for each actual recipient by testing its gift"
 theorem = "rankedCertificates"
+strong_version_needed = { "cffad050-e86d-48b8-b04b-be47fcc1352d" = "Applied to every actual esse-cause edge (valid y x edge), to certify that each edge ascends in being. Arbitrary causes y are not esse-is-essence bearers, so the weak version IdentityCauseAscent (8176a284) does not cover them." }
 comparator_theorems = ["emptyReportAtMaximum"]
 premises = ["0881e859-c4c3-53ff-9bec-b61294e12d51", "cffad050-e86d-48b8-b04b-be47fcc1352d"]
 conclusion = "One fixed actual maximum can be certified as the same root of every recipient by testing its gift"

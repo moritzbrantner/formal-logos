@@ -28,5 +28,8 @@
     "5921354b-51e6-5da3-8d8c-e9041840fd9f",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
     "a409105e-8389-46ce-b14b-bebbc2864198"
-  ]
+  ],
+  "strong_version_needed": {
+    "89d82643-cf45-4933-90b3-83a89f6210f2": "Applied at x with only hNotOwn : A.quiddity x ≠ F.esse. The weak version ActualizedRealOtherQuiddityReceivesEsse (94036513) also requires ¬ EsseReallyIsEssence esseOf essenceOf x, over esse/essence maps this theorem does not have, and no premise supplies it."
+  }
 }

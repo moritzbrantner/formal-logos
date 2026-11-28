@@ -51,5 +51,9 @@
     "be54be36-3ce8-53f9-8168-50d1114e6c76",
     "dba7b1de-f3a0-57af-9af9-b2a4da3136fa",
     "002f42cb-3015-5644-80b3-d408538394e6"
-  ]
+  ],
+  "strong_version_needed": {
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3": "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ source, (TruthCore.Causality.ConcreteExistentialSupply.graph m w).Source source` (in actualRootExists). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

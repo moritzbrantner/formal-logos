@@ -151,6 +151,7 @@ meaning = "A first derivation of the ascent premise STMT-ACTUAL-GROUND-IS-MORE-I
 [[argument]]
 id = "Ascent at every world, from the cause-is-more principle and the every-world bridge"
 theorem = "everywhereAscentOfCause"
+strong_version_needed = { "402cf70f-66ff-415e-a9e2-2e1f288956d8" = "The conclusion SupportAscendsInEsseEverywhere quantifies over every admitted world v, and the bridge is applied at that arbitrary v (hBridge v a b …). The weak version ActualGroundIsDistinctEsseCause (98efaa9e) covers grounds at the selected world w only." }
 premises = ["STMT-CAUSE-OF-QUALITY-IN-ANOTHER-IS-MORE-SUCH", "A concrete ground at any admitted world is a distinct CAUSE_2 of its esse"]
 conclusion = "Concrete support at every admitted world ascends in esse"
 axioms = []
@@ -178,6 +179,7 @@ meaning = "The unrestricted every-world ascent premise implies the actual-ground
 [[argument]]
 id = "Graded actual grounding, from its well-foundedness"
 theorem = "gradedOfActualGroundingWF"
+strong_version_needed = { "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21" = "The proof transfers full well-foundedness of actual concrete grounding (wf_of_subtype hWF) into the graded no-infinite-ascent conclusion. The weak versions do not give it: ConeWellFounded (1b1e3f09) covers one cone, ActualGroundingAsymmetric (39f7c63d) only two-cycles, WholeRosterNotTrapped (5c898d24) only the whole roster, and closed-collection rootedness (aca3baa1) admits a rooted infinite descending chain (ClosedEsseSource RootedInfiniteControl)." }
 sense_bridges = [
   { term = "NECESSARY", from = "8c881fa6-2b9f-44be-a32a-c8ef29c13643", to = "7af298fb-a2c4-4239-919b-7685f2e1f67a", statement_id = "STMT-ACTUAL-GROUNDING-WF" },
   { term = "WELL_FOUNDEDNESS_AND_ANTI_BRUTE_ROOT", from = "9232f675-db0a-474c-9f00-d8e5aba69ef7", to = "556515c9-1fcc-4ea0-b85d-2a4cad7eff79", statement_id = "STMT-ACTUAL-GROUNDING-WF" },

@@ -28,5 +28,8 @@
       "to": "bf1b1d30-e119-450e-93be-d7a5c42abdb9",
       "statement_id": "1dd68893-7e41-4909-9f17-1dbb342a7d95"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "1dd68893-7e41-4909-9f17-1dbb342a7d95": "The proof uses the second conjunct (And.right), that GOD_4 does not will the recipient good for x (¬ W.WillsGoodFor g x esse), to exclude non-rational caused effects. The weak version OrderedExistenceWillingWeak (7f6a2e91) keeps only the ordered-willing conjunct and neither asserts nor denies recipient willing."
+  }
 }
