@@ -112,10 +112,13 @@ def realizedTypes : Set Bool := Prod.fst '' roster
 /-- Use a fixed, full-support geometric law for the instance index, varying
 only the Bernoulli law for the report. Both laws are normalized Mathlib
 measures. No uniform measure over the infinite roster is presumed. -/
-def half : unitInterval := ⟨1/2, by norm_num, by norm_num⟩
+noncomputable def half : unitInterval := ⟨1/2, by norm_num, by norm_num⟩
 
+/-- The report coordinate uses Mathlib's Bernoulli law directly as a sampling
+law over residual reports. It is not the design/natural comparison prior
+`modelPrior`, although both are built from the same Mathlib constructor. -/
 noncomputable def observationLaw (p : unitInterval) : Measure Universe :=
-  (modelPrior p).prod (geometricMeasure half)
+  (bernoulliMeasure true false p).prod (geometricMeasure half)
 
 def fineEvent : Set Universe := ({true} : Set Bool) ×ˢ (Set.univ : Set ℕ)
 
@@ -181,6 +184,27 @@ def ObserverWeightUnderdetermination : Prop :=
   (∀ s : Sampling, weightedLikelihood s 1 1 = likelihood s) ∧
   (∀ s : Sampling, 0 < s.weight 1 → ∀ p : ℚ, 0 < p → p < 1 →
     ∃ r t : ℚ, 0 < r ∧ 0 < t ∧ weightedLikelihood s r t = p)
+
+/-- Positive mass at every point of a measurable space. This is pointwise
+positivity of a (here discrete) measure, not the topological support of an
+atomless measure. -/
+def PointFullSupport {W : Type*} [MeasurableSpace W] (μ : Measure W) : Prop :=
+  ∀ x, 0 < μ {x}
+
+universe u
+
+/-- The shared interior-mass statement. On every countable carrier with
+measurable singletons, an event that is infinite and has an infinite
+complement receives every strictly interior probability from some normalized
+measure with positive mass at every point. The carrier, the event and its
+cardinality data are fixed before the measure is chosen. This is a
+non-identification statement about bare carriers and partitions; it does not
+say that no probability on the carrier is warranted. -/
+def ArbitraryInteriorMass : Prop :=
+  ∀ (W : Type u) [Countable W] [MeasurableSpace W] [MeasurableSingletonClass W]
+    (s : Set W) [Infinite s] [Infinite (sᶜ : Set W)] (p : InteriorRate),
+    ∃ μ : Measure W, IsProbabilityMeasure μ ∧ PointFullSupport μ ∧
+      μ.real s = (p.val : ℝ)
 
 end Plenitude
 

@@ -1,0 +1,9 @@
+{
+  "id": "3a22aef4-1160-41b3-b0d7-f2883f439d4e",
+  "label": "Pointwise positive discrete probability",
+  "term": "Pointwise positive discrete probability",
+  "definition": "Every singleton has strictly positive measure. On a countable carrier with measurable singletons all subsets are measurable. This is not the topological support of an atomless measure.",
+  "basis": "stipulative",
+  "note": "Analyst mathematical vocabulary for the plenitude and modal-probability controls (#2143, #2142); no source attribution or metaphysical application is assumed.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.PointFullSupport"
+}

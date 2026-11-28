@@ -495,15 +495,22 @@ specifies an information-sensitive consideration under the modeled update
 conditions. Whether it supplies actual pro tanto or categorical reasons
 for belief requires the separate epistemic bridge.
 
-## Plenitude and observational identification (2026-11-27, draft)
+## Plenitude and observational identification (2026-11-27)
 
 Analyst mathematics, following the delivered #1381 and #1569 results and PP-07.
 The prospective root connection is STMT-GOD-EXISTS through the existing
 fine-tuning/epistemic bridge (#1734); the separate contrastive explanation
 target is #736. This is not a new root inference. The new Lean declarations
-are in `Science.FineTuningInformation.Plenitude`, with proposed proofs in
-`Results.Science.FineTuningInformation.Plenitude`. Verification, generated
-result bindings, and independent semantic challenge are still required.
+are in `Science.FineTuningInformation.Plenitude`, with proofs in the
+`Plenitude` section of `Results.Science.FineTuningInformation`. Four results
+are registered through `specs/fine-tuning-information.toml` and pass binding,
+Comparator and NanoDa: `observationalUnderdetermination` (22182838),
+`cutoffUnderdetermination` (0a2dec46), `observerWeightUnderdetermination`
+(757378ea) and the shared `arbitraryInteriorMass` (cb2b9ac7). Each conclusion
+carries a connection plan to GOD_4 (8626f8a5) naming the missing calibrated
+measure or observer rule. Findings and limits are in attempt
+[`103e8d13`](../../corpus/attempts/103e8d13-9372-436c-af8a-c11200270711.json).
+Independent semantic challenge is still required.
 
 **Fixed meanings.** The supplied metaphysically possible type profile is not
 the set of outputs allowed by physical dynamics; physical reachability does
@@ -550,10 +557,19 @@ is encoded by these labels.
   other cell is absent, this construction fails, correctly respecting #1381
   screening-off.
 
-The `no_scope_decoder` proof composes with the existing
+`arbitraryInteriorMass` transports the product control along a bijection
+from Bool × Nat that sends the true fiber onto a given event and the false
+fiber onto its complement. On every countable carrier with an infinite event
+and infinite complement, each interior event probability therefore has a
+normalized measure with positive mass at every point. This is the one copy of
+the interior-mass lemma; the modal-carrier follow-up (#2142) reuses it for a
+fixed Kripke frame's accessible worlds. It shows that a carrier and its
+partition do not fix a probability, not that no probability is warranted.
+
+The unregistered `no_scope_decoder` corollary composes with the existing
 `Science.Identifiability.total_factor_iff`: arbitrary complexity of a rule
 depending only on the fixed profile cannot recover the right likelihood in
-both models. `threshold_not_evidence_only` uses #736's exact
+both models. The unregistered `threshold_not_evidence_only` corollary uses #736's exact
 `HistorySelection.EvidenceOnly` criterion: no truth-vector derived only from
 that unchanged data, even an infinite vector, entails the proposition that
 the likelihood is at least one half across the admitted models. This is
@@ -641,8 +657,7 @@ only if the rival claims to settle that specified contrast.
 No root premise is claimed discharged. No historical source attribution,
 metaphysical necessity, actual physical generation, actual observer
 reference class, or designer likelihood has been proved by these controls.
-The local worker could not run Lean, the generator, dossier/frontier checks,
-or independent semantic challenge; the proposed proofs are draft only.
-Reopen on a failed elaboration, semantic mismatch, physically justified
+The two corollaries stay unregistered because both follow directly from the
+scope data being constant across the compared measures. Reopen on a failed elaboration, semantic mismatch, physically justified
 restricted class that identifies a prediction, calibrated selection
 kernel, or a discriminating same-evidence design likelihood.

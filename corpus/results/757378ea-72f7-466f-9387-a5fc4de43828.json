@@ -1,0 +1,11 @@
+{
+  "id": "757378ea-72f7-466f-9387-a5fc4de43828",
+  "label": "Observer-cell reweighting of a sampling row reaches every interior likelihood",
+  "argument_id": "7cb07c61-1c9c-4212-b2ee-b257e660fb7c",
+  "challenge_module": "TruthCore.Results.Science.FineTuningInformation.Challenge",
+  "solution_module": "TruthCore.Results.Science.FineTuningInformation.Solution",
+  "theorem": "TruthCore.Results.Science.FineTuningInformation.observerWeightUnderdetermination",
+  "comparator_config": "results/757378ea-72f7-466f-9387-a5fc4de43828/comparator.json",
+  "status": "solution-present",
+  "description": "Unit weights give the existing likelihood. With positive evidence and other-observer masses, the weights p/w0 and (1-p)/w1 give weighted likelihood p for each interior rational p."
+}

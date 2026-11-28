@@ -1,0 +1,14 @@
+{
+  "id": "2db2a6c0-6815-470c-a77f-6a548a2285aa",
+  "label": "Fixed infinite plenitude roster leaves the residual report probability unidentified",
+  "paraphrase": "On one fixed roster Bool x Nat in which each report type has infinitely many instances, every strictly interior report probability is realized by a normalized product measure giving positive mass to every instance. No function of the fixed possibility profiles, roster and type map returns that probability across these measures.",
+  "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.ObservationalUnderdetermination",
+  "definition_ids": [
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "A warranted physical generator, measure and observer-selection rule that fixes the residual observational likelihood used in the fine-tuning comparison, then the existing designer inference and identification with GOD_4.",
+    "blocker": "The control shows only that bare plenitude with infinite repetition does not fix the likelihood; no physical measure, observer rule, designer likelihood or actual designer is derived."
+  }
+}

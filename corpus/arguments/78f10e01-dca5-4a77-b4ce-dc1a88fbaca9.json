@@ -1,0 +1,13 @@
+{
+  "id": "78f10e01-dca5-4a77-b4ce-dc1a88fbaca9",
+  "label": "Transport of the product control gives every interior mass on countable carriers",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
+  "inference_ids": [
+    "14c10ace-4410-4952-a97f-f77cfd0aa8a0"
+  ],
+  "meaning": "A bijection from Bool x Nat sends the true fiber onto the event and the false fiber onto its complement. The pushforward of the product control at interior p is a probability with positive mass at every point and event mass p.",
+  "definition_ids": [
+    "3a22aef4-1160-41b3-b0d7-f2883f439d4e"
+  ]
+}

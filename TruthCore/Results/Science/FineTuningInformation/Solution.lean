@@ -122,10 +122,14 @@ theorem nullStateControl :
   have hfalse : ¬ 0 < (modelPrior 1).real {false} := by rw [prior_false]; norm_num
   cases s <;> cases t <;> first | rfl | exact (hfalse hs).elim | exact (hfalse ht).elim
 
-namespace Plenitude
+/-! Plenitude controls. The registered theorems sit at the top level of the
+results namespace so that the generated Challenge freezes them. -/
+section Plenitude
 
 open Set
 open TruthCore.Science.FineTuningInformation.Plenitude
+
+universe u
 
 theorem repeatedTypes : RepeatedTypes := by
   constructor
@@ -201,8 +205,9 @@ theorem cutoffUnderdetermination : CutoffUnderdetermination := by
     have hB : 0 < (b : ℚ) := by exact_mod_cast hb
     have hN : 0 < (n : ℚ) + 1 := by positivity
     have hSum : 0 < (a : ℚ) + b := add_pos hA hB
-    simp [cutoffLikelihood, slice, Nat.cast_mul, Nat.cast_add] <;>
-      rw [← add_mul] <;> field_simp [ne_of_gt hN, ne_of_gt hSum] <;> ring
+    simp [cutoffLikelihood, slice, Nat.cast_mul, Nat.cast_add]
+    rw [← add_mul]
+    field_simp [ne_of_gt hN, ne_of_gt hSum]
 
 theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := by
   constructor
@@ -212,11 +217,53 @@ theorem observerWeightUnderdetermination : ObserverWeightUnderdetermination := b
     refine ⟨p / s.weight 0, (1-p) / s.weight 1,
       div_pos hp s.evidence_pos, div_pos (sub_pos.mpr hp') hother, ?_⟩
     have hx : s.weight 0 * (p / s.weight 0) = p := by
-      field_simp [ne_of_gt s.evidence_pos] <;> ring
+      field_simp [ne_of_gt s.evidence_pos]
     have hy : s.weight 1 * ((1-p) / s.weight 1) = 1-p := by
-      field_simp [ne_of_gt hother] <;> ring
+      field_simp [ne_of_gt hother]
     have hsum : p + (1-p) = 1 := by ring
     rw [weightedLikelihood, hx, hy, hsum, div_one]
+
+/-- Transport the product control along a bijection `Bool × ℕ ≃ W` that sends
+the true fiber onto `s` and the false fiber onto its complement. One
+construction therefore serves every countable carrier with an infinite event
+and infinite complement; no second mixture construction is needed. -/
+theorem arbitraryInteriorMass : ArbitraryInteriorMass.{u} := by
+  intro W _ _ _ s _ _ p
+  classical
+  obtain ⟨e⟩ : Nonempty (ℕ ≃ s) := nonempty_equiv_of_countable
+  obtain ⟨f⟩ : Nonempty (ℕ ≃ (sᶜ : Set W)) := nonempty_equiv_of_countable
+  let g : Universe → W := fun u => if u.1 then (e u.2 : W) else (f u.2 : W)
+  have hg : Measurable g := measurable_of_countable g
+  have hpre : g ⁻¹' s = fineEvent := by
+    ext ⟨b, n⟩
+    cases b
+    · simp only [mem_preimage, g, fineEvent, mem_prod, mem_singleton_iff, mem_univ,
+        and_true, Bool.false_eq_true, ite_false, iff_false]
+      exact (f n).property
+    · simp only [mem_preimage, g, fineEvent, mem_prod, mem_singleton_iff, mem_univ,
+        and_true, ite_true, iff_true]
+      exact (e n).property
+  have hsurj : ∀ x : W, ∃ u, g u = x := by
+    intro x
+    by_cases hx : x ∈ s
+    · exact ⟨(true, e.symm ⟨x, hx⟩), by simp [g]⟩
+    · exact ⟨(false, f.symm ⟨x, hx⟩), by simp [g]⟩
+  have hprob : IsProbabilityMeasure (observationLaw p.val) := by
+    unfold observationLaw
+    infer_instance
+  refine ⟨(observationLaw p.val).map g, inferInstance, ?_, ?_⟩
+  · intro x
+    obtain ⟨u, hu⟩ := hsurj x
+    rw [Measure.map_apply hg (measurableSet_singleton x)]
+    have hpos := positive_singletons p.val p.property.1 p.property.2 u
+    rw [measureReal_def] at hpos
+    refine lt_of_lt_of_le (ENNReal.toReal_pos_iff.mp hpos).1 (measure_mono ?_)
+    intro v hv
+    rw [mem_singleton_iff] at hv
+    simp [hv, hu]
+  · rw [measureReal_def, Measure.map_apply hg (Set.to_countable s).measurableSet, hpre,
+      ← measureReal_def]
+    exact fine_probability p.val
 
 /-- Compose with the repository's exact identifiability criterion. There is
 no decoder, even one of arbitrary complexity, which reads the entire fixed
