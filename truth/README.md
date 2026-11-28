@@ -1262,10 +1262,12 @@ subject's certificate does not reach a registered logical premise such as
 constant their bound type does not reach, naming another sense of the same
 disambiguation when the type uses one. Only fresh cache entries are read, so
 run `bind-check` (or `bind-check --affected --base REV`) after `lake build`
-first. With `--base`, only records new or changed since that revision are
-judged, together with the `tests` of every subject result `bind-check
---affected` would select for that diff. It always exits 0
-(docs/corpus-model.md, "Type metadata lints").
+first. With `--base`, it reports only the findings new since that revision:
+the corpus-wide findings minus those the same lints find on the base records
+(head rules on base data). No base cache exists offline, so the base run
+reads head's elaborated types and treats the results `bind-check --affected`
+selects for that diff as unknown. It always exits 0 (docs/corpus-model.md,
+"Type metadata lints").
 
 ## `connectivity`
 

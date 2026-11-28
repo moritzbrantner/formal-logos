@@ -150,7 +150,7 @@ jobs:
       # Metadata lints over the elaborated types bind-check just cached (#2103):
       # whole-argument tests that do not certify a registered logical premise, and
       # linked definitions the statement's bound type does not reach. Advisory: it
-      # reports records new or changed since the base and never fails the job.
+      # reports findings new since the base and never fails the job.
       - name: Report type metadata lints
         if: needs.comparator-plan.outputs.lean == 'true' && github.event_name == 'pull_request'
         run: |

@@ -1,10 +1,10 @@
 //! `truth type-lints [--base REV]`: advisory metadata lints over the
 //! elaborated types `truth bind-check` cached ([`truth::type_lints`]). With
-//! `--base`, only relations and statements new or changed since that
-//! revision are judged, together with the `tests` relations whose subject
-//! result `bind-check --affected` would select for the same diff (its record,
-//! Comparator config or Lean inputs changed). It always exits 0: every
-//! finding is a warning.
+//! `--base`, it reports the corpus-wide findings minus those the same lints
+//! find on that revision's records (head rules on base data). The base run
+//! reads head's cache, with the results `bind-check --affected` selects for
+//! the same diff treated as unknown. It always exits 0: every finding is a
+//! warning.
 
 use super::{Accepts, Args, Command, Output, bind_check, corpus_error, load};
 use serde_json::json;

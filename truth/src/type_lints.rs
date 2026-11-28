@@ -7,8 +7,6 @@
 //!    premise ([`LOGICAL_PREMISES`], for example `ExcludedMiddle`), while the
 //!    subject result's certificate type does not reach that premise's
 //!    declaration. The model then certifies the nonlogical premises only.
-//!    With a base, such a test is judged again when its relation, the tested
-//!    argument's premises or a subject result's certificate inputs changed.
 //! 2. **Definition not in the type.** A statement's `definition_ids` link a
 //!    definition whose `lean_declaration` the statement's bound Lean type
 //!    does not reach. When the type reaches the declaration of another sense
@@ -24,6 +22,13 @@
 //! fresh entries are read: a stale or missing entry leaves its result
 //! unchecked (reported, never guessed). Every finding is a warning: the
 //! command never fails, and none of this is verification evidence.
+//!
+//! With a base ([`Scope::Since`]), the report is the corpus-wide findings
+//! minus those the same lints find on the base records, matched by
+//! [`finding_key`]. No base cache exists offline, so the base run reads
+//! head's elaborated types and treats the results `bind-check --affected`
+//! selects as unknown: a finding that depends on a changed certificate is
+//! reported again rather than missed.
 
 use crate::{
     Corpus,
@@ -89,6 +94,7 @@ pub fn tracked_constants(corpus: &Corpus) -> BTreeSet<String> {
 
 /// One described type: its head constant and the tracked constants it
 /// reaches (`None` when the description predates `reaches`).
+#[derive(Clone)]
 struct Typed {
     head: String,
     reaches: Option<BTreeSet<String>>,
@@ -235,6 +241,33 @@ impl Described {
         self
     }
 
+    /// The types read for the base run of [`Scope::Since`]: head's, except
+    /// that the results whose certificate may have changed (`None`: every
+    /// result) are unknown at base.
+    fn at_base(&self, affected: Option<&BTreeSet<String>>) -> Self {
+        let changed = |id: &String| affected.is_none_or(|affected| affected.contains(id));
+        let mut unchecked = self.unchecked.clone();
+        let types = self
+            .types
+            .iter()
+            .filter(|(id, _)| {
+                let keep = !changed(id);
+                if !keep {
+                    unchecked.insert((*id).clone(), "certificate inputs changed".into());
+                }
+                keep
+            })
+            .map(|(id, items)| (id.clone(), items.clone()))
+            .collect();
+        Self {
+            types,
+            unchecked,
+            tracking_outdated: self.tracking_outdated.clone(),
+            kinds: self.kinds.clone(),
+            note: self.note.clone(),
+        }
+    }
+
     /// Everything a result's certificate type reaches (binders and result).
     fn certificate(&self, result: &str) -> Option<BTreeSet<&str>> {
         self.types.get(result).map(|items| {
@@ -246,9 +279,15 @@ impl Described {
     }
 }
 
-/// The scope of a run: everything, or what changed since a base corpus.
+/// The scope of a run: everything, or the findings new since a base corpus.
 pub enum Scope<'b> {
     All,
+    /// The corpus-wide findings at head minus those the same lints find on
+    /// the base records (head rules on base data). The base's elaborated
+    /// types are not available offline, so the base run reads head's cache,
+    /// except for the results whose certificate may have changed (affected,
+    /// or with a new or changed record): those are unknown at base, and the
+    /// findings that depend on them at head count as new.
     Since {
         base: &'b Corpus,
         /// The results whose certificate may have changed since the base, as
@@ -260,43 +299,78 @@ pub enum Scope<'b> {
     },
 }
 
-impl Scope<'_> {
-    /// A record is judged when it is new or any of `fields` changed.
-    fn judges(&self, kind: &str, id: &str, record: &Obj, fields: &[&str]) -> bool {
-        match self {
-            Scope::All => true,
-            Scope::Since { base, .. } => base.get(kind, id).is_none_or(|old| {
-                fields
-                    .iter()
-                    .any(|field| old.fields.get(*field) != record.get(*field))
-            }),
-        }
+/// A finding's identity across base and head: lint kind plus the IDs and
+/// declarations it is about, never labels.
+fn finding_key(kind: &str, finding: &Value) -> String {
+    let fields: &[&str] = match kind {
+        "tests_missing_logical_premise" => &[
+            "relation_id",
+            "subject_result_id",
+            "premise_statement_id",
+            "lean_declaration",
+        ],
+        _ => &["statement_id", "definition_id", "definition_declaration"],
+    };
+    let mut key = kind.to_owned();
+    for field in fields {
+        key.push('\0');
+        key.push_str(finding[*field].as_str().unwrap_or_default());
     }
-
-    /// A result's certificate type may differ from the base: the result is
-    /// affected (its Lean inputs or records changed), or its record is new or
-    /// changed in any field.
-    fn result_changed(&self, corpus: &Corpus, result: &str) -> bool {
-        match self {
-            Scope::All => true,
-            Scope::Since {
-                base,
-                affected_results,
-            } => {
-                affected_results
-                    .as_ref()
-                    .is_none_or(|affected| affected.contains(result))
-                    || corpus.get("results", result).is_some_and(|record| {
-                        base.get("results", result)
-                            .is_none_or(|old| old.fields != record.fields)
-                    })
-            }
-        }
-    }
+    key
 }
 
-/// The lints over `corpus` with the types in `described`.
+/// The lints over `corpus` with the types in `described`, within `scope`.
 pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
+    let mut head = lint(corpus, described);
+    let Scope::Since {
+        base,
+        affected_results,
+    } = scope
+    else {
+        head["scope"] = json!("all");
+        return head;
+    };
+    // A result whose record is new or changed counts as affected even when
+    // the caller's selection missed it.
+    let affected = affected_results.as_ref().map(|affected| {
+        let mut affected = affected.clone();
+        affected.extend(
+            corpus
+                .records_by_id("results")
+                .filter(|(id, record)| {
+                    base.get("results", id)
+                        .is_none_or(|old| old.fields != record.fields)
+                })
+                .map(|(id, _)| id.to_owned()),
+        );
+        affected
+    });
+    let at_base = lint(base, &described.at_base(affected.as_ref()));
+    for (kind, preexisting) in [
+        ("tests_missing_logical_premise", "tests_preexisting"),
+        ("definition_not_in_type", "definition_links_preexisting"),
+    ] {
+        let known: BTreeSet<String> = at_base[kind]
+            .as_array()
+            .into_iter()
+            .flatten()
+            .map(|finding| finding_key(kind, finding))
+            .collect();
+        let all = head[kind].as_array().cloned().unwrap_or_default();
+        let total = all.len();
+        let new: Vec<Value> = all
+            .into_iter()
+            .filter(|finding| !known.contains(&finding_key(kind, finding)))
+            .collect();
+        head[preexisting] = json!(total - new.len());
+        head[kind] = Value::Array(new);
+    }
+    head["scope"] = json!("since_base");
+    head
+}
+
+/// The corpus-wide lints over `corpus` with the types in `described`.
+fn lint(corpus: &Corpus, described: &Described) -> Value {
     let statements: HashMap<&str, &Obj> = corpus
         .records_by_id("statements")
         .map(|(id, record)| (id, &record.fields))
@@ -336,40 +410,6 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
                 .unwrap_or_default(),
             _ => Vec::new(),
         };
-        // Judged when the relation is new or changed (including one newly
-        // designated `tests`), when the tested argument's premises changed or
-        // a premise was rebound to another Lean declaration (it may have
-        // gained a logical premise), or when a subject result's certificate
-        // may have changed (it may no longer reach the logical premise).
-        if !scope.judges(
-            "relations",
-            id,
-            relation,
-            &[
-                "predicate",
-                "subject_kind",
-                "subject_id",
-                "object_kind",
-                "object_id",
-            ],
-        ) && !scope.judges(
-            "arguments",
-            object,
-            &argument.fields,
-            &["premise_statement_ids"],
-        ) && !list(&argument.fields, "premise_statement_ids")
-            .into_iter()
-            .any(|premise| {
-                statements.get(premise).is_some_and(|statement| {
-                    scope.judges("statements", premise, statement, &["lean_declaration"])
-                })
-            })
-            && !subjects
-                .iter()
-                .any(|subject| scope.result_changed(corpus, subject))
-        {
-            continue;
-        }
         let logical: Vec<(&str, &str)> = list(&argument.fields, "premise_statement_ids")
             .into_iter()
             .filter_map(|premise| {
@@ -460,15 +500,7 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
         let statement = &record.fields;
         let declaration = text(statement, "lean_declaration");
         let linked = list(statement, "definition_ids");
-        if declaration.is_empty()
-            || linked.is_empty()
-            || !scope.judges(
-                "statements",
-                id,
-                statement,
-                &["lean_declaration", "definition_ids"],
-            )
-        {
+        if declaration.is_empty() || linked.is_empty() {
             continue;
         }
         for definition_id in linked {
@@ -531,7 +563,6 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
         }
     }
     json!({
-        "scope": match scope { Scope::All => "all", Scope::Since { .. } => "since_base" },
         "results_unchecked": described.unchecked.len(),
         "results_tracking_outdated": described.tracking_outdated.len(),
         "cache_note": described.note,
@@ -561,7 +592,7 @@ pub fn format(report: &Value) -> String {
             if report["scope"] == "all" {
                 "every record"
             } else {
-                "records new or changed since the base"
+                "findings new since the base"
             }
         ),
         format!(
@@ -582,6 +613,13 @@ pub fn format(report: &Value) -> String {
             report["definition_links_parameter_tagged"],
         ),
     ];
+    if report["scope"] == "since_base" {
+        lines.push(format!(
+            "not repeated: {} test finding(s) and {} definition-link finding(s) the base \
+             already had",
+            report["tests_preexisting"], report["definition_links_preexisting"]
+        ));
+    }
     if report["results_unchecked"].as_u64().unwrap_or(0) > 0 {
         lines.push(format!(
             "{} result(s) have no fresh cache entry; run `truth bind-check` (or `--affected \
@@ -891,12 +929,8 @@ mod tests {
         assert_eq!(report["tests_unchecked_subjects"], 2);
         assert_eq!(report["definition_not_in_type"], json!([]));
         assert_eq!(report["definition_links_unchecked"], 3);
-        // Against an identical base, nothing is judged.
-        let same = report_since(&corpus, &corpus);
-        assert_eq!(same["tests_judged"], 0);
-        assert_eq!(same["definition_links_judged"], 0);
-        // A tested argument that gained its logical premise since the base is
-        // judged again, although the relations did not change.
+        // A tested argument that gained its logical premise since the base:
+        // the finding is new, although the relations did not change.
         let base = fixture();
         base.write(
             "arguments",
@@ -905,10 +939,11 @@ mod tests {
         let base_corpus = Corpus::load(&base.0).unwrap();
         let gained = report_since(&corpus, &base_corpus);
         assert_eq!(gained["tests_judged"], 2);
-        assert_eq!(
-            gained["tests_missing_logical_premise"][0]["relation_id"],
-            "REL-BAD"
-        );
+        assert_eq!(flagged_tests(&gained), ["REL-BAD"]);
+        assert_eq!(gained["tests_preexisting"], 0);
+        // Its definition-link findings already existed at base.
+        assert_eq!(gained["definition_not_in_type"], json!([]));
+        assert_eq!(gained["definition_links_preexisting"], 2);
         // Entries described for an older tracked set are not read for
         // definition links (S is bound only by USE-S).
         let outdated = super::report(&corpus, &described().outdate(&["USE-S"]), &Scope::All);
@@ -938,21 +973,80 @@ mod tests {
     }
 
     fn report_since(corpus: &Corpus, base: &Corpus) -> Value {
+        since(corpus, &described(), base, Some(&[]))
+    }
+
+    fn since(
+        corpus: &Corpus,
+        described: &Described,
+        base: &Corpus,
+        affected: Option<&[&str]>,
+    ) -> Value {
         report(
             corpus,
-            &described(),
+            described,
             &Scope::Since {
                 base,
-                affected_results: Some(BTreeSet::new()),
+                affected_results: affected
+                    .map(|ids| ids.iter().map(|id| (*id).to_owned()).collect()),
             },
         )
     }
 
-    /// #2167 review: a relation newly designated `tests` (same endpoints),
-    /// and a premise of the tested argument rebound to a logical premise, are
-    /// judged although nothing else changed.
+    fn flagged_tests(report: &Value) -> Vec<String> {
+        report["tests_missing_logical_premise"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|entry| entry["relation_id"].as_str().unwrap().to_owned())
+            .collect()
+    }
+
+    fn flagged_links(report: &Value) -> Vec<String> {
+        report["definition_not_in_type"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|entry| entry["definition_id"].as_str().unwrap().to_owned())
+            .collect()
+    }
+
+    /// Findings the base already had are not repeated; the text says how many.
     #[test]
-    fn a_new_tests_designation_or_rebound_premise_is_judged() {
+    fn a_preexisting_finding_is_not_reported() {
+        let checkout = fixture();
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        let same = report_since(&corpus, &corpus);
+        assert_eq!(same["tests_missing_logical_premise"], json!([]));
+        assert_eq!(same["definition_not_in_type"], json!([]));
+        assert_eq!(same["tests_preexisting"], 1);
+        assert_eq!(same["definition_links_preexisting"], 2);
+        // The counts stay corpus-wide.
+        assert_eq!(same["tests_judged"], 2);
+        let text = format(&same);
+        assert!(text.contains("findings new since the base"), "{text}");
+        assert!(
+            text.contains("not repeated: 1 test finding(s) and 2 definition-link finding(s)"),
+            "{text}"
+        );
+        // A label change alone does not make a finding new.
+        let base = fixture();
+        base.write(
+            "statements",
+            json!({"id": "S", "label": "S was called this",
+                   "lean_declaration": "T.S",
+                   "definition_ids": ["DEF-DE-RE", "DEF-POT", "DEF-USED", "DEF-FIELD",
+                                      "DEF-TAGGED"]}),
+        );
+        let relabeled = report_since(&corpus, &Corpus::load(&base.0).unwrap());
+        assert_eq!(relabeled["definition_not_in_type"], json!([]));
+    }
+
+    /// #2167 review: a relation newly designated `tests` (same endpoints),
+    /// and a premise of the tested argument rebound to a logical premise,
+    /// yield new findings although nothing else changed.
+    #[test]
+    fn a_new_tests_designation_or_rebound_premise_is_reported() {
         let checkout = fixture();
         let corpus = Corpus::load(&checkout.0).unwrap();
         let relation = fixture();
@@ -962,31 +1056,20 @@ mod tests {
                    "predicate": "supports", "object_kind": "argument", "object_id": "ARG"}),
         );
         let redesignated = report_since(&corpus, &Corpus::load(&relation.0).unwrap());
-        assert_eq!(redesignated["tests_judged"], 1, "{redesignated}");
-        assert_eq!(
-            redesignated["tests_missing_logical_premise"][0]["relation_id"],
-            "REL-BAD"
-        );
+        assert_eq!(flagged_tests(&redesignated), ["REL-BAD"], "{redesignated}");
         let statement = fixture();
         statement.write(
             "statements",
             json!({"id": "EM", "lean_declaration": "T.EM"}),
         );
         let rebound = report_since(&corpus, &Corpus::load(&statement.0).unwrap());
-        assert_eq!(rebound["tests_judged"], 2, "{rebound}");
-        assert_eq!(
-            rebound["tests_missing_logical_premise"]
-                .as_array()
-                .unwrap()
-                .len(),
-            1
-        );
+        assert_eq!(flagged_tests(&rebound), ["REL-BAD"], "{rebound}");
     }
 
-    /// #2167 review: a test whose subject's certificate changed is judged
-    /// again although the relation and the tested argument did not change.
+    /// #2167 review: a test whose subject's certificate changed yields a new
+    /// finding although the relation and the tested argument did not change.
     #[test]
-    fn a_changed_subject_certificate_rejudges_its_tests() {
+    fn a_changed_subject_certificate_is_reported() {
         let checkout = fixture();
         let corpus = Corpus::load(&checkout.0).unwrap();
         // CTRL-OK's refreshed certificate no longer reaches EM.
@@ -1003,48 +1086,76 @@ mod tests {
             ]),
             KINDS,
         );
-        let since = |base: &Corpus, affected: Option<&[&str]>| {
-            report(
-                &corpus,
-                &refreshed,
-                &Scope::Since {
-                    base,
-                    affected_results: affected
-                        .map(|ids| ids.iter().map(|id| (*id).to_owned()).collect()),
-                },
-            )
-        };
-        let flagged = |report: &Value| -> Vec<String> {
-            report["tests_missing_logical_premise"]
-                .as_array()
-                .unwrap()
-                .iter()
-                .map(|entry| entry["relation_id"].as_str().unwrap().to_owned())
-                .collect()
-        };
-        // Unaffected and unchanged: not judged.
-        let unchanged = since(&corpus, Some(&[]));
-        assert_eq!(unchanged["tests_judged"], 0);
-        // Its Lean inputs changed (bind-check's affected selection): only its
-        // own test is judged, and the new defect is reported.
-        let affected = since(&corpus, Some(&["CTRL-OK"]));
-        assert_eq!(affected["tests_judged"], 1, "{affected}");
-        assert_eq!(flagged(&affected), ["REL-OK"]);
-        // A change that selects every result judges every test.
-        let full = since(&corpus, None);
-        assert_eq!(full["tests_judged"], 2);
-        assert_eq!(flagged(&full), ["REL-BAD", "REL-OK"]);
-        // Its result record changed (here its theorem): judged as well.
+        // Unaffected and unchanged: head's cache stands for the base too.
+        let unchanged = since(&corpus, &refreshed, &corpus, Some(&[]));
+        assert_eq!(flagged_tests(&unchanged), Vec::<String>::new());
+        // Its Lean inputs changed (bind-check's affected selection): the new
+        // defect is reported, the pre-existing one is not.
+        let affected = since(&corpus, &refreshed, &corpus, Some(&["CTRL-OK"]));
+        assert_eq!(flagged_tests(&affected), ["REL-OK"], "{affected}");
+        assert_eq!(affected["tests_preexisting"], 1);
+        // A change that selects every result reports every finding.
+        let full = since(&corpus, &refreshed, &corpus, None);
+        assert_eq!(flagged_tests(&full), ["REL-BAD", "REL-OK"]);
+        // Its result record changed (here its theorem), even if the
+        // selection missed it: reported as well.
         let base = fixture();
         base.write(
             "results",
             json!({"id": "CTRL-OK", "argument_id": "CTRL-OK-ARG", "theorem": "old",
                    "solution_module": "M"}),
         );
-        let base_corpus = Corpus::load(&base.0).unwrap();
-        let record = since(&base_corpus, Some(&[]));
-        assert_eq!(record["tests_judged"], 1);
-        assert_eq!(flagged(&record), ["REL-OK"]);
+        let record = since(
+            &corpus,
+            &refreshed,
+            &Corpus::load(&base.0).unwrap(),
+            Some(&[]),
+        );
+        assert_eq!(flagged_tests(&record), ["REL-OK"]);
+    }
+
+    /// #2167 review: a definition-link finding is new when the linked
+    /// definition's declaration changed, or when the statement's Lean
+    /// definition stopped using the linked constant (its binding results'
+    /// certificates changed), although the statement record did not change.
+    #[test]
+    fn a_changed_definition_link_input_is_reported() {
+        let checkout = fixture();
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        // DEF-USED pointed at T.deDicto, which S's type reaches; now at T.used.
+        // Head's T.S reaches T.deDicto only, so the link is now unreached.
+        let head_types = Described::from_descriptions(
+            &BTreeMap::from([(
+                "USE-S".to_owned(),
+                json!({"binders": [item("T.S", &["T.deDicto"])], "result": item("T.C", &[])}),
+            )]),
+            KINDS,
+        );
+        let base = fixture();
+        base.write(
+            "definitions",
+            json!({"id": "DEF-USED", "label": "DEF-USED", "lean_declaration": "T.deDicto"}),
+        );
+        let redefined = since(
+            &corpus,
+            &head_types,
+            &Corpus::load(&base.0).unwrap(),
+            Some(&[]),
+        );
+        assert_eq!(flagged_links(&redefined), ["DEF-USED"], "{redefined}");
+        // T.S stopped using T.used: USE-S (which imports T.S's module) is
+        // affected, so its old findings are unknown at base and its new one
+        // is reported; the pre-existing ones on S are reported again rather
+        // than missed.
+        let stopped = since(&corpus, &head_types, &corpus, Some(&["USE-S"]));
+        assert_eq!(
+            flagged_links(&stopped),
+            ["DEF-DE-RE", "DEF-POT", "DEF-USED"],
+            "{stopped}"
+        );
+        // Without that change, the same types at base and head add nothing.
+        let unchanged = since(&corpus, &head_types, &corpus, Some(&[]));
+        assert_eq!(flagged_links(&unchanged), Vec::<String>::new());
     }
 
     #[test]
