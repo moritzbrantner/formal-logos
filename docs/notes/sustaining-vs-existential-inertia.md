@@ -752,10 +752,11 @@ of them are reported with locators and are not attributed as statements.
 De ente c.4, the PSR variants, Metaph. Δ15 and In V Metaph. lect. 17 are
 named only as unread leads or next tests, with no weight.
 That filiation lasts after the begetting is marked as ordinary use, not as
-text. #1802 reports that De potentia q.3 a.3 co. and ad 6 use sonship after
-generation as Aquinas's own illustration of a real relation that remains
-when the agent no longer changes the effect, while the same article affirms
-continuing divine making through the illumination comparison, and that De potentia q.5 a.3
+text. #1802 cites De potentia q.3 a.3 co. and ad 6, reporting that Aquinas
+there uses sonship after generation as his own illustration of a real
+relation that remains when the agent no longer changes the effect, while the
+same article affirms continuing divine making through the illumination
+comparison. #1802 also reports that De potentia q.5 a.3
 ad 5–6 distinguishes the eternity of divine action from its order to a
 particular effect. Neither passage is pinned or read here; both are leads
 with no weight until a witness is read.
