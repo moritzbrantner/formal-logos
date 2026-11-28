@@ -1,0 +1,17 @@
+{
+  "id": "fedc67d8-9752-419a-8eb5-9896081ccfe4",
+  "label": "An actual root's absence has an admitted reason only if some nature excludes it",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, if the arena admits some reason at w for the fact lack r d (EXPLAINED_ABSENCE_1), then some ESSENCE_6 condition on r's profile fails at every set of determinations that contains r's real determinations together with d (an essential exclusion of d). It does not say that the reason is that condition. Rationale: a root has no actual concrete ground, so whatever counts as a reason why it lacks d does so because some nature excludes d. A bare negative clause 'lacks d' in the root's nature satisfies it, as does an admissibility condition that excludes d.",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.RootLackReasonsEssential",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

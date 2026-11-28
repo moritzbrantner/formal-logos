@@ -1,0 +1,11 @@
+{
+  "id": "56e315ff-27a3-4db9-b42a-7b71e80592f2",
+  "label": "Act, non-reception and thin profiles of the unde inference: controls, checked",
+  "argument_id": "eda5d3e4-79af-4735-aeee-3796e13ae93f",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.controls",
+  "comparator_config": "results/56e315ff-27a3-4db9-b42a-7b71e80592f2/comparator.json",
+  "status": "solution-present",
+  "description": "Finite profiles showing that each bridge of the two derivations is needed on them, that the non-reception profile satisfies R-dep, the first bridge and the essence-only account while R-act1 fails, and that reception without the nature premise does not give finitude. A structural surrogate."
+}

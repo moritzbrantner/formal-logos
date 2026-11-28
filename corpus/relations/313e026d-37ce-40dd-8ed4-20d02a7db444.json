@@ -1,0 +1,11 @@
+{
+  "id": "313e026d-37ce-40dd-8ed4-20d02a7db444",
+  "label": "The unrestricted fact PSR strengthens the root lack PSR",
+  "subject_kind": "statement",
+  "subject_id": "6db599dd-272b-4546-ba50-11a69095280d",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+  "verification_result_id": "d0040551-f797-426b-afe4-e75888e58e5a",
+  "note": "Same arena and world. The strong version gives an admitted reason to every fact true at w, the weak one to the true lack facts of actual roots. No strictness result and no certified difference are registered."
+}

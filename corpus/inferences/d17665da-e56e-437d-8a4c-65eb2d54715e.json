@@ -1,0 +1,10 @@
+{
+  "id": "d17665da-e56e-437d-8a4c-65eb2d54715e",
+  "label": "The q.7 a.1 bridge load map, checked (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "0c1a3ec8-f374-4669-9b79-d43ab70bc439",
+  "rule": "Chain non-reception, limitation only through reception and unlimited perfection; check the measure reading directly",
+  "meaning": "Premise-free. The q.7 a.1 bridge yields the locus-(b) composite from 7338142d, 1304b462 and 'unlimited esse has every pure perfection'; on the measure reading the last premise is analytic (by excluded middle), so the content moves to 1304b462. A certificate of where the load sits, not of warrant.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

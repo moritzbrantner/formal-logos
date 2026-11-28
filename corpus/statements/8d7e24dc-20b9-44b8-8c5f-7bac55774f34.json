@@ -1,0 +1,14 @@
+{
+  "id": "8d7e24dc-20b9-44b8-8c5f-7bac55774f34",
+  "label": "First unde: what a thing has in act, given that it has being, is actual in it through esse",
+  "paraphrase": "OPEN, analyst formulation of the first 'unde' of ST I q.4 a.1 ad 3 ('Nihil enim habet actualitatem, nisi inquantum est: unde ipsum esse est actualitas omnium rerum, et etiam ipsarum formarum'), attribution deferred. For every x and respect r: if x has r in act and x has being, then r is actual in x through esse, stated with the frame field ActualizedBy, intended as the act reading (ACTUALIZED_THROUGH_2); the field has the same type as the dependence relation (ACTUALIZED_THROUGH_1), and the derivations using this bridge are generic in the frame, so they also hold on the dependence reading, where this bridge is analytic. The route is sense-neutral in 'actualized through'. With R-dep (7067553d) it is equivalent to 'esse is the actuality of every form had in act'. On the dependence reading (ACTUALIZED_THROUGH_1) it holds in every frame. It does not say that esse is received or limited.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.DependenceIsActualization",
+  "definition_ids": [
+    "82ab06d0-5328-4d85-b3a2-4a13532d9524",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ],
+  "disambiguation_ids": [
+    "a409105e-8389-46ce-b14b-bebbc2864198"
+  ]
+}

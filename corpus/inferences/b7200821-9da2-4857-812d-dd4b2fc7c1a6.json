@@ -1,0 +1,15 @@
+{
+  "id": "b7200821-9da2-4857-812d-dd4b2fc7c1a6",
+  "label": "GOD_4 HAS_INTELLECT_1 from good-general apprehension at the root and finite reach (inference)",
+  "input_statement_ids": [
+    "dc397705-d727-419e-92f9-65d44e1ff15d",
+    "75974d26-9483-4e1b-81a9-693a90ee9d0f",
+    "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+    "02f04027-2f35-43f9-b283-2030c718ea67"
+  ],
+  "output_statement_id": "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+  "rule": "Identify each GOD_4 with the actual root by finite grounding reach, apply the root-level apprehension, then the recognition bridge",
+  "meaning": "Some n is an actual concrete root at w. Take any g that is GOD_4. Finite grounding reach makes g a grounding ancestor of the actual concretum n; since n has no actual concrete ground, the path is trivial and g = n (namedRootOfReach). The root-level premise gives n a good-general favouring and an apprehended content, and the recognition bridge gives g HAS_INTELLECT_1. Neither the q.14 immateriality premise nor every-pure-perfection (fe67d766) nor the #2153 E premise is used. The main theorem uses no axioms. The Comparator companion intellectStepControls (propext, Quot.sound; same carrier) gives a positive witness and, for three of the four premises, a row where it fails, the others hold and GOD_4 HAS_INTELLECT_1 fails: the D-directed root fails the root-level premise, GOD_4 naming the effect fails reach, and the recognition bridge fails without the HasIntellect predicate. Root existence holds on every assignment of this carrier.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

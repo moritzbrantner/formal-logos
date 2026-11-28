@@ -1,0 +1,10 @@
+{
+  "id": "703f9c7f-82d3-4078-bd19-5fccb123495a",
+  "label": "Formal possession gap is the alternative to formal distinct-cause possession",
+  "subject_kind": "statement",
+  "subject_id": "25b67649-87b9-49ee-a20c-398cc7cee655",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "26632e48-b312-4011-a892-fe05510b1658",
+  "note": "Exact negation with the original scope. Its warrant is the induction-heating observation recorded in docs/notes/causal-possession-bottleneck.md, conditional on CAUSE_2 counting the coil as a cause of the workpiece's heat. It bears on the formal reading only; inclusive possession 2c0b9bd7 is untouched by it."
+}

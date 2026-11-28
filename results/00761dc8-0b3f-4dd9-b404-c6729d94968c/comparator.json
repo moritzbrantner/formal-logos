@@ -1,0 +1,9 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.HoldingFirstMover.Challenge",
+  "solution_module": "TruthCore.Results.Causality.HoldingFirstMover.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.HoldingFirstMover.unheldOperativeOfUnheldTotal"
+  ],
+  "permitted_axioms": [],
+  "enable_nanoda": true
+}

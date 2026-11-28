@@ -1,0 +1,11 @@
+{
+  "id": "915d06fd-93a4-42a7-9895-8d36093db018",
+  "label": "No unexplained absence at roots, from ESSENCE_6 exclusion of root absences and carriage",
+  "argument_id": "a2560bca-45fc-44b7-9c05-ff68dcdc9624",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.noUnexplainedAbsenceFromEssentialExclusion",
+  "comparator_config": "results/915d06fd-93a4-42a7-9895-8d36093db018/comparator.json",
+  "status": "solution-present",
+  "description": "Fix an actual root r at w and a determination d it lacks while an admissible q contains its determinations and d. Some ESSENCE_6 condition on r's profile fails at every profile containing r's determinations and d, so at q. The necessity direction of member grounding makes q exclusion-free, and carriage (LE) then gives the condition at q (positiveEssenceFromCarriage), a contradiction. It uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1), so it does not require the essentialist account of modality that the powers account denies (whether the powers account supplies essential exclusion is open), and on lane E's selection carrier (one stipulated nature, row 5) it does not cost the classical root N: its non-selection of the other outcome is a case (ii) absence carried by its selection (row 5). That carrier is an impure real determination, which strict root purity (3b39e0ba) excludes in other routes. The main theorem uses no axioms. The Comparator companion essentialExclusionControls (three Mathlib axioms; #2153 carrier and lane E's selection carrier) gives a positive witness, a row for each premise where it fails, the other two hold and E fails (no nature excludes noesis; a bare negative clause that nothing carries; the clause carried by the pure a in a family admitting every pure profile), and the classical selection row."
+}

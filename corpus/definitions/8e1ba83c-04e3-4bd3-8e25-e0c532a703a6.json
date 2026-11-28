@@ -1,0 +1,27 @@
+{
+  "id": "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+  "label": "ESSENCE_6, essential profile condition: it lies in the nature of y that x's profile satisfies C",
+  "term": "essential condition on a bearer's profile (ESSENCE_6; the Ess parameter)",
+  "definition": "ProfileEssentialCondition Ess y x C := Ess y x C, for beings y and x and a condition C on sets of real determinations: it lies in the nature of y that x's profile (the set of x's real determinations) satisfies C. A parameter wrapper over the primitive Lean parameter Ess of type B → B → (Set D → Prop) → Prop of TruthCore.Causality.RootClosure, constrained only by the premises that use it: essence-grounded modality for root profiles (EssenceGroundedRootProfileModality: whatever satisfies every essential condition on an actual root's profile is had by it at some accessible world), positivity of root essences (RootEssentialConditionsPositive), carriage of essential exclusions by the root's determinations (RootEssentialConditionsCarried) and, in one Lean-only lemma, factivity (RootEssentialConditionsFactive). Sense ESSENCE_6 of DISAMB-ESSENCE.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.RootClosure.ProfileEssentialCondition",
+  "note": "Stipulated for #2145 premise lane E (docs/notes/causal-perfection-transfer.md, section on closure for a root's own determinations). It is finer than world-propositions in the sense needed there: its content is a condition on profiles (an extensional predicate on sets of determinations, not a hyperintensional content), not a set of worlds. It has two place arguments, the being whose nature it is and the bearer whose profile is constrained, where ESSENCE_5 has one. ESSENCE_5 (EssentialTruth) takes a world-proposition; a world-proposition about x's profile cannot say what it demands of a profile no world realizes, so 'this essential truth excludes x's having q' would hold vacuously of every unrealized q, and an essentialist account of possibility stated with it would be idle. No bridge between ESSENCE_5 and ESSENCE_6 is asserted; an argument that used both would need one as an explicit sense bridge. What would source it: Fine, 'Essence and Modality' (1994), and Hale, Necessary Beings (2013), navigation only, attribution deferred.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "Ess y x C says that it lies in the nature of y that the set of x's real determinations satisfies C. A model supplies the relation; Lean fixes only its type.",
+    "examples": [
+      "It lies in the nature of a triangle that its profile of sides has exactly three members.",
+      "It lies in the nature of a simple source that its profile contains no composition."
+    ],
+    "exclusions": [
+      "That x's profile happens to be P at w: a fact, not a nature-relative truth.",
+      "That x has P at every accessible world: a modal fact, related to essence only by the explicit premise EssenceGroundedRootProfileModality.",
+      "ESSENCE_5 (a world-proposition in a being's nature) and the q.3 a.4 represented essence (ESSENCE_3)."
+    ],
+    "open_obligations": [
+      "No structural property (closure under entailment or conjunction, factivity) is assumed outside the premises that state it.",
+      "Whether a negative clause (a condition cutting off an admissible extension) can belong to a nature without being carried by a determination: denied by RootEssentialConditionsCarried, open.",
+      "EM uses it more strongly than Fine's account: only essences of beings are consulted (no essences of determinations or other items), every condition is on one bearer's profile, and the admissible family is not consulted by EM."
+    ]
+  }
+}

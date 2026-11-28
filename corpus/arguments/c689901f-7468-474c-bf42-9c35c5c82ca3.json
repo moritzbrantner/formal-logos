@@ -1,0 +1,46 @@
+{
+  "id": "c689901f-7468-474c-bf42-9c35c5c82ca3",
+  "label": "No unexplained absence at roots, from the root lack PSR and the sense bridge",
+  "premise_statement_ids": [
+    "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+    "47c228ff-2082-4a27-b0b9-856cc1b79c7c",
+    "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "conclusion_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "inference_ids": [
+    "ddf24119-5dd8-4016-8676-a9a7dde32fb6"
+  ],
+  "meaning": "Fix an actual root r at w and a determination d that r lacks while some admissible profile contains r's determinations and d (case iii). The lack facts make lack r d hold at w; the PSR for root lack facts gives it an admitted reason (EXPLAINED_ABSENCE_1); the sense bridge makes the absence positively fixed (EXPLAINED_ABSENCE_2). Either no admissible profile adds d to r's determinations, against the hypothesis, or a determination of r requires the lack of a set inside that admissible profile, which the necessity direction of member grounding forbids (carriedClosureNotUnexplained). It is a relocation: E alone gives the bridge (positiveLackReasonsOfNoUnexplainedAbsence), so given the other three premises the bridge and E are equivalent, and the PSR premise is met cheaply in its own sense (InquiryScopeMap clause 3). The load is on the bridge, whose rationale is the one shared with carriage, member grounding and E. The main theorem uses no axioms. The Comparator companion lackReasonControls (three Mathlib axioms; the #2153 carrier, open family, source the only actual root) gives a positive witness and, for each premise, a row where it fails, the other three hold and E fails: the rival whose lack of noesis has the necessary truths as admitted reasons (bridge fails), the base arena with no reasons for lacks (PSR fails), no lack fact represented (lack facts fail), and the lack of noesis carried by the pure a in a family admitting every pure profile (necessity direction fails). The rows are assignments of the stated relations, not models of explanation.",
+  "definition_ids": [
+    "04c93d61-3c02-4e68-a48d-cfc72d6882c4",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "6d3a3ecb-f92f-42da-b6bb-4ea99e3ea48d",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "179d4557-bda1-59c4-938a-b91e9974a27f",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
+  ],
+  "disambiguation_ids": [
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ],
+  "sense_bridges": [
+    {
+      "term": "EXPLAINED_ABSENCE",
+      "from": "5e7d2fd0-dc12-4654-b1e2-8fa12c43c7be",
+      "to": "e3064991-b249-48bf-b015-0652cb63078e",
+      "statement_id": "a8a43166-6904-48ff-bfa7-8b535e00c4a4",
+      "role": "premise"
+    },
+    {
+      "term": "EXPLAINED_ABSENCE",
+      "from": "e3064991-b249-48bf-b015-0652cb63078e",
+      "to": "ea93739d-0a36-447e-bc29-384846b8eebe",
+      "statement_id": "89c988d9-34b2-4aee-9e1a-bf4a304c032b",
+      "role": "premise"
+    }
+  ]
+}

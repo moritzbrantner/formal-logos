@@ -1,0 +1,31 @@
+{
+  "id": "a2560bca-45fc-44b7-9c05-ff68dcdc9624",
+  "label": "No unexplained absence at roots, from ESSENCE_6 exclusion of root absences and carriage",
+  "premise_statement_ids": [
+    "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754",
+    "89c988d9-34b2-4aee-9e1a-bf4a304c032b"
+  ],
+  "conclusion_statement_id": "9281317d-1f0a-4522-b91c-58cc07652e92",
+  "inference_ids": [
+    "8d140da5-ab87-4db6-909f-7503da8577da"
+  ],
+  "meaning": "Fix an actual root r at w and a determination d it lacks while an admissible q contains its determinations and d. Some ESSENCE_6 condition on r's profile fails at every profile containing r's determinations and d, so at q. The necessity direction of member grounding makes q exclusion-free, and carriage (LE) then gives the condition at q (positiveEssenceFromCarriage), a contradiction. It uses neither necessity of root absences (906f9077) nor essence-grounded modality (f6f956a1), so it does not require the essentialist account of modality that the powers account denies (whether the powers account supplies essential exclusion is open), and on lane E's selection carrier (one stipulated nature, row 5) it does not cost the classical root N: its non-selection of the other outcome is a case (ii) absence carried by its selection (row 5). That carrier is an impure real determination, which strict root purity (3b39e0ba) excludes in other routes. The main theorem uses no axioms. The Comparator companion essentialExclusionControls (three Mathlib axioms; #2153 carrier and lane E's selection carrier) gives a positive witness, a row for each premise where it fails, the other two hold and E fails (no nature excludes noesis; a bare negative clause that nothing carries; the clause carried by the pure a in a family admitting every pure profile), and the classical selection row.",
+  "definition_ids": [
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "a5452da9-32eb-47d4-98fb-0da507cf4ce5",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ],
+  "strong_version_needed": {
+    "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2": "The weaker reason-essence thesis excludes only absences that have an admitted reason; without the PSR for root lack facts and the lack facts it leaves an absence with no admitted reason unconstrained, and E fails there (row 2 of lackReasonEssenceControls). With those two premises it suffices, which is the separate registered route noUnexplainedAbsenceFromEssentialLackReasons."
+  }
+}

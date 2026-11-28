@@ -1,0 +1,15 @@
+{
+  "id": "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+  "label": "Every absence of an actual root is excluded by some ESSENCE_6 condition",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w and every determination d that r lacks at w, some ESSENCE_6 condition on r's profile (in some being's nature) fails at every set of determinations containing r's real determinations together with d. Essentialism about a root's absences with no modal premise: unlike essence-grounded modality (f6f956a1) and necessity of root absences (906f9077) it mentions no accessible world. A necessary lack that no nature grounds (modal primitivism or brutalism) denies it; a bare negative clause in the root's nature satisfies it. On lane E's selection carrier, whose source's nature is stipulated to impose only an admissibility condition excluding a second selection, a classical root whose selection of one outcome is a real intrinsic determination varying across worlds satisfies it (essentialExclusionControls, row 5).",
+  "lean_declaration": "TruthCore.Explanation.InquiryClosure.RootLacksEssentiallyExcluded",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

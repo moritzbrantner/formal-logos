@@ -1,0 +1,11 @@
+{
+  "id": "a7644793-0495-41e8-9851-9c7d2b95836b",
+  "label": "Positively fixed root absences, from no unexplained absence at roots",
+  "argument_id": "8a7b6e51-8ed5-41a9-ae8e-5dd6f6d1cd90",
+  "challenge_module": "TruthCore.Results.Explanation.InquiryClosure.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InquiryClosure.Solution",
+  "theorem": "TruthCore.Results.Explanation.InquiryClosure.positiveLackReasonsOfNoUnexplainedAbsence",
+  "comparator_config": "results/a7644793-0495-41e8-9851-9c7d2b95836b/comparator.json",
+  "status": "solution-present",
+  "description": "Relocation converse: E implies the sense bridge for every arena. Not a strength fork: E is a claim in EXPLAINED_ABSENCE_3, while the bridge is a passage from EXPLAINED_ABSENCE_1 to EXPLAINED_ABSENCE_2, a difference of content, not of strength. With noUnexplainedAbsenceFromPositiveLackReasons it closes the loop E to bridge to E, so that route to E is a relocation that is connected only. Establishes no premise."
+}

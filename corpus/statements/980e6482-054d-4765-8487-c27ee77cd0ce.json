@@ -1,0 +1,13 @@
+{
+  "id": "980e6482-054d-4765-8487-c27ee77cd0ce",
+  "label": "Every actual root has a favouring determination",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: every actual concrete root r at w has, for some favouring profile phi, the real determination that a favouring of r is phi. It is the weakest form of commitment (e) of #2145 (the foundation originates objective finality) under the favouring senses ORIGINAL_FINALITY_1 and ORIGINAL_FINALITY_2: each includes an own favouring of the origin, but the finality conditions themselves are not part of this statement. It does not cover a root that originates finality only as an object of appetite, with no favouring of its own (the final-cause-as-object reading, a recorded rival).",
+  "lean_declaration": "TruthCore.Causality.ImpersonalFoundationJoint.ActualRootsHaveOwnFavouring",
+  "definition_ids": [
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"
+  ],
+  "disambiguation_ids": [
+    "0bbbf98c-605a-49fa-a5c9-855cd2a6c1c5"
+  ]
+}
