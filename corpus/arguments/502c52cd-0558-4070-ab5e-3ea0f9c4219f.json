@@ -10,7 +10,7 @@
   "inference_ids": [
     "1f988c8e-1e47-49d7-94ad-21aa66382f19"
   ],
-  "meaning": "Fix an actual root r, a condition C seated in a real constituent k of r, and an admissible q containing r's determinations in which no determination realized by k requires, as such, the lack of members of q. Every determination t of r is realized by some real constituent (REAL), which simplicity identifies with k; so no determination of r requires such a lack, and own-nature carriage gives C at q. With ownCarriageFromUnity: under simplicity, SEAT, REAL and ESSE, TRANSFER_1 and own-nature carriage as such are equivalent. The unity argument therefore relocates carriage into the transfer premise and gives it no independent warrant at a simple root. The main theorem uses no axioms.",
+  "meaning": "Fix an actual root r, a condition C seated in a real constituent k of r, and an admissible q containing r's determinations in which no determination realized by k requires, as such, the lack of members of q. Every determination t of r is realized by some real constituent (REAL), which simplicity identifies with k; so no determination of r requires such a lack, and own-nature carriage gives C at q. With ownCarriageFromUnity: under simplicity, SEAT, REAL and ESSE, TRANSFER_1 and own-nature carriage as such are equivalent. The unity argument therefore relocates carriage into the transfer premise and gives it no independent warrant at a simple root. The same proof gives TRANSFER_2 from LE_in (Lean-only unityTransferInOfOwnCarriageIn), so the relocation holds in REQUIRES_LACK_2 as well. The main theorem uses no axioms.",
   "definition_ids": [
     "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
     "588792ba-6354-4439-b4d7-bc640983c8f2",

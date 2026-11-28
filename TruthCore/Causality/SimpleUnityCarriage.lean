@@ -441,7 +441,16 @@ abbrev cUnity (ess : Bool → Bool → (Set Determination → Prop) → Prop)
    admissibility of its profile, the admissibility of each pure determination
    and joint compossibility on the open family (together with own-nature
    exclusion and carriage in the root from clause 3), fails the purity of
-   requirements in the root (clause 3), and lacks a pure determination. -/
+   requirements in the root (clause 3), and lacks a pure determination. The
+   classical source also meets strict purity and the admissibility of its
+   profile, so it meets every non-logical premise of that route (its in-root
+   requirement relation is empty, so in-root purity holds vacuously).
+13. The in-root route on the fine-grained carrier of clause 10, with the
+   requirement in the root `natReqIn`. With the nature determination pure
+   (Plotinian), the purity of requirements in the root and joint compossibility
+   fail and the source lacks a pure determination; with it impure, the purity
+   of requirements in the root and joint compossibility hold, strict purity
+   fails, and the source lacks a pure determination. -/
 def SimpleUnityCarriageMap : Prop :=
   (∀ {W B D K : Type} (m : Profile W B) (w : W) (Admissible : Set D → Prop)
       (Ess : B → B → (Set D → Prop) → Prop) (HasAt : W → B → D → Prop)
@@ -594,6 +603,14 @@ def SimpleUnityCarriageMap : Prop :=
       (hasAt TruthCore.Causality.SourceIntellectControls.ProfileControls.pure
         TruthCore.Causality.SourceIntellectControls.ProfileControls.pure true)
       TruthCore.Causality.RootPerfectionExclusion.Control.isPure ∧
+    ActualRootDeterminationsArePure rootProfile true
+      (hasAt TruthCore.Causality.SourceIntellectControls.ProfileControls.pure
+        TruthCore.Causality.SourceIntellectControls.ProfileControls.pure true)
+      TruthCore.Causality.RootPerfectionExclusion.Control.isPure ∧
+    TruthCore.Causality.RootPerfectionExclusion.RootProfilesAdmissible rootProfile true
+      openProfile
+      (hasAt TruthCore.Causality.SourceIntellectControls.ProfileControls.pure
+        TruthCore.Causality.SourceIntellectControls.ProfileControls.pure true) ∧
     ActualRootDeterminationsArePure rootProfile true (hasAt positive positive true)
       TruthCore.Causality.RootPerfectionExclusion.Control.isPure ∧
     TruthCore.Causality.RootPerfectionExclusion.RootProfilesAdmissible rootProfile true
@@ -603,6 +620,17 @@ def SimpleUnityCarriageMap : Prop :=
     TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible openProfile
       TruthCore.Causality.RootPerfectionExclusion.Control.isPure ∧
     ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
-      (hasAt positive positive true) TruthCore.Causality.RootPerfectionExclusion.Control.isPure)
+      (hasAt positive positive true) TruthCore.Causality.RootPerfectionExclusion.Control.isPure) ∧
+  ((¬ RootPureRequiresNoPureLackIn rootProfile true natHas natPurePlotinian natReqIn ∧
+      ¬ TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible natAdmissible
+        natPurePlotinian ∧
+      ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
+        (natHas true) natPurePlotinian) ∧
+    (RootPureRequiresNoPureLackIn rootProfile true natHas natPureStrict natReqIn ∧
+      TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible natAdmissible
+        natPureStrict ∧
+      ¬ ActualRootDeterminationsArePure rootProfile true (natHas true) natPureStrict ∧
+      ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
+        (natHas true) natPureStrict))
 
 end TruthCore.Causality.SimpleUnityCarriage

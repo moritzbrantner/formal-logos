@@ -173,7 +173,7 @@ open TruthCore.Causality.RootClosure.Control (hasSel SelDet) in
 open TruthCore.Causality.RootPerfectionExclusion.Control (isPure) in
 
 /-- Comparator companion and certificate of lane U (#2145): see
-`SimpleUnityCarriageMap` for the twelve clauses. Structural assignments only, not
+`SimpleUnityCarriageMap` for the thirteen clauses. Structural assignments only, not
 models of essence, constituency, realization or requirement. -/
 theorem simpleUnityCarriageMap : SimpleUnityCarriageMap := by
   sorry

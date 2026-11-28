@@ -618,6 +618,9 @@ theorem inRootRow :
     RootPureRequiresNoPureLackIn rootProfile true (hasAt pureSet pureSet) isPure noReqIn ∧
     TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
       (hasAt pureSet pureSet true) isPure ∧
+    ActualRootDeterminationsArePure rootProfile true (hasAt pureSet pureSet true) isPure ∧
+    TruthCore.Causality.RootPerfectionExclusion.RootProfilesAdmissible rootProfile true
+      openProfile (hasAt pureSet pureSet true) ∧
     ActualRootDeterminationsArePure rootProfile true (hasAt positive positive true) isPure ∧
     TruthCore.Causality.RootPerfectionExclusion.RootProfilesAdmissible rootProfile true
       openProfile (hasAt positive positive true) ∧
@@ -625,10 +628,16 @@ theorem inRootRow :
     TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible openProfile isPure ∧
     ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
       (hasAt positive positive true) isPure := by
-  refine ⟨fun _ _ _ _ _ _ _ h => h, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  refine ⟨fun _ _ _ _ _ _ _ h => h, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro r hr d hd
     rw [rootIff] at hr; subst hr
     exact hd
+  · intro r hr d hd
+    rw [rootIff] at hr; subst hr
+    exact hd
+  · intro r hr
+    rw [rootIff] at hr; subst hr
+    exact pureOpen'
   · intro r hr d hd
     rw [rootIff] at hr; subst hr
     exact positiveSubPure hd
@@ -644,6 +653,76 @@ theorem inRootRow :
     · exact hq.2 h
   · intro h
     exact noesisNotPositive (h true rootTrue Determination.noesis noesisPure)
+
+/-- Clause 13: the in-root route on the fine-grained carrier. -/
+theorem fineInRootRow :
+    (¬ RootPureRequiresNoPureLackIn rootProfile true natHas natPurePlotinian natReqIn ∧
+      ¬ TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible natAdmissible
+        natPurePlotinian ∧
+      ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
+        (natHas true) natPurePlotinian) ∧
+    (RootPureRequiresNoPureLackIn rootProfile true natHas natPureStrict natReqIn ∧
+      TruthCore.Causality.RootPerfectionExclusion.PureExtensionsAdmissible natAdmissible
+        natPureStrict ∧
+      ¬ ActualRootDeterminationsArePure rootProfile true (natHas true) natPureStrict ∧
+      ¬ TruthCore.Causality.PureActRoot.ActualRootHasEveryPureDetermination rootProfile true
+        (natHas true) natPureStrict) := by
+  have hnoesis : ¬ natHas true true (Sum.inl Determination.noesis) := by
+    simp [natHas]
+  refine ⟨⟨?_, ?_, ?_⟩, ⟨?_, ?_, ?_, ?_⟩⟩
+  · intro h
+    exact h true rootTrue (.inr ()) {Sum.inl Determination.noesis}
+      (Or.inr (Or.inr (Or.inr rfl))) (by simp [natPurePlotinian])
+      (by simp [natPurePlotinian]) ⟨rfl, rfl, rfl⟩
+  · intro h
+    have hq : natAdmissible (ActualProfile (natHas true) true) := by
+      refine ⟨Or.inl rfl, ?_, ?_⟩
+      · intro h'; simp [ActualProfile, natHas] at h'
+      · rintro ⟨-, h'⟩; exact hnoesis h'
+    have hins := h _ (Sum.inl Determination.noesis) hq
+      (fun d hd => by
+        rcases hd with rfl | rfl | rfl | rfl <;> simp [natPurePlotinian])
+      (by simp [natPurePlotinian])
+      ⟨{Sum.inl Determination.esse, Sum.inl Determination.noesis},
+        ⟨by simp, by simp, by simp⟩, by simp⟩
+    exact hins.2.2 ⟨Or.inr (Or.inr (Or.inr (Or.inr rfl))), Or.inl rfl⟩
+  · intro h
+    exact hnoesis (h true rootTrue _ (by simp [natPurePlotinian]))
+  · rintro r - t S - ht - ⟨-, rfl, -⟩
+    exact ht.2 rfl
+  · intro q k hq hall hk _
+    refine ⟨Or.inr hq.1, ?_, ?_⟩
+    · rintro (h | h)
+      · exact hk.1 h.symm
+      · exact hq.2.1 h
+    · rintro ⟨h1, -⟩
+      rcases h1 with h | h
+      · exact hk.2 h.symm
+      · exact (hall _ h).2 rfl
+  · intro h
+    exact (h true rootTrue (.inr ()) (Or.inr (Or.inr (Or.inr rfl)))).2 rfl
+  · intro h
+    exact hnoesis (h true rootTrue _ (by simp [natPureStrict]))
+
+/-- Lean-only (relocation in sense 2): at a simple root, carriage in the root
+gives TRANSFER_2 back, given REAL. With `ownCarriageInFromUnity`, under
+simplicity, SEAT, REAL and ESSE, TRANSFER_2 and LE_in are equivalent. -/
+theorem unityTransferInOfOwnCarriageIn {W B D K : Type} (m : Profile W B) (w : W)
+    (Admissible : Set D → Prop) (Ess : B → B → (Set D → Prop) → Prop)
+    (HasAt : W → B → D → Prop) (RealConstituent : B → K → Prop)
+    (Seat : B → (Set D → Prop) → K → Prop) (Realizes : B → K → D → Prop)
+    (ReqIn : B → D → Set D → Prop)
+    (hS : RootsConstitutivelySimple m w RealConstituent)
+    (hReal : RootDeterminationsRealized m w HasAt RealConstituent Realizes)
+    (hLE : RootOwnEssentialConditionsCarriedIn m w Admissible Ess HasAt ReqIn) :
+    RootSeatedExclusionsRequiredIn m w Admissible Ess HasAt RealConstituent Seat Realizes
+      ReqIn := by
+  intro r hr C k hk hseat _ q hq hsub hfree
+  refine hLE r hr C hseat.1 q hq hsub (fun t ht S hSq => ?_)
+  obtain ⟨k', hk', hreal⟩ := hReal r hr t ht
+  have hkk : k' = k := hS r hr k' k hk' hk
+  subst hkk
+  exact hfree t ht hreal S hSq
 
 /-- Clause 1: on the constituents-realize reading simplicity is idle. -/
 theorem simplicityIdle {W B D K : Type} (m : Profile W B) (w : W)
@@ -661,12 +740,12 @@ theorem simplicityIdle {W B D K : Type} (m : Profile W B) (w : W)
   exact hT r hr C k hk hseat (hCR r hr k hk) q hq hsub (fun t ht _ S hS => hfree t ht S hS)
 
 /-- Comparator companion and certificate of lane U (#2145): see
-`SimpleUnityCarriageMap` for the twelve clauses. Structural assignments only, not
+`SimpleUnityCarriageMap` for the thirteen clauses. Structural assignments only, not
 models of essence, constituency, realization or requirement. -/
 theorem simpleUnityCarriageMap : SimpleUnityCarriageMap :=
   ⟨fun m w Adm Ess HasAt RC Seat Rl Req => simplicityIdle m w Adm Ess HasAt RC Seat Rl Req,
     classicalRow, rivalRow, rivalNoCarrierUnderMG, compositeRow, unseatedRow, unrealizedRow,
-    emptyRow, mgIndependentRow, fineGrainedRow, selectionRow, inRootRow⟩
+    emptyRow, mgIndependentRow, fineGrainedRow, selectionRow, inRootRow, fineInRootRow⟩
 
 end Controls
 

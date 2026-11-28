@@ -9307,6 +9307,12 @@ form (over all beings) would need an inductive base, and every base case
 (a triangle's form, a finite power) carries its exclusions by impure realized
 determinations. Lane E's reference-class objection applies to it unchanged.
 
+The same holds in sense 2. The Lean-only `unityTransferInOfOwnCarriageIn` gives
+TRANSFER_2 from S, REAL and LE_in, so under S, SEAT, REAL and ESSE,
+**TRANSFER_2 and LE_in are equivalent** at a simple root as well. Unity gives
+LE_in only through the identity-thesis rationale for TRANSFER_2 (part C), not
+by a derivation that avoids relocation.
+
 ### C. What unity does give: carriage in the root, and a sense gap
 
 The intuition "nothing but the one nature can carry it" is valid, but for
@@ -9349,11 +9355,17 @@ REQUIRES_LACK_2 → 1.
     Plotinian reading);
   - strict root purity `3b39e0ba`, if it is impure.
 
+  Clause 13 runs route D (part D) on the same fine-grained carrier with the
+  requirement in the root `natReqIn`. With the nature determination pure
+  (Plotinian), the purity of requirements in the root and joint compossibility
+  both fail. With it impure, both hold and strict purity fails. Either way the
+  source lacks a pure determination.
+
 **What this does to LE's remaining warrant.** Lane E recorded that LE's only
 warrant at a pure root is the shared rationale that negative facts at a root
-have positive grounds. Clause 3 shows that a simple rival meets that rationale
-in sense 2: its lack of noesis has a positive ground in the root, namely its
-one nature, which is its being as realized in it. The rationale favours LE
+have positive grounds. On the clause-3 assignment, a simple rival meets the
+sense-2 formalization of that rationale, LE_in: its lack of noesis is carried
+in the root by its one nature, which is its being as realized in it. The rationale favours LE
 over LE_in only in sense 1. In that sense it is the content of LE, or of the
 bridge, and not an independent reason for it.
 
@@ -9379,9 +9391,11 @@ premise follows from `0c8631bd` with the bridge. The converse fails: a rival
 that denies the bridge keeps `0c8631bd` and denies the in-root premise.
 
 Clause 12 checks the route on the carrier:
-- The classical source meets every premise and has every pure determination.
-  Its in-root requirement relation is empty, so it meets the in-root purity
-  premise vacuously.
+- The classical source meets every non-logical premise (strict purity and
+  the admissibility of its profile are certified in clause 12; own-nature
+  exclusion and carriage in the root in clause 2) and has every pure
+  determination. Its in-root requirement relation is empty, so it meets the
+  in-root purity premise vacuously.
 - The rival source meets every non-logical premise except the in-root purity
   of requirements, and lacks noesis.
 
@@ -9399,14 +9413,17 @@ be the first unlimited one. That is the Plotinian line: the unity of the first
 excludes the duality of thought, and this is no limitation. This lane does
 not decide it.
 
-**Rationale parity for a rival that keeps `0c8631bd`.** `0c8631bd`'s stated
-rationale is that requiring the lack of a positive actuality is a limitation
-of the requirer. It applies to a determination as realized in a bearer at
-least as directly as to a determination type. A rival that accepts
-`0c8631bd` on that rationale and denies the in-root premise owes an account
-of why the rationale stops at types. No such account is recorded. This is a
-burden on that rival's combination of commitments, not a refutation. A rival
-that denies `0c8631bd` as well pays the Plotinian price once.
+**No tension with `0c8631bd` is shown.** `0c8631bd`'s stated rationale is
+that requiring the lack of a positive actuality is a limitation of the
+requirer. Applied in the root, it yields only that the root's being, as
+realized in it, is limited. A rival that keeps `0c8631bd`, which is a
+type-level claim, can accept that. To turn it into a conflict, the in-root
+application needs a further premise: an actual root's determinations, as
+realized in it, have no limitation. That premise is not `0c8631bd`. It is not
+`a30c5963` either, which the rival satisfies (part E), nor strict purity
+`3b39e0ba`, which is type-level. The finite-knower restriction above shows
+that the rationale needs such a root premise. The rival denies it, and that
+denial is the in-root purity premise itself. No internal tension is shown.
 
 ### E. The other simplicity notions
 
@@ -9463,12 +9480,12 @@ Against the routes of parts A–D it must deny one of the following.
 
 | Denial | Price | Independent motivation | Classical root |
 | --- | --- | --- | --- |
-| SEAT | a clause of its nature in no real constituent: either a nature distinct from its one reality, or the clause as a non-real contained item, which falls under H1's conceptualist premise (`cde7f1dd`, parity there) | none identified beyond the rival's need | holds |
-| TRANSFER_2 (identity thesis) | a negative content of its one reality that belongs to none of its determinations as realized in it | none identified beyond the rival's need | holds; never triggered |
-| purity of requirements in the root | its being, as realized in it, excludes a pure perfection without being limited | the Plotinian line | holds |
-| XN_own | a necessary lack that no nature excludes | modal primitivism or brutalism | holds |
+| SEAT | a clause of its nature in no real constituent: either a nature distinct from its one reality, or the clause as a non-real contained item, which falls under H1's conceptualist premise (`cde7f1dd`, parity there) | none identified beyond the rival's need | holds on the clause-2/12 assignment |
+| TRANSFER_2 (identity thesis) | a negative content of its one reality that belongs to none of its determinations as realized in it | none identified beyond the rival's need | holds on the clause-2/12 assignment; vacuously (the nature imposes only admissibility) |
+| purity of requirements in the root | its being, as realized in it, requires the lack of a pure perfection; it denies the root premise that a root's determinations, as realized, have no limitation (no tension with `0c8631bd` is shown, part D) | the Plotinian line | holds on the clause-2/12 assignment; vacuously (empty in-root requirement relation) |
+| XN_own | a necessary lack that no nature excludes | modal primitivism or brutalism | holds on the clause-2/12 assignment |
 | the bridge only (coarse types) | blocks the as-such routes (A, B) but not route D | shared determination types (certified under MG, clause 4) | not needed |
-| joint compossibility family | a case (i) or (ii) exclusion of noesis | priced in the compossibility lanes | holds |
+| joint compossibility family | a case (i) or (ii) exclusion of noesis | priced in the compossibility lanes | holds on the clause-2/12 assignment |
 
 For a simple rival that grants SEAT and the identity thesis, lane E's "deny
 LE" row (an uncarried negative clause) is no longer available as such: the
@@ -9482,25 +9499,29 @@ thesis, and it ranks none of the rows.
 - LE gets no independent warrant from unity. At a simple root, the unity
   argument's transfer premise is equivalent to own-nature carriage (B). This
   is the fifth angle on E/LE, and it relocates.
-- Unity does give **carriage in the root** from premises a simple rival can
-  grant (C), and a new support option for every pure perfection
+- Unity gives **carriage in the root** through the identity-thesis rationale
+  for TRANSFER_2, which is itself equivalent to LE_in at a simple root (B, C).
+  It also gives a new support option for every pure perfection
   (`2b98650a`) that bypasses LE, the bridge, MG and E. Its distinctive load
   is the in-root purity of requirements. That premise shares `0c8631bd`'s
   rationale and the Plotinian crux.
-- On route D, E's bottleneck (LE + MG) moves to the in-root counterpart of
+- On route D, the bottleneck for every pure perfection (`fe67d766`; on the
+  other routes, LE + MG through E) moves to the in-root counterpart of
   `0c8631bd`, which #2162 records as the requirement-form counterpart of joint
   compossibility. Both rest on one question: can an unlimited root's own act,
   as realized in it, require the lack of a pure perfection without
   limitation? This is a consolidation, counted once, not new evidence.
 - "Negative facts at a root have positive grounds" no longer supplies warrant
-  for LE beyond the bridge. A simple rival meets it in re.
-- Unity has no bearing on MG (clause 9: the unity package and LE_own hold
-  while MG and E fail).
+  for LE beyond the bridge. On the clause-3 assignment a simple rival meets
+  its sense-2 formalization, LE_in.
+- The unity package neither entails nor excludes MG on this carrier (clauses
+  2 and 9).
 
 **Standing rival and its price.** The impersonal eminent source (#1892) that
 is constitutively simple and lacks noesis by a clause of its one nature. It
 grants S, REAL and ESSE. Its cheapest options are:
-- the Plotinian denial of the in-root purity of requirements;
+- the Plotinian denial of the in-root purity of requirements, that is, of the
+  root premise that its determinations, as realized, have no limitation;
 - a denial of the identity thesis, with negative content in the one reality
   that belongs to no determination as realized;
 - a SEAT denial that moves the clause to H1's non-real items.
@@ -9519,14 +9540,28 @@ is case (iii), and to the typed premises above.
 - **What it adds** is discrimination of the rival's options. For a simple
   rival that grants SEAT and the identity thesis, the uncarried-clause escape
   becomes the Plotinian commitment in re. That commitment has a named
-  precedent and an internal tension with `0c8631bd`'s rationale if the rival
-  also keeps `0c8631bd`.
+  precedent. No internal tension with `0c8631bd` is shown: a rival can keep
+  that type-level premise and deny the in-root one.
 - **MG:** unaffected.
 
 Formal validity is unchanged by this judgment. Nothing is established.
 
-**Review state.** Draft branch `research/u-unity-carriage`, not yet
-challenged. The independent semantic challenge is pending (coordinator).
+**Review state.** The independent semantic challenge of `c19d6fa49` confirmed
+the derivations, the relocation in sense 1, both `strengthens` registrations,
+the bridges, MG independence and placement. It found 2 P1s and 7 P2s, all
+repaired in the following commit:
+
+| Finding | Repair |
+| --- | --- |
+| P1-1: the "rationale parity" objection failed the Substantive Objection Standard; the in-root application of `0c8631bd`'s rationale needs a further root premise | replaced by "no tension with `0c8631bd` is shown" (part D); the denial menu, table G, the judgment and attempt `3d6179e4` updated |
+| P1-2: the classical source's compliance with route D was stated beyond clause 12 | clause 12 now also certifies strict purity and admissibility of its profile; the prose cites the clauses |
+| P2-3: the relocation test was applied only in sense 1 | Lean-only `unityTransferInOfOwnCarriageIn`: TRANSFER_2 ⇔ LE_in at a simple root (part B, assessment, spec) |
+| P2-4: "meets it in re" overstated a structural assignment | "meets its sense-2 formalization LE_in on the clause-3 assignment" (part C, assessment, attempt) |
+| P2-5: table G's classical column | "holds on the clause-2/12 assignment", vacuously for the transfers and in-root purity |
+| P2-6: "unity has no bearing on MG" | "neither entails nor excludes MG on this carrier (clauses 2, 9)" |
+| P2-7: DEF `88f7c656` stale | `lean_declaration` `RequiresLackAsSuch`, the "as such, every bearer" qualifier, and an updated note (cross-lane edit) |
+| P2-8: route D not run on the fine-grained carrier | new clause 13 (part C) |
+| P2-9: "On route D, E's bottleneck" | "the bottleneck for every pure perfection (`fe67d766`)" |
 
 ### Next discriminating tests
 
