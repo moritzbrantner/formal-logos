@@ -1,0 +1,12 @@
+{
+  "id": "65936928-108e-4589-a97d-10483dfcfe51",
+  "label": "Own-nature carriage REQUIRES_LACK_1 at roots, from carriage LE (inference)",
+  "input_statement_ids": [
+    "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+  ],
+  "output_statement_id": "7c1db2e6-00f3-4fd4-b4da-9e489de5981d",
+  "rule": "Restrict the natures consulted to the root's own",
+  "meaning": "LE holds for conditions in any being's nature on a root's profile; take that being to be the root. It certifies the strength order. No axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

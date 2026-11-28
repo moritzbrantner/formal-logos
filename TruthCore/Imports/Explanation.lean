@@ -40,6 +40,7 @@ public import TruthCore.Explanation.GroundingBaseline
 public import TruthCore.Explanation.GroundingBaseline.Reduct
 public import TruthCore.Explanation.HistorySelection
 public import TruthCore.Explanation.InducerFreePersistence
+public import TruthCore.Explanation.InertialActuality
 public import TruthCore.Explanation.InertialReceiverNature
 public import TruthCore.Explanation.InquiryClosure
 public import TruthCore.Explanation.IntrinsicReasonBoundary

@@ -1,0 +1,21 @@
+{
+  "id": "8287901c-46b0-497b-88ea-d80efa28dd5e",
+  "label": "ESSENCE_6 exclusion of root absences, from own-nature ESSENCE_6 exclusion",
+  "premise_statement_ids": [
+    "7f26189b-7def-4a16-84ab-6369065ced51"
+  ],
+  "conclusion_statement_id": "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2",
+  "inference_ids": [
+    "2c63e126-84d8-4a96-915c-01af480eefcd"
+  ],
+  "meaning": "If a condition of r's own nature excludes d given r's profile, then some being's nature (r's) contains such a condition. It certifies the strength order. No axioms.",
+  "definition_ids": [
+    "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1"
+  ]
+}

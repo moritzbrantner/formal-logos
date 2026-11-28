@@ -1,0 +1,11 @@
+{
+  "id": "1e7148b0-eb82-40fc-8bbf-65004faf35b0",
+  "label": "Transport an existence-entailing nature fact to a dated actuality witness",
+  "argument_id": "6d5bba70-dfac-4153-ad50-b1f6b9cc80d6",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.natureSelection",
+  "comparator_config": "results/1e7148b0-eb82-40fc-8bbf-65004faf35b0/comparator.json",
+  "status": "solution-present",
+  "description": "Apply the ontic entailment where the fact holds. At-now coherence in the conclusion transports it to dated presence. Essentiality identifies the kind of fact under test."
+}

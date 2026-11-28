@@ -1,0 +1,10 @@
+{
+  "id": "4f7a2bd3-86e1-4564-8834-7e1d447ae31f",
+  "label": "The reception control tests state persistence in a received-act profile",
+  "subject_kind": "result",
+  "subject_id": "b6e57eb0-e45a-4c00-9a3e-29164165d8e8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "628aaedc-7e33-4d15-8606-d894cb3d755d",
+  "note": "The supplied reception dictionary and absence of giving leave the state law satisfied on the populated profile."
+}
