@@ -1,0 +1,11 @@
+{
+  "id": "e2df53e6-6634-4edf-bacd-8c733317c0ee",
+  "label": "Common triad verdicts, from the causal MEANS_1 principle",
+  "argument_id": "bc69877c-d81f-413b-81c3-5ddf99e67b71",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.meansTriad",
+  "comparator_config": "results/e2df53e6-6634-4edf-bacd-8c733317c0ee/comparator.json",
+  "status": "solution-present",
+  "description": "Switch: a path to the saving avoids the harm. Footbridge and transplant: every path passes through it (MEANS_1)."
+}

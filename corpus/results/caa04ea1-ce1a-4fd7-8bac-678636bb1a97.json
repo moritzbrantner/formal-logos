@@ -1,0 +1,11 @@
+{
+  "id": "caa04ea1-ce1a-4fd7-8bac-678636bb1a97",
+  "label": "Lives-only act consequentialism fails, from the footbridge verdict",
+  "argument_id": "2f0ef60f-953b-4bda-9a1e-d03c67400309",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.footbridgeVerdictExcludesAC",
+  "comparator_config": "results/caa04ea1-ce1a-4fd7-8bac-678636bb1a97/comparator.json",
+  "status": "solution-present",
+  "description": "Contrapositive of the act-consequentialist footbridge derivation: whoever holds the footbridge verdict on these facts rejects act consequentialism as the governing principle. Conditional on the open prima facie verdict."
+}

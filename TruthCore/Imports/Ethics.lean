@@ -12,3 +12,5 @@ public import TruthCore.Ethics.PopulationComparability
 public import TruthCore.Ethics.PopulationScoring
 public import TruthCore.Ethics.RossDerived
 public import TruthCore.Ethics.RossPermission
+public import TruthCore.Ethics.Trolley
+public import TruthCore.Ethics.TrolleyRowe

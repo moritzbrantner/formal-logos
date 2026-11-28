@@ -1,0 +1,25 @@
+{
+  "id": "eef177ba-a34f-4c31-8e46-23ea07a19367",
+  "label": "Switching in Thomson's loop is impermissible, from double effect on its causal reading",
+  "premise_statement_ids": [
+    "0738e9bb-e60c-470e-b90f-b89d1adede12",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "conclusion_statement_id": "98bb5913-4800-4b92-87c1-c5906db623f6",
+  "inference_ids": [
+    "d465babd-6918-4725-8cee-ac15a9d4f03a"
+  ],
+  "meaning": "In the loop every path to the saving passes through the one's harm (MEANS_1), so condition 3 on its causal reading fails although the plan omits the harm.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}

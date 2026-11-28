@@ -1,0 +1,9 @@
+{
+  "id": "b32b898d-3ad6-4132-9815-ac8897f2193c",
+  "label": "WHOLLY_GOOD_1: never permits what would be strictly better prevented",
+  "term": "wholly good (outcome-minimizing)",
+  "definition": "OutcomeStandard s W: every Rowe-wholly-good being, for every occurring event it can prevent, is such that preventing the event is not strictly better than permitting it. The act-consequentialist pattern applied to permitting.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.OutcomeStandard",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

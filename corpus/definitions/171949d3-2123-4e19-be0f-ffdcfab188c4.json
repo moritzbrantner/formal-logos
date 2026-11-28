@@ -1,0 +1,9 @@
+{
+  "id": "171949d3-2123-4e19-be0f-ffdcfab188c4",
+  "label": "Constraint-blocked prevention: some way exists and every way violates a double-effect condition",
+  "term": "constraint-blocked prevention",
+  "definition": "ConstraintBlocked s W b e: some supplied prevention way of e by b exists, and every such way, described as a trolley case, has an evil object, a planned harm or a harm used as a MEANS_1. The ways and the comparison Better are supplied interpretations.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.TrolleyRowe.ConstraintBlocked",
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
+}

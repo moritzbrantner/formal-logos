@@ -1,0 +1,116 @@
+[batch]
+vocab = "TruthCore.Ethics.TrolleyRowe"
+results = "TruthCore.Results.Ethics.TrolleyRowe"
+
+[[statement]]
+id = "Rowe's WhollyGood satisfies the outcome-minimizing standard (WHOLLY_GOOD_1)"
+label = "Rowe's WhollyGood satisfies the outcome-minimizing standard (WHOLLY_GOOD_1)"
+lean = "OutcomeStandard"
+paraphrase = "Analyst formulation, attribution deferred. Every Rowe-wholly-good being, for each occurring event it can prevent, is such that preventing it would not be strictly better than permitting it. The comparison is a supplied primitive."
+definitions = ["b32b898d-3ad6-4132-9815-ac8897f2193c", "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d"]
+disambiguations = ["a9f886f9-c7ee-4680-8e88-91bd15fe0cc9"]
+[statement.connection_plan]
+target_statement_id = "STMT-GOD-EXISTS"
+missing_bridge = "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open."
+blocker = "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+
+[[statement]]
+id = "Rowe's WhollyGood satisfies the constraint-respecting rescue standard (WHOLLY_GOOD_2)"
+label = "Rowe's WhollyGood satisfies the constraint-respecting rescue standard (WHOLLY_GOOD_2)"
+lean = "ConstraintStandard"
+paraphrase = "Analyst formulation, attribution deferred. Every Rowe-wholly-good being permits an occurring preventable event that would be strictly better prevented only when some way of preventing exists and every such way fails a double-effect condition 1-3 (evil object, planned harm, or harm as a MEANS_1)."
+definitions = ["45620acb-803e-4f02-965e-4e8de5ec4c82", "171949d3-2123-4e19-be0f-ffdcfab188c4", "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d", "6619bdb3-7470-4cd5-896b-0dbb4ac65935", "1daf2585-0e75-4225-9610-0f43fd6dbb28"]
+disambiguations = ["a9f886f9-c7ee-4680-8e88-91bd15fe0cc9", "ea9c5a67-c9a2-417f-afa2-8b82e9d56107", "63369e84-f651-42b5-bfef-409c3872f917"]
+[statement.connection_plan]
+target_statement_id = "STMT-GOD-EXISTS"
+missing_bridge = "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open."
+blocker = "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+
+[[statement]]
+id = "Unblocked preventable events would be strictly better prevented"
+label = "Unblocked preventable events would be strictly better prevented"
+lean = "UnblockedPreventionBetter"
+paraphrase = "Analyst formulation, attribution deferred. OPEN outcome bridge: when a preventable event has no blocking cost in Rowe's sense (no unavoidable greater-good loss or equal/worse evil), preventing it is strictly better overall than permitting it. It fails if several individually lesser costs can jointly outweigh the suffering."
+definitions = ["2ea8d8e8-e283-48fb-b4c9-ff1236b9520d"]
+[statement.connection_plan]
+target_statement_id = "STMT-GOD-EXISTS"
+missing_bridge = "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open."
+blocker = "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+
+[[statement]]
+id = "Constraint-qualified permission condition (WHOLLY_GOOD_2)"
+label = "Constraint-qualified permission condition (WHOLLY_GOOD_2)"
+lean = "ConstraintQualifiedPermission"
+paraphrase = "Analyst formulation, attribution deferred. For every omniscient wholly good being, every occurring preventable intense suffering has a Rowe blocking cost or is constraint-blocked (some way of preventing exists and every way violates a double-effect condition 1-3)."
+definitions = ["45620acb-803e-4f02-965e-4e8de5ec4c82", "171949d3-2123-4e19-be0f-ffdcfab188c4", "6619bdb3-7470-4cd5-896b-0dbb4ac65935", "1daf2585-0e75-4225-9610-0f43fd6dbb28"]
+disambiguations = ["a9f886f9-c7ee-4680-8e88-91bd15fe0cc9", "ea9c5a67-c9a2-417f-afa2-8b82e9d56107", "63369e84-f651-42b5-bfef-409c3872f917"]
+[statement.connection_plan]
+target_statement_id = "STMT-GOD-EXISTS"
+missing_bridge = "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open."
+blocker = "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+
+[[statement]]
+id = "Wholly-good sense controls: relocation, easy rescue and a WHOLLY_GOOD_3 surrogate"
+label = "Wholly-good sense controls: relocation, easy rescue and a WHOLLY_GOOD_3 surrogate"
+lean = "GoodnessSenseControls"
+paraphrase = "Analyst formulation, attribution deferred. (1) With the outcome bridge, a WHOLLY_GOOD_2 being that is omniscient and omnipotent can face unblocked preventable suffering whose only supplied way of prevention has the footbridge structure, so WHOLLY_GOOD_2 does not relocate Rowe's simplified constraint; omnipotence does not constrain the supplied ways in this model. (2) Under the qualified condition, one constraint-free way of preventing restores Rowe's blocking-cost requirement. (3) Structural surrogate: Rowe's WhollyGood read by the two stage-2 goodness predicates (supreme goodness and willing some good to every existing being) is satisfiable with an omniscient omnipotent bearer and failure of the constraint; the witness makes every relation true, the same construction works on any signature (an observation, not separately certified), and the classical permission rule is omitted, so this says nothing about GOD_4. (4) WHOLLY_GOOD_1 without the outcome bridge does not yield the constraint (empty Better). (5) The constraint clause classifies switch, side-effect and harmless ways as constraint-free and footbridge, transplant and loop ways as violating. (6) With Better free, the WHOLLY_GOOD_1 premise bundle holds for some Better exactly when Rowe's constraint without its omniscience and intensity antecedents holds."
+definitions = ["b32b898d-3ad6-4132-9815-ac8897f2193c", "45620acb-803e-4f02-965e-4e8de5ec4c82", "48a22b44-e7ae-4a4f-9a67-e27cc0b32826", "171949d3-2123-4e19-be0f-ffdcfab188c4", "2ea8d8e8-e283-48fb-b4c9-ff1236b9520d", "6619bdb3-7470-4cd5-896b-0dbb4ac65935", "1daf2585-0e75-4225-9610-0f43fd6dbb28"]
+disambiguations = ["a9f886f9-c7ee-4680-8e88-91bd15fe0cc9", "ea9c5a67-c9a2-417f-afa2-8b82e9d56107", "63369e84-f651-42b5-bfef-409c3872f917"]
+[statement.connection_plan]
+target_statement_id = "STMT-GOD-EXISTS"
+missing_bridge = "Select a sense of WhollyGood for the case's GOD_4 bearer on a carrier shared with Rowe's signature (the planned bridge of STMT-ROWE-NO-THEISTIC-BEING), and give the comparison Better typed content. With Better free, WHOLLY_GOOD_1 and the outcome bridge only relocate STMT-ROWE-PERMISSION-CONSTRAINT, and WHOLLY_GOOD_2 relocates only a constraint-qualified condition. The two stage-2 goodness predicates alone (WHOLLY_GOOD_3) constrain no Rowe field; the test with the classical permission rule restored is open."
+blocker = "Better has no axiology or aggregation rule, so the relocations add no warrant. No warranted identification of Rowe's WhollyGood with any sense for the case bearer exists, and the classical permission rule (ST I q.2 a.3 ad 1) has not been encoded on Rowe's signature. Divine permission versus intention is owned by issue #1456 and the bearer bridge by issue #1735."
+
+[[argument]]
+id = "Rowe's permission constraint relocated into WHOLLY_GOOD_1 and the outcome bridge"
+label = "Rowe's permission constraint relocated into WHOLLY_GOOD_1 and the outcome bridge"
+theorem = "outcomeSenseYieldsPermissionConstraint"
+premises = ["Rowe's WhollyGood satisfies the outcome-minimizing standard (WHOLLY_GOOD_1)", "Unblocked preventable events would be strictly better prevented"]
+conclusion = "STMT-ROWE-PERMISSION-CONSTRAINT"
+rule = "Contraposition through the outcome bridge"
+meaning = "Near-transcription (assembly): relocates Rowe's permission constraint into an axiological bridge and a deontic standard over the free comparison Better. With Better free the premise bundle is satisfiable exactly when a strengthened constraint holds (goodness-sense control 6), so this adds no warrant to Rowe's premise (2)."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+transcription = "assembly"
+
+[[argument]]
+id = "Constraint-qualified permission relocated into WHOLLY_GOOD_2 and the outcome bridge"
+label = "Constraint-qualified permission relocated into WHOLLY_GOOD_2 and the outcome bridge"
+theorem = "constraintSenseYieldsQualifiedConstraint"
+premises = ["Rowe's WhollyGood satisfies the constraint-respecting rescue standard (WHOLLY_GOOD_2)", "Unblocked preventable events would be strictly better prevented"]
+conclusion = "Constraint-qualified permission condition (WHOLLY_GOOD_2)"
+rule = "Case analysis and contraposition through the outcome bridge"
+meaning = "Near-transcription (assembly): relocates the constraint-qualified condition into the outcome bridge and the WHOLLY_GOOD_2 standard over the free comparison Better. It records that a constraint clause adds a blocker to Rowe's list without removing the rescue duty; it adds no warrant."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+transcription = "assembly"
+
+[[argument]]
+id = "Wholly-good sense controls"
+label = "Wholly-good sense controls"
+theorem = "controls"
+premises = []
+conclusion = "Wholly-good sense controls: relocation, easy rescue and a WHOLLY_GOOD_3 surrogate"
+rule = "Explicit finite models and reuse of the trolley reachability lemmas"
+meaning = "Compares WHOLLY_GOOD_1, WHOLLY_GOOD_2 and a WHOLLY_GOOD_3 surrogate on one cost-free Rowe signature, with the relocation equivalence; see the statement. Models of non-entailment with disclosed artifacts and a general easy-rescue lemma; no premise is established."
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+sense_mixing_control = true
+
+[[relation]]
+id = "Goodness-sense controls test the constraint standard"
+label = "Goodness-sense controls test the constraint standard"
+subject_kind = "argument"
+subject_id = "Wholly-good sense controls"
+predicate = "tests"
+object_kind = "statement"
+object_id = "Rowe's WhollyGood satisfies the constraint-respecting rescue standard (WHOLLY_GOOD_2)"
+note = "A footbridge-structured only supplied prevention way makes the constraint standard and outcome bridge consistent with failure of Rowe's simplified constraint."
+
+[[relation]]
+id = "Goodness-sense controls test the outcome-sense derivation"
+label = "Goodness-sense controls test the outcome-sense derivation"
+subject_kind = "argument"
+subject_id = "Wholly-good sense controls"
+predicate = "tests"
+object_kind = "argument"
+object_id = "Rowe's permission constraint relocated into WHOLLY_GOOD_1 and the outcome bridge"
+note = "Without the outcome bridge WHOLLY_GOOD_1 does not yield the constraint; with Better free the bundle is equivalent to a strengthened constraint."
+

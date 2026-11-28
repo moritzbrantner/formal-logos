@@ -11,3 +11,5 @@ public import TruthCore.Results.Ethics.PopulationComparability.Solution
 public import TruthCore.Results.Ethics.PopulationScoring.Solution
 public import TruthCore.Results.Ethics.RossDerived.Solution
 public import TruthCore.Results.Ethics.RossPermission.Solution
+public import TruthCore.Results.Ethics.Trolley.Solution
+public import TruthCore.Results.Ethics.TrolleyRowe.Solution

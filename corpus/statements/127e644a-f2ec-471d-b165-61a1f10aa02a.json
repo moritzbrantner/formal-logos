@@ -1,0 +1,30 @@
+{
+  "id": "127e644a-f2ec-471d-b165-61a1f10aa02a",
+  "label": "Trolley single-feature controls: causal path, plan, object, numbers and sense splits",
+  "paraphrase": "Analyst formulation, attribution deferred. (1) With plan, numbers and object fixed, moving the harm off the rescue path flips the causal reading of double effect and the causal means principle, not the intention reading or act consequentialism. (2) Omitting the harm from the footbridge plan leaves the causal reading and the redirection principle forbidding and the intention reading permitting. (3) A malicious plan on the switch structure separates both double-effect readings from the means and redirection principles. (4) Reversed numbers defeat the causal reading, the means and redirection principles and act consequentialism. (5) The switch is KILLS_1 but not KILLS_2. (6) The loop harm is a MEANS_1 but not planned, splitting the principles; planning it makes the intention reading forbid. (7) MEANS_2 implies INTENDS_1. (8) The frame does not separate footbridge from transplant. (9) The case facts alone do not entail the common triad (trivially, by the empty assignment). (10) INTENDS_1 and INTENDS_2 split on the loop and agree on the other cases. (11) An evil object on the switch structure defeats both double-effect readings but not the means or redirection principles.",
+  "lean_declaration": "TruthCore.Ethics.Trolley.TrolleyControls",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "56fb94ef-7af4-4e41-b87a-204f57a1a015",
+    "c094090d-0572-4a8a-9add-c993cae6e079",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "91ec4b43-0d3b-4b69-8d83-5e76adbebd0b",
+    "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "f198218e-601d-4d5d-8a6a-120c2f22d7a1",
+    "db7d724e-63af-44f1-9e52-ebf218ec1a06"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107",
+    "63369e84-f651-42b5-bfef-409c3872f917"
+  ],
+  "connection_plan": {
+    "target_statement_id": "8626f8a5-9531-5da7-9ebd-f901e74b1129",
+    "missing_bridge": "The trolley results bear on GOD_4 exists only through Rowe's evidential core. TruthCore.Ethics.TrolleyRowe states senses of Rowe's WhollyGood; its WHOLLY_GOOD_2 constraint clause reuses the double-effect case vocabulary of this frame, but no verdict, Governs or principle statement here is an input to it. Missing: an argument that the verdicts warrant WHOLLY_GOOD_1 or WHOLLY_GOOD_2 (or neither) as the standard for divine permitting, and the bearer bridge of STMT-ROWE-NO-THEISTIC-BEING, whose plan targets GOD_4 exists.",
+    "blocker": "The verdicts are prima facie inputs over a supplied permissibility assignment for human intervening. No record transfers them to divine permission, which issue #1456 owns (permission versus intention), and the bridge from the case GOD_4 bearer to Rowe's WhollyGood on a shared carrier is unbuilt (issue #1735)."
+  }
+}
