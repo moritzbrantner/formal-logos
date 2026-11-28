@@ -1,0 +1,10 @@
+{
+  "id": "307185eb-097c-41d8-9017-a5faed18cd08",
+  "label": "Each truthmaking bearer exists at its truthmaking world",
+  "paraphrase": "OPEN existing WorldImmanent A M: whenever M w b f, that SAME bearer exists at w in A.ontic. It asserts neither actual truth of f nor any maker's existence independently of M. Reuses the existing framework unchanged.",
+  "lean_declaration": "TruthCore.Explanation.TruthmakerTheories.WorldImmanent",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "aab6fdee-e29d-58d1-b7d7-baee6d81f73e"
+  ]
+}

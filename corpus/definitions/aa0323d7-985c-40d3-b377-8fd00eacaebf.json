@@ -1,0 +1,9 @@
+{
+  "id": "aa0323d7-985c-40d3-b377-8fd00eacaebf",
+  "label": "A productive exercise is fact-prior to the existence of each recipient",
+  "term": "productive-exercise priority bridge",
+  "basis": "stipulative",
+  "definition": "GivingExercisePriorityAt K A w source production t: whenever source gives effect being at w,t in the shared CausalityFrame, the selected production fact explains A.exist effect at w in the SAME Arena. ModeExplainsProductionAt A w mode production separately means that the selected mode/ranking fact explains this production fact. No relationship between the other fields of the frame and the arena is asserted. The intended GivesAt reading is strict esse-giving; mere correspondence with an effect, efficient capacity without exercise, or a fact being named production does not supply either explanatory edge.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.GivingExercisePriorityAt",
+  "note": "Both relevance and the giving-to-fact-priority bridge are OPEN applications. Actual existence, coherence and factivity are checked separately in the finite controls. The universal theorem is also true when nothing is given; its populated controls exhibit the intended nonempty application."
+}

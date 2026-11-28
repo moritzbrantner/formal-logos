@@ -1,0 +1,10 @@
+{
+  "id": "fb66f07f-d114-4c9e-8588-152ffa557e0a",
+  "label": "The selected fact priority is asymmetric at this world",
+  "paraphrase": "OPEN: at the selected world, A.explains w p q excludes A.explains w q p for every pair of facts. This selects strict explanatory priority, not arbitrary explanation, efficient causation or truthmaking.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.FactPriorityAsymmetricAt",
+  "definition_ids": [
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "fe123142-31a9-49b5-840b-716bd6a0a98f"
+  ]
+}

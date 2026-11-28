@@ -1,0 +1,141 @@
+# Analyst formulations; attribution deferred. See the intrinsic/extrinsic
+# imitability section of docs/notes/causal-perfection-transfer.md.
+# Diagnostic relations establish no cognition premise or metaphysical possibility.
+
+[batch]
+vocab = "TruthCore.Causality.ImitabilityGrounding"
+results = "TruthCore.Results.Causality.ImitabilityGrounding"
+
+[[statement]]
+id = "fb66f07f-d114-4c9e-8588-152ffa557e0a"
+label = "The selected fact priority is asymmetric at this world"
+lean = "FactPriorityAsymmetricAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "fe123142-31a9-49b5-840b-716bd6a0a98f"]
+paraphrase = "OPEN: at the selected world, A.explains w p q excludes A.explains w q p for every pair of facts. This selects strict explanatory priority, not arbitrary explanation, efficient causation or truthmaking."
+
+[[statement]]
+id = "5cd0b154-f9ce-4dfc-ac73-0477b33484fe"
+label = "The same selected fact priority is transitive at this world"
+lean = "FactPriorityTransitiveAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "fe123142-31a9-49b5-840b-716bd6a0a98f"]
+paraphrase = "OPEN: at the selected world, two consecutive explanation edges compose in the SAME Arena.explains relation. No composition of separately asymmetric causal and grounding relations is inferred."
+
+[[statement]]
+id = "bbc8c9b5-2772-4701-ab67-5c3d84426749"
+label = "The selected mode or ranking fact explains the productive exercise"
+lean = "ModeExplainsProductionAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "aa0323d7-985c-40d3-b377-8fd00eacaebf"]
+paraphrase = "OPEN relevance premise: the selected mode/ranking fact explains the selected productive-exercise fact at the chosen world in Arena.explains. A label, a correspondence table or the availability of possibilities alone does not establish the edge."
+
+[[statement]]
+id = "0f5b7197-c3f2-46ea-ab5d-68e5d7d5a15c"
+label = "The productive exercise is prior to each recipient existence fact"
+lean = "GivingExercisePriorityAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "158301bc-9585-4145-be60-34f08c9f922c", "aa0323d7-985c-40d3-b377-8fd00eacaebf"]
+paraphrase = "OPEN bridge: for every effect to which the SAME source gives being at the chosen world and moment in K, the selected production fact explains that effect's existence fact in A. No facts about other frame fields are asserted. Strict esse-giving is the intended interpretation; fact-priority is an additional constraint, not its definition."
+
+[[statement]]
+id = "7b9166b9-6024-4408-80c5-9c57f84c294b"
+label = "No produced recipient fact-grounds the mode explaining its production"
+lean = "NoEffectGroundedGivingAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "158301bc-9585-4145-be60-34f08c9f922c", "5a8bf165-162d-4255-9994-00affa41d9d5"]
+paraphrase = "For each actual giving exercise in the selected frame, its recipient's existence fact does not explain the selected mode/ranking fact in the SAME Arena at the SAME world. Conditional exclusion of effect-grounded productive modes, equally for ideas and noncognitive modes. It does not exclude all extrinsic bases or establish the source-of-differences bridge."
+
+[statement.connection_plan]
+target_statement_id = "69b9f887-582a-479c-924b-e7328f3930b4"
+missing_bridge = "For a merely produced stand-in of a non-present candidate in an own favouring, identify that SAME item with a recipient of giving being and show that its existence fact grounds the mode specification that explains its production in the selected strict priority relation. Instantiating the priority exclusion would then rule out that produced stand-in. None of these item-to-fact or production-to-giving identifications is built in."
+blocker = "NoMerelyProducedStandIn quantifies over produced items; the present theorem excludes a direction of fact priority. The required mapping and the giving-to-fact bridge remain OPEN. Primitive source-nature modes need not satisfy the forbidden effect-grounding antecedent. The existing tests relation describes diagnostic relevance, not a registered derivation of the target."
+[[statement]]
+id = "307185eb-097c-41d8-9017-a5faed18cd08"
+label = "Each truthmaking bearer exists at its truthmaking world"
+lean = "TruthCore.Explanation.TruthmakerTheories.WorldImmanent"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "aab6fdee-e29d-58d1-b7d7-baee6d81f73e"]
+paraphrase = "OPEN existing WorldImmanent A M: whenever M w b f, that SAME bearer exists at w in A.ontic. It asserts neither actual truth of f nor any maker's existence independently of M. Reuses the existing framework unchanged."
+
+[[statement]]
+id = "2115e8d8-4dd6-45f0-99e5-11f89b5552f8"
+label = "A maker necessitates its fact at accessible worlds where that maker exists"
+lean = "TruthCore.Explanation.TruthmakerTheories.MakerNecessitation"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "aab6fdee-e29d-58d1-b7d7-baee6d81f73e"]
+paraphrase = "OPEN existing MakerNecessitation A M: M w b f entails that f holds at every world accessible from w in which that SAME b exists. It does not require b to be necessary or the fact to be true without b. It supplies no relevance condition on its own."
+
+[[statement]]
+id = "41350b46-3212-441b-8f89-ea7c27ab8604"
+label = "Every maker of the selected contingent fact is individually contingent"
+lean = "EveryMakerContingentAt"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "aab6fdee-e29d-58d1-b7d7-baee6d81f73e", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "0b881c57-d091-4c65-9a45-244f696ae29a"]
+paraphrase = "Every M-maker of fact at w exists at w and is absent at an accessible world in the SAME Arena. The theorem assumes WorldImmanent, MakerNecessitation and fact-level Contingent. It neither asserts a maker nor identifies a mode with a produced being. The converse for necessary facts fails under these weak truthmaking conditions."
+
+[statement.connection_plan]
+target_statement_id = "69b9f887-582a-479c-924b-e7328f3930b4"
+missing_bridge = "Map the selected fact to a candidate stand-in specification and its truthmaking bearers to the source or produced items in the existing favouring signature, with independently warranted modal availability and relevance, before using the maker classification to constrain the source-of-differences rationale. A direct target derivation is not claimed."
+blocker = "Mode-specification facts need not be contingent, and makerControls shows that mere necessitation permits contingent makers of necessary facts. No item/fact or truthmaking/production identification is present. Thus an unrestricted inference from this modal classification to NoMerelyProducedStandIn is unsupported; the theorem remains a reusable planned application, already used inside the checked modal controls."
+[[statement]]
+id = "39fa3e04-1e9d-4668-b812-cda597ade170"
+label = "Modes and a ranking persist at an effect-absent world with populated productive grounding"
+lean = "AvailabilityControl.Certificate"
+definitions = ["fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "158301bc-9585-4145-be60-34f08c9f922c", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "97f37f5c-7f82-5077-9bb9-6cfc8673631d", "fe123142-31a9-49b5-840b-716bd6a0a98f", "aa0323d7-985c-40d3-b377-8fd00eacaebf", "96f1dfe9-ff9f-41a1-aeec-37746dde1256"]
+paraphrase = "Finite analyst interpretation: the same source exists at both accessible worlds; both rigid possible recipients are absent at false and actual at true. Distinct mode facts and their necessary ranking hold at both worlds with positive possibility-basis explanation edges. At true, ranking explains productive exercise, exercise explains the effects, and giving is populated. The strict-priority premises and their no-effect-grounding conclusion hold. Explanation is factive and coherent but not necessitating; exercise and effects are contingent. The existing outweighed-reason guidance test is met on its separate analytical scenario carrier. This supplies a positive formal alternative to grounding modes in actual effects; it is not a full model of either A4 or divine intellect, or a certificate of metaphysical possibility."
+
+[[argument]]
+id = "3a3de771-afc7-40bf-b649-f429eeb00e62"
+label = "Effect-grounded productive modes are excluded by strict explanatory priority"
+theorem = "noEffectGroundedGiving"
+comparator_theorems = ["cycleControls"]
+premises = ["fb66f07f-d114-4c9e-8588-152ffa557e0a", "5cd0b154-f9ce-4dfc-ac73-0477b33484fe", "bbc8c9b5-2772-4701-ab67-5c3d84426749", "0f5b7197-c3f2-46ea-ab5d-68e5d7d5a15c"]
+conclusion = "7b9166b9-6024-4408-80c5-9c57f84c294b"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose mode-to-exercise with exercise-to-existence; an existence-to-mode edge closes a forbidden cycle"
+meaning = "Applies existing PriorityOmission.constitutionNotPriorOfWholeFirst in the SAME fact relation. The causal-to-fact bridge and relevance are explicit. This is not a proof that every extrinsic distinction is effect-grounded, nor a restatement of the recognition bridge: no apprehension predicate occurs. Its value is a conditional exclusion that binds personal effect-grounded ideas equally. Asymmetry is retained as the chosen strict-priority semantics although irreflexivity plus transitivity suffices."
+
+[[argument]]
+id = "8e22d25d-1ad1-44f5-a50d-e72e3dc1d2e3"
+label = "Makers of a contingent fact are contingent by modal failure transport"
+theorem = "makersOfContingentFactAreContingent"
+premises = ["307185eb-097c-41d8-9017-a5faed18cd08", "2115e8d8-4dd6-45f0-99e5-11f89b5552f8", "baf22110-9b54-5c11-a44a-c8447518b824"]
+conclusion = "41350b46-3212-441b-8f89-ea7c27ab8604"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Use world immanence for actual existence and existing failure_transport for accessible nonexistence"
+meaning = "Reuses PSRStrength.failure_transport: a falsifying accessible world for the fact cannot contain a necessitating maker of that fact. Every such maker is actual and possibly absent. Only a necessary condition for makers is established. RootClosure.necessaryFactAnyMaker already shows why weak maker necessitation cannot infer necessity or relevance of a maker of a necessary fact."
+disambiguations = ["6bfbf069-4e30-59c5-a265-fa87d4463b33", "f7bae38e-9b21-54fe-8236-2646c230568b"]
+comparator_theorems = ["makerControls"]
+
+[[argument]]
+id = "56b73ddc-dc1a-44f1-8eae-21eca97fd515"
+label = "Effect-absent possibilities and populated productive grounding, checked"
+theorem = "availabilityControl"
+premises = []
+conclusion = "39fa3e04-1e9d-4668-b812-cda597ade170"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Evaluate the populated finite arena and reuse guidanceTable and the priority exclusion"
+meaning = "Checks the positive possibility-basis model, actual giving and the modal limits of its explanation relation. The contrast is with an actual-effect-dependent account; necessary extrinsic and intrinsic interpretations remain open. Modes are rigid fact specifications, not claimed real constituents. Analytical reason-variation scenarios are distinct from alternative complete worlds; no temporal before-creation claim is inferred."
+
+[[relation]]
+id = "03354564-aa27-437d-9ee7-eefbda9623c1"
+label = "Strict priority tests the source-of-differences bridge"
+subject_kind = "result"
+subject_id = "7e026e27-520f-4b65-a031-5acc6a5342fe"
+predicate = "tests"
+object_kind = "statement"
+object_id = "69b9f887-582a-479c-924b-e7328f3930b4"
+note = "The theorem excludes a circular fact-grounding direction. NoMerelyProducedStandIn concerns produced items, so an application bridge remains OPEN; this tests link is diagnostic and does not discharge the existing premise."
+
+[[relation]]
+id = "ec1f7db6-9584-4d48-ae0e-eb2615d018b4"
+label = "Effect-absent modal control tests the recognition bridge"
+subject_kind = "result"
+subject_id = "422f9341-3541-4ae3-8f03-b985bca91667"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "Determinate ranked modes with an explicit prior possibility basis do not presuppose actual recipients in this interpretation. It types no apprehension and supplies no full A4 coherence verdict."
+
+[[relation]]
+id = "af13c860-18e5-415e-bada-3bbcad09cda9"
+label = "Maker contingency tests the source-of-differences rationale"
+subject_kind = "result"
+subject_id = "74ec4d5b-81cc-4626-a4bf-0e478f473ca2"
+predicate = "tests"
+object_kind = "statement"
+object_id = "69b9f887-582a-479c-924b-e7328f3930b4"
+note = "Keeps necessary bases, contingent productive facts and world-immanent makers apart. Modal truthmaking conditions do not establish productive relevance or the stand-in bridge."

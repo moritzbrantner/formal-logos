@@ -1,0 +1,11 @@
+{
+  "id": "422f9341-3541-4ae3-8f03-b985bca91667",
+  "label": "Effect-absent possibilities and populated productive grounding, checked",
+  "argument_id": "56b73ddc-dc1a-44f1-8eae-21eca97fd515",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityGrounding.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityGrounding.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityGrounding.availabilityControl",
+  "comparator_config": "results/422f9341-3541-4ae3-8f03-b985bca91667/comparator.json",
+  "status": "solution-present",
+  "description": "Checks the positive possibility-basis model, actual giving and the modal limits of its explanation relation. The contrast is with an actual-effect-dependent account; necessary extrinsic and intrinsic interpretations remain open. Modes are rigid fact specifications, not claimed real constituents. Analytical reason-variation scenarios are distinct from alternative complete worlds; no temporal before-creation claim is inferred."
+}
