@@ -1,0 +1,11 @@
+{
+  "id": "691986b0-1ec2-4c43-9353-799ffbb3f96f",
+  "label": "In-root purity of requirements, from purity REQUIRES_LACK_1 and the sense bridge",
+  "argument_id": "00629e1b-15f2-486c-923d-26c61eaeea5b",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.pureRequiresNoPureLackInOfAsSuch",
+  "comparator_config": "results/691986b0-1ec2-4c43-9353-799ffbb3f96f/comparator.json",
+  "status": "solution-present",
+  "description": "Derivation (#2145 lane U): the purity of requirements in the root from the purity of requirements as such and the REQUIRES_LACK sense bridge. Establishes no premise."
+}

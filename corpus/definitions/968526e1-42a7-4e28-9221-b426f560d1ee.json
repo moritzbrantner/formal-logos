@@ -1,0 +1,9 @@
+{
+  "id": "968526e1-42a7-4e28-9221-b426f560d1ee",
+  "label": "Realized by a constituent: a being has a determination by one of its constituents",
+  "term": "realized by (RealizedBy Realizes x k d)",
+  "definition": "RealizedBy Realizes x k d: x has the determination d by its constituent k; k is the reality of d in x (Realizes, a declared primitive). Examples: a body has its shape by its form; on the classical account a simple being has its being, its wisdom and its power each by its one nature. Non-examples: a constituent that is a principle of limitation (prime matter, a bare limit) realizes no actuality; a cause outside x does not realize x's determinations. Distinguishing conditions: it is not identity of k with d (one constituent may realize several determinations distinguished by reason), and it is not causation. Whether realization at a simple being is real identity, and whether a constituent realizes the same determinations at every world (no accidents), are not encoded. Structural properties: none encoded.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.RealizedBy",
+  "note": "Stipulative analyst notion for #2145 lane U, attribution deferred. See docs/notes/causal-perfection-transfer.md, section 'Carriage from the unity of a simple root'."
+}

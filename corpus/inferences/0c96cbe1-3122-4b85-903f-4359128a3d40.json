@@ -1,0 +1,19 @@
+{
+  "id": "0c96cbe1-3122-4b85-903f-4359128a3d40",
+  "label": "Every pure perfection at roots, from own-nature carriage and purity REQUIRES_LACK_2 (inference)",
+  "input_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "7f26189b-7def-4a16-84ab-6369065ced51",
+    "a48bdc1a-2d93-407e-b39f-9f5b91836199",
+    "d83785e2-f572-4eb8-9098-0785da0e174d",
+    "3b39e0ba-eb4a-5708-90d0-c2706094d43c",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"
+  ],
+  "output_statement_id": "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+  "rule": "A lacked pure determination joins the root's pure admissible profile; nothing in the root requires that pure lack, so own-nature carriage in the root contradicts the excluding condition",
+  "meaning": "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If it lacks k, a condition of r's own nature fails at every profile containing r's determinations and k (own-nature exclusion). r's profile is admissible (0a9d3a40) and pure (3b39e0ba), and k occurs in some admissible profile (ee287fd3), so joint compossibility (500d0e2d) makes the profile with k added admissible. Its members are pure, so by the purity of requirements in the root no determination of r requires, in r, the lack of some of them, and own-nature carriage in the root gives the condition there: a contradiction. This route uses neither carriage as such (LE), nor the requirement sense bridge, nor member grounding, nor E. With ownCarriageInFromUnity its load is the unity premises with the in-root transfer, and the purity of requirements in the root; on the #2153 carrier the simple source that lacks noesis by a clause of its one nature meets every other non-logical premise and fails exactly that purity premise (simpleUnityCarriageMap, clauses 3 and 12). The main theorem uses no axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

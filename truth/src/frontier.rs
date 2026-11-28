@@ -204,6 +204,28 @@ struct Route<'a> {
     proved_unestablished: Vec<&'a str>,
 }
 
+/// How the reaching walk enters an argument ([`Frontier::root_edges`]).
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum EdgeKind {
+    /// A verified non-transcription derivation (strength registrations with a
+    /// non-transcription result included).
+    Sound,
+    /// A verified argument all of whose results are transcriptions.
+    Transcription,
+    /// An argument record without a verified result (entered only where its
+    /// conclusion is not routed).
+    Unverified,
+}
+
+/// One premise-to-conclusion edge of the reaching walk.
+#[derive(Clone, Debug)]
+pub struct RootEdge {
+    pub premise: String,
+    pub argument_id: String,
+    pub conclusion: String,
+    pub kind: EdgeKind,
+}
+
 /// The frontier's indexes over one set of records; closure is computed on
 /// demand so that the next-step probes rerun exactly the same fixpoint.
 pub struct Frontier<'a> {
@@ -1416,6 +1438,48 @@ impl<'a> Frontier<'a> {
             }
         }
         reaching_root
+    }
+
+    /// The edges of the route-aware reaching walk: for every argument the walk
+    /// enters (its conclusion reaches the root and the argument is designated
+    /// or a verified non-transcription derivation when the conclusion is
+    /// routed), one edge per premise. The reaching statements are exactly the
+    /// root and the premises of these edges. `orphans` walks them upward to
+    /// say how a result's conclusion reaches the root (placement provenance).
+    pub fn root_edges(&self) -> Vec<RootEdge> {
+        let reaching = self.reaching(self.root);
+        let mut edges = Vec::new();
+        for argument in &self.records.arguments {
+            let (argument_id, conclusion) = (
+                text(argument, "id"),
+                text(argument, "conclusion_statement_id"),
+            );
+            if !reaching.contains(conclusion)
+                || (self
+                    .routes
+                    .get(conclusion)
+                    .is_some_and(|designated| !designated.contains(argument_id))
+                    && !self.sound_arguments.contains(argument_id))
+            {
+                continue;
+            }
+            let kind = if self.sound_arguments.contains(argument_id) {
+                EdgeKind::Sound
+            } else if self.verified_arguments.contains(argument_id) {
+                EdgeKind::Transcription
+            } else {
+                EdgeKind::Unverified
+            };
+            for premise in Self::premises(argument) {
+                edges.push(RootEdge {
+                    premise: premise.to_owned(),
+                    argument_id: argument_id.to_owned(),
+                    conclusion: conclusion.to_owned(),
+                    kind,
+                });
+            }
+        }
+        edges
     }
 
     fn closure_reason(

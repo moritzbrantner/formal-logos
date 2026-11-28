@@ -1,0 +1,10 @@
+{
+  "id": "45f565c7-c3d5-42c3-9919-5191268f00fc",
+  "label": "The reception control tests the received-act reading under the state rule",
+  "subject_kind": "result",
+  "subject_id": "b6e57eb0-e45a-4c00-9a3e-29164165d8e8",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2",
+  "note": "The witness checks receipt and unproduced state persistence for the same bearer; no passage from dated presence to esse is assumed."
+}

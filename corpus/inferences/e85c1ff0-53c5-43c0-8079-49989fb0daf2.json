@@ -1,0 +1,10 @@
+{
+  "id": "e85c1ff0-53c5-43c0-8079-49989fb0daf2",
+  "label": "VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 strictness models (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "ec397a1a-da39-46e1-92c7-89678a7f3870",
+  "rule": "Explicit two-world interpretations checked by case analysis",
+  "meaning": "Control.Strictness on abstractDrop and concreteDrop: the weak version holds (at every world, respectively at world true) and the forward transfer fails, through the library's correspondence with increasing domains. On abstractDrop the contingency node fails at every world, by the existing notEveryNecessary. Model-witnessed strictness only; no interpretation is claimed metaphysically possible.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
