@@ -1,0 +1,28 @@
+{
+  "id": "1ba3ed2a-79b9-41ec-b356-5284f492281d",
+  "label": "Root profiles admissible, from exclusion-free admissibility and root purity",
+  "premise_statement_ids": [
+    "63e88cef-e95b-4350-a0e2-4107e51caa90",
+    "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6",
+    "3b39e0ba-eb4a-5708-90d0-c2706094d43c"
+  ],
+  "conclusion_statement_id": "0a9d3a40-4777-4352-a4b4-2126c0055924",
+  "inference_ids": [
+    "dd918fbf-7abc-4827-bd8c-0817dc6d8a81"
+  ],
+  "meaning": "Fix an actual root r at w. Every real determination of r is pure (strict pure actuality at roots), so by the purity premise no member of r's profile requires the lack of any subset of it, and the sufficiency direction makes the profile admissible. The #2153 anchoring family (finite profiles of natural numbers) is member-grounded when every determination requires the lack of every infinite set, but no requirement relation gives it the sufficiency direction together with the purity premise while every determination is pure (Lean-only anchorFamilyGrounding). The main theorem uses no axioms. In the Comparator companion constitutiveControls (three Mathlib axioms), a root profile containing the nonpure limiter and noesis keeps the sufficiency direction and the purity premise but fails root purity and admissibility, and the all-pure root profile in the triple family is inadmissible while the sufficiency direction fails (no requirement relation) or the purity premise fails (noesis requiring the joint lack of a and b).",
+  "definition_ids": [
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "b5ac268c-7497-5780-a154-3f84c34ac709"
+  ],
+  "disambiguation_ids": [
+    "dc9c0a1b-1759-5b1c-9ab9-ee7bea8847b7",
+    "b1640e51-d7d4-5a80-9992-29fa1ded8048",
+    "567c3e74-9514-52d9-b3b6-f5a3af078784"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "a0230088-dcf2-45b5-a211-8e40da094750",
+  "label": "Modal ontological certified difference tests its delta",
+  "subject_kind": "result",
+  "subject_id": "572b601e-0ed2-4385-9aec-2a93742bb88f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "d8373ef6-8007-4387-9e84-25f5d5c19bbb",
+  "note": "The equivalence certificate shows that this condition is exactly what rigidity adds to persistence: rigidity holds iff persistence and this condition hold, with no background."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cce5a30e-c72f-43e6-ba29-19f8be68feeb",
+  "label": "Concrete GOD_4 presence persists from the standpoint",
+  "paraphrase": "Every concrete GOD_4 existing at the standpoint w exists at every world accessible from w at which some concrete GOD_4 exists. Asserts no existence and no uniqueness: other concrete GOD_4 may exist at w or at accessible worlds. The de dicto to de re bridge of the modal ontological route.",
+  "lean_declaration": "TruthCore.Modal.ModalOntologicalCase.GodPresencePersistsAt",
+  "definition_ids": [
+    "a287fbf6-eef6-4588-8ea9-ecf8e44581e1",
+    "c9576df7-8e9e-4ecc-a031-cc1560c733d9",
+    "f8948e28-b13a-5244-95f1-41a05cd4fff2",
+    "88f9f6e8-997b-5f7d-afa1-c501954c3807",
+    "beb654a7-e204-5f4c-a7b4-45e886ba7109"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "c9f7592e-3cb3-46fa-9b27-b8e007aab861",
+  "label": "Root lack PSR, from the unrestricted fact PSR (inference)",
+  "input_statement_ids": [
+    "6db599dd-272b-4546-ba50-11a69095280d"
+  ],
+  "output_statement_id": "2cf517c3-a6c3-4652-9bad-af3ca6edab0f",
+  "rule": "Restrict the scope to the lack facts of actual roots",
+  "meaning": "A lack fact of an actual root that holds at w is a fact that holds at w, so the unrestricted fact PSR gives it an admitted reason. It certifies the strength order of the two scopes. No axioms.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

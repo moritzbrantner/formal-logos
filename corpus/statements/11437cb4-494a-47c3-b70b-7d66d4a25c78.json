@@ -1,0 +1,10 @@
+{
+  "id": "11437cb4-494a-47c3-b70b-7d66d4a25c78",
+  "label": "Every pure perfection is had in act by something",
+  "paraphrase": "OPEN, analyst formulation, attribution deferred: for every pure perfection d some being has d in act (for wisdom and life, the creatures in which they are found). It restricts the inclusion step to perfections that are actual somewhere.",
+  "lean_declaration": "TruthCore.Causality.DependenceToActOfBeing.PurePerfectionsActualSomewhere",
+  "definition_ids": [
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "ff1ba8f4-ab6e-5bdd-9e17-02b08a025168"
+  ]
+}

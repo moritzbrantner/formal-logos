@@ -1,0 +1,43 @@
+{
+  "id": "b6edd228-3ec6-4e42-b4c6-8c334a881c0b",
+  "label": "Actual-root favourings are good-general, from nonlimitation and one favouring",
+  "premise_statement_ids": [
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
+    "a30c5963-cb81-5366-aab0-2454363e18f7",
+    "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6",
+    "0a9d3a40-4777-4352-a4b4-2126c0055924",
+    "ee287fd3-3890-4739-8407-a27d7c81191d",
+    "e2357adc-6946-47a0-b39b-8efe1805d214",
+    "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"
+  ],
+  "conclusion_statement_id": "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245",
+  "inference_ids": [
+    "5e396653-66bc-42be-841b-1a2ab3aa72fd"
+  ],
+  "meaning": "Fix an actual root r at w and a favouring determination favours phi of r. By excluded middle, phi is good-general or not. Suppose not. Any admissible profile containing r's actual profile and the good-generality token is realized by one favouring psi; favours phi is in it, so phi = psi, and the token makes psi good-general, a contradiction. So r's admissible actual profile (root-profile admissibility) excludes good-generality, which is pure and, by pure admissibility, admissible somewhere. The structural L bridge (a bearer whose admissible profile excludes an admissible pure determination has a represented limiting principle; its distinct simply prior being is the shared CausalityFrame's PriorSimply, PRIOR_1) gives r a limiting principle, which actual roots lack. No premise mentions an absence or its explanation: the excluding determination is the favouring itself, so the #2153 E premise (no unexplained absence at roots) is not used. The main theorem uses no axioms. The Comparator companion favouringControls (three Mathlib axioms; the #2153 two-being carrier with the Lane 2b profiles) gives a positive witness and, for each non-logical premise, a row where it fails, the others hold and a root with the D-directed favouring fails the conclusion; two rows for L show which of its inputs fails when the D-directed favouring is counted impure (RootPurity) or pure (joint compossibility). The assignments say nothing about what favouring, purity or admissibility metaphysically are.",
+  "definition_ids": [
+    "071b24f0-ef72-4012-8c7d-ab3be3335961",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "847ddbe3-1701-455e-acd1-7d989a84c971",
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "183b48d2-1753-583d-aef9-4199cff86231",
+    "d8e2ed12-8089-5202-ae51-e807cf611c76",
+    "a919ce52-6c8b-5e0f-9aaa-5b570bded78b",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "85f7f569-ab4d-514b-aa2c-cf75171ad105",
+    "1d9aa4d9-18cc-5930-95fb-5af65e32c0f8",
+    "abd8cfa4-1887-47d5-86cc-e0f6092e4ded"
+  ],
+  "disambiguation_ids": [
+    "8430c7dc-2972-4f47-87a9-ce4676533cdf",
+    "19190b6e-359f-590c-b434-4e6f5803da4f",
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "06fb4f51-ff5f-5c5e-b947-844f20de4174",
+    "be54be36-3ce8-53f9-8168-50d1114e6c76"
+  ],
+  "term_senses": {
+    "BECAUSE_OF_GOODNESS": "9d14c5bd-2b8f-4e74-b7e2-b5c4a297241d"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "83bcc9ac-697c-4894-9c09-f782be9a37a6",
+  "label": "Test by BCCFDerivative.derivativeReply (baf22110)",
+  "subject_kind": "result",
+  "subject_id": "399faee6-925d-5322-bd56-53dca1bb46fc",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "baf22110-9b54-5c11-a44a-c8447518b824",
+  "note": "Omit contingency of the supplied fact c in the plural-reason core at false. In pairNecessary every fact holds at both accessible worlds, so every choice of c fails that premise. Bivalence and the well-founded reason relation hold. The reason assignment is empty and the contingency-guarded coverage requirement is vacuous."
+}

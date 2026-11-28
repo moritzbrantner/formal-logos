@@ -1,0 +1,8 @@
+{
+  "id": "07f3fb85-6036-4e42-8eb8-a18db846719f",
+  "label": "Actual apprehension: the bearer itself apprehends the content",
+  "term": "apprehends (Apprehends x c)",
+  "basis": "stipulative",
+  "definition": "Apprehends x c: the bearer x itself actually apprehends the content c; it is x's own act of apprehension. Examples: a person thinking that c is better than d; the #1873 produced knower apprehending its own content. Non-examples: x's making another being apprehend c (productive power); an exemplar form of x that norms another knower without being apprehended by x (the #1892 impersonal eminent source); a disposition directed to a manifestation it does not represent; a balance responding to loads. Structural properties: a declared primitive two-place relation between a being and a content; it is not reflexive, not transitive and not closed under entailment of contents, and it implies neither correctness nor any capacity relation. Nothing in the type separates the own act from a productive one.",
+  "note": "Stipulative analyst notion (#2145 Investigation 4), attribution deferred, with the same intended reading as the Apprehends parameter of WisdomSelfUnderstanding (#1731) and of the #1892 controls, where the impersonal eminent source apprehends nothing. Nothing in the type separates the own act from a productive one; that rests on this reading and is an open semantic obligation."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "ec4ab18c-bf4f-4f65-8100-c5892a0c3a6a",
+  "label": "The First Way conclusion from the MOTION_3 first holder and two sense bridges",
+  "premise_statement_ids": [
+    "de1f6c17-7af8-455c-8660-d1f9bfcb3878",
+    "ac93d55a-2264-4b88-a1fc-ed6ce0a47bd7",
+    "e2f44380-12a3-46e5-9353-866d8c4aedad"
+  ],
+  "conclusion_statement_id": "c1b68c21-fa36-5ab0-a499-444259eda78a",
+  "inference_ids": [
+    "1d0dfac7-7fbc-43be-a132-7b7e66bc45ac"
+  ],
+  "meaning": "From the MOTION_3 first holder, under double negation, take f that holds some other x in r and is held in no respect. The mover-side bridge gives a respect s in which f moves x (MovesIn, MOTION_1). If f were moved (MovedIn, MOTION_1) in some respect t, the moved-side bridge would make it MOTION_3 held in some respect, which it is not. So f moves something and is moved in no respect: the First-Way reading for the supplied MovedIn and MovesIn, the absolute First-Way conclusion c1b68c21. The companion firstUnheldHolder_iff_reading records that the MOTION_3 first holder is that same reading with MovedIn and MovesIn read as holding; the two open bridges are what carries it to the route's MOTION_1 reading, and each is needed (controls parts 4 and 5). Passage between senses happens only through the two bridges, from MOTION_3 to MOTION_1. It identifies the first mover with nothing and says nothing of potency or God. A support option for c1b68c21 beside the prima via proofs a8ced49e and d337ab29. Its premise statements are disjoint from theirs, but its warrant is shared: the stated support of the moved-side bridge e2f44380 runs through 4a952b96 (whatever is moved is moved by another), and the holding regresses 6f924bb0 and c4e333da upstream of 5eb16c61 are holding analogues of the per se regress 226c38f6, warranted the same way. Its weakest points are the two bridges and the lackability premises, with the objections recorded on each.",
+  "definition_ids": [
+    "6ab9a832-6b0f-47ac-9f08-144444bf1cb1",
+    "cfadc1f4-dd30-5f4f-a336-a0b9c1b1182d",
+    "a7904c82-eef8-58e4-ac7c-0bb93374cb43",
+    "ea1904bc-bdfa-4835-a4a7-8545c5221e2e"
+  ],
+  "disambiguation_ids": [
+    "a59fd0ac-f276-528d-8dc3-c3eddd331ac7"
+  ],
+  "sense_bridges": [
+    {
+      "term": "MOTION",
+      "from": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d",
+      "to": "38074911-d62e-44e1-b71c-66b5882f0ff3",
+      "statement_id": "ac93d55a-2264-4b88-a1fc-ed6ce0a47bd7"
+    },
+    {
+      "term": "MOTION",
+      "from": "c0e8f9be-36d3-43d5-8340-2e38dcd6b64d",
+      "to": "38074911-d62e-44e1-b71c-66b5882f0ff3",
+      "statement_id": "e2f44380-12a3-46e5-9353-866d8c4aedad"
+    }
+  ]
+}

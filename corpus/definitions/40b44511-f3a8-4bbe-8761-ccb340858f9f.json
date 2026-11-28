@@ -1,0 +1,9 @@
+{
+  "id": "40b44511-f3a8-4bbe-8761-ccb340858f9f",
+  "label": "Governing plan: an apprehended standard actually specifies the giving and is met",
+  "term": "governs the giving (apprehended plan)",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Causality.PracticalSpecification.Governing",
+  "definition": "Governing M w g x k: at w the giver g apprehends plan k as good (ApprehendsAsGood), k actually specifies g's giving of x (SpecifiesGiving, primitive), and the realized description of that giving meets every requirement of k (Meets).",
+  "note": "Analyst reading BECAUSE_OF_GOODNESS_3 of an existing declaration: the goodness, as apprehended by the source, governs its production. Its SpecifiesGiving field is primitive; the dependence readings 1 and 2 do not reconstruct it, and the plan standard (DEF 9d8bad2a) reads only Requirement, so dependence on a plan's standard supplies neither apprehension nor SpecifiesGiving (GoodDependenceLaws law 7). See docs/notes/optimal-creation-choice.md §§65–69."
+}

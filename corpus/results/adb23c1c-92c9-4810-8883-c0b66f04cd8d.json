@@ -1,0 +1,11 @@
+{
+  "id": "adb23c1c-92c9-4810-8883-c0b66f04cd8d",
+  "label": "GOD_4 joint-absence power from total noncreation, Euclidean access, monotone powers",
+  "argument_id": "2754c58d-35b0-4da6-a49a-97e4a348bcc2",
+  "challenge_module": "TruthCore.Results.Causality.SelectionScope.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SelectionScope.Solution",
+  "theorem": "TruthCore.Results.Causality.SelectionScope.actualAbsencePowerOfTotal",
+  "comparator_config": "results/adb23c1c-92c9-4810-8883-c0b66f04cd8d/comparator.json",
+  "status": "solution-present",
+  "description": "A new conditional support option for 0050b6ed (consumed by 834ddcfa and bc4d81f6 on the GOD_4 HAS_WILL_1 routes). It makes explicit what the recorded refraining warrant (ST I q.19 a.3, navigation), read as the world-level total-noncreation power a8dedf3f, needs to reach the typed joint-absence premise: Euclidean access (62b4a40a) and the monotone-power bridge (6fdd3f60). The scope controls show that a8dedf3f and 0050b6ed are independent as typed and that both bridges are needed; only the bundle is stronger. Not a strengthens registration. Establishes no premise."
+}

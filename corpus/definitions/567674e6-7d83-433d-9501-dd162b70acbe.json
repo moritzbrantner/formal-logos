@@ -1,0 +1,23 @@
+{
+  "id": "567674e6-7d83-433d-9501-dd162b70acbe",
+  "label": "MIRROR_1: the global mirror as spatial reflection P, a map on worlds",
+  "term": "global mirror image (spatial reflection P)",
+  "definition": "MIRROR_1. SpatialReflection W is a structure with one field image : W → W. image v is the world v with every spatial arrangement reflected (parity P) and nothing else changed: charges, matter/antimatter and the direction of time are kept. It is an explicitly identified PRIMITIVE of TruthCore.Modal.MirrorCollapse; Lean fixes only its type, and nothing in Lean says which features the map preserves.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Modal.MirrorCollapse.SpatialReflection",
+  "note": "Stipulated for #2145 lane M as the sense distinguished from MIRROR_2 (DEF 7147bcb5) in the mirror disambiguation dec35f6f. Physics background, navigation only and no attributed claim: the weak interaction is not invariant under P (Wu et al. 1957; V−A coupling). So on dispositional essentialism the P-image of the actual world violates the law-grounding natures of creaturely kinds, and preservation of essential truths by P is doubtful (option 1 at a creature). No registered argument uses this sense; the registered mirror argument (contingentFromChiralMirror) uses MIRROR_2. The generic premises EssentialTruthsPreservedByMirrorAt, HandednessReversedAt and ChiralAtMirrorImageAt and the fork certificate range over any world map (DEF 3fc924f3) and so cover both senses.",
+  "formal_gap": {
+    "kind": "primitive",
+    "meaning": "image maps each world to its spatial (P) mirror image; a model supplies the map.",
+    "examples": [
+      "A world containing one left hand and nothing else; its P-image contains one right hand of the same matter."
+    ],
+    "exclusions": [
+      "CPT conjugation, which also conjugates charge and reverses time (MIRROR_2).",
+      "A translation or rotation, which preserves handedness."
+    ],
+    "open_obligations": [
+      "Whether the P-image of the actual world violates a creaturely nature (dispositional essentialism about the weak interaction says yes)."
+    ]
+  }
+}

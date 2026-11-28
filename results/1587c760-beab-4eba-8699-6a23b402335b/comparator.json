@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.AxiarchicGuidance.Challenge",
+  "solution_module": "TruthCore.Results.Causality.AxiarchicGuidance.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.AxiarchicGuidance.guidanceTable"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

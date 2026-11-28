@@ -1,0 +1,11 @@
+{
+  "id": "d53d259e-731f-4175-ab46-b7eeaae16e1e",
+  "label": "Received esse adds nothing to the essence-only derivation of finitude, checked",
+  "argument_id": "1d3bbd56-ad18-437d-b4a9-209de67cd762",
+  "challenge_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Challenge",
+  "solution_module": "TruthCore.Results.Causality.DependenceToActOfBeing.Solution",
+  "theorem": "TruthCore.Results.Causality.DependenceToActOfBeing.limitationComparison",
+  "comparator_config": "results/d53d259e-731f-4175-ab46-b7eeaae16e1e/comparator.json",
+  "status": "solution-present",
+  "description": "Premise-free comparison at matching scope: finitude in perfection of whatever is not its own being follows on the essence-only account and on the reception account, both from the same nature premise; the reception premises imply the essence-only premise on non-own beings."
+}
