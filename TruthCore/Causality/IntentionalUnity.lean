@@ -236,6 +236,8 @@ proper-realizer contribution guard has no instances in this row. -/
 def PosteriorWhole : Prop :=
   simpleReal true 0 ∧
   (∀ n, specification n ≠ specification (n + 1)) ∧
+  (∀ n, specification n ≠ (arena Nat.lt).exist true ∧
+    specification n ≠ (arena Nat.lt).exist false) ∧
   (∀ n, simpleReal true (commonRealizer n)) ∧
   PosteriorSpecificationsAt (arena Nat.lt) () Set.univ specification 0 ∧
   DistinctRealizersContributeAt (arena Nat.lt) () simpleReal true 0
