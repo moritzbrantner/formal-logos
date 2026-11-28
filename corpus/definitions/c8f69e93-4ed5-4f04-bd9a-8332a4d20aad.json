@@ -1,0 +1,9 @@
+{
+  "id": "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad",
+  "label": "Bearer, exercise and complete immediate actuality individuate an operation",
+  "term": "complete intrinsic operation profile",
+  "basis": "stipulative",
+  "definition": "The function o ↦ (bearer(o), exercise(o), realize(o)) is injective. Hence equality of those three supplied data implies numerical identity of operation tokens. The last datum is intended as the complete immediate actuality of the operation. The injectivity premise, rather than the tuple notation, asserts that the selected descriptors are sufficient for token identity. One bearer, faculty, remote cause or common realizer alone need not be complete. Repeated operations may have the same objects and bearer but different exercise indices; a same-profile duplicate-token interpretation falsifies the premise. It says nothing about injectivity of an object-to-operation map.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.OperationProfileComplete",
+  "note": "Analyst formulation, attribution deferred. This is an OPEN extensionality principle and applicability claim, not a metaphysical definition of act unity. The prior constitutive-content completeness 86b6b285-4fc6-530b-80e6-16e41aeaf4d6 concerns represented nature profiles rather than operation tokens. Both readings require an adequate account of completeness. No eternal operation is individuated merely by assigning an index."
+}

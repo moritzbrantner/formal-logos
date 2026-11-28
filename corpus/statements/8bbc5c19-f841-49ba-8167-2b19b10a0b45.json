@@ -1,0 +1,14 @@
+{
+  "id": "8bbc5c19-f841-49ba-8167-2b19b10a0b45",
+  "label": "Arbitrary object sets and repeated operations do not settle constitution",
+  "paraphrase": "For every object carrier and selected object set, one actual Unit operation has precisely that incidence profile and a complete intrinsic token profile, with an intrinsic realizer both in the simple one-constituent assignment and in a composite subject assignment. All Nat objects can therefore belong to one represented act, while this fact alone leaves subject simplicity unsettled. Countably many repeated operations have the same two-object profile and one realizer but distinct exercise indices; profile completeness and local unity hold at each exercise while the full token carrier is not a subsingleton. Further populated controls retain countably many operations at one bearer/exercise while omitting, separately, profile completeness, intrinsic membership, or subject simplicity. No control establishes cognitive correctness, eternal act identity or metaphysical possibility.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.Control.OperationControls",
+  "definition_ids": [
+    "9f2678f7-6b80-40b5-b4b3-3d808ee90852",
+    "127126f2-a1e6-4789-8fe0-e3d04898b78a",
+    "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad",
+    "31afdf5a-39c5-4345-9830-acd3e38dc7fe",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "75d4dd78-c070-4961-8130-6b0d248863c3"
+  ]
+}

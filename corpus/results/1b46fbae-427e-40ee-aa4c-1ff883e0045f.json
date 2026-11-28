@@ -1,0 +1,11 @@
+{
+  "id": "1b46fbae-427e-40ee-aa4c-1ff883e0045f",
+  "label": "Countable constituency controls and restored-account application",
+  "argument_id": "f1353a42-2497-400d-99de-61dbef023dea",
+  "challenge_module": "TruthCore.Results.Causality.IntentionalUnity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntentionalUnity.Solution",
+  "theorem": "TruthCore.Results.Causality.IntentionalUnity.priorityControls",
+  "comparator_config": "results/1b46fbae-427e-40ee-aa4c-1ff883e0045f/comparator.json",
+  "status": "solution-present",
+  "description": "The increasing-order witness has infinitely many specification facts and actual whole realization; the simple row's proper-contribution guard is vacuous. A second actual constituent survives when coverage or the necessary contribution bridge is removed. Reversing priority restores nonvacuous proper contribution but removes posteriority. The source-to-specification-to-different-operation chain isolates the same-explanandum condition. Both previous restored accounts supply positive mode paths to the new criterion with identical guards and inherited coverage. No equality of overall warrant, cognition conclusion, full mind-independence or metaphysical coherence is inferred from these structural controls."
+}

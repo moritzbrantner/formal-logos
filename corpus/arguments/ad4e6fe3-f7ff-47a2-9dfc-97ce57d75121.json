@@ -1,0 +1,17 @@
+{
+  "id": "ad4e6fe3-f7ff-47a2-9dfc-97ce57d75121",
+  "label": "Local operation unity by restricted realization and complete intrinsic profile",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "b63a60ae-387d-4bca-b240-f72adf949970",
+  "inference_ids": [
+    "e0dca097-d0a9-4adc-883c-027f79ff4f2b"
+  ],
+  "meaning": "Uses ImitabilityPlurality.identityAndRankingLaws, with the subtype of operations at the same actual bearer and exercise as its carrier. Equal real realizers plus matching bearer/exercise give token equality only through the explicit profile-completeness premise. This is a scoped reuse application, not a new collapse principle or a derivation of metaphysical act individuation. No object-profile identity is assumed.",
+  "definition_ids": [
+    "127126f2-a1e6-4789-8fe0-e3d04898b78a",
+    "75d4dd78-c070-4961-8130-6b0d248863c3",
+    "9f2678f7-6b80-40b5-b4b3-3d808ee90852",
+    "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad",
+    "d6912ecb-aed2-411a-913e-0dab9106d910"
+  ]
+}

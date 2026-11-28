@@ -1,0 +1,10 @@
+{
+  "id": "4c194bf4-2955-4da1-87a4-67858764957e",
+  "label": "Operation-object controls test the cognition criterion",
+  "subject_kind": "result",
+  "subject_id": "dce2992b-13d9-47ca-9881-fd196e7fc0a7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+  "note": "Object plurality neither forces multiple operation tokens nor proves a simple subject; repeated tokens can share the same object profile. These limits block an object-counting shortcut to or against cognition while leaving the criterion's value-sensitive apprehension claim OPEN."
+}

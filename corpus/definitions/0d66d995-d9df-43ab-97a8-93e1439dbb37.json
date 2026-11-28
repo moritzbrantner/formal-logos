@@ -1,0 +1,9 @@
+{
+  "id": "0d66d995-d9df-43ab-97a8-93e1439dbb37",
+  "label": "Selected specification realizers cover every real constituent",
+  "term": "exhaustive local coverage of real constituents",
+  "basis": "stipulative",
+  "definition": "Every real constituent a of the fixed bearer b is the realizer of some eligible specification c. This is an existential-surjectivity condition onto the bearer-relative real-constituent set; it requires neither injectivity nor distinct specifications for distinct modes of predication. Example: a proposed complete account whose eligible specifications include every real constituent. Counterexample: the common-realizer description omits a second actual power, as in Control.OmitCoverage. It concerns actual real constituents, not completeness of an object list or sufficiency of explanation.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.RealizersCoverConstituents",
+  "note": "Analyst formulation, attribution deferred. OPEN exhaustive application premise. Together with identity of all selected real realizers it gives existing constitutive simplicity d6912ecb-aed2-411a-913e-0dab9106d910; selected posteriority alone does not establish it. The positive controls explicitly populate both the selected specification carrier and the whole constituent."
+}

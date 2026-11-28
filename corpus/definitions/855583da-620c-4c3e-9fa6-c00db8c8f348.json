@@ -1,0 +1,9 @@
+{
+  "id": "855583da-620c-4c3e-9fa6-c00db8c8f348",
+  "label": "Specifications posterior to one fixed intrinsic actuality",
+  "term": "posterior specification actuality",
+  "basis": "stipulative",
+  "definition": "For every eligible specification c, a nonempty finite chain in the SAME world-indexed Arena.explains relation runs from the fixed target actuality fact to specification(c). Relation.TransGen supplies finite-chain semantics without a finite bound on the carrier. The specification map sends items to the fact relevant to the proposed dependence: for an intentional content this may be its intentional presence; for a formal mode, its derivative specification. Neither is automatically the existence of an external object. Example: an act explains a content being apprehended; a nature explains a derivative mode specification. Counterexample: a fact about a separate operation being prior to that operation, with no path from the selected target. No transitivity or asymmetry of Arena.explains is built into this predicate.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.PosteriorSpecificationsAt",
+  "note": "Analyst formulation, attribution deferred. This is an OPEN directional premise over the PSR arena fe4b7da0-cbd6-5d1f-b589-953f9def12b7; strictness is supplied separately by fe123142-31a9-49b5-840b-716bd6a0a98f. It asserts a dependence, not that every intentional object or formal mode has that dependence."
+}

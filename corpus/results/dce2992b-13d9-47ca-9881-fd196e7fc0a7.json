@@ -1,0 +1,11 @@
+{
+  "id": "dce2992b-13d9-47ca-9881-fd196e7fc0a7",
+  "label": "Operation-object separation and populated individuation omissions",
+  "argument_id": "3ff3763d-f771-4dc1-bbdb-dc5d136cbd62",
+  "challenge_module": "TruthCore.Results.Causality.IntentionalUnity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntentionalUnity.Solution",
+  "theorem": "TruthCore.Results.Causality.IntentionalUnity.operationControls",
+  "comparator_config": "results/dce2992b-13d9-47ca-9881-fd196e7fc0a7/comparator.json",
+  "status": "solution-present",
+  "description": "Checks one operation with an arbitrary object set in both simple and composite subject assignments, repeated operations with identical object profiles, and separate failures of intrinsic realization, subject simplicity and profile completeness. The relation only records which objects an operation concerns. A tuple of supplied descriptors or a constant realization map does not by itself establish an adequate account of complete immediate actuality. These mathematical witnesses test exact inference boundaries rather than certify ordinary thought or an eternal simple intellect."
+}

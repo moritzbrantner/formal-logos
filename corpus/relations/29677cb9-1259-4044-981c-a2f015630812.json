@@ -1,0 +1,10 @@
+{
+  "id": "29677cb9-1259-4044-981c-a2f015630812",
+  "label": "Posterior-constitution criterion tests the root simplicity application",
+  "subject_kind": "result",
+  "subject_id": "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+  "note": "Tests a proposed way to establish constitutive simplicity: only a guarded same-actuality contribution bridge plus exhaustive real-constituent coverage converts posterior specification into simplicity. The world/target relation is fixed and the whole nature is exempt from strict self-priority. No root's coverage or bridge is established."
+}

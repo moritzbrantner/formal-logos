@@ -1,0 +1,18 @@
+{
+  "id": "3ff3763d-f771-4dc1-bbdb-dc5d136cbd62",
+  "label": "Operation-object separation and populated individuation omissions",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "8bbc5c19-f841-49ba-8167-2b19b10a0b45",
+  "inference_ids": [
+    "530e90be-e144-4c8a-9f96-835cf1fd8602"
+  ],
+  "meaning": "Checks one operation with an arbitrary object set in both simple and composite subject assignments, repeated operations with identical object profiles, and separate failures of intrinsic realization, subject simplicity and profile completeness. The relation only records which objects an operation concerns. A tuple of supplied descriptors or a constant realization map does not by itself establish an adequate account of complete immediate actuality. These mathematical witnesses test exact inference boundaries rather than certify ordinary thought or an eternal simple intellect.",
+  "definition_ids": [
+    "127126f2-a1e6-4789-8fe0-e3d04898b78a",
+    "31afdf5a-39c5-4345-9830-acd3e38dc7fe",
+    "75d4dd78-c070-4961-8130-6b0d248863c3",
+    "9f2678f7-6b80-40b5-b4b3-3d808ee90852",
+    "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad",
+    "d6912ecb-aed2-411a-913e-0dab9106d910"
+  ]
+}

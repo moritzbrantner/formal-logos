@@ -1,0 +1,11 @@
+{
+  "id": "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a",
+  "label": "Constitution from posterior specifications, guarded contribution and coverage",
+  "argument_id": "3cac1436-1006-4ede-902e-ef7c3dbc8d4f",
+  "challenge_module": "TruthCore.Results.Causality.IntentionalUnity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntentionalUnity.Solution",
+  "theorem": "TruthCore.Results.Causality.IntentionalUnity.posteriorConstitutionLaws",
+  "comparator_config": "results/697e2177-62a3-4c3c-b7c3-c4032f2bcf7a/comparator.json",
+  "status": "solution-present",
+  "description": "A distinct eligible realizer counted as a constituent would reverse a strict priority chain back to the same target. PriorityOmission excludes that reversal, so the realizer equals the whole. Coverage then carries this identity to any two real constituents. The whole is explicitly exempt from strict self-priority. This new guarded item-to-fact application retains all interpretation bridges as conditional inputs and does not infer simplicity from absence of a reverse edge alone."
+}

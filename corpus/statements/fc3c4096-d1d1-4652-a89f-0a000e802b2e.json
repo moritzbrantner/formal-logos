@@ -1,0 +1,14 @@
+{
+  "id": "fc3c4096-d1d1-4652-a89f-0a000e802b2e",
+  "label": "Posterior specifications constrain constitution only with priority and coverage",
+  "paraphrase": "Universal conditional law over one world, bearer, target actuality, eligible specification set, and realizer/fact maps. If the SAME fact-priority relation is asymmetric and transitive, each eligible specification fact is downstream of the target by a nonempty finite chain, and each eligible realizer that is a real constituent distinct from the designated whole would contribute to that SAME target, then every eligible realizer counted as real equals the whole. ONLY with exhaustive coverage of every real constituent by those specifications does constitutive simplicity follow. This is at most one constituent, with no existence conclusion. Strict priority and the two interpretation bridges remain explicit OPEN applications; the whole's self-realization is exempt from the proper-realizer bridge. The law concerns specification actuality, such as intentional presence, not automatically external object existence.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.PosteriorConstitutionLaws",
+  "definition_ids": [
+    "855583da-620c-4c3e-9fa6-c00db8c8f348",
+    "5bead611-8fba-4ed8-90f9-c35d44f396f1",
+    "0d66d995-d9df-43ab-97a8-93e1439dbb37",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "fe4b7da0-cbd6-5d1f-b589-953f9def12b7",
+    "fe123142-31a9-49b5-840b-716bd6a0a98f"
+  ]
+}

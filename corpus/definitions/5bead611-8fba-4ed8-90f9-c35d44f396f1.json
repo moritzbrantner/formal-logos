@@ -1,0 +1,9 @@
+{
+  "id": "5bead611-8fba-4ed8-90f9-c35d44f396f1",
+  "label": "Distinct real realizers contribute to the same intrinsic actuality",
+  "term": "guarded constituency-to-priority application",
+  "basis": "stipulative",
+  "definition": "For each eligible specification c, if its realizer is a real constituent of b and differs from the designated whole, the fact specification(c) explains the SAME target actuality at w. RealConstituent retains d6912ecb-aed2-411a-913e-0dab9106d910. The realizer and fact maps are declared primitive interpretations: the former identifies the real actuality realizing the item; the latter identifies the fact appropriate to this constitutive explanation. The guard spares the whole nature itself. A proper actualizing form in a composite motivates the principle; a remote cause, an object merely apprehended, a non-synonymous predicate, or the whole realizing itself is not automatically a strict contributor. Structural properties of explanation remain separate.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.DistinctRealizersContributeAt",
+  "note": "OPEN necessary bridge for this diagnostic, not a definition settling constituency and not a biconditional or sufficiency theorem. The independently motivated sufficient example of a real intrinsic proper co-principle constituting a whole does not establish this necessary coverage claim for every purported constituent. Apply identically to intentional contents and noncognitive formal modes; whether the given fact map carries the required constitutive actuality remains open."
+}

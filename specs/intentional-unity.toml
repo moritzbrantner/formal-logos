@@ -1,0 +1,135 @@
+# Analyst formulations; attribution deferred. The conditional criteria apply
+# equally to intentional specifications and noncognitive formal modes.
+# See docs/notes/causal-perfection-transfer.md for warrant and application limits.
+
+[batch]
+vocab = "TruthCore.Causality.IntentionalUnity"
+results = "TruthCore.Results.Causality.IntentionalUnity"
+
+[[statement]]
+id = "fc3c4096-d1d1-4652-a89f-0a000e802b2e"
+label = "Posterior specifications constrain constitution only with priority and coverage"
+lean = "PosteriorConstitutionLaws"
+definitions = ["855583da-620c-4c3e-9fa6-c00db8c8f348", "5bead611-8fba-4ed8-90f9-c35d44f396f1", "0d66d995-d9df-43ab-97a8-93e1439dbb37", "d6912ecb-aed2-411a-913e-0dab9106d910", "fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "fe123142-31a9-49b5-840b-716bd6a0a98f"]
+paraphrase = "Universal conditional law over one world, bearer, target actuality, eligible specification set, and realizer/fact maps. If the SAME fact-priority relation is asymmetric and transitive, each eligible specification fact is downstream of the target by a nonempty finite chain, and each eligible realizer that is a real constituent distinct from the designated whole would contribute to that SAME target, then every eligible realizer counted as real equals the whole. ONLY with exhaustive coverage of every real constituent by those specifications does constitutive simplicity follow. This is at most one constituent, with no existence conclusion. Strict priority and the two interpretation bridges remain explicit OPEN applications; the whole's self-realization is exempt from the proper-realizer bridge. The law concerns specification actuality, such as intentional presence, not automatically external object existence."
+
+[[statement]]
+id = "b63a60ae-387d-4bca-b240-f72adf949970"
+label = "Same-exercise operation unity needs intrinsic realization and complete individuation"
+lean = "LocalOperationUnityLaws"
+definitions = ["9f2678f7-6b80-40b5-b4b3-3d808ee90852", "127126f2-a1e6-4789-8fe0-e3d04898b78a", "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad", "d6912ecb-aed2-411a-913e-0dab9106d910", "75d4dd78-c070-4961-8130-6b0d248863c3"]
+paraphrase = "For any shared CausalityFrame and selected actual bearer/exercise, the subtype of occurring operations at that bearer and exercise is a subsingleton IF the bearer is constitutively simple, every selected operation's realizer is a real constituent of that bearer, and the supplied bearer/exercise/complete-immediate-realizer profile is injective on operation tokens. This is a local application of the earlier realizer-collapse law; it asserts neither an existing operation nor equality across different exercises. The completeness and intrinsic-realization applications are OPEN. A common subject, faculty, remote cause, realizer or extensional object profile alone does not supply them; objects are not the operation-token carrier."
+
+[[statement]]
+id = "90102168-f4be-46dc-ae95-2403cf90cacc"
+label = "Countable constituency controls isolate direction, contribution and coverage"
+lean = "Control.PriorityControls"
+definitions = ["855583da-620c-4c3e-9fa6-c00db8c8f348", "5bead611-8fba-4ed8-90f9-c35d44f396f1", "0d66d995-d9df-43ab-97a8-93e1439dbb37", "d6912ecb-aed2-411a-913e-0dab9106d910", "fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "fe123142-31a9-49b5-840b-716bd6a0a98f", "158301bc-9585-4145-be60-34f08c9f922c", "e894ad07-da74-412f-b679-068ec08530b3", "75d4dd78-c070-4961-8130-6b0d248863c3"]
+paraphrase = "Coherent factive controls reuse the populated shared causal frame with both beings actual and use Nat fact/specification carriers. The strict increasing order admits infinitely many distinct posterior specification facts, separated from both existence facts, all realized by the actual whole; coverage holds and the subject is constitutively simple. The proper-realizer contribution guard has no instances in that positive row. Three populated counterinterpretations retain two actual constituents and omit, separately, coverage, the constituent-to-priority bridge, or posteriority; simplicity fails. In the last row actual proper contribution is nonvacuous. The same source actuality may explain specification n+2, which explains the DIFFERENT operation actuality n+3 without a cycle. Finally, both earlier restored source-based accounts of ImitabilityPlurality meet the new diagnostic at both worlds using their positive nature-mode paths, common whole-realizer and coverage. Their proper-realizer bridge is vacuous and their simplicity was already supplied; this reuse adds no warrant for either account's coherence or full mind-independence. These are structural interpretations, not metaphysical counterexamples."
+
+[[statement]]
+id = "8bbc5c19-f841-49ba-8167-2b19b10a0b45"
+label = "Arbitrary object sets and repeated operations do not settle constitution"
+lean = "Control.OperationControls"
+definitions = ["9f2678f7-6b80-40b5-b4b3-3d808ee90852", "127126f2-a1e6-4789-8fe0-e3d04898b78a", "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad", "31afdf5a-39c5-4345-9830-acd3e38dc7fe", "d6912ecb-aed2-411a-913e-0dab9106d910", "75d4dd78-c070-4961-8130-6b0d248863c3"]
+paraphrase = "For every object carrier and selected object set, one actual Unit operation has precisely that incidence profile and a complete intrinsic token profile, with an intrinsic realizer both in the simple one-constituent assignment and in a composite subject assignment. All Nat objects can therefore belong to one represented act, while this fact alone leaves subject simplicity unsettled. Countably many repeated operations have the same two-object profile and one realizer but distinct exercise indices; profile completeness and local unity hold at each exercise while the full token carrier is not a subsingleton. Further populated controls retain countably many operations at one bearer/exercise while omitting, separately, profile completeness, intrinsic membership, or subject simplicity. No control establishes cognitive correctness, eternal act identity or metaphysical possibility."
+
+[[argument]]
+id = "3cac1436-1006-4ede-902e-ef7c3dbc8d4f"
+label = "Constitution from posterior specifications, guarded contribution and coverage"
+theorem = "posteriorConstitutionLaws"
+premises = []
+conclusion = "fc3c4096-d1d1-4652-a89f-0a000e802b2e"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Compose finite same-relation priority chains with PriorityOmission, then transport realization identity through exhaustive coverage"
+meaning = "A distinct eligible realizer counted as a constituent would reverse a strict priority chain back to the same target. PriorityOmission excludes that reversal, so the realizer equals the whole. Coverage then carries this identity to any two real constituents. The whole is explicitly exempt from strict self-priority. This new guarded item-to-fact application retains all interpretation bridges as conditional inputs and does not infer simplicity from absence of a reverse edge alone."
+
+[[argument]]
+id = "ad4e6fe3-f7ff-47a2-9dfc-97ce57d75121"
+label = "Local operation unity by restricted realization and complete intrinsic profile"
+theorem = "localOperationUnityLaws"
+premises = []
+conclusion = "b63a60ae-387d-4bca-b240-f72adf949970"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply the existing realizer-collapse law to the selected operation subtype and derive restricted injection from profile completeness"
+meaning = "Uses ImitabilityPlurality.identityAndRankingLaws, with the subtype of operations at the same actual bearer and exercise as its carrier. Equal real realizers plus matching bearer/exercise give token equality only through the explicit profile-completeness premise. This is a scoped reuse application, not a new collapse principle or a derivation of metaphysical act individuation. No object-profile identity is assumed."
+
+[[argument]]
+id = "f1353a42-2497-400d-99de-61dbef023dea"
+label = "Countable constituency controls and restored-account application"
+theorem = "priorityControls"
+premises = []
+conclusion = "90102168-f4be-46dc-ae95-2403cf90cacc"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Check positive Nat orders and the three semantic omissions, then compose the new criterion with both existing restored accounts"
+meaning = "The increasing-order witness has infinitely many specification facts and actual whole realization; the simple row's proper-contribution guard is vacuous. A second actual constituent survives when coverage or the necessary contribution bridge is removed. Reversing priority restores nonvacuous proper contribution but removes posteriority. The source-to-specification-to-different-operation chain isolates the same-explanandum condition. Both previous restored accounts supply positive mode paths to the new criterion with identical guards and inherited coverage. No equality of overall warrant, cognition conclusion, full mind-independence or metaphysical coherence is inferred from these structural controls."
+
+[[argument]]
+id = "3ff3763d-f771-4dc1-bbdb-dc5d136cbd62"
+label = "Operation-object separation and populated individuation omissions"
+theorem = "operationControls"
+premises = []
+conclusion = "8bbc5c19-f841-49ba-8167-2b19b10a0b45"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Construct arbitrary-carrier incidence and Nat operation witnesses, then apply local unity at each repeated exercise"
+meaning = "Checks one operation with an arbitrary object set in both simple and composite subject assignments, repeated operations with identical object profiles, and separate failures of intrinsic realization, subject simplicity and profile completeness. The relation only records which objects an operation concerns. A tuple of supplied descriptors or a constant realization map does not by itself establish an adequate account of complete immediate actuality. These mathematical witnesses test exact inference boundaries rather than certify ordinary thought or an eternal simple intellect."
+
+[[relation]]
+id = "29677cb9-1259-4044-981c-a2f015630812"
+label = "Posterior-constitution criterion tests the root simplicity application"
+subject_kind = "result"
+subject_id = "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0"
+note = "Tests a proposed way to establish constitutive simplicity: only a guarded same-actuality contribution bridge plus exhaustive real-constituent coverage converts posterior specification into simplicity. The world/target relation is fixed and the whole nature is exempt from strict self-priority. No root's coverage or bridge is established."
+
+[[relation]]
+id = "1c1edc88-220a-456f-9e7a-a7c4232cd167"
+label = "Shared constitutive priority tests the recognition bridge"
+subject_kind = "result"
+subject_id = "697e2177-62a3-4c3c-b7c3-c4032f2bcf7a"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "The criterion treats intentional-presence facts and noncognitive mode-specification facts identically when each is posterior to the SAME intrinsic actuality. It gives no asymmetry establishing that generic containment is apprehension. Different targets or relations cannot be silently combined."
+
+[[relation]]
+id = "376d3619-0c7a-40a3-b692-8e092992500c"
+label = "Local operation identity tests the cognition criterion"
+subject_kind = "result"
+subject_id = "b1da92ca-e297-434d-a9cf-8312e23e4420"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+note = "One operation is compatible with many objects under an explicit token criterion, but neither its unity nor a common realizer proves apprehension. A cognition application needs a positive bridge to the operation's content-sensitive actuality."
+
+[[relation]]
+id = "45b14c85-ee1d-4c24-a2f2-b1440ef2b922"
+label = "Countable constituency omissions test recognition's simplicity argument"
+subject_kind = "result"
+subject_id = "1b46fbae-427e-40ee-aa4c-1ff883e0045f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "Restores real constituents and positive explanation in the omissions, and reuses both earlier restored source accounts. Posteriority by itself does not establish non-composition, and the same guarded criterion supplies no cognition-exclusive exemption. The models establish only the displayed formal interpretations."
+
+[[relation]]
+id = "4c194bf4-2955-4da1-87a4-67858764957e"
+label = "Operation-object controls test the cognition criterion"
+subject_kind = "result"
+subject_id = "dce2992b-13d9-47ca-9881-fd196e7fc0a7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+note = "Object plurality neither forces multiple operation tokens nor proves a simple subject; repeated tokens can share the same object profile. These limits block an object-counting shortcut to or against cognition while leaving the criterion's value-sensitive apprehension claim OPEN."
+
+[[relation]]
+id = "dc0ca9e8-2416-4329-84e1-52638a5c7c6a"
+label = "Operation unity controls test the pure-perfection application"
+subject_kind = "result"
+subject_id = "dce2992b-13d9-47ca-9881-fd196e7fc0a7"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+note = "Tests the proposed simplicity shortcut in applying cognition as a pure perfection: one operation with many objects also occurs in the composite assignment, and at-most-one operation requires intrinsic membership plus complete token individuation. Neither cognitive actuality nor its pure-perfection status, compossibility or every-perfection possession is encoded or derived. The in-root purity obligation remains separate."
