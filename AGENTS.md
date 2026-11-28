@@ -488,7 +488,7 @@ See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
 2. **conditionally supported by a substantive derivation**: `substantive`. `refutation_support` belongs here too, but only as support for that refutation of a recorded rival, not for a root route.
 3. **connected only**:
    - `transcription_closed` carries rule (d) closure to the root but no independent warrant;
-   - `transcription_self` contributes at most rule (d) closure;
+   - `transcription_self` and `restates_conclusion` (#2190) contribute at most rule (d) closure;
    - `transcription_open`, `loop_back`, `registration_bare` and `unverified_route` carry no support to the root.
 4. **planned**: the placement state `planned` (no provenance key).
 

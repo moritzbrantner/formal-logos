@@ -37,6 +37,21 @@ not unfolded further; library constants are boundaries. When `sense_constants`
 is given, one extra array element `{"sense_aliases": {name: canonical}}` maps
 each sense constant present in the environment to the constant it is an alias
 of (a definition whose eta-reduced value is a bare constant, followed through).
+
+Restating lemmas (#2190). The input may list `restating`, objects
+`{"lemma": name, "dischargers": [[hypothesis, name], ...]}` taken from results that
+declare `restates_conclusion`. For each, one extra array element
+`{"restating_lemma": name, ...}` describes the lemma: its axioms
+(`collectAxioms`), every binder (name, `prop`, head, `core_head`, and for a
+propositional binder its type), and the body after `forallTelescope` (no
+reduction). An `Iff` body lists both `sides`, any other body one `side`. A
+side gives its head, the constants it mentions (`getUsedConstants`,
+syntactic), the number of leading `∃` binders and how many of them occur in
+the matrix. For each named discharger of a propositional binder, the tool
+instantiates the discharger's trailing binders with metavariables and asks
+`isDefEq` whether its conclusion is the binder's type; it reports the
+discharger's axioms and the hypotheses left over. `truth bind-check` compares
+this with the corpus records; it decides nothing about what the lemma means.
 -/
 import Lean
 
@@ -261,6 +276,118 @@ def describeTheorem (prefixes : Array String) (contracts : Array String) (senses
       out := out.mergeObj (Json.mkObj [("expression_contract", ← expressionContract info)])
     return out
 
+/-- Sorted names of the constants `e` mentions (syntactic, nothing unfolded). -/
+def usedConstantsJson (e : Expr) : Json :=
+  toJson ((e.getUsedConstants.map Name.toString).qsort (· < ·))
+
+/-- Peel leading `∃` binders: their number, how many of them occur in the
+rest of the proposition, and the description of the innermost matrix. -/
+partial def peelExists (e : Expr) : MetaM (Nat × Nat × Json) := do
+  let e := e.consumeMData
+  if e.isAppOfArity ``Exists 2 then
+    match e.appArg!.consumeMData with
+    | .lam n ty body bi =>
+      let used := if body.hasLooseBVar 0 then 1 else 0
+      withLocalDecl n bi ty fun x => do
+        let (count, occurring, matrix) ← peelExists (body.instantiate1 x)
+        return (count + 1, occurring + used, matrix)
+    | _ => return (0, 0, Json.null)
+  else
+    return (0, 0, Json.mkObj [("head", nameJson (headConst? e)),
+      ("used_constants", usedConstantsJson e)])
+
+/-- One side of a restating lemma's body. -/
+def describeSide (e : Expr) : MetaM Json := do
+  let e ← instantiateMVars e
+  let (count, occurring, matrix) ← peelExists e
+  return Json.mkObj [
+    ("head", nameJson (headConst? e)),
+    ("used_constants", usedConstantsJson e),
+    ("exists_binders", toJson count),
+    ("exists_used", toJson occurring),
+    ("matrix", matrix),
+    ("type", Json.str (toString (← ppExpr e)))
+  ]
+
+/-- Whether the declaration `d` concludes `target` once its trailing binders
+(as many as `d` has beyond `target`'s own) are metavariables. -/
+def describeDischarger (target : Expr) (d : Name) : MetaM Json := do
+  let some info := (← getEnv).find? d
+    | return Json.mkObj [("declaration", Json.str d.toString), ("error", Json.str "unknown constant")]
+  let axioms ← collectAxioms d
+  let levels ← info.levelParams.mapM fun _ => mkFreshLevelMVar
+  let dType := info.instantiateTypeLevelParams levels
+  let nTarget ← forallTelescope target fun ys _ => pure ys.size
+  let nDischarger ← forallTelescope dType fun ys _ => pure ys.size
+  let base := Json.mkObj [("declaration", Json.str d.toString),
+    ("axioms", toJson (axioms.map Name.toString))]
+  if nDischarger < nTarget then
+    return base.mergeObj (Json.mkObj [("matches", Json.bool false)])
+  let (mvars, _, conclusion) ← forallMetaBoundedTelescope dType (nDischarger - nTarget)
+  let unified ← isDefEq conclusion target
+  let mut remaining : Array Json := #[]
+  for m in mvars do
+    let ty ← instantiateMVars (← inferType m)
+    if !(← m.mvarId!.isAssigned) && (← isProp ty) then
+      remaining := remaining.push (Json.str (toString (← ppExpr ty)))
+  return base.mergeObj (Json.mkObj [("matches", Json.bool unified),
+    ("remaining_hypotheses", Json.arr remaining)])
+
+/-- Describe a restating lemma (see the module docstring). -/
+def describeRestating (lemma : Name) (dischargers : List (String × Name)) : MetaM Json := do
+  let some info := (← getEnv).find? lemma
+    | return Json.mkObj [("restating_lemma", Json.str lemma.toString),
+        ("error", Json.str "unknown constant")]
+  let kind := match info with
+    | .thmInfo _ => "theorem"
+    | .defnInfo _ => "definition"
+    | .axiomInfo _ => "axiom"
+    | .opaqueInfo _ => "opaque"
+    | _ => "other"
+  let axioms ← collectAxioms lemma
+  forallTelescope info.type fun xs body => do
+    let mut binders : Array Json := #[]
+    let mut discharged : Array (String × Json) := #[]
+    for x in xs do
+      let decl ← x.fvarId!.getDecl
+      let name := decl.userName.eraseMacroScopes.toString
+      let ty ← instantiateMVars decl.type
+      let prop ← isProp ty
+      let (_, core) ← peel ty #[]
+      let mut d := Json.mkObj [("name", Json.str name), ("prop", Json.bool prop),
+        ("head", nameJson (headConst? ty)), ("core_head", nameJson core)]
+      if prop then
+        d := d.mergeObj (Json.mkObj [("type", Json.str (toString (← ppExpr ty)))])
+        for (hypothesis, discharger) in dischargers do
+          if hypothesis == name then
+            let described ← describeDischarger ty discharger
+            discharged := discharged.push (hypothesis, described)
+      binders := binders.push d
+    let body ← instantiateMVars body
+    let b := body.consumeMData
+    let shape ← if b.isAppOfArity ``Iff 2 then do
+        let left ← describeSide b.appFn!.appArg!
+        let right ← describeSide b.appArg!
+        pure (Json.mkObj [("body_head", Json.str "Iff"), ("sides", Json.arr #[left, right])])
+      else do
+        let side ← describeSide body
+        pure (Json.mkObj [("body_head", nameJson (headConst? body)), ("side", side)])
+    return (Json.mkObj [("restating_lemma", Json.str lemma.toString),
+      ("kind", Json.str kind), ("axioms", toJson (axioms.map Name.toString)),
+      ("binders", Json.arr binders), ("dischargers", Json.mkObj discharged.toList)]).mergeObj shape
+
+/-- The `restating` input entries: lemma names with their dischargers. -/
+def restatingInput (input : Json) : Except String (Array (Name × List (String × Name))) := do
+  let items := (input.getObjValAs? (Array Json) "restating").toOption.getD #[]
+  items.mapM fun item => do
+    let lemma ← item.getObjValAs? String "lemma"
+    let pairs := (item.getObjValAs? (Array (Array String)) "dischargers").toOption.getD #[]
+    let dischargers := pairs.toList.filterMap fun pair =>
+      match pair.toList with
+      | [hypothesis, d] => some (hypothesis, d.toName)
+      | _ => none
+    return (lemma.toName, dischargers)
+
 unsafe def main (args : List String) : IO UInt32 := do
   let [path] := args
     | IO.eprintln "usage: lean --run scripts/BindTypes.lean <input.json>"; return 2
@@ -272,6 +399,7 @@ unsafe def main (args : List String) : IO UInt32 := do
   let senseNames := ((input.getObjValAs? (Array String) "sense_constants").toOption.getD #[]).map String.toName
   let senseTheorems := (input.getObjValAs? (Array String) "sense_theorems").toOption.getD #[]
   let senses : NameSet := senseNames.foldl (fun s n => s.insert n) {}
+  let restating ← IO.ofExcept (restatingInput input)
   initSearchPath (← findSysroot)
   enableInitializersExecution
   let env ← importModules (modules.map fun m => { module := m.toName }) {}
@@ -280,7 +408,9 @@ unsafe def main (args : List String) : IO UInt32 := do
   let state : Core.State := { env }
   let (out, _) ← (MetaM.run' (theorems.mapM fun t =>
     describeTheorem prefixes contracts senses senseTheorems t.toName)).toIO ctx state
-  let mut out := out
+  let (restated, _) ← (MetaM.run' (restating.mapM fun (lemma, dischargers) =>
+    describeRestating lemma dischargers)).toIO ctx state
+  let mut out := out ++ restated
   if !senseNames.isEmpty then
     let aliases := senseNames.toList.filterMap fun n =>
       if env.contains n then some (n.toString, Json.str (aliasOf env 32 n).toString) else none

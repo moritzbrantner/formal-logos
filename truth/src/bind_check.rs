@@ -297,7 +297,41 @@ pub fn result_requests(corpus: &Corpus, scope: Option<&BTreeSet<String>>) -> Vec
 /// Python `bind_tool_input(..., senses=True)`, serialized as `json.dump`
 /// writes it (insertion order, `", "`/`": "` separators, ASCII escapes).
 pub fn tool_input(corpus: &Corpus, contracts: &Contracts, requests: &[Request]) -> String {
-    tool_input_with(corpus, contracts, requests, true)
+    let mut out = tool_input_with(corpus, contracts, requests, true);
+    let restating = restating_input(requests);
+    if !restating.is_empty() {
+        out.pop();
+        out.push_str(&format!(
+            ", \"restating\": {}}}",
+            serde_json::to_string(&restating).unwrap_or_default()
+        ));
+    }
+    out
+}
+
+/// The exporter's `restating` input (#2190): for each result request that
+/// declares `restates_conclusion`, in result-id order, its lemma and the
+/// named dischargers of its side conditions as `[hypothesis, declaration]`.
+fn restating_input(requests: &[Request]) -> Vec<Value> {
+    let mut ordered: Vec<&Request> = requests.iter().filter(|r| !r.schema).collect();
+    ordered.sort_by_key(|request| text(field(&request.record, "id")));
+    ordered
+        .into_iter()
+        .filter_map(|request| request.record.get(RESTATES).and_then(Value::as_object))
+        .map(|marker| {
+            let dischargers: Vec<Value> = marker
+                .get("side_conditions")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+                .filter_map(|condition| {
+                    let discharger = condition.get("discharged_by")?.as_str()?;
+                    Some(json!([text(&condition["hypothesis"]), discharger]))
+                })
+                .collect();
+            json!({"lemma": text(field(marker, "lemma")), "dischargers": dischargers})
+        })
+        .collect()
 }
 
 /// Python `bind_tool_input(..., senses)`: without `senses` (as
@@ -867,6 +901,7 @@ pub fn report(
         Vec::new()
     };
     add_sense_problems(root, corpus, &statements, &lookup, &mut entries)?;
+    add_restating_problems(root, corpus, &statements, described, &mut entries);
     let aliases = sense_aliases(root, corpus, described)?;
     let mut report = json!({
         "summary": summary(&entries),
@@ -878,6 +913,291 @@ pub fn report(
         report["scope"] = json!(scope);
     }
     Ok(report)
+}
+
+/// The record field of a result whose premises restate its conclusion (#2190).
+const RESTATES: &str = crate::transcription::RESTATES_CONCLUSION;
+
+/// The axioms a result's Comparator config permits (`permitted_axioms`), or
+/// `None` when the config cannot be read.
+fn permitted_axioms(root: &Path, result: &Obj) -> Option<BTreeSet<String>> {
+    let config = root.join(text(field(result, "comparator_config")));
+    let value: Value = serde_json::from_slice(&fs::read(config).ok()?).ok()?;
+    Some(strings(value.get("permitted_axioms")).into_iter().collect())
+}
+
+/// The `restates_conclusion` check (#2190) of every bound result that
+/// declares it: problems are added to the entry, which then mismatches, and
+/// the entry gets a `restates_conclusion` summary of what was checked.
+///
+/// What is checked, against the exporter's description of the lemma:
+/// - the lemma exists in the environment of the result's Solution module (or
+///   a module it imports), is a theorem, and its axioms are permitted by the
+///   result's Comparator config;
+/// - its body (after its binders) is either an `Iff` one side of which has the
+///   conclusion's declaration as head constant (`iff`), or the lemma has a
+///   propositional binder headed by the conclusion's declaration (`converse`);
+/// - the other side (`iff`) or the body (`converse`) opens with at least one
+///   `∃` binder that occurs in its matrix (the free parameters), and that
+///   matrix mentions every premise's declaration, except premises held fixed
+///   as propositional binders of the lemma and the listed
+///   `unrestated_premise_ids` (which it must not mention);
+/// - every other propositional binder is a listed side condition, and a
+///   listed `discharged_by` declaration exists, is axiom-clean under the same
+///   policy, and concludes that binder's type once its trailing binders are
+///   metavariables (`isDefEq`); its remaining hypotheses are reported.
+///
+/// What is not checked: that the existentially bound variables correspond to
+/// the result theorem's own free parameters, that the premise declarations
+/// are applied to the same arguments as in the result theorem, or that the
+/// matrix is exactly the premise conjunction. Mentioning a constant is a
+/// syntactic test; the record's `note` and review carry the rest. A wrong
+/// marker can only withdraw closure (rule (a)) from its conclusion, never add it.
+fn add_restating_problems(
+    root: &Path,
+    corpus: &Corpus,
+    statements: &HashMap<&str, &Obj>,
+    described: &[Value],
+    entries: &mut [Value],
+) {
+    let lemmas: HashMap<&str, &Value> = described
+        .iter()
+        .filter_map(|item| Some((item.get("restating_lemma")?.as_str()?, item)))
+        .collect();
+    let declaration = |statement_id: &str| -> Option<String> {
+        statements
+            .get(statement_id)
+            .and_then(|record| record.get("lean_declaration"))
+            .and_then(Value::as_str)
+            .map(str::to_owned)
+    };
+    for entry in entries.iter_mut() {
+        if entry["kind"] == "schema-registration" {
+            continue;
+        }
+        let Some(result) = corpus.get("results", &text(&entry["id"])) else {
+            continue;
+        };
+        let Some(marker) = result.fields.get(RESTATES).and_then(Value::as_object) else {
+            continue;
+        };
+        let argument = corpus
+            .get("arguments", &text(field(&result.fields, "argument_id")))
+            .map(|argument| argument.fields.clone())
+            .unwrap_or_default();
+        let (problems, summary) = restating_problems(
+            marker,
+            &argument,
+            &declaration,
+            lemmas.get(text(field(marker, "lemma")).as_str()).copied(),
+            permitted_axioms(root, &result.fields).as_ref(),
+        );
+        entry[RESTATES] = summary;
+        if !problems.is_empty() {
+            if let Some(list) = entry["problems"].as_array_mut() {
+                list.extend(problems);
+            }
+            entry["status"] = json!("mismatch");
+        }
+    }
+}
+
+/// The problems and summary of one `restates_conclusion` marker against the
+/// exporter's description of its lemma (see [`add_restating_problems`]).
+fn restating_problems(
+    marker: &Obj,
+    argument: &Obj,
+    declaration: &dyn Fn(&str) -> Option<String>,
+    lemma: Option<&Value>,
+    permitted: Option<&BTreeSet<String>>,
+) -> (Vec<Value>, Value) {
+    let name = text(field(marker, "lemma"));
+    let mut problems = Vec::new();
+    let mut summary = json!({"lemma": name});
+    let Some(lemma) = lemma else {
+        problems.push(json!({"kind": "restates-lemma-not-described", "head": name}));
+        return (problems, summary);
+    };
+    if let Some(error) = lemma.get("error") {
+        problems.push(json!({"kind": "restates-lemma-error", "head": name, "detail": error}));
+        return (problems, summary);
+    }
+    if lemma["kind"] != "theorem" {
+        problems.push(json!({"kind": "restates-lemma-not-theorem", "head": name,
+                             "detail": lemma["kind"]}));
+    }
+    let disallowed = |axioms: &Value| -> Vec<String> {
+        strings(Some(axioms))
+            .into_iter()
+            .filter(|axiom| permitted.is_none_or(|permitted| !permitted.contains(axiom)))
+            .collect()
+    };
+    let unpermitted = disallowed(&lemma["axioms"]);
+    if !unpermitted.is_empty() {
+        problems
+            .push(json!({"kind": "restates-axioms", "head": name, "declarations": unpermitted}));
+    }
+    summary["axioms"] = lemma["axioms"].clone();
+
+    let conclusion_id = text(field(argument, "conclusion_statement_id"));
+    let Some(conclusion) = declaration(&conclusion_id) else {
+        problems.push(json!({"kind": "restates-conclusion-undeclared",
+                             "statement_id": conclusion_id}));
+        return (problems, summary);
+    };
+    let unrestated: BTreeSet<String> = strings(marker.get("unrestated_premise_ids"))
+        .into_iter()
+        .collect();
+    let premises: Vec<String> = strings(argument.get("premise_statement_ids"));
+    let binders: Vec<&Value> = lemma["binders"].as_array().into_iter().flatten().collect();
+    let prop_binders: Vec<&Value> = binders
+        .iter()
+        .copied()
+        .filter(|binder| binder["prop"] == true)
+        .collect();
+    let binder_heads: BTreeSet<String> = prop_binders
+        .iter()
+        .filter_map(|binder| binder["head"].as_str().map(str::to_owned))
+        .collect();
+    // The shape: (mode, restated side, name of the conclusion binder).
+    let iff_side = lemma["sides"].as_array().and_then(|sides| {
+        let index = sides
+            .iter()
+            .position(|side| side["head"].as_str() == Some(conclusion.as_str()))?;
+        sides.get(1 - index)
+    });
+    let conclusion_binder = prop_binders
+        .iter()
+        .find(|binder| binder["head"].as_str() == Some(conclusion.as_str()))
+        .map(|binder| text(&binder["name"]));
+    let (mode, restated, conclusion_binder) = if lemma["body_head"] == "Iff" {
+        match iff_side {
+            Some(side) => ("iff", side, None),
+            None => {
+                problems.push(json!({"kind": "restates-shape", "head": name,
+                    "detail": "no side of the Iff has the conclusion's declaration as head",
+                    "lean_declaration": conclusion}));
+                return (problems, summary);
+            }
+        }
+    } else if conclusion_binder.is_some() {
+        ("converse", &lemma["side"], conclusion_binder)
+    } else {
+        problems.push(json!({"kind": "restates-shape", "head": name,
+            "detail": "neither an Iff with the conclusion on one side nor an implication from the conclusion",
+            "lean_declaration": conclusion}));
+        return (problems, summary);
+    };
+    summary["shape"] = json!(mode);
+    if restated["exists_used"].as_u64().unwrap_or(0) == 0 {
+        problems.push(json!({"kind": "restates-no-free-parameter", "head": name,
+            "type": restated["type"],
+            "detail": "the restated side opens with no existential binder its matrix uses"}));
+    }
+    let mentioned: BTreeSet<String> = strings(restated["matrix"].get("used_constants"))
+        .into_iter()
+        .collect();
+    let mut held = Vec::new();
+    for premise in &premises {
+        let Some(premise_declaration) = declaration(premise) else {
+            if !unrestated.contains(premise) {
+                problems.push(json!({"kind": "restates-premise-undeclared",
+                                     "statement_id": premise}));
+            }
+            continue;
+        };
+        let in_matrix = mentioned.contains(&premise_declaration);
+        if unrestated.contains(premise) {
+            if in_matrix {
+                problems.push(json!({"kind": "restates-unrestated-premise-mentioned",
+                    "statement_id": premise, "lean_declaration": premise_declaration}));
+            }
+        } else if binder_heads.contains(&premise_declaration) && !in_matrix {
+            held.push(json!(premise));
+        } else if !in_matrix {
+            problems.push(
+                json!({"kind": "restates-premise-missing", "statement_id": premise,
+                                 "lean_declaration": premise_declaration}),
+            );
+        }
+    }
+    summary["held_premise_ids"] = json!(held);
+    let premise_declarations: BTreeSet<String> = premises
+        .iter()
+        .filter_map(|premise| declaration(premise))
+        .collect();
+    let side_conditions: Vec<&Value> = prop_binders
+        .iter()
+        .copied()
+        .filter(|binder| Some(text(&binder["name"])) != conclusion_binder)
+        .filter(|binder| {
+            !binder["head"]
+                .as_str()
+                .is_some_and(|head| premise_declarations.contains(head))
+        })
+        .collect();
+    let listed: Vec<&Value> = marker
+        .get("side_conditions")
+        .and_then(Value::as_array)
+        .into_iter()
+        .flatten()
+        .collect();
+    let listed_names: BTreeSet<String> = listed
+        .iter()
+        .map(|condition| text(&condition["hypothesis"]))
+        .collect();
+    let mut conditions = Vec::new();
+    for binder in &side_conditions {
+        let hypothesis = text(&binder["name"]);
+        if !listed_names.contains(&hypothesis) {
+            problems.push(
+                json!({"kind": "restates-unlisted-side-condition", "head": name,
+                                 "hypothesis": hypothesis, "type": binder["type"]}),
+            );
+        }
+    }
+    for condition in listed {
+        let hypothesis = text(&condition["hypothesis"]);
+        if !side_conditions
+            .iter()
+            .any(|binder| text(&binder["name"]) == hypothesis)
+        {
+            problems.push(
+                json!({"kind": "restates-unknown-side-condition", "head": name,
+                                 "hypothesis": hypothesis}),
+            );
+            continue;
+        }
+        let mut item = json!({"hypothesis": hypothesis, "discharged_by": Value::Null});
+        if let Some(discharger) = condition.get("discharged_by").and_then(Value::as_str) {
+            item["discharged_by"] = json!(discharger);
+            let described = &lemma["dischargers"][hypothesis.as_str()];
+            if described.is_null() || described.get("error").is_some() {
+                problems.push(
+                    json!({"kind": "restates-discharger", "hypothesis": hypothesis,
+                    "head": discharger,
+                    "detail": described.get("error").cloned().unwrap_or(json!("not described"))}),
+                );
+            } else {
+                if described["matches"] != true {
+                    problems.push(
+                        json!({"kind": "restates-discharger", "hypothesis": hypothesis,
+                        "head": discharger,
+                        "detail": "its conclusion does not unify with the hypothesis"}),
+                    );
+                }
+                let unpermitted = disallowed(&described["axioms"]);
+                if !unpermitted.is_empty() {
+                    problems.push(json!({"kind": "restates-axioms", "hypothesis": hypothesis,
+                        "head": discharger, "declarations": unpermitted}));
+                }
+                item["remaining_hypotheses"] = described["remaining_hypotheses"].clone();
+            }
+        }
+        conditions.push(item);
+    }
+    summary["side_conditions"] = json!(conditions);
+    (problems, summary)
 }
 
 fn summary(entries: &[Value]) -> Value {
@@ -1441,6 +1761,188 @@ pub use crate::sha256::sha256_hex;
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// The exporter description of a restating lemma `(∃ s, P s ∧ Q s) ↔ C`
+    /// with one propositional binder `h` headed by `held`.
+    fn restating_lemma(held: &str, exists_used: u64, matrix: &[&str]) -> Value {
+        json!({
+            "restating_lemma": "Ns.iff", "kind": "theorem", "axioms": [],
+            "binders": [
+                {"name": "x", "prop": false, "head": null, "core_head": null},
+                {"name": "h", "prop": true, "head": held, "core_head": held, "type": "H x"},
+            ],
+            "dischargers": {"h": {"declaration": "Ns.discharge", "axioms": ["propext"],
+                                  "matches": true, "remaining_hypotheses": ["K x"]}},
+            "body_head": "Iff",
+            "sides": [
+                {"head": "Exists", "exists_binders": 1, "exists_used": exists_used,
+                 "matrix": {"head": "And", "used_constants": matrix}, "type": "∃ s, …"},
+                {"head": "Ns.C", "exists_binders": 0, "exists_used": 0,
+                 "matrix": {"head": "Ns.C", "used_constants": ["Ns.C"]}, "type": "C"},
+            ],
+        })
+    }
+
+    fn kinds(problems: &[Value]) -> Vec<&str> {
+        problems.iter().filter_map(|p| p["kind"].as_str()).collect()
+    }
+
+    #[test]
+    fn restating_lemma_shape_is_checked() {
+        let declaration = |id: &str| -> Option<String> {
+            match id {
+                "P" => Some("Ns.P".into()),
+                "Q" => Some("Ns.Q".into()),
+                "R" => Some("Ns.R".into()),
+                "C" => Some("Ns.C".into()),
+                _ => None,
+            }
+        };
+        let argument = json!({"premise_statement_ids": ["P", "Q", "R"],
+                              "conclusion_statement_id": "C"});
+        let argument = argument.as_object().unwrap();
+        let marker = |extra: Value| {
+            let mut marker = json!({"lemma": "Ns.iff", "note": "n"});
+            for (key, value) in extra.as_object().unwrap() {
+                marker[key] = value.clone();
+            }
+            marker.as_object().cloned().unwrap()
+        };
+        let permitted: BTreeSet<String> = ["propext".to_owned()].into();
+        // P and Q restated, R held fixed as the binder h: bound.
+        let lemma = restating_lemma("Ns.R", 1, &["And", "Ns.P", "Ns.Q"]);
+        let (problems, summary) = restating_problems(
+            &marker(json!({})),
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(problems, Vec::<Value>::new());
+        assert_eq!(summary["shape"], "iff");
+        assert_eq!(summary["held_premise_ids"], json!(["R"]));
+        // h headed by a non-premise is a side condition: unlisted, then listed
+        // with a discharger whose axiom the empty policy forbids.
+        let lemma = restating_lemma("Ns.H", 1, &["And", "Ns.P", "Ns.Q"]);
+        let (problems, _) = restating_problems(
+            &marker(json!({"unrestated_premise_ids": ["R"]})),
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(kinds(&problems), ["restates-unlisted-side-condition"]);
+        let listed = marker(json!({"unrestated_premise_ids": ["R"],
+            "side_conditions": [{"hypothesis": "h", "note": "n", "discharged_by": "Ns.discharge"}]}));
+        let (problems, summary) = restating_problems(
+            &listed,
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(problems, Vec::<Value>::new());
+        assert_eq!(
+            summary["side_conditions"][0]["remaining_hypotheses"],
+            json!(["K x"])
+        );
+        let (problems, _) = restating_problems(
+            &listed,
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&BTreeSet::new()),
+        );
+        assert_eq!(kinds(&problems), ["restates-axioms"]);
+        // A missing premise, no used existential, an unrestated premise the
+        // lemma mentions, and a lemma the exporter did not describe.
+        let lemma = restating_lemma("Ns.R", 0, &["And", "Ns.P"]);
+        let (problems, _) = restating_problems(
+            &marker(json!({})),
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(
+            kinds(&problems),
+            ["restates-no-free-parameter", "restates-premise-missing"]
+        );
+        let lemma = restating_lemma("Ns.H", 1, &["And", "Ns.P", "Ns.Q", "Ns.R"]);
+        let (problems, _) = restating_problems(
+            &listed,
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(kinds(&problems), ["restates-unrestated-premise-mentioned"]);
+        let (problems, _) =
+            restating_problems(&marker(json!({})), argument, &declaration, None, None);
+        assert_eq!(kinds(&problems), ["restates-lemma-not-described"]);
+        // No side of the Iff is the conclusion.
+        let mut lemma = restating_lemma("Ns.R", 1, &["And", "Ns.P", "Ns.Q"]);
+        lemma["sides"][1]["head"] = json!("Ns.Other");
+        let (problems, _) = restating_problems(
+            &marker(json!({})),
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(kinds(&problems), ["restates-shape"]);
+        // The converse shape: the conclusion as a hypothesis, ∃ … as body.
+        let lemma = json!({
+            "restating_lemma": "Ns.conv", "kind": "theorem", "axioms": [],
+            "binders": [{"name": "c", "prop": true, "head": "Ns.C", "core_head": "Ns.C",
+                         "type": "C"}],
+            "dischargers": {}, "body_head": "Exists",
+            "side": {"head": "Exists", "exists_binders": 1, "exists_used": 1,
+                     "matrix": {"head": "And", "used_constants": ["Ns.P", "Ns.Q", "Ns.R"]},
+                     "type": "∃ s, …"},
+        });
+        let (problems, summary) = restating_problems(
+            &marker(json!({})),
+            argument,
+            &declaration,
+            Some(&lemma),
+            Some(&permitted),
+        );
+        assert_eq!(problems, Vec::<Value>::new());
+        assert_eq!(summary["shape"], "converse");
+    }
+
+    #[test]
+    fn restating_input_lists_lemmas_and_dischargers() {
+        let request = |id: &str, marker: Option<Value>| {
+            let mut record = json!({"id": id, "solution_module": "M", "theorem": "t"});
+            if let Some(marker) = marker {
+                record[RESTATES] = marker;
+            }
+            Request {
+                record: record.as_object().cloned().unwrap(),
+                argument: Obj::new(),
+                schema: false,
+            }
+        };
+        let requests = [
+            request(
+                "B",
+                Some(json!({"lemma": "Ns.b", "note": "n", "side_conditions": [
+                    {"hypothesis": "h", "note": "n", "discharged_by": "Ns.d"},
+                    {"hypothesis": "k", "note": "n"}]})),
+            ),
+            request("A", Some(json!({"lemma": "Ns.a", "note": "n"}))),
+            request("C", None),
+        ];
+        assert_eq!(
+            restating_input(&requests),
+            vec![
+                json!({"lemma": "Ns.a", "dischargers": []}),
+                json!({"lemma": "Ns.b", "dischargers": [["h", "Ns.d"]]}),
+            ]
+        );
+    }
 
     #[test]
     fn absolute_root_survives_a_child_working_directory() {

@@ -14,7 +14,8 @@
 //! unplaced. [`gate`] (`truth orphans --base REV --gate`) fails on results
 //! new or changed since a base revision that are unplaced; pre-existing
 //! unplaced results are backlog. A reaching result also gets a provenance
-//! ([`provenance`]): substantive, itself a transcription, closed or open
+//! ([`provenance`]): substantive, itself a transcription, restating its
+//! conclusion (#2190), closed or open
 //! transcription route, loop-back, bare-premise strength registration,
 //! unverified route or refutation support. The gate
 //! reports it and warns on new undeclared heuristic transcriptions; neither
@@ -29,6 +30,7 @@ use crate::{
     Corpus,
     frontier::{EdgeKind, RootEdge},
     thickness::{self, FrontierInputs, Records},
+    transcription::RESTATES_CONCLUSION,
 };
 use serde_json::{Map, Value, json};
 use std::{
@@ -271,10 +273,14 @@ pub const SUBSTANTIVE: &str = "substantive";
 /// order they are tried, with their report titles. Navigation, not warrant:
 /// none of them closes or supports anything; they say what the placement
 /// rests on (docs/corpus-model.md, "Result placement").
-pub const PROVENANCES: [(&str, &str); 8] = [
+pub const PROVENANCES: [(&str, &str); 9] = [
     ("loop_back", "loop-back"),
     ("registration_bare", "bare-premise strength registration"),
     ("transcription_self", "itself a transcription"),
+    (
+        RESTATES_CONCLUSION,
+        "restates its conclusion over free parameters (#2190)",
+    ),
     (
         "transcription_closed",
         "only through transcriptions with closed premises (rule (d))",
@@ -397,7 +403,10 @@ impl<'a> TranscriptionSteps<'a> {
 /// 2. `registration_bare`: the argument backs a strength registration and
 ///    every premise is bare (no stating claim, no support) and unclosed.
 /// 3. `transcription_self`: the result is itself a transcription (invariant
-///    16); it contributes at most rule (d) closure.
+///    16); it contributes at most rule (d) closure. `restates_conclusion`
+///    takes its place when the result instead declares a checked lemma
+///    showing that its premises restate its conclusion over free parameters
+///    (#2190): connected only, at most rule (d) closure.
 /// 4. `substantive`: its conclusion reaches the root through verified
 ///    non-transcription arguments only, avoiding its premises.
 /// 5. `transcription_closed`: every such path enters a transcription, and
@@ -409,7 +418,7 @@ impl<'a> TranscriptionSteps<'a> {
 ///    a verified result (admitted by the walk where the conclusion is not
 ///    routed).
 ///
-/// `refutation_support` (or `transcription_self`) applies when the
+/// `refutation_support` (or `transcription_self`, `restates_conclusion`) applies when the
 /// conclusion is not on a root route but supports a verified refutation of a
 /// recorded rival of a root-path statement.
 ///
@@ -423,8 +432,16 @@ fn provenance(
     frontier: &FrontierInputs,
     steps: &TranscriptionSteps,
     argument: &Record,
-    self_transcription: bool,
+    self_kind: Option<&str>,
 ) -> Value {
+    // The category a closure-exempt result takes itself (step 3).
+    let self_category = self_kind.map(|kind| {
+        if kind == RESTATES_CONCLUSION {
+            RESTATES_CONCLUSION
+        } else {
+            "transcription_self"
+        }
+    });
     let conclusion = text(argument, "conclusion_statement_id");
     let premises: BTreeSet<&str> = list(argument, "premise_statement_ids")
         .into_iter()
@@ -455,11 +472,7 @@ fn provenance(
         )
     };
     if !frontier.reaching_root.contains(conclusion) {
-        let category = if self_transcription {
-            "transcription_self"
-        } else {
-            "refutation_support"
-        };
+        let category = self_category.unwrap_or("refutation_support");
         return json!({"category": category, "route": Value::Null});
     }
     let any = |_: &RootEdge| true;
@@ -508,8 +521,8 @@ fn provenance(
         .unwrap_or(("unverified_route", free));
     let (category, path) = if bare_registration {
         ("registration_bare", best.1)
-    } else if self_transcription {
-        ("transcription_self", best.1)
+    } else if let Some(category) = self_category {
+        (category, best.1)
     } else {
         best
     };
@@ -697,7 +710,7 @@ pub fn place<'a>(records: &Records<'a>, frontier: &FrontierInputs) -> Vec<Placem
         let provenance = upward
             .as_ref()
             .filter(|_| state == REACHING)
-            .map(|upward| provenance(upward, frontier, &steps, argument, transcription.is_some()));
+            .map(|upward| provenance(upward, frontier, &steps, argument, transcription.as_deref()));
         placements.push(Placement {
             result,
             argument,
@@ -992,8 +1005,8 @@ pub fn format_gate(report: &Value) -> String {
         lines.push(
             "Judged results that reach the root without a substantive derivation (placed, \
              not failed). A transcription_closed route carries rule (d) closure to the \
-             root but no independent warrant, and transcription_self contributes at most \
-             rule (d) closure; loop-back, bare-registration, open-transcription and \
+             root but no independent warrant, and transcription_self and restates_conclusion \
+             contribute at most rule (d) closure; loop-back, bare-registration, open-transcription and \
              unverified routes add no support to the root. Report each by its category:"
                 .into(),
         );
@@ -3041,5 +3054,65 @@ mod tests {
         // A second route for D through a sound argument makes DER substantive.
         argument("DUP", &["D"], "ROOT", None);
         assert_eq!(provenances(root)["DER"]["category"], SUBSTANTIVE);
+    }
+    /// #2190: a result that declares `restates_conclusion` is connected only
+    /// (its own provenance key), and a route through it is a transcription
+    /// route: closed only when all its premises are closed.
+    #[test]
+    fn restating_results_are_connected_only() {
+        use std::sync::atomic::{AtomicU32, Ordering};
+        static NEXT: AtomicU32 = AtomicU32::new(0);
+        let dir = Dir(std::env::temp_dir().join(format!(
+            "truth-orphans-restates-{}-{}",
+            std::process::id(),
+            NEXT.fetch_add(1, Ordering::Relaxed)
+        )));
+        let root = &dir.0;
+        for id in ["ROOT", "A", "P", "Q", "H"] {
+            write(
+                root,
+                &format!("corpus/statements/{id}.json"),
+                &json!({"id": id, "paraphrase": format!("{id} holds.")}).to_string(),
+            );
+        }
+        let argument = |id: &str, premises: &[&str], conclusion: &str, restates: bool| {
+            write(
+                root,
+                &format!("corpus/arguments/{id}.json"),
+                &json!({"id": id, "premise_statement_ids": premises, "inference_ids": ["I"],
+                        "conclusion_statement_id": conclusion, "meaning": "m"})
+                .to_string(),
+            );
+            let mut result = json!({"id": id, "argument_id": id, "challenge_module": "c",
+                "solution_module": format!("TruthCore.Results.Case.{id}.Solution"),
+                "theorem": "t", "comparator_config": "c", "status": "solution-present"});
+            if restates {
+                result["restates_conclusion"] = json!({"lemma": "Ns.iff", "note": "n"});
+            }
+            write(
+                root,
+                &format!("corpus/results/{id}.json"),
+                &result.to_string(),
+            );
+        };
+        argument("TOP", &["A"], "ROOT", false);
+        // A reaches the root; RST derives it from P and Q, which restate it.
+        argument("RST", &["P", "Q"], "A", true);
+        // P is proved from H; Q stays open, so RST carries no closure.
+        argument("DP", &["H"], "P", false);
+        let found = provenances(root);
+        let category = |id: &str| found[id]["category"].as_str().unwrap().to_owned();
+        assert_eq!(category("TOP"), SUBSTANTIVE);
+        assert_eq!(category("RST"), RESTATES_CONCLUSION);
+        assert_eq!(category("DP"), "transcription_open");
+        assert_eq!(
+            found["DP"]["transcription_arguments"],
+            json!([{"argument_id": "RST", "declared": true, "premises_closed": false}])
+        );
+        // With Q proved as well, rule (d) carries closure through RST.
+        argument("DQ", &["H"], "Q", false);
+        let found = provenances(root);
+        assert_eq!(found["DP"]["category"], "transcription_closed");
+        assert_eq!(found["RST"]["category"], RESTATES_CONCLUSION);
     }
 }

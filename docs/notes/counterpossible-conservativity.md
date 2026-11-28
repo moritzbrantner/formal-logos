@@ -229,11 +229,12 @@ constraint unless a selector is fixed independently, for example the
 closest-world or intervention selector, and the omission model above shows the
 closest-world selector can fail coverage. The two results therefore add no
 warrant for `000e1f65` beyond the accessibility reading and `11dc5069`.
-The frontier nevertheless counts them as verified non-transcription
-derivations, so `000e1f65` is computed as proved from the three open
-premises, and rule (d) closure above it can pass through them. That computed
-status records no further warrant; no existing record field marks a
-re-presentation so that the frontier would not count it.
+Both results now carry the `restates_conclusion` marker (#2190), naming these
+lemmas with `11dc5069` as the unrestated premise. The frontier therefore
+treats them like transcriptions for closure: `000e1f65` closes through them
+only by rule (d), when all three premises are closed. With the premises open,
+`000e1f65` is an open, supported premise rather than proved, and neither result
+is a substantive support alternative.
 
 Which possibility the frame accessibility represents is a separate question.
 Disambiguation `d3808588` separates CAN_BE_WITHOUT_1, the unindexed accessible

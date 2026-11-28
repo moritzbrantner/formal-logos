@@ -15,6 +15,21 @@ use std::{
     path::Path,
 };
 
+/// The closure kind of a result that declares `restates_conclusion`
+/// (#2190): a verified lemma shows that its premise bundle, with free
+/// parameters existentially closed, restates its conclusion. The frontier
+/// lists it among `transcription_results` with this kind, so it closes its
+/// conclusion only by rule (d) and is never a substantive support option.
+pub const RESTATES_CONCLUSION: &str = "restates_conclusion";
+
+/// The restating lemma a result record declares, if any (#2190).
+pub fn restating_lemma(result: &serde_json::Map<String, serde_json::Value>) -> Option<&str> {
+    result
+        .get(RESTATES_CONCLUSION)
+        .and_then(|marker| marker.get("lemma"))
+        .and_then(serde_json::Value::as_str)
+}
+
 /// Python `SHORT_PROOF_STEPS`.
 const SHORT_PROOF_STEPS: usize = 2;
 

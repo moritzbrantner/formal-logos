@@ -750,6 +750,154 @@ fn validate_result_transcription(label: &str, result: &Obj) -> Res<()> {
     Ok(())
 }
 
+/// A fully qualified Lean name: dot-separated, non-empty components without
+/// whitespace (Lean's `«…»` quoting is not used in this corpus).
+fn qualified_lean_name(name: &str) -> bool {
+    name.contains('.')
+        && name
+            .split('.')
+            .all(|part| !part.is_empty() && !part.chars().any(char::is_whitespace))
+}
+
+/// The `restates_conclusion` marker (#2190): an optional object naming the
+/// verified lemma that shows the result's premise bundle, with its free
+/// parameters existentially closed, restates its conclusion. `check`
+/// validates the record shape only; `bind-check` reads the lemma's Lean type
+/// (docs/corpus-model.md, "Results that restate their conclusion").
+///
+/// Fields: `lemma` (fully qualified Lean declaration) and `note` (non-empty
+/// prose), both required; optional `unrestated_premise_ids` (premises of the
+/// argument the lemma does not mention, each explained by the note) and
+/// `side_conditions` (each `{hypothesis, note, discharged_by?}`: a
+/// propositional hypothesis of the lemma that is neither a premise nor the
+/// conclusion). A declared `transcription` excludes the marker: the result
+/// already closes by rule (d) only.
+pub(crate) fn validate_restates_conclusion(result: &Obj, argument: Option<&Obj>) -> Res<()> {
+    let Some(marker) = result.get("restates_conclusion") else {
+        return Ok(());
+    };
+    let Some(marker) = marker.as_object() else {
+        return Err("restates_conclusion must be an object".into());
+    };
+    const FIELDS: &[&str] = &["lemma", "note", "unrestated_premise_ids", "side_conditions"];
+    if let Some(unknown) = marker.keys().find(|key| !FIELDS.contains(&key.as_str())) {
+        return Err(format!(
+            "restates_conclusion has unknown field {}; allowed: {}",
+            quote(unknown),
+            FIELDS.join(", ")
+        ));
+    }
+    if truthy(result.get("transcription")) {
+        return Err(
+            "restates_conclusion and transcription exclude each other: a transcription already closes by rule (d) only"
+                .into(),
+        );
+    }
+    match marker.get("lemma").and_then(Value::as_str) {
+        Some(lemma) if qualified_lean_name(lemma) => {}
+        _ => {
+            return Err(
+                "restates_conclusion.lemma must name a fully qualified Lean declaration".into(),
+            );
+        }
+    }
+    if !marker
+        .get("note")
+        .and_then(Value::as_str)
+        .is_some_and(|note| !note.trim().is_empty())
+    {
+        return Err("restates_conclusion.note must be a non-empty string".into());
+    }
+    let premises: Vec<&str> = argument
+        .map(|argument| strings(argument, "premise_statement_ids"))
+        .unwrap_or_default();
+    if premises.is_empty() {
+        return Err(
+            "restates_conclusion needs an argument with premises: there is no premise bundle to restate"
+                .into(),
+        );
+    }
+    if let Some(unrestated) = marker.get("unrestated_premise_ids") {
+        let ids: Option<Vec<&str>> = unrestated
+            .as_array()
+            .and_then(|items| items.iter().map(Value::as_str).collect());
+        let Some(ids) = ids.filter(|ids| !ids.is_empty()) else {
+            return Err(
+                "restates_conclusion.unrestated_premise_ids must be a non-empty list of statement ids"
+                    .into(),
+            );
+        };
+        let distinct: BTreeSet<&str> = ids.iter().copied().collect();
+        if distinct.len() != ids.len() {
+            return Err("restates_conclusion.unrestated_premise_ids repeats an id".into());
+        }
+        if let Some(stray) = ids.iter().find(|id| !premises.contains(id)) {
+            return Err(format!(
+                "restates_conclusion.unrestated_premise_ids: {stray} is not a premise of the argument"
+            ));
+        }
+        if distinct.len() >= premises.iter().collect::<BTreeSet<_>>().len() {
+            return Err(
+                "restates_conclusion.unrestated_premise_ids lists every premise: the lemma must restate at least one"
+                    .into(),
+            );
+        }
+    }
+    if let Some(conditions) = marker.get("side_conditions") {
+        let Some(items) = conditions.as_array().filter(|items| !items.is_empty()) else {
+            return Err("restates_conclusion.side_conditions must be a non-empty list".into());
+        };
+        let mut seen = BTreeSet::new();
+        for item in items {
+            let Some(item) = item.as_object() else {
+                return Err("restates_conclusion.side_conditions entries must be objects".into());
+            };
+            const CONDITION: &[&str] = &["hypothesis", "note", "discharged_by"];
+            if let Some(unknown) = item.keys().find(|key| !CONDITION.contains(&key.as_str())) {
+                return Err(format!(
+                    "restates_conclusion.side_conditions entry has unknown field {}; allowed: {}",
+                    quote(unknown),
+                    CONDITION.join(", ")
+                ));
+            }
+            let Some(hypothesis) = item
+                .get("hypothesis")
+                .and_then(Value::as_str)
+                .filter(|name| !name.is_empty())
+            else {
+                return Err(
+                    "restates_conclusion.side_conditions entry needs a hypothesis name".into(),
+                );
+            };
+            if !seen.insert(hypothesis) {
+                return Err(format!(
+                    "restates_conclusion.side_conditions repeats hypothesis {}",
+                    quote(hypothesis)
+                ));
+            }
+            if !item
+                .get("note")
+                .and_then(Value::as_str)
+                .is_some_and(|note| !note.trim().is_empty())
+            {
+                return Err(format!(
+                    "restates_conclusion.side_conditions {}: note must be a non-empty string",
+                    quote(hypothesis)
+                ));
+            }
+            if let Some(discharger) = item.get("discharged_by")
+                && !discharger.as_str().is_some_and(qualified_lean_name)
+            {
+                return Err(format!(
+                    "restates_conclusion.side_conditions {}: discharged_by must name a fully qualified Lean declaration",
+                    quote(hypothesis)
+                ));
+            }
+        }
+    }
+    Ok(())
+}
+
 // ---------------------------------------------------------------------------
 // Record rules
 
@@ -3118,6 +3266,24 @@ fn validate(
         let (path, fields) = (result.path.as_str(), &result.fields);
         validate_case_split(fields, &statement_ids, &result_ids)
             .map_err(|error| format!("{path}: {error}"))?;
+        let argument = argument_index
+            .get(text(fields, "argument_id"))
+            .map(|index| &arguments[*index].fields);
+        validate_restates_conclusion(fields, argument)
+            .map_err(|error| format!("{path}: {error}"))?;
+        if let Some(marker) = get(fields, "restates_conclusion") {
+            lean_tail_exists(path, marker.get("lemma"), &lean)?;
+            for condition in marker
+                .get("side_conditions")
+                .and_then(Value::as_array)
+                .into_iter()
+                .flatten()
+            {
+                if let Some(discharger) = condition.get("discharged_by") {
+                    lean_tail_exists(path, Some(discharger), &lean)?;
+                }
+            }
+        }
         for case in get(fields, "case_split")
             .and_then(|split| split.get("cases"))
             .and_then(Value::as_array)
@@ -4396,6 +4562,81 @@ fn sense_mixing_warnings(loaded: &Loaded) -> Vec<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn restates_conclusion_marker_is_validated() {
+        let obj = |value: Value| value.as_object().cloned().unwrap();
+        let argument = obj(serde_json::json!({
+            "premise_statement_ids": ["P", "Q"], "conclusion_statement_id": "C"}));
+        let result = |marker: Value| obj(serde_json::json!({"restates_conclusion": marker}));
+        let check = |marker: Value| validate_restates_conclusion(&result(marker), Some(&argument));
+        // Absent: nothing to check.
+        assert!(validate_restates_conclusion(&Obj::new(), Some(&argument)).is_ok());
+        assert!(check(serde_json::json!({"lemma": "Ns.iff", "note": "free selector"})).is_ok());
+        assert!(
+            check(serde_json::json!({"lemma": "Ns.iff", "note": "n",
+                "unrestated_premise_ids": ["Q"],
+                "side_conditions": [{"hypothesis": "unique", "note": "n",
+                                     "discharged_by": "Ns.unique"}]}))
+            .is_ok()
+        );
+        for (marker, expected) in [
+            (serde_json::json!("Ns.iff"), "must be an object"),
+            (serde_json::json!({"note": "n"}), "fully qualified"),
+            (
+                serde_json::json!({"lemma": "iff", "note": "n"}),
+                "fully qualified",
+            ),
+            (serde_json::json!({"lemma": "Ns.iff", "note": " "}), "note"),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n", "extra": 1}),
+                "unknown field",
+            ),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n", "unrestated_premise_ids": ["X"]}),
+                "not a premise",
+            ),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n",
+                                   "unrestated_premise_ids": ["P", "Q"]}),
+                "lists every premise",
+            ),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n", "side_conditions": []}),
+                "non-empty list",
+            ),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n",
+                                   "side_conditions": [{"hypothesis": "h"}]}),
+                "note must be",
+            ),
+            (
+                serde_json::json!({"lemma": "Ns.iff", "note": "n",
+                    "side_conditions": [{"hypothesis": "h", "note": "n", "discharged_by": "x"}]}),
+                "discharged_by",
+            ),
+        ] {
+            let error = check(marker.clone()).unwrap_err();
+            assert!(error.contains(expected), "{marker}: {error}");
+        }
+        // A declared transcription excludes the marker.
+        let mut both = result(serde_json::json!({"lemma": "Ns.iff", "note": "n"}));
+        both.insert("transcription".into(), serde_json::json!("assembly"));
+        assert!(
+            validate_restates_conclusion(&both, Some(&argument))
+                .unwrap_err()
+                .contains("exclude each other")
+        );
+        // A premise-free argument has no bundle to restate.
+        let empty = obj(serde_json::json!({"premise_statement_ids": []}));
+        assert!(
+            validate_restates_conclusion(
+                &result(serde_json::json!({"lemma": "Ns.iff", "note": "n"})),
+                Some(&empty)
+            )
+            .is_err()
+        );
+    }
 
     struct TestDirectory(PathBuf);
 

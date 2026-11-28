@@ -399,6 +399,14 @@ def build_records(spec: dict, write: bool) -> list[str]:
                 for cell in a["research_comparisons"]]
         if "transcription" in a:
             result["transcription"] = a["transcription"]
+        if "restates_conclusion" in a:
+            # #2190: the checked marker of a result whose premises restate its
+            # conclusion over free parameters (fully qualified Lean names).
+            marker = dict(a["restates_conclusion"])
+            if "unrestated_premise_ids" in marker:
+                marker["unrestated_premise_ids"] = [
+                    handles.ref("statement", sid) for sid in marker["unrestated_premise_ids"]]
+            result["restates_conclusion"] = marker
         dump(record_path(existing["inferences"], "inferences", iid), inference, write, planned)
         dump(record_path(existing["arguments"], "arguments", aid), argument, write, planned)
         dump(record_path(existing["results"], "results", rid), result, write, planned)

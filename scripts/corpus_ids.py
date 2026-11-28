@@ -162,6 +162,7 @@ REFERENCE_FIELDS: dict[str, tuple[tuple[tuple[str, ...], Any], ...]] = {
         (("case_split", "cases", "[]", "statement_id"), "statement"),
         (("case_split", "survival_result_id"), "result"),
         (("case_split", "target_statement_id"), "statement"),
+        (("restates_conclusion", "unrestated_premise_ids", "[]"), "statement"),
     ),
     "definition": ((("claim_ids", "[]"), "claim"),),
     "disambiguation": (

@@ -7,5 +7,16 @@
   "theorem": "TruthCore.Results.Causality.GivingChoice.root_withholding_of_cells",
   "comparator_config": "results/5ce72737-3acd-4b56-994f-9292d96e55b5/comparator.json",
   "status": "solution-present",
-  "description": "Re-presentation of premise (a) in the choice register, not independent support for it (#2103). For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell (WITHHOLD_1) by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being (WITHHOLD_2). The proof uses the cell only at its representative, and 46a468b2 is the only passage from sense 1 to sense 2; no agentive content of sense 1 is carried into fbd0a6d3. With the branching frame, moment and world map unconstrained and at most one actual root (which a common actual root secures: uniqueRootOfCommonRoot), some representation satisfies both premises exactly when fbd0a6d3 holds (Lean cellsRepresentationIff, discrete partition). The argument adds warrant for fbd0a6d3 only if an independently fixed decision partition and world map are supplied. The frontier counts it as proving fbd0a6d3 from open premises; that records no further warrant. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion."
+  "description": "Re-presentation of premise (a) in the choice register, not independent support for it (#2103). For the same actual root and grounded actual concretum, the representative belongs to its own withholding cell (WITHHOLD_1) by reflexivity. The map sends it to an accessible world where the root exists and where it does not give that concretum being (WITHHOLD_2). The proof uses the cell only at its representative, and 46a468b2 is the only passage from sense 1 to sense 2; no agentive content of sense 1 is carried into fbd0a6d3. With the branching frame, moment and world map unconstrained and at most one actual root (which a common actual root secures: uniqueRootOfCommonRoot), some representation satisfies both premises exactly when fbd0a6d3 holds (Lean cellsRepresentationIff, discrete partition). The argument adds warrant for fbd0a6d3 only if an independently fixed decision partition and world map are supplied. Its restates_conclusion marker (#2190) makes the frontier close fbd0a6d3 through it only by rule (d), when every premise is closed. Neither uniformity across effects nor a fixed setup is a premise of this per-effect conclusion.",
+  "restates_conclusion": {
+    "lemma": "TruthCore.Results.Causality.GivingChoice.cellsRepresentationIff",
+    "note": "With the branching frame, moment and history-to-world map existentially closed, admissibility 46a468b2 and the withholding cells 0dd78706 hold exactly when fbd0a6d3 holds (discrete partition), provided the profile has at most one actual root at the world. Both premises are restated; the equivalence is conditional on that uniqueness side condition.",
+    "side_conditions": [
+      {
+        "hypothesis": "unique",
+        "discharged_by": "TruthCore.Results.Causality.GivingChoice.uniqueRootOfCommonRoot",
+        "note": "At most one actual root at the world. uniqueRootOfCommonRoot derives it from a common actual root (ActualCommonRootAt), which is not a premise of this argument: off the common-root route the premise pair may be strictly stronger than fbd0a6d3."
+      }
+    ]
+  }
 }

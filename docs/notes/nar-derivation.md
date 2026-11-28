@@ -689,9 +689,10 @@ discrete partition, and the witness as mapped world; every cell is then a
 single history. The whole-cell clause, which distinguishes withholding from
 one history of nonproduction, is used only at the representative. So
 `5ce72737` re-presents (a) in the choice register. It adds warrant for (a)
-only if an independently fixed decision partition and map are supplied, and
-the frontier's computed closure of `fbd0a6d3` through it records no further
-warrant. The same holds wherever `0dd78706` and `46a468b2` are used together
+only if an independently fixed decision partition and map are supplied. Its
+`restates_conclusion` marker (#2190) names `cellsRepresentationIff`, with the
+unique-root hypothesis as a side condition, so the frontier closes `fbd0a6d3`
+through it only by rule (d), when both premises are closed. The same holds wherever `0dd78706` and `46a468b2` are used together
 with a free frame and map, as in `fccc4968`. Disambiguation `419a65c2`
 separates the two uses of "withhold": WITHHOLD_1, control over a whole choice
 cell (`0dd78706`), and WITHHOLD_2, an accessible world where the root exists

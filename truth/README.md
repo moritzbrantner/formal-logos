@@ -340,6 +340,16 @@ and model checks. Stdout is Python's byte for byte, the sorted indented
 stale pin or sense alias; corpus errors exit 2 as `corpus error: …` (a JSON
 error object under `--json`).
 
+A result that declares `restates_conclusion` (#2190) also has its lemma
+checked: the input gains a `restating` list, the exporter describes each lemma
+(axioms, binders, `Iff` sides or body, `∃` binders and mentioned constants)
+and each named side-condition discharger (whether its conclusion unifies with
+the hypothesis), and the result mismatches on a `restates-…` problem. The
+entry's `restates_conclusion` field reports the shape (`iff` or `converse`),
+axioms, held premises and side conditions. What this does and does not
+establish is listed in docs/corpus-model.md, "Results that restate their
+conclusion".
+
 CI's corpus job and the worker contract run it; `corpus.py bind-check` was
 retired in #954 R2. The frozen goldens `truth/tests/golden/bind_check/` (recorded by the retired `scripts/truth_parity/bind_check.py`) compare both from
 one recorded exporter output on the `check` fixture (scoped success, stale
@@ -1181,7 +1191,7 @@ result and either concludes a root-path statement or is itself a verified
 refutation counted as connected above; an unverified argument record places
 nothing. `--json` gives `state_counts` over all
 verified results, `transcription_state_counts` for the transcriptions among
-them, per group `placed_count`, `planned_count`, `unplaced_count` and
+them (results that restate their conclusion included, #2190), per group `placed_count`, `planned_count`, `unplaced_count` and
 `state_counts`, and per result its `state` and `placed_by` (the relation or
 plan target). The text lists, per group, only the unplaced conclusions and
 omits groups without one; `--all` lists every disconnected result with its

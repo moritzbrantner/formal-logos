@@ -352,6 +352,13 @@ impl<'a> Frontier<'a> {
         for result in &records.results {
             if let Some(declared) = result.get("transcription").filter(|v| truthy(Some(v))) {
                 kinds.insert(text(result, "id"), (declared.clone(), true));
+            } else if transcription::restating_lemma(result).is_some() {
+                // A declared restatement (#2190) closes like a transcription:
+                // by rule (d) only, never as substantive support.
+                kinds.insert(
+                    text(result, "id"),
+                    (json!(transcription::RESTATES_CONCLUSION), true),
+                );
             }
         }
         let transcription_results: HashSet<&str> = kinds.keys().copied().collect();
@@ -622,7 +629,7 @@ impl<'a> Frontier<'a> {
                     };
                     let argument_id = text(argument, "id");
                     if self.transcription_results.contains(result_id) {
-                        reasons.push(format!("{result_id} is a transcription"));
+                        reasons.push(self.not_substantive(result_id));
                     } else if !self
                         .refuting_arguments
                         .get(denial_id)
@@ -1524,6 +1531,17 @@ impl<'a> Frontier<'a> {
                 )
             })
             .collect()
+    }
+
+    /// Why a closure-exempt result supplies no substantive proof: it is a
+    /// transcription, or it declares that it restates its conclusion.
+    fn not_substantive(&self, result_id: &str) -> String {
+        match self.kinds.get(result_id) {
+            Some((kind, _)) if kind == transcription::RESTATES_CONCLUSION => {
+                format!("{result_id} restates its conclusion")
+            }
+            _ => format!("{result_id} is a transcription"),
+        }
     }
 
     pub(crate) fn result_transcription(&self, id: &str) -> Option<&Value> {
@@ -2559,7 +2577,7 @@ pub fn format_frontier(report: &Value) -> String {
         }
         if item["transcription_only"] == true {
             lines.push(
-                "  open although proved: every verifying result is a transcription (invariant 16)"
+                "  open although proved: every verifying result is a transcription (invariant 16) or restates its conclusion (#2190)"
                     .into(),
             );
         }
@@ -2768,7 +2786,9 @@ pub fn format_frontier(report: &Value) -> String {
     for flag in &flags {
         let mut notes = vec![format!("{} steps", flag["proof_steps"])];
         let kind = &report["transcription_results"][s(&flag["result_id"])];
-        if kind["declared"] == true {
+        if kind["kind"] == transcription::RESTATES_CONCLUSION {
+            notes.push("declared: restates its conclusion (#2190)".into());
+        } else if kind["declared"] == true {
             notes.push(format!(
                 "declared transcription: {}",
                 py_str(Some(&kind["kind"]))
@@ -4118,6 +4138,62 @@ mod tests {
                 "result_ids": ["RES-A", "RES-A-DUP"],
             }])
         );
+    }
+
+    /// #2190: a result that declares `restates_conclusion` closes its
+    /// conclusion like a transcription, by rule (d) only, and is never a
+    /// substantive support alternative.
+    #[test]
+    fn restating_results_close_only_by_rule_d() {
+        let marker = json!({"lemma": "Ns.restates", "note": "free selector"});
+        let mut fixture = fixture();
+        // B <- {F, S}: S is a stated open premise, so B no longer closes.
+        let b = fixture
+            .results
+            .iter_mut()
+            .find(|result| result["id"] == "RES-B")
+            .unwrap();
+        b.insert("restates_conclusion".into(), marker.clone());
+        // U <- {F}: F is closed (retorsion), so rule (d) closes U.
+        fixture.statements.extend(records(vec![json!({"id": "U"})]));
+        fixture
+            .arguments
+            .extend(records(vec![argument("ARG-U", &["F"], "U")]));
+        fixture.results.extend(records(vec![
+            json!({"id": "RES-U", "argument_id": "ARG-U", "restates_conclusion": marker}),
+        ]));
+        let records = fixture.records();
+        let frontier = Frontier::new("ROOT", &records, &[]);
+        let report = frontier.report(false);
+        assert!(report["closed_statements"].get("B").is_none());
+        assert_eq!(report["closed_statements"]["U"], "via_transcription");
+        assert_eq!(
+            report["transcription_results"]["RES-B"],
+            json!({"kind": "restates_conclusion", "declared": true})
+        );
+        let item = report["items"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|item| item["statement_id"] == "B")
+            .unwrap();
+        assert_eq!(item["transcription_only"], true);
+        let b_support = report["support_options"]["items"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|item| item["statement_id"] == "B")
+            .unwrap();
+        assert_eq!(b_support["verified_alternative_bundles"], json!([]));
+        assert!(
+            report["closed_via_transcription"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .any(|closure| closure["result_id"] == "RES-U")
+        );
+        // The walk enters B only as it enters a transcription.
+        assert!(!frontier.sound_arguments.contains("ARG-B"));
     }
 
     #[test]

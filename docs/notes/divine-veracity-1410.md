@@ -1530,8 +1530,9 @@ second clause equivalent to the truth of each assent; the invariant-content
 control already admits such contents. This is the defect
 `unrestrictedRepresentationIff` diagnoses, one level up. So `88e2451e`
 re-presents accuracy, and the DOXASTIC_BELIEF_1 to DOXASTIC_BELIEF_2 bridge
-carries no warrant beyond it. The frontier's computed closure of `7dd8a624`
-through it records no further warrant. The calibration would discriminate
+carries no warrant beyond it. Its `restates_conclusion` marker (#2190) names
+`fixedContentRepresentationIff`, so the frontier closes `7dd8a624` through it
+only by rule (d), when both premises are closed. The calibration would discriminate
 only with the content theory and assent relation pinned to an independently
 interpreted theory shared with another route, for example the
 DivineVeracityContent1410 interpretation of the assertion route, together with
