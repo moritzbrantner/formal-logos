@@ -8,6 +8,7 @@ disambiguations = ["DISAMB-KANT-CONTINGENCY"]
 id = "NO-COLLAPSE-K"
 label = "K sense: a CONTINGENT_1 actual being excludes actual modal collapse, by the K collapse law"
 theorem = "notCollapsedK"
+strong_version_needed = { "c94b5446-e7e7-5b36-9bed-288959725526" = "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available." }
 premises = ["c94b5446-e7e7-5b36-9bed-288959725526"]
 conclusion = "STMT-ROUTE-NOT-COLLAPSED"
 rule = "Theorem application (first K law: full collapse at w iff every accessible world is w), identity substitution, negation introduction"
@@ -20,6 +21,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 id = "NO-NEC-COLLAPSE-T"
 label = "KT sense: a CONTINGENT_1 actual being excludes necessary collapse, by the T schema and T law"
 theorem = "notNecessarilyCollapsedT"
+strong_version_needed = { "c94b5446-e7e7-5b36-9bed-288959725526" = "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available." }
 premises = ["cb456382-efd6-554b-8ee4-c8fc193f876a", "c94b5446-e7e7-5b36-9bed-288959725526"]
 conclusion = "STMT-ROUTE-NOT-NEC-COLLAPSED"
 rule = "Theorem application (T correspondence; T law: on reflexive frames necessary collapse gives actual collapse; NO-COLLAPSE-K), negation introduction"
@@ -34,6 +36,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 id = "NO-POSS-COLLAPSE-KTB"
 label = "KTB sense: a CONTINGENT_1 actual being excludes possible collapse, by the B schema and B law"
 theorem = "notPossiblyCollapsedKTB"
+strong_version_needed = { "c94b5446-e7e7-5b36-9bed-288959725526" = "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available." }
 premises = ["98bede5a-c5ff-5c26-9af0-10d526d422e2", "c94b5446-e7e7-5b36-9bed-288959725526"]
 conclusion = "STMT-ROUTE-NOT-POSS-COLLAPSED"
 rule = "Theorem application (B correspondence; B law: on symmetric frames possible collapse gives actual collapse; NO-COLLAPSE-K), negation introduction"
@@ -48,6 +51,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 id = "NO-POSS-COLLAPSE-S5"
 label = "S5 sense: a CONTINGENT_1 actual being excludes possible collapse, by the T and 5 schemas and S5 law"
 theorem = "notPossiblyCollapsedS5"
+strong_version_needed = { "c94b5446-e7e7-5b36-9bed-288959725526" = "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available." }
 premises = ["cb456382-efd6-554b-8ee4-c8fc193f876a", "6f474aba-fda0-57fa-8330-6246de589f63", "c94b5446-e7e7-5b36-9bed-288959725526"]
 conclusion = "STMT-ROUTE-NOT-POSS-COLLAPSED"
 rule = "Theorem application (T and 5 correspondences; S5 law: possible collapse leaves no contingent proposition), negation introduction"
@@ -62,6 +66,7 @@ axioms = ["propext", "Classical.choice", "Quot.sound"]
 id = "NO-NECESSARY-ACT-YIELDS-ALL"
 label = "A CONTINGENT_1 actual being excludes an act at every accessible world strictly yielding all"
 theorem = "noNecessaryActYieldsAll"
+strong_version_needed = { "c94b5446-e7e7-5b36-9bed-288959725526" = "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available." }
 premises = ["c94b5446-e7e7-5b36-9bed-288959725526"]
 conclusion = "STMT-NO-NECESSARY-ACT-YIELDS-ALL"
 rule = "Theorem application (first clause of the simplicity-collapse core), existential elimination, negation introduction"

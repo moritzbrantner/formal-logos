@@ -28,5 +28,9 @@
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "1795a62e-f78b-5f5b-94e7-9e7490824811"
-  ]
+  ],
+  "strong_version_needed": {
+    "9ff2814e-3ed6-4135-a574-12d11dcbbd19": "The proof takes the one uncaused actual bearer e that causes the esse of every received actual being (⟨e, he, hu, hall⟩) and argues from that single common cause. The weak version ClosedActualEsseCollectionsRooted (20babef7) roots each closed collection of esse causes but supplies no single cause common to all received beings.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, TruthCore.Latin.Aquinas.DeEnte.AggregateEsseCause.ReceivedActual p y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

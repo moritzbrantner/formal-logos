@@ -12,6 +12,7 @@ disambiguations = ["4f1d0cf6-88ba-59e3-814d-01450c2bf282"]
 [[argument]]
 id = "Test one-step joining against a universal giver and a secondary esse cause"
 theorem = "sameGiverCriterionAtEsse"
+strong_version_needed = { "cffad050-e86d-48b8-b04b-be47fcc1352d" = "Applied to an arbitrary actual esse cause y of the giver s (noIncoming), to show that s has no incoming cause. y is not known to be an esse-is-essence bearer, which the weak version IdentityCauseAscent (8176a284) requires of the cause." }
 comparator_theorems = ["sameGiverCriterion", "secondaryGiverControl"]
 premises = ["0881e859-c4c3-53ff-9bec-b61294e12d51", "cffad050-e86d-48b8-b04b-be47fcc1352d"]
 conclusion = "A maximal universal giver and strict joins permit only its own esse gift at the recipient"

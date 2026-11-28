@@ -13,6 +13,7 @@ meaning = "Eliminate the existing existential bundle and use its numerical uniqu
 [[argument]]
 id = "Classical attributes from separate unity and perfection routes"
 theorem = "attributesFromSeparateProofs"
+strong_version_needed = { "d7741cdc-881b-5bda-85ce-d70223162f78" = "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in GodIsInfinite.godIsInfinite), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct." }
 premises = ["818a73cc-249d-5f9b-9c34-aee1f2cbf333", "4c79298d-ee09-5e99-9ced-1be92c19b4cc", "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "ca07cae9-6102-564e-a7fd-efb013744b3d", "eaa4c679-98a3-5e82-95ff-18bd1177ce74", "0cf675c4-4099-5df9-b294-05f2cfef057d", "09c6d5f0-d412-5038-85f9-75fffb935727", "d7741cdc-881b-5bda-85ce-d70223162f78", "75a37a91-732d-510c-9abc-b37c988c5c63", "0659227c-0979-579c-910b-03a1967f49c5", "180f5ad2-a421-541a-85c9-9bca578b4a43", "090be689-b77f-51a1-9d5d-caf339169e4b", "33b18ae7-4578-54bc-a2b5-edce99b21fc2", "78b7c124-4419-4d55-8c2d-9cb8b37eb9b6", "e0dae79f-c042-5a08-a148-725d0468df91"]
 conclusion = "d5ac1620-1de5-5cd8-862e-cfdfd6d8b8a5"
 rule = "Compose the stage-two derivations on the same named candidate"

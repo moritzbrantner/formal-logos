@@ -34,6 +34,7 @@
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
   ],
   "strong_version_needed": {
-    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "Not needed for this endpoint. Asymmetry alone does not suffice (an infinite descending chain of actual concreta is asymmetric and rootless), but the weaker closed-collection condition does (registered strengthens, strict by ClosedGroundingRoots Control.limitGrounder): ClosedGroundingRoots.necessaryConcreteOfClosedRooted proves the same endpoint from the same premises with it in place of well-founded actual grounding. This interface is retained for comparison with its original proof path; the reduction establishes none of the remaining premises."
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "Not needed for this endpoint. Asymmetry alone does not suffice (an infinite descending chain of actual concreta is asymmetric and rootless), but the weaker closed-collection condition does (registered strengthens, strict by ClosedGroundingRoots Control.limitGrounder): ClosedGroundingRoots.necessaryConcreteOfClosedRooted proves the same endpoint from the same premises with it in place of well-founded actual grounding. This interface is retained for comparison with its original proof path; the reduction establishes none of the remaining premises.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

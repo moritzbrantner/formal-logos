@@ -19,5 +19,8 @@
     "23dd6f32-b456-4963-adb3-7befbf0dc4fb",
     "4b02d34a-9226-5009-9ac2-3b52f4222b21",
     "623ddbf6-9683-5361-bae4-e348a00ec680"
-  ]
+  ],
+  "strong_version_needed": {
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42": "The proof applies the premise reflexively at (a, a) to show that reflexive dependence forces self-grounding. The weak version ActualDistinctDependenceIsGrounding (a8298fbd) covers only distinct c ≠ x and says nothing about self-dependence."
+  }
 }

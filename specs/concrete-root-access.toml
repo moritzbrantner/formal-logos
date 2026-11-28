@@ -45,6 +45,7 @@ meaning = "Finite root access implies CCR. Conditional structural consequence on
 [[argument]]
 id = "CCR implies finite root access classically"
 theorem = "accessOfClosed"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ConcreteRootAccess.RootAccess m w x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["aca3baa1-9be6-4720-a53d-22050e638561", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "Universal finite concrete root access"
 axioms = []
@@ -63,6 +64,7 @@ meaning = "CCR implies borrowed reality without supplier concreteness. Condition
 [[argument]]
 id = "CCR implies the localized bridge classically"
 theorem = "localizedOfClosed"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ConcreteRootAccess.RootAccess m w x` (in accessOfClosed). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["aca3baa1-9be6-4720-a53d-22050e638561", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "Localized root access for abstract-supplied CONCRETE_6 recipients"
 axioms = []
@@ -72,6 +74,7 @@ meaning = "CCR implies the localized bridge classically. Conditional structural 
 [[argument]]
 id = "Borrowed reality and localized root access imply CCR"
 theorem = "closedOfLocalized"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.concrete y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["45890c84-1d33-4273-b0ea-0f75bfd67a33", "Localized root access for abstract-supplied CONCRETE_6 recipients", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "aca3baa1-9be6-4720-a53d-22050e638561"
 axioms = []
@@ -81,6 +84,7 @@ meaning = "Borrowed reality and localized root access imply CCR. Conditional str
 [[argument]]
 id = "CCR and universal finite root access are equivalent classically"
 theorem = "rootAccessEquivalence"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ConcreteRootAccess.RootAccess m w x` (in accessOfClosed). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "CCR is equivalent to universal finite concrete root access"
 axioms = []
@@ -90,6 +94,7 @@ meaning = "CCR and universal finite root access are equivalent classically. Cond
 [[argument]]
 id = "CCR decomposes into borrowed reality and localized bridge classically"
 theorem = "borrowedDecomposition"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.concrete y` (in closedOfLocalized); `TruthCore.Causality.ConcreteRootAccess.RootAccess m w x` (in accessOfClosed). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "CCR is equivalent to borrowed reality and localized root access"
 axioms = []

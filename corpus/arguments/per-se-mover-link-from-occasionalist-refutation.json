@@ -27,5 +27,8 @@
     }
   ],
   "label": "Whatever moves another only as moved is, in that, an efficient…, from occasionalist refutation",
-  "legacy_id": "PER-SE-MOVER-LINK-FROM-OCCASIONALIST-REFUTATION"
+  "legacy_id": "PER-SE-MOVER-LINK-FROM-OCCASIONALIST-REFUTATION",
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `CausesAsCaused y x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

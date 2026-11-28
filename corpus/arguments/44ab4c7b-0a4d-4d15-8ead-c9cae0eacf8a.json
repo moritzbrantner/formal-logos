@@ -23,5 +23,8 @@
     "b9adce48-6b86-5f58-b2ea-b25f51c70cbd",
     "c529e8d3-43e3-53a8-a82f-3955e9815265",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "82cfaf26-fc86-54ab-8328-9a7b2bdbbe21": "The conclusion is that actual concrete grounding has no cycles of any length (noCycles_of_wellFounded). The weak versions do not exclude them: ActualGroundingAsymmetric (39f7c63d) excludes only two-cycles, ConeWellFounded (1b1e3f09) constrains one selected cone, WholeRosterNotTrapped (5c898d24) only the whole roster, and closed-collection rootedness (aca3baa1) admits a cycle fed by a root (ClosedEsseSource RootedCycleControl)."
+  }
 }

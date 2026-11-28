@@ -42,6 +42,7 @@
     "215fdc0a-7005-510d-91da-84fcbc77a9dc"
   ],
   "strong_version_needed": {
-    "6508c239-b36d-4010-b9e4-ff0cdd5757e5": "Firstness excludes only a SIMPLY_PRIOR_1 cause of the first mover; the weak form without the priority clause would need the existing B3 as a further premise to reach firstness. The same bundle with C2-minus and B3 is available through the registered C2-from-weak-form-and-B3 argument."
+    "6508c239-b36d-4010-b9e4-ff0cdd5757e5": "Firstness excludes only a SIMPLY_PRIOR_1 cause of the first mover; the weak form without the priority clause would need the existing B3 as a further premise to reach firstness. The same bundle with C2-minus and B3 is available through the registered C2-from-weak-form-and-B3 argument.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `F.history.ontic.ExistsAt v f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

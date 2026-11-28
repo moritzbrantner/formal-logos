@@ -32,6 +32,7 @@
     "8db2b1c9-f3a6-55d3-b7e9-4939c27923e2"
   ],
   "strong_version_needed": {
-    "b699ecfb-08f7-5864-a671-1205c8f5792f": "The sum is obtained existentially from population/fusion assumptions and then passed to the unchanged original theorem. No supplied spacetime whole is identified with that witness. The new whole-specific policy cannot be substituted without a new mapping/scope premise; the original both-endpoint interface is not claimed minimal."
+    "b699ecfb-08f7-5864-a671-1205c8f5792f": "The sum is obtained existentially from population/fusion assumptions and then passed to the unchanged original theorem. No supplied spacetime whole is identified with that witness. The new whole-specific policy cannot be substituted without a new mapping/scope premise; the original both-endpoint interface is not claimed minimal.",
+    "bbe8900a-7d33-5e6b-a76c-1947ecf7fa6e": "hParts is applied to the parts of an arbitrary existing individual a before any fusion sum exists in the proof. The sum is only obtained afterwards from ConditionalActualFusionAt, which needs the no-necessary-parts fact for a. The weak version SelectedFusionPartsExistAt (3423b8ec) is scoped to one sum fixed in the premises, which this theorem does not have."
   }
 }

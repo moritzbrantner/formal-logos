@@ -22,5 +22,8 @@
     "80b5fc49-ed55-5c61-b14b-3621d2aa1520",
     "008747c9-744a-581c-adad-570e834abb4e",
     "51142f83-40ad-50a3-83be-a6062eee1256"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Metaethics.EvilObjection.OwnTruePremise c`; `TruthCore.Metaethics.EvilObjection.AffectiveProtest c`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

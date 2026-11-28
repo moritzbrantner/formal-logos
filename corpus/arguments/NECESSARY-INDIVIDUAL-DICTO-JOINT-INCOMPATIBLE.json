@@ -19,5 +19,8 @@
   ],
   "disambiguation_ids": [
     "7507d645-874d-5434-add8-2f49c2801d36"
-  ]
+  ],
+  "strong_version_needed": {
+    "878b92c3-a49d-583e-a467-6b44913f3e5d": "The proof takes the one accessible world v at which no individual is present and contradicts de dicto necessity there (h0 v hv). The weak version IndividualContingency (51035cd9) gives each individual its own absence world, which is consistent with something being present at every accessible world, so no contradiction follows."
+  }
 }

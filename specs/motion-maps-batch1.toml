@@ -71,6 +71,7 @@ disambiguations = ["DISAMB-MOTION"]
 [[argument]]
 id = "CREATED-AGENT-MOVED-FROM-NEW-ACTUALITY"
 theorem = "createdAgentMovedFromNewActuality"
+strong_version_needed = { "0628359b-4a71-5c67-a84b-0fd80104aceb" = "The proof uses the converse direction (Iff.mpr): from InPotency y r' and ActualizedQuaPotential y r' it concludes MovedIn y r'. Both weak versions, MovedOnlyAsInPotencyReading (4be9a4ac) and NoMovedWithoutPotency (6948dde0), state only that being moved requires potency and supply no such converse." }
 premises = ["STMT-CREATURE-ACTING-IS-NEW-ACTUALITY", "STMT-BEING-MOVED-IS-ACTUALIZATION-OF-POTENCY"]
 conclusion = "STMT-EVERY-CREATED-AGENT-ACTS-AS-APPLIED-TO-ACT-BY-GOD"
 rule = "right-to-left direction of the Physics III.1 biconditional applied to the new-actuality witness"

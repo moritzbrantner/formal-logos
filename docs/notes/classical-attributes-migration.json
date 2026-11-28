@@ -36,13 +36,13 @@
       "path": "corpus/arguments/CATHOLICISM-STAGE2-CLASSICAL-ATTRIBUTES.json",
       "status": "repaired",
       "classification": "defect",
-      "finding": "Assembly prose corrected to conditional one-way content. Frozen Challenge unchanged; helper factors only the final connective application. All 15 proof hypotheses are reported used, conservatively; no logical minimality is inferred. #1111: added required DISAMB-MAXIME-ENS navigation for the existing generic-perfection/maxime-ens vocabulary union; argument premises, inference IDs and theorem remain unchanged.",
+      "finding": "Assembly prose corrected to conditional one-way content. Frozen Challenge unchanged; helper factors only the final connective application. All 15 proof hypotheses are reported used, conservatively; no logical minimality is inferred. #1111: added required DISAMB-MAXIME-ENS navigation for the existing generic-perfection/maxime-ens vocabulary union; argument premises, inference IDs and theorem remain unchanged. Re-inspected 2026-11-28 (#1517): only strong_version_needed reasons were added; premises, conclusion, inferences, meaning and term links unchanged.",
       "before": {
         "sha256": "04552e690716be8ec483b6946d91c8cdaa8c9d6b8354da6f76c984b184492abb",
         "lean_declaration": null,
         "prose": "Stage 2 (owner decision on #143, 2026-10-24, option (a)): the skeleton's open premise STMT-GOD-HAS-CLASSICAL-DIVINE-ATTRIBUTES, derived. The definitional bridge (Dei Filius ch. 1) lists nine attributes. Four are derived for whatever is God through its being maximal in being: one, simple, perfect, supremely good (CATHOLICISM-STAGE2-GOD-IS-ONE, -SIMPLE, -PERFECT, -SUPREMELY-GOOD, imported). The other five (infinite, immutable, eternal, intellect, will) are open premises, each supported by Dei Filius ch. 1, until their groups (ST I qq.7, 9, 10, 14, 19) are derived."
       },
-      "reviewed_sha256": "4b44314c4156ff495602a423188e64ca718027b447df282508ff65a1eb944263"
+      "reviewed_sha256": "e0212abdee3f3c06461c482a4bad645f5b3833165d7160af14b344cc84bb7a8e"
     },
     {
       "kind": "statements",

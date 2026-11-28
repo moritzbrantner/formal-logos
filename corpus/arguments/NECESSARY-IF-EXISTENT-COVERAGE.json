@@ -18,5 +18,8 @@
   ],
   "disambiguation_ids": [
     "7181df76-d6ed-5226-a34b-08910ddbe6a0"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Isabelle.AFP.GoedelGod.Dia F G w` (in certificate). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse\u2013essence identity."
+  }
 }

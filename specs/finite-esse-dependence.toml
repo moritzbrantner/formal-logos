@@ -33,6 +33,7 @@ description = "Conditional support for the existing all-bearer coverage premise,
 id = "154517c6-ec70-4867-ba37-ace23f001a9d"
 label = "A limitation of actual esse leads through reception to a distinct grounding giver"
 theorem = "limitedEsseHasGroundingGiver"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x." }
 premises = ["1304b462-4a10-5dd0-995a-db5feb21d98e", "4bc853db-ec33-40ff-857e-6a67f17532fb", "cb1cdea9-eb6c-578c-8008-84e0d4107fd3"]
 conclusion = "08178314-2ec9-459e-82b1-5ff10b49c383"
 rule = "Compose the recipient and giver witnesses with the actual concrete ground interface"

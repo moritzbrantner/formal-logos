@@ -33,5 +33,8 @@
     "6a897910-d301-56c0-963d-d2f019de3de7",
     "f7bae38e-9b21-54fe-8236-2646c230568b",
     "f9e260b1-c206-5d41-a054-fac13cf68e67"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `A.holds v r` (in necessaryReason); `TruthCore.Explanation.NecessaryFactBoundary.NecessaryReasonForMember A w S` (in necessaryReason). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

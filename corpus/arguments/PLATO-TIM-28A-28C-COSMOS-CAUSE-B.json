@@ -10,5 +10,8 @@
   "inference_ids": [
     "f52ff72b-539d-51be-8802-d602ee1fd03e"
   ],
-  "meaning": "Under the stronger distinct-cause reading and the generated-cosmos premise, a cause distinct from the cosmos exists."
+  "meaning": "Under the stronger distinct-cause reading and the generated-cosmos premise, a cause distinct from the cosmos exists.",
+  "strong_version_needed": {
+    "9709d14f-1324-58f1-8889-1110881c5b44": "The conclusion is that the cosmos has a distinct cause (∃ y, y ≠ cosmos ∧ Causes y cosmos), obtained directly from the premise. CausePrinciple (915e3df5) gives a cause with no distinctness. SelfCausingGeneratedHaveAlternativeCause (5c2aeb5a) gives a distinct cause only for a self-causing generated thing, and no premise says the cosmos causes itself."
+  }
 }

@@ -6,6 +6,7 @@ results = "TruthCore.Results.Causality.UnlocatedRootNecessity"
 id = "c6539b44-f844-4c50-ac42-9dcf7ecc4960"
 label = "The fixed recipient’s unlocated root is a NECESSARY_2 CONCRETE_6 witness"
 theorem = "necessaryConcreteOfUnlocatedFork"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ v, m.ontic.frame.access w v ∧ ¬m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-SELECTED-ACTUAL-CONCRETE", "d4b138f2-d5c9-4b35-bc5a-dbf3aa7617e8", "018456e8-cd2e-46e1-9c13-fa06e6f4dde9", "STMT-EVERY-CONTINGENT-GROUNDED-AT", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "STMT-NECESSARY-CONCRETE-AT"
 rule = "Select a root at the fixed recipient, then exclude contingency by the selected-world grounding premise"

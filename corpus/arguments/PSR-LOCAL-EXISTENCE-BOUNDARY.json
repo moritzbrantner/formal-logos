@@ -20,5 +20,8 @@
   "disambiguation_ids": [
     "f7bae38e-9b21-54fe-8236-2646c230568b",
     "e63036c5-d9c0-55d3-9704-e23efcbed127"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Explanation.NoBruteExistence.BruteExistenceAt m w` (in coverage); `∃ r, m.explains w r (TruthCore.Explanation.ExistencePSR.ExistenceFact.fact x)` (in coverage). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -19,6 +19,7 @@
     "32416dd1-c3ce-5180-bf06-1cabab088be7"
   ],
   "strong_version_needed": {
-    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df": "Historical biconditional interface. The original proof uses only the esse-in-re to concrete direction. Sibling result 0ff29886-4fdc-4e28-b377-c2b305299e44 uses the one-direction calibration."
+    "0c1b8438-fef8-5e2e-b42a-49d9d2e1f2df": "Historical biconditional interface. The original proof uses only the esse-in-re to concrete direction. Sibling result 0ff29886-4fdc-4e28-b377-c2b305299e44 uses the one-direction calibration.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.CausalConcreteRivalBoundary.Esse f x`; `TruthCore.Causality.CausalConcreteRivalBoundary.SelectedCounter f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

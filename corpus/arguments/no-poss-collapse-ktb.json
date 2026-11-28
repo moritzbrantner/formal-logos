@@ -38,5 +38,8 @@
       "to": "7af298fb-a2c4-4239-919b-7685f2e1f67a",
       "statement_id": "98bede5a-c5ff-5c26-9af0-10d526d422e2"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "c94b5446-e7e7-5b36-9bed-288959725526": "The proof (directly or through the ContingentBeingNode lemma it calls) uses the witness's contingency: its absence at an accessible world (ContingentAt), which refutes collapse or total necessity. The weak version InhabitedConcreteAt (56f68b40) supplies only an existing concrete individual, which may be necessary, so no absence is available."
+  }
 }

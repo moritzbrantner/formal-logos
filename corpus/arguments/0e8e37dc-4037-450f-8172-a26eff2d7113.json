@@ -49,5 +49,9 @@
       "to": "52c2ebac-0a71-4dd4-8a21-804c1dd0847a",
       "statement_id": "1ec205ed-b2a6-5384-bb5f-2565a9d325bf"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "cffad050-e86d-48b8-b04b-be47fcc1352d": "The ascent premise is applied to a cause (a maximum m or a GOD_4 g) with no esse–essence identity in view: this theorem has no q.3 a.4 Profile with esseOf/essenceOf. The weak version IdentityCauseAscent (8176a284) only lets causes whose esse is their essence ascend, so it cannot be stated here, and nothing supplies that identity.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `m' = m` (in godExistsFromMaximeEnsCausingAllByUniversalTransfer), an identity question about two maxima (m' = m), before any is shown to be GOD_4, where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

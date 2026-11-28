@@ -25,5 +25,8 @@
   "disambiguation_ids": [
     "1bfab283-1878-4e59-b975-7cf669ea434c",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "cdf897a8-5490-561a-b9d2-507486a3f192": "The proof uses the root n's existence at each accessible world v (hNec v hv) to name n there. NecessaryRootDeDictoK (0efe7b16) gives only that something exists at each accessible world, not n. NecessaryRootTertiaVia (32a2f51c) gives only ¬◇¬(n exists), which yields existence at v only by double-negation elimination; this zero-axiom result has no excluded-middle premise."
+  }
 }

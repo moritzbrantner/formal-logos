@@ -52,6 +52,7 @@ meaning = "Assembly: accompaniment supplies a term at t, irreflexivity distingui
 [[argument]]
 id = "Distinct concurrent giving from present-tense receipt and correlativity"
 theorem = "distinctOfPresentReceipt"
+strong_version_needed = { "964928dc-9067-45d4-8de3-c91e27cbe1c6" = "Passes the premise to PresentReceipt.concurrentOfPresentReceipt, which applies it at every moment at which x is. The weak version ReceptionAtOnset (db441b19) covers only the beginning moment." }
 premises = ["964928dc-9067-45d4-8de3-c91e27cbe1c6", "52b05849-88b3-4f44-b81b-768850f9ed12", "A received-esse bearer never directly gives itself being while present"]
 conclusion = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
 transcription = "assembly"

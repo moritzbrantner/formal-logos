@@ -24,5 +24,8 @@
     "1aef8986-ed29-564f-9803-d812d2ff63e1",
     "002f42cb-3015-5644-80b3-d408538394e6",
     "54f33165-05df-5205-807a-04154b5fd6ad"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `a = b` (in composeOfPerSe), an identity question about two esse causes (a = b), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

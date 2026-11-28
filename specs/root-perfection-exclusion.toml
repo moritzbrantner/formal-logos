@@ -52,6 +52,7 @@ paraphrase = "OPEN, analyst formulation, attribution deferred: every bearer that
 id = "Positive exclusion brings a LIMITING_PRINCIPLE_2, from joint compossibility"
 label = "Positive exclusion brings a LIMITING_PRINCIPLE_2, from joint compossibility"
 theorem = "positiveExclusionLimits"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.RootMultiplication.HasLimitingPrinciple Composite Prior essence esse x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["structuralControls"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "c78c77da-91b0-5928-bd5f-ba670a6f3660", "Pure determinations are jointly compossible within the admissible family"]
 conclusion = "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2"
@@ -63,6 +64,7 @@ meaning = "Fix a bearer x whose real-determination profile is admissible, and a 
 id = "Every actual root has every pure perfection, from no unexplained absence"
 label = "Every actual root has every pure perfection, from no unexplained absence"
 theorem = "rootPerfectionFromNoUnexplainedAbsence"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Has r k`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["structuralControls", "anchorControl", "standingRival"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "Positive exclusion of an admissible pure determination brings a LIMITING_PRINCIPLE_2", "Every actual root's profile is admissible", "Each pure determination occurs in some admissible profile", "No actual root has an unexplained absence"]
 conclusion = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
@@ -74,6 +76,7 @@ meaning = "Fix an actual root r at w and a pure k. By excluded middle r has k or
 id = "Positive exclusion makes esse LIMITED_ESSE_1, from joint compossibility"
 label = "Positive exclusion makes esse LIMITED_ESSE_1, from joint compossibility"
 theorem = "positiveExclusionLimitsEsse"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Pure d`; `Limited x`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["esseControls"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "A bearer with an impure real determination has LIMITED_ESSE_1", "Pure determinations are jointly compossible within the admissible family"]
 conclusion = "Positive exclusion of an admissible pure determination makes esse LIMITED_ESSE_1"
@@ -85,6 +88,7 @@ meaning = "Fix a bearer x whose real-determination profile is admissible, and a 
 id = "Every actual root has every pure perfection, from no unexplained absence and esse givers"
 label = "Every actual root has every pure perfection, from no unexplained absence and esse givers"
 theorem = "rootPerfectionFromNoUnexplainedAbsenceUnlimited"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Has r k`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["esseControls", "structuralControls", "anchorControl"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "08178314-2ec9-459e-82b1-5ff10b49c383", "Positive exclusion of an admissible pure determination makes esse LIMITED_ESSE_1", "Every actual root's profile is admissible", "Each pure determination occurs in some admissible profile", "No actual root has an unexplained absence"]
 conclusion = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"

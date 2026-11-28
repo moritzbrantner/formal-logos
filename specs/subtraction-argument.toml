@@ -97,6 +97,7 @@ disambiguations = ["DISAMB-CONCRETE-ABSTRACT-CRITERIA"]
 [[argument]]
 id = "Possibly no concrete object, by subtraction"
 theorem = "subtraction"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.SubtractionArgument.ConcretePresence m a v`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["STMT-EXCLUDED-MIDDLE", "9a6ce384-5213-43bd-a65e-90dddc8574f3", "Some world accessible from w has only finitely many concrete objects", "At every world accessible from w, each concrete object there could fail to exist", "At every world accessible from w, a concrete object that could fail could fail with no newcomer"]
 conclusion = "Possibly no concrete object exists: some world accessible from w has no concrete object"
 rule = "Induction on the finite list, one subtraction per step, transitivity of access"
@@ -106,6 +107,7 @@ description = "The subtraction argument, analyst formulation: possibly no concre
 [[argument]]
 id = "The stage-one node excludes the subtraction contingency premise at its world"
 theorem = "necessaryConcreteExcludesContingencyPremise"
+strong_version_needed = { "b19ffd92-01bd-5c0b-9643-e7407137ea5e" = "The proof uses the witness's concreteness (hc : m.concrete x), e.g. to place it among the actual concreta or in the concrete subtype ontic. The weak version NecessaryBeing m.ontic w (c778a6ca; backing result necessaryBearer drops the concreteness conjunct) gives only an existing necessary individual, possibly not concrete." }
 premises = ["STMT-NECESSARY-CONCRETE-AT"]
 sense_bridges = [{term = "NECESSARY", from = "NECESSARY_11", to = "NECESSARY_2", statement_id = "STMT-NECESSARY-CONCRETE-AT"}]
 conclusion = "Not every concrete object existing at w could fail to exist"
@@ -127,6 +129,7 @@ next_step = "Whether S2 at the candidate necessary being has support independent
 [[argument]]
 id = "Unrestricted free absence with companions gives S2 at w"
 theorem = "recombinationGivesContingency"
+strong_version_needed = { "ff30c214-d193-4501-a6a8-0a5bdeb80477" = "The conclusion is that each companioned concretum y is possibly absent (◇¬ y exists), obtained from the recombination premise. The weak version ContingentRecombinationAt (4d51a1a1) has ◇¬(y exists) as an extra antecedent, which is exactly what is to be proved, so it cannot be applied here." }
 premises = ["Unrestricted free absence among distinct concrete candidates at w", "Every concrete candidate has a distinct concrete candidate that could exist at w"]
 conclusion = "Each concrete object existing at w could fail to exist"
 rule = "Witness selection: x without y is possible, so y's absence is"

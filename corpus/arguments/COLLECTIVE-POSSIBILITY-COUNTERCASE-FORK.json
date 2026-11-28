@@ -12,5 +12,8 @@
   "meaning": "Checked structural coverage under explicit excluded middle: collective conditional or its precise semantic countercase. No completeness of a named historical roster is inferred.",
   "definition_ids": [
     "e571cfe0-5cd9-51ea-8ded-30f55da48855"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `f.Possible fun t => ∀ (x : f.Being), ¬f.IsAt x t`; `TruthCore.Logic.CollectivePossibilityRouteBoundary.AllIndividuallyPossible f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

@@ -22,6 +22,7 @@
     "0ea9feb8-1f92-5b11-aa74-2f2e567c6106"
   ],
   "strong_version_needed": {
-    "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f": "The frozen proof uses distinctness to select a distinct-esse bearer. Sibling result 8bfe7a17-9d96-4c24-aee2-2489b896665d uses a case split and only one actual bearer."
+    "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f": "The frozen proof uses distinctness to select a distinct-esse bearer. Sibling result 8bfe7a17-9d96-4c24-aee2-2489b896665d uses a case split and only one actual bearer.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in commonEsseIsEssenceSource), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
   }
 }

@@ -16,5 +16,8 @@
   "disambiguation_ids": [
     "623ddbf6-9683-5361-bae4-e348a00ec680"
   ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `InAct x esse`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  },
   "meaning": "Because abstract is defined as the contradictory of concrete (no esse in re), the esse criterion is exhaustive by excluded middle (STMT-EXCLUDED-MIDDLE) and disjoint by non-contradiction. It establishes no classification of any particular candidate, and it does not make any rival criterion exhaustive."
 }

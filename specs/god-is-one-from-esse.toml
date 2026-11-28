@@ -29,6 +29,7 @@ meaning = "For any two Gods the first is maximal, and the second, if distinct, w
 [[argument]]
 id = "GOD_4 is one from reciprocal gifts of esse and nonmutual dependence"
 theorem = "oneFromNonmutualDependence"
+strong_version_needed = { "2068f91c-1eeb-5dbb-a71a-f7b6a12bb495" = "The proof applies it to a distinct esse cause given only c ≠ x and CausesIn c x esse. The weak version SustainingEsseCauseIsDependedOn (149ed837) also requires that the cause give x being at every moment and world at which x is (a History/BeingGiving antecedent). This theorem has no such vocabulary and no premise supplies it.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "EM is applied to k = g for two GOD_4 candidates. The theorem has no InAct relation and nothing places k in act, while LocalLogic (ca432e24) decides identity with a GOD_4 candidate only for bearers in act in some respect." }
 premises = ["86d02b69-87eb-5594-9958-ccaa5fe6b685","2068f91c-1eeb-5dbb-a71a-f7b6a12bb495","0f49d71e-09e6-5a9c-b7e7-e0e9b8fe769c","ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "33b18ae7-4578-54bc-a2b5-edce99b21fc2"
 rule = "Turn the two opposite gifts of esse into mutually opposed dependence-for-being edges on the same pair"

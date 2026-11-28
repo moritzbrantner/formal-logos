@@ -13,5 +13,8 @@
   "definition_ids": [
     "88f9f6e8-997b-5f7d-afa1-c501954c3807",
     "f2c09ae8-848d-5a3b-ab79-92c2b01d414c"
-  ]
+  ],
+  "strong_version_needed": {
+    "293d7219-a085-4fdd-b645-039c87485b0b": "Applied to ¬p, where p is any content God believes (hp : V.Believes g p), to derive accuracy of every assent. The weak version GodCounterAssertionComplete (e2ca9054) covers only negations of asserted contents (needs V.Asserts g p), which no premise supplies for a merely believed p."
+  }
 }

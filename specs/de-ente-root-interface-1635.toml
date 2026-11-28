@@ -56,6 +56,7 @@ definitions = ["4bca086d-1fa5-4b0d-bf2b-a22f3f0ac740", "8163859b-95b3-4dd2-8a69-
 [[argument]]
 id = "Unique actual CONCRETE_6 root, from root existence and De ente's at-most-one root"
 theorem = "uniqueActualRootFromDeEnte"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ source, (TruthCore.Causality.ConcreteExistentialSupply.graph m w).Source source` (in actualRootExists). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "56f68b40-9737-59a0-8cac-5610980a1547",
   "5c898d24-d1f7-5087-b09e-3287a723e787",

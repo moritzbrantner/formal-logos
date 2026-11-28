@@ -19,6 +19,7 @@ description = "Instantiation of the vocabulary lemma necessaryConcreteAt_of_ance
 [[argument]]
 id = "Thinker-local anti-brute-root closes the contingent horn of the Cogito fork"
 theorem = "necessaryAncestorOfFork"
+strong_version_needed = { "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae" = "Applied to the contingent ground-root x of the bearer's ancestry, which the fork supplies with no claim that x bears an occurring thought. The weak version ThinkingBearerConeContingentGrounded (db72222b) grounds only contingent thinkers in the cone and permits an ungrounded nonthinking contingent ancestor." }
 premises = ["7e9ca71a-643f-5bbc-8622-80144bd05480", "f8dafcc7-c5ea-5c62-885a-6a24cbb351ae"]
 conclusion = "da31142e-34bd-579d-82a7-9b3745d534e6"
 axioms = []

@@ -22,5 +22,8 @@
   "disambiguation_ids": [
     "e557eab8-2eed-5b24-ade9-a23b5b26f9b3",
     "c0fda0ee-3508-5101-94ba-043e3eb28b0e"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Latin.Aquinas.SummaTheologiae.Q14ReceptionFork.CapacityCalibration m scope`; `TruthCore.Latin.Aquinas.SummaTheologiae.Q14ReceptionFork.WithoutMatterCalibration m scope`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

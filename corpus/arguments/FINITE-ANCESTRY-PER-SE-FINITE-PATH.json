@@ -24,5 +24,8 @@
     "bedfab81-905c-5d1a-b834-e20b8007b3da",
     "81c233d4-01b4-528c-8bbd-7da228443ffe",
     "4b02d34a-9226-5009-9ac2-3b52f4222b21"
-  ]
+  ],
+  "strong_version_needed": {
+    "37e9e7a0-2385-5e08-9ef9-f793b5ceb936": "Passes the premise to perSeNoRegressOfFiniteAncestry, which uses irreflexivity of the full transitive closure (no loop of any length) to make TransGen cause a strict order. The weak version NoMutualCauseReading (c3ace4b2) excludes only two-cycles: a three-cycle with finite ancestry satisfies it and has an infinite descending series."
+  }
 }

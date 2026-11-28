@@ -17,5 +17,8 @@
   ],
   "disambiguation_ids": [
     "146a73fd-5eb2-586e-982f-8ee57ea0e329"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Logic.ObjectiveTruthDefinitionFork.ActualStableDefinition f`; `TruthCore.Logic.ObjectiveTruthDefinitionFork.InvariantOnlyDefinition f`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

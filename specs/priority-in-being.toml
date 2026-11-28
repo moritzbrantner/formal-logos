@@ -70,6 +70,7 @@ meaning = "PRIOR_4 is defined as the n. 15 criterion, so the criterion yields PR
 [[argument]]
 id = "PRIOR_4 requires nonmutual dependence, from the being-without bridges"
 theorem = "priorityInBeingRequiresNonmutualDependence"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `DependsForBeing x y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["000e1f65-6e74-5519-bbf3-300d5f61ada8", "8ab3d114-d6e2-5f6d-805b-ae901f56d39b", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "If y is PRIOR_4 to x, then x depends for its being on y and y does not so depend on x"
 senses = {PRIOR = "PRIOR_4"}
@@ -90,6 +91,7 @@ meaning = "PRIOR_4 sibling of argument 1cb656a0: if y is prior in being to x, th
 [[argument]]
 id = "Every first mover moved by none is first in being, from the quarta via with PRIOR_4"
 theorem = "firstMoverIsFirstInBeing"
+strong_version_needed = { "6c27657f-a2bf-5c1d-963c-c154b66bfa85" = "The proof applies the grades premise at the respect verum (truth): QuartaVia.quartaVia finds a maximum in truth and only then passes to being by MostTrueIsMostBeingReading. The weak version GradesToMaximumAtBeing (e4e6b0cd) gives a maximum only in the respect esse.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "EM is applied (in firstMoverIsFirstBeing) to y = m, where y is any being simply prior to the maximum m. Nothing gives y in act in any respect, and LocalLogic (ca432e24) decides identity with a GOD_4 candidate only for bearers in act (InAct x r)." }
 sense_bridges = [
   { term = "CAUSE", from = "CAUSE_1", to = "CAUSE_2", statement_id = "777646a5-3f40-5508-b59a-5e019cf2edce" },
   { term = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST", from = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_6", to = "MAXIMAL_IN_A_SELECTED_PERFECTION_GREATEST_1", statement_id = "101bdd62-7cd0-5923-8f03-d9d443f4ba51" },

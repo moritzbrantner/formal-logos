@@ -103,6 +103,7 @@ meaning = "Stage (b) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transc
 [[argument]]
 id = "Every distinct esse descends from one whose esse is its essence, from no regress"
 theorem = "distinctEsseHasEsseIsEssenceSource"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf c = p.essenceOf c` (in distinctEsseHasEsseIsEssenceSource), the esse–essence identity of an arbitrary cause c, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "Every actual distinct esse is caused by another being in act, mode of causing unspecified",
   "There is no infinite descending chain of actual causes of being",
@@ -117,7 +118,7 @@ meaning = "Stage (c) of De ente c.3 [69874] (Baur/Koch; Leonine c.4), non-transc
 [[argument]]
 id = "One being whose esse is its essence is first cause of all others, from De ente"
 theorem = "commonEsseIsEssenceSource"
-strong_version_needed = { "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f" = "The frozen proof uses distinctness to select a distinct-esse bearer. Sibling result 8bfe7a17-9d96-4c24-aee2-2489b896665d uses a case split and only one actual bearer." }
+strong_version_needed = { "33f3c4c5-ccd6-4e8e-9cfb-0b231bb0e38f" = "The frozen proof uses distinctness to select a distinct-esse bearer. Sibling result 8bfe7a17-9d96-4c24-aee2-2489b896665d uses a case split and only one actual bearer.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in commonEsseIsEssenceSource), the esse–essence identity of an arbitrary actual bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "Every actual distinct esse descends via actual causes of being from one whose esse is its essence",
   "At most one actual being has its esse identical with its essence",
@@ -134,6 +135,7 @@ meaning = "Composition of De ente c.3 [69874]'s three stages on one profile and 
 [[argument]]
 id = "At most one actual CONCRETE_6 root, from De ente's other cause and one own esse"
 theorem = "atMostOneActualRootFromDeEnte"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf x = p.essenceOf x` (in identityOfActualRootFromOtherCause), the esse–essence identity of an actual root or bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "STMT-EXCLUDED-MIDDLE",
   "0436de86-6579-53f2-9ff5-2111ba44ebae",
@@ -149,6 +151,7 @@ meaning = "The uniqueness half of ACTUAL-ROOT-UNIQUENESS (0edb19eb), with its ge
 [[argument]]
 id = "Actual CONCRETE_6 root determinations are pure, from De ente's other cause"
 theorem = "rootPurityFromDeEnte"
+strong_version_needed = { "cb1cdea9-eb6c-578c-8008-84e0d4107fd3" = "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle (not just double-negation elimination) to `p.esseOf n = p.essenceOf n` (in identityOfActualRootFromOtherCause), the esse–essence identity of an actual root or bearer, which is not given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = [
   "STMT-EXCLUDED-MIDDLE",
   "0436de86-6579-53f2-9ff5-2111ba44ebae",

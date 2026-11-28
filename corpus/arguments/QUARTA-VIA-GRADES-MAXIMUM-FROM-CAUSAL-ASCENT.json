@@ -25,5 +25,9 @@
     "d16b94fa-886f-54f3-85a3-7fc0c43d2b58",
     "00e0d443-eb39-56a3-9179-9c8852ca4a2b",
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
-  ]
+  ],
+  "strong_version_needed": {
+    "d5a94eb1-72d2-53e0-9a52-9787b5b61a8d": "The proof applies the premise at a respect other than esse (respect r: an arbitrary perfection r caused in another), to conclude that the cause is more r. The weak version CauseOfBeingIsMoreInBeing (cffad050) covers causing esse only.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ w, MoreIn r w z`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

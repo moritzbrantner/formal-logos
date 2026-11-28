@@ -26,5 +26,8 @@
     "623ddbf6-9683-5361-bae4-e348a00ec680",
     "7507d645-874d-5434-add8-2f49c2801d36",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
-  ]
+  ],
+  "strong_version_needed": {
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42": "Applied at (y, x), where y is the actual concretum on which x depends, supplied by ActualContingentDependsOnActualConcretum. No premise gives y ≠ x (x may depend on itself), and the weak version ActualDistinctDependenceIsGrounding (a8298fbd) needs it."
+  }
 }

@@ -30,5 +30,8 @@
     "83264cf5-01fe-52fc-9a00-eeb024f6496e",
     "7507d645-874d-5434-add8-2f49c2801d36",
     "c529e8d3-43e3-53a8-a82f-3955e9815265"
-  ]
+  ],
+  "strong_version_needed": {
+    "2e248016-f8bf-5d8a-931e-7f9ebbb13e42": "Applied at (c, n) for an arbitrary necessity-cause c of the root n (CN c n). No premise gives c ≠ n (CN is not assumed irreflexive), and the weak version ActualDistinctDependenceIsGrounding (a8298fbd) needs it."
+  }
 }

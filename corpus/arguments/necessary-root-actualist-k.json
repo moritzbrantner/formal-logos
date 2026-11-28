@@ -122,5 +122,10 @@
     "92df85d7-aae7-57ac-b84e-3780ade842f1",
     "c529e8d3-43e3-53a8-a82f-3955e9815265",
     "4f1d0cf6-88ba-59e3-814d-01450c2bf282"
-  ]
+  ],
+  "strong_version_needed": {
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in RootPositiveIntellectWill.derive), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct.",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3": "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `m.ontic.ExistsAt v x` (in contingentRootOfNonnecessary); `∃ y, (fun x y x_1 => MoreIn p.esse y x_1) () y x` (in actualFork). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

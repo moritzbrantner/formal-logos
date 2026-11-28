@@ -21,5 +21,8 @@
   "disambiguation_ids": [
     "71d3bdb7-92cc-4023-b0ca-1739914628e4",
     "5921354b-51e6-5da3-8d8c-e9041840fd9f"
-  ]
+  ],
+  "strong_version_needed": {
+    "964928dc-9067-45d4-8de3-c91e27cbe1c6": "Passes the premise to PresentReceipt.concurrentOfPresentReceipt, which applies it at every moment at which x is. The weak version ReceptionAtOnset (db441b19) covers only the beginning moment."
+  }
 }

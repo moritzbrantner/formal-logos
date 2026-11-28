@@ -108,6 +108,7 @@ meaning = "If whatever is SIMPLY_PRIOR_1 to x is something on which x depends an
 [[argument]]
 id = "Every actual CONCRETE_6 individual grounds itself, from reflexive dependence"
 theorem = "reflexiveDependenceForcesSelfGrounding"
+strong_version_needed = { "2e248016-f8bf-5d8a-931e-7f9ebbb13e42" = "The proof applies the premise reflexively at (a, a) to show that reflexive dependence forces self-grounding. The weak version ActualDistinctDependenceIsGrounding (a8298fbd) covers only distinct c ≠ x and says nothing about self-dependence." }
 definitions = ["DEF-DEPENDS-FOR-BEING", "a1b2e330-388f-4120-bc5c-969642317792", "008cb21a-256c-5a90-822c-acd4591d699a"]
 comparator_theorems = ["actualGroundingAsymmetricViaDistinct"]
 premises = ["Everything depends for its being on itself", "STMT-ACTUAL-DEPENDENCE-IS-GROUNDING"]

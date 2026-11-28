@@ -33,6 +33,7 @@ meaning = "Sole-premise strength comparison: two different actual esse bearers i
 [[argument]]
 id = "CCR gives an identity source for each distinct esse"
 theorem = "distinctSourceOfClosed"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ConcreteRootAccess.RootAccess (TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.esseCauseGr` (in accessOfClosed). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["Closed actual esse collections contain an uncaused bearer", "457698e4-eb21-4561-ab32-eccbfb0a992e", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "3d01134d-0b03-4469-a81a-a18d6e179fa0"
 axioms = []
@@ -42,6 +43,7 @@ meaning = "Non-transcription conditional transfer on the same q3a4 profile. Exis
 [[argument]]
 id = "CCR gives the common uncaused identity source"
 theorem = "commonSourceOfClosed"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ConcreteRootAccess.RootAccess (TruthCore.Latin.Aquinas.DeEnte.ClosedEsseSource.esseCauseGr` (in accessOfClosed). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 premises = ["Closed actual esse collections contain an uncaused bearer", "457698e4-eb21-4561-ab32-eccbfb0a992e", "a576300f-4b01-45ae-902c-cfe3d0fbf2de", "At least one actual esse bearer", "ee4ab504-c8fe-59bc-bc96-7cbeefed6410"]
 conclusion = "c35b1a5c-6405-449b-993b-8196b2457e08"
 axioms = []

@@ -26,5 +26,8 @@
     "4eb21e18-3541-5b78-ab20-0040e4e987f4",
     "06fc8d78-0723-5daa-9186-7a016125bb0b",
     "83264cf5-01fe-52fc-9a00-eeb024f6496e"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `y = n` (in attainmentIff), an identity question about existence-degree maxima (y = n), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse\u2013essence identity."
+  }
 }

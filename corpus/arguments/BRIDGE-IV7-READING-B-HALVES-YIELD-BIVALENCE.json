@@ -16,5 +16,8 @@
   ],
   "disambiguation_ids": [
     "8e55e523-3436-5f78-a43a-85d1233db2c5"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee440511-1103-5020-8a39-d2a6b96e5397": "Applied to an arbitrary proposition p (intro p; obtain ⟨t, …⟩ := … p), to get a thought whose object is p. The weak version ObjectOfThoughtAffirmedOrDeniedReading (ebc49a63) only covers propositions already the object of some thought, and nothing makes an arbitrary p such an object."
+  }
 }

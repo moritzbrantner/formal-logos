@@ -204,5 +204,11 @@
       "to": "cb367167-c649-4645-b2a5-d3f20b6b5d1e",
       "statement_id": "0042dd05-7788-4d77-884d-32f868f9620f"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "8bf775e9-34e0-48e5-bdd8-f48edd1040f7": "Applied at the nine-attribute being (hImmenseSense g/n (hNineImmense … hNine)), given only that it is an infinite cause of all. The weak version PresentInfiniteCauseOfAllIsImmense (a3913182) also requires that this being be present to all things whenever they are, over a History and BeingGiving this theorem lacks, and no premise supplies that.",
+    "d7741cdc-881b-5bda-85ce-d70223162f78": "The proof uses the second conjunct (And.right): a being whose esse differs from its essence is composite (in PerfectRootPositiveIntellectWill.derive), to exclude a distinct esse in a being known not to be composite. The weak version MatterFormIsComposite (6a9199b7) is only the matter–form conjunct.",
+    "cb1cdea9-eb6c-578c-8008-84e0d4107fd3": "The premise is applied to a cause whose actual concreteness is not otherwise available: a maximum in esse (maximumEqualsRoot, actualRootMaximum), the uniting or external cause of a supposed composite or distinct-esse root, or an arbitrary given cause or prior. The proof relies on the premise's output that this cause is concrete and exists at w (ActualConcreteGround c x), either to contradict rootness or as part of the conclusion. The weak version ActualEsseCauseIsActualGround (b17a8954) assumes ActualConcrete c and yields only grounds w c x.",
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `∃ y, more () y x` (in actualFork); `∃ m, TruthCore.Latin.Aquinas.SummaTheologiae.IsMaximumIn act more () m` (in actualFork). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

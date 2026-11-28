@@ -19,5 +19,8 @@
   "disambiguation_ids": [
     "87582d70-e56a-5e51-9377-84b6655b1b68",
     "205a39c3-915d-5fe4-8076-a9ff91329e08"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.ImmediateOnlyReading σ A direct`; `TruthCore.Case.Catholicism.StageThree.FoundingDefinitions.EnvoyInclusiveReading σ A direct`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

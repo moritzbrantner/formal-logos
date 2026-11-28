@@ -42,5 +42,8 @@
       "to": "30130a78-4a0e-44bb-bb2c-9e037651fa06",
       "statement_id": "d1fb6414-976e-4833-908d-17787cca2502"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `Produces b (stand b v)`; `TruthCore.Causality.AxiarchicFoundation.ContainsGenerically Contains b (stand b v)`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

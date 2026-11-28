@@ -70,6 +70,7 @@ paraphrase = "OPEN recognition bridge, analyst formulation, attribution deferred
 id = "b6edd228-3ec6-4e42-b4c6-8c334a881c0b"
 label = "Actual-root favourings are good-general, from nonlimitation and one favouring"
 theorem = "actualRootFavouringIsGoodGeneral"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Causality.ImpersonalFoundationJoint.GoodGeneral good fitOf Present φ`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["favouringControls"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "4ff76ab8-bd4e-4a22-9cff-5f2d854697d6", "0a9d3a40-4777-4352-a4b4-2126c0055924", "ee287fd3-3890-4739-8407-a27d7c81191d", "e2357adc-6946-47a0-b39b-8efe1805d214", "3e6ae3e7-28c6-4dae-9d23-f021b4d9ddf2"]
 conclusion = "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245"
@@ -94,6 +95,7 @@ meaning = "Fix an actual root r at w. Commitment (e) in its weakest favouring fo
 id = "c5b14912-432d-484d-84ee-8dd361c9ef6d"
 label = "GOD_4 HAS_INTELLECT_1 from good-general apprehension at the root and finite reach"
 theorem = "godHasIntellectFromGoodGeneralApprehension"
+strong_version_needed = { "dc397705-d727-419e-92f9-65d44e1ff15d" = "The proof extracts an actual root n (obtain ⟨n, hn⟩ := hRoot). The weak version WholeRosterNotTrapped (5c898d24) holds vacuously for an empty actual roster. It yields a root only together with an actual-population premise (InhabitedConcreteAt) and excluded middle (WholeRosterRootEquivalence.equivalence), and this argument lacks the population premise." }
 comparator_theorems = ["intellectStepControls"]
 premises = ["dc397705-d727-419e-92f9-65d44e1ff15d", "75974d26-9483-4e1b-81a9-693a90ee9d0f", "3a32d91c-23f3-403f-a0dd-a34a362f7b8e", "02f04027-2f35-43f9-b283-2030c718ea67"]
 conclusion = "29818edd-9f5a-5414-baa2-9a7d0c8abf18"

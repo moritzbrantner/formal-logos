@@ -35,5 +35,8 @@
       "to": "572f19f2-8833-4133-8bea-b8b5fa4ac24f",
       "statement_id": "6a0b545c-d3bb-52d1-b0b7-c3ea48febb92"
     }
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to `y = x` (in nothingMovesExceptInAct), an identity question about a mover and the moved (y = x), where neither side is given as a GOD_4 candidate. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

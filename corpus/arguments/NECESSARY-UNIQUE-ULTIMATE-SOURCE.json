@@ -48,5 +48,8 @@
     "c529e8d3-43e3-53a8-a82f-3955e9815265",
     "6e92c6e3-edf0-5d7e-b2b3-788b24b8b768",
     "7507d645-874d-5434-add8-2f49c2801d36"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `(TruthCore.Explanation.NecessaryUltimateSource.distinctGroundProfile m concrete).ontic.ExistsAt v x` (in rootForkOfAccessibility); `TruthCore.German.Kant.CosmologicalInference.ContingentAt (TruthCore.Explanation.NecessaryUltimateSource.distin` (in rootForkOfAccessibility). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

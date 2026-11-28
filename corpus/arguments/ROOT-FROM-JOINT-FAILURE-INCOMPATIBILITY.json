@@ -12,5 +12,8 @@
   "meaning": "Logical schema, not a concrete root settlement: excluded middle turns failure of a conjunction into a failed index. If the left route fails, its exhaustive consequence X holds; any failure of the right would then supply Y and contradict \u00ac(X \u2227 Y). Hence the right route completes, or the left already did; either route yields the common conclusion. Every route derivation and failure consequence remains an input inside the quantified schema.",
   "definition_ids": [
     "502e8eac-364b-5cf9-8464-60a9ae30a5c8"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `left i` (in failure_of_not_complete); `right j` (in coverage). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse\u2013essence identity."
+  }
 }

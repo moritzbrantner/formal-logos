@@ -39,5 +39,8 @@
     "205a39c3-915d-5fe4-8076-a9ff91329e08",
     "c529e8d3-43e3-53a8-a82f-3955e9815265",
     "e5417243-d6f3-4776-9694-40d85bb34ff4"
-  ]
+  ],
+  "strong_version_needed": {
+    "ee4ab504-c8fe-59bc-bc96-7cbeefed6410": "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `TruthCore.Modal.PrussPowerPremises.GivesTo F v n x` (in will_step); `∃ v, F.history.ontic.frame.access w v ∧ F.history.ontic.ExistsAt v n ∧ ¬TruthCore.Modal.PrussPowerPremises.Giv` (in will_step). LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity."
+  }
 }

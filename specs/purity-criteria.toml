@@ -39,6 +39,7 @@ paraphrase = "OPEN analyst premise, attribution deferred: for some variation sce
 id = "b86a2364-8255-43f7-a725-08503ef2f1a5"
 label = "Actual-root favourings are good-general, from nonlimitation and the value standard"
 theorem = "actualRootFavouringIsGoodGeneralFromStandard"
+strong_version_needed = { "ee4ab504-c8fe-59bc-bc96-7cbeefed6410" = "The proof applies excluded middle to propositions outside LocalLogic's scope, e.g. `φ s x y`; `v.better s x y`. LocalLogic (ca432e24) decides only whether an actual bearer is identical with a GOD_4 candidate, and gives double-negation elimination for that candidate's esse–essence identity." }
 comparator_theorems = ["standardControls", "standardRelativity", "refinementCondemnsGoodTracking"]
 premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "a30c5963-cb81-5366-aab0-2454363e18f7", "c78c77da-91b0-5928-bd5f-ba670a6f3660", "720bccc2-2114-4f6c-ab8a-a16aab3c9de3", "a141e6a8-7ef7-443f-82fd-ee8a6c8663c5", "ca3c311d-dab7-417d-8eb7-87c81fe82029"]
 conclusion = "7fca65ec-8565-46fe-a5fe-bfdfcf0ed245"
