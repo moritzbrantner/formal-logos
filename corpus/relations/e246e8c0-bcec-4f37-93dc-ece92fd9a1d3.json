@@ -1,0 +1,10 @@
+{
+  "id": "e246e8c0-bcec-4f37-93dc-ece92fd9a1d3",
+  "label": "Trolley controls test the loop facts",
+  "subject_kind": "argument",
+  "subject_id": "6ccd9c54-4307-4935-87d3-b07e9d48faff",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cc63323d-0f80-4c51-b8d0-db8db1fd15e9",
+  "note": "With the harm added to the loop plan, the intention reading of double effect forbids the loop; its loop verdict depends on the plan fact."
+}

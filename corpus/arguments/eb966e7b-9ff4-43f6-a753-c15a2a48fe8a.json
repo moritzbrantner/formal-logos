@@ -1,0 +1,23 @@
+{
+  "id": "eb966e7b-9ff4-43f6-a753-c15a2a48fe8a",
+  "label": "Switching in Thomson's loop is impermissible, from the causal MEANS_1 principle",
+  "premise_statement_ids": [
+    "a74a388b-b2b0-4c4f-9ede-f23d6d6d3884",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "conclusion_statement_id": "98bb5913-4800-4b92-87c1-c5906db623f6",
+  "inference_ids": [
+    "888a98d4-1f17-4b06-a5b1-c463e9d10b30"
+  ],
+  "meaning": "The loop harm is a causal means (MEANS_1).",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542",
+    "f198218e-601d-4d5d-8a6a-120c2f22d7a1"
+  ],
+  "disambiguation_ids": [
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "2e3e94d7-3961-4870-8cb0-dd657002cc06",
+  "label": "Switching in Thomson's loop is permissible, from double effect on its intention reading",
+  "argument_id": "a9772f4d-b027-46b3-8bcb-6305cccac14d",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.intentionDoubleEffectLoop",
+  "comparator_config": "results/2e3e94d7-3961-4870-8cb0-dd657002cc06/comparator.json",
+  "status": "solution-present",
+  "description": "With the plan omitting the harm, neither INTENDS_1 nor MEANS_2 holds; proportionality holds."
+}

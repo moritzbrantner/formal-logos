@@ -1,0 +1,18 @@
+{
+  "id": "a7d5b225-96cb-44f9-a285-d2a21ed98209",
+  "label": "Lives-only act consequentialism fails, from the transplant verdict",
+  "premise_statement_ids": [
+    "46ce440e-5487-43c9-a6e3-dae46775c5a1",
+    "cfe2a5c6-6f09-454c-ba07-9f9c16e9c460"
+  ],
+  "conclusion_statement_id": "bf07f454-d164-4a4f-9e31-151add2f731a",
+  "inference_ids": [
+    "fa8a3027-c39d-4553-98ff-fc04a3e70ab1"
+  ],
+  "meaning": "Contrapositive of the act-consequentialist transplant derivation. In this frame transplant and footbridge are one formal case with two verdicts, not independent data; they share defeaters such as personal force and using a person. Conditional on the open prima facie verdict.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "192bbb8d-19a6-4ba6-9dbe-5f4af68a5a59"
+  ]
+}

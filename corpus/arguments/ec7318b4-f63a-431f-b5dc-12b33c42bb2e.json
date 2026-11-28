@@ -1,0 +1,23 @@
+{
+  "id": "ec7318b4-f63a-431f-b5dc-12b33c42bb2e",
+  "label": "Switching in Thomson's loop is permissible, from the redirection principle",
+  "premise_statement_ids": [
+    "db653ae6-974e-403f-a6d6-7dd57782e801",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "conclusion_statement_id": "5a5bd4a6-4224-4350-8d60-8adb59623cf1",
+  "inference_ids": [
+    "70ff6a60-9e38-4b4a-9e6d-d5c5dfbb95b4"
+  ],
+  "meaning": "The loop harm lies only downstream of redirecting the threat (no KILLS_2); proportionality holds.",
+  "definition_ids": [
+    "0e679e1c-17fc-47b0-8816-f501fef7103c",
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "c094090d-0572-4a8a-9add-c993cae6e079",
+    "d57f6eee-5f19-4b6d-b742-8e263c14b542",
+    "db7d724e-63af-44f1-9e52-ebf218ec1a06"
+  ],
+  "disambiguation_ids": [
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee"
+  ]
+}

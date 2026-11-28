@@ -1,0 +1,11 @@
+{
+  "id": "47070f56-a96b-4169-9733-c57586c137d5",
+  "label": "Switching in Thomson's loop is impermissible, from double effect on its causal reading",
+  "argument_id": "eef177ba-a34f-4c31-8e46-23ea07a19367",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.doubleEffectLoop",
+  "comparator_config": "results/47070f56-a96b-4169-9733-c57586c137d5/comparator.json",
+  "status": "solution-present",
+  "description": "In the loop every path to the saving passes through the one's harm (MEANS_1), so condition 3 on its causal reading fails although the plan omits the harm."
+}

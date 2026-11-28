@@ -1,0 +1,27 @@
+{
+  "id": "5e5b757f-6822-4330-8674-74ea2ff1e25a",
+  "label": "Trolley joint models",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "bef996cf-4e3c-4ba4-8b66-f2a0314d99d1",
+  "inference_ids": [
+    "8a6ae17a-c40f-47fa-bfce-9ac612f96e60"
+  ],
+  "meaning": "Nonvacuity: on the four stated case descriptions, assigning permissibility by each principle yields a model of that principle, all case facts and the common triad; the causal reading of double effect and the causal means principle with loop impermissible, the intention reading and redirection with loop permissible. Models of consistency only; the senses appear side by side, not mixed.",
+  "definition_ids": [
+    "18abb0a5-15bc-4048-b79a-18330567c0a7",
+    "1daf2585-0e75-4225-9610-0f43fd6dbb28",
+    "42f12421-a59f-4f9b-ab32-967295a98dd2",
+    "6293dc36-7029-4722-9c54-6a034a3cf6fd",
+    "6619bdb3-7470-4cd5-896b-0dbb4ac65935",
+    "9f2e7071-dba0-4b53-942e-6d33d5445b3d",
+    "c094090d-0572-4a8a-9add-c993cae6e079",
+    "db7d724e-63af-44f1-9e52-ebf218ec1a06",
+    "f198218e-601d-4d5d-8a6a-120c2f22d7a1"
+  ],
+  "disambiguation_ids": [
+    "63369e84-f651-42b5-bfef-409c3872f917",
+    "97e65a8a-3793-4b54-bab4-95307c6d57ee",
+    "ea9c5a67-c9a2-417f-afa2-8b82e9d56107"
+  ],
+  "sense_mixing_control": true
+}

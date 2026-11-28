@@ -1,0 +1,13 @@
+{
+  "id": "b63a60ae-387d-4bca-b240-f72adf949970",
+  "label": "Same-exercise operation unity needs intrinsic realization and complete individuation",
+  "paraphrase": "For any shared CausalityFrame and selected actual bearer/exercise, the subtype of occurring operations at that bearer and exercise is a subsingleton IF the bearer is constitutively simple, every selected operation's realizer is a real constituent of that bearer, and the supplied bearer/exercise/complete-immediate-realizer profile is injective on operation tokens. This is a local application of the earlier realizer-collapse law; it asserts neither an existing operation nor equality across different exercises. The completeness and intrinsic-realization applications are OPEN. A common subject, faculty, remote cause, realizer or extensional object profile alone does not supply them; objects are not the operation-token carrier.",
+  "lean_declaration": "TruthCore.Causality.IntentionalUnity.LocalOperationUnityLaws",
+  "definition_ids": [
+    "9f2678f7-6b80-40b5-b4b3-3d808ee90852",
+    "127126f2-a1e6-4789-8fe0-e3d04898b78a",
+    "c8f69e93-4ed5-4f04-bd9a-8332a4d20aad",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "75d4dd78-c070-4961-8130-6b0d248863c3"
+  ]
+}

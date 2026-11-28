@@ -1,0 +1,13 @@
+{
+  "id": "888a98d4-1f17-4b06-a5b1-c463e9d10b30",
+  "label": "Switching in Thomson's loop is impermissible, from the causal MEANS_1 principle (inference)",
+  "input_statement_ids": [
+    "a74a388b-b2b0-4c4f-9ede-f23d6d6d3884",
+    "cc63323d-0f80-4c51-b8d0-db8db1fd15e9"
+  ],
+  "output_statement_id": "98bb5913-4800-4b92-87c1-c5906db623f6",
+  "rule": "Theorem reuse, rewriting by the case description and computation on the finite case",
+  "meaning": "The loop harm is a causal means (MEANS_1).",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

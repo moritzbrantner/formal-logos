@@ -1,0 +1,11 @@
+{
+  "id": "b3409a29-ebe7-468a-8db1-27f21355285f",
+  "label": "Common triad verdicts, from double effect on its causal reading",
+  "argument_id": "870cbf3e-b2cf-4554-b9d6-166d3b21a1b8",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.doubleEffectTriad",
+  "comparator_config": "results/b3409a29-ebe7-468a-8db1-27f21355285f/comparator.json",
+  "status": "solution-present",
+  "description": "Switch: harm off the rescue path, not planned, proportionate, so permissible. Footbridge and transplant: harm is a MEANS_1 (and planned), so impermissible. Computed from the causal graphs by reachability."
+}

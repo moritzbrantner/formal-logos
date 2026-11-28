@@ -1,0 +1,10 @@
+{
+  "id": "f6b291e1-b65f-40eb-9ec0-2d4c3928ced4",
+  "label": "Countable constituency controls and restored-account application (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "90102168-f4be-46dc-ae95-2403cf90cacc",
+  "rule": "Check positive Nat orders and the three semantic omissions, then compose the new criterion with both existing restored accounts",
+  "meaning": "The increasing-order witness has infinitely many specification facts and actual whole realization; the simple row's proper-contribution guard is vacuous. A second actual constituent survives when coverage or the necessary contribution bridge is removed. Reversing priority restores nonvacuous proper contribution but removes posteriority. The source-to-specification-to-different-operation chain isolates the same-explanandum condition. Both previous restored accounts supply positive mode paths to the new criterion with identical guards and inherited coverage. No equality of overall warrant, cognition conclusion, full mind-independence or metaphysical coherence is inferred from these structural controls.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

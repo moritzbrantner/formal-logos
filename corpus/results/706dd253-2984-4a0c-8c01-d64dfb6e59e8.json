@@ -1,0 +1,11 @@
+{
+  "id": "706dd253-2984-4a0c-8c01-d64dfb6e59e8",
+  "label": "Pushing the footbridge bystander is permissible, from lives-only act consequentialism",
+  "argument_id": "576628b9-2734-43d3-b6ff-93295d4009dd",
+  "challenge_module": "TruthCore.Results.Ethics.Trolley.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Trolley.Solution",
+  "theorem": "TruthCore.Results.Ethics.Trolley.acFootbridge",
+  "comparator_config": "results/706dd253-2984-4a0c-8c01-d64dfb6e59e8/comparator.json",
+  "status": "solution-present",
+  "description": "Act consequentialism compares only deaths: one versus five makes pushing permissible. No causal or intentional feature of the case is used."
+}

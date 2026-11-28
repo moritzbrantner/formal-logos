@@ -1,0 +1,13 @@
+{
+  "challenge_module": "TruthCore.Results.Causality.IntentionalUnity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntentionalUnity.Solution",
+  "theorem_names": [
+    "TruthCore.Results.Causality.IntentionalUnity.posteriorConstitutionLaws"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

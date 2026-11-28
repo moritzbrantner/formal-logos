@@ -1,0 +1,11 @@
+{
+  "id": "b1da92ca-e297-434d-a9cf-8312e23e4420",
+  "label": "Local operation unity by restricted realization and complete intrinsic profile",
+  "argument_id": "ad4e6fe3-f7ff-47a2-9dfc-97ce57d75121",
+  "challenge_module": "TruthCore.Results.Causality.IntentionalUnity.Challenge",
+  "solution_module": "TruthCore.Results.Causality.IntentionalUnity.Solution",
+  "theorem": "TruthCore.Results.Causality.IntentionalUnity.localOperationUnityLaws",
+  "comparator_config": "results/b1da92ca-e297-434d-a9cf-8312e23e4420/comparator.json",
+  "status": "solution-present",
+  "description": "Uses ImitabilityPlurality.identityAndRankingLaws, with the subtype of operations at the same actual bearer and exercise as its carrier. Equal real realizers plus matching bearer/exercise give token equality only through the explicit profile-completeness premise. This is a scoped reuse application, not a new collapse principle or a derivation of metaphysical act individuation. No object-profile identity is assumed."
+}

@@ -7,5 +7,5 @@
   "theorem": "TruthCore.Results.Causality.ConcreteRootAccess.closedOfAccess",
   "comparator_config": "results/4f4fab04-0de2-4481-b2db-52ae972321a3/comparator.json",
   "status": "solution-present",
-  "description": "Finite root access implies CCR. Conditional structural consequence only; no independent warrant or rival defeat. Excluded middle is explicit where listed."
+  "description": "Finite root access implies CCR. Conditional structural consequence only; no independent warrant or rival defeat. Constructive: no excluded middle is used."
 }

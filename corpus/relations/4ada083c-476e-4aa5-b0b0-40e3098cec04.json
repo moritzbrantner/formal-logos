@@ -1,0 +1,10 @@
+{
+  "id": "4ada083c-476e-4aa5-b0b0-40e3098cec04",
+  "label": "Blanket equivalence tests CCR",
+  "subject_kind": "result",
+  "subject_id": "de375db2-ec3d-46c9-bae4-297578d8a1fe",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "aca3baa1-9be6-4720-a53d-22050e638561",
+  "note": "Tests whether borrowed reality under supplier concreteness is independent support for CCR: given supplier concreteness, CCR and borrowed reality are constructively equivalent, so that route needs warrant for borrowed reality not routed through CCR."
+}
