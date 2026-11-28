@@ -1263,7 +1263,9 @@ constant their bound type does not reach, naming another sense of the same
 disambiguation when the type uses one. Only fresh cache entries are read, so
 run `bind-check` (or `bind-check --affected --base REV`) after `lake build`
 first. With `--base`, only records new or changed since that revision are
-judged. It always exits 0 (docs/corpus-model.md, "Type metadata lints").
+judged, together with the `tests` of every subject result `bind-check
+--affected` would select for that diff. It always exits 0
+(docs/corpus-model.md, "Type metadata lints").
 
 ## `connectivity`
 

@@ -269,7 +269,7 @@ claim that NanoDa, Comparator, axiom inspection or source checks ran.
 
    One benign class remains: a type that states the definiens inline instead of using the defined constant.
 
-Only fresh cache entries are read. A stale or missing entry, or an unreadable cache, leaves its records unchecked; the report counts them and never guesses. Each entry records a digest of the tracked set it was described for, and an entry described for another set is not read for definition links. With `--base`, only `tests` relations and statements that are new or changed since the base are judged, together with `tests` relations whose tested argument changed its premises; CI runs it on PRs after `bind-check` and adds the result to the job summary. The command always exits 0. The corpus-wide run is a backlog for #216, not a gate.
+Only fresh cache entries are read. A stale or missing entry, or an unreadable cache, leaves its records unchecked; the report counts them and never guesses. Each entry records a digest of the tracked set it was described for, and an entry described for another set is not read for definition links. With `--base`, only `tests` relations and statements that are new or changed since the base are judged, together with `tests` relations whose tested argument changed its premises or whose subject result may have a changed certificate: its record changed, or `bind-check --affected` selects it for the same diff (its Comparator config or a Lean module its Challenge or Solution imports changed; a change that selects every result rejudges every test); CI runs it on PRs after `bind-check` and adds the result to the job summary. The command always exits 0. The corpus-wide run is a backlog for #216, not a gate.
 
 ## Composition and visualization
 

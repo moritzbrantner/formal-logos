@@ -7,6 +7,8 @@
 //!    premise ([`LOGICAL_PREMISES`], for example `ExcludedMiddle`), while the
 //!    subject result's certificate type does not reach that premise's
 //!    declaration. The model then certifies the nonlogical premises only.
+//!    With a base, such a test is judged again when its relation, the tested
+//!    argument's premises or a subject result's certificate inputs changed.
 //! 2. **Definition not in the type.** A statement's `definition_ids` link a
 //!    definition whose `lean_declaration` the statement's bound Lean type
 //!    does not reach. When the type reaches the declaration of another sense
@@ -247,7 +249,15 @@ impl Described {
 /// The scope of a run: everything, or what changed since a base corpus.
 pub enum Scope<'b> {
     All,
-    Since(&'b Corpus),
+    Since {
+        base: &'b Corpus,
+        /// The results whose certificate may have changed since the base, as
+        /// `bind-check --affected` selects them (`scripts/affected_results.py`:
+        /// the result record, its Comparator config directory, or a module
+        /// its Challenge or Solution imports transitively changed); `None`
+        /// when the change selects every result.
+        affected_results: Option<BTreeSet<String>>,
+    },
 }
 
 impl Scope<'_> {
@@ -255,11 +265,32 @@ impl Scope<'_> {
     fn judges(&self, kind: &str, id: &str, record: &Obj, fields: &[&str]) -> bool {
         match self {
             Scope::All => true,
-            Scope::Since(base) => base.get(kind, id).is_none_or(|old| {
+            Scope::Since { base, .. } => base.get(kind, id).is_none_or(|old| {
                 fields
                     .iter()
                     .any(|field| old.fields.get(*field) != record.get(*field))
             }),
+        }
+    }
+
+    /// A result's certificate type may differ from the base: the result is
+    /// affected (its Lean inputs or records changed), or its record is new or
+    /// changed in any field.
+    fn result_changed(&self, corpus: &Corpus, result: &str) -> bool {
+        match self {
+            Scope::All => true,
+            Scope::Since {
+                base,
+                affected_results,
+            } => {
+                affected_results
+                    .as_ref()
+                    .is_none_or(|affected| affected.contains(result))
+                    || corpus.get("results", result).is_some_and(|record| {
+                        base.get("results", result)
+                            .is_none_or(|old| old.fields != record.fields)
+                    })
+            }
         }
     }
 }
@@ -297,8 +328,18 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
         let Some(argument) = corpus.get("arguments", object) else {
             continue;
         };
-        // Judged when the relation is new or changed, or when the tested
-        // argument's premises changed (it may have gained a logical premise).
+        let subjects: Vec<&str> = match text(relation, "subject_kind") {
+            "result" => vec![text(relation, "subject_id")],
+            "argument" => results_of
+                .get(text(relation, "subject_id"))
+                .cloned()
+                .unwrap_or_default(),
+            _ => Vec::new(),
+        };
+        // Judged when the relation is new or changed, when the tested
+        // argument's premises changed (it may have gained a logical premise),
+        // or when a subject result's certificate may have changed (it may no
+        // longer reach the logical premise).
         if !scope.judges(
             "relations",
             id,
@@ -309,7 +350,10 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
             object,
             &argument.fields,
             &["premise_statement_ids"],
-        ) {
+        ) && !subjects
+            .iter()
+            .any(|subject| scope.result_changed(corpus, subject))
+        {
             continue;
         }
         let logical: Vec<(&str, &str)> = list(&argument.fields, "premise_statement_ids")
@@ -326,14 +370,6 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
         if logical.is_empty() {
             continue;
         }
-        let subjects: Vec<&str> = match text(relation, "subject_kind") {
-            "result" => vec![text(relation, "subject_id")],
-            "argument" => results_of
-                .get(text(relation, "subject_id"))
-                .cloned()
-                .unwrap_or_default(),
-            _ => Vec::new(),
-        };
         tests_judged += 1;
         for subject in subjects {
             let Some(reached) = described.certificate(subject) else {
@@ -481,7 +517,7 @@ pub fn report(corpus: &Corpus, described: &Described, scope: &Scope) -> Value {
         }
     }
     json!({
-        "scope": match scope { Scope::All => "all", Scope::Since(_) => "since_base" },
+        "scope": match scope { Scope::All => "all", Scope::Since { .. } => "since_base" },
         "results_unchecked": described.unchecked.len(),
         "results_tracking_outdated": described.tracking_outdated.len(),
         "cache_note": described.note,
@@ -888,7 +924,78 @@ mod tests {
     }
 
     fn report_since(corpus: &Corpus, base: &Corpus) -> Value {
-        report(corpus, &described(), &Scope::Since(base))
+        report(
+            corpus,
+            &described(),
+            &Scope::Since {
+                base,
+                affected_results: Some(BTreeSet::new()),
+            },
+        )
+    }
+
+    /// #2167 review: a test whose subject's certificate changed is judged
+    /// again although the relation and the tested argument did not change.
+    #[test]
+    fn a_changed_subject_certificate_rejudges_its_tests() {
+        let checkout = fixture();
+        let corpus = Corpus::load(&checkout.0).unwrap();
+        // CTRL-OK's refreshed certificate no longer reaches EM.
+        let refreshed = Described::from_descriptions(
+            &BTreeMap::from([
+                (
+                    "CTRL-OK".to_owned(),
+                    json!({"binders": [item("T.P", &[])], "result": item("T.Cert", &[])}),
+                ),
+                (
+                    "CTRL-BAD".to_owned(),
+                    json!({"binders": [item("T.P", &[])], "result": item("T.Model", &[])}),
+                ),
+            ]),
+            KINDS,
+        );
+        let since = |base: &Corpus, affected: Option<&[&str]>| {
+            report(
+                &corpus,
+                &refreshed,
+                &Scope::Since {
+                    base,
+                    affected_results: affected
+                        .map(|ids| ids.iter().map(|id| (*id).to_owned()).collect()),
+                },
+            )
+        };
+        let flagged = |report: &Value| -> Vec<String> {
+            report["tests_missing_logical_premise"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|entry| entry["relation_id"].as_str().unwrap().to_owned())
+                .collect()
+        };
+        // Unaffected and unchanged: not judged.
+        let unchanged = since(&corpus, Some(&[]));
+        assert_eq!(unchanged["tests_judged"], 0);
+        // Its Lean inputs changed (bind-check's affected selection): only its
+        // own test is judged, and the new defect is reported.
+        let affected = since(&corpus, Some(&["CTRL-OK"]));
+        assert_eq!(affected["tests_judged"], 1, "{affected}");
+        assert_eq!(flagged(&affected), ["REL-OK"]);
+        // A change that selects every result judges every test.
+        let full = since(&corpus, None);
+        assert_eq!(full["tests_judged"], 2);
+        assert_eq!(flagged(&full), ["REL-BAD", "REL-OK"]);
+        // Its result record changed (here its theorem): judged as well.
+        let base = fixture();
+        base.write(
+            "results",
+            json!({"id": "CTRL-OK", "argument_id": "CTRL-OK-ARG", "theorem": "old",
+                   "solution_module": "M"}),
+        );
+        let base_corpus = Corpus::load(&base.0).unwrap();
+        let record = since(&base_corpus, Some(&[]));
+        assert_eq!(record["tests_judged"], 1);
+        assert_eq!(flagged(&record), ["REL-OK"]);
     }
 
     #[test]
