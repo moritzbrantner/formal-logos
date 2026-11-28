@@ -1,6 +1,6 @@
 {
   "id": "78f10e01-dca5-4a77-b4ce-dc1a88fbaca9",
-  "label": "Transport of the product control gives every interior mass on countable carriers",
+  "label": "Pushforward of the product control gives every interior mass on countable carriers",
   "premise_statement_ids": [],
   "conclusion_statement_id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
   "inference_ids": [

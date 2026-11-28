@@ -1,6 +1,6 @@
 {
   "id": "b945e56e-b327-4737-9ba2-62e2e721e9e0",
-  "label": "Nested exhaustive type cutoffs give every positive rational relative frequency",
+  "label": "Nested exhaustive type cutoffs give every rational frequency strictly between zero and one",
   "paraphrase": "For positive naturals a and b, the stages retaining the first a(n+1) true-type and b(n+1) false-type instances of the roster Bool x Nat form an exhaustion, and the relative frequency of the true type is a/(a+b) at every stage and in the limit. These values are exactly the rationals strictly between zero and one.",
   "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.CutoffUnderdetermination",
   "definition_ids": [
