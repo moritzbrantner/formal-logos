@@ -1,0 +1,25 @@
+{
+  "id": "acb74cb3-033a-4f48-be16-9f593972ffb9",
+  "label": "Supply edge: partial co-ground or sufficient supply",
+  "term": "supply edge of the closed-collection Profile",
+  "sense_definition_ids": [
+    "e2dffa9a-a37f-45eb-b149-73ed9eb3a06d",
+    "6f44f695-4098-4a14-a583-bc41ffdde7cf"
+  ],
+  "resolution": "The Profile edge m.grounds used by CCR (aca3baa1-9be6-4720-a53d-22050e638561), borrowed reality (45890c84-1d33-4273-b0ea-0f75bfd67a33), supplier concreteness and the ConcreteRootAccess batch is neutral: every registered theorem there holds whichever sense an edge takes, and no statement selects one. The localized bridge (a485166e-4868-4a0f-b017-ab095c16e202) demands root access for every concrete recipient with any actual nonconcrete supplier, whatever the sense. The two senses matter for the rival comparison only. The motivation 'harmless abstract co-grounds' reads an abstract edge as SUPPLY_EDGE_1: the abstract supplier does not select existence, but its edge stays in the selected relation, so supply-closure still counts it and borrowed reality holds vacuously on the mixed profile; treating the concrete network as a pure rootless network would need a different relation without that edge, which no record justifies. The mixed realization-law rival reads it as SUPPLY_EDGE_2: under CONCRETE_6 a nonconcrete sufficient supplier of esse owes an account of supplying esse without esse in re (docs/notes/esse-root-leaves.md, (f) row 6). No argument passes from one sense to the other. Both senses are modal-covariation proxies: they exclude each other constructively and, under explicit excluded middle, cover every actual edge (ConcreteRootAccess.partial_or_sufficient), but only by construction. The proxies mis-sort two cases: a sufficient supplier of a contingent effect (a free sustaining cause, a necessary agent with a contingent effect) falls under SUPPLY_EDGE_1, and a partial contributor to a recipient that exists wherever it does (every NECESSARY_2 recipient) falls under SUPPLY_EDGE_2. Neither label may therefore be used to classify such a case.",
+  "term_label": "SUPPLY_EDGE",
+  "senses": [
+    {
+      "id": "4b54df1d-7204-4378-8e5c-f2a73dcb434e",
+      "label": "SUPPLY_EDGE_1",
+      "definition_id": "e2dffa9a-a37f-45eb-b149-73ed9eb3a06d",
+      "lean_declaration": "TruthCore.Causality.ConcreteRootAccess.PartialCoGround"
+    },
+    {
+      "id": "883ea6cf-d332-4298-ab60-4cf7fe320d8c",
+      "label": "SUPPLY_EDGE_2",
+      "definition_id": "6f44f695-4098-4a14-a583-bc41ffdde7cf",
+      "lean_declaration": "TruthCore.Causality.ConcreteRootAccess.SufficientSupply"
+    }
+  ]
+}
