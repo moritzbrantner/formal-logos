@@ -1,0 +1,14 @@
+{
+  "id": "8bc29667-ecdd-4255-b8df-06ad3973dc43",
+  "label": "Neither Euthyphro horn holds",
+  "paraphrase": "The standard of goodness is not an independent standard distinct from God, and it is neither dependent for what it is on God's approving nor identical with it.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.NeitherHorn",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ],
+  "connection_plan": {
+    "target_statement_id": "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+    "missing_bridge": "From goodness identical with the divine nature and approval following that nature to the named assessor approving exactly the due actualities in the form/end frame: creaturely due actuality as participated likeness of the divine goodness, read as God's approval.",
+    "blocker": "No participation or likeness vocabulary links the dependence frame to the form/end profile frame."
+  }
+}

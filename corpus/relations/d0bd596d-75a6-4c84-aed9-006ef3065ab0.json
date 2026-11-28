@@ -1,0 +1,10 @@
+{
+  "id": "d0bd596d-75a6-4c84-aed9-006ef3065ab0",
+  "label": "Euthyphro controls test base goodness invariance",
+  "subject_kind": "result",
+  "subject_id": "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "30f61b46-2d54-409f-9859-a0ce904dce98",
+  "note": "The voluntarist model has approval variation and approval grounding with invariance false: invariance is needed for the modal approval failure."
+}

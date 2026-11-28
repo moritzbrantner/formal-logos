@@ -1,0 +1,11 @@
+{
+  "id": "db74f405-1aad-465e-b7c2-1a34e62e9446",
+  "label": "Modal approval failure, from invariance and nature-fixed approval variation",
+  "argument_id": "d1202ecc-83c0-49db-9683-c04082b1b355",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.approvalNotGroundFromInvariance",
+  "comparator_config": "results/db74f405-1aad-465e-b7c2-1a34e62e9446/comparator.json",
+  "status": "solution-present",
+  "description": "Euthyphro core, analyst formulation: if goodness stays fixed while the natures stay fixed, and the assessor's approvals change in such a profile, approval cannot coextend with goodness in every such profile. The theorem is assessor-generic: it applies to a human assessor and to a divine assessor alike, and the instances differ only in whether the variation premise holds."
+}

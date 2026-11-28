@@ -1,0 +1,21 @@
+{
+  "id": "1633f7ff-0c39-4537-a849-6f13ddfc64ce",
+  "label": "Weak approval premise from approval and due-actuality coextension",
+  "premise_statement_ids": [
+    "79ba9d77-257e-4abd-bd20-e164d17c64f6"
+  ],
+  "conclusion_statement_id": "9134209f-9027-4f95-866d-13c2831d97a1",
+  "inference_ids": [
+    "2fcd3858-fec4-4e61-b1ee-a915529c4d9b"
+  ],
+  "meaning": "Strength order: coextension of the named approval and due-actuality accounts gives the weak approval premise. This is the support option for an assessor whose approvals track due actuality, such as the nature-fixed divine assessor of the joint model.",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "ea819c3e-09bb-5000-85f8-e4b28e34aead",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

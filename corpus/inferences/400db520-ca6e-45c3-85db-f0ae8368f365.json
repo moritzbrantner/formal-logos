@@ -1,0 +1,12 @@
+{
+  "id": "400db520-ca6e-45c3-85db-f0ae8368f365",
+  "label": "Weak approval premise from extensional approval failure (inference)",
+  "input_statement_ids": [
+    "50d8be94-f9c1-52af-bf43-fb2751915756"
+  ],
+  "output_statement_id": "9134209f-9027-4f95-866d-13c2831d97a1",
+  "rule": "disjunction introduction",
+  "meaning": "Strength order: extensional failure of the named approval account gives the disjunction that it fails or coextends with the due-actuality account.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

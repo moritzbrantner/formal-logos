@@ -1,0 +1,10 @@
+{
+  "id": "c220a4d6-fd0b-492e-b018-53a548818630",
+  "label": "Euthyphro controls test the rigidity bridge",
+  "subject_kind": "result",
+  "subject_id": "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "c2c3bebf-cd31-4ec4-9055-7d09acb898ac",
+  "note": "The rigidified model satisfies invariance and variation, the modal approval failure holds, the bridge fails and the base approval account is correct: the bridge is needed for the extensional conclusion."
+}

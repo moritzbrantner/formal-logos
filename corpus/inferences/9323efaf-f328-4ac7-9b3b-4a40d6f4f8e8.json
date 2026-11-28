@@ -1,0 +1,15 @@
+{
+  "id": "9323efaf-f328-4ac7-9b3b-4a40d6f4f8e8",
+  "label": "Due actuality from correct support with the weak approval premise (inference)",
+  "input_statement_ids": [
+    "9108832f-0ef5-5036-8550-f405c7203ff4",
+    "40420659-5692-5b9c-ab26-36941f0a1a97",
+    "4c22019a-12c3-5cf6-adff-7288a3741e1a",
+    "9134209f-9027-4f95-866d-13c2831d97a1"
+  ],
+  "output_statement_id": "6cc47d1b-4840-54e1-b96b-d389d74fbbf4",
+  "rule": "case split on the named extension of a supported correct account; an approval-correct case coextends with due actuality",
+  "meaning": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. No premise is established.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

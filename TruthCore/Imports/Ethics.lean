@@ -2,6 +2,8 @@
 module
 
 public import TruthCore.Ethics.AgencyNeutrality
+public import TruthCore.Ethics.Euthyphro
+public import TruthCore.Ethics.EuthyphroDilemma
 public import TruthCore.Ethics.HardCaseGoods
 public import TruthCore.Ethics.HardCaseTyped
 public import TruthCore.Ethics.MoralAccessFibers

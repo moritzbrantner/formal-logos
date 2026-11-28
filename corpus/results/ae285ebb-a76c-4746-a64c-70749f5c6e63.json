@@ -1,0 +1,11 @@
+{
+  "id": "ae285ebb-a76c-4746-a64c-70749f5c6e63",
+  "label": "Weak approval premise from extensional approval failure",
+  "argument_id": "99c137ca-8e42-47fa-8ad2-576d9c77b499",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.approvalFailsWeakens",
+  "comparator_config": "results/ae285ebb-a76c-4746-a64c-70749f5c6e63/comparator.json",
+  "status": "solution-present",
+  "description": "Strength order: extensional failure of the named approval account gives the disjunction that it fails or coextends with the due-actuality account."
+}

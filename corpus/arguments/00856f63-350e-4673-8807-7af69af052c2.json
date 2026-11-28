@@ -1,0 +1,20 @@
+{
+  "id": "00856f63-350e-4673-8807-7af69af052c2",
+  "label": "Base goodness invariance from supervenience on the natural base",
+  "premise_statement_ids": [
+    "301b241d-af77-4af9-b881-dffd8af2e685"
+  ],
+  "conclusion_statement_id": "30f61b46-2d54-409f-9859-a0ce904dce98",
+  "inference_ids": [
+    "1e633265-961f-4e19-a938-edf283c3166b"
+  ],
+  "meaning": "Strength order: supervenience over every pair of profiles gives invariance of base goodness over the profiles that keep the base natures. The weak version is the one the Euthyphro argument uses.",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

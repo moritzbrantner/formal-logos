@@ -1,0 +1,9 @@
+{
+  "id": "3b258c1f-e63b-40a6-980e-65184707bc0e",
+  "label": "Other things that depend on God for what they are depend on his approval",
+  "paraphrase": "Open premise: whatever is distinct from God, his nature and his approving, and depends on God for what it is, depends for what it is on God's approving.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.DistinctDependenceThroughApproval",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

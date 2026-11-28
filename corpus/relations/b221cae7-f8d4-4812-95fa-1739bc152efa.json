@@ -1,0 +1,10 @@
+{
+  "id": "b221cae7-f8d4-4812-95fa-1739bc152efa",
+  "label": "Euthyphro controls test extensional approval failure",
+  "subject_kind": "result",
+  "subject_id": "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "50d8be94-f9c1-52af-bf43-fb2751915756",
+  "note": "False in the divine joint model, where the named assessor approves exactly the due actualities, and in the rigidified model; true in the human-assessor model. With the correct-support inputs, the due thesis holds in the divine model, so this premise is not needed there."
+}

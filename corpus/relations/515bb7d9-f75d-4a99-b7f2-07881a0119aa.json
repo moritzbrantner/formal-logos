@@ -1,0 +1,10 @@
+{
+  "id": "515bb7d9-f75d-4a99-b7f2-07881a0119aa",
+  "label": "Euthyphro controls test nature-fixed approval variation",
+  "subject_kind": "result",
+  "subject_id": "065dbce4-3f3f-417d-90dc-f3bba2af09d7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "cd616911-8bb5-4134-bec3-ff1451cbb0c3",
+  "note": "The divine joint model has supervenience and approval grounding with variation false: variation is needed, and it is exactly where human-assessor and nature-fixed divine-assessor instances differ."
+}

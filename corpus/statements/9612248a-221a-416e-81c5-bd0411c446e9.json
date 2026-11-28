@@ -1,0 +1,14 @@
+{
+  "id": "9612248a-221a-416e-81c5-bd0411c446e9",
+  "label": "Euthyphro dilemma coverage finite controls",
+  "paraphrase": "General facts: identity with a necessary divine nature leaves goodness fixed across nature profiles; property collapse needs the identification of God's goodness with the shared universal. Finite models: identity, distinct exemplar, non-simple, voluntarist, contingent-nature and property models. Formal interpretations only.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.DilemmaControls",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ],
+  "connection_plan": {
+    "target_statement_id": "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+    "missing_bridge": "The same participation bridge as for the identity conclusion: the controls test the identity reply that would support approval of exactly the due actualities.",
+    "blocker": "No participation or likeness vocabulary links the dependence frame to the form/end profile frame."
+  }
+}

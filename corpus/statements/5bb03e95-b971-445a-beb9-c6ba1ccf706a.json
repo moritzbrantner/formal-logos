@@ -1,0 +1,14 @@
+{
+  "id": "5bb03e95-b971-445a-beb9-c6ba1ccf706a",
+  "label": "Goodness is an independent standard or constituted by God's approval",
+  "paraphrase": "The dilemma's coverage claim: either the standard of goodness is distinct from God and does not depend on him for what it is, or it depends for what it is on God's approving or is that approving.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.HornsCover",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ],
+  "connection_plan": {
+    "target_statement_id": "b93773ca-c349-482c-9ed8-b4f20939eec7",
+    "missing_bridge": "A carrier bridge from the dependence frame to the profile frame: goodness depending for what it is on God's approving yields approval coextending with goodness in every nature-fixed profile, the rival of b93773ca.",
+    "blocker": "The profile frame is extensional and has no dependence relation; a dependence-to-covariation bridge has not been formulated or defended."
+  }
+}

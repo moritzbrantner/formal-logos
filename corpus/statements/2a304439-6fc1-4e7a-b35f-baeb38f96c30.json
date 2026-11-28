@@ -1,0 +1,9 @@
+{
+  "id": "2a304439-6fc1-4e7a-b35f-baeb38f96c30",
+  "label": "The standard of goodness is God's nature",
+  "paraphrase": "Open identity premise: in the dependence frame the standard of goodness is identical with God's nature. Its existing support is indirect: GOD_4 is SIMPLE_4 (9f4e5f17) gives non-composition only, and the step from non-composition to identity of essence and goodness is an open bridge.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.GoodnessIsDivineNature",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

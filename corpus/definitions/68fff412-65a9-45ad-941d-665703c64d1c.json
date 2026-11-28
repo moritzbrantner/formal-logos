@@ -1,0 +1,9 @@
+{
+  "id": "68fff412-65a9-45ad-941d-665703c64d1c",
+  "label": "Euthyphro dependence frame: constitutive dependence among God, nature, approval and goodness",
+  "term": "constitutive dependence for what a thing is (Euthyphro dependence frame)",
+  "definition": "A DependenceFrame names God, God's nature, God's act of approving and the standard of goodness, with one primitive relation DependsFor x y: x is what it is because of y (constitutive, explanatory dependence of content). Horn 1 (IndependentStandard): goodness is distinct from God and does not depend on him for what it is. Horn 2 (ConstitutedByApproval): goodness depends for what it is on God's approval, or is that approval. HornsCover is their disjunction and NeitherHorn the negation of both. NatureProfiles vary which nature God has; PropertyFrame separates the goodness by which God is good from the universal good things share.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.DependenceFrame",
+  "note": "Analyst formulation; attribution deferred (Plato's Euthyphro, ST I q.3 and q.6 a.3 are unread leads). Example of DependsFor: a club rule depends for its content on the members' vote; the vote's having occurred does not depend on the rule. Distinct from dependence for being on an agent cause (DEPENDENCE_FOR_BEING_VERSUS_STRICT_GROUND_1, which concerns existence) and from Fine's strict ground between facts (sense 2); no inclusion or identity with either is assumed. No structural property is built in: asymmetry is an explicit premise. Its application to God and goodness is an open interpretation, not a claim that the relation is realized."
+}

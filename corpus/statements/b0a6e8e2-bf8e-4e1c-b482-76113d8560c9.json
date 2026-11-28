@@ -1,0 +1,9 @@
+{
+  "id": "b0a6e8e2-bf8e-4e1c-b482-76113d8560c9",
+  "label": "God's approving depends for what it is on God's nature",
+  "paraphrase": "Open premise: God's act of approving is what it is because of God's nature, as on an account where will follows intellect and nature.",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.ApprovalFollowsNature",
+  "definition_ids": [
+    "68fff412-65a9-45ad-941d-665703c64d1c"
+  ]
+}

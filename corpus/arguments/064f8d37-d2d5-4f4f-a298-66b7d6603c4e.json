@@ -1,0 +1,22 @@
+{
+  "id": "064f8d37-d2d5-4f4f-a298-66b7d6603c4e",
+  "label": "Named approval account fails, from modal approval failure and the rigidity bridge",
+  "premise_statement_ids": [
+    "b93773ca-c349-482c-9ed8-b4f20939eec7",
+    "c2c3bebf-cd31-4ec4-9055-7d09acb898ac"
+  ],
+  "conclusion_statement_id": "50d8be94-f9c1-52af-bf43-fb2751915756",
+  "inference_ids": [
+    "27ac5a9d-0a24-4237-9ba7-7538a3fc18c6"
+  ],
+  "meaning": "Correctness of the named approval account in the fixed profile is base coextension of goodness and the assessor's approval; the rigidity bridge spreads it to every nature-fixed profile, which the modal failure excludes. The conclusion is the extensional failure premise of the correct-support and named-elimination routes. Neither open premise is established.",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "68191121-85f6-5bce-b32e-1900c8b52f57",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

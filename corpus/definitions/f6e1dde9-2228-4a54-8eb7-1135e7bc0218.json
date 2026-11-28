@@ -1,0 +1,9 @@
+{
+  "id": "f6e1dde9-2228-4a54-8eb7-1135e7bc0218",
+  "label": "Modified command theory over a nature-fixed profile family",
+  "term": "modified command theory over a profile family",
+  "definition": "A CommandLayer over a profile family supplies acts, profile-relative act goodness, commands and obligations. ModifiedCommandTheory says that in every profile an act is obligatory exactly when commanded, and every commanded act is good. Command variation: some profile with the base natures has different commands. Obligation invariance: every profile with the base natures has the base obligations.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.CommandLayer",
+  "note": "Analyst formulation of the split view associated with modified divine command theory (goodness fixed by the divine nature, obligation by command); attribution deferred, Adams is an unread lead. No link from act goodness to aspect goodness is assumed."
+}

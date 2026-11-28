@@ -1,0 +1,14 @@
+{
+  "id": "72694566-3f1e-4b4e-8b79-8a0bd80dd20e",
+  "label": "Approval coextends with goodness in every nature-fixed profile",
+  "paraphrase": "Divine-command rival: in every profile of the supplied family keeping the base actual perfections, goodness coextends with the named assessor's approval. It is the exact negation of the modal approval failure.",
+  "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalGroundsAcrossNatureFixed",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

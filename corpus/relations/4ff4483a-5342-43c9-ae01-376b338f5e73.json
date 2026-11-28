@@ -1,0 +1,10 @@
+{
+  "id": "4ff4483a-5342-43c9-ae01-376b338f5e73",
+  "label": "Neither horn is the alternative to Euthyphro coverage",
+  "subject_kind": "statement",
+  "subject_id": "8bc29667-ecdd-4255-b8df-06ad3973dc43",
+  "predicate": "alternative_to",
+  "object_kind": "statement",
+  "object_id": "5bb03e95-b971-445a-beb9-c6ba1ccf706a",
+  "note": "Exact incompatibility: NeitherHorn is the negation of both disjuncts of HornsCover. The identity reply denies the distinctness premise of coverage; the exemplar reply denies approval-only dependence. Both are model-witnessed in the dilemma controls."
+}

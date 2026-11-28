@@ -1,0 +1,10 @@
+{
+  "id": "d8dc12c3-8ba4-45d0-98f3-5fd7abd392a3",
+  "label": "Euthyphro dilemma coverage has identity, exemplar and omission models (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "9612248a-221a-416e-81c5-bd0411c446e9",
+  "rule": "explicit finite interpretations and general structural lemmas",
+  "meaning": "Identity model: all identity premises and approval-only dependence hold, distinctness fails and neither horn holds. Exemplar model: distinctness holds, approval-only dependence fails, neither horn holds. Non-simple model: goodness is God's nature, which is not God and does not depend on him, so horn 1 holds. Voluntarist model: distinctness and approval-only dependence hold and horn 2 holds. Contingent-nature model: identity in each profile without a necessary nature lets goodness vary; generally identity with a necessary nature fixes it. Property model: God is his goodness, which is not the shared universal property; generally collapse into a property needs that identification.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

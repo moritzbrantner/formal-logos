@@ -1,0 +1,21 @@
+{
+  "id": "6ed541de-5ca2-4944-825d-fb76b09f7684",
+  "label": "Approvals fixed by natures, from approval as ground and invariance",
+  "premise_statement_ids": [
+    "72694566-3f1e-4b4e-8b79-8a0bd80dd20e",
+    "30f61b46-2d54-409f-9859-a0ce904dce98"
+  ],
+  "conclusion_statement_id": "d27756f6-4364-4dfc-ac59-2b555c7a7465",
+  "inference_ids": [
+    "695e71ab-34ab-4719-a0e1-f0caffbe57c8"
+  ],
+  "meaning": "Price of the divine-command rival: if approval coextends with goodness in every nature-fixed profile and base goodness is invariant there, the assessor's approvals are fixed by the natures, so the variation premise fails. A command theory that keeps invariance must deny nature-fixed approval variation, conceding a voluntarist command theory. It does not show which of approval and nature is explanatorily prior.",
+  "definition_ids": [
+    "2b760306-fed0-583e-b7b8-53a8a1d85676",
+    "b9df0e5b-7d1e-5259-a5d5-910e85328aab",
+    "decf0fdd-1b81-4d8f-930a-55a0537d32d6"
+  ],
+  "disambiguation_ids": [
+    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
+  ]
+}

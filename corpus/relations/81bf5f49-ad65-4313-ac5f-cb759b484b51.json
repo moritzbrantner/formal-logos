@@ -1,0 +1,11 @@
+{
+  "id": "81bf5f49-ad65-4313-ac5f-cb759b484b51",
+  "label": "Approval and due-actuality coextension strengthens the weak approval premise",
+  "subject_kind": "statement",
+  "subject_id": "79ba9d77-257e-4abd-bd20-e164d17c64f6",
+  "predicate": "strengthens",
+  "object_kind": "statement",
+  "object_id": "9134209f-9027-4f95-866d-13c2831d97a1",
+  "verification_result_id": "d784a2ad-bc5f-4ce2-bdd6-ec56dd9a8302",
+  "note": "Verified by approvalCoincidesWeakens. The human-assessor model of the Euthyphro controls has the approval account failing, so the weak premise holds there without coextension; strictness is not registered as a separate result."
+}

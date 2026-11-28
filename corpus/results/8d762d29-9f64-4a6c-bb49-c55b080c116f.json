@@ -1,0 +1,11 @@
+{
+  "id": "8d762d29-9f64-4a6c-bb49-c55b080c116f",
+  "label": "Due actuality from correct support with the weak approval premise",
+  "argument_id": "55ae274b-c5e9-437b-bd48-6b7f5ee5b6f9",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.dueFromWeakApprovalPremise",
+  "comparator_config": "results/8d762d29-9f64-4a6c-bb49-c55b080c116f/comparator.json",
+  "status": "solution-present",
+  "description": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. No premise is established."
+}

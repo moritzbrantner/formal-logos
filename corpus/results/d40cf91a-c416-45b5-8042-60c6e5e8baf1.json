@@ -1,0 +1,11 @@
+{
+  "id": "d40cf91a-c416-45b5-8042-60c6e5e8baf1",
+  "label": "Named approval account fails, from modal approval failure and the rigidity bridge",
+  "argument_id": "064f8d37-d2d5-4f4f-a298-66b7d6603c4e",
+  "challenge_module": "TruthCore.Results.Ethics.Euthyphro.Challenge",
+  "solution_module": "TruthCore.Results.Ethics.Euthyphro.Solution",
+  "theorem": "TruthCore.Results.Ethics.Euthyphro.approvalFailsFromNotGround",
+  "comparator_config": "results/d40cf91a-c416-45b5-8042-60c6e5e8baf1/comparator.json",
+  "status": "solution-present",
+  "description": "Correctness of the named approval account in the fixed profile is base coextension of goodness and the assessor's approval; the rigidity bridge spreads it to every nature-fixed profile, which the modal failure excludes. The conclusion is the extensional failure premise of the correct-support and named-elimination routes. Neither open premise is established."
+}
