@@ -112,6 +112,16 @@ noncomputable def resetKernel : Bool → PMF Bool := fun _ => PMF.pure true
 /-- Always switch. -/
 noncomputable def flipKernel : Bool → PMF Bool := fun b => PMF.pure (!b)
 
+/-- Three quarters on the outcome `high`, one quarter on the other. -/
+noncomputable def favoring (high : Bool) : PMF Bool :=
+  binaryLaw (if high then 3 / 4 else 1 / 4) (if high then 1 / 4 else 3 / 4) (by
+    have h : (3 : ℝ≥0∞) / 4 + 1 / 4 = 1 := by
+      rw [← ENNReal.add_div, show (3 : ℝ≥0∞) + 1 = 4 by norm_num]
+      exact ENNReal.div_self (by norm_num) (by norm_num)
+    cases high
+    · simpa [add_comm] using h
+    · simpa using h)
+
 /-- Symmetry, stationarity and mixture: when a law is uniquely fixed by
 structure alone, and when it is not. -/
 def LawDeterminationControls : Prop :=
@@ -150,7 +160,10 @@ def LawDeterminationControls : Prop :=
   (∀ ν : Bool → PMF Bool, ν true true ≠ ν false true →
     Function.Injective (fun π : PMF Bool => π.bind ν)) ∧
   (∀ (I E : Type) (ρ : PMF E) (π π' : PMF I),
-    π.bind (fun _ => ρ) = π'.bind (fun _ => ρ))
+    π.bind (fun _ => ρ) = π'.bind (fun _ => ρ)) ∧
+  -- the slice's worked mixture: components with mass 3/4 and 1/4 at `true`
+  -- give lower mass 1/4 + t/2, where t is the upper law's mass at `true`
+  (∀ π : PMF Bool, ((π.bind favoring) true).toReal = 1 / 4 + (π true).toReal / 2)
 
 /-! ## 2. The law fork under the contingent-fact PSR -/
 
@@ -168,7 +181,7 @@ def FixesValue {W B F X : Type} (A : Arena W B F) (sel : W → X) (a : W) (r : F
 
 /-- Physical law, epistemic credence and an observed finite record, kept apart. -/
 structure LawProfile (W O : Type) where
-  propensity : W → PMF O
+  law : W → PMF O
   credence : W → PMF O
   record : W → List O
 
@@ -178,19 +191,9 @@ noncomputable def iidLikelihood {O : Type} (μ : PMF O) : List O → ℝ≥0∞
   | [] => 1
   | x :: xs => μ x * iidLikelihood μ xs
 
-/-- Three quarters on the outcome `high`, one quarter on the other. -/
-noncomputable def favoring (high : Bool) : PMF Bool :=
-  binaryLaw (if high then 3 / 4 else 1 / 4) (if high then 1 / 4 else 3 / 4) (by
-    have h : (3 : ℝ≥0∞) / 4 + 1 / 4 = 1 := by
-      rw [← ENNReal.add_div, show (3 : ℝ≥0∞) + 1 = 4 by norm_num]
-      exact ENNReal.div_self (by norm_num) (by norm_num)
-    cases high
-    · simpa [add_comm] using h
-    · simpa using h)
-
 /-- Two contexts with the same credence and the same record; the law differs. -/
 noncomputable def matched (xs : List Bool) : LawProfile Bool Bool where
-  propensity := favoring
+  law := favoring
   credence _ := favoring true
   record _ := xs
 
@@ -230,14 +233,14 @@ def LawSelectionFork : Prop :=
   (∀ xs : List Bool,
     let L := matched xs
     L.record true = L.record false ∧ L.credence true = L.credence false ∧
-    L.propensity true ≠ L.propensity false ∧
-    iidLikelihood (L.propensity true) xs ≠ 0 ∧ iidLikelihood (L.propensity false) xs ≠ 0 ∧
-    (∀ r, TracksValue (lawArena r) .actualLaw L.propensity true) ∧
+    L.law true ≠ L.law false ∧
+    iidLikelihood (L.law true) xs ≠ 0 ∧ iidLikelihood (L.law false) xs ≠ 0 ∧
+    (∀ r, TracksValue (lawArena r) .actualLaw L.law true) ∧
     Contingent (lawArena false) true .actualLaw ∧
     ¬ ContingentPSR (lawArena false) true ∧
     ContingentPSR (lawArena true) true ∧
     (lawArena true).explains true .base .actualLaw ∧
-    ¬ FixesValue (lawArena true) L.propensity true .base)
+    ¬ FixesValue (lawArena true) L.law true .base)
 
 /-! ## 3. Realization and sample -/
 
@@ -282,6 +285,11 @@ def RealizationSampleControls : Prop :=
   (∀ v, emptied.performs v () ↔ varying.performs v ()) ∧
   (∀ v x, emptied.output v () x ↔ varying.output v () x) ∧
   RealizedOutputs varying ∧ ¬ RealizedOutputs emptied ∧
+  -- general STIT: seeing to a law, with a history in the same cell where
+  -- the effect fails, excludes seeing to the effect
+  (∀ (M H A : Type) (F : BranchingFrame M H A) (m : M) (a : A) (h k : F.Through m)
+    (law effect : F.Through m → Prop),
+    Dstit a h law → (F.choice m a).r h k → ¬ effect k → ¬ Cstit a h effect) ∧
   Dstit () (lawHistory true true) LawAdopted ∧
   SampleTrue (lawHistory true true) ∧
   ¬ Cstit () (lawHistory true true) SampleTrue ∧

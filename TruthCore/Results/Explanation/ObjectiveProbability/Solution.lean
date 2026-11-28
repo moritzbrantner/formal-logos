@@ -210,6 +210,23 @@ theorem flip_iterate_pure (n : Nat) : ∃ b, (step flipKernel)^[n] (PMF.pure tru
     refine ⟨!b, ?_⟩
     rw [Function.iterate_succ_apply', hb, flip_pure]
 
+theorem favoring_mixture (π : PMF Bool) :
+    ((π.bind favoring) true).toReal = 1 / 4 + (π true).toReal / 2 := by
+  have h1 : (favoring true true).toReal = 3 / 4 := by
+    simp [favoring, binaryLaw_true, ENNReal.toReal_div]
+  have h0 : (favoring false true).toReal = 1 / 4 := by
+    simp [favoring, binaryLaw_true]
+  have hπ := binary_real_sum π
+  rw [bind_true, ENNReal.toReal_add (ENNReal.mul_ne_top (π.apply_ne_top _) ((favoring true).apply_ne_top _))
+      (ENNReal.mul_ne_top (π.apply_ne_top _) ((favoring false).apply_ne_top _)),
+    ENNReal.toReal_mul, ENNReal.toReal_mul, h1, h0]
+  linear_combination (1 / 4 : ℝ) * hπ
+
+theorem stit_law_not_effect (M H A : Type) (F : BranchingFrame M H A) (m : M) (a : A)
+    (h k : F.Through m) (law effect : F.Through m → Prop) (_ : Dstit a h law)
+    (hk : (F.choice m a).r h k) (hnot : ¬ effect k) : ¬ Cstit a h effect :=
+  fun hc => hnot (hc k hk)
+
 theorem lawDeterminationControls : LawDeterminationControls := by
   refine ⟨fun E _ _ G hG => unique_invariant_of_transitive G hG,
     fun E _ _ G hG μ hμ x => invariant_mass_of_transitive G hG μ hμ x,
@@ -217,7 +234,7 @@ theorem lawDeterminationControls : LawDeterminationControls := by
     fun p q h hp hq => ⟨orbitLaw_invariant p q h, orbitLaw_positive p q h hp hq⟩,
     fun p q p' q' h h' he => orbitLaw_injective p q p' q' h h' he,
     twoOrbitLaws, stationary_binary_iff, ?_, stationary_of_no_switching,
-    identity_nonunique, reset_stationary_iff, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+    identity_nonunique, reset_stationary_iff, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
   · intro K hpos
     obtain ⟨μ, hμ⟩ := stationary_exists K hpos
     exact ⟨μ, hμ, fun ν hν => stationary_unique K hpos ν μ hν hμ⟩
@@ -259,6 +276,7 @@ theorem lawDeterminationControls : LawDeterminationControls := by
     · exact absurd (by linarith) hc
   · intro I E ρ π π'
     rw [PMF.bind_const, PMF.bind_const]
+  · exact favoring_mixture
 
 /-! ### The law fork -/
 
@@ -319,7 +337,7 @@ theorem likelihood_nonzero (h : Bool) (xs : List Bool) : iidLikelihood (favoring
   | cons x xs ih => exact mul_ne_zero (favoring_positive h x).ne' ih
 
 theorem lawArena_tracks (r : Bool) (xs : List Bool) :
-    TracksValue (lawArena r) .actualLaw (matched xs).propensity true := by
+    TracksValue (lawArena r) .actualLaw (matched xs).law true := by
   intro w
   change w = true ↔ favoring w = favoring true
   exact ⟨fun h => by rw [h], fun h => favoring_injective h⟩
@@ -389,6 +407,6 @@ theorem realizationSampleControls : RealizationSampleControls := by
   refine ⟨fun μ hμ => ⟨outputLaw_support_matches varying (fun _ _ => Iff.rfl) μ hμ,
       outputLaw_support_matches emptied (fun _ _ => Iff.rfl) μ hμ⟩,
     rfl, fun _ _ => Iff.rfl, fun _ => Iff.rfl, fun _ _ => Iff.rfl,
-    varying_realized, emptied_not_realized, lawAdopted_dstit, rfl, sample_not_settled⟩
+    varying_realized, emptied_not_realized, stit_law_not_effect, lawAdopted_dstit, rfl, sample_not_settled⟩
 
 end TruthCore.Results.Explanation.ObjectiveProbability

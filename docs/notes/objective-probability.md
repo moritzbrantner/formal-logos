@@ -46,7 +46,10 @@ This PR delivers the "Probability-law slice" of the #2145 issue comment of
 - **Binary stationarity.** For a kernel on `Bool` with real switching masses
   `a = K(true)(false)`, `b = K(false)(true)` and `x = μ(true)`: `μ` is stationary
   iff `x (a + b) = b`. With `a + b > 0` there is exactly one stationary law;
-  with `a + b = 0` every law is stationary. Controls: the identity kernel has
+  with `a + b = 0` every law is stationary. The balance equation is stated in
+  the kernel's own masses, so `b/(a+b)` is fixed only once the kernel is
+  given. A kernel is itself a quantitative law: stationarity relocates the law
+  question to the kernel rather than answering it. Controls: the identity kernel has
   two distinct stationary laws; the reset kernel's only stationary law is the
   point mass at `true`; the flip kernel has a unique stationary law.
 - **Uniqueness is not convergence.** Under the flip kernel the orbit of the
@@ -56,13 +59,17 @@ This PR delivers the "Probability-law slice" of the #2145 issue comment of
   When the two binary components differ in their `true` mass, the mixture is
   injective in its upper law. When the components are equal, every upper law
   gives the same mixture (`bind_const`), so the upper law is idle unless
-  something else constrains it.
+  something else constrains it. The slice's worked case: with components of
+  mass 3/4 and 1/4 at `true`, the mixture's mass at `true` is `1/4 + t/2`,
+  where `t` is the upper law's mass at `true`; `t` stays a separate parameter
+  unless something constrains it.
 
-Placement: `tests` DNP_inv `55892476`. Structural constraints can fix a law
-uniquely without an agent; ranking, partial symmetry, zero switching and idle
-mixtures cannot. This tests the scope of any premise that a non-rational
-invariant source cannot fix a determinate law; it neither supports nor refutes
-DNP_inv.
+Placement: `tests` DNP_inv `55892476`. It probes the cost of the CHANCE_3
+rival to DNP_inv when the rival is made quantitative. One symmetry orbit fixes
+only the uniform law. Positive switching fixes a stationary law only relative
+to a kernel that is itself a quantitative law. Two orbits, zero switching and
+idle mixtures fix nothing. So a non-uniform law needs quantitative input,
+which the rival must supply. The result neither supports nor refutes DNP_inv.
 
 ### 2. The law fork (`lawSelectionFork`)
 
@@ -85,10 +92,19 @@ DNP_inv.
   that reason does not fix the law. An admitted reason is weaker than a
   law-fixing reason.
 
-Placement: `connection_plan` to `66aecdd7`. Missing bridge: at the actual root,
-the only admissible reason for a contingent law or content fact is an
-intentional exercise of a rational power. Blocker: the fork is symmetric, and no
-premise identifies the admitted reason with intentional exercise.
+Placement: `connection_plan` to `66aecdd7`. The missing bridge has two joint
+parts:
+
+- (a) the root's law or content fact is contingent, which puts it on the
+  fork's second branch. For content, this is the existing open premise
+  `fbd0a6d3`: every actual root withholds its giving of each grounded actual
+  concretum at some accessible world.
+- (b) at the actual root, the only admissible reason for such a contingent fact
+  is an intentional exercise of a rational power.
+
+Part (a) alone yields only an admitted reason, and clause 4 shows that such a
+reason need not fix the law or be intentional. Blocker: no recorded premise
+supplies (b), and the symmetric fork cannot supply it.
 
 ### 3. Realization and sample (`realizationSampleControls`)
 
@@ -104,20 +120,30 @@ premise identifies the admitted reason with intentional exercise.
   adoption (deliberatively: it is not historically necessary). The actual
   sample is `true`, but the agent sees to neither the sample nor its contrary.
   Rationally choosing a law is not necessarily choosing its sample.
+- **General STIT lemma.** In every frame, if an agent sees to some
+  proposition at a history and the same cell contains a history where an effect
+  fails, the agent does not see to the effect. The STIT vocabulary has no plan
+  or governing relation.
 
-Placement: `tests` `4be0f774`. An operative plan at the level of a law does
-not by itself fix particular outputs, and matching a law's support does not
-establish productive realization.
+Placement: `tests` `2f9a99cc`, which concludes argument `9203e79c`: each
+rationally given actual effect is directed to an end. If a giver's choice
+settled only a law, seeing to the law's adoption would not see to the
+particular effect. Per-effect direction then needs `9203e79c`'s premises to bear
+on each effect, not on a law. The model tests this only at the level of
+seeing-to. `4be0f774` itself allows one plan to govern many effects and makes
+no claim that plans fix outcomes, so it is not the target.
 
 ## Comparison at matched scope
 
 - **Necessary intrinsic law.** If the law is necessary and intrinsic to an
   actual productive power, a determinate law-level explanation is possible in
   principle, with contingent effects. Result 2's constant branch places no
-  contingent-fact PSR demand on it. Result 1 shows that a structure (one
-  symmetry orbit, positive switching) can fix such a law uniquely. The open
-  questions are whether the structure applies to the source, and whether the
-  law is productively realized (result 3), not mathematical determination.
+  contingent-fact PSR demand on it. Result 1 shows that one symmetry orbit fixes
+  only the uniform law. A non-uniform law needs quantitative input: a
+  calibrated mass, orbit masses, or a kernel whose own masses fix the
+  stationary law. Such input relocates the law question rather than answering
+  it. The open questions are whether such input is grounded in the source, and
+  whether the law is productively realized (result 3).
 - **Contingent brute law.** It conflicts with the contingent-fact PSR at the
   varying branch of result 2. That conflict is not a logical inconsistency
   apart from the PSR.

@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "55892476-1e99-444b-a6bd-5430b0f115c4",
-  "note": "Tests the scope of any claim that a non-rational source with an invariant set-up cannot fix a determinate law: one symmetry orbit or positive switching fixes a unique law without an agent, while two orbits, zero switching or an idle mixture do not. Whether such a structure applies to the source is open. It neither supports nor refutes DNP_inv."
+  "note": "Probes the cost of the CHANCE_3 rival to DNP_inv when the rival is made quantitative: one symmetry orbit fixes only the uniform law, positive switching fixes a stationary law only relative to a kernel that is itself a quantitative law, and two orbits, zero switching or an idle mixture fix nothing. A non-uniform law therefore needs quantitative input that the rival must supply. Whether such a structure applies to the source is open. It neither supports nor refutes DNP_inv."
 }

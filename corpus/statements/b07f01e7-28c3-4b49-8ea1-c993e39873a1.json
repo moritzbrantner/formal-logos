@@ -17,7 +17,7 @@
   ],
   "connection_plan": {
     "target_statement_id": "66aecdd7-ea4e-55c6-9377-10db08893854",
-    "missing_bridge": "A premise that, at the actual root, the only admissible reason for a contingent law or content fact (the fork's second branch) is an intentional exercise of a rational power of that root, so that the branch yields a willed source; or a warrant that the law at the root is contingent rather than necessary (the first branch).",
-    "blocker": "The fork is symmetric: an adopted law is a contingent fact needing its own admitted reason (clause 3), and a necessary law and a necessary adoption alike escape the contingent-fact PSR (clause 2). No premise identifies the admitted reason with intentional exercise, and an admitted reason need not fix the law (clause 4)."
+    "missing_bridge": "Two joint premises: (a) the root's law or content fact is contingent, which puts it on the fork's second branch (for content, the existing open premise fbd0a6d3: every actual root withholds its giving of each grounded actual concretum at some accessible world); AND (b) at the actual root the only admissible reason for such a contingent fact is an intentional exercise of a rational power of that root. (a) alone yields only an admitted reason, which need not fix the law or be intentional (clause 4).",
+    "blocker": "No recorded premise supplies (b). The fork is symmetric: an adopted law is a contingent fact needing its own admitted reason (clause 3), and a necessary law and a necessary adoption alike escape the contingent-fact PSR (clause 2), so (b) cannot be read off the fork."
   }
 }

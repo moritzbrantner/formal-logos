@@ -6,7 +6,7 @@
   "inference_ids": [
     "ab1e6724-7d5b-48ee-8381-e525a76ce8ea"
   ],
-  "meaning": "Premise-free. The image of a full-support law under some has support {some false, some true}, the output set of both profiles; the varying profile's outputs are its causal edges, the emptied profile has none. In the STIT frame the adoption coordinate is constant on the cell of (true, true) and false at another history, while the cell contains (true, false), so neither the sample nor its contrary holds throughout the cell.",
+  "meaning": "Premise-free. The image of a full-support law under some has support {some false, some true}, the output set of both profiles; the varying profile's outputs are its causal edges, the emptied profile has none. In the STIT frame the adoption coordinate is constant on the cell of (true, true) and false at another history, while the cell contains (true, false), so neither the sample nor its contrary holds throughout the cell; generally, a cell-mate where the effect fails refutes seeing to the effect.",
   "definition_ids": [
     "beb654a7-e204-5f4c-a7b4-45e886ba7109",
     "e36a3cf1-be2c-51a0-bb55-f388c115e11d",
