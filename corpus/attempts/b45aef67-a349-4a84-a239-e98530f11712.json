@@ -1,0 +1,75 @@
+{
+  "id": "b45aef67-a349-4a84-a239-e98530f11712",
+  "label": "Intrinsic and extrinsic grounds of imitability modes under one standard",
+  "statement_ids": [
+    "d1fb6414-976e-4833-908d-17787cca2502",
+    "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+    "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+    "5a3a1432-38f7-44b9-bdc6-01acc066b622",
+    "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+    "69b9f887-582a-479c-924b-e7328f3930b4",
+    "65805e5a-818a-49a0-ae3c-eba95724500f",
+    "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+    "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+    "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+    "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+  ],
+  "date": "2026-11-28",
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Followed the proposition-reuse and Lean-first loop from #2178/#2180 and #1879/#1892. Applied existing priority and modal transport theorems; exposed realizer-injectivity, ranking-factorization and exchange-symmetry completeness premises; added positive source-grounded personal and impersonal interpretations on the same earlier frame; kept primitive formal distinctions, virtual/dispositional readings and necessary extrinsic bases explicit. See the linked note for the pronged argument, strongest positive proposals, exact contradictory bundles and remaining applications. The two generic extrinsic targets closed by prove-sweep; finite/symmetry targets did not. Finite-finder fragments rejected K.history.now and A.exist, so explicit populated omissions were used. Success records conditional research delivery, not resolution of metaphysical coherence. Refreshed main includes #2184: its in-root carriage and in-root purity distinction is preserved; no new purity premise is discharged. The later makerControls prove-sweep closed by unfold+aesop. Independent semantic challenge of 5d68146581b92813543d702d41305c3f3d2331d2 accepted the synthesis with no P1 and two P2s: disclose definitional nature/mode truth and factive absence of cognitive paths, and add the existing necessity/production/non-real/guidance definition links. Both are repaired in the owning specs, generated records and note; no Lean type or proof changed. Placement preflight correctly distinguished the two conditional extrinsic library theorems from premise-free controls: their conclusions now carry explicit item/fact, giving/production, modal-availability and relevance connection plans to 69b9f887. Existing tests relations are diagnostic intent, not registered consumer derivations.",
+  "blocker": "An independently warranted account of mode-sensitive intrinsic structure and its non-composition, exhaustive mental-dependence scope, and objective-value relevance is unavailable in the current formal premises. An independent cognitive discriminator, stronger simplicity bridge, and complete candidate-to-effect/contingent-exercise account remain open. More structural duplication or recognition-bridge reformulation would not decide these applications.",
+  "evidence": [
+    "7e026e27-520f-4b65-a031-5acc6a5342fe",
+    "74ec4d5b-81cc-4626-a4bf-0e478f473ca2",
+    "422f9341-3541-4ae3-8f03-b985bca91667",
+    "28f1b4f2-2468-4382-99ae-97498f1a98e0",
+    "d77ef09e-07c2-4a9c-8190-a4e1e216909f",
+    "c34e1b3e-082c-4275-8b32-b7f19c5b4de8",
+    "be94dd81-e012-55aa-ba7c-c425caeb6c1c",
+    "PR-2178",
+    "PR-2180",
+    "PR-1879",
+    "PR-1892",
+    "PR-2184"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "openai",
+      "model": "gpt-6-astra-pro",
+      "date": "2026-11-28"
+    },
+    {
+      "role": "review",
+      "provider": "openai",
+      "model": "gpt-6-astra-pro",
+      "date": "2026-11-28"
+    }
+  ],
+  "current_assessment": {
+    "date": "2026-11-28",
+    "statement_ids": [
+      "d1fb6414-976e-4833-908d-17787cca2502",
+      "3b40009e-1c56-4cce-86ba-1980fd2cb9a7",
+      "cde7f1dd-542c-4147-ab5b-381fefccbcf6",
+      "5a3a1432-38f7-44b9-bdc6-01acc066b622",
+      "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0",
+      "69b9f887-582a-479c-924b-e7328f3930b4",
+      "65805e5a-818a-49a0-ae3c-eba95724500f",
+      "3a32d91c-23f3-403f-a0dd-a34a362f7b8e",
+      "29818edd-9f5a-5414-baa2-9a7d0c8abf18",
+      "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd",
+      "d164b1ff-ad31-5fbc-8ef9-eb0db51ebd96"
+    ],
+    "scope": "The user-requested intrinsic/extrinsic grounding and primitive-formal-distinction test of A4, with a matched simple-intellect account. Source-nature and modal/production commitments beyond bare appNone are included; full metaphysical realization remains an application question.",
+    "assessment": "A restricted actual-effect-grounded account is excluded by an explicit strict-priority and giving-to-fact bridge. Bare common-source or common-act descriptions cannot account for an asymmetric rank under the explicit symmetry-completeness condition; equality of realizers collapses modes only with injectivity. These constraints apply equally to the personal account. Primitive intrinsic formal/dispositional differentiation and determinate intentional content both remain positive options. The restored matched interpretations add a source-nature maker, all-world mode/rank availability, positive explanatory paths, scoped absence/presence of cognitive dependence, and rank-sensitive production. They demonstrate those formal commitments jointly, not non-composition, exhaustive mind-independence, objective-value warrant or metaphysical possibility. Constructed structural parity is not evidence of equal overall metaphysical warrant. A4 is therefore an elaborated candidate, neither defeated nor established as genuinely metaphysically coherent; simple intellect is not exempted. No cognition or pure-perfection premise is established. The nature/mode truth equalities reduce definitionally for any supplied table; the absence of cognition-to-mode/rank paths follows from false cognition plus factivity. The added formal content is the selected positive source-nature graph and rank-sensitive giving, not an independent derivation of profile determination or mind-independence.",
+    "next_test": "Seek an independently warranted restriction or constructive account of mode-sensitive intrinsic structure that explains its admissible non-composition and discriminates noncognitive formal/dispositional profiles from intentional contents under the SAME identity and explanation standards. A proposed discriminator must address the positive source-nature interpretation, its limited cognitive-dependence fragment, objective-value warrant and candidate-to-effect/contingent-exercise bridge; a further equivalent recognition criterion does not qualify. A stronger simplicity-to-real-constituent bridge must face the one-act-many-contents control.",
+    "note": "docs/notes/causal-perfection-transfer.md#intrinsic-and-extrinsic-grounding-of-imitability-modes-2026-11-28-provisional-2145",
+    "reviewed_revision": "5d68146581b92813543d702d41305c3f3d2331d2",
+    "review": "accepted_qualified",
+    "publication": "unpublished",
+    "evidence": "Independent semantic review accepted the complete synthesis at 5d68146581b92813543d702d41305c3f3d2331d2, including the separately checked #2184 paragraph, with no P1 and two P2s repaired in 155de996307ded6da5c395a595e6fec3d1212ac3. Final narrow Lean build, affected binding (all six results; no mismatches), Comparator and independent NanoDa passed on unchanged formal inputs. Placement metadata was repaired after preflight flagged the two conditional library results; final preflight/publication remains pending. Latest main merged through aabe61d3823c3f80052c181d39908445d4e00094; its new modal modules do not alter these proofs or dependencies.",
+    "supersedes": "Scoped continuation of attempt 0d8b9153-ad65-48a3-be6a-478612f0e2a1: next tests 1 (truthmakers), 2 (identity), and the productive-role part of 3 now have conditional formal results and positive model restorations. Their metaphysical applications remain open. Replaces only an inference from constructed parity to equal warrant in this scope; preserves prior source findings and the larger next-test list. No blanket supersession of other lanes."
+  }
+}

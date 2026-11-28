@@ -1,0 +1,9 @@
+{
+  "id": "fe123142-31a9-49b5-840b-716bd6a0a98f",
+  "label": "Strict fact priority at a world: asymmetry and separately stated transitivity",
+  "term": "strict explanatory priority of facts at one world",
+  "basis": "stipulative",
+  "definition": "FactPriorityAsymmetricAt A w requires that an admitted explanation from p to q never reverses. FactPriorityTransitiveAt A w separately requires composition of two edges in that SAME Arena.explains relation at w. The underlying explains relation is primitive (PSR comparison arena); these are explicit constraints on a selected strict-priority interpretation. Neither is inferred from efficient causation, reference, truthmaking, or a mixture of such relations. Examples are a mode specification prior to an exercise and that exercise prior to its effect; a symmetric equivalence or an explanatory restatement is not strict priority.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityGrounding.FactPriorityAsymmetricAt",
+  "note": "Analyst formulation. Transitivity and asymmetry have independent deductive roles; irreflexivity plus transitivity would suffice for the cycle argument. The frozen application retains asymmetry to express its selected strict-priority interpretation. Applicability, factivity and completeness are not built into either predicate."
+}

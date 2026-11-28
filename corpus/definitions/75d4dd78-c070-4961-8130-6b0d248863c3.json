@@ -1,0 +1,9 @@
+{
+  "id": "75d4dd78-c070-4961-8130-6b0d248863c3",
+  "label": "Realization in one real nature differs from identity of modes or contents",
+  "term": "mode realizer and one generic operation carrying many modes",
+  "basis": "stipulative",
+  "definition": "A realizer C to A assigns each mode or content in C a real constituent of a bearer. Constitutive simplicity forces equality of those real realizers; equality of modes follows only if the realizer map is injective. Realization of a ranking on the realizer alone requires the separate equation rank c d iff realRank (realize c) (realize d). Control.realizer maps all Outcome modes to Item.blob. Control.actOf maps all to one Unit operation, exercised by the source. Control.OneActApprehendsModes adds that the source apprehends each mode through this sole operation; uniqueness of the operation itself says nothing cognitive.",
+  "lean_declaration": "TruthCore.Causality.ImitabilityPlurality.Control.OneActApprehendsModes",
+  "note": "RealConstituent, Apprehends and About retain their existing primitive meanings. Noninjective realization is not an assertion of both literal identity and nonidentity in one Lean type. The structure permits formal differentiation but does not establish its metaphysical status or full divine simplicity. OneActApprehendsModes is the intentional assignment, not a definition of every generic operation as intellect."
+}

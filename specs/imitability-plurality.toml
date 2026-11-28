@@ -1,0 +1,128 @@
+# Analyst formulations; attribution deferred. See the intrinsic/extrinsic
+# imitability section of docs/notes/causal-perfection-transfer.md.
+# Diagnostic relations establish no cognition premise or metaphysical possibility.
+
+[batch]
+vocab = "TruthCore.Causality.ImitabilityPlurality"
+results = "TruthCore.Results.Causality.ImitabilityPlurality"
+
+[[statement]]
+id = "5539cab9-0dac-4a1c-8f44-ca21820a5596"
+label = "Identity, realizer factorization and symmetry limits on intrinsic plurality"
+lean = "IdentityAndRankingLaws"
+definitions = ["d6912ecb-aed2-411a-913e-0dab9106d910", "1998c3ed-fae1-4a32-a68d-1518c456d1ea", "75d4dd78-c070-4961-8130-6b0d248863c3"]
+paraphrase = "Three universal conditional laws. A constitutively simple bearer with all mode realizers real has a subsingleton mode carrier IF its realizer map is injective. An irreflexive ranking of those modes is empty IF it factors through that realizer alone. An asymmetric ranking cannot rank an exchanged pair IF the selected description preserves the exchange and ranking respects all description-preserving permutations. Neither injectivity, factorization nor explanatory completeness is inferred from common grounding. The same laws apply to formal modes and contents of one intellectual act."
+
+[[statement]]
+id = "f8888507-2a95-421a-8abb-b21e83e075cd"
+label = "Matched one-act and formal-mode controls with explicit differentiation"
+lean = "Control.IntrinsicPluralityControls"
+definitions = ["d6912ecb-aed2-411a-913e-0dab9106d910", "45d04b45-4396-4f95-87ad-a8e762bce91a", "07f3fb85-6036-4e42-8eb8-a18db846719f", "3ece6dfe-c033-4546-b7d4-94ef48a235df", "beb654a7-e204-5f4c-a7b4-45e886ba7109", "158301bc-9585-4145-be60-34f08c9f922c", "1998c3ed-fae1-4a32-a68d-1518c456d1ea", "75d4dd78-c070-4961-8130-6b0d248863c3", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "b28d7e04-694b-442b-a42b-65f39190956f", "fae7bbb8-931c-4a95-9f44-1d59921d1c83", "c917dda9-f382-48fa-8cc1-a0b9e609c164", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "b71adcba-9430-4c3b-a87e-60471247d2dd", "52352824-6be9-53c6-83d4-82fed9a08cbb"]
+paraphrase = "Finite controls reuse AxiarchicFoundation and PossibiliaContent. A necessary actual source has one real constituent, non-real unproduced modes, a good-general favouring, one generic operation, and an actual contingent effect in the SAME CausalityFrame. The appInner assignment apprehends all modes in the one operation and meets the existing root criterion and recognition bridge; appNone apprehends none and fails both. Common-source, common-act and uniform-apprehension descriptions preserve c/d exchange; the explicit primitive value table breaks it. The noninjective realizer maps and failed bare-description factorization are checked. These are initial structural assignments; appNone alone is not mind-independence, rigidity is not proved modal necessity, and the separate restored-grounding model adds positive semantic constraints."
+
+[[statement]]
+id = "1599a9c2-1d0a-4429-ba0e-a67e6f0725ab"
+label = "Source-based personal and impersonal modes with productive relevance"
+lean = "PositiveControl.Certificate"
+definitions = ["e894ad07-da74-412f-b679-068ec08530b3", "fe4b7da0-cbd6-5d1f-b589-953f9def12b7", "aab6fdee-e29d-58d1-b7d7-baee6d81f73e", "d6912ecb-aed2-411a-913e-0dab9106d910", "07f3fb85-6036-4e42-8eb8-a18db846719f", "158301bc-9585-4145-be60-34f08c9f922c", "75d4dd78-c070-4961-8130-6b0d248863c3", "1998c3ed-fae1-4a32-a68d-1518c456d1ea", "fe123142-31a9-49b5-840b-716bd6a0a98f", "aa0323d7-985c-40d3-b377-8fd00eacaebf", "abd8cfa4-1887-47d5-86cc-e0f6092e4ded", "071b24f0-ef72-4012-8c7d-ab3be3335961", "b28d7e04-694b-442b-a42b-65f39190956f", "fae7bbb8-931c-4a95-9f44-1d59921d1c83", "c917dda9-f382-48fa-8cc1-a0b9e609c164", "38b92bb6-33ae-5817-85c6-b5a1afa63bd1", "b71adcba-9430-4c3b-a87e-60471247d2dd", "45d04b45-4396-4f95-87ad-a8e762bce91a", "52352824-6be9-53c6-83d4-82fed9a08cbb"]
+paraphrase = "On the SAME necessary actual source, at-most-one real constituent, non-real modes and contingent-effect frame as the initial controls, both readings have positive source-nature-to-mode/ranking paths, a sound necessitating maker of the nature fact, coherent factive explanation, and rank-sensitive actual giving. Modes and rank persist in the effect-absent world. Explanation is nonnecessitating; the primitive contingent exercise condition remains unexplained. The personal row has one cognitive exercise apprehending every mode and contributing to its explanation; the impersonal row apprehends nothing and has no cognitive paths into its modes/rank in this explicitly represented sole-cognition fragment. Flattening values removes giving but does not remove the retained effect-existence field. The certificate proves these stated structural commitments, not full mind-independence, non-composition, the intrinsic table's relevance, objective goodness, or either account's metaphysical possibility. The nature/mode truth equalities reduce definitionally for any supplied table; the absence of cognition-to-mode/rank paths follows from false cognition plus factivity. The added formal content is the selected positive source-nature graph and rank-sensitive giving, not an independent derivation of profile determination or mind-independence."
+
+[[argument]]
+id = "ded9fc17-8701-460f-815e-260697cdc167"
+label = "Intrinsic identity and ranking limits, from simplicity and symmetry"
+theorem = "identityAndRankingLaws"
+premises = []
+conclusion = "5539cab9-0dac-4a1c-8f44-ca21820a5596"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Apply constitutive simplicity, reuse unindividuatedNotFavoured, and transport ranking through a swap"
+meaning = "The laws expose exact extra premises under which differentiation collapses. Equality of real realizers is not equality of mode terms without injectivity. Factorization through the realizer alone is stronger than sharing a ground. Symmetry only constrains a proposed complete differentiating description. These are general conditional diagnostics, not assertions of those contested completeness conditions."
+
+[[argument]]
+id = "14b9e2c2-9d68-4f0c-ba5d-824c34c4388f"
+label = "Matched intrinsic plurality and one-act controls, checked"
+theorem = "intrinsicPluralityControls"
+premises = []
+conclusion = "f8888507-2a95-421a-8abb-b21e83e075cd"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Reuse prior A4 and personal controls and check the added realizer, act, value and production fields"
+meaning = "Checks the same initial nonempty structural bundle for both apprehension assignments and the omitted injectivity/factorization/completeness conditions. Explicitly adding one operation to both models does not infer cognition. Their constructed structural parity is not independent evidence for equal metaphysical warrant; the fuller restored-grounding certificate is assessed separately."
+
+[[argument]]
+id = "a53e74c7-70bc-4e6f-9692-4c8700742f35"
+label = "Positive source-grounding and cognitive-path comparison, checked"
+theorem = "intrinsicGroundingControls"
+premises = []
+conclusion = "1599a9c2-1d0a-4429-ba0e-a67e6f0725ab"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Prove positive paths, sound source-nature making and strict priority; reuse the cycle exclusion and check cognitive-path and value omissions"
+meaning = "Restores world-indexed availability, a positive bearer-based nature ground, represented absence or presence of cognitive dependence, and ranking-sensitive productive relevance to the matched controls. Transitive closure and increasing levels prove strictness of the chosen explanation relation; numeric levels are not an explanation of why its edges obtain. No cognitive dependence within the represented fragment is a scoped property, not an exhaustive metaphysical mind-independence theorem. The same unrealized completeness/non-composition/relevance obligations apply to both rows. No support for d1fb6414 or 3b40009e is inferred from the constructed match. The nature/mode truth equalities reduce definitionally for any supplied table; the absence of cognition-to-mode/rank paths follows from false cognition plus factivity. The added formal content is the selected positive source-nature graph and rank-sensitive giving, not an independent derivation of profile determination or mind-independence."
+
+[[relation]]
+id = "7c253e51-0620-4169-8e1d-752ef7e2346a"
+label = "Intrinsic identity laws test constitutive simplicity"
+subject_kind = "result"
+subject_id = "28f1b4f2-2468-4382-99ae-97498f1a98e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0"
+note = "No distinction-to-composition inference is available without a real-realization injectivity premise. The analogous premise collapses distinct contents of one simple act too. This does not identify constitutive simplicity with stronger SIMPLE_4."
+
+[[relation]]
+id = "bb85219b-2f7c-4d6f-90ae-8bfb6b23af88"
+label = "Symmetry limits test the cognition criterion"
+subject_kind = "result"
+subject_id = "28f1b4f2-2468-4382-99ae-97498f1a98e0"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+note = "Neither a common bearer nor bare uniform apprehension distinguishes exchanged contents. Applying the test requires a complete differentiating description; the value table supplies differentiating information but not a proof of objective goodness."
+
+[[relation]]
+id = "3d75c997-dc5a-41c0-96ce-7586a91f1e0a"
+label = "One-act controls test non-real conceptualism"
+subject_kind = "result"
+subject_id = "d77ef09e-07c2-4a9c-8190-a4e1e216909f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "cde7f1dd-542c-4147-ab5b-381fefccbcf6"
+note = "The same one-operation realizer can accompany either apprehension assignment. A no-apprehension assignment alone does not prove mental independence or metaphysical possibility."
+
+[[relation]]
+id = "6e861f16-c647-4e7d-b087-8936ec4888bd"
+label = "Intrinsic control tests the containment-recognition bridge"
+subject_kind = "result"
+subject_id = "d77ef09e-07c2-4a9c-8190-a4e1e216909f"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "Carries forward the prior A4 dispute while typing realizer identity and act unity separately. It is a diagnostic, not a new support route or rival defeat."
+
+[[relation]]
+id = "f5d7c912-0700-4b42-955c-d9dfce930f2e"
+label = "Positive mode grounding tests the recognition bridge"
+subject_kind = "result"
+subject_id = "c34e1b3e-082c-4275-8b32-b7f19c5b4de8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d1fb6414-976e-4833-908d-17787cca2502"
+note = "The restored models type positive source-nature paths and production relevance. They identify the remaining cognition-exclusivity application; structural work alone does not decide it."
+
+[[relation]]
+id = "1ae2f91b-ef1f-409e-9db4-ae4decf2c012"
+label = "Positive mode grounding tests the cognition criterion"
+subject_kind = "result"
+subject_id = "c34e1b3e-082c-4275-8b32-b7f19c5b4de8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3b40009e-1c56-4cce-86ba-1980fd2cb9a7"
+note = "Ranking-sensitive production occurs in the represented impersonal model without Apprehends. This is an interpretation countermodel, not a metaphysically established counterexample to the criterion."
+
+[[relation]]
+id = "e6f1cb11-53d1-4b47-a842-be738cc0dd4c"
+label = "Positive mode grounding tests the pure-perfection application"
+subject_kind = "result"
+subject_id = "c34e1b3e-082c-4275-8b32-b7f19c5b4de8"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+note = "Both models meet the stated productive and modal demands, while neither types wisdom as a pure perfection or proves full act/essence identity. This is a scope diagnostic only: a bridge from intrinsic cognition to pure perfection and its compossibility with strong simplicity remains OPEN. No derivation or refutation of this perfection premise is claimed."

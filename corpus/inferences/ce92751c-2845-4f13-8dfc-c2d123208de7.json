@@ -1,0 +1,14 @@
+{
+  "id": "ce92751c-2845-4f13-8dfc-c2d123208de7",
+  "label": "Makers of a contingent fact are contingent by modal failure transport (inference)",
+  "input_statement_ids": [
+    "307185eb-097c-41d8-9017-a5faed18cd08",
+    "2115e8d8-4dd6-45f0-99e5-11f89b5552f8",
+    "baf22110-9b54-5c11-a44a-c8447518b824"
+  ],
+  "output_statement_id": "41350b46-3212-441b-8f89-ea7c27ab8604",
+  "rule": "Use world immanence for actual existence and existing failure_transport for accessible nonexistence",
+  "meaning": "Reuses PSRStrength.failure_transport: a falsifying accessible world for the fact cannot contain a necessitating maker of that fact. Every such maker is actual and possibly absent. Only a necessary condition for makers is established. RootClosure.necessaryFactAnyMaker already shows why weak maker necessitation cannot infer necessity or relevance of a maker of a necessary fact.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

@@ -232,6 +232,8 @@ public import TruthCore.Results.Causality.HolderRootIdentification.Solution
 public import TruthCore.Results.Causality.HoldingFirstMover.Solution
 public import TruthCore.Results.Causality.HoldingMotion.Solution
 public import TruthCore.Results.Causality.IlluminationReceipt.Solution
+public import TruthCore.Results.Causality.ImitabilityGrounding.Solution
+public import TruthCore.Results.Causality.ImitabilityPlurality.Solution
 public import TruthCore.Results.Causality.ImpersonalFoundationJoint.Solution
 public import TruthCore.Results.Causality.IndexedSignalProvenance.Solution
 public import TruthCore.Results.Causality.IndexedSignalReaper.Solution

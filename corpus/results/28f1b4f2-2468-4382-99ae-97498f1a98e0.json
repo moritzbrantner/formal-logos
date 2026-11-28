@@ -1,0 +1,11 @@
+{
+  "id": "28f1b4f2-2468-4382-99ae-97498f1a98e0",
+  "label": "Intrinsic identity and ranking limits, from simplicity and symmetry",
+  "argument_id": "ded9fc17-8701-460f-815e-260697cdc167",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityPlurality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityPlurality.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityPlurality.identityAndRankingLaws",
+  "comparator_config": "results/28f1b4f2-2468-4382-99ae-97498f1a98e0/comparator.json",
+  "status": "solution-present",
+  "description": "The laws expose exact extra premises under which differentiation collapses. Equality of real realizers is not equality of mode terms without injectivity. Factorization through the realizer alone is stronger than sharing a ground. Symmetry only constrains a proposed complete differentiating description. These are general conditional diagnostics, not assertions of those contested completeness conditions."
+}

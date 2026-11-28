@@ -1,0 +1,11 @@
+{
+  "id": "c34e1b3e-082c-4275-8b32-b7f19c5b4de8",
+  "label": "Positive source-grounding and cognitive-path comparison, checked",
+  "argument_id": "a53e74c7-70bc-4e6f-9692-4c8700742f35",
+  "challenge_module": "TruthCore.Results.Causality.ImitabilityPlurality.Challenge",
+  "solution_module": "TruthCore.Results.Causality.ImitabilityPlurality.Solution",
+  "theorem": "TruthCore.Results.Causality.ImitabilityPlurality.intrinsicGroundingControls",
+  "comparator_config": "results/c34e1b3e-082c-4275-8b32-b7f19c5b4de8/comparator.json",
+  "status": "solution-present",
+  "description": "Restores world-indexed availability, a positive bearer-based nature ground, represented absence or presence of cognitive dependence, and ranking-sensitive productive relevance to the matched controls. Transitive closure and increasing levels prove strictness of the chosen explanation relation; numeric levels are not an explanation of why its edges obtain. No cognitive dependence within the represented fragment is a scoped property, not an exhaustive metaphysical mind-independence theorem. The same unrealized completeness/non-composition/relevance obligations apply to both rows. No support for d1fb6414 or 3b40009e is inferred from the constructed match. The nature/mode truth equalities reduce definitionally for any supplied table; the absence of cognition-to-mode/rank paths follows from false cognition plus factivity. The added formal content is the selected positive source-nature graph and rank-sensitive giving, not an independent derivation of profile determination or mind-independence."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "03354564-aa27-437d-9ee7-eefbda9623c1",
+  "label": "Strict priority tests the source-of-differences bridge",
+  "subject_kind": "result",
+  "subject_id": "7e026e27-520f-4b65-a031-5acc6a5342fe",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "69b9f887-582a-479c-924b-e7328f3930b4",
+  "note": "The theorem excludes a circular fact-grounding direction. NoMerelyProducedStandIn concerns produced items, so an application bridge remains OPEN; this tests link is diagnostic and does not discharge the existing premise."
+}
