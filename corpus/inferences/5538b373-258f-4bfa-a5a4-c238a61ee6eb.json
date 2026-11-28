@@ -1,0 +1,10 @@
+{
+  "id": "5538b373-258f-4bfa-a5a4-c238a61ee6eb",
+  "label": "Nature entailment restricts the same two histories admitted by the bare law (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "34cedad4-7e84-4bec-ac64-b0e3511165b2",
+  "rule": "Exclude omission for any specified entailing nature fact that holds",
+  "meaning": "Use the at-now selection theorem. Truth of an existence-entailing nature fact in the omission history would supply an actuality witness there. The model ranges over temporal profiles.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

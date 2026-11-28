@@ -1,0 +1,12 @@
+{
+  "id": "bfd38116-5db0-497f-a884-6df7e79ac243",
+  "label": "Apply the stationary location proof under a substantial-actuality state premise (inference)",
+  "input_statement_ids": [
+    "628aaedc-7e33-4d15-8606-d894cb3d755d"
+  ],
+  "output_statement_id": "20548369-e6d9-4711-abe5-0a58c4c8b1cd",
+  "rule": "Build a presence-report trace and derive its stationarity",
+  "meaning": "The open state premise gives the forward implication with inducers and giving excluded. The independent no-onset condition gives the reverse implication. Apply the anchored-location theorem to the resulting stationary report trace and project dated presence.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

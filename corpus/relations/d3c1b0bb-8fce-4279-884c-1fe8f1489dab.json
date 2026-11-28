@@ -1,0 +1,10 @@
+{
+  "id": "d3c1b0bb-8fce-4279-884c-1fe8f1489dab",
+  "label": "Calibrated loss tests the coverage of cessation by inducers",
+  "subject_kind": "result",
+  "subject_id": "00a7e616-3154-4db7-8d66-af4536384df7",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "note": "The calibrated loss branch fixes earlier presence and excludes every represented inducer in the interval, while the later presence bit is false. It checks a configuration in which both equivalent formulations of the persistence condition fail."
+}

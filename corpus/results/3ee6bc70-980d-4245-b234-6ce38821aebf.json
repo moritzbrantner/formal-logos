@@ -1,0 +1,11 @@
+{
+  "id": "3ee6bc70-980d-4245-b234-6ce38821aebf",
+  "label": "Apply the stationary location proof under a substantial-actuality state premise",
+  "argument_id": "d48379e6-b9ca-45c5-a8ed-200e5e9d41bf",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.transferLocation",
+  "comparator_config": "results/3ee6bc70-980d-4245-b234-6ce38821aebf/comparator.json",
+  "status": "solution-present",
+  "description": "The open state premise gives the forward implication with inducers and giving excluded. The independent no-onset condition gives the reverse implication. Apply the anchored-location theorem to the resulting stationary report trace and project dated presence."
+}

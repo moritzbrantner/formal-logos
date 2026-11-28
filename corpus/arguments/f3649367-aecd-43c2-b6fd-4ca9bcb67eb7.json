@@ -1,0 +1,14 @@
+{
+  "id": "f3649367-aecd-43c2-b6fd-4ca9bcb67eb7",
+  "label": "A moving-location control leaves the actuality transfer premise unproved",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "0d4d175c-3609-45c1-a705-aecce6ca89b8",
+  "inference_ids": [
+    "1fc88fca-962b-46fa-ae4e-9cb923f9e133"
+  ],
+  "meaning": "Reuse the reported location contrast. In the exposed profile reinterpreted with no modeled inducer, the same bearer disappears between 0 and 1 despite absent production and no onset, so the state rule fails.",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "6788dada-f316-5cc3-8376-e64c512b1a0e"
+  ]
+}

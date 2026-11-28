@@ -1,0 +1,10 @@
+{
+  "id": "ab9c88aa-9c48-4ae9-a68f-11539942c45a",
+  "label": "A shared cessation law admits opposite actuality profiles (inference)",
+  "input_statement_ids": [],
+  "output_statement_id": "6b4280f4-6a0f-405f-9055-0ab5052dfc9f",
+  "rule": "Construct matched worldly histories and refute entailment with the omission history",
+  "meaning": "Hold the background bearer fixed, vary the candidate's temporal profile and satisfy the global cessation law by time-independent presence. Omission refutes the claimed entailment of actuality.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}
