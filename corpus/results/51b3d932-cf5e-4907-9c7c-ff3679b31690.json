@@ -1,0 +1,11 @@
+{
+  "id": "51b3d932-cf5e-4907-9c7c-ff3679b31690",
+  "label": "A moving-location control leaves the actuality transfer premise unproved",
+  "argument_id": "f3649367-aecd-43c2-b6fd-4ca9bcb67eb7",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.locationDoesNotSupplyStateLaw",
+  "comparator_config": "results/51b3d932-cf5e-4907-9c7c-ff3679b31690/comparator.json",
+  "status": "solution-present",
+  "description": "Reuse the reported location contrast. In the exposed profile reinterpreted with no modeled inducer, the same bearer disappears between 0 and 1 despite absent production and no onset, so the state rule fails."
+}

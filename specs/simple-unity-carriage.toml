@@ -1,0 +1,249 @@
+[batch]
+vocab = "TruthCore.Causality.SimpleUnityCarriage"
+results = "TruthCore.Results.Causality.SimpleUnityCarriage"
+
+[[statement]]
+id = "Every ESSENCE_6 condition of an actual root's own nature is seated in a real constituent of it"
+lean = "RootOwnConditionsSeated"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "d6912ecb-aed2-411a-913e-0dab9106d910", "588792ba-6354-4439-b4d7-bc640983c8f2"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (SEAT): for every actual concrete root r at w and every ESSENCE_6 condition C in r's own nature on r's profile, some real constituent k of r is such that C belongs to what k is (SeatedIn). No condition of a root's nature floats free of everything real in it. It does not say which constituent, that the constituent realizes any determination, or that the condition is a requirement of anything. A rival that places a bare negative clause 'lacks noesis' in a simple root's one nature accepts it; it is denied by a clause in the nature that is in no real constituent (a non-real contained item, or a nature distinct from the one real constituent)."
+
+[[statement]]
+id = "Every real determination of an actual root is realized by a real constituent of it"
+lean = "RootDeterminationsRealized"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "d6912ecb-aed2-411a-913e-0dab9106d910", "968526e1-42a7-4e28-9221-b426f560d1ee"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (REAL): for every actual concrete root r at w and every determination t that r has at w, some real constituent k of r realizes t in r (r has t by k). Every real determination has a real constituent as its reality. It does not say that every constituent realizes some determination; a constituent that is a principle of limitation may realize none."
+
+[[statement]]
+id = "Every actual root has some real determination"
+lean = "RootsHaveSomeDetermination"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (ESSE): every actual concrete root r at w has at least one real determination at w, for example its being. Used only to give a simple root's one constituent something it realizes."
+
+[[statement]]
+id = "What a root's seated ESSENCE_6 condition excludes, its seat's determination REQUIRES_LACK_1"
+lean = "RootSeatedExclusionsRequiredAsSuch"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "d6912ecb-aed2-411a-913e-0dab9106d910", "588792ba-6354-4439-b4d7-bc640983c8f2", "968526e1-42a7-4e28-9221-b426f560d1ee", "88f7c656-f484-4737-a872-b2d78c604322"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1", "ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (TRANSFER_1, REQUIRES_LACK_1): for every actual concrete root r at w, every ESSENCE_6 condition C of r's own nature seated in a real constituent k of r that realizes some determination of r holds at every admissible profile q containing r's determinations in which no determination of r realized by k requires, as such, the lack of some members of q. Read contrapositively (classically): where such a seated condition fails at an admissible extension q, some determination of r that its seat realizes requires, as such and so in every bearer, the joint lack of some members of q. A seat that realizes no determination of r is exempt. It gives own-nature carriage as such given constitutive simplicity, SEAT, REAL and ESSE (ownCarriageFromUnity), and own-nature carriage gives it given simplicity and REAL alone (unityTransferOfOwnCarriage); under all four it is therefore equivalent to own-nature carriage, so its warrant at a simple root is that of carriage; on the open family with the necessity direction of member grounding no requirement relation lets a simple root that lacks noesis by a clause of its nature meet it (simpleUnityCarriageMap, clause 4)."
+
+[[statement]]
+id = "What a root's seated ESSENCE_6 condition excludes, its seat's determination REQUIRES_LACK_2 in it"
+lean = "RootSeatedExclusionsRequiredIn"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "d6912ecb-aed2-411a-913e-0dab9106d910", "588792ba-6354-4439-b4d7-bc640983c8f2", "968526e1-42a7-4e28-9221-b426f560d1ee", "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1", "ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (TRANSFER_2, REQUIRES_LACK_2): the same as TRANSFER_1 with requirement in the root: where a seated condition of r's own nature fails at an admissible extension q of r's profile, some determination of r that its seat realizes requires, in r, the joint lack of some members of q. Its rationale is the identity thesis for a simple being (its one constituent is, in reality, each determination it realizes) together with closure of what belongs to a constituent under the exclusion a failing condition expresses. A simple root that lacks noesis by a clause of its one nature meets it, with its being, as realized in it, requiring the lack of noesis in it (simpleUnityCarriageMap, clause 3)."
+
+[[statement]]
+id = "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"
+lean = "RootOwnEssentialConditionsCarried"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "88f7c656-f484-4737-a872-b2d78c604322"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1", "ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (LE_own): for every actual concrete root r at w, every ESSENCE_6 condition in r's own nature on r's profile holds at every admissible profile q containing r's real determinations in which no determination of r requires, as such (REQUIRES_LACK_1), the lack of some members of q. It is the restriction of carriage LE (682e6436) to conditions in the root's own nature; LE gives it (ownCarriageOfCarriage)."
+
+[[statement]]
+id = "Own-nature ESSENCE_6 exclusions at a root are carried by what it REQUIRES_LACK_2 in itself"
+lean = "RootOwnEssentialConditionsCarriedIn"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1", "ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (LE_in): for every actual concrete root r at w, every ESSENCE_6 condition in r's own nature on r's profile holds at every admissible profile q containing r's real determinations in which no determination of r requires, in r (REQUIRES_LACK_2), the lack of some members of q. A bare negative clause 'lacks noesis' in a simple root's one nature, carried in the root by that nature, satisfies it; with the necessity direction of member grounding it does not give E (simpleUnityCarriageMap, clause 3)."
+
+[[statement]]
+id = "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1"
+lean = "RootRequirementsInHoldAsSuch"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "88f7c656-f484-4737-a872-b2d78c604322", "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"]
+disambiguations = ["ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN sense bridge, analyst formulation, attribution deferred: for every actual concrete root r at w, every determination t that r has and every set S, if t requires the lack of S in r (REQUIRES_LACK_2) then t requires the lack of S as such, in every bearer (REQUIRES_LACK_1). It passes from requirement in the bearer to requirement as such. On the intended meaning of REQUIRES_LACK_1 (what a determination requires as such, no bearer of it violates), it fails for a determination that the root shares with a bearer having the excluded items: whatever the root's nature excludes in it, the shared determination as such does not. On the #2153 carrier the source's being, which the thinking effect shares, cannot require the lack of noesis as such under the necessity direction, because the effect's profile is admissible (simpleUnityCarriageMap, clause 4); in clause 3 the bridge fails for that being. It is near-analytic for a determination that only bearers of the root's nature have (clause 10), and there the dispute moves to the purity of requirements (0c8631bd) or to strict purity at roots (3b39e0ba)."
+
+[[statement]]
+id = "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature"
+lean = "RootLacksExcludedByOwnNature"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "1db9a5b1-7e87-49dd-9bba-65e47f2ffc45"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1"]
+paraphrase = "OPEN, analyst formulation, attribution deferred (XN_own): for every actual concrete root r at w and every determination d that r lacks at w, some ESSENCE_6 condition in r's own nature fails at every set of determinations containing r's real determinations together with d. It strengthens essential exclusion of root absences (b2d6ac16) by requiring the excluding nature to be the root's own. Its rationale: a root has no actual concrete ground, so a nature that excludes what it lacks is its own. A necessary lack that no nature grounds (modal primitivism or brutalism) denies it; a bare negative clause in the root's own nature satisfies it."
+
+[[statement]]
+id = "Unity carriage map: simplicity locates a root's exclusions; carriage as such needs a sense bridge"
+lean = "SimpleUnityCarriageMap"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "3f8e5e3c-e85a-4388-af9c-4da1c8a02069", "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6", "d6912ecb-aed2-411a-913e-0dab9106d910", "588792ba-6354-4439-b4d7-bc640983c8f2", "968526e1-42a7-4e28-9221-b426f560d1ee", "88f7c656-f484-4737-a872-b2d78c604322", "34b90f09-77b7-47dd-b576-9fcaf6a0cca7", "22c26860-7e66-4a0c-97db-6a9ecdc8c941", "65e38ffa-5a1c-55d0-935c-6538d843b780", "c48266c2-ba78-41c2-8860-61273abf0ef8"]
+disambiguations = ["1aef8986-ed29-564f-9803-d812d2ff63e1", "ee069ef5-6459-4e92-aeea-ab8c64068c54", "bb604f7b-9e16-4168-b433-be76bd3995a9"]
+paraphrase = "Certificate, analyst formulations. (1) For any carrier, SEAT, every real constituent of a root realizing some determination of it, and TRANSFER_1 give own-nature carriage as such, without simplicity. (2) On the #2153 carrier, a classical source with every pure determination, its nature imposing only admissibility, one constituent seating it and realizing every determination, and no requirement, meets simplicity, SEAT, REAL, ESSE, TRANSFER_1, TRANSFER_2, own-nature carriage in both senses, LE, the necessity direction, own-nature exclusion and E. (3) A simple source with being, a and b whose one nature also contains 'lacks noesis', with its being requiring the lack of noesis in it and nothing requiring a lack as such, meets simplicity, SEAT, REAL, ESSE, TRANSFER_2, carriage in the root, own-nature exclusion, the necessity direction and the purity of requirements; TRANSFER_1, own-nature carriage as such, LE, the sense bridge from REQUIRES_LACK_2 to REQUIRES_LACK_1, E and the purity of requirements in the root fail. (4) On the open family, for every requirement relation with the necessity direction, own-nature carriage as such fails for that source (the admissible pure profile contains its determinations and noesis), and being, which the thinking effect shares, does not require the lack of noesis as such (the effect's profile is admissible). (5) Two constituents, the clause seated in one that realizes nothing: SEAT, REAL, ESSE and TRANSFER_1 hold; simplicity and own-nature carriage fail. (6) The clause seated nowhere: simplicity, REAL, ESSE and TRANSFER_1 hold; SEAT and own-nature carriage fail. (7) Nothing realizes anything: simplicity, SEAT, ESSE and TRANSFER_1 hold; REAL and own-nature carriage fail. (8) The source has no determination: simplicity, SEAT, REAL and TRANSFER_1 hold; ESSE and own-nature carriage fail. (9) The clause carried as such by the pure a on the open family: the unity premises, TRANSFER_1 and own-nature carriage hold; the necessity direction and E fail. (10) A fine-grained carrier in which the source has its own 'this nature' determination requiring as such the lack of noesis: the unity premises, TRANSFER_1, own-nature carriage, the sense bridge, the necessity direction, own-nature exclusion and E hold (the lack is excluded by admissibility); with that determination pure the purity of requirements fails and strict purity holds, with it impure the purity of requirements holds and strict purity fails. (11) On lane E's selection carrier, a classical source with every pure determination whose selection of an outcome is read as a real determination varying across worlds, its nature imposing only admissibility and one constituent seating it and realizing at the actual world everything the source has there, meets the unity premises, TRANSFER_1, own-nature carriage, the necessity direction, own-nature exclusion and E, while N fails; realization is encoded at the actual world only. (12) The classical source of (2) meets the purity of requirements in the root (vacuously: no requirement in the root), strict purity and the admissibility of its profile, and has every pure determination; the source of (3) meets strict purity, the admissibility of its profile, the admissibility of each pure determination and joint compossibility on the open family, and lacks a pure determination. (13) On the fine-grained carrier of (10) with the in-root requirement of the nature determination: with that determination pure, the purity of requirements in the root and joint compossibility fail; with it impure, both hold and strict purity fails; in both the source lacks a pure determination. Structural assignments only: not models of essence, constituency, realization or requirement."
+
+[[statement]]
+id = "No pure determination of an actual root REQUIRES_LACK_2 in it the lack of pure determinations"
+lean = "RootPureRequiresNoPureLackIn"
+definitions = ["52352824-6be9-53c6-83d4-82fed9a08cbb", "3aba5f19-f48d-50db-bc57-93ba2e99f845", "65e38ffa-5a1c-55d0-935c-6538d843b780", "34b90f09-77b7-47dd-b576-9fcaf6a0cca7"]
+disambiguations = ["ee069ef5-6459-4e92-aeea-ab8c64068c54"]
+paraphrase = "OPEN, analyst formulation, attribution deferred: for every actual concrete root r at w, no pure determination t that r has requires, in r (REQUIRES_LACK_2), the lack of a set of pure determinations. It is the in-root counterpart of the purity of requirements (0c8631bd), restricted to actual roots, with the same rationale: requiring the lack of a positive actuality is a limitation of the requirer, here of the determination as realized in the root. It is restricted to roots because a pure determination realized in a finite bearer can require there the lack of a pure one (a finite knower's knowing excludes knowing everything at once). With the bridge from REQUIRES_LACK_2 to REQUIRES_LACK_1 at roots it follows from 0c8631bd (pureRequiresNoPureLackInOfAsSuch). A simple root that lacks noesis by a clause of its one nature, with its being as realized in it requiring that lack, denies it (simpleUnityCarriageMap, clause 3); the Plotinian line (the unity of the first excludes the duality of thought, and this is no limitation) denies it."
+
+[[argument]]
+id = "Own-nature carriage as such, from the unity of a simple root"
+label = "Own-nature carriage REQUIRES_LACK_1, from simplicity, seating, realization and transfer"
+theorem = "ownCarriageFromUnity"
+premises = ["f4180d0c-1759-4cc5-a4ab-5e7b36c408b0", "Every ESSENCE_6 condition of an actual root's own nature is seated in a real constituent of it", "Every real determination of an actual root is realized by a real constituent of it", "Every actual root has some real determination", "What a root's seated ESSENCE_6 condition excludes, its seat's determination REQUIRES_LACK_1"]
+conclusion = "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"
+axioms = []
+rule = "Simplicity identifies the seat of a condition with the constituent that realizes the root's determination; transfer then gives the condition"
+meaning = "Fix an actual root r, a condition C of its own nature and an admissible q containing its determinations in which no determination of r requires, as such, the lack of members of q. SEAT puts C in a real constituent k of r. ESSE gives r a determination, and REAL gives it a real constituent that realizes it. Constitutive simplicity identifies that constituent with k, so the seat realizes a determination of r, and TRANSFER_1 gives C at q. Simplicity does work here: with two constituents, a clause seated in one that realizes nothing satisfies every other premise while own-nature carriage fails (simpleUnityCarriageMap, clause 5). It is idle on the reading on which every real constituent realizes a determination (clause 1). The converse unityTransferOfOwnCarriage gives TRANSFER_1 back from own-nature carriage given simplicity and REAL alone. The equivalence of TRANSFER_1 and own-nature carriage holds only under all four of simplicity, SEAT, REAL and ESSE: without SEAT or ESSE, TRANSFER_1 holds while own-nature carriage fails (simpleUnityCarriageMap, clauses 6 and 8). So at a simple root satisfying SEAT and ESSE the load is the transfer premise. The main theorem uses no axioms."
+description = "Derivation (#2145 lane U): own-nature carriage as such from constitutive simplicity, seating, realization, ESSE and TRANSFER_1. A relocation of carriage into the transfer premise at simple roots (see unityTransferOfOwnCarriage). Establishes no premise."
+
+[[argument]]
+id = "Transfer at a simple root, from own-nature carriage as such"
+label = "TRANSFER_1 at simple roots, from own-nature carriage REQUIRES_LACK_1 and realization"
+theorem = "unityTransferOfOwnCarriage"
+premises = ["f4180d0c-1759-4cc5-a4ab-5e7b36c408b0", "Every real determination of an actual root is realized by a real constituent of it", "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"]
+conclusion = "What a root's seated ESSENCE_6 condition excludes, its seat's determination REQUIRES_LACK_1"
+axioms = []
+rule = "At a simple root every determination is realized by the one constituent, so carriage by some determination is carriage by one the seat realizes"
+meaning = "Fix an actual root r, a condition C seated in a real constituent k of r, and an admissible q containing r's determinations in which no determination realized by k requires, as such, the lack of members of q. Every determination t of r is realized by some real constituent (REAL), which simplicity identifies with k; so no determination of r requires such a lack, and own-nature carriage gives C at q. This is one direction only, and it needs only simplicity and REAL. The other direction, ownCarriageFromUnity, needs SEAT and ESSE as well (clauses 6 and 8 show both are needed there); so TRANSFER_1 and own-nature carriage as such are equivalent under all four of simplicity, SEAT, REAL and ESSE. The unity argument therefore relocates carriage into the transfer premise and gives it no independent warrant at a simple root. The same proof gives TRANSFER_2 from LE_in (Lean-only unityTransferInOfOwnCarriageIn), so the relocation holds in REQUIRES_LACK_2 as well. The main theorem uses no axioms."
+description = "One-directional relocation lemma (#2145 lane U): own-nature carriage as such gives TRANSFER_1 given simplicity and REAL. The equivalence with TRANSFER_1 needs, for the other direction (ownCarriageFromUnity), SEAT and ESSE as well. Establishes no premise."
+
+[[argument]]
+id = "Own-nature carriage in the root, from the unity of a simple root"
+label = "Own-nature carriage REQUIRES_LACK_2, from simplicity, seating, realization and transfer"
+theorem = "ownCarriageInFromUnity"
+premises = ["f4180d0c-1759-4cc5-a4ab-5e7b36c408b0", "Every ESSENCE_6 condition of an actual root's own nature is seated in a real constituent of it", "Every real determination of an actual root is realized by a real constituent of it", "Every actual root has some real determination", "What a root's seated ESSENCE_6 condition excludes, its seat's determination REQUIRES_LACK_2 in it"]
+conclusion = "Own-nature ESSENCE_6 exclusions at a root are carried by what it REQUIRES_LACK_2 in itself"
+axioms = []
+rule = "Simplicity identifies the seat of a condition with the constituent that realizes the root's determination; transfer in the root then gives the condition"
+meaning = "The derivation of ownCarriageFromUnity with requirement in the root (REQUIRES_LACK_2) throughout. Its transfer premise TRANSFER_2 is the one the identity thesis for simple beings supports: the one constituent is, in reality, each determination it realizes, so what its condition excludes is required to be lacking in the root by each of them. A simple root that lacks noesis by a clause of its one nature meets every premise and the conclusion (simpleUnityCarriageMap, clause 3): its lack of noesis has a positive ground in the root, its one nature. The main theorem uses no axioms."
+description = "Derivation (#2145 lane U): own-nature carriage in the root from constitutive simplicity, seating, realization, ESSE and TRANSFER_2. Establishes no premise."
+
+[[argument]]
+id = "Own-nature carriage as such, from carriage in the root and the requirement sense bridge"
+label = "Own-nature carriage REQUIRES_LACK_1, from carriage REQUIRES_LACK_2 and the sense bridge"
+theorem = "ownCarriageFromCarriageIn"
+premises = ["Own-nature ESSENCE_6 exclusions at a root are carried by what it REQUIRES_LACK_2 in itself", "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1"]
+conclusion = "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"
+sense_bridges = [{ term = "REQUIRES_LACK", from = "REQUIRES_LACK_2", to = "REQUIRES_LACK_1", statement_id = "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1", role = "premise" }]
+axioms = []
+rule = "If no determination of the root requires a lack as such, by the bridge none requires it in the root, and carriage in the root applies"
+meaning = "Fix an actual root r, a condition C of its own nature and an admissible q containing its determinations in which no determination of r requires, as such, the lack of members of q. By the sense bridge, none requires such a lack in r either, so own-nature carriage in the root gives C at q. With ownCarriageInFromUnity this is the unity argument's route to carriage as such: everything beyond what the identity thesis supports is in the bridge. The bridge fails for a determination the root shares with a bearer that has the excluded items (simpleUnityCarriageMap, clauses 3 and 4) and is near-analytic for a 'this nature' determination (clause 10). The main theorem uses no axioms."
+description = "Sense passage (#2145 lane U): own-nature carriage from REQUIRES_LACK_2 to REQUIRES_LACK_1 through an explicit bridge premise. Establishes no premise."
+
+[[argument]]
+id = "No unexplained absence at roots, from own-nature exclusion and own-nature carriage"
+label = "No unexplained absence at roots, from own-nature exclusion and own-nature carriage"
+theorem = "noUnexplainedAbsenceFromOwnExclusion"
+strong_version_needed = { "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature" = "Own-nature carriage constrains only conditions of the root's own nature. With the weaker XN (b2d6ac16) the excluding condition may lie in another being's nature, which own-nature carriage does not reach, so E does not follow; the route with XN needs full carriage LE (915d06fd)." }
+premises = ["Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature", "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1", "89c988d9-34b2-4aee-9e1a-bf4a304c032b"]
+conclusion = "9281317d-1f0a-4522-b91c-58cc07652e92"
+axioms = []
+rule = "An excluding condition of the root's own nature fails at the admissible extension, which own-nature carriage with member grounding's necessity direction forbids"
+meaning = "Fix an actual root r at w and a determination d it lacks while an admissible q contains its determinations and d. A condition of r's own nature fails at every profile containing r's determinations and d, so at q. The necessity direction of member grounding makes q exclusion-free, so no determination of r requires, as such, a lack within q, and own-nature carriage gives the condition at q: a contradiction. It is the own-nature counterpart of route 915d06fd and connects the unity derivations to E. It uses neither N nor EM. The main theorem uses no axioms."
+description = "Derivation (#2145 lane U): E from own-nature exclusion, own-nature carriage as such and the necessity direction of member grounding. Establishes no premise."
+
+[[argument]]
+id = "Every pure perfection at roots, from carriage in the root and in-root purity of requirements"
+label = "Every pure perfection at roots, from own-nature carriage and purity REQUIRES_LACK_2"
+theorem = "everyPureFromCarriageIn"
+strong_version_needed = { "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature" = "Carriage in the root constrains only conditions of the root's own nature. With the weaker XN (b2d6ac16) the excluding condition may lie in another being's nature, which carriage in the root does not reach, so the conclusion does not follow." }
+premises = ["ee4ab504-c8fe-59bc-bc96-7cbeefed6410", "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature", "Own-nature ESSENCE_6 exclusions at a root are carried by what it REQUIRES_LACK_2 in itself", "No pure determination of an actual root REQUIRES_LACK_2 in it the lack of pure determinations", "3b39e0ba-eb4a-5708-90d0-c2706094d43c", "0a9d3a40-4777-4352-a4b4-2126c0055924", "ee287fd3-3890-4739-8407-a27d7c81191d", "500d0e2d-c7e3-41a6-a152-01e4cda8fce5"]
+conclusion = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+axioms = []
+rule = "A lacked pure determination joins the root's pure admissible profile; nothing in the root requires that pure lack, so own-nature carriage in the root contradicts the excluding condition"
+meaning = "Fix an actual root r at w and a pure k. By excluded middle r has k or lacks it. If it lacks k, a condition of r's own nature fails at every profile containing r's determinations and k (own-nature exclusion). r's profile is admissible (0a9d3a40) and pure (3b39e0ba), and k occurs in some admissible profile (ee287fd3), so joint compossibility (500d0e2d) makes the profile with k added admissible. Its members are pure, so by the purity of requirements in the root no determination of r requires, in r, the lack of some of them, and own-nature carriage in the root gives the condition there: a contradiction. This route uses neither carriage as such (LE), nor the requirement sense bridge, nor member grounding, nor E. With ownCarriageInFromUnity its load is the unity premises with the in-root transfer, and the purity of requirements in the root; on the #2153 carrier the simple source that lacks noesis by a clause of its one nature meets every other non-logical premise and fails exactly that purity premise (simpleUnityCarriageMap, clauses 3 and 12). The main theorem uses no axioms."
+description = "Derivation (#2145 lane U): every pure perfection at the actual roots from own-nature exclusion, carriage in the root, the purity of requirements in the root, strict purity, admissibility of root profiles, admissibility of each pure determination and joint compossibility. Establishes no premise."
+
+[[argument]]
+id = "In-root purity of requirements, from purity of requirements as such and the sense bridge"
+label = "In-root purity of requirements, from purity REQUIRES_LACK_1 and the sense bridge"
+theorem = "pureRequiresNoPureLackInOfAsSuch"
+premises = ["0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6", "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1"]
+conclusion = "No pure determination of an actual root REQUIRES_LACK_2 in it the lack of pure determinations"
+sense_bridges = [{ term = "REQUIRES_LACK", from = "REQUIRES_LACK_2", to = "REQUIRES_LACK_1", statement_id = "What an actual root's determination REQUIRES_LACK_2 in the root, it REQUIRES_LACK_1", role = "premise" }]
+axioms = []
+rule = "A requirement in the root would be a requirement as such, which the purity of requirements excludes"
+meaning = "Fix an actual root r, a pure determination t of r and a set S of pure determinations. If t required, in r, the lack of S, then by the sense bridge t would require the lack of S as such, which the purity of requirements (0c8631bd) excludes. So the in-root purity premise is no stronger than 0c8631bd together with the bridge. It does not show the converse: a rival that denies the bridge can keep 0c8631bd and deny the in-root premise (simpleUnityCarriageMap, clause 3). No axioms."
+description = "Derivation (#2145 lane U): the purity of requirements in the root from the purity of requirements as such and the REQUIRES_LACK sense bridge. Establishes no premise."
+
+[[argument]]
+id = "Own-nature carriage, from carriage"
+label = "Own-nature carriage REQUIRES_LACK_1 at roots, from carriage LE"
+theorem = "ownCarriageOfCarriage"
+premises = ["682e6436-a44f-40d6-bc02-7cb5f4a2b754"]
+conclusion = "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"
+axioms = []
+rule = "Restrict the natures consulted to the root's own"
+meaning = "LE holds for conditions in any being's nature on a root's profile; take that being to be the root. It certifies the strength order. No axioms."
+description = "Strength-order certificate: carriage LE implies its own-nature restriction. Establishes no premise."
+
+[[argument]]
+id = "Essential exclusion of root absences, from own-nature exclusion"
+label = "ESSENCE_6 exclusion of root absences, from own-nature ESSENCE_6 exclusion"
+theorem = "essentialExclusionOfOwn"
+premises = ["Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature"]
+conclusion = "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2"
+axioms = []
+rule = "An excluding condition of the root's own nature is an excluding condition in some being's nature"
+meaning = "If a condition of r's own nature excludes d given r's profile, then some being's nature (r's) contains such a condition. It certifies the strength order. No axioms."
+description = "Strength-order certificate: own-nature exclusion of root absences implies XN. Establishes no premise."
+
+[[argument]]
+id = "Unity carriage map at roots"
+label = "Unity carriage map: simplicity locates root exclusions; carriage as such needs a bridge"
+theorem = "simpleUnityCarriageMap"
+sense_mixing_control = true
+premises = []
+conclusion = "Unity carriage map: simplicity locates a root's exclusions; carriage as such needs a sense bridge"
+axioms = ["propext", "Classical.choice", "Quot.sound"]
+rule = "Generic idleness lemma and finite controls on the #2153 carrier and a fine-grained extension"
+meaning = "Certificate for #2145 lane U. Clause 1: on the reading on which every real constituent of a root realizes a determination, simplicity is idle. Clause 2: a classical source meets every unity premise, both transfers, carriage in both senses, the necessity direction, own-nature exclusion and E (positive witness). Clause 3: a simple source that lacks noesis by a clause of its one nature meets every unity premise, TRANSFER_2 and carriage in the root, while TRANSFER_1, own-nature carriage as such, LE, the sense bridge, E and the purity of requirements in the root fail: on this assignment it meets LE_in, the sense-2 formalization of 'negative facts at a root have positive grounds', and the step to carriage as such is the sense bridge, which fails in that row. Clause 4: on the open family with the necessity direction no requirement relation lets that source meet own-nature carriage as such, and its being, which the thinking effect shares, cannot require the lack of noesis as such. Clauses 5 to 8 drop simplicity, SEAT, REAL and ESSE in turn, with the other unity premises and TRANSFER_1 holding and own-nature carriage failing. Clause 9: the unity package with own-nature carriage holds while the necessity direction and E fail, so, with clause 2, the unity package neither entails nor excludes the necessity direction on this carrier. Clause 10: with a fine-grained 'this nature' determination that requires as such the lack of noesis, the unity premises, TRANSFER_1, own-nature carriage, the sense bridge, the necessity direction and E hold, and the source pays either the purity of requirements (the nature determination pure: the Plotinian line) or strict purity at roots (the nature determination impure). Clause 11: on lane E's selection carrier the classical source, with a selection read as a real determination that varies across worlds, meets the unity premises, TRANSFER_1, own-nature carriage, the necessity direction, own-nature exclusion and E while N fails; whether one world-invariant constituent can realize different selections at different worlds is not encoded. Clause 12: with clause 3, the simple source that lacks noesis meets every non-logical premise of everyPureFromCarriageIn except the purity of requirements in the root, and lacks a pure determination; the classical source meets them all (strict purity and admissibility of its profile in clause 12, own-nature exclusion and carriage in the root in clause 2, in-root purity vacuously). Clause 13 runs the in-root route on the fine-grained carrier of clause 10: the Plotinian source fails in-root purity and joint compossibility, the impure-nature source fails strict purity, and both lack a pure determination. Establishes no premise."
+description = "Diagnostic certificate (#2145 lane U): what the unity of a simple root does and does not give toward carriage. Establishes no premise."
+
+[[relation]]
+id = "Carriage strengthens own-nature carriage"
+subject_kind = "statement"
+subject_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "Own-nature ESSENCE_6 exclusions at a root are carried by what its determinations REQUIRES_LACK_1"
+verification_result_id = "Own-nature carriage, from carriage"
+note = "Same root, profile, admissible family, ESSENCE_6 relation and REQUIRES_LACK_1 relation. The strong version constrains conditions in any being's nature on the root's profile, the weak one only conditions in the root's own nature. No strictness result and no certified difference are registered."
+
+[[relation]]
+id = "Own-nature exclusion strengthens essential exclusion of root absences"
+subject_kind = "statement"
+subject_id = "Every absence of an actual root is excluded by an ESSENCE_6 condition of its own nature"
+predicate = "strengthens"
+object_kind = "statement"
+object_id = "b2d6ac16-4ad6-4a04-9f81-9844abfe28d2"
+verification_result_id = "Essential exclusion of root absences, from own-nature exclusion"
+note = "Same root, profile and ESSENCE_6 relation. The strong version requires the excluding condition to lie in the root's own nature, the weak one in some being's nature. No strictness result and no certified difference are registered."
+
+[[relation]]
+id = "Test by SimpleUnityCarriage.simpleUnityCarriageMap (682e6436)"
+subject_kind = "result"
+subject_id = "Unity carriage map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "682e6436-a44f-40d6-bc02-7cb5f4a2b754"
+note = "Clause 3: a simple source that lacks noesis by a clause of its one nature meets constitutive simplicity, seating, realization, ESSE and the in-root transfer, and carries the clause in the root, while LE fails. The unity of a simple root does not by itself give carriage as such. The remaining step is TRANSFER_1, which under simplicity, SEAT, REAL and ESSE is equivalent to own-nature carriage itself (ownCarriageFromUnity with unityTransferOfOwnCarriage, the latter needing only simplicity and REAL); the REQUIRES_LACK sense bridge from requirement in the root to requirement as such is one sufficient way to take it."
+
+[[relation]]
+id = "Test by SimpleUnityCarriage.simpleUnityCarriageMap (f4180d0c)"
+subject_kind = "result"
+subject_id = "Unity carriage map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "f4180d0c-1759-4cc5-a4ab-5e7b36c408b0"
+note = "Clause 5: with two constituents and the clause seated in one that realizes nothing, every other unity premise and TRANSFER_1 hold while own-nature carriage fails, so constitutive simplicity does work in ownCarriageFromUnity. Clause 1: it is idle on the reading on which every real constituent realizes a determination."
+
+[[relation]]
+id = "Test by SimpleUnityCarriage.simpleUnityCarriageMap (0c8631bd)"
+subject_kind = "result"
+subject_id = "Unity carriage map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "0c8631bd-d6fd-405f-a3f3-45ab8d1a50c6"
+note = "Clause 10: when the simple source's lack of noesis is carried as such by its own 'this nature' determination, the unity premises, own-nature carriage, the necessity direction and E hold, and the source must deny either the purity of requirements (that determination pure) or strict purity at roots (that determination impure)."
+
+[[relation]]
+id = "Test by SimpleUnityCarriage.simpleUnityCarriageMap (fe67d766)"
+subject_kind = "result"
+subject_id = "Unity carriage map at roots"
+predicate = "tests"
+object_kind = "statement"
+object_id = "fe67d766-3e9f-57b5-bbff-c3e2c50c56fd"
+note = "Clauses 3 and 12: on the #2153 carrier the simple source that lacks noesis by a clause of its one nature meets own-nature exclusion, carriage in the root, strict purity, admissibility of its profile and of each pure determination, and joint compossibility, and fails only the purity of requirements in the root among the non-logical premises of everyPureFromCarriageIn; it lacks a pure determination. The classical source meets them all (clauses 2 and 12; in-root purity vacuously, with no requirement in the root) and has every pure determination."

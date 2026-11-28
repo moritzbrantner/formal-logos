@@ -1,5 +1,15 @@
 {
   "id": "5a4ba734-fea3-4e3c-afd1-50f086c32f41",
-  "label": "External things reading on externally conditioned persistence",
-  "paraphrase": "Analyst interpretation with attribution deferred. The question is whether a bearer can continue to exist only under certain external conditions. An external protector may secure the no-loss background without giving the bearer its being. No substantive objection identified to the conditional persistence law from external conditioning alone. An independently established ongoing strict giver would pose a separate question about existential dependence."
+  "label": "Only the protected received bearer survives to 1, with an inertial reason and no strict giver",
+  "paraphrase": "Analyst control, attribution deferred. The same receiver is present at 0 in two integer-time histories satisfying the cessation law. At 1 the protector is present and there is no inducer against the receiver in one history. In the other the protector is absent and a loss inducer occurs at 1. The receiver survives to 1 only in the protected history. Neither history supplies a strict giver at 1. The surviving received bearer has an inertial reason at 1, falsifying the productive bridge in this model.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.ExternalProtectionCompatible",
+  "definition_ids": [
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e",
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "4433942e-aaf6-55a9-b777-66e55638103d",
+    "158301bc-9585-4145-be60-34f08c9f922c"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f"
+  ]
 }

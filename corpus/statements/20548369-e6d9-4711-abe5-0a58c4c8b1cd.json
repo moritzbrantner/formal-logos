@@ -1,0 +1,16 @@
+{
+  "id": "20548369-e6d9-4711-abe5-0a58c4c8b1cd",
+  "label": "A reversible unproduced window with an actuality anchor stays populated",
+  "paraphrase": "Analyst formulation, attribution deferred. Given no loss inducer or strict giver on the integer timeline, and the independent condition that presence at each next date requires presence at the preceding date, presence of the designated bearer at any anchor implies presence at all dates.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.AnchoredExistenceWithoutProduction",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "158301bc-9585-4145-be60-34f08c9f922c",
+    "4b4e5631-b2c6-5c76-ac4a-2615eb87e17d"
+  ],
+  "connection_plan": {
+    "target_statement_id": "40a97664-e481-42d7-8458-78374a61aa26",
+    "missing_bridge": "A recorded existential-inertia rival to 40a97664-e481-42d7-8458-78374a61aa26 for one substantial bearer: some received-esse bearer is present throughout an inducer-free window with no strict giver. It would be derived from the open state premise 628aaedc-7e33-4d15-8606-d894cb3d755d, a populated anchor and the no-onset condition through this result's stationarity step, and placed by an alternative_to relation with 40a97664-e481-42d7-8458-78374a61aa26.",
+    "blocker": "The state premise 628aaedc-7e33-4d15-8606-d894cb3d755d has no independent warrant. The location contrast does not supply it (locationDoesNotSupplyStateLaw), and its no-giver antecedent is what 40a97664-e481-42d7-8458-78374a61aa26 denies for received bearers. Applying the result to an actual received bearer needs the independently calibrated strict-giver cut for that bearer's origin, loss background and giving, which remains open."
+  }
+}

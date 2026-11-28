@@ -1,0 +1,11 @@
+{
+  "id": "5b7d0d9a-16ea-433d-909c-cad58a9fed90",
+  "label": "ESSENCE_6 exclusion of root absences, from own-nature ESSENCE_6 exclusion",
+  "argument_id": "8287901c-46b0-497b-88ea-d80efa28dd5e",
+  "challenge_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Challenge",
+  "solution_module": "TruthCore.Results.Causality.SimpleUnityCarriage.Solution",
+  "theorem": "TruthCore.Results.Causality.SimpleUnityCarriage.essentialExclusionOfOwn",
+  "comparator_config": "results/5b7d0d9a-16ea-433d-909c-cad58a9fed90/comparator.json",
+  "status": "solution-present",
+  "description": "Strength-order certificate: own-nature exclusion of root absences implies XN. Establishes no premise."
+}

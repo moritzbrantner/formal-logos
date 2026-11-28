@@ -1,0 +1,10 @@
+{
+  "id": "91a20714-00a3-4809-b0f1-379b28afb9d1",
+  "label": "Exact provenance tests accessible witness preservation in the replacement profile",
+  "subject_kind": "result",
+  "subject_id": "19d47624-328d-4c39-9008-1ce24f7d6eed",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "31bcb75e-22ea-4ca9-a9f5-a71da9bfc3f1",
+  "note": "origin_preserves tests the general preservation requirement in the unchanged replacement profile under exact-provenance individuation. Only actual retains the effect's provenance, so the preservation conclusion is vacuous there. The separate role criterion permits a far witness that the same closest-absence selection omits."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "dfadd56d-79af-4323-a978-dc6ef3c1e2b1",
+  "label": "Unity carriage map: simplicity locates a root's exclusions; carriage as such needs a sense bridge",
+  "paraphrase": "Certificate, analyst formulations. (1) For any carrier, SEAT, every real constituent of a root realizing some determination of it, and TRANSFER_1 give own-nature carriage as such, without simplicity. (2) On the #2153 carrier, a classical source with every pure determination, its nature imposing only admissibility, one constituent seating it and realizing every determination, and no requirement, meets simplicity, SEAT, REAL, ESSE, TRANSFER_1, TRANSFER_2, own-nature carriage in both senses, LE, the necessity direction, own-nature exclusion and E. (3) A simple source with being, a and b whose one nature also contains 'lacks noesis', with its being requiring the lack of noesis in it and nothing requiring a lack as such, meets simplicity, SEAT, REAL, ESSE, TRANSFER_2, carriage in the root, own-nature exclusion, the necessity direction and the purity of requirements; TRANSFER_1, own-nature carriage as such, LE, the sense bridge from REQUIRES_LACK_2 to REQUIRES_LACK_1, E and the purity of requirements in the root fail. (4) On the open family, for every requirement relation with the necessity direction, own-nature carriage as such fails for that source (the admissible pure profile contains its determinations and noesis), and being, which the thinking effect shares, does not require the lack of noesis as such (the effect's profile is admissible). (5) Two constituents, the clause seated in one that realizes nothing: SEAT, REAL, ESSE and TRANSFER_1 hold; simplicity and own-nature carriage fail. (6) The clause seated nowhere: simplicity, REAL, ESSE and TRANSFER_1 hold; SEAT and own-nature carriage fail. (7) Nothing realizes anything: simplicity, SEAT, ESSE and TRANSFER_1 hold; REAL and own-nature carriage fail. (8) The source has no determination: simplicity, SEAT, REAL and TRANSFER_1 hold; ESSE and own-nature carriage fail. (9) The clause carried as such by the pure a on the open family: the unity premises, TRANSFER_1 and own-nature carriage hold; the necessity direction and E fail. (10) A fine-grained carrier in which the source has its own 'this nature' determination requiring as such the lack of noesis: the unity premises, TRANSFER_1, own-nature carriage, the sense bridge, the necessity direction, own-nature exclusion and E hold (the lack is excluded by admissibility); with that determination pure the purity of requirements fails and strict purity holds, with it impure the purity of requirements holds and strict purity fails. (11) On lane E's selection carrier, a classical source with every pure determination whose selection of an outcome is read as a real determination varying across worlds, its nature imposing only admissibility and one constituent seating it and realizing at the actual world everything the source has there, meets the unity premises, TRANSFER_1, own-nature carriage, the necessity direction, own-nature exclusion and E, while N fails; realization is encoded at the actual world only. (12) The classical source of (2) meets the purity of requirements in the root (vacuously: no requirement in the root), strict purity and the admissibility of its profile, and has every pure determination; the source of (3) meets strict purity, the admissibility of its profile, the admissibility of each pure determination and joint compossibility on the open family, and lacks a pure determination. (13) On the fine-grained carrier of (10) with the in-root requirement of the nature determination: with that determination pure, the purity of requirements in the root and joint compossibility fail; with it impure, both hold and strict purity fails; in both the source lacks a pure determination. Structural assignments only: not models of essence, constituency, realization or requirement.",
+  "lean_declaration": "TruthCore.Causality.SimpleUnityCarriage.SimpleUnityCarriageMap",
+  "definition_ids": [
+    "52352824-6be9-53c6-83d4-82fed9a08cbb",
+    "3aba5f19-f48d-50db-bc57-93ba2e99f845",
+    "3f8e5e3c-e85a-4388-af9c-4da1c8a02069",
+    "8e1ba83c-04e3-4bd3-8e25-e0c532a703a6",
+    "d6912ecb-aed2-411a-913e-0dab9106d910",
+    "588792ba-6354-4439-b4d7-bc640983c8f2",
+    "968526e1-42a7-4e28-9221-b426f560d1ee",
+    "88f7c656-f484-4737-a872-b2d78c604322",
+    "34b90f09-77b7-47dd-b576-9fcaf6a0cca7",
+    "22c26860-7e66-4a0c-97db-6a9ecdc8c941",
+    "65e38ffa-5a1c-55d0-935c-6538d843b780",
+    "c48266c2-ba78-41c2-8860-61273abf0ef8"
+  ],
+  "disambiguation_ids": [
+    "1aef8986-ed29-564f-9803-d812d2ff63e1",
+    "ee069ef5-6459-4e92-aeea-ab8c64068c54",
+    "bb604f7b-9e16-4168-b433-be76bd3995a9"
+  ]
+}

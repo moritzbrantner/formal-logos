@@ -1,0 +1,297 @@
+[batch]
+vocab = "TruthCore.Explanation.InertialActuality"
+results = "TruthCore.Results.Explanation.InertialActuality"
+
+[[statement]]
+id = "The cessation law and an inducer-free background leave temporal actuality open"
+lean = "LawLeavesActualityOpen"
+definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e","DEF-TEMPORAL-HISTORY-EVERLASTING"]
+paraphrase = "Analyst formulation, attribution deferred. Two integer-time histories in one frame share the cessation law, the absence of every loss inducer and an everlasting background bearer. The designated other bearer is everlasting in one history and absent at every date in the other. The law and background therefore do not entail the candidate's presence at any date in the omission history."
+
+[statement.connection_plan]
+target_statement_id = "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b"
+missing_bridge = "A contrastive actuality strengthening of the momentary PSR 9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b, registered by a strength order: whatever has received esse has a reason that distinguishes a history in which it is present at some date from a matched history that omits it. A control would show that originOrInertia satisfies the momentary PSR in both matched histories of this result, so that only the strengthening discriminates them."
+blocker = "The contrastive standard is one of the retained rival whole-series standards recorded in docs/notes/unique-feedback-explanation-311.md and has no typed definition. This matched pair also lacks reception and presence-explanation vocabulary, so the PSR control is not yet stated."
+
+[[statement]]
+id = "An earlier-date inertial reason already witnesses temporal actuality"
+lean = "InertialReasonRequiresActuality"
+definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e"]
+paraphrase = "Analyst formulation, attribution deferred. For any frame with a preorder of times and a supplied loss background, the cessation law and a valid earlier-date originOrInertia reason derive later presence. The earlier presence carried by the reason independently witnesses the same bearer's presence at some date."
+
+[[statement]]
+id = "9d8f2c7e-ddf0-49e3-b35b-67880de96acb"
+label = "EXISTENCE_IN_ESSENCE_5: A specified essential truth entails the candidate's existence"
+lean = "NatureSuppliesActuality"
+definitions = ["7cf63236-9c12-41bc-bf20-6fbce7a121db","316780ef-70da-498f-8893-317cb35ca80b"]
+disambiguations = ["f704b7ca-b455-4da7-a757-b0564fe76b3b"]
+paraphrase = "OPEN analyst premise on the consequential nature reading (EXISTENCE_IN_ESSENCE_5), specialized to a supplied world-proposition. The fact belongs to the candidate's nature, and in every represented world where the fact holds the candidate exists in the ontic frame. The premise leaves open where the fact holds and whether there is such a fact for a real candidate."
+
+[[statement]]
+id = "An existence-entailing nature fact selects temporal actuality under at-now coherence"
+lean = "NatureSelection"
+definitions = ["DEF-TEMPORAL-HISTORY-NOW-SLICE"]
+disambiguations = ["DISAMB-TEMPORAL-HISTORY-EXISTENCE-AXES"]
+paraphrase = "Analyst formulation, attribution deferred. Given at-now coherence, in each world where the specified fact holds the candidate is present at some date."
+
+[statement.connection_plan]
+target_statement_id = "565ccd6c-0036-4613-8595-f6f03d273a0d"
+missing_bridge = "An argument instantiating the open nature premise 9d8f2c7e-ddf0-49e3-b35b-67880de96acb from 565ccd6c-0036-4613-8595-f6f03d273a0d for an esse = essence candidate in an integer-time causality frame, through the EXISTENCE_IN_ESSENCE_2 to EXISTENCE_IN_ESSENCE_5 implication (law 8 of the existence-in-essence controls), compared with a recorded parity rival to that route."
+blocker = "For the bare existence fact that 565ccd6c-0036-4613-8595-f6f03d273a0d supplies, the selection is immediate from at-now coherence and adds nothing to the root-path premise. A discriminating use needs a further essential fact that entails existence, and no root-route premise supplies one. No parity rival to 565ccd6c-0036-4613-8595-f6f03d273a0d is recorded with an independently justified mechanism."
+
+[[statement]]
+id = "An everlasting candidate admits omission under the bare law but an entailing nature fact selects"
+lean = "EverlastingParity"
+definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e","DEF-TEMPORAL-HISTORY-NOW-SLICE","316780ef-70da-498f-8893-317cb35ca80b"]
+disambiguations = ["f704b7ca-b455-4da7-a757-b0564fe76b3b"]
+paraphrase = "Analyst formulation, attribution deferred. One integer-time frame satisfies the no-inducer cessation law, at-now coherence and everlasting presence of the background bearer in both worlds. The designated temporal candidate is everlasting in one and omitted in the other. For any specified existence-entailing nature fact, a world where it holds must be the populated profile, where the candidate is present at some date."
+
+[statement.connection_plan]
+target_statement_id = "565ccd6c-0036-4613-8595-f6f03d273a0d"
+missing_bridge = "A recorded parity rival to the route through 565ccd6c-0036-4613-8595-f6f03d273a0d, naming its target premise and mechanism: an esse = essence candidate's actuality is selected no better than an inertial bearer's, because its existence-entailing nature fact is an unselected input. A placed comparison would relate this result to that rival. The bare law admits omission of the candidate, while an EXISTENCE_IN_ESSENCE_5 fact that holds excludes the omission; 565ccd6c-0036-4613-8595-f6f03d273a0d gives an esse = essence being an EXISTENCE_IN_ESSENCE_2 fact, which implies EXISTENCE_IN_ESSENCE_5 by law 8."
+blocker = "No such parity objection is recorded with an independently justified mechanism. The result leaves open where the nature fact holds, so it locates the dispute at the warrant of 565ccd6c-0036-4613-8595-f6f03d273a0d rather than answering the rival. Its Boolean candidate is not shown to satisfy the esse = essence identity."
+
+[[statement]]
+id = "A substantial bearer's actuality persists through inducer-free unproduced adjacent steps"
+lean = "ExistenceStateWithoutProduction"
+definitions = ["DEF-ESSE","DEF-ESSE-RECEIVED-IN","8c20c988-31fd-4b59-acf2-db230a6ea32e","158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-TEMPORAL-HISTORY-EXISTENCE-AXES","DISAMB-EXISTENCE-ESSE-SUPPORT"]
+paraphrase = "OPEN analyst state premise for a designated substantial bearer and integer-time history. From presence at any supplied date, the bearer remains present at the next date if that endpoint has no loss inducer and no strict giver. This is the forward preservability attributed to a state. Identifying dated presence with esse would require a separate bridge."
+
+[[statement]]
+id = "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2"
+label = "RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1: A substantial bearer's act of being is received"
+lean = "ReceivedAct"
+definitions = ["DEF-ESSE","DEF-ESSE-RECEIVED-IN"]
+disambiguations = ["DISAMB-ESSE-RECEPTION","DISAMB-TEMPORAL-HISTORY-EXISTENCE-AXES","DISAMB-EXISTENCE-ESSE-SUPPORT"]
+paraphrase = "OPEN analyst received-act premise for the designated substantial bearer. There is a principle in which its act of being is received (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1). Any link to dated presence or strict giving requires a further premise."
+
+[[statement]]
+id = "A reversible unproduced window with an actuality anchor stays populated"
+lean = "AnchoredExistenceWithoutProduction"
+definitions = ["8c20c988-31fd-4b59-acf2-db230a6ea32e","158301bc-9585-4145-be60-34f08c9f922c","DEF-TEMPORAL-HISTORY-EVERLASTING"]
+paraphrase = "Analyst formulation, attribution deferred. Given no loss inducer or strict giver on the integer timeline, and the independent condition that presence at each next date requires presence at the preceding date, presence of the designated bearer at any anchor implies presence at all dates."
+
+[statement.connection_plan]
+target_statement_id = "40a97664-e481-42d7-8458-78374a61aa26"
+missing_bridge = "A recorded existential-inertia rival to 40a97664-e481-42d7-8458-78374a61aa26 for one substantial bearer: some received-esse bearer is present throughout an inducer-free window with no strict giver. It would be derived from the open state premise 628aaedc-7e33-4d15-8606-d894cb3d755d, a populated anchor and the no-onset condition through this result's stationarity step, and placed by an alternative_to relation with 40a97664-e481-42d7-8458-78374a61aa26."
+blocker = "The state premise 628aaedc-7e33-4d15-8606-d894cb3d755d has no independent warrant. The location contrast does not supply it (locationDoesNotSupplyStateLaw), and its no-giver antecedent is what 40a97664-e481-42d7-8458-78374a61aa26 denies for received bearers. Applying the result to an actual received bearer needs the independently calibrated strict-giver cut for that bearer's origin, loss background and giving, which remains open."
+
+[[statement]]
+id = "The reported location contrast is compatible with failure of the existential state rule"
+lean = "LocationDoesNotSupplyStateLaw"
+definitions = ["6788dada-f316-5cc3-8376-e64c512b1a0e","8c20c988-31fd-4b59-acf2-db230a6ea32e"]
+paraphrase = "Analyst formulation, attribution deferred. The existing reported location contrast holds. In a separate integer-time frame there is no strict giving or onset transition for the tested bearer, yet the state rule fails under the stipulated no-inducer predicate."
+
+[statement.connection_plan]
+target_statement_id = "40a97664-e481-42d7-8458-78374a61aa26"
+missing_bridge = "A recorded existential-inertia rival to 40a97664-e481-42d7-8458-78374a61aa26 argued by analogy from location persistence: the state premise 628aaedc-7e33-4d15-8606-d894cb3d755d governs a received-esse bearer, which then persists through an inducer-free window with no strict giver. This control would attack the analogy step of that argument, since the reported location contrast holds while the state rule fails in a frame with no inducer, giver or onset."
+blocker = "No rival argument from the tree analogy to the state premise is recorded. The analogy is an analyst reconstruction with attribution deferred, so no rival record exists for an attacks relation. The control shows non-entailment in one formal interpretation, not falsity of the state premise."
+
+[[statement]]
+id = "A received-act bearer can satisfy the state-transition law in a common frame"
+lean = "StateAndReceiptCompatible"
+definitions = ["DEF-ESSE","DEF-ESSE-RECEIVED-IN","158301bc-9585-4145-be60-34f08c9f922c"]
+disambiguations = ["DISAMB-ESSE-RECEPTION"]
+paraphrase = "Analyst formulation, attribution deferred. There is an integer-time frame with an everlasting bearer that has received esse, satisfies the inducer-free adjacent state rule and receives no strict giving in the populated history."
+
+[[argument]]
+id = "A shared cessation law admits opposite actuality profiles"
+theorem = "lawLeavesActualityOpen"
+premises = []
+conclusion = "The cessation law and an inducer-free background leave temporal actuality open"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Construct matched worldly histories and refute entailment with the omission history"
+meaning = "Hold the background bearer fixed, vary the candidate's temporal profile and satisfy the global cessation law by time-independent presence. Omission refutes the claimed entailment of actuality."
+
+[[argument]]
+id = "An inertia reason carries its own earlier actuality witness"
+theorem = "inertialReasonRequiresActuality"
+premises = []
+conclusion = "An earlier-date inertial reason already witnesses temporal actuality"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Apply interval equivalence and exhibit the earlier date"
+meaning = "Unpack the earlier-date reason, use the existing interval theorem to derive later presence, and witness actuality from earlier presence alone. The law and reason are hypotheses inside the universally quantified result."
+
+[[argument]]
+id = "Transport an existence-entailing nature fact to a dated actuality witness"
+theorem = "natureSelection"
+premises = ["9d8f2c7e-ddf0-49e3-b35b-67880de96acb"]
+conclusion = "An existence-entailing nature fact selects temporal actuality under at-now coherence"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Apply the existence entailment and use the designated now"
+meaning = "Apply the ontic entailment where the fact holds. At-now coherence in the conclusion transports it to dated presence. Essentiality identifies the kind of fact under test."
+senses = {EXISTENCE_IN_ESSENCE = "EXISTENCE_IN_ESSENCE_5"}
+
+[[argument]]
+id = "Nature entailment restricts the same two histories admitted by the bare law"
+theorem = "everlastingParity"
+premises = []
+conclusion = "An everlasting candidate admits omission under the bare law but an entailing nature fact selects"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Exclude omission for any specified entailing nature fact that holds"
+meaning = "Use the at-now selection theorem. Truth of an existence-entailing nature fact in the omission history would supply an actuality witness there. The model ranges over temporal profiles."
+senses = {EXISTENCE_IN_ESSENCE = "EXISTENCE_IN_ESSENCE_5"}
+
+[[argument]]
+id = "The same persistence reason for x permits absence of a distinct y"
+theorem = "otherBearerActualityOpen"
+premises = []
+conclusion = "791ca930-499c-4922-a475-fdbc20684638"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Hold x's presence and earlier-date reason fixed while varying y"
+meaning = "The reason at 0 for x at 1 is valid in both histories. Even the stronger global cessation law under no inducers leaves the distinct y's actuality open."
+
+[[argument]]
+id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
+label = "A received bearer can survive with a protector present, no loss inducer and no strict giver at 1"
+theorem = "externalProtectionCompatible"
+premises = []
+conclusion = "5a4ba734-fea3-4e3c-afd1-50f086c32f41"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Check the cessation law and apply the productive bridge to the protected survivor"
+meaning = "At date 1 the model stipulates covariation between protector presence and inducer absence through a shared world index. Causal prevention is one interpretation of that covariation. In the surviving history, the received bearer has an inertial reason and lacks any strict giver at 1, so the productive bridge fails there."
+
+[[argument]]
+id = "Apply the stationary location proof under a substantial-actuality state premise"
+theorem = "transferLocation"
+premises = ["A substantial bearer's actuality persists through inducer-free unproduced adjacent steps"]
+conclusion = "A reversible unproduced window with an actuality anchor stays populated"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Build a presence-report trace and derive its stationarity"
+meaning = "The open state premise gives the forward implication with inducers and giving excluded. The independent no-onset condition gives the reverse implication. Apply the anchored-location theorem to the resulting stationary report trace and project dated presence."
+
+[[argument]]
+id = "A moving-location control leaves the actuality transfer premise unproved"
+theorem = "locationDoesNotSupplyStateLaw"
+premises = []
+conclusion = "The reported location contrast is compatible with failure of the existential state rule"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Pair the worked location control with a countermodel to the state premise"
+meaning = "Reuse the reported location contrast. In the exposed profile reinterpreted with no modeled inducer, the same bearer disappears between 0 and 1 despite absent production and no onset, so the state rule fails."
+
+[[argument]]
+id = "An inertial profile can also model a received act"
+theorem = "stateAndReceiptCompatible"
+premises = []
+conclusion = "A received-act bearer can satisfy the state-transition law in a common frame"
+axioms = ["propext","Classical.choice","Quot.sound"]
+rule = "Assign reception to the everlasting bearer and check the state rule"
+meaning = "The same candidate is everlasting in the populated history, has no strict giver there and receives esse according to the supplied dictionary. The two open theses can coexist in this interpretation."
+
+[[relation]]
+id = "The actuality profile comparison tests the scope of the local inertia account"
+subject_kind = "result"
+subject_id = "A shared cessation law admits opposite actuality profiles"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "Keep the interval cessation law, the absence of inducers and a background bearer fixed. Vary whether the candidate has any dated presence, including the earlier presence needed to apply the forward persistence rule."
+
+[[relation]]
+id = "The earlier-date application tests the interval persistence result"
+subject_kind = "result"
+subject_id = "An inertia reason carries its own earlier actuality witness"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "The originOrInertia application exercises the forward use of the interval theorem and exhibits the earlier actuality witness."
+
+[[relation]]
+id = "The everlasting parity comparison tests the law's actuality scope"
+subject_kind = "result"
+subject_id = "Nature entailment restricts the same two histories admitted by the bare law"
+predicate = "tests"
+object_kind = "statement"
+object_id = "The cessation law and an inducer-free background leave temporal actuality open"
+note = "The everlasting branch exercises the same profile comparison. The separate nature entailment, when its antecedent fact holds, distinguishes the two profiles."
+
+[[relation]]
+id = "The everlasting omission comparison tests the nature actuality premise"
+subject_kind = "result"
+subject_id = "Nature entailment restricts the same two histories admitted by the bare law"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9d8f2c7e-ddf0-49e3-b35b-67880de96acb"
+note = "At-now coherence gives a date of presence wherever the named nature fact holds. In the omitted branch this rules out truth of any fact satisfying the premise."
+
+[[relation]]
+id = "Distinct bearer omission tests the scope of the local inertia account"
+subject_kind = "result"
+subject_id = "The same persistence reason for x permits absence of a distinct y"
+predicate = "tests"
+object_kind = "statement"
+object_id = "3f5d3750-0f2b-4f53-9330-5ea679463820"
+note = "Keep the interval cessation law, absence of inducers, and x's earlier presence and reason fixed. Vary whether the distinct bearer y has any dated presence."
+
+[[relation]]
+id = "The protection model tests the productive bridge"
+subject_kind = "result"
+subject_id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "d86c9de9-25be-488b-b3b7-69f5f4eb80b8"
+note = "At 1 the received survivor has a valid inertial reason and no strict giver. Protector presence covaries with inducer absence through a shared world index. Causal prevention is an interpretation of that stipulation."
+
+[[relation]]
+id = "The location countermodel tests the adjacent state premise"
+subject_kind = "result"
+subject_id = "A moving-location control leaves the actuality transfer premise unproved"
+predicate = "tests"
+object_kind = "statement"
+object_id = "A substantial bearer's actuality persists through inducer-free unproduced adjacent steps"
+note = "Under no onset, no giving and the all-false inducer interpretation, the exposed history loses the bearer from date 0 to 1 even though the worked location contrast holds separately."
+
+[[relation]]
+id = "The anchored-location certificate checks the two reported destinations"
+subject_kind = "result"
+subject_id = "1371f04e-8b90-4fb2-bda9-56ba9f02d8dc"
+predicate = "tests"
+object_kind = "statement"
+object_id = "8f8111e3-9bb0-40e2-9c60-163686668613"
+note = "The existing Comparator configuration checks samePresenceDifferentLocation, which witnesses the reported contrast."
+
+[[relation]]
+id = "The reception control tests the received-act reading under the state rule"
+subject_kind = "result"
+subject_id = "An inertial profile can also model a received act"
+predicate = "tests"
+object_kind = "statement"
+object_id = "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2"
+note = "The witness checks receipt and unproduced state persistence for the same bearer; no passage from dated presence to esse is assumed."
+
+[[relation]]
+id = "The reception control tests state persistence in a received-act profile"
+subject_kind = "result"
+subject_id = "An inertial profile can also model a received act"
+predicate = "tests"
+object_kind = "statement"
+object_id = "A substantial bearer's actuality persists through inducer-free unproduced adjacent steps"
+note = "The supplied reception dictionary and absence of giving leave the state law satisfied on the populated profile."
+
+[[relation]]
+id = "The protection model tests the inducer-free scope of the actuality comparison"
+subject_kind = "result"
+subject_id = "f1ac8941-e5ba-4741-a821-16410e8b56b5"
+predicate = "tests"
+object_kind = "statement"
+object_id = "The cessation law and an inducer-free background leave temporal actuality open"
+note = "Allow a loss inducer to vary and hold the anchor fixed. The same cessation law then accommodates actual loss in the exposed history and continued presence in the protected history. This complements the all-clear actuality control, which varies the anchor."
+
+[[relation]]
+id = "The received-act model tests distinct concurrent actualization"
+subject_kind = "result"
+subject_id = "An inertial profile can also model a received act"
+predicate = "tests"
+object_kind = "statement"
+object_id = "76d2cc96-14a0-48bc-bd0b-a5c0ca853265"
+note = "The witness is received and present, but every strict giver is absent throughout its populated history. In this interpretation it therefore has no distinct concurrent giver."
+
+[[relation]]
+id = "The earlier-date reason theorem tests what the inertial branch supplies to the momentary PSR"
+subject_kind = "result"
+subject_id = "An inertia reason carries its own earlier actuality witness"
+predicate = "tests"
+object_kind = "statement"
+object_id = "9a14bdd8-65f8-4fe5-97b7-9fbbcde73e5b"
+note = "Origin-or-inertia meets the momentary PSR through its earlier-date branch, with no giver after onset. The theorem applies that branch under the cessation law: every successful earlier-date reason for presence at t carries the same bearer's presence at s. It tests the scope of what the reason supplies, not the truth of the PSR."
