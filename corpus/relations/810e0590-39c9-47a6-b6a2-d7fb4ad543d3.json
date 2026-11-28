@@ -1,0 +1,10 @@
+{
+  "id": "810e0590-39c9-47a6-b6a2-d7fb4ad543d3",
+  "label": "The protection model tests the inducer-free scope of the actuality comparison",
+  "subject_kind": "result",
+  "subject_id": "1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "6b4280f4-6a0f-405f-9055-0ab5052dfc9f",
+  "note": "Allow a loss inducer to vary and hold the anchor fixed. The same cessation law then accommodates actual loss in the exposed history and continued presence in the protected history. This complements the all-clear actuality control, which varies the anchor."
+}

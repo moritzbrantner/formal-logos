@@ -1,0 +1,10 @@
+{
+  "id": "d0492385-0bde-4351-bf69-60b1e874c21c",
+  "label": "The earlier-date application tests the interval persistence result",
+  "subject_kind": "result",
+  "subject_id": "03b3cc57-e3c5-4745-a46e-b2e7647f782f",
+  "predicate": "tests",
+  "object_kind": "statement",
+  "object_id": "3f5d3750-0f2b-4f53-9330-5ea679463820",
+  "note": "The originOrInertia application exercises the forward use of the interval theorem and exhibits the earlier actuality witness."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "b6e57eb0-e45a-4c00-9a3e-29164165d8e8",
+  "label": "An inertial profile can also model a received act",
+  "argument_id": "de8a1c33-6b24-48a9-9017-665ec67ceb15",
+  "challenge_module": "TruthCore.Results.Explanation.InertialActuality.Challenge",
+  "solution_module": "TruthCore.Results.Explanation.InertialActuality.Solution",
+  "theorem": "TruthCore.Results.Explanation.InertialActuality.stateAndReceiptCompatible",
+  "comparator_config": "results/b6e57eb0-e45a-4c00-9a3e-29164165d8e8/comparator.json",
+  "status": "solution-present",
+  "description": "The same candidate is everlasting in the populated history, has no strict giver there and receives esse according to the supplied dictionary. The two open theses can coexist in this interpretation."
+}

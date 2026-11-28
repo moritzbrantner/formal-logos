@@ -157,6 +157,11 @@ losses to the case if the crux fails, not costs to the rival.
    be a concurrent efficient cause.
 2. **Coverage of existential loss by inducers** (shared): every existential
    loss has an inducing factor. `610e21dc` shows it is neutral.
+   [`inertialReasonRequiresActuality`](../../corpus/results/03b3cc57-e3c5-4745-a46e-b2e7647f782f.json)
+   checks the positive later-presence inference and identifies the earlier
+   witness. [`lawLeavesActualityOpen`](../../corpus/results/90fcd276-9af3-46a7-9c4b-af6090b52938.json)
+   shows the limit of its scope. The same law and background fit both an
+   everlasting candidate and its complete omission.
 3. **Sub-version costs, not costs of inertia as such.** (i) A Humean-law
    version explains a thing's persistence by a regularity that partly consists
    in that persistence. The explanatory-circularity objection to Humean laws
@@ -978,9 +983,15 @@ Earlier presence necessarily varies between those histories.
 
 1. **Persistence and actuality are distinct explanatory targets.** The
    objection targets a move from the conditional persistence law to an
-   explanation of Aₓ. Every application to x uses earlier Eₓ(s), which
-   already entails Aₓ. The H₊/H₀ comparison in §7 shows that the law and
-   no-loss background permit both outcomes. The reversible control there
+   explanation of Aₓ. [`inertialReasonRequiresActuality`](../../corpus/results/03b3cc57-e3c5-4745-a46e-b2e7647f782f.json)
+   applies the interval law to the earlier-date branch of `originOrInertia`.
+   It works for any preorder of supplied times, including the order used
+   in the [limit control](../../TruthCore/Explanation/LimitPersistenceLaw.lean).
+   Its earlier Eₓ(s) independently witnesses Aₓ.
+   [`lawLeavesActualityOpen`](../../corpus/results/90fcd276-9af3-46a7-9c4b-af6090b52938.json)
+   verifies the H₊/H₀ comparison in §7 in one shared frame. The same
+   cessation law, absence of every inducer and everlasting background bearer
+   fit both actuality and omission of x. The [onset-only control](../../corpus/statements/98308b41-095d-4a81-9897-8f73e324a26f.json) uses the same cessation law alongside distinct origin and receipt conditions. The reversible control in §7
    shows that exchangeable anchors in a beginningless history still
    require some positive anchor. This rules out selection of the populated
    history by that law and background alone. The countermodel concerns
@@ -1026,21 +1037,37 @@ Earlier presence necessarily varies between those histories.
    presence. Its use leaves open the ontological account of that presence.
    Received act in a principle also leaves external origination and
    concurrent giving to their respective bridge premises (§§5–6 and 11).
-   Thus the tree case challenges an inference from ordinary state
-   persistence to a law of substantial actuality. It leaves room for an
-   independently warranted persistence law, even for received-esse
-   bearers, if that law can be justified under a strict-giver cut.
+   The two open propositions isolate [the forward adjacent state rule](../../corpus/statements/628aaedc-7e33-4d15-8606-d894cb3d755d.json)
+   and [reception of the act of being](../../corpus/statements/4a3fdeba-5267-4b1d-bb69-9275bd04b2e2.json)
+   for a designated substantial bearer. [`transferLocation`](../../corpus/results/3ee6bc70-980d-4245-b234-6ce38821aebf.json)
+   derives stationarity of a presence-report trace from that forward rule
+   plus explicit comparison conditions. With every date inducer-free and
+   all strict giving excluded, it uses a separate no-onset condition for
+   the backward direction. The stationary location theorem then transports
+   one positive presence report to every date of the reversible window.
+   [`locationDoesNotSupplyStateLaw`](../../corpus/results/51b3d932-cf5e-4907-9c7c-ff3679b31690.json)
+   combines the existing reported location contrast with a separate frame
+   that has no modeled inducer, strict giver or onset, yet loses the bearer
+   and falsifies the forward state rule. The tree case therefore requires
+   an independently warranted existential law.
+   [`stateAndReceiptCompatible`](../../corpus/results/b6e57eb0-e45a-4c00-9a3e-29164165d8e8.json)
+   checks the two open propositions together in a populated model. Their
+   actual application to a received bearer remains a question for the
+   independently calibrated strict-giver cut.
 
 3. **God parity tests the same explanandum.** Grant an everlasting
    candidate g for the test. Temporal perpetuity within an occupied
    history still uses the actuality of g when one date explains another.
    If the proposed inertia law alone were offered for Aᵍ, the same
-   H₊/H₀ test would apply: the bare law permits a history without g.
-   This is a consequence of the law's conditional form, with no appeal to
-   personal assent. The omission profile need not be possible under a
-   separate, warranted principle of aseity or nature-based actuality.
-   Such a principle would have to supply existence of the relevant
-   bearer and explain it, with its own warrant. An uninstantiated
+   [`everlastingParity`](../../corpus/results/e16ea267-a495-4815-8ddc-d7d2e1b057b7.json)
+   test applies: the bare law permits a history without g.
+   [`natureSelection`](../../corpus/results/1e7148b0-eb82-40fc-8bbf-65004faf35b0.json)
+   starts from an [open nature premise](../../corpus/statements/9d8f2c7e-ddf0-49e3-b35b-67880de96acb.json).
+   It uses a specified essential truth that entails ontic existence where
+   it holds. At-now coherence supplies a dated witness there. In the
+   matched frame such a truth, if instantiated, can hold only in the
+   populated history. The argument leaves the truth of a fact with this
+   content, and its warrant for any real candidate, open. An uninstantiated
    description and a conditional about a candidate's nature leave that
    obligation open. Aseity addresses the candidate's being through itself
    and temporal inertia addresses continuance under earlier actuality.
@@ -1055,17 +1082,25 @@ Earlier presence necessarily varies between those histories.
      Target the move from the persistence of a given x
      to the actuality of a distinct y. An x-only conditional has no
      y-actuality input, and even a universal per-bearer rule needs an
-     earlier y for its y-instance. Section 7 supplies the control after
-     exchanging the roles: keep the background bearer and its persistence
-     fixed while varying whether the designated additional bearer is ever
-     present. An explanation of y via x's causal powers or activity would
+     earlier y for its y-instance.
+     [`otherBearerActualityOpen`](../../corpus/results/369832bd-54c9-4a75-9c42-11894a0ae014.json)
+     holds x's presence trace and its actual earlier-date reason for
+     presence at 1 fixed. The same global law holds in both histories, and
+     the distinct y has an actuality witness in only one. An explanation of y via x's causal powers or activity would
      need a cross-bearer origin or support premise. This is a substantive
      limit on expanding the rule's explanatory scope.
    - **[Externally conditioned continuance](../../corpus/statements/5a4ba734-fea3-4e3c-afd1-50f086c32f41.json).**
      Target a stronger claim of
-     independence from every external condition. External prevention of
-     destruction is compatible with the rule, since it can secure the
-     no-inducer background. The existing q.104 becoming/being distinction
+     independence from every external condition.
+     [`externalProtectionCompatible`](../../corpus/results/1b4e5ea8-5bae-4782-9fd0-edeb68f38f6b.json)
+     models a survivor where a protector is present and the loss inducer
+     is absent. The same receiver is present at 0 in the exposed history,
+     where it disappears at 1 with an inducer and no protector. The law
+     holds in both, and both exclude every strict giver at 1. Both endpoint conditions read the shared world index, which
+     stipulates their covariation. A common condition could produce the
+     same pattern. Causal prevention is an interpretation of the pattern. The
+     received survivor and its valid earlier-date reason test the
+     productive bridge in that frame. The existing q.104 becoming/being distinction
      and the competing readings of withdrawal (§11 and the sibling calibration
      in PR #2094) supply the difference: removal of a protector can allow a
      separate loss process, while withdrawal by a direct cause of being
@@ -1132,11 +1167,13 @@ at the selected t whenever x is present, including its bearer, effect and
 time binding. The scope test gives no warrant for adding that result as a
 hidden premise. The existing bridge supports the God-existence route
 through weak concurrent giving, the sustaining reading and `2068f91c`.
-The Lean location result is consumed by the two-date presence
-application above. The [registered result](../../corpus/results/1371f04e-8b90-4fb2-bda9-56ba9f02d8dc.json)
-certifies the anchored transition. Its case connection is a diagnostic of the offered
-analogy in the existing attempt
+The registered location transfer uses the open adjacent-state premise.
+The protection witness and the [calibrated withdrawal result](../../corpus/results/00a7e616-3154-4db7-8d66-af4536384df7.json)
+both test the productive bridge through typed relations. The second test
+requires the independently justified calibration tracked in
 [`176d45ae`](../../corpus/attempts/176d45ae-c023-4c72-b2bb-86a09326b798.json).
+The actuality comparison and the analogical transfer supply no discharge
+on the concurrent-giving route.
 
 [Attempt record](../../corpus/attempts/08713633-1a85-4977-9794-0cca47d9f064.json)
 

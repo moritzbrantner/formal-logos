@@ -1,0 +1,15 @@
+{
+  "id": "4a3fdeba-5267-4b1d-bb69-9275bd04b2e2",
+  "label": "RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1: A substantial bearer's act of being is received",
+  "paraphrase": "OPEN analyst received-act premise for the designated substantial bearer. There is a principle in which its act of being is received (RECEPTION_OF_ESSE_VERSUS_EXTERNAL_CAUSE_1). Any link to dated presence or strict giving requires a further premise.",
+  "lean_declaration": "TruthCore.Explanation.InertialActuality.ReceivedAct",
+  "definition_ids": [
+    "5c308c8c-34a4-525b-a2ca-6d0dbbd1bb72",
+    "4433942e-aaf6-55a9-b777-66e55638103d"
+  ],
+  "disambiguation_ids": [
+    "5921354b-51e6-5da3-8d8c-e9041840fd9f",
+    "92df85d7-aae7-57ac-b84e-3780ade842f1",
+    "6f1d1395-7c1d-5bd5-a45d-03380857aed6"
+  ]
+}

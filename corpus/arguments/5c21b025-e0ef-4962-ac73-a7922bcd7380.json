@@ -1,0 +1,14 @@
+{
+  "id": "5c21b025-e0ef-4962-ac73-a7922bcd7380",
+  "label": "The same persistence reason for x permits absence of a distinct y",
+  "premise_statement_ids": [],
+  "conclusion_statement_id": "791ca930-499c-4922-a475-fdbc20684638",
+  "inference_ids": [
+    "65a3461a-232b-4dda-8293-70f0d2394660"
+  ],
+  "meaning": "The reason at 0 for x at 1 is valid in both histories. Even the stronger global cessation law under no inducers leaves the distinct y's actuality open.",
+  "definition_ids": [
+    "8c20c988-31fd-4b59-acf2-db230a6ea32e",
+    "6e811e85-b983-5988-b20a-f4f3ee83c50e"
+  ]
+}
