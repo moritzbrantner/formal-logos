@@ -127,23 +127,29 @@ theorem rd_transplant : ¬ Redirection transplantCase :=
   fun h => h.1 (chainNewThreat _ rfl)
 theorem rd_loop : Redirection loopCase := ⟨loop_notNewThreat _ rfl, by decide⟩
 
+/-! ### Reading a governed assignment -/
+
+theorem gov_pos {X : Case → Prop} {F : Scenario → Case} {P : Scenario → Prop} {k : Scenario}
+    {c : Case} (h : Governs X F P) (hk : F k = c) (hc : X c) : P k :=
+  (h k).mpr (hk ▸ hc)
+
+theorem gov_neg {X : Case → Prop} {F : Scenario → Case} {P : Scenario → Prop} {k : Scenario}
+    {c : Case} (h : Governs X F P) (hk : F k = c) (hc : ¬ X c) : ¬ P k :=
+  fun hp => hc (hk ▸ (h k).mp hp)
+
 /-! ### Advertised results -/
 
 /-- Act consequentialism with the footbridge facts makes pushing permissible. -/
 theorem acFootbridge (F : Scenario → Case) (P : Scenario → Prop)
     (hAC : ActConsequentialismGoverns F P) (hF : FootbridgeFacts F) :
     FootbridgePermissible P := by
-  unfold FootbridgePermissible
-  rw [hAC .footbridge, hF]
-  decide
+  exact gov_pos hAC hF (by decide)
 
 /-- Act consequentialism with the transplant facts makes harvesting permissible. -/
 theorem acTransplant (F : Scenario → Case) (P : Scenario → Prop)
     (hAC : ActConsequentialismGoverns F P) (hT : TransplantFacts F) :
     TransplantPermissible P := by
-  unfold TransplantPermissible
-  rw [hAC .transplant, hT]
-  decide
+  exact gov_pos hAC hT (by decide)
 
 /-- The footbridge verdict and facts exclude act consequentialism. -/
 theorem footbridgeVerdictExcludesAC (F : Scenario → Case) (P : Scenario → Prop)
@@ -161,9 +167,7 @@ theorem transplantVerdictExcludesAC (F : Scenario → Case) (P : Scenario → Pr
 theorem causalNoKillingSwitch (F : Scenario → Case) (P : Scenario → Prop)
     (hN : CausalNoKillingGoverns F P) (hS : SwitchFacts F) :
     SwitchImpermissible P := by
-  unfold SwitchImpermissible
-  rw [hN .switch, hS]
-  exact fun h => h switch_killsCausally
+  exact gov_neg hN hS (fun h => h switch_killsCausally)
 
 /-- The switch verdict and facts exclude causal no-killing deontology. -/
 theorem switchVerdictExcludesCausalNoKilling (F : Scenario → Case) (P : Scenario → Prop)
@@ -175,49 +179,49 @@ theorem doubleEffectTriad (F : Scenario → Case) (P : Scenario → Prop)
     (hD : DoubleEffectGoverns F P) (hS : SwitchFacts F) (hFb : FootbridgeFacts F)
     (hT : TransplantFacts F) : CommonTriadVerdicts P := by
   refine ⟨?_, ?_, ?_⟩
-  · show P .switch; rw [hD .switch, hS]; exact de_switch
-  · show ¬ P .footbridge; rw [hD .footbridge, hFb]; exact de_footbridge
-  · show ¬ P .transplant; rw [hD .transplant, hT]; exact de_transplant
+  · exact gov_pos hD hS de_switch
+  · exact gov_neg hD hFb de_footbridge
+  · exact gov_neg hD hT de_transplant
 
 theorem intentionDoubleEffectTriad (F : Scenario → Case) (P : Scenario → Prop)
     (hD : IntentionDoubleEffectGoverns F P) (hS : SwitchFacts F) (hFb : FootbridgeFacts F)
     (hT : TransplantFacts F) : CommonTriadVerdicts P := by
   refine ⟨?_, ?_, ?_⟩
-  · show P .switch; rw [hD .switch, hS]; exact ide_switch
-  · show ¬ P .footbridge; rw [hD .footbridge, hFb]; exact ide_footbridge
-  · show ¬ P .transplant; rw [hD .transplant, hT]; exact ide_transplant
+  · exact gov_pos hD hS ide_switch
+  · exact gov_neg hD hFb ide_footbridge
+  · exact gov_neg hD hT ide_transplant
 
 theorem meansTriad (F : Scenario → Case) (P : Scenario → Prop)
     (hM : MeansPrincipleGoverns F P) (hS : SwitchFacts F) (hFb : FootbridgeFacts F)
     (hT : TransplantFacts F) : CommonTriadVerdicts P := by
   refine ⟨?_, ?_, ?_⟩
-  · show P .switch; rw [hM .switch, hS]; exact mp_switch
-  · show ¬ P .footbridge; rw [hM .footbridge, hFb]; exact mp_footbridge
-  · show ¬ P .transplant; rw [hM .transplant, hT]; exact mp_transplant
+  · exact gov_pos hM hS mp_switch
+  · exact gov_neg hM hFb mp_footbridge
+  · exact gov_neg hM hT mp_transplant
 
 theorem redirectionTriad (F : Scenario → Case) (P : Scenario → Prop)
     (hR : RedirectionGoverns F P) (hS : SwitchFacts F) (hFb : FootbridgeFacts F)
     (hT : TransplantFacts F) : CommonTriadVerdicts P := by
   refine ⟨?_, ?_, ?_⟩
-  · show P .switch; rw [hR .switch, hS]; exact rd_switch
-  · show ¬ P .footbridge; rw [hR .footbridge, hFb]; exact rd_footbridge
-  · show ¬ P .transplant; rw [hR .transplant, hT]; exact rd_transplant
+  · exact gov_pos hR hS rd_switch
+  · exact gov_neg hR hFb rd_footbridge
+  · exact gov_neg hR hT rd_transplant
 
 theorem doubleEffectLoop (F : Scenario → Case) (P : Scenario → Prop)
     (hD : DoubleEffectGoverns F P) (hL : LoopFacts F) : LoopImpermissible P := by
-  show ¬ P .loop; rw [hD .loop, hL]; exact de_loop
+  exact gov_neg hD hL de_loop
 
 theorem meansLoop (F : Scenario → Case) (P : Scenario → Prop)
     (hM : MeansPrincipleGoverns F P) (hL : LoopFacts F) : LoopImpermissible P := by
-  show ¬ P .loop; rw [hM .loop, hL]; exact mp_loop
+  exact gov_neg hM hL mp_loop
 
 theorem intentionDoubleEffectLoop (F : Scenario → Case) (P : Scenario → Prop)
     (hD : IntentionDoubleEffectGoverns F P) (hL : LoopFacts F) : LoopPermissible P := by
-  show P .loop; rw [hD .loop, hL]; exact ide_loop
+  exact gov_pos hD hL ide_loop
 
 theorem redirectionLoop (F : Scenario → Case) (P : Scenario → Prop)
     (hR : RedirectionGoverns F P) (hL : LoopFacts F) : LoopPermissible P := by
-  show P .loop; rw [hR .loop, hL]; exact rd_loop
+  exact gov_pos hR hL rd_loop
 
 theorem jointModels : TriadJointModels := by
   refine ⟨⟨actualCases, fun k => DoubleEffect (actualCases k), fun _ => Iff.rfl,

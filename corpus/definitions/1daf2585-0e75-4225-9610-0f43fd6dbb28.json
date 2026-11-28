@@ -5,20 +5,5 @@
   "definition": "PlansHarm c: the supplied plan of the case includes the one's harm, as end or as means. Plans are case inputs (Kamm's 'in order to'); acting merely because a harm will occur does not put it in the plan.",
   "basis": "stipulative",
   "lean_declaration": "TruthCore.Ethics.Trolley.PlansHarm",
-  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md.",
-  "formal_gap": {
-    "kind": "primitive",
-    "meaning": "Whether the agent's plan includes the one's harm, read from the supplied plan field of the case.",
-    "examples": [
-      "Footbridge: the plan includes the bystander's lethal impact.",
-      "Switch: the plan omits the one's harm."
-    ],
-    "exclusions": [
-      "Mere foresight of the harm.",
-      "Acting because the harm will occur without aiming at it (Kamm's loop reading)."
-    ],
-    "open_obligations": [
-      "Which plan a real agent has is a case input, not derived from the causal graph."
-    ]
-  }
+  "note": "Analyst formulation for the trolley pilot (owner direction 2026-11-28), attribution deferred. See docs/notes/trolley-principles.md."
 }

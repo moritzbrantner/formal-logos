@@ -89,7 +89,7 @@ premises = []
 conclusion = "Wholly-good sense controls: only WHOLLY_GOOD_1 yields Rowe's permission constraint"
 rule = "Explicit finite models and reuse of the trolley reachability lemmas"
 meaning = "Compares WHOLLY_GOOD_1, WHOLLY_GOOD_2 and WHOLLY_GOOD_3 on one cost-free Rowe signature; see the statement. Models of non-entailment and a general easy-rescue lemma; no premise is established."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 
 [[relation]]

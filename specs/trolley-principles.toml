@@ -271,7 +271,7 @@ premises = ["Act consequentialism governs trolley permissibility", "Footbridge c
 conclusion = "Pushing the footbridge bystander is permissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Act consequentialism compares only deaths: one versus five makes pushing permissible. No causal or intentional feature of the case is used."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Harvesting the transplant patient is permissible, from act consequentialism"
@@ -281,7 +281,7 @@ premises = ["Act consequentialism governs trolley permissibility", "Transplant c
 conclusion = "Harvesting the transplant patient is permissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Act consequentialism compares only deaths: one versus five makes harvesting permissible."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Act consequentialism fails, from the footbridge verdict"
@@ -291,7 +291,7 @@ premises = ["Footbridge case facts hold", "Pushing the footbridge bystander is i
 conclusion = "Act consequentialism does not govern trolley permissibility"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Contrapositive of the act-consequentialist footbridge derivation: whoever holds the footbridge verdict on these facts rejects act consequentialism as the governing principle. Conditional on the open prima facie verdict."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Act consequentialism fails, from the transplant verdict"
@@ -301,7 +301,7 @@ premises = ["Transplant case facts hold", "Harvesting the transplant patient is 
 conclusion = "Act consequentialism does not govern trolley permissibility"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Contrapositive of the act-consequentialist transplant derivation; an independent case datum against the same principle. Conditional on the open prima facie verdict."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Switching the trolley is impermissible, from causal no-killing (KILLS_1)"
@@ -311,7 +311,7 @@ premises = ["Causal no-killing deontology (KILLS_1) governs trolley permissibili
 conclusion = "Switching the trolley is impermissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "In the switch graph the intervention reaches the one's harm (KILLS_1), so the absolute causal no-killing deontology forbids switching."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Causal no-killing (KILLS_1) fails, from the switch verdict"
@@ -321,7 +321,7 @@ premises = ["Switch case facts hold", "Switching the trolley is permissible"]
 conclusion = "Causal no-killing deontology (KILLS_1) does not govern trolley permissibility"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Whoever holds the switch verdict on these facts rejects the KILLS_1 no-killing deontology. Conditional on the open prima facie verdict; the KILLS_2 reading escapes this test."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Common triad verdicts, from classical double effect"
@@ -331,7 +331,7 @@ premises = ["Classical double effect (MEANS_1, INTENDS_1) governs trolley permis
 conclusion = "Common trolley triad verdicts: switch yes, footbridge no, transplant no"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Switch: harm off the rescue path, not planned, proportionate, so permissible. Footbridge and transplant: harm is a MEANS_1 (and planned), so impermissible. Computed from the causal graphs by reachability."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Common triad verdicts, from intention-only double effect"
@@ -341,7 +341,7 @@ premises = ["Intention-only double effect (MEANS_2, INTENDS_1) governs trolley p
 conclusion = "Common trolley triad verdicts: switch yes, footbridge no, transplant no"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Switch: harm not planned. Footbridge and transplant: harm planned (INTENDS_1), so impermissible. The footbridge verdict here depends on the plan fact, not the causal structure."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Common triad verdicts, from the Kantian MEANS_1 principle"
@@ -351,7 +351,7 @@ premises = ["The Kantian MEANS_1 principle governs trolley permissibility", "Swi
 conclusion = "Common trolley triad verdicts: switch yes, footbridge no, transplant no"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Switch: a path to the saving avoids the harm. Footbridge and transplant: every path passes through it (MEANS_1)."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Common triad verdicts, from the redirection principle"
@@ -361,7 +361,7 @@ premises = ["The redirection principle (KILLS_2) governs trolley permissibility"
 conclusion = "Common trolley triad verdicts: switch yes, footbridge no, transplant no"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "Switch: the harm lies only downstream of redirecting the threat. Footbridge and transplant: the intervention reaches the harm directly (KILLS_2)."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Switching in Thomson's loop is impermissible, from classical double effect"
@@ -371,7 +371,7 @@ premises = ["Classical double effect (MEANS_1, INTENDS_1) governs trolley permis
 conclusion = "Switching in Thomson's loop is impermissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "In the loop every path to the saving passes through the one's harm (MEANS_1), so classical condition 3 fails although the plan omits the harm."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Switching in Thomson's loop is impermissible, from the Kantian MEANS_1 principle"
@@ -381,7 +381,7 @@ premises = ["The Kantian MEANS_1 principle governs trolley permissibility", "Loo
 conclusion = "Switching in Thomson's loop is impermissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "The loop harm is a causal means (MEANS_1)."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Switching in Thomson's loop is permissible, from intention-only double effect"
@@ -391,7 +391,7 @@ premises = ["Intention-only double effect (MEANS_2, INTENDS_1) governs trolley p
 conclusion = "Switching in Thomson's loop is permissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "With the plan omitting the harm, neither INTENDS_1 nor MEANS_2 holds; proportionality holds."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Switching in Thomson's loop is permissible, from the redirection principle"
@@ -401,7 +401,7 @@ premises = ["The redirection principle (KILLS_2) governs trolley permissibility"
 conclusion = "Switching in Thomson's loop is permissible"
 rule = "Theorem reuse, rewriting by the case description and computation on the finite case"
 meaning = "The loop harm lies only downstream of redirecting the threat (no KILLS_2); proportionality holds."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 
 [[argument]]
 id = "Trolley joint models"
@@ -411,7 +411,7 @@ premises = []
 conclusion = "Trolley joint models: four principles fit the triad, split on the loop"
 rule = "Explicit witness assignments on the actual case descriptions"
 meaning = "Nonvacuity: on the four stated case descriptions, assigning permissibility by each principle yields a model of that principle, all case facts and the common triad; classical double effect and the means principle with loop impermissible, intention-only double effect and redirection with loop permissible. Models of consistency only."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 
 [[argument]]
@@ -422,7 +422,7 @@ premises = []
 conclusion = "Trolley case-feature controls: MEANS_1 path, plan, numbers and sense splits"
 rule = "Finite variant cases and computation"
 meaning = "Which case fact each verdict depends on, by single-feature variants; see the statement. A sense-comparison control over KILLS, MEANS and INTENDS; it asserts no verdict."
-axioms = ["propext"]
+axioms = ["propext", "Classical.choice", "Quot.sound"]
 sense_mixing_control = true
 
 [[relation]]

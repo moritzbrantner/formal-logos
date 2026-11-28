@@ -5,7 +5,9 @@
     "TruthCore.Results.Ethics.Trolley.meansLoop"
   ],
   "permitted_axioms": [
-    "propext"
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
   ],
   "enable_nanoda": true
 }
