@@ -225,8 +225,10 @@ def commonRealizer (_ : Nat) : Nat := 0
 whole, and every positive specification realizes the second constituent. -/
 def splitRealizer (n : Nat) : Nat := if n = 0 then 0 else 1
 
-/-- Specification actuality facts are distinct positive naturals. -/
-def specification (n : Nat) : Nat := n + 1
+/-- Specification actuality facts start at 2, distinct from BOTH existence
+facts 0 and 1. This keeps intentional presence or a mode specification from
+silently becoming the external effect's existence fact. -/
+def specification (n : Nat) : Nat := n + 2
 
 /-- Positive nonempty simple row: infinitely many distinct specification
 facts depend on target 0, and their realizers are the actual whole. The
@@ -275,13 +277,13 @@ def OmitPosteriority : Prop :=
   ¬ ConstitutivelySimple twoReal true
 
 /-- The SAME-explanandum restriction is material: target 0 explains each
-specification n+1, which can then explain the DIFFERENT operation-actuality
-fact n+2, all within strict priority. No reverse contribution to 0 occurs.
+specification n+2, which can then explain the DIFFERENT operation-actuality
+fact n+3, all within strict priority. No reverse contribution to 0 occurs.
 These are distinct facts, not an identity of subject and operation. -/
 def DifferentExplanandum : Prop :=
   ∀ n, (arena Nat.lt).explains () 0 (specification n) ∧
-    (arena Nat.lt).explains () (specification n) (n + 2) ∧
-    (arena Nat.lt).explains () 0 (n + 2) ∧
+    (arena Nat.lt).explains () (specification n) (n + 3) ∧
+    (arena Nat.lt).explains () 0 (n + 3) ∧
     ¬ (arena Nat.lt).explains () (specification n) 0
 
 /-- Joint priority controls over countably many specifications. Existence,
