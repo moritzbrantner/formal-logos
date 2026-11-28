@@ -1,0 +1,12 @@
+{
+  "id": "b6fcc03f-a8a9-449b-a244-c60d669db7b1",
+  "label": "A CONTINGENT_1 bearer refutes VARYING_DOMAINS_RIGID_IDENTITY_AND_NECESSITY_4 transfer (inference)",
+  "input_statement_ids": [
+    "c94b5446-e7e7-5b36-9bed-288959725526"
+  ],
+  "output_statement_id": "9cdae436-0192-4ad7-b56a-4937e22c8c12",
+  "rule": "Composition: the strength order to concrete necessitarianism, then the existing refutation of concrete necessitarianism",
+  "meaning": "Suppose the transfer. transferGivesConcreteNecessary gives concrete necessitarianism at the selected world, and the existing refutation notEveryNecessary (argument e1d0d14b) refutes that from the contingency node's witness. The argument is exactly that composition (invariant 17) and adds no logical content beyond it; it records that the stronger necessitist rival falls with 411e5817. The only open premise is the route's existing contingency node.",
+  "assumption_statement_ids": [],
+  "discharged_statement_ids": []
+}

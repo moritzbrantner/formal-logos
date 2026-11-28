@@ -1,0 +1,40 @@
+{
+  "id": "59dccbcb-3bea-4bad-92cb-833984eed47f",
+  "label": "Forward guarded quantifier transfer on the contingency route",
+  "date": "2026-11-27",
+  "statement_ids": [
+    "c94b5446-e7e7-5b36-9bed-288959725526",
+    "f084efde-c461-49d4-9f7d-902abc81b5f9",
+    "9cdae436-0192-4ad7-b56a-4937e22c8c12",
+    "411e5817-a28a-5d3c-a115-c43b2ffdf64f"
+  ],
+  "kind": "derivation",
+  "outcome": "succeeded",
+  "summary": "Lane F (#2103). The actualist-domain package in necessary-individual-quantifier-shift identified the exact equivalence of forward guarded transfer and increasing domains on a rigid candidate roster; it also proved that increasing domains exclude ContingentAt. Apply those two laws to m.ontic of the existing contingency route. The only premise is SomeActualContingentAt at the supplied world. Its existent bearer and absence across one accessible edge suffice to rule out the global transfer. The result makes the transfer policy's domain commitment explicit. It provides no warrant for the contingency node, and does not address the reverse transfer, counterpart semantics or restricted predicate inventories. The GOD_NAMING work already proves the equivalence of the rigid-name and box-K readings; registering either as a new support route would merely restate the box-K commitment. Repair after independent semantic review (2026-11-28): the transfer is a necessitist commitment, which contingentists reject; its positive account is necessitism (for navigation: Williamson, Modal Logic as Metaphysics), motivated by the derivability of the converse Barcan formula in classical quantified modal logic with unrestricted instantiation, valid exactly on increasing domains. transferGivesConcreteNecessary registers the strength order from the transfer to concrete necessitarianism (411e5817) at every world, and Control.Strictness separates them on non-concrete candidates (abstractDrop) and on other worlds (concreteDrop). forwardTransferFails is now the composition of that strength order with the existing refutation e1d0d14b (notEveryNecessary) and adds no logical content beyond it; its standing is refutation_support of this rival only. Under the necessitist's own reading contingent existence is replaced by contingent concreteness, which the profile's world-independent concrete predicate cannot express. Next discriminating test: which premise of MirrorCollapse (argument 8ce71fb8), or of the no-necessary-parts route (argument 3fced1d1), does necessitism deny when ExistsAt is read as the unrestricted quantifier domain? Candidates to examine first: 9331a979 (an actual concrete being is at the mirror image only if it has the actual handedness) and 589bdaa6 (no part of the selected object is NecessaryAt).",
+  "blocker": "The contingency premise still needs independent warrant; this refutation rests on it and cannot defend it. The use of the selected laws does not assign a case application to the remaining clauses of the composite actualist-domain certificate. No certified difference (strength_comparison) is recorded for the new strength order. The necessitist's contingent-concreteness replacement needs a world-relative concreteness field before it can be compared at matching scope.",
+  "evidence": [
+    "e6a55f69-d26f-5867-aed8-379cc98fafcc",
+    "42f919df-6092-472c-b827-daa07cc2c304",
+    "PR-2152",
+    "3e206a06-9b9f-4769-83a8-47e94b4e17c6",
+    "b441a75c-b426-46be-b414-f008f31be7a7"
+  ],
+  "workers": [
+    {
+      "role": "author",
+      "provider": "codex",
+      "model": "gpt-6.2-sol",
+      "effort": "high",
+      "date": "2026-11-27",
+      "pr": "PR-2152"
+    },
+    {
+      "role": "repair",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "date": "2026-11-28",
+      "pr": "PR-2152"
+    }
+  ]
+}
