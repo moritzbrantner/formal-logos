@@ -1,6 +1,6 @@
 {
   "id": "c3f76aea-ee54-471c-8a37-ef53eab821d6",
-  "label": "Countable carrier with infinite event and complement admits every interior event probability",
+  "label": "Countable carrier with nonempty event and complement admits every interior event probability",
   "paraphrase": "On every countable carrier with measurable singletons, finite or infinite, an event that is nonempty and has a nonempty complement receives each strictly interior probability from some normalized measure giving positive mass to every point. Carrier and partition do not fix the probability; a probability is not thereby shown unavailable.",
   "lean_declaration": "TruthCore.Science.FineTuningInformation.Plenitude.ArbitraryInteriorMass",
   "definition_ids": [
