@@ -9422,8 +9422,9 @@ application needs a further premise: an actual root's determinations, as
 realized in it, have no limitation. That premise is not `0c8631bd`. It is not
 `a30c5963` either, which the rival satisfies (part E), nor strict purity
 `3b39e0ba`, which is type-level. The finite-knower restriction above shows
-that the rationale needs such a root premise. The rival denies it, and that
-denial is the in-root purity premise itself. No internal tension is shown.
+that the rationale needs such a root premise. The rival denies it; with the
+rationale, that root premise gives the in-root purity premise, so denying the
+root premise frees the rival from in-root purity. No internal tension is shown.
 
 ### E. The other simplicity notions
 
@@ -9520,8 +9521,9 @@ thesis, and it ranks none of the rows.
 **Standing rival and its price.** The impersonal eminent source (#1892) that
 is constitutively simple and lacks noesis by a clause of its one nature. It
 grants S, REAL and ESSE. Its cheapest options are:
-- the Plotinian denial of the in-root purity of requirements, that is, of the
-  root premise that its determinations, as realized, have no limitation;
+- the Plotinian denial of the root premise that its determinations, as
+  realized, have no limitation (with the rationale, that premise gives the
+  in-root purity of requirements);
 - a denial of the identity thesis, with negative content in the one reality
   that belongs to no determination as realized;
 - a SEAT denial that moves the clause to H1's non-real items.
