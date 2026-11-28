@@ -2058,6 +2058,170 @@ fn question_returns_frozen_lean_evidence_without_any_notes_or_assessments() {
 }
 
 #[test]
+fn question_discovers_existing_lean_helpers_without_theorem_names_or_notes() {
+    let root = fixture("question-library-reuse");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let path = "TruthCore/Results/Causality/ContingentAncestry/Solution.lean";
+    write(
+        &root,
+        path,
+        r#"namespace TruthCore.Results.Causality.ContingentAncestry
+/-- Founded descent among contingent ancestors yields a necessary ancestor. -/
+theorem necessaryAncestor (h : True) :
+    True := by
+  exact h
+
+private theorem contingentNecessaryAncestorDescent : True := by
+  trivial
+
+theorem unrelated : True := by
+  -- contingent necessary ancestor descent
+  trivial
+end TruthCore.Results.Causality.ContingentAncestry
+"#,
+    );
+    write(
+        &root,
+        "TruthCore/Results/Causality/ContingentAncestry/Challenge.lean",
+        "namespace TruthCore.Results.Causality.ContingentAncestry\ntheorem contingentNecessaryAncestorDescentPending : True := by\n  sorry\nend TruthCore.Results.Causality.ContingentAncestry\n",
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, text) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "contingent necessary ancestor descent",
+        5,
+    )
+    .unwrap();
+    let candidates = report["lean_library_candidates"].as_array().unwrap();
+    assert_eq!(candidates.len(), 1, "{candidates:?}");
+    assert_eq!(
+        candidates[0]["name"],
+        "TruthCore.Results.Causality.ContingentAncestry.necessaryAncestor"
+    );
+    assert_eq!(candidates[0]["path"], path);
+    assert_eq!(candidates[0]["line"], 3);
+    assert_eq!(candidates[0]["registered_result_ids"], json!([]));
+    assert_eq!(
+        candidates[0]["signature"],
+        "theorem necessaryAncestor (h : True) :\n    True"
+    );
+    assert!(report["lean_results"].as_array().unwrap().is_empty());
+    assert!(text.contains("source matches, not equivalence or verification claims"));
+    assert!(text.contains(path));
+    assert!(!text.contains("exact h"));
+    assert!(!text.contains("sorry"));
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn library_candidates_skip_comment_prose_and_keep_assignments_inside_types() {
+    let root = fixture("question-library-comments");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let path = "TruthCore/Results/Fixture/Comments/Solution.lean";
+    write(
+        &root,
+        path,
+        r#"namespace TruthCore.Results.Fixture.Comments
+/-- The bridge gives common nature, and the imported
+theorem gives identity bridge. Conditional on the OPEN bridge. -/
+theorem uniqueIdentityBridge (h : Preserved (G := G) s) (x : C)
+    (q : Q { x with a := 1 }) : let y := x; IdentityBridge s y := by
+  exact h -- := not a signature
+/- outer /- inner -/
+theorem phantomIdentityBridge : True := by
+  trivial
+-/
+end TruthCore.Results.Fixture.Comments
+"#,
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) =
+        super::assessment_search::report_for_root(&root, &corpus, "identity bridge", 5).unwrap();
+    let candidates = report["lean_library_candidates"].as_array().unwrap();
+    assert_eq!(candidates.len(), 1, "{candidates:?}");
+    assert_eq!(
+        candidates[0]["name"],
+        "TruthCore.Results.Fixture.Comments.uniqueIdentityBridge"
+    );
+    assert_eq!(
+        candidates[0]["signature"],
+        "theorem uniqueIdentityBridge (h : Preserved (G := G) s) (x : C)\n    \
+         (q : Q { x with a := 1 }) : let y := x; IdentityBridge s y"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn contingent_descent_retrieves_the_existing_necessary_ancestor_implementation() {
+    let root = fixture("question-real-contingent-ancestry");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    let path = "TruthCore/Results/Causality/ContingentAncestry/Solution.lean";
+    let repository = Path::new(env!("CARGO_MANIFEST_DIR")).parent().unwrap();
+    let source = std::fs::read_to_string(repository.join(path)).unwrap();
+    write(&root, path, &source);
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "contingent necessary ancestor descent",
+        5,
+    )
+    .unwrap();
+    let candidates = report["lean_library_candidates"].as_array().unwrap();
+    assert!(
+        candidates.iter().any(|hit| {
+            hit["name"] == "TruthCore.Results.Causality.ContingentAncestry.necessaryAncestor"
+                && hit["path"] == path
+                && hit["signature"]
+                    .as_str()
+                    .is_some_and(|s| s.contains("ContingentConeFounded"))
+        }),
+        "{candidates:?}"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
+fn registered_proof_search_uses_theorem_words_and_result_descriptions() {
+    let root = fixture("question-result-description");
+    std::fs::remove_dir_all(root.join("docs")).unwrap();
+    std::fs::remove_dir_all(root.join("corpus/attempts")).unwrap();
+    record(
+        &root,
+        "results",
+        json!({
+            "id": RESULT,
+            "label": "Goal result",
+            "argument_id": ARGUMENT,
+            "challenge_module": "TruthCore.Results.Fixture.Challenge",
+            "solution_module": "TruthCore.Results.Fixture.Solution",
+            "theorem": "TruthCore.Results.Fixture.necessaryAncestor",
+            "comparator_config": "results/x/comparator.json",
+            "status": "solution-present",
+            "description": "Contingent founded descent along actual inputs."
+        }),
+    );
+    let corpus = Corpus::load(&root).unwrap();
+    let (report, _) = super::assessment_search::report_for_root(
+        &root,
+        &corpus,
+        "contingent necessary ancestor descent",
+        5,
+    )
+    .unwrap();
+    assert_eq!(report["lean_results"][0]["id"], RESULT);
+    assert_eq!(
+        report["lean_results"][0]["theorem"],
+        "TruthCore.Results.Fixture.necessaryAncestor"
+    );
+    std::fs::remove_dir_all(root).unwrap();
+}
+
+#[test]
 fn exact_lean_lookup_uses_comparator_names_and_frozen_locations() {
     let root = fixture("question-comparator-companions");
     let second = "c0000000-0000-4000-8000-000000000002";

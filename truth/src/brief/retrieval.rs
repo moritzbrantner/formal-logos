@@ -1097,6 +1097,157 @@ fn extract(lines: &[&str], start: usize) -> String {
     block.join("\n").trim_end().to_owned()
 }
 
+/// Searchable spelling of Lean identifiers, retaining exact names as well.
+pub(super) fn expanded_identifiers(text: &str) -> String {
+    let mut out = String::with_capacity(text.len());
+    let mut previous: Option<char> = None;
+    for ch in text.chars() {
+        if ch.is_uppercase() && previous.is_some_and(|p| p.is_lowercase() || p.is_ascii_digit()) {
+            out.push(' ');
+        }
+        out.push(if ch == '_' { ' ' } else { ch });
+        previous = Some(ch);
+    }
+    format!("{text}\n{out}")
+}
+
+/// Only candidate declarations, not proof-body mentions or Challenge stubs.
+/// The lexical signature is a source locator, not a kernel-extracted type.
+fn theorem_header(lines: &[&str], start: usize) -> Option<String> {
+    let prefix = DECLARATION_KEYWORD
+        .captures(lines[start])
+        .ok()??
+        .get(0)?
+        .as_str();
+    if !prefix
+        .split_whitespace()
+        .any(|w| matches!(w, "theorem" | "lemma"))
+        || prefix.split_whitespace().any(|w| w == "private")
+    {
+        return None;
+    }
+    let mut signature = String::new();
+    let mut scan = AssignmentScan::default();
+    for (offset, line) in lines[start..].iter().enumerate() {
+        if offset > 0 && !line.starts_with(char::is_whitespace) {
+            break;
+        }
+        if let Some(at) = scan.proof_assignment(line) {
+            signature.push_str(line[..at].trim_end());
+            break;
+        }
+        signature.push_str(line);
+        signature.push('\n');
+    }
+    Some(signature.trim_end().to_owned())
+}
+
+/// Finds the declaration-level `:=` that starts a proof. An assignment inside
+/// brackets (named arguments, structure instances or updates) or one that
+/// belongs to a `let`/`have` in the statement is part of the type.
+#[derive(Default)]
+struct AssignmentScan {
+    depth: usize,
+    pending_bindings: usize,
+}
+
+impl AssignmentScan {
+    /// Byte offset of the proof assignment in `line`, if it occurs there.
+    fn proof_assignment(&mut self, line: &str) -> Option<usize> {
+        let mut chars = line.char_indices().peekable();
+        let mut previous_ident = false;
+        while let Some((at, ch)) = chars.next() {
+            match ch {
+                '-' if chars.peek().is_some_and(|&(_, next)| next == '-') => return None,
+                '(' | '[' | '{' | '⟨' | '⦃' => self.depth += 1,
+                ')' | ']' | '}' | '⟩' | '⦄' => self.depth = self.depth.saturating_sub(1),
+                ':' if chars.peek().is_some_and(|&(_, next)| next == '=') => {
+                    chars.next();
+                    if self.depth == 0 {
+                        if self.pending_bindings == 0 {
+                            return Some(at);
+                        }
+                        self.pending_bindings -= 1;
+                    }
+                }
+                c if is_identifier_char(c) && !previous_ident => {
+                    let rest = &line[at..];
+                    let end = rest
+                        .find(|c: char| !is_identifier_char(c))
+                        .unwrap_or(rest.len());
+                    if self.depth == 0 && matches!(&rest[..end], "let" | "have") {
+                        self.pending_bindings += 1;
+                    }
+                    while chars.peek().is_some_and(|&(i, _)| i < at + end) {
+                        chars.next();
+                    }
+                }
+                _ => {}
+            }
+            previous_ident = is_identifier_char(ch);
+        }
+        None
+    }
+}
+
+fn is_identifier_char(c: char) -> bool {
+    c.is_alphanumeric() || matches!(c, '_' | '.' | '\'' | '!' | '?')
+}
+
+/// For each line, whether it starts inside a (possibly nested) block comment.
+/// Indexed declaration names found there are prose, not declarations.
+fn lines_in_block_comment(lines: &[&str]) -> Vec<bool> {
+    let mut depth = 0usize;
+    let mut in_string = false;
+    let mut out = Vec::with_capacity(lines.len());
+    for line in lines {
+        out.push(depth > 0);
+        let mut chars = line.chars().peekable();
+        while let Some(ch) = chars.next() {
+            if in_string {
+                match ch {
+                    '\\' => {
+                        chars.next();
+                    }
+                    '"' => in_string = false,
+                    _ => {}
+                }
+                continue;
+            }
+            match (ch, chars.peek().copied()) {
+                ('/', Some('-')) => {
+                    chars.next();
+                    depth += 1;
+                }
+                ('-', Some('/')) if depth > 0 => {
+                    chars.next();
+                    depth -= 1;
+                }
+                ('-', Some('-')) if depth == 0 => break,
+                ('"', _) if depth == 0 => in_string = true,
+                _ => {}
+            }
+        }
+    }
+    out
+}
+
+fn adjacent_doc(lines: &[&str], start: usize) -> String {
+    let preceding = &lines[..start];
+    if !preceding
+        .last()
+        .is_some_and(|line| line.trim_end().ends_with("-/"))
+    {
+        return String::new();
+    }
+    preceding
+        .iter()
+        .rposition(|line| line.trim_start().starts_with("/-"))
+        .filter(|&i| preceding[i].trim_start().starts_with("/--"))
+        .map(|i| preceding[i..].join("\n"))
+        .unwrap_or_default()
+}
+
 impl LeanSource {
     pub fn new(root: &Path) -> Self {
         Self {
@@ -1148,6 +1299,85 @@ impl LeanSource {
             }
         }
         self.index = Some(index);
+    }
+
+    /// Discover theorem implementations by their names, signatures and adjacent
+    /// documentation, including helpers without corpus result records. The
+    /// existing source index is the only inventory; these are advisory hits.
+    pub(super) fn theorem_candidates(
+        &mut self,
+        query: &Query,
+        excluded: &BTreeSet<String>,
+        limit: usize,
+    ) -> Vec<Value> {
+        if limit == 0
+            || !query
+                .items
+                .iter()
+                .any(|item| matches!(item.kind, "word" | "identifier" | "symbol"))
+        {
+            return Vec::new();
+        }
+        if self.index.is_none() {
+            self.build_index();
+        }
+        let mut files: BTreeMap<&Path, Vec<(&str, usize)>> = BTreeMap::new();
+        for (name, places) in self.index.as_ref().expect("source index") {
+            if excluded.contains(name) {
+                continue;
+            }
+            for (path, line) in places {
+                if !path.ends_with("Challenge.lean") {
+                    files.entry(path.as_path()).or_default().push((name, *line));
+                }
+            }
+        }
+        let aliases = BTreeMap::new();
+        let mut hits = Vec::new();
+        for (path, declarations) in files {
+            let Some(text) = self.files.get(path).and_then(Option::as_deref) else {
+                continue;
+            };
+            let lines: Vec<_> = text.lines().collect();
+            let commented = lines_in_block_comment(&lines);
+            for (name, start) in declarations {
+                if commented[start] {
+                    continue;
+                }
+                let Some(signature) = theorem_header(&lines, start) else {
+                    continue;
+                };
+                // A shared namespace is navigation, not evidence that an
+                // unrelated theorem answers the question.
+                let short_name = name.rsplit('.').next().unwrap_or(name);
+                let formal = expanded_identifiers(&format!("{short_name}\n{signature}"));
+                let matched = query.matched(
+                    &format!("{formal}\n{}", adjacent_doc(&lines, start)),
+                    &aliases,
+                );
+                let (covered, total) = query.content_coverage(&matched);
+                if !query.substantial(&matched) || (total > 1 && covered < 2) {
+                    continue;
+                }
+                let formal_coverage = query.content_coverage(&query.matched(&formal, &aliases)).0;
+                hits.push((
+                    std::cmp::Reverse(covered),
+                    std::cmp::Reverse(formal_coverage),
+                    name,
+                    path,
+                    start,
+                    serde_json::json!({
+                        "name": name,
+                        "path": path.to_string_lossy(),
+                        "line": start + 1,
+                        "signature": signature,
+                        "matched_terms": matched_items(query, &matched),
+                    }),
+                ));
+            }
+        }
+        hits.sort_by(|a, b| (&a.0, &a.1, a.2, a.3, a.4).cmp(&(&b.0, &b.1, b.2, b.3, b.4)));
+        hits.into_iter().take(limit).map(|hit| hit.5).collect()
     }
 
     /// The source block of exactly the fully qualified `declaration`, through
