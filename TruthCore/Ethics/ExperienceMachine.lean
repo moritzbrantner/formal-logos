@@ -79,9 +79,9 @@ def SameExperience {Being Profile : Type}
   experience real = experience machine
 
 /-- Case fact: the real life is perfect (PERFECT_1) in every respect in which the
-machine life is, and in the respect `p` in which the machine life is not. It
-isolates the difference: the two lives differ only by real perfections the
-machine removes. -/
+machine life is, and in the respect `p` in which the machine life is not.
+The machine life has no perfection the real life lacks; together with
+`SameExperience` this isolates the difference to real perfections. -/
 def RealPerfectionsExceed {Being Perfection : Type}
     (PerfectIn : Being → Perfection → Prop) (real machine : Being) (p : Perfection) : Prop :=
   (∀ q, PerfectIn machine q → PerfectIn real q) ∧ PerfectIn real p ∧ ¬ PerfectIn machine p
