@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Local agent service: a small HTTP adapter over the corpus CLI and Lean (#489).
 
-The service is an experiment (AGENTS.md, "Local server experiment for the next
-workloop"). It adds no proof-status registry and no dependency: corpus
+The service is an experiment (AGENTS.md, "Local Lean preview service"). It adds
+no proof-status registry and no dependency: corpus
 operations run the workspace's Rust `truth` CLI (truth/README.md) on the
 requested workspace, Lean operations talk to `lake env lean --server` over LSP, and
 verification jobs run `lake build`, `truth bind-check` and

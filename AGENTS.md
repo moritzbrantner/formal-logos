@@ -1,764 +1,259 @@
 # Codex worker contract
 
-This repository advances substantial arguments through small verified research steps. Keep the complexity in the philosophy, not in repository machinery.
+This repository advances substantial arguments through small verified research steps. Keep the complexity in the philosophy, not in repository machinery. This contract binds every agent here, in every role, and states the rules. The procedures this file used to spell out are in [agent operations](docs/agent-operations.md), which binds like this file for the tasks it covers; the research method is the [systematic corpus loop](docs/systematic-corpus-loop.md), which agents follow as the canonical method. The other documents below are the references this contract cites.
+
+| Task | Document | Standing |
+| --- | --- | --- |
+| Research selection, judgment, challenge, integration; worker ownership; lanes; issues and PRs; source ingestion | [Systematic corpus loop](docs/systematic-corpus-loop.md) | Follow (the canonical method) |
+| Retrieval, worker environment, generated shared files, formalization steps, verification commands, self-sweep, sense/rival comparison, naming, full invariant wording | [Agent operations](docs/agent-operations.md) | Binding (moved from this file, #2183) |
+| Selected configuration comparison | [Configuration elimination loop](docs/configuration-elimination-loop.md) | Follow when selected |
+| The case for Catholicism (epic #143): owner principles and working method | [Catholic case](docs/catholic-case.md) | Read first |
+| Records, definitions, senses, strength order, placement, frontier and closure | [Corpus model](docs/corpus-model.md) | Reference |
+| Source witnesses and offline validation | [Source evidence](docs/source-evidence.md) | Reference |
+| `truth` commands and the issue brief | [Truth CLI](truth/README.md) | Reference |
+| Attempt format and dossiers | [Premise dossiers](docs/premise-dossiers.md) | Reference |
+| Worker clones; the Lean preview | [Worker startup](docs/worker-startup.md), [agent service](docs/agent-service.md) | Reference |
+| Axioms | [Axiom policy](docs/axiom-policy.md) | Reference |
 
 ## Current research focus (owner direction, 2026-11-17)
 
-Prioritize the existence of God and the explicit bridges to divine attributes.
-Defer evaluation of historical evidence and specifically Christian or Catholic
-identification until that research phase is selected. The existing Catholicism
-root and closure rules remain unchanged; use its God-existence-stage nodes to
-locate the current work rather than silently changing the root.
+Prioritize the existence of God and the explicit bridges to divine attributes. Defer evaluation of historical evidence and specifically Christian or Catholic identification until that phase is selected. The Catholicism root and closure rules stay unchanged; locate current work through its God-existence-stage nodes rather than silently changing the root.
 
-Develop coherent end-to-end support routes with fixed meanings, witnesses and
-assumptions. State the strongest available positive warrant and an overall
-provisional assessment of central premises, alongside substantive objections
-and revision conditions. Compare competing explanations of the same phenomenon
-at matching scope. Preserve defensible primitive commitments and direct
-assumption options; conditionality alone does not erase their warrant.
+Develop coherent end-to-end support routes with fixed meanings, witnesses and assumptions. State the strongest positive warrant and an overall provisional assessment of central premises, with substantive objections and revision conditions. Compare competing explanations of the same phenomenon at matching scope. Preserve defensible primitive commitments and direct assumption options; conditionality alone does not erase their warrant. When a vertical approach yields no further discriminating test, seek horizontal support from another argument family or move to another central node. Different presentations of one assumption are not additional evidence. Keep shared dependencies and exact missing bridges visible. Batch related findings into reviewed checkpoints before pushing, with a concise current conclusion linked to the evidence in existing records/notes. A generated current-case view reuses those records, distinguishes recorded warrant from formal status, and never ranks philosophical strength by leaf count.
 
-When a vertical approach yields no further discriminating test, seek horizontal
-support from another argument family or reallocate to another central node.
-Different presentations of the same assumption are not additional evidence.
-Keep shared dependencies and exact missing bridges visible. Batch related
-findings into coherent reviewed checkpoints before pushing, and retain a concise
-current conclusion linked to the substantive evidence in existing records/notes.
-A generated current-case view must reuse those records, distinguish recorded
-warrant from formal status, and never rank philosophical strength by leaf count.
+## Lean first and encode first (owner directions, 2026-11-25 and 2026-11-03)
 
-Encode formal definitions, mathematical claims, countermodels and worked proof applications in compiled Lean wherever their meaning can be specified. Reuse existing declarations before introducing new ones. Link the theorem from the research record and use the normal result registry when it supplies an argument in the graph. Keep observations, historical attribution, interpretive judgments and open applications traceable to their evidence.
+**Lean first (2026-11-25).** Substantive logical content belongs in Lean and the existing typed corpus: definitions and senses, propositions, distinctions, evidence, warrant criteria, rival commitments, defeaters, implications, incompatibilities, countermodels and exact open bridges. Encode them in reusable Lean declarations and typed records wherever practical, reusing existing declarations; compose and verify the consequences and expose the open premises. Formal definitions, mathematical claims, countermodels and worked proof applications go into compiled Lean wherever their meaning can be specified, linked from the research record and registered as results when they supply an argument in the graph. Then record the remaining reasoning concisely in prose that cites the formal results and canonical IDs instead of restating arguments: paraphrase, irreducible source fidelity and interpretation, premise warrant, empirical applicability, interpretive nuance, provisional judgments and exact blockers. Keep observations, historical attribution, interpretive judgments and open applications traceable to their evidence.
 
-## Source checks stay offline (owner direction, 2026-11-11)
+- This is a preference, not a rigid separation: agents may reason from both Lean and prose. Do not default to prose with Lean as an afterthought, or replace formalization with prose-only assessments, new note sections or opaque `Prop` flags. Equally, do not force opaque encodings, invent universal scoring rules or require proof quotas.
+- When revisiting a note, migrate its formalizable content and trim redundancy without losing unique evidence (migration scope: #2002).
+- A research PR whose scope is logical shows checked formal progress or names the precise formalization blocker; there is no proof quota and no duty to prove a disputed premise.
+- The preference governs the [systematic loop](docs/systematic-corpus-loop.md) and its assessments as well as argument research. An overall provisional judgment stays prose citing the encoded criteria, results and open premises; it is never asserted as a Lean proposition.
+- Semantic, proof, binding, review and closure gates stay intact.
 
-Full-source verification is not a repository standard. CI, scheduled/manual
-workflows and routine local gates must not refetch historical witnesses or
-require public source hosts to remain available or byte-stable. Validate source
-records, claim bindings and attribution records offline; exercise extraction
-with local fixtures. Use `source_evidence.py materialize <PASSAGE-ID>` only for
-selected source research, and read the cited material before attributing a claim.
-Missing cached text is not evidence that it was never read, and a green offline
-check does not certify source bytes or fidelity. See [source evidence](docs/source-evidence.md#validation).
+**Encode first (2026-11-03).** Formalize what can be formalized and derive what can be derived, keeping the needed interpretation, warrant and review reasoning beside the formal evidence.
 
-## Research policy and provisional judgments (owner direction, 2026-11-10)
-
-Follow [the systematic research loop](docs/systematic-corpus-loop.md) as the
-canonical method for selecting, investigating and integrating research. The
-coordinator issues reasoned **overall provisional judgments** of the current
-support for a claim or interpretation, including cumulative evidence, shared
-dependencies, objections and revision conditions. These judgments can inform
-priority, qualified conclusions and explicitly provisional downstream premises.
-They do not confer formal verification, frontier establishment or rival defeat.
-
-Keep proof validity, interpretation fidelity, premise warrant, objections and
-work status distinct. Personal assent is not philosophical warrant; do not ask
-the owner to select a metaphysical winner or create new `owner_approval` floor
-markings. Existing approval-based computed statuses remain legacy runtime
-behavior, documented in `docs/corpus-model.md`. Consequential definitions,
-bridges, claimed defeats and influential judgment changes need the independent
-[semantic challenge](docs/systematic-corpus-loop.md#independent-semantic-challenge)
-of the final consequential findings specified in the systematic loop. The
-coordinator drafts the complete proposed outcome before that review and follows
-the [bounded review-and-repair procedure](docs/systematic-corpus-loop.md#final-outcome-review-and-repair)
-before publishing its substantive conclusions.
-
-Use scoped assignments, substantive branch reassessment and explicit reopening conditions.
-Investigate support, rivals, consequences, preconditions and connections as the
-target warrants. Whole-case maps, exhaustive sense forks, models and source
-campaigns are selected methods, not universal prerequisites. This policy
-supersedes older route-cost, bare-premise-first and assent-only floor priorities;
-it changes no proof, source, schema or computed closure rule.
-
-## Argument breadth and cumulative warrant (owner direction, 2026-11-12)
-
-Treat the breadth of relevant propositions, interpretations, argument families,
-and rival accounts as positive research progress when it adds meaningful coverage
-or genuine support options. A proposition can be considered directly on its
-prima facie merits **and** supported conditionally by arguments from other
-propositions. Keep both options visible; adding a derivation must not remove its
-direct-assumption option or be penalized because it introduces further open
-premises, shares dependencies, or raises expanded-route cost. Counts describe
-corpus scale, not philosophical merit; do not repeatedly present growth in
-proposition/argument counts or unchanged frontier totals as a weakness.
-
-Do **not** demand an independent argument for every premise, nor treat reasons
-as worthless once they connect to the same web. Evaluate a proposition's
-available warrant together: prima facie plausibility, direct experience,
-successful inquiry, conceptual or practical preconditions, explicit arguments,
-network coherence, explanatory performance, and substantive defeats of rivals.
-Some commitments are candidate primitives or necessary conditions of the very
-reasoning by which premises are assessed; recording their content, scope and
-defeaters can be an appropriate stopping point without an endlessly prior proof.
-Examine whether support adds discriminating information and whether it begs the
-question; mere mutual implication or a closed proof cycle adds no warrant by
-itself. Shared dependencies must remain visible, but are not a penalty or a
-requirement to find disjoint proof trees.
-
-Distinguish strict self-refutation, epistemic self-undermining, lack of internal
-reasons to adopt a view, and contradiction of necessary inquiry preconditions.
-These are different kinds of comparative evidence: a view failing a substantive
-test loses standing; one surviving a serious test may gain *relative* standing,
-without thereby becoming deductively true. The mere absence of a discovered
-objection is not itself a proof. Do not manufacture hypothetical objections or
-require another argument merely because a proposition is presently primitive.
-
-In progress assessments, lead with what was clarified, connected, supported,
-tested, or compared, including useful breadth and alternative support bundles.
-Use formal establishment, independence analysis and route cost only for their specific diagnostic questions. Do not report aggregate bare- or open-premise counts, count deltas, or ratios as progress or routine status (owner direction, 2026-11-24). Keep individual assumptions, source depth and exact dependency changes inspectable; explicit route diagnostics remain available. Keep overall provisional
-warrant distinct from Lean consequence and the existing computed closure rules;
-this policy changes no schema or proof gate. See the
-[systematic loop](docs/systematic-corpus-loop.md#cumulative-warrant-and-support-options).
-
-## Fresh subagents for issue work (owner direction, 2026-11-08)
-
-During a workloop, the coordinator delegates each issue or bounded investigation
-to a fresh subagent. Split broad issues into independently reviewable slices;
-give each worker one slice with explicit file and argument ownership. Follow
-the canonical [worker ownership and integration contract](docs/systematic-corpus-loop.md#worker-ownership-and-integration)
-for scoped context, continuing repairs, review order, validation reuse and
-coordinator-owned integration. The originating worker retains its slice through
-semantic and CI repairs; a phase transition alone does not require a new agent.
-Use the canonical [parallel-lane policy](docs/systematic-corpus-loop.md#parallel-lanes)
-for two distinct propositions in different argument families, reserved review
-capacity and shared semantic baselines. Independent research continues while
-other work awaits review or CI; routine corrections stay inside the loop.
-Persist findings in the existing records and return a compact delta with evidence
-to the coordinator's one current handoff.
-
-## Research continuation and stopping (owner direction, 2026-11-10)
-
-Research has no default token, time, depth, batch or PR budget. A bounded worker
-assignment defines its question and file ownership, not a limit on investigative
-depth. Continue within the authorized question while a concrete, relevant next
-step is available; explicit owner limits and runtime constraints still apply.
-
-- **Walk the argument.** Fix each node's meaning, state the strongest relevant
-  rivals and their positive replacement accounts, and derive their further
-  commitments under explicit assumptions. Where a rival survives, descend into
-  the relevant premises and subarguments and reconnect findings to the parent.
-  A surviving model or an open premise is an intermediate finding, not a reason
-  by itself to stop. Do not label a rival's price unreasonable merely because it
-  is unusual; identify the conflict with an accepted floor item or the rival's
-  own commitments. Keep unresolved rivals visible without forcing a refutation.
-- **Workers report branches for reassessment** when the assigned question is
-  resolved under its stated assumptions; further work needs unavailable evidence,
-  capabilities or a genuine owner decision; repeated approaches expose the same
-  precise obstacle with no materially different next test; or a more consequential
-  question warrants a change of scope. Continue other useful work within the
-  assignment when possible. A blocked approach is not an exhausted question, and
-  failed proof search is not a refutation.
-- **Persist before reporting.** In the existing corpus records, attempts and linked
-  note, record established results, remaining gaps, the strongest standing rival
-  and its price, approaches tried and why they failed, and plausible next tests.
-  Return a compact delta with evidence and exact revision to the coordinator;
-  do not create another tracker.
-- **The master owns continuation and allocation.** Assess each report against the
-  whole argument, reuse unchanged evidence, and continue the branch, supply its
-  missing dependency, assign another approach, or redirect work to an unresolved
-  node. Respect existing ownership and use fresh workers for unrelated slices.
-  A worker's dead-end report does not end the master investigation.
-- **PRs are checkpoints.** Publishing a result, completing a batch, passing CI or
-  finishing review does not end the investigation. Continue across checkpoints
-  without asking again within the authorized scope; existing proof gates and
-  merge authority remain unchanged.
-- **The master stops** when the requested research scope is substantively resolved,
-  every remaining branch has a concrete blocker preventing further useful work,
-  or the owner asks it to stop. Explain resolution or blockers in the one current
-  handoff. If a runtime interruption forces a pause, preserve a resumable handoff
-  rather than declare the research complete.
-
-## Worker brief and handoff
-
-The master gives each worker a compact brief:
-
-1. **Target:** the proposition, parent question/argument family and root obligation advanced. It must be a node on a root route, or have a named bridge, connection plan and blocker. State why it is independent of the other active research target; an unbuilt bridge must not be reported as an existing route. A target that serves no root route is rejected (see "Connect every library to the case").
-2. **Starting result.** Give the baseline revision and link the exact theorem, reviewed finding or prior attempt the worker should build on. State its scope and assumptions. For formal reuse, identify the statement IDs, selected definitions and senses, and the Lean declaration. When there is no earlier result, identify the closest evidence and what the search left open.
-3. **Question that could change the judgment.** Give the first unanswered question and describe a finding that would change the current assessment. At a shared bottleneck, use the [test of the negated premise](docs/systematic-corpus-loop.md#when-several-arguments-stop-at-the-same-premise) to identify what would discriminate between the strongest rival and the proposed premise.
-4. **Expected value:** the useful change sought, with expected premise effects where relevant. A finding may clarify the question without discharging an obligation.
-5. **Ownership and reassessment:** file/argument ownership and the substantive conditions for reporting a resolved or stalled branch. No default work cap; an honest no-result report names the attempted approaches, precise obstacle and next test or reopening condition.
-
-For a substantial frontier investigation, include enough context to state the thesis, selected meaning, downstream purpose, known serious rivals and existing evidence. The worker may refine this map as the investigation develops; a complete argument tree or exhaustive rival list is not an entry requirement. It lives in the one current handoff or issue, not in another tracker.
-
-GitHub research issues follow the [research issue contract](docs/systematic-corpus-loop.md#github-research-issue-contract). They state an answerable question, graph destination, existing dependencies and a live discriminating uncertainty—not a prescribed conclusion or proof count. For an issue assignment or a returned issue handoff, start with the [issue brief](truth/README.md#starting-from-a-github-issue) on current `main`. Compare the requested deliverable with the reviewed record and the linked open or merged PRs. Reuse delivered findings and assign the first unmet item. Carry a covered issue through its existing PR. After integration, record delivered evidence and remaining work in the existing issue/handoff; close a completed issue scope without treating the larger philosophical question as settled.
-
-New issues state their requested delivery and acceptance evidence. PRs follow
-the [PR completion contract](docs/systematic-corpus-loop.md#pr-completion-contract):
-show the delivered scope, substantiate claimed graph connections, and reconcile
-affected current assessments and next tests. The GitHub templates prompt for
-this evidence; the same requirements apply to issues and PRs created by CLI or
-API. A partial delivery does not close an unfinished issue scope.
-
-The PR reports the actual premise comparison by linking or pasting the computed delta (`target/release/truth frontier-diff --base <merge-base>`; CI prints it to the job summary of the "Report the premise frontier" step), not a hand-reconstructed list; a new connection is not itself a discharge. A new verified, non-transcription argument is positive **conditional support-option** progress even if it replaces one leaf with several open premises in the expanded-route diagnostic. Record those new obligations separately; neither the new argument nor a lower route cost establishes its conclusion. For non-proof work, use “none” or “no premise change” where applicable.
-
-The coordinator runs `python3 scripts/worker_env.py --check` once for the
-selected toolchain/cache setup and supplies that setup to workers. Workers use
-`python3 scripts/worker_env.py -- <command> <args...>` without repeating the
-preflight unless the setup changes. Keep machine-specific verifier paths in
-repository-local Git configuration or the explicit environment, not in briefs
-that workers must reconstruct or in committed source.
-
-Workers reuse a warm clone rather than compiling TruthCore cold: retain a
-quiescent prepared clone, or prepare a new one with
-`scripts/prepare-worker.py --seed-build-from <WARM-CLONE>` under the heavy-job
-lock ([worker startup](docs/worker-startup.md)). Lake then rebuilds only modules
-whose inputs changed. A seeded build output is readiness, not verification:
-build, binding, axiom, Comparator and NanoDa gates still run on the final inputs.
-
-Before handoff or retirement, persist verified source findings, rejected interpretations with reasons, and remaining gaps in the existing passage, claim, definition, disambiguation or candidate records, or their linked repository notes. Keep precise witness locators and distinguish sourced readings from open commitments; temporary files must not be the only copy. Do not create claims merely to record research activity.
-
-## Concise reporting and persistence
-
-1. **Report changes.** Progress updates state a new finding, decision, failure,
-   merge or blocker. Do not repeat unchanged plans, status summaries or check
-   inventories. During a long wait, use one short verified-wait update.
-2. **Report timings only when relevant.** Include durations and resource metrics
-   for requested performance work or an unexpectedly slow run. Omit routine
-   startup/build histories and unavailable-metric disclaimers; ordinary timing
-   evidence stays in the existing CI or command logs.
-3. **Keep PRs focused.** Explain the problem, change, premise effects, essential
-   validation and remaining gaps. Preserve the required claim/type self-sweep
-   and exact premise comparison; take the latter from the computed
-   `truth frontier-diff` delta in the CI job summary rather than
-   reconstructing it by hand. Link existing check evidence instead of
-   narrating the execution chronology or repeating successful-check inventories;
-   include a reproduction command when the linked evidence is insufficient.
-4. **Maintain one current handoff.** The coordinator updates the designated
-   handoff note or issue rather than creating parallel progress documents.
-   Include the exact head/branch, open work, verified and unverified scope, and
-   next concrete step. Workers return their task delta and references; the
-   handoff links those findings rather than copying them.
-5. **Preserve research substance.** Keep sources and precise locators,
-   interpretations, rejected approaches and reasons, counterexamples, proof
-   boundaries and remaining gaps in their existing corpus records or linked
-   notes. Shorter reporting must not remove this evidence. Do not replace it
-   with chat history, temporary logs or duplicated progress narratives.
-6. **Trust completed work; do not repeat verification.** Reuse worker reports
-   and successful check evidence when the checked inputs and relevant
-   dependencies are unchanged (owner instruction, 2026-10-28). Use focused
-   diagnostics during development and final CI for the delivered revision;
-   do not independently repeat full builds, binding, Comparator, NanoDa, test
-   suites or review rounds at every handoff. Rerun affected checks for relevant
-   changes, concrete failures or unresolved findings. Complete the claim/type
-   self-sweep for a related batch before its first push, and combine related
-   findings into one reviewable PR where practical.
-
-## Local Lean preview service
-
-Use the existing [local service and client](docs/agent-service.md) when the
-coordinator supplies a preview. The coordinator owns startup, health checks,
-dependency refresh and shutdown, and gives workers the endpoint, workspace and
-session identity. Workers keep isolated canonical clones and use the shared
-preview session under the documented lease; every response remains bound to
-its exact revision and inputs. Reuse the pinned Lean toolchain and dependencies.
-
-Continue through the existing CLI when no usable preview is supplied. A new
-service experiment or adapter is a selected tooling task, not recurring startup
-work. Keep the service local; this protocol does not authorize an external Lean
-dependency. Interactive diagnostics do not replace the required build, binding,
-axiom, Comparator and NanoDa checks on the final inputs.
-
-## Premise dossiers and attempts
-
-Before opening a new proposition investigation or introducing vocabulary, run
-`target/release/truth related <STMT-ID>` for the load-bearing seed. It ranks the
-loaded corpus in memory (no cache) and surfaces related propositions, complete
-argument bundles and previous attempts. Without a seed ID, start with
-`target/release/truth index search 'topic words'` (a disposable SQLite/FTS5
-projection under `.cache/` of the corpus records and the `docs/notes/` sections
-(#952), rebuilt when either changed; never an authority).
-Inspect promising matches before reinventing them. Rankings and shared vocabulary are discovery aids, not proofs
-of equivalence, implication or incompatibility. Continue with the dossier and
-existing certification workflow below. The repository-local `proposition-reuse`
-skill in `.agents/skills/proposition-reuse/SKILL.md` describes this entry point.
-
-When the target is an existing argument or result, start with
-`target/release/truth context <ARGUMENT-OR-RESULT-ID>`: one bounded pack with
-the frozen Lean statement, Lean-import reuse, premise status and other routes,
-countermodels, attempts and open work, derived on demand (`docs/notes/argument-context.md`).
-
-Before judging how mature a premise's research is, or calling a theorem,
-connection or research issue new, run `target/release/truth brief <STMT-ID>`
-(or `brief --question "..."`) and `target/release/truth novelty "<claim>"`,
-with `--issues-from` an offline `gh issue list`/`gh pr list --state all`
-snapshot where available. They retrieve prior notes, attempts, rivals,
-conditional results, recorded judgments and issues with their references;
-they are advisory and certify nothing, and a missing hit or snapshot is not
-evidence that no prior work exists (truth/README.md, "`brief` and `novelty`").
-
-Before proposing a derivation or reusing a proposition in a new argument, run
-`target/release/truth semantics <ID>` (definitions, senses, and the sense verdicts
-of connected arguments) and the preflight `truth semantics --premise … --conclusion …`.
-Split an unbridged mixing per sense, or bridge it by an explicit `sense_bridges`
-premise, before formalization; `argument_batch.py records`, `truth check` and
-`bind-check` then preserve and enforce it (truth/README.md, "`semantics`").
-
-For every premise touched, inspect `target/release/truth dossier <STMT-ID>`
-(the explorer links the same generated dossier from the statement page). Before
-handoff, update `corpus/attempts/` for failed derivations, rejected readings,
-source searches, and other substantive attempts, including successful results.
-Reuse an existing attempt when correcting its record; do not create a philosophical
-claim merely to log activity. Record exact target statement IDs, outcome, concise
-findings, remaining blocker when blocked, and result/claim/PR evidence. A successful
-attempt does not establish its target or change frontier closure. The dossier is
-computed from corpus records, not edited separately. See `docs/premise-dossiers.md`
-for the attempt format and reference boundaries. Each attempt a worker creates or
-updates appends itself to `workers` (role, provider, model, effort, date, PR), so a
-proposition's history shows which agents and models worked on it (owner direction,
-2026-11-26).
-
-## Research hypotheses are not forced owner decisions (owner direction, 2026-11-09)
-
-- Before offering A/B/C as an owner choice, classify whether the alternatives are mutually exclusive *actions or bindings needed now*, or coexisting philosophical senses, explanatory standards, rivals or conditional frameworks. A disputed thesis is not itself an implementation decision gate.
-- For research alternatives, retain each defensible interpretation and its strongest arguments, objections and replies. Compare precise implications, countermodels and bridges under explicit assumptions; investigate relationships before assuming either exhaustiveness or exclusivity. Do not ask the owner to select a metaphysical winner merely to proceed. Issue provisional judgments under the systematic loop: they may support qualified conclusions and priority, while leaving formal establishment unchanged.
-- Ask a focused owner question only when a concrete next action actually requires an exclusive commitment that cannot responsibly be carried as explicit alternatives. An instruction to investigate all options is a complete methodological decision: persist it and proceed without reopening a forced winner question.
-- Example: the whole-series explanation standards of PR #1297 are retained as rival standards; the topic-specific research judgment lives in attempt `a5958e25-0904-46cb-a9e8-62ca5f3f5286`.
-
-## Substantive Objection Standard (owner direction, 2026-11-12)
-
-Do not introduce speculative, nebulous, or merely conceivable
-objections as if they carry evidential weight.
-
-An objection must:
-
-1. Identify a specific premise, inference, or assumption it challenges.
-2. Explain the concrete mechanism by which the argument could fail.
-3. Provide independent justification for that mechanism.
-4. Explain why the objection is relevant to the actual argument.
-5. Distinguish established counterexamples from hypothetical possibilities.
-
-Here "independent justification" means positive support for the proposed
-failure mechanism beyond merely asserting that failure is conceivable or
-restating the desired objection. It does **not** require evidential isolation
-from the rest of the graph or an endlessly prior proof of every supporting
-premise. Apply the same non-question-begging test to supporting arguments.
-
-When claiming that an argument does not generalize, identify the
-specific relevant difference and justify why it matters.
-
-Do not invent contrived alternatives merely to maintain artificial
-balance between competing positions.
-
-The burden of defending an objection rests with its proponent.
-An unspecified possibility of error is not evidence of error.
-
-If no substantive objection is available, say so plainly.
-Do not manufacture uncertainty to fill the gap.
-
-Apply these standards equally to arguments supporting and opposing
-theism, naturalism, and every other worldview.
-
-Application in this repository:
-
-- **Rival tables and attempts.** A recorded rival or objection names its target
-  premise or inference, its mechanism, and the independent justification for that
-  mechanism. A finite countermodel is an established fact about one stated formal
-  interpretation; it shows a premise is needed there, not that the premise is
-  false or doubtful. Do not present it as evidence against the premise without
-  that justification. Where none is available, record "no substantive objection
-  identified" rather than a placeholder rival.
-- **Non-generalization claims.** "This case is special", "this may not extend" or
-  "dropping assumptions may dissolve it" must name the specific difference between
-  the case and the target and say why that difference matters to the inference.
-  Otherwise remove the claim or record it as an unsupported suggestion with no
-  evidential weight.
-- **Boundaries stay.** This standard governs objections. It does not relax proof,
-  binding, source or closure rules: an open premise stays open, and a conditional
-  theorem still establishes only its conclusion under its premises.
-- **Review.** Reviewers apply the standard to objections in a diff exactly as to
-  supporting claims; an objection failing it is a P1 when the diff presents it as
-  evidence.
-
-## Systematic sense and rival comparison
-
-Use this workflow when a sense/rival comparison is the selected question; it is
-not a prerequisite for every investigation in the systematic loop.
-
-Before research, inspect `/progress` in the corpus explorer and the target's
-`/dossiers/<statement-uuid>#research-comparison`; use
-`target/release/truth context <ARGUMENT-OR-RESULT-ID>`,
-`target/release/truth dossier <STMT-ID>` for every touched premise,
-`target/release/truth brief <STMT-ID>` for prior rivals and judgments, and
-`target/release/truth related <STMT-ID>` before introducing vocabulary.
-These views reuse canonical corpus evidence; they are not a separate status registry.
-
-- Pick a bounded root-route target and a named rival/sense question. Use a finite,
-  explicitly scoped set of relevant senses. Do not presume coverage or
-  exclusivity; make either an explicit obligation when an inference uses it.
-  Absent mappings remain unknown or untested.
-- Compare within the same meaning, witness, domain and frame. Each cell records
-  a checked exclusion under listed premises, model-witnessed compatibility of
-  the selected bundle, an unresolved exact gap, or untested. An absent refutation
-  is not compatibility; a finite countermodel is not global incompatibility.
-- Keep every assumption visible. A newly verified non-transcription argument is
-  positive conditional support-option progress even with more explicit open
-  inputs; it establishes its conclusion only under the existing closure rules.
-  No independent defense of primitives is required merely to explore consequence.
-- Before handoff persist evidence, exact gaps and the next concrete research step
-  in existing corpus records, batch specs and `corpus/attempts/`, not another
-  research/status registry. Attempts do not confer proof status. Use existing
-  explicit configuration semantics and certificates for assumption comparisons;
-  registration alone remains `verification required`. Generate batch records with
-  `python3 scripts/argument_batch.py records SPEC --write --fix` and inspect the
-  resulting dossier. The static progress view derives closure/support from
-  `frontier --json`, gaps from dossiers/attempts, senses from disambiguations, and
-  scoped comparisons from existing configuration reports. Record explicit sense/rival certificate annotations as
-  `[[argument.research_comparisons]]` in the owning batch spec (fields and commands
-  in `docs/github-pages.md`, “Recording a checked sense/rival comparison”); the
-  generator writes them to the existing result record. Missing mappings stay
-  untested, never inferred from names or imports. These annotations do not
-  bypass theorem verification or alter closure.
-- The coordinator selects the next unanswered discriminating cells and assigns
-  workers disjoint argument clusters. Reuse unchanged checked evidence. Report
-  conditional support progress separately from establishment and root closure.
+- **Encodings must be able to fail.** A transcription or opaque flag is documentation in Lean syntax (invariant 16).
+- **Interpretation forks become sibling propositions** (invariant 5), linked by `interpretation_of` or a disambiguation, not "reading A / reading B" paragraphs.
+- **Strength forks become strong and weak sibling versions (#1017)** ordered by a `strengthens` relation backed by a verified strong-to-weak result. Use the weakest version that suffices or record why in `strong_version_needed`; a source stating only the weak version is never attributed the strong one. Content-differing senses (eternity, sempiternity, #979) stay a disambiguation ([strength order](docs/corpus-model.md#premise-program-and-frontier)).
+- **Disambiguate through definitions, not labels.** Each consequential sense has its own `DEF-…` record and faithful formal interpretation, with load-bearing terms defined inside it recursively and no arbitrary depth limit. A Lean primitive is declared as such, with meaning, distinguishing conditions and open obligations; a primitive relation, or a theorem that merely constrains it, is not a completed Lean definition. Never hide a contested bridge in definitional equality or unfold circularly ([definition dependencies](docs/corpus-model.md#definition-dependencies-and-formal-meaning)).
+- **Terms carry sense labels (owner direction, 2026-11-07):** stable, append-only `TERM_n` labels with uuid identities, each sense a distinct Lean declaration so equivocation is a type error for `bind-check`; a label without one is not a finished sense. One sense per term per argument (`for_each_sense` for several); crossing senses needs a `sense_bridges` premise or derived bridge; mixing controls set `sense_mixing_control: true`; the legacy allowlist `corpus/sense-index-allowlist.json` only shrinks (#1233) ([sense-indexed terms](docs/corpus-model.md#sense-indexed-terms)).
+- **Shared frames for new work (owner decision, 2026-11-19, #1784).** New modules in a concept family take its shared frame (for causality `TruthCore.Causality.Frame.CausalityFrame`) instead of fresh parameters for its relations; senses stay distinct declarations. Each field is a stated primitive, sense-tagged (`senses[].lean_parameters`) where a sense record matches, with no assumed relation between fields; bridges stay explicit premises. Older modules get adapters gradually (`TruthCore.Causality.FrameAdapters`), not a rewrite. Tags are authored, never inferred from names; an untagged parameter is unknown.
+- **Prose keeps its evidence boundary:** fidelity review, provisional judgments, rejected readings and reasons, and what cannot yet be typed, naming the vocabulary, sources or bridges that block formalization. Never disguise a defeasible judgment as a verified proposition.
 
 ## Logic first; attribution deferred (owner direction, 2026-11-05)
 
-For the **Carneades.org** campaign and other assigned logic tasks, prioritize
-formalizing arguments and exploring their consequences. Do not let source
-acquisition or author exegesis displace the selected logic task. The systematic
-loop governs selection between logic, interpretation and warrant questions.
+For the **Carneades.org** campaign and other assigned logic tasks, formalization and consequence come first; source acquisition and exegesis must not displace them. The loop governs selection between logic, interpretation and warrant questions.
 
-- Start from available argument summaries, transcripts, existing propositions
-  and explicit working reconstructions. Formalize premises and conclusions,
-  compose results, find incompatible bundles, and construct countermodels.
-- Treat uncertain premises and interpretations as openly stipulated framework
-  inputs. Record variants when needed. Neither source attribution nor an
-  independent defense of each premise is a prerequisite to studying consequence.
-- **Do not put PDF downloads, transcript authentication, passage pinning,
-  extraction portability, or getting an author's intentions exactly right on
-  the critical path of a logic task.** Do not build source infrastructure to
-  unblock such a task. Defer attribution work unless it is selected to answer
-  a live source or warrant question within the authorized research scope.
-- New formalizations do not need new source, passage or claim records. Label
-  them as analyst formulations with attribution deferred; keep already available
-  titles/URLs/locators as navigation, not as verified historical claims. Preserve
-  completed source findings in existing notes, candidates or attempts without
-  spending more effort to certify them now.
-- Existing source-integrity rules still apply when deliberately publishing a
-  source claim. They must not be bypassed or replaced by invented attribution.
-  If a new attribution blocks a logic PR, defer the attribution and its new
-  witness records while retaining the propositions and checked logical work.
-- Keep Lean, binding, Comparator/NanoDa, frozen Challenges, exact premise
-  reporting and countermodel boundaries. A conditional consequence does not
-  establish its premises or the Catholicism root as true.
-- Parallel workers should own distinct argument clusters and files, preferably
-  seemingly unrelated topics. Use isolated clones and serialize shared heavy
-  verification/service operations; do not manufacture overlapping source tasks.
+- Work from available summaries, transcripts, existing propositions and explicit reconstructions: formalize premises and conclusions, compose results, find incompatible bundles, build countermodels. Uncertain premises and readings are openly stipulated inputs, with variants as needed; neither attribution nor a defense of each premise is a prerequisite.
+- **Keep PDF downloads, transcript authentication, passage pinning, extraction portability and exact authorial intention off the critical path,** and build no source infrastructure to unblock a logic task. Defer attribution unless selected for a live source or warrant question in scope.
+- New formalizations need no source, passage or claim records: label them analyst formulations with attribution deferred, keep available titles/URLs/locators as navigation only, and preserve completed source findings in existing notes, candidates or attempts without further certification effort.
+- Source-integrity rules still govern deliberately published source claims; never bypass them or invent attribution. If a new attribution blocks a logic PR, defer it and its witness records and keep the checked logic.
+- Lean, binding, Comparator/NanoDa, frozen Challenges, exact premise reporting and countermodel boundaries stay; a conditional consequence establishes neither its premises nor the root.
+- Parallel workers own distinct argument clusters and files, preferably unrelated topics, in isolated clones, serializing shared heavy operations, without manufactured overlapping source tasks.
 
-This direction overrides source-first and source-coverage priorities elsewhere
-in this file and in existing issue briefs for the current logic-first phase.
-Attribution can be revisited when it is a selected research need and the
-existing source workflow can support it; it must not block unrelated logic work.
+This overrides source-first and source-coverage priorities elsewhere here and in existing issue briefs for the logic-first phase. Attribution returns when selected and supportable; it never blocks unrelated logic work.
 
-## Encode first (owner direction, 2026-11-03)
+## Source checks stay offline (owner direction, 2026-11-11)
 
-Formalize what can be formalized and derive what can be derived. Keep the necessary interpretation, warrant and review reasoning alongside the formal evidence; a provisional assessment is not an opaque proposition to assert in Lean.
+Full-source verification is not a repository standard. CI, scheduled/manual workflows and routine local gates never refetch historical witnesses or depend on source hosts staying available or byte-stable. Validate source records, claim bindings and attribution records offline; test extraction on local fixtures. Use `source_evidence.py materialize <PASSAGE-ID>` only for selected source research, and read the cited material before attributing a claim. Missing cached text is no evidence it was never read; a green offline check certifies neither bytes nor fidelity ([validation](docs/source-evidence.md#validation)).
 
-- **Encodings must be able to fail.** A transcription or an opaque flag is documentation in Lean syntax, not formalization (invariant 16).
-- **Interpretation forks become sibling propositions.** Where a point is open to interpretation, create one claim or statement per defensible option (invariant 5), linked by `interpretation_of` or a disambiguation, not "reading A / reading B" paragraphs in a note.
-- **Strength forks become strong and weak versions (#1017).** Where the ambiguity is one of strength (for every S, or only for the sentences the argument uses), record both versions as sibling statements and register the order with a `strengthens` relation (strong → weak). It is valid only with a verified result whose argument has the strong version as its only premise and the weak version as its conclusion; a strictness countermodel is optional. Use the **weakest version that suffices** in each argument; an argument that keeps the strong version records why in `strong_version_needed`. Each version gets its own claims: a source that states only the weak version is never attributed the strong one. Senses that differ in content rather than strength (eternity and sempiternity, #979) stay a disambiguation. See `docs/corpus-model.md`, "Strength order".
-- **Disambiguate through definitions, not labels.** Each consequential `TERM_1`/`TERM_2` sense needs its own `DEF-…` record and a faithful formal interpretation. Reuse and, when needed, define the load-bearing terms *inside* its definition, recursively; this may grow into an extensive shared dictionary, with no arbitrary depth limit. A Lean primitive is allowed only when explicitly identified as primitive, with its meaning, distinguishing conditions and open semantic obligations stated. A primitive relation or a theorem that merely constrains it is not a completed Lean definition. Do not conceal a contested bridge in definitional equality or create circular definitional unfoldings. See `docs/corpus-model.md`, "Definition dependencies and formal meaning".
-- **Terms carry sense labels (owner direction, 2026-11-07).** Each disambiguated term has numbered senses TERM_n (PRIOR_1, PRIOR_2) with opaque uuid identities; labels are stable and only appended. Each sense is a distinct Lean type (`senses[].lean_declaration`), so equivocation is meant to be a type error that `bind-check` catches; a sense label without a distinct Lean declaration is not a finished sense. One argument uses one sense per term. An argument valid in several senses becomes one argument per sense (`for_each_sense` in `argument_batch.py`). A passage between senses is an explicit premise listed in `sense_bridges`, or the conclusion of an argument that derives it (`role: "conclusion"`); a premise-free control showing that mixing fails sets `sense_mixing_control: true`. The legacy allowlist in `corpus/sense-index-allowlist.json` may only shrink (#1233). See `docs/corpus-model.md`, "Sense-indexed terms".
-- **Shared frames for new work (owner decision, 2026-11-19, #1784).** A new module in a concept family takes that family's shared frame structure as input (its carriers, such as beings, respects and moments, and the family's primitive relations), instead of declaring fresh parameters for relations the frame already has. For causality this is `TruthCore.Causality.Frame.CausalityFrame`. Senses stay distinct declarations, so equivocation is still a type error. Each frame field is a primitive under the primitive rule of this section: its meaning is stated, its sense is tagged (`senses[].lean_parameters`) where a sense record matches, and no relation between fields is assumed. Bridges between fields remain explicit premises. Older modules get adapters gradually (`TruthCore.Causality.FrameAdapters`), not a rewrite. Parameter tags are authored, never inferred from names, and an untagged parameter is unknown.
-- **Prose preserves its evidence boundary.** Use prose for interpretation and fidelity review, provisional judgments, rejected readings and their reasons, and what cannot yet be typed. Identify missing vocabulary, sources or bridges where those block formalization; do not disguise a defeasible judgment as a verified proposition.
+## Research policy and provisional judgments (owner direction, 2026-11-10)
 
-## Exploration and batch certification (owner direction, 2026-11-07)
+[The systematic loop](docs/systematic-corpus-loop.md) is the canonical research method. The coordinator issues reasoned **overall provisional judgments** of current support (cumulative evidence, shared dependencies, objections, revision conditions). They may guide priority, qualified conclusions and explicitly provisional downstream premises; they confer no formal verification, frontier establishment or rival defeat. Keep proof validity, interpretation fidelity, premise warrant, objections and work status distinct. Personal assent is not warrant: never ask the owner to pick a metaphysical winner or create new `owner_approval` floor markings (existing ones are legacy runtime behavior). Consequential definitions, bridges, claimed defeats and influential judgment changes need the [independent semantic challenge](docs/systematic-corpus-loop.md#independent-semantic-challenge) of the final findings; the coordinator drafts the complete outcome first and follows the [bounded review-and-repair procedure](docs/systematic-corpus-loop.md#final-outcome-review-and-repair) before publishing. Use scoped assignments, substantive reassessment and explicit reopening conditions; investigate support, rivals, consequences, preconditions and connections as the target warrants. Whole-case maps, exhaustive sense forks, models and source campaigns are selected methods, not prerequisites. This supersedes older route-cost, bare-premise-first and assent-only floor priorities and changes no proof, source, schema or closure rule.
 
-Use an **exploration map** (`explorations/<slug>.toml`, checked with `python3 scripts/argument_batch.py map`) when it helps expose a target's argument DAG; a complete map is not required before a bounded investigation. Reuse statement IDs and mark new nodes and bridges. Certify related derivations as one coherent batch where useful: one vocabulary module, one Solution, a Challenge generated by `python3 scripts/argument_batch.py challenge`, and records generated by `python3 scripts/argument_batch.py records SPEC --write --fix`. There is no derivation quota. Keep new bare premises and analyst bridges explicit and open.
+## Research hypotheses are not forced owner decisions (owner direction, 2026-11-09)
 
-Seek nonvacuity witnesses and omission countermodels where practical and informative; record unresolved satisfiability or necessity rather than requiring a model for every result. Claims of satisfiability, non-entailment or minimality still need their own adequate evidence. `thickness --base <merge-base>` and `thickness --queue` are diagnostics, not progress scores or the sole priority queue. Record rejected leads as attempts. Base each PR on `main` and follow [coordinator-owned integration](docs/systematic-corpus-loop.md#worker-ownership-and-integration); return conflicts to the owning worker and regenerate shared files under the existing rules.
+Before offering A/B/C to the owner, classify the alternatives: exclusive *actions or bindings needed now*, or coexisting senses, standards, rivals or frameworks. A disputed thesis is no decision gate. Keep each defensible alternative with its strongest arguments, objections and replies, compare implications, countermodels and bridges without presuming exhaustiveness or exclusivity, and issue provisional judgments. Ask a focused question only when a concrete next action needs an exclusive commitment that cannot responsibly be carried as explicit alternatives. "Investigate all options" is a complete decision: persist it and proceed without reopening a forced winner question. Example: PR #1297's whole-series standards stay rival standards (attempt `a5958e25-0904-46cb-a9e8-62ca5f3f5286`).
+
+## Argument breadth and cumulative warrant (owner direction, 2026-11-12)
+
+- **Breadth is progress** when it adds meaningful coverage or genuine support options. Counts describe scale, not merit; do not keep presenting count growth or unchanged frontier totals as a weakness.
+- **Direct and conditional options coexist.** A proposition may be held on its prima facie merits **and** supported by arguments. A derivation never removes the direct option and is not penalized for adding open premises, sharing dependencies or raising expanded-route cost.
+- **Cumulative warrant.** Do **not** demand an independent argument for every premise, nor treat reasons as worthless once they join the same web. Weigh prima facie plausibility, direct experience, successful inquiry, conceptual or practical preconditions, explicit arguments, network coherence, explanatory performance and substantive defeats of rivals together. Candidate primitives and preconditions of reasoning itself may be a stopping point once content, scope and defeaters are recorded. Ask whether support discriminates or begs the question; mutual implication or a closed proof cycle adds no warrant. Shared dependencies stay visible but are no penalty and no requirement to find disjoint proof trees.
+- **Comparative tests** (strict self-refutation, epistemic self-undermining, no internal reason to adopt, contradiction of inquiry preconditions) are distinct. Failing one costs standing; surviving one may gain *relative* standing, not truth. The mere absence of a discovered objection is no proof. Do not manufacture objections or demand arguments merely because a proposition is primitive.
+- **Progress reports** lead with what was clarified, connected, supported, tested or compared, including useful breadth and alternative support bundles. Establishment, independence and route cost answer only their diagnostic questions. Never report aggregate bare- or open-premise counts, deltas or ratios as progress or routine status (owner direction, 2026-11-24); keep individual assumptions, source depth and exact dependency changes inspectable; explicit route diagnostics remain available.
+
+Provisional warrant stays distinct from Lean consequence and computed closure; no schema or proof gate changes ([cumulative warrant](docs/systematic-corpus-loop.md#cumulative-warrant-and-support-options)).
+
+## Substantive Objection Standard (owner direction, 2026-11-12)
+
+Do not introduce speculative, nebulous or merely conceivable objections as if they carried evidential weight. An objection must (1) identify the specific premise, inference or assumption it challenges; (2) explain the concrete mechanism of failure; (3) give independent justification for that mechanism; (4) explain its relevance to the actual argument; (5) distinguish established counterexamples from hypothetical possibilities. Independent justification is positive support beyond asserting conceivable failure or restating the objection; it does **not** require isolation from the rest of the graph or an endlessly prior proof. The same non-question-begging test applies to supporting arguments. A non-generalization claim names the relevant difference and why it matters. Invent no contrived alternatives for balance. The burden lies with the objection's proponent; an unspecified possibility of error is not evidence of error. If no substantive objection exists, say so plainly rather than manufacture uncertainty. Apply this equally to arguments for and against theism, naturalism and every other worldview.
+
+- A recorded rival or objection names its target, mechanism and the mechanism's justification; otherwise record "no substantive objection identified". A finite countermodel is a fact about one formal interpretation: it shows a premise is needed there, not that it is false or doubtful, and is no evidence against it without that justification.
+- "This case is special", "this may not extend" or "dropping assumptions may dissolve it" must name the difference and why it matters, or be removed or recorded as a weightless suggestion.
+- The standard relaxes no proof, binding, source or closure rule: open premises stay open; a conditional theorem establishes only its conclusion under its premises.
+- Reviewers apply it to objections exactly as to support; a failing objection presented as evidence is P1.
 
 ## Connect every library to the case (owner direction, 2026-11-07)
 
-**What went wrong.** The repository built a large modal library for the necessary-being target: about 50 modules under `TruthCore/Modal/`, with roughly 89 verified results on Kripke frames, K/T/S4/B/S5, actualist domains, rigid designation and modal collapse. None of those results reached `STMT-CATHOLICISM-TRUE`. The necessary-being routes kept running only through act/potency and degrees-of-being chains, and their "necessary" was never the necessity of modal logic.
+A verified library answering no question on a root route is not case progress: about 50 modal modules with 89 verified results never reached `STMT-CATHOLICISM-TRUE` ([decision record](docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md)). No library, framework, vocabulary or result family is built or extended in isolation.
 
-`DISAMB-NECESSARY` listed ten senses of "necessary" and stated that no statement relates them. Research rounds selected their work from `thickness --queue`, which ranks only statements that already reach the root, so the disconnected library never surfaced. The rounds optimised thickness and never asked what verified work was idle. A framework that answers no question on a root route is not progress on the case, however well verified.
+1. **Name the target before building.** Every brief and every PR adding vocabulary or results names the root-route node it serves: a premise discharged, argument connected or rival refuted (`truth frontier --routes`).
+2. **Connect, or say why not.** The PR shows the connection in the computed `frontier-diff` or states a connection plan (target statement, missing bridge, blocker) that the handoff tracks; unconnected work is not case progress. CI gates: `truth connectivity --base <merge-base>` fails on a new, moved-out or previously planned statement that neither joins the root's typed component (arguments, inference steps, relations including `tests`; claims through relations, not attempts) nor records a valid `connection_plan`. Typed contact is not enough for results (owner decision, 2026-11-27): `truth orphans --base <merge-base> --gate` fails on a new, changed or previously placed verified result that neither reaches the root, nor is a placed diagnostic (`tests` a root-path node) or rival (typed rival relation), nor has a `connection_plan` on its conclusion targeting a root-path statement ([connection plans and placement](docs/corpus-model.md#premise-program-and-frontier)). Contrived edges and tautological bridges are unacceptable; passing a gate discharges no substantive obligation.
+3. **Include idle work in prioritization:** inspect `truth orphans` when choosing a round. A bridge can be high-value but does not automatically outrank a live objection or missing warrant; judge research by the uncertainty it changes; route cost and thickness remain diagnostics.
+4. **Investigate load-bearing senses and their relationships:** faithful definitions, consequential alternatives preserved, implication, equivalence or independence tested with the sense-index and bridge machinery; names or types alone establish no meaning; research rivals and premise warrant whenever informative. A [certified fork](docs/configuration-elimination-loop.md#certified-forks-for-selected-investigations) needs coverage only if its inference uses coverage, and exclusivity only if it uses exclusivity; overlapping or strength-ordered senses need not exclude each other, and no exhaustive enum or joint theorem is required first.
 
-**The rule.** No library, framework, vocabulary or result family is built or extended in isolation.
+**Placement is plumbing, not warrant** (owner decision 2026-11-27, [decision record](docs/decisions/2026-11-27-02-curation-ends-mechanical-review-strict-main.md)). A result is placed or reaches the root when connected, not when supported. Progress reports keep four standings apart, mapping each reaching result's `truth orphans` provenance key:
 
-1. **Name the target before building.** Every worker brief and every PR that adds vocabulary or results names the root-route node it serves: a premise it discharges, an argument it connects, or a rival it refutes. `target/release/truth frontier --routes` lists the routes.
-2. **Connect, or say why not.** The PR either shows the connection in the computed `frontier-diff` (new results reaching the root, a premise closed or defended, a route re-routed) or states an explicit connection plan: the target statement, the missing bridge and its blocker. The coordinator's handoff tracks that plan. Unconnected work does not count as progress on the case until it is connected. CI checks typed contact for statements: `truth connectivity --base <merge-base>` fails on a new, moved-out or previously planned statement that neither joins the root's component through arguments, inference steps or relations (including `tests`; claims count through relations, attempts do not) nor records a valid `connection_plan` (docs/corpus-model.md). Typed component contact is not enough for results (owner decision, 2026-11-27): `truth orphans --base <merge-base> --gate` fails on a new, changed, or previously placed verified result that neither reaches the root, nor is a placed diagnostic (`tests` a root-path node) or placed rival (typed rival relation), nor carries a `connection_plan` on its conclusion targeting a root-path statement. Contrived edges and tautological bridges are not acceptable. Passing either gate does not discharge the substantive root-route obligation.
-3. **Include idle work in prioritization.** Inspect verified families that do not reach the root (`truth orphans`) when choosing a round. A useful bridge can be a high-value target, but disconnected work does not automatically outrank a live objection or missing warrant. Judge research by the uncertainty it changes; route cost and thickness remain diagnostics.
-4. **Investigate load-bearing senses and their relationships.** Give the selected sense a faithful definition/interpretation, preserve consequential alternatives, and test proposed implication, equivalence or independence. Distinct names or types alone do not establish meaning. Use the existing sense-index and bridge machinery when formalizing these relationships. A [certified fork](docs/configuration-elimination-loop.md#certified-forks-for-selected-investigations) needs coverage only if its inference uses coverage, and exclusivity only if it uses exclusivity; overlapping or strength-ordered senses need not be mutually exclusive. Research rivals and premise warrant whenever informative, without first completing an exhaustive enum or joint theorem for all senses.
-
-See `docs/decisions/2026-11-07-02-connect-libraries-to-the-case.md`.
-
-**Placement is plumbing, not warrant** (owner decision 2026-11-27, `docs/decisions/2026-11-27-02-curation-ends-mechanical-review-strict-main.md`). A result is "reaching the root" or placed when it is connected, not when it is supported. Progress reports keep four standings apart. Each reaching result's `truth orphans` provenance key maps to one of them:
-
-1. **established**: the frontier's established statements (no provenance key).
-2. **conditionally supported by a substantive derivation**: `substantive`. `refutation_support` belongs here too, but only as support for that refutation of a recorded rival, not for a root route.
-3. **connected only**:
-   - `transcription_closed` carries rule (d) closure to the root but no independent warrant;
-   - `transcription_self` contributes at most rule (d) closure;
-   - `transcription_open`, `loop_back`, `registration_bare` and `unverified_route` carry no support to the root.
-4. **planned**: the placement state `planned` (no provenance key).
+1. **established**: the frontier's established statements (no key);
+2. **conditionally supported by a substantive derivation**: `substantive`; `refutation_support` too, but only as support for that refutation of a recorded rival, not for a root route;
+3. **connected only**: `transcription_closed` carries rule (d) closure to the root but no independent warrant; `transcription_self` contributes at most rule (d) closure; `transcription_open`, `loop_back`, `registration_bare` and `unverified_route` carry no support to the root;
+4. **planned**: placement state `planned` (no key).
 
 Counts are never progress (owner direction, 2026-11-24).
 
 ## Proof-seeking stance
 
-- Seek machine-checkable consequence, not prose approval. An LLM may propose readings, propositions, formalizations, or proof steps, but its agreement is never evidence that a conclusion follows.
-- Use Curry–Howard as the default mental model for formal work: propositions correspond to types and proofs to terms/programs; implication is a function type, conjunction a product, disjunction a sum, and quantified propositions may require dependent function or pair types.
-- When claiming `P1, ..., Pn ⊢ C`, make the premises, definitions, and inference rules explicit and reduce the claim to a mechanically checkable artifact, using Lean by default in this repository.
-- Keep source interpretation, proposition extraction, formalization, proof search, and proof verification distinct. Lean's kernel verifies accepted proof terms; tactics, solvers, and LLMs are search helpers, not authorities.
-- `truth discover` (Duper, with Zipperposition only for premise selection) is such a search helper: the kernel, re-checking each reconstructed proof and its axioms, is the authority, and a discovery is a conditional support option for review, never a record by itself ([discover](docs/discover.md)).
-- Machine-checkable does not mean automatically discoverable. Failure to find a proof is not a refutation, and formal verification establishes consequence only inside the encoded system—not premise truth, source fidelity, empirical truth, or completeness of the chosen logic.
+Seek machine-checkable consequence, not prose approval; an LLM may propose readings, formalizations or proof steps, but its agreement is never evidence that a conclusion follows. Think Curry–Howard: propositions are types and proofs terms (implication a function type, conjunction a product, disjunction a sum, quantifiers dependent types). A claim `P1, ..., Pn ⊢ C` makes premises, definitions and rules explicit and reduces to a checkable artifact, in Lean by default. Keep interpretation, extraction, formalization, proof search and verification distinct: Lean's kernel is the authority; tactics, solvers, LLMs and `truth discover` are search helpers, and a discovery is a conditional support option for review, never a record ([discover](docs/discover.md)). Machine-checkable is not automatically discoverable: failed proof search is not a refutation, and verification establishes consequence only inside the encoded system, not premise truth, source fidelity, empirical truth or the logic's completeness.
 
 ## Conditional framework exploration (owner direction, 2026-10-31)
 
-Truth Core retains its purpose: investigate the case for Catholicism and the strongest competing worldviews. In the foundational phase, systematically explore combinations of low-level propositions, rules, framework commitments and semantic profiles, including routes to necessary concrete being and alternative conclusions. Do not turn this into an endless demand to justify each primitive assumption before studying its consequences.
+Truth Core investigates the case for Catholicism and the strongest competing worldviews. In the foundational phase, systematically explore combinations of low-level propositions, rules, framework commitments and semantic profiles, including routes to necessary concrete being and alternative conclusions, without an endless demand to justify each primitive first.
 
-- **Assumptions are legitimate research inputs.** A framework may take agency, causal structure, a PSR variant, a modal rule or another contested commitment as given. Declare the commitment and its interpretation explicitly; distinguish stipulated framework assumptions from claims attributed to sources. Independent proof of the assumption is not a prerequisite for conditional investigation.
-- **Explore the configuration space.** Compose checked results, seek multiple routes to the same conclusion, minimize sufficient assumption bundles, derive incompatible cores, and construct joint models of surviving branches. Compare changes when consequential commitments are added, removed or reversed. Keep the logic and semantic profile fixed for each comparison, or mark the required bridge.
-- **Classify outcomes precisely.** Record conditional entailment, contradiction under stated assumptions, a model-witnessed alternative, or unresolved search. A failed proof search is not a refutation; an inconsistent background cannot support a nonvacuous victory. An abstract model witnesses only the stated formal interpretation.
-- **Count conditional progress.** A new implication, weaker sufficient premise set, incompatibility, countermodel or distinguished alternative is genuine research progress even when no philosophical premise is independently defended. Report configuration/derivation progress separately from the existing root-frontier closure status; do not silently claim that a conditional theorem establishes a premise or the root as true.
-- **Avoid recursive premise-defense by default.** Investigate the actual warrant for an assumption, source interpretation or real-world applicability when that is the selected research question, when it discriminates serious surviving alternatives, or when an unconditional truth claim is being made. Such warrant may be prima facie, practice-based, cumulative or inferential; it need not be a disconnected proof tree. Otherwise keep the assumption open and continue exploring configurations. Do not automatically spawn a new source task for every open primitive.
+- **Assumptions are legitimate inputs:** agency, causal structure, a PSR variant, a modal rule or another contested commitment may be taken as given, declared with its interpretation, kept distinct from source-attributed claims, and explored without independent proof.
+- **Explore the configuration space:** compose results, seek several routes, minimize sufficient bundles, derive incompatible cores, model surviving branches, and compare adding, removing or reversing commitments with logic and semantic profile fixed or the bridge marked.
+- **Classify outcomes precisely:** conditional entailment, contradiction under stated assumptions, model-witnessed alternative, or unresolved search. Failed search refutes nothing; an inconsistent background supports no nonvacuous victory; a model witnesses only its formal interpretation.
+- **Count conditional progress:** a new implication, weaker sufficient set, incompatibility, countermodel or distinguished alternative is genuine research progress even when no philosophical premise is independently defended. Report it separately from root-frontier closure; a conditional theorem establishes no premise or root.
+- **No recursive premise-defense by default.** Investigate an assumption's warrant, interpretation or applicability when selected, when it discriminates serious surviving alternatives, or when an unconditional truth claim is made; such warrant may be prima facie, practice-based, cumulative or inferential. Otherwise keep it open; do not spawn a source task for every primitive.
 
-Existing Challenge/Solution boundaries, source fidelity, exact premise reporting, no-smuggling rules, and root-closure criteria remain in force. This direction governs research priorities and the interpretation of progress; it does not declare any particular framework's assumptions true.
+Challenge/Solution boundaries, source fidelity, exact premise reporting, no-smuggling and root-closure criteria remain; no framework's assumptions are thereby declared true.
 
 ## Semantic grounding of metaphysical relations
 
-Every newly introduced or substantially reinterpreted relation involving causation, dependence, grounding, contingency, necessity, or explanation must have a clear, non-equivocal interpretation. Its independent applicability to reality may remain open while the relation is explored as an explicit framework assumption.
+Every new or substantially reinterpreted relation of causation, dependence, grounding, contingency, necessity or explanation needs a clear, non-equivocal interpretation; its applicability to reality may stay open as an explicit framework assumption. For significant relations give: the ordinary-language meaning; concrete examples and counterexamples, or why none are available; distinctions from similar relations; explicit structural properties (transitivity, asymmetry, well-foundedness), defended or marked open where real-world applicability is claimed; each generalization from ordinary experience to metaphysics as an explicit bridge, investigating both accepting and rejecting it when consequential; and tests against serious competing accounts ([detailed questions](docs/systematic-corpus-loop.md#semantic-grounding-of-metaphysical-relations)). A verified theorem establishes a conditional consequence, not the truth or applicability of its interpretation; this bounds claims and is no prerequisite for exploration. No mathematical relation is causal or explanatory by its name.
 
-For philosophically significant relations:
+## Exploration and batch certification (owner direction, 2026-11-07)
 
-1. Explain their meaning in ordinary language.
-2. Identify concrete examples and counterexamples, or explicitly record why examples remain unavailable.
-3. Distinguish them from superficially similar relations.
-4. State structural properties such as transitivity, asymmetry, and well-foundedness explicitly; when their real-world applicability is claimed, defend that interpretation or mark it open.
-5. Mark any generalization from ordinary experience to metaphysical claims as an explicit bridge; investigate both accepting and rejecting it when consequential.
-6. Test the interpretation against serious competing accounts.
+Use an exploration map (`explorations/<slug>.toml`, checked by `argument_batch.py map`) when it helps expose an argument DAG; none is required first. Reuse statement IDs and mark new nodes and bridges. Certify related derivations as one batch where useful (one vocabulary module, one Solution, a Challenge from `argument_batch.py challenge`, records from `argument_batch.py records SPEC --write --fix`), with no derivation quota and new bare premises and analyst bridges explicit and open. Seek nonvacuity witnesses and omission countermodels where informative; record unresolved satisfiability or necessity rather than demand a model for every result; satisfiability, non-entailment and minimality claims need their own evidence. `thickness` is a diagnostic, not a score or the sole queue. Record rejected leads as attempts. Base PRs on `main`; return conflicts to the owning worker and regenerate shared files.
 
-A formally verified theorem establishes a conditional consequence, not the truth or applicability of its metaphysical interpretation. This is a boundary on what may be claimed, not a prerequisite to independently prove each premise before exploring the framework. Never treat a mathematical relation as genuinely causal or explanatory merely because of its name.
+## Argument-first investigation and configuration comparison
+
+Keep the whole argument's purpose and strongest rivals in view while investigating one bounded uncertainty (implications, incompatibilities, warrant, preconditions, semantic bridges); decompose where useful and reconnect findings to the parent. Open premises do not block conditional work; a failed route does not justify inventing a stronger premise. An exhaustive dilemma needs checked coverage under explicit background assumptions; exclusivity is separate. A contradictory bundle forces rejecting some member, not a preferred one. Prefer meaningful constraints and better-supported judgments to issue/proposition counts. Preserve proof, source, dossier and frontier authorities; neither conditional elimination nor a provisional judgment establishes its background.
+
+Selected configuration comparison follows the [configuration elimination loop](docs/configuration-elimination-loop.md): reuse certified results and models, seek verified contradictory sets and minimality where useful, compose proven implications, persist attempts and countermodels, and compare exact root-frontier premises before and after. Labels are relative to explicit formal semantics; a missing model or proof is unresolved, not impossible; closure rules are unchanged (#477). Use `truth countermodel` for omission countermodels ([countermodels](docs/countermodels.md)) and `truth prove-sweep` before hand-writing a Solution ([prove sweep](docs/prove-sweep.md)); both are advisory, and "unresolved" does not show a premise is needed. A selected sense/rival comparison follows [its procedure](docs/agent-operations.md#systematic-sense-and-rival-comparison): one meaning, witness, domain and frame; absent refutation is not compatibility, a finite countermodel not global incompatibility, and missing mappings stay untested.
+
+## Fresh subagents for issue work (owner direction, 2026-11-08)
+
+In a workloop the coordinator delegates each issue or bounded investigation to a fresh subagent, splitting broad issues into reviewable slices with explicit file and argument ownership, under the [worker ownership and integration contract](docs/systematic-corpus-loop.md#worker-ownership-and-integration) (scoped context, continuing repairs, review order, validation reuse, coordinator-owned integration). The originating worker keeps its slice through semantic and CI repairs; a phase transition alone needs no new agent. The [parallel-lane policy](docs/systematic-corpus-loop.md#parallel-lanes) governs two distinct propositions in different argument families, reserved review capacity and shared semantic baselines. Research continues while other work awaits review or CI; routine corrections stay in the loop. Workers persist findings in existing records and return a compact delta with evidence to the one current handoff.
+
+## Research continuation and stopping (owner direction, 2026-11-10)
+
+Research has no default token, time, depth, batch or PR budget; an assignment fixes question and ownership, not depth. Continue while a concrete relevant next step exists, within explicit owner limits and runtime constraints.
+
+- **Walk the argument:** fix meanings, state the strongest rivals with their positive replacement accounts, derive their further commitments under explicit assumptions, and where a rival survives descend into the relevant premises and subarguments and reconnect findings to the parent. A surviving model or open premise is an intermediate finding, not a stop. A rival's price is not unreasonable for being unusual; name its conflict with an accepted floor item or its own commitments. Keep unresolved rivals visible without forcing a refutation.
+- **Workers report a branch** when it is resolved under stated assumptions, needs unavailable evidence, capabilities or a genuine owner decision, repeatedly hits the same obstacle with no materially different test, or a more consequential question warrants a scope change; they continue other useful work in scope. A blocked approach is not an exhausted question.
+- **Persist before reporting:** results, gaps, the strongest standing rival and its price, approaches tried and why they failed, next tests, in existing records, attempts and the linked note; return a compact delta with evidence and exact revision, and no tracker.
+- **The master owns continuation:** it assesses each report against the whole argument, reuses unchanged evidence, and continues the branch, supplies a dependency, assigns another approach or redirects, respecting ownership and using fresh workers for unrelated slices. A worker's dead end does not end the master investigation.
+- **PRs are checkpoints:** publishing a result, completing a batch, green CI or finished review does not end the investigation; continue in scope without asking again. Proof gates and merge authority are unchanged.
+- **The master stops** when the scope is substantively resolved, every remaining branch has a concrete blocker, or the owner stops it, and says so in the one handoff. A runtime interruption leaves a resumable handoff, not a completion claim.
+
+## Worker brief and handoff
+
+The master gives each worker a compact brief:
+
+1. **Target:** proposition, parent question/argument family and root obligation advanced: a root-route node, or a named bridge, connection plan and blocker; and why it is independent of the other active target. An unbuilt bridge is not an existing route; a target serving no root route is rejected.
+2. **Starting result:** baseline revision and the exact theorem, reviewed finding or attempt to build on, with scope and assumptions; for formal reuse, statement IDs, selected definitions and senses, and the Lean declaration. Without one, the closest evidence and what the search left open.
+3. **Question that could change the judgment:** the first unanswered question and the finding that would change the current assessment; at a shared bottleneck, the [negated-premise test](docs/systematic-corpus-loop.md#when-several-arguments-stop-at-the-same-premise) to identify what would discriminate between the strongest rival and the proposed premise.
+4. **Expected value:** the useful change sought, with expected premise effects where relevant; a finding may clarify without discharging.
+5. **Ownership and reassessment:** file/argument ownership and the conditions for reporting a resolved or stalled branch. No work cap; an honest no-result report names approaches, obstacle and next test or reopening condition.
+
+A substantial frontier brief states thesis, selected meaning, downstream purpose, serious rivals and evidence; the worker may refine it, and no complete tree or rival list is required. It lives in the one handoff or issue.
+
+Issues follow the [research issue contract](docs/systematic-corpus-loop.md#github-research-issue-contract) (an answerable question, graph destination, existing dependencies and live discriminating uncertainty, not a prescribed conclusion or proof count); new issues state requested delivery and acceptance evidence. An issue assignment or returned handoff starts from the [issue brief](truth/README.md#starting-from-a-github-issue) on current `main`, compares the requested deliverable with the reviewed record and the linked open or merged PRs, reuses delivered findings and assigns the first unmet item. A covered issue is carried through its existing PR. After integration, record delivered evidence and remaining work in the existing issue/handoff and close a completed scope without treating the larger question as settled. PRs follow the [PR completion contract](docs/systematic-corpus-loop.md#pr-completion-contract); the templates prompt for its evidence, and issues and PRs made by CLI or API follow the same contracts. A partial delivery does not close an unfinished scope. A new verified non-transcription argument is **conditional support-option** progress even if it replaces one leaf with several open premises; record the new obligations separately; neither it nor a lower route cost establishes its conclusion.
+
+Workers use the coordinator's checked environment and a warm clone ([worker environment](docs/agent-operations.md#worker-environment)); a seeded build is readiness, not verification. Before handoff or retirement, persist verified source findings, rejected interpretations with reasons and gaps in existing passage, claim, definition, disambiguation or candidate records or linked notes, with precise witness locators and sourced readings kept distinct from open commitments. Temporary files are never the only copy; no claim is created merely to record activity.
+
+## Concise reporting and persistence
+
+1. **Report changes** (a finding, decision, failure, merge or blocker), not unchanged plans, status or check inventories; one short verified-wait update during a long wait.
+2. **Timings only when relevant** (requested performance work, an unexpectedly slow run); omit routine startup/build histories and unavailable-metric disclaimers, which stay in CI or command logs.
+3. **Focused PRs:** problem, change, premise effects, essential validation, remaining gaps, with the claim/type self-sweep and computed `frontier-diff`; link check evidence instead of narrating runs, adding a reproduction command if needed.
+4. **One current handoff,** kept by the coordinator: exact head/branch, open work, verified and unverified scope, next step. Workers return a delta and references; the handoff links rather than copies.
+5. **Preserve research substance** (sources and locators, interpretations, rejected approaches and reasons, counterexamples, proof boundaries, gaps) in existing records or linked notes; shorter reporting must not remove it or replace it with chat history, temporary logs or duplicated progress narratives.
+6. **Trust completed work** (owner instruction, 2026-10-28): reuse reports and check evidence for unchanged inputs and dependencies; focused diagnostics in development, final CI for the delivered revision; no repeated full builds, binding, Comparator, NanoDa, test suites or review rounds at each handoff. Rerun affected checks for relevant changes, concrete failures or unresolved findings. Self-sweep a batch before its first push; combine related findings into one PR where practical.
+
+## Premise dossiers and attempts
+
+Retrieve before inventing with the [retrieval commands](docs/agent-operations.md#retrieval-before-research): `truth related` (or `index search`) before new vocabulary, `context` for an existing argument or result, `brief` and `novelty` before judging maturity or novelty, `semantics` and its preflight before a derivation, and `dossier` for every premise touched. They are discovery aids: no ranking proves equivalence, implication or incompatibility, and a missing hit is no evidence that no prior work exists.
+
+Before handoff, update `corpus/attempts/` for failed derivations, rejected readings, source searches and other substantive attempts, including successes; correct an existing attempt rather than duplicate it, and create no philosophical claim merely to log activity. Record exact target statement IDs, outcome, findings, blocker and result/claim/PR evidence. Attempts and computed dossiers change no proof or closure status. Each attempt a worker creates or updates appends itself to `workers` (role, provider, model, effort, date, PR) (owner direction, 2026-11-26). Format: [premise dossiers](docs/premise-dossiers.md).
+
+## Local Lean preview service
+
+When the coordinator supplies a [local preview](docs/agent-service.md), it owns startup, health checks, dependency refresh and shutdown and gives workers endpoint, workspace and session. Workers keep isolated canonical clones, use the shared session under its lease, and treat each response as bound to its exact revision and inputs. Reuse the pinned toolchain and dependencies; without a preview, use the CLI. A new service experiment is a selected tooling task; the service stays local and authorizes no external Lean dependency. Interactive diagnostics replace none of the final build, binding, axiom, Comparator and NanoDa checks.
 
 ## Permanent invariants
 
-1. **Research before formalization.** Every source-derived claim must point to a stable source record and a precise locator. For a copyrighted work with no pinnable witness, that locator may be a `bibliographic_span`: edition, ISBN or DOI, and exact pages or section, without pinned bytes (owner decision 1c on #378; see `docs/source-evidence.md`).
-2. **Materialize, do not remember.** Before formalizing a source-derived claim, resolve or create its `corpus/passages/` witness and run `python3 scripts/source_evidence.py materialize <PASSAGE-ID>`. Read that verified text and enough context to interpret it. Model memory, a search snippet, or a plausible citation is never source evidence. A `bibliographic_span` has no bytes to materialize (`materialize` refuses it): claim from it only after reading the cited pages in the edition itself, never from memory, and its claims carry `witness: "bibliographic"`, so they are shown as not byte-verified.
-3. **Source integrity is not source fidelity.** A pinned revision, Git blob hash, CTS path, and successful materialization establish which source text was consulted. They do not establish that an interpretation is correct. Preserve that scholarly judgment separately.
-4. **Statements have independent identity.** A statement is a proposition used by logic. A claim says that a source supports a statement under an interpretation. Never make statement identity depend on source provenance.
-5. **One defensible reading per claim.** If two materially different interpretations are both reasonable, create two claims. They may point to distinct statements even when later work could relate those statements.
-6. **Do not merge by similarity.** Textual identity, translation equivalence, formal equality, logical equivalence, philosophical equivalence, and historical identity are different possible relations. Add relations later; do not silently merge statement IDs.
-7. **Reuse before invention.** Search existing statements and Lean declarations before adding vocabulary. Reuse only when the meanings genuinely coincide; a false identification is worse than a duplicate statement.
-8. **Weakest faithful formalization.** Do not strengthen a source passage to make later arguments easier.
-9. **No premise smuggling.** A proof worker may not silently add an axiom, assumption, definition, or stronger reading to an existing argument or frozen Challenge solely because its proof needs it. Register a consequential stronger assumption as a separate, explicitly labeled framework configuration or candidate and compare its consequences. Source it when attributing it to a text; an openly stipulated framework commitment need not be independently proved to be explored. It does not close a root premise.
-10. **Inference is explicit.** Arguments connect statement IDs through inference-application records. Never encode a logical step as an overloaded bare statement-to-statement edge.
-11. **Global cycles are allowed; circular proof is not.** Semantic relations and mutually supporting statements may form cycles. Each advertised argument must still be grounded in its premises and mechanically checked by Lean/Comparator.
-12. **Challenge is frozen before solution work.** Never weaken or otherwise edit a Challenge merely to make the Solution pass. If source review changes the statement, treat that as a new/revised claim first.
-13. **Formal verification is not source verification.** A result verifies an argument's formal consequence. It does not establish that a source really meant a statement or that a premise is philosophically true.
-14. **Mathlib for mathematics; no other dependency without an owner decision.** Mathlib is an approved dependency for mathematical content: analysis, order, set theory, ordinals and cardinals, combinatorics. Prefer an existing Mathlib notion over a hand-rolled one. Do not use Mathlib to dress up opaque propositions: importing it adds no philosophical content. A result whose proof uses Mathlib may permit exactly `propext`, `Classical.choice` and `Quot.sound`; a result that does not import Mathlib stays zero-axiom (`docs/axiom-policy.md`). `lean-toolchain` pins the exact Lean version the pinned Mathlib release requires. Any other external Lean dependency still needs an owner decision (#337).
-15. **Do not build identity infrastructure early.** No graph database, RDF ontology, embedding-based merger, or canonical-equivalence resolver until the corpus creates a concrete need. The typed JSON records are sufficient for now.
-16. **A transcription is not a proof.** A result whose proof only applies a premise whose consequent already is the advertised conclusion (`exact hBridge ⟨…⟩`), or whose atoms are opaque `Prop`s that nothing constrains, certifies only that "therefore" was transcribed. Such a result may still be recorded as a faithful map of a source argument, but the PR and the result record's description must call it a transcription. It does not count as progress on the case and closes no frontier node by itself (see `docs/systematic-corpus-loop.md`). The one exception is closure carried through it: a transcription closes its conclusion exactly when **every** premise of its argument is already closed—self-evident, alternatives all refuted, the conclusion of a non-transcription result, or itself closed by this same rule (computed as a fixpoint; owner decision on #143, 2026-10-24). A transcription with any open premise, such as an open `A ∧ B → C` bridge, leaves its conclusion open. Where the philosophy has internal structure, formalize that structure with typed vocabulary (beings, respects, causes, sentences, …) so the conclusion is *derived* and the result could have failed. Likewise, a hand-rolled substitute for a notion Mathlib already provides (for example "eventually constant" in place of convergence, or a bespoke ω+1 in place of an ordinal or order embedding) needs a stated reason in its doc comment.
-17. **Compose, do not restate.** Build on earlier results by importing their Lean modules and using their theorems. Do not restate a proved conclusion as a fresh premise. Reuse shared typed vocabulary where meanings coincide (invariant 7); a new per-file `…Reading` vocabulary for a concept the corpus already has needs a stated reason.
-18. **Source kinds are frozen.** After `media_span` (#152), `web_snapshot` (#154) and `bibliographic_span` (#378), add no new source kind without an owner decision. A `bibliographic_span` is the last resort: allowed only for a copyrighted work when no pinnable witness (git text, public-domain edition, `web_snapshot` of a legitimately hosted copy) exists, with a `why_bibliographic` note; upgrade it to a pinned witness when one becomes available. When not even a bibliographic citation can be read and given, keep the claim as a candidate marked as waiting for a witness, and continue the reasoning with its statement as an explicit open premise. Sourcing must not block reasoning, and reasoning must not fake sourcing.
-19. **truth-core is self-sufficient.** Do not add runtime or CI dependencies on other repositories (historical-source-atlas, worldview-lab, solver services, …). Use one only for a concrete node that is blocked without it, and pin it like a source.
+The numbers are cited across code and records; the [full wording](docs/agent-operations.md#permanent-invariants-full-wording) governs where this summary is shorter.
 
-See `docs/corpus-model.md` and `docs/source-evidence.md` for the entity and verification boundaries. For the campaign to formalize the case for Catholicism (epic #143), including the owner's binding principles and the working method, read `docs/catholic-case.md` first.
+1. **Research before formalization.** A source-derived claim points to a stable source record and precise locator (for a copyrighted work without a pinnable witness, a `bibliographic_span` by edition and page; #378).
+2. **Materialize, do not remember.** Before formalizing a source-derived claim, materialize its `corpus/passages/` witness and read it in context; memory, snippets and plausible citations are never evidence. A `bibliographic_span` is claimed from only after reading the edition, and its claims carry `witness: "bibliographic"`.
+3. **Source integrity is not source fidelity.** Pins fix which text was consulted, not that a reading is right.
+4. **Statements have independent identity,** never dependent on provenance; a claim says a source supports a statement under an interpretation.
+5. **One defensible reading per claim;** two reasonable interpretations make two claims.
+6. **Do not merge by similarity.** Textual, translational, formal, logical, philosophical and historical identity are different relations; never silently merge statement IDs.
+7. **Reuse before invention,** but only on genuinely coinciding meaning; a false identification is worse than a duplicate.
+8. **Weakest faithful formalization.** Never strengthen a source passage to ease later arguments.
+9. **No premise smuggling.** Never silently add an axiom, assumption, definition or stronger reading to an existing argument or frozen Challenge because a proof needs it; register a stronger assumption as a separate labeled configuration or candidate, which closes no root premise.
+10. **Inference is explicit:** inference-application records, never overloaded statement-to-statement edges.
+11. **Global cycles are allowed; circular proof is not.** Each advertised argument is grounded in its premises and checked by Lean/Comparator.
+12. **Challenge is frozen before solution work;** never edit it to make the Solution pass.
+13. **Formal verification is not source verification,** nor proof that a premise is true.
+14. **Mathlib for mathematics; no other dependency without an owner decision** (#337). Mathlib-using results may permit exactly `propext`, `Classical.choice` and `Quot.sound`; others stay zero-axiom ([axiom policy](docs/axiom-policy.md)); Mathlib never dresses up opaque propositions.
+15. **No early identity infrastructure** (graph database, RDF ontology, embedding merger, equivalence resolver) until a concrete need.
+16. **A transcription is not a proof.** A result whose proof only applies a premise whose consequent is the conclusion (`exact hBridge ⟨…⟩`), or whose atoms are unconstrained opaque `Prop`s, must be labelled a transcription; it is not case progress and closes its conclusion exactly when **every** premise is already closed (a fixpoint; owner decision on #143, 2026-10-24). Formalize internal structure with typed vocabulary so the conclusion is derived and could have failed; a hand-rolled substitute for a Mathlib notion needs a stated reason.
+17. **Compose, do not restate.** Import earlier results instead of restating proved conclusions as premises; a new per-file `…Reading` vocabulary for an existing concept needs a stated reason.
+18. **Source kinds are frozen:** after `media_span`, `web_snapshot` and `bibliographic_span` (the last resort), add none without an owner decision. Sourcing must not block reasoning, and reasoning must not fake sourcing: an unsourceable claim stays a candidate and its statement an explicit open premise.
+19. **truth-core is self-sufficient:** no runtime or CI dependency on another repository except for a concrete blocked node, pinned like a source.
 
-## Configuration elimination and composition
+For the case for Catholicism (epic #143), its binding owner principles and working method, read [the Catholic case](docs/catholic-case.md) first; entity and verification boundaries are in the [corpus model](docs/corpus-model.md) and [source evidence](docs/source-evidence.md).
 
-When configuration comparison is the selected method, follow [the configuration elimination loop](docs/configuration-elimination-loop.md): reuse certified results and finite models, seek verified contradictory premise sets and investigate minimality where useful, compose proven implications, persist attempts and countermodels, and compare exact root-frontier premises before/after. Configuration labels are relative to their explicit formal semantics; absence of a model or proof is unresolved, not an impossibility claim. This is one method within the systematic loop and does not change frontier closure rules (#477).
+## Formalization, verification and review gates
 
-Find omission countermodels with `target/release/truth countermodel THEOREM [--omit HYP] [--all] [--size K]` instead of writing them by hand. It proposes finite models and has Lean check a `decide` certificate; "unresolved" is not proof that a premise is needed ([countermodels](docs/countermodels.md)). Before writing a Solution by hand, `target/release/truth prove-sweep` tries a fixed tactic portfolio on the frozen Challenges and flags likely transcriptions; it is advisory and writes nothing ([prove sweep](docs/prove-sweep.md)).
+Each source reading or argument follows the [atomic work item](docs/agent-operations.md#one-atomic-work-item): source evidence for attributed work, reuse check, smallest faithful formalization with linked definitions and disambiguations, fidelity critique, and, only where there is an argument, statement, inference, argument and result records, a frozen `Challenge.lean`, a separate `Solution.lean` Lean module, regenerated aggregators and a Comparator config. An unprovable Solution leaves the Challenge alone: test for a countermodel and register any stronger commitment separately.
 
-## Argument-first investigation
-
-Keep the whole argument's purpose and strongest known rivals visible while investigating one bounded uncertainty. Follow [the systematic loop](docs/systematic-corpus-loop.md): implications, incompatibilities, premise warrant, necessary preconditions and semantic bridges are all eligible targets. Decompose where useful and reconnect every finding to its parent question. Conditional investigation may proceed with open premises; a failed route does not justify inventing a stronger premise.
-
-A claimed exhaustive dilemma/trilemma needs checked coverage under explicit background assumptions; exclusivity is separate. A contradictory bundle forces rejection of at least one member, not a preferred member. Prefer meaningful constraints and better-supported judgments to issue/proposition counts. Preserve proof, source, dossier and frontier authorities; neither conditional elimination nor a provisional judgment establishes its background.
-
-## Outer systematic loop
-
-Select work from the owner-scoped investigation and its current handoff/issue, using the priority, exploration and synthesis rules in the systematic loop. Frontier reports and source candidates inform that decision. If no specific slice is named, choose a consequential unresolved question on a current #143 root route or a named bridge to it. Respect real dependencies; neither a favored conclusion nor cheap formal work may monopolize the queue. Workers report resolved or stalled branches under the continuation rule; a useful finding alone does not end available research.
-
-For source ingestion when a frontier obligation needs it:
-
-1. Run `target/release/truth next` for the highest-priority source candidate; each candidate is a coherent chapter/range, not a sentence or proposition.
-2. Materialize its pinned witness, read the whole range and context, then process substantive readings in order under the atomic contract below. Reuse statements; preserve distinct defensible interpretations.
-3. Stop at one argument cluster or a reviewable batch of roughly 5–10 source claims. Advance the same candidate's locator if unfinished; delete it only after the range is exhausted.
-4. Seed the prescribed successor campaign/range before closing the current one. Continue without reprompting unless evidence is unavailable, a genuine owner scope/modeling decision is needed, a cross-cutting defect blocks verification, or the successor is ambiguous.
-
-Keep the issue/handoff focused on the end-to-end argument; persist source and failed-attempt evidence in existing corpus records. The [systematic loop](docs/systematic-corpus-loop.md) gives brief campaign, frontier and handoff rules.
+- **Verification coverage:** `lake build`, `truth check`, `bundle_audit.py`, `truth bind-check`, `scripts/verify-result.sh <RESULT-ID>` and CI's independent NanoDa no-`sorry` check. An argument is mechanically verified only if its result passes Comparator. This is coverage, not duplicate runs: reuse evidence for unchanged inputs; final CI covers the delivered revision ([commands](docs/agent-operations.md#7-verify-the-three-boundaries)).
+- **Before pushing:** run `scripts/preflight.sh` (including the connectivity and placement gates). **Before requesting `@codex review`:** self-review against the [Review guidelines](#review-guidelines) in one pass, work through the [recurring semantic defects checklist](docs/systematic-corpus-loop.md#recurring-semantic-defects-pre-push-checklist) for research PRs, and put the claim-vs-type comparison in the PR body. **Before the first push:** run `truth attribution-check --base <merge-base>` ([self-sweep](docs/agent-operations.md#8-self-sweep-before-requesting-review)). An automated review is not the independent semantic challenge; a research thread leaves no draft PR without that challenge or a handoff naming it as pending.
+- **Premise reporting:** each PR reports intended and actual root-path premise changes, including "no change", from the computed `truth frontier-diff --base <merge-base>` in CI's "Report the premise frontier" job summary, never a hand-built list. Report identities and status changes, not aggregate counts; a new connection is not a discharge, and route cost diagnoses an expanded proof, not progress. Non-proof work says "none" or "no premise change".
 
 ## Lanes and shared files
 
-Work runs in parallel lanes (#416). Each lane owns directories and the corpus records about them:
+Work runs in parallel lanes (#416); each owns directories and their corpus records:
 
-- **Lane A — Fourth Way and attributes:** `TruthCore/Latin/`, `TruthCore/Case/` (stages 1–2), `TruthCore/Results/Aquinas/`, `TruthCore/Results/Case/` (stages 1–2), and their corpus records.
-- **Lane B — stage 3:** `TruthCore/History/`, `TruthCore/Greek/NewTestament/`, `TruthCore/Case/Catholicism/StageThree/`, `TruthCore/Results/Case/Catholicism/StageThree/`, `TruthCore/Results/Comparison/Resurrection/`, the module `TruthCore/Comparison/Resurrection.lean` (in lane C's `Comparison` area, so a new sibling module there is a cross-lane edit), New Testament and Church sources, and their corpus records.
-- **Lane C — everything else, and the single writer of tooling:** CI, `AGENTS.md`, `scripts/`, the explorer, and all other `TruthCore/` areas.
+- **Lane A — Fourth Way and attributes:** `TruthCore/Latin/`, `TruthCore/Case/` (stages 1–2), `TruthCore/Results/Aquinas/`, `TruthCore/Results/Case/` (stages 1–2).
+- **Lane B — stage 3:** `TruthCore/History/`, `TruthCore/Greek/NewTestament/`, `TruthCore/Case/Catholicism/StageThree/`, `TruthCore/Results/Case/Catholicism/StageThree/`, `TruthCore/Results/Comparison/Resurrection/`, the module `TruthCore/Comparison/Resurrection.lean` (in lane C's `Comparison` area, so a new sibling module there is a cross-lane edit), New Testament and Church sources.
+- **Lane C — everything else, and the single writer of tooling:** CI, `AGENTS.md`, `scripts/`, the explorer and all other `TruthCore/` areas.
 
-Rules:
+Edit outside your lane only where needed (e.g. a shared definition or `DISAMB-MOTION`), minimally, listing every cross-lane file in the PR. Merge `origin/main` right before every push, then rerun the generators and only the checks whose evidence the merge invalidates. Shared tables and import lists are generated, never hand-edited ([generators](docs/agent-operations.md#generated-shared-files)); CI rejects stale output.
 
-- Edit outside your lane only where the work needs it (for example a shared definition or disambiguation such as `DISAMB-MOTION`), keep that edit minimal, and list every cross-lane file in the PR description.
-- Merge `origin/main` into your branch right before every push, then rerun the generators below and only checks whose evidence the merge invalidates. Reuse evidence for unchanged inputs; final CI covers the delivered revision.
-- Shared tables and import lists are generated, never hand-edited. Lean imports: `scripts/root-imports.sh --write` (each area has its own aggregator under `TruthCore/Imports/`; `scripts/root_imports.py` lists the areas finer than one top-level directory). Docs tables and lists: add one entry file (for example `docs/decisions/<date>-<NN>-<slug>.md`) and run `python3 scripts/docs_index.py --write`. CI rejects stale output of both. After a merge conflict in a generated file, take either side and rerun the generator. A row or list item that a branch from before #416 added by hand must first move into an entry file: the generator keeps only entries.
+## Selecting work and source ingestion
 
-See `docs/systematic-corpus-loop.md`, "Parallel lanes".
-
-## One atomic work item
-
-For each philosophically substantive reading or argument encountered inside the current candidate range, perform this loop:
-
-### 1. Research from verified source evidence
-
-- Resolve the passage to a `corpus/passages/` record. Its source snapshot must name the exact edition URN, repository, immutable revision, file path, Git blob SHA, source URL, language, and license. Where no such witness exists, a `web_snapshot` pins a web page by hash instead; claims on a translation carry `basis: translation`. Only for a copyrighted work with neither, a `bibliographic_span` cites the edition by page, and its claims carry `witness: "bibliographic"` (see `docs/source-evidence.md`).
-- If no passage witness covers the range, add one from a stable primary-source edition before creating any claim.
-- Run `python3 scripts/source_evidence.py materialize <PASSAGE-ID>` and read the materialized text plus enough immediate context to avoid quotation-mining.
-- Preserve the conventional classical locator and CTS identity. The conventional locator remains the human citation; the pinned witness makes the consulted bytes reproducible.
-- Record a concise paraphrase rather than copying long translations into the repository.
-- Identify one atomic source reading or argument.
-
-A worker may use catalogs, translations, commentaries, or search for orientation, but those do not substitute for reading the materialized primary-source witness used by the claim.
-
-### 2. Check reuse
-
-Search `corpus/statements/` and `TruthCore/` for existing propositions and concepts that may express the same thing. Reuse a statement ID only after checking meaning, not merely similar names. When uncertain, preserve separate statement identities; equivalence can be related later.
-
-### 3. Formalize a source reading
-
-- Add the smallest Lean declaration that captures the proposition when a Lean declaration is appropriate.
-- Put source locator and interpretation notes in the Lean doc comment.
-- Add/update an independent `corpus/statements/*.json` record for the proposition.
-- Add/update the corresponding `corpus/claims/*.json` record linking the source reading to that statement.
-- Ensure the claim's `source_id` and `locator` resolve to exactly one pinned passage. `target/release/truth check` rejects missing or ambiguous passage evidence.
-- Link the senses of load-bearing terms through `definition_ids` and `disambiguation_ids`. When a term or reading choice has no record yet, add a `corpus/definitions/` or `corpus/disambiguations/` record (see Review guidelines and `docs/corpus-model.md`).
-- If another reading is also defensible, create a sibling claim with the same source locator and an `interpretation_of` link. Do not use that link to imply statement equivalence.
-
-### 4. Critique fidelity
-
-Before proving anything, explicitly ask:
-
-- Is the formal statement stronger than the source?
-- Is it weaker in a way that removes philosophically relevant content?
-- Did a natural-language relation get replaced by a modern notion with different semantics?
-- Did quantifier scope, modality, time, identity, or causation change?
-- Does the cited locator genuinely support this reading when inspected in the pinned passage and its context?
-
-If the answer is materially uncertain, preserve alternatives rather than silently selecting one. A green source-evidence check cannot answer these interpretive questions for you.
-
-### 5. Create an argument only when there is an argument
-
-A source claim need not have a proof: it may simply be a commitment attributed to a text.
-
-When statements are meant to support a conclusion:
-
-- ensure every premise and conclusion has its own statement record;
-- add one or more `corpus/inferences/*.json` records for the logical steps;
-- add a `corpus/arguments/*.json` record composing those steps;
-- add `Challenge.lean` containing the exact advertised theorem with `sorry`; it stays an ordinary (non-module) file;
-- add a separate `Solution.lean` containing the same theorem and a real proof;
-- write the new `Solution.lean` and every new vocabulary file as a Lean module: a `module` first line, `public import` for each import and `@[expose] public section` after the imports and module docstring (`python3 scripts/convert_to_module.py convert <FILE>` converts an ordinary draft). Every library file is a module, so this always applies; CI (`python3 scripts/convert_to_module.py check`) rejects an ordinary library file other than a Challenge or an aggregator (owner decision on #986);
-- run `scripts/root-imports.sh --write` so the generated aggregator of the module's area (`TruthCore/Imports/<Area>.lean`) imports every new module (except `Challenge.lean`) in sorted order; `TruthCore.lean` imports only the aggregators and changes only when an area appears. Aggregators and the root are generated as Lean modules (`public import`) while every file they import is a module (#986); never hand-edit them;
-- add a `corpus/results/*.json` verification record that points to the argument;
-- add a Comparator JSON config naming the theorem and permitted axioms.
-
-Scoped assumptions and discharged assumptions belong to inference records. They are not ordinary established corpus premises.
-
-### 6. Handle missing premises correctly
-
-If a Solution cannot be proved from the advertised premises:
-
-- do not change the frozen Challenge, silently add an axiom, strengthen a definition, or broaden an existing source claim;
-- test for a countermodel or a useful alternative configuration and record the unresolved inference;
-- when a stronger commitment is worth exploring, register a separate candidate/configuration with that assumption explicit and compare its consequences; source research is required for attributed claims, not for every stipulated framework branch.
-
-### 7. Verify the three boundaries
-
-The following commands describe required verification coverage, not duplicate
-local runs for every worker and coordinator. Reuse completed evidence; final CI
-provides the integration checks. Run a check locally when development needs it
-or a relevant change or failure invalidates its earlier evidence:
-
-`truth` is the repository's Rust CLI (`truth/README.md`): build it once per
-clone with `cargo build --locked --release -p truth` (rerun after Rust source
-or Cargo input changes) and run it from the
-repository root. It is the only implementation of the corpus commands
-(`check`, `frontier`, `frontier-diff`, `thickness`, `next`, `related`,
-`dossier`, `context` including `--proof-use`, `bind-check`,
-`unused-premises`, `lean-reuse`, `attribution-check`, `configurations`,
-`configuration-report`, `models`, `strength-comparisons`, `strength-report`,
-`structure`, `structure-report`, `issues`, `senses`, `index`, …);
-`scripts/corpus.py` was retired (#954 R2/R3). A statement root is
-`--frontier-root`. Rust `--root PATH` selects the input repository;
-`--json` selects machine-readable output, including frontier reports usable by
-`dossier` and `context` via `--frontier-json FILE` on the same inputs.
-`frontier-diff`, `thickness --base` and `orphans --base` judge the base
-revision's committed corpus and Lean sources by the running binary's rules
-(owner decision 2026-11-16, "head rules on base data"), so a PR that changes
-the frontier rules shows that change in its delta.
-
-```bash
-lake build
-target/release/truth check
-python3 scripts/bundle_audit.py
-target/release/truth bind-check
-scripts/verify-result.sh <RESULT-ID>
-```
-
-`bundle_audit.py` runs offline. Run it whenever you edit an argument bundle or a definition its audit pins by hash: CI runs it right after `truth check`.
-
-`truth bind-check` (after `lake build`) reads each result theorem's type and checks that its `Prop` hypotheses are exactly the argument's premise statements and its result type is the conclusion statement, matched by `lean_declaration` head constant; type and vocabulary parameters are not premises. A hypothesis whose head is a theory definition (`TruthCore.Comparison.*`) is a theory bundle: it is unfolded one step and split on `∧`, and each conjunct must bind to a listed premise, covering them exactly. A conclusion that is a theory definition is a consistency claim: its argument must list `commitment_statement_ids` (and may then have no premises), and these must match the conclusion's conjuncts in the same way. Keep non-theory conclusion propositions outside `TruthCore.Comparison`. During development, `truth bind-check --result <ID>` (repeatable) or `--affected --base <BASE>` binds only the named or affected results and needs only their Solution modules built; the full `bind-check` (CI) also checks stale pins and registered models. `truth check` includes the offline manifest and claim-binding validation of `source_evidence.py check` (rule for rule, `truth/src/check.rs`), so the separate command is no longer a required gate. Selected passage materialization checks acquired bytes against their pins; it is not a recurring repository gate. Source fidelity remains a research/review judgment. Lean/Comparator verifies only the formal consequence.
-
-Do not call an argument mechanically verified unless its result passes Comparator. CI also runs an independent no-`sorry` NanoDa check: over the whole built library on `main` pushes, nightly and manual runs, and on a PR over the modules its diff can affect (changed modules and their reverse dependents; `docs/axiom-policy.md`), so a failure a PR's scope missed still turns the next `main` run red.
-
-### 8. Self-sweep before requesting review
-
-Before requesting `@codex review`, apply the Review guidelines below to your own diff in one pass and fix what you find. For research PRs, also go through the [recurring semantic defects checklist](docs/systematic-corpus-loop.md#recurring-semantic-defects-pre-push-checklist). An automated review does not replace the independent semantic challenge. A research thread does not leave a draft PR without either that challenge or a handoff naming it as pending. Before pushing, run `scripts/preflight.sh`; it bundles the offline checks CI runs plus a lint for artifacts, future dates and over-long labels.
-
-- every "read as" or attributed claim states no more than its cited sentence; any strengthening is stated as an explicit, unattributed open premise;
-- **attribution self-check (#989), before the first push** (CI runs the same check on every PR): run `target/release/truth attribution-check --base <merge-base>`. This offline check prints each new or changed stating claim (or claim whose statement text changed) beside its locator and any usable cached passage text; absent or stale text is reported as not checked, and it fails until the claim records `"attribution": "The passage states X, which is the premise."` Check quantifier scope, species/genus restriction (one kind of cause or being read as all), and temporal and modal scope. If the sentence would be false, because the passage only bears on the premise or states something narrower, do not keep the claim as stating. Replace it by a `supports` relation with a gap note (#987), or state the narrower reading as its own statement;
-- every load-bearing term on a root path links a definition through `definition_ids`;
-- every ambiguous term links a disambiguation through `disambiguation_ids`.
-
-**Claim vs type.** Most review P1s are prose saying more than the bound Lean type certifies. For every statement, argument or result the diff adds or changes, write in the PR body the prose next to the Lean type (statement paraphrase, claim interpretation, inference/argument `meaning`, result `description`, Lean doc comments, docs) and check:
-
-- quantifiers and scope: "no", "not every", "some", "for all", "exists" (`¬ ∀` is not `∀ ¬`);
-- modality and time;
-- existence of a witness versus properties of the particular witness (a theorem about some model does not give the model's incidental properties);
-- every hypothesis of the theorem is listed as a premise (including nonemptiness or satisfiability side conditions, so that no result is vacuous);
-- conditions in the source (same-sense cause, restricted domain, "in any respect") survived into the Lean type;
-- any condition added is not attributed to a source that does not state it; it is an explicit, unattributed open premise.
-
-Each PR also reports its intended and actual change in root-path open premises, including "no change". The actual change is computed, not hand-written: link or paste the output of `target/release/truth frontier-diff --base <merge-base>` (conditional support bundles added or removed when comparable and reaching-root premises added, removed, or moved between bare, supported, stated and closed), which CI prints to the job summary for every PR. Report the identities and status changes of relevant premises, not their aggregate counts. Route costs follow the [per-route open-premise cost rule](docs/corpus-model.md#premise-program-and-frontier) (`frontier --routes`): they diagnose an expanded proof, **not research progress**. A premise is established when it is self-evident with a met floor basis, defended (every recorded rival refuted by a verified refutation whose premises are all established, recursively and without circularity, #999), or derived from established premises; a stated or supported premise stays one leaf until it is established, so adding a derivation under it never raises a route's cost, while a derivation under a bare premise, or a new intermediate step, may raise it.
+Select work from the owner-scoped investigation and its current handoff/issue under the loop's priority, exploration and synthesis rules; frontier reports and source candidates inform it. Without a named slice, choose a consequential unresolved question on a current #143 root route or a named bridge to one. Respect real dependencies; neither a favored conclusion nor cheap formal work may monopolize the queue. A useful finding alone does not end available research. Source ingestion for a frontier obligation follows the [candidate procedure](docs/systematic-corpus-loop.md#2-candidate-the-next-contiguous-source-range); keep the issue/handoff on the end-to-end argument and the source and failed-attempt evidence in corpus records.
 
 ## Review guidelines
 
-Every code review (including `@codex review`) has one more job besides finding bugs: the reviewer must try to **understand and accept** each proof the change presents. The repository, not the reviewer's background knowledge, has to make the proof convincing. Apply this to every result, argument or statement that the change adds or modifies and that lies on a path to a root (`target/release/truth frontier --reaching-root` lists the root paths; `STMT-CATHOLICISM-TRUE` is the default root). For each one:
+Every code review (including `@codex review`) also tries to **understand and accept** each proof the change presents; the repository, not the reviewer's background knowledge, must make it convincing. Apply this to every result, argument or statement added or modified on a path to a root (`truth frontier --reaching-root`; `STMT-CATHOLICISM-TRUE` is the default root):
 
-1. **Restate it.** In a few sentences, say what the argument concludes, from which premises, through which steps, and which Lean theorem binds it (`corpus/results/*.json` → `theorem`; the Challenge module freezes its type). Then say whether you accept that the conclusion follows, on the evidence in the repository: the Lean statement, the premise statements and their claims, and the definitions below. Lean checks consequence; you check that the Lean statement says what the prose and the source claim say.
-2. **Find the definition of every load-bearing term.** List each term whose meaning the conclusion depends on (for example *being*, *act*, *potency*, *cause*, *per se*, *maxime ens*, *God*, *true*). Locate its definition: a `corpus/definitions/*.json` record (`DEF-…`) linked from the statement, claim or argument through `definition_ids`. A definition is either sourced (its `claim_ids` point to the claims whose pinned passages give it) or stipulative (its `note` says why, and what would source it). Check that the definition matches the Lean declaration it names and the way the statement uses the term.
-3. **Find the disambiguation of every ambiguity.** Where a term has more than one sense, a reading choice is made, or two premises could use a word differently, locate the `corpus/disambiguations/*.json` record (`DISAMB-…`), linked through `disambiguation_ids` or reached because a linked definition is one of its `sense_definition_ids`. Check that its `resolution` says which sense each use takes and why the argument does not pass from one sense to another.
-4. **Report gaps by severity.** Each finding must say exactly what is missing (the term, the statement or argument ID, and what a definition or disambiguation would have to say). Each of the following is a P1 finding:
-   - a load-bearing term with no definition record at all, or with a definition that is wrong in a way that changes what is proved (it does not match the Lean declaration or the statement's use);
-   - an ambiguity, equivocation risk or reading choice with no disambiguation, or whose disambiguation does not cover this use;
-   - a reading step that is not stated: the prose or claim says more or less than the Lean statement, and no record says which reading is formalized;
-   - a gap between the Lean statement and its prose paraphrase or its source claim (quantifier scope, modality, time, identity, causation, or a parameter the prose treats as defined);
-   - any proof, prose or record that claims more than its source or its Lean theorem supports.
+1. **Restate it:** what it concludes, from which premises, through which steps, and which Lean theorem binds it (`corpus/results/*.json` → `theorem`; the Challenge freezes its type). Say whether you accept that the conclusion follows on the repository's evidence (Lean statement, premise statements and claims, definitions). Lean checks consequence; you check that the Lean statement says what the prose and source claim say.
+2. **Find the definition of every load-bearing term:** list each term whose meaning the conclusion depends on (e.g. *being*, *act*, *potency*, *cause*, *per se*, *maxime ens*, *God*, *true*) and locate its `corpus/definitions/*.json` record linked through `definition_ids`, either sourced (`claim_ids` to claims whose pinned passages give it) or stipulative (a `note` saying why and what would source it). Check it matches its Lean declaration and the statement's use.
+3. **Find the disambiguation of every ambiguity** (several senses, a reading choice, premises that could use a word differently): a `corpus/disambiguations/*.json` record linked through `disambiguation_ids` or reached via a linked sense definition. Check that its `resolution` says which sense each use takes and why the argument does not pass between senses.
+4. **Report gaps by severity,** each naming exactly what is missing (term, statement or argument ID, what the record would have to say). P1:
+   - a load-bearing term with no definition, or with a definition wrong in a way that changes what is proved (it does not match the Lean declaration or the statement's use);
+   - an ambiguity, equivocation risk or reading choice with no disambiguation covering this use;
+   - an unstated reading step: prose or claim says more or less than the Lean statement and no record says which reading is formalized;
+   - a gap between the Lean statement and its paraphrase or source claim (quantifier scope, modality, time, identity, causation, or a parameter treated as defined);
+   - any proof, prose or record claiming more than its source or theorem supports, including the [claim-vs-type](docs/agent-operations.md#8-self-sweep-before-requesting-review) gaps: a theorem hypothesis not listed as a premise (including nonemptiness or satisfiability side conditions), a property of a particular model or witness presented as following from its existence, a source condition (same-sense cause, restricted domain, species/genus scope) lost from the Lean type, or an added condition attributed to a source that does not state it;
+   - an objection presented as evidence that fails the Substantive Objection Standard.
 
-   A missing `definition_ids` link is P2, not P1, when the term already has a correct definition record, or when the gap is covered by the definition-coverage issue #216. Report all such missing links in one finding per review, not one per cycle.
+   A missing `definition_ids` link is P2 when the term already has a correct definition, or when covered by the definition-coverage issue #216; report all such links in one finding per review, not one per cycle. Writing "this depends on what is meant by …" means a definition or disambiguation is missing: report P1 instead of guessing. An open or doubtful premise is not a P1: open premises are the frontier. Report only what stops you from understanding and accepting the step.
+5. **Report everything in one pass,** not stopping at the first finding, grouped by kind (overstated or unstated readings, missing definitions, missing disambiguations, Lean/prose gaps, other bugs), re-checking every attributed claim and every `definition_ids` and `disambiguation_ids` link in the diff. P1s that overstate a proof are fixed in the PR; P2s and coverage gaps go to #216 or a follow-up issue.
 
-   If you would write "this depends on what is meant by …", the repository is missing a definition or a disambiguation: report that as P1 instead of guessing the intended sense. Do not report as P1 that a premise is open or that you doubt its truth; open premises are the frontier and are allowed. Report only what stops you from understanding and accepting the step as presented.
-
-5. **Report everything in one pass.** Report every finding you can identify in a single review, grouped by kind (overstated or unstated readings, missing definitions, missing disambiguations, Lean/prose gaps, other bugs). Do not stop at the first finding. Before finishing, re-check every attributed claim and every `definition_ids` and `disambiguation_ids` link in the diff. Handling is unchanged: P1s that overstate a proof are fixed in the PR; P2s and coverage gaps go to #216 or a follow-up issue.
-
-`target/release/truth check` enforces the mechanical part: every `definition_ids` and `disambiguation_ids` entry must resolve, a sourced definition needs known claims, a stipulative one needs a note, a disambiguation needs at least two known senses, every definition must be used, an argument whose conclusion, premises or commitments use two senses of one disambiguated term must link that disambiguation, and every `STMT-`, `DEF-` or `DISAMB-` id cited in their prose must exist. It cannot tell whether a term *should* have been linked; that judgment is this review's job. The explorer shows the terms on each statement, claim and result page and lists them all at `/definitions`.
+`truth check` enforces the mechanical part (links resolve; sourced definitions have known claims and stipulative ones a note; disambiguations have two known senses; every definition is used; an argument using two senses of a term links its disambiguation; cited `STMT-`, `DEF-` and `DISAMB-` ids exist). Whether a term *should* be linked is this review's judgment. The explorer lists terms per page and at `/definitions`.
 
 ## Naming
 
-Lean namespaces follow the source hierarchy, e.g.:
-
-```text
-TruthCore.Greek.Plato.Timaeus
-TruthCore.Greek.Aristotle.Physics
-```
-
-Corpus ids are opaque UUIDs (owner decision 2026-11-07): "we just cannot afford any ambiguity anymore". A readable id puts words, and therefore senses, into identity.
-
-- **Never mint a readable id.** A new record gets a uuid4 (`python3 scripts/new_id.py`); `argument_batch.py` mints them for spec records.
-- **Use labels for humans.** Every record has a `label`, unique within its kind, at most 100 characters, with no id-like text, naming the thing plainly (a statement by its proposition, an argument or result by its conclusion and route). A term with a linked disambiguated sense carries its sense tag: "Act is PRIOR_1 to potency".
-- **Legacy readable ids are aliases.** Migrated records keep the old id as `legacy_id` (for example `STMT-CATHOLICISM-TRUE`, `PLATO-TIM-28A-CAUSE-A`); tools and prose may use it, and it resolves to exactly one uuid per kind. Tools accept a uuid, legacy id or label and print `label [uuid8]`.
-- **IDs are permanent UUIDs; legacy aliases never change.** Labels may be improved at any time; docs/notes/label-cleanup.md lists the mechanical labels to fix, and that list may only shrink (#1233).
-- An in-flight branch with readable-id records converts by merging `origin/main` and running `python3 scripts/migrate_uuid.py --write` (docs/notes/uuid-migration.md).
+Lean namespaces follow the source hierarchy (`TruthCore.Greek.Plato.Timaeus`). Corpus ids are opaque UUIDs (owner decision 2026-11-07): never mint a readable id; every record has a unique human `label` carrying the sense tags of its terms; legacy ids are permanent aliases ([naming](docs/agent-operations.md#naming)).
 
 <!-- BEGIN:turborepo-agent-rules -->
 

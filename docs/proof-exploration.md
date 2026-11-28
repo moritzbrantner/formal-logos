@@ -136,8 +136,8 @@ paradox was known and the route was new.)
   satisfiable omissions, and report unknown otherwise.
 - **No artifactual theorems.** Frozen Challenges, bind-check and the rule
   "existence of a witness versus properties of the particular witness"
-  (`AGENTS.md`, step 8) keep facts about one model from passing as theorems of
-  the theory.
+  ([agent operations](agent-operations.md#8-self-sweep-before-requesting-review),
+  step 8) keep facts about one model from passing as theorems of the theory.
 
 What we do **not** adopt is charity as a proof rule. [FB19] discards
 formalizations under which the conclusion does not follow. Here a failed
