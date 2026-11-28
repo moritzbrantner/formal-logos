@@ -110,8 +110,34 @@ theorem knife_existence_good : artifactGood .knife .existence := ⟨trivial, tri
 theorem knife_not_counterweight : (Bearer.knife = Bearer.counterweight) → False :=
   fun h => Bearer.noConfusion h
 
+/-- Base coextension in a family is exactly correctness of the named approval
+account. -/
+theorem baseCorrectIffApprovalCorrect {f : Frame} {s : DefinitionSpace f}
+    (m : ProfileFamily s) : ApprovalCorrectAt m m.base ↔ CorrectAccount s s.approvalAccount := by
+  constructor
+  · intro h x p
+    exact (m.baseGood x p).symm.trans
+      ((h x p).trans ((m.baseApproves x p).trans (s.approvalMeaning x p).symm))
+  · intro h x p
+    exact (m.baseGood x p).trans
+      ((h x p).trans ((s.approvalMeaning x p).trans (m.baseApproves x p).symm))
+
+/-- The premise bundle of `approvalFailsFromNotGround` is equivalent to its
+conclusion in every family: the step re-presents the extensional premise. -/
+theorem bundleIffApprovalFails {f : Frame} {s : DefinitionSpace f} (m : ProfileFamily s) :
+    (ApprovalDoesNotGround m ∧ ApprovalCorrectnessTransfers m) ↔ ApprovalAccountFails s := by
+  constructor
+  · rintro ⟨hNot, hTransfer⟩ hCorrect
+    exact hNot (hTransfer ((baseCorrectIffApprovalCorrect m).2 hCorrect))
+  · intro hFails
+    exact ⟨fun hGround => hFails ((baseCorrectIffApprovalCorrect m).1
+        (hGround m.base (fun _ _ => Iff.rfl))),
+      fun hBase => absurd ((baseCorrectIffApprovalCorrect m).1 hBase) hFails⟩
+
 theorem controls : Controls := by
-  refine ⟨?robust, ?stable, ?equivalence, ?rigid, ?adamsPrice, ?divine, ?human, ?coincident, ?voluntarist, ?adams⟩
+  refine ⟨?robust, ?stable, ?equivalence, ?rigid, ?adamsPrice, ?divine, ?human, ?coincident,
+    ?voluntarist, ?adams, ?adamsWitness, ?divineSingleton, ?bundle, ?transferEquivalent,
+    ?dueGivesWeak⟩
   case robust =>
     intro f s m hRobust w v hSame x p
     exact (hRobust w x p).trans
@@ -189,16 +215,54 @@ theorem controls : Controls := by
     exact knife_not_counterweight
       ((hInvariant true (fun _ _ => Iff.rfl) .knife .existence).1 knife_existence_good).1
   case adams =>
-    have hTheory : ModifiedCommandTheory adamsLayer :=
-      ⟨fun _ _ => Iff.rfl, fun _ _ _ => trivial⟩
+    have hTheory : ModifiedCommandTheory adamsLayer := by
+      refine ⟨fun _ _ => Iff.rfl, ?_⟩
+      intro w a h hCruel
+      subst hCruel
+      cases w
+      · change Deed.cruelty = .keep ∨ Deed.cruelty = .rite at h
+        rcases h with h | h <;> exact Deed.noConfusion h
+      · change Deed.cruelty = .rite at h
+        exact Deed.noConfusion h
     have hVaries : CommandVariesWithNaturesFixed adamsLayer :=
-      ⟨true, fun _ _ => Iff.rfl, fun h => Deed.noConfusion ((h .rite).1 trivial)⟩
+      ⟨true, fun _ _ => Iff.rfl, fun h => Deed.noConfusion ((h .keep).1 (Or.inl rfl))⟩
     refine ⟨hTheory, fun _ _ _ => Iff.rfl, fun _ _ _ _ _ => Iff.rfl,
       fun _ _ _ _ => Iff.rfl, hVaries, ?_⟩
     intro hInvariant
     obtain ⟨v, hv, hDiffer⟩ := hVaries
     exact hDiffer fun a =>
       (hTheory.1 adamsFamily.base a).symm.trans ((hInvariant v hv a).trans (hTheory.1 v a))
+  case adamsWitness =>
+    refine ⟨fun _ _ _ _ => Iff.rfl, fun ⟨_, _, hDiffer⟩ => hDiffer (fun _ _ => Iff.rfl),
+      fun _ _ => Iff.rfl, ?_, fun h => h rfl, Or.inl rfl, fun h => Deed.noConfusion h⟩
+    intro w h
+    cases w
+    · change Deed.cruelty = .keep ∨ Deed.cruelty = .rite at h
+      rcases h with h | h <;> exact Deed.noConfusion h
+    · change Deed.cruelty = .rite at h
+      exact Deed.noConfusion h
+  case divineSingleton =>
+    intro v h
+    cases v
+    · rfl
+    · exact absurd ((h .knife .edge).2 (Or.inr ⟨rfl, rfl, rfl⟩)) (by
+        intro hh
+        rcases hh with hh | ⟨hh, _⟩
+        · exact hh
+        · exact Bool.noConfusion hh)
+  case bundle =>
+    intro f s m
+    exact bundleIffApprovalFails m
+  case dueGivesWeak =>
+    intro f s hExcludedMiddle hDue
+    rcases hExcludedMiddle (CorrectAccount s s.approvalAccount) with hCorrect | hFails
+    · exact Or.inr fun x p => (hCorrect x p).symm.trans ((hDue x p).trans (s.dueMeaning x p).symm)
+    · exact Or.inl hFails
+  case transferEquivalent =>
+    intro f s m hInvariant hVaries
+    have hNot := approvalNotGroundFromInvariance m hInvariant hVaries
+    exact ⟨fun hTransfer => (bundleIffApprovalFails m).1 ⟨hNot, hTransfer⟩,
+      fun hFails => ((bundleIffApprovalFails m).2 hFails).2⟩
 
 /-! ## Is the dilemma exhaustive? -/
 
@@ -223,8 +287,8 @@ theorem neitherHornFromIdentity (d : DependenceFrame)
     (hIdentity : GoodnessIsDivineNature d) (hSimple : GodIsOwnNature d)
     (hFollows : ApprovalFollowsNature d) (hAsymmetric : DependenceAsymmetric d) :
     NeitherHorn d := by
-  refine ⟨fun hIndependent => hIndependent.1 (hIdentity.trans hSimple), ?_⟩
-  rintro (hDep | hEq)
+  rintro (hIndependent | hDep | hEq)
+  · exact hIndependent.1 (hIdentity.trans hSimple)
   · have hNatureDep : d.DependsFor d.nature d.approval := by
       rw [hIdentity] at hDep
       exact hDep
@@ -238,8 +302,27 @@ theorem neitherHornFromIdentity (d : DependenceFrame)
     exact hAsymmetric _ _ hSelf hSelf
 
 theorem dilemmaControls : DilemmaControls := by
-  refine ⟨?relocation, ?collapse, ?identity, ?exemplar, ?nonSimple, ?voluntarist,
-    ?contingent, ?property⟩
+  refine ⟨?relocation, ?literal, ?literalIdentity, ?dependentNature, ?collapse, ?identity,
+    ?exemplar, ?nonSimple, ?voluntarist, ?contingent, ?property⟩
+  case literal =>
+    intro d hIdentity hFollows
+    unfold ApprovedBecauseGood
+    rw [hIdentity]
+    exact hFollows
+  case literalIdentity =>
+    refine ⟨⟨rfl, rfl⟩, fun ⟨h, _⟩ => Item.noConfusion h, Or.inl ⟨rfl, rfl⟩,
+      fun h => h.1 rfl⟩
+  case dependentNature =>
+    refine ⟨rfl, Or.inl ⟨rfl, rfl⟩, ?_, fun h => Item.noConfusion h, ?_⟩
+    · intro x y h1 h2
+      rcases h1 with ⟨hx, hy⟩ | ⟨hx, hy⟩ <;> rcases h2 with ⟨hy', hx'⟩ | ⟨hy', hx'⟩ <;>
+        first
+        | exact Item.noConfusion (hy.symm.trans hy')
+        | exact Item.noConfusion (hx.symm.trans hx')
+    · rintro (h | h | h)
+      · exact h.2 (Or.inr ⟨rfl, rfl⟩)
+      · rcases h with ⟨_, h⟩ | ⟨_, h⟩ <;> exact Item.noConfusion h
+      · exact Item.noConfusion h
   case relocation =>
     intro n hIdentity hNecessary ⟨w, v, hDiffer⟩
     exact hDiffer ((hIdentity w).trans ((hNecessary w v).trans (hIdentity v).symm))
@@ -269,8 +352,8 @@ theorem dilemmaControls : DilemmaControls := by
       have hStandard := h .standard (fun h => Item.noConfusion h) (fun h => Item.noConfusion h)
         (fun h => Item.noConfusion h) ⟨Or.inr rfl, rfl⟩
       exact Item.noConfusion hStandard.2
-    · refine ⟨fun hIndependent => hIndependent.2 ⟨Or.inr rfl, rfl⟩, ?_⟩
-      rintro (⟨_, h⟩ | h)
+    · rintro (hIndependent | ⟨_, h⟩ | h)
+      · exact hIndependent.2 ⟨Or.inr rfl, rfl⟩
       · exact Item.noConfusion h
       · exact Item.noConfusion h
   case nonSimple =>

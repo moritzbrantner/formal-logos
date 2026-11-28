@@ -20,10 +20,15 @@ standard of goodness (what goodness is), with one primitive relation:
   content) and from strict ground between facts (`StrictlyGrounds`). No
   structural property is built in. Asymmetry is an explicit premise.
 
-The horns are typed. Horn 1 (`IndependentStandard`) says goodness is distinct
-from God and does not depend on him for what it is. Horn 2
-(`ConstitutedByApproval`) says goodness depends for what it is on God's approval,
-or simply is that approval. Coverage needs explicit excluded middle plus two
+The horns have two readings (disambiguation EUTHYPHRO_HORN). On the literal
+reading (sense 1) horn 1 is `ApprovedBecauseGood` (approval depends on goodness)
+and horn 2 is `GoodBecauseApproved`. On the consequence reading (sense 2), which
+states what the dilemma alleges each horn commits one to, horn 1
+(`IndependentStandard`) says goodness is distinct from God and does not depend
+on him for what it is, and horn 2 (`ConstitutedByApproval`) says goodness depends
+for what it is on God's approval, or simply is that approval. The identity reply
+accepts the literal horn 1 and denies its alleged consequence. On the
+consequence reading coverage needs explicit excluded middle plus two
 background premises:
 
 * distinctness: goodness is neither God nor God's nature;
@@ -32,8 +37,8 @@ background premises:
   approval.
 
 Dropping distinctness (the identity reply) or the second premise (a distinct
-standard depending on the nature, not the will) each leaves neither horn true,
-in a finite model. The profile frame of `TruthCore.Ethics.Euthyphro` is
+standard depending on the nature, not the will) each leaves neither
+consequence-reading horn true, in a finite model. The profile frame of `TruthCore.Ethics.Euthyphro` is
 extensional and cannot express this dependence. No bridge between the two
 frames is assumed.
 
@@ -61,21 +66,34 @@ structure DependenceFrame where
 section
 variable (d : DependenceFrame)
 
-/-- Horn 1: goodness is a standard distinct from God that does not depend on
-God for what it is. -/
+/-- Consequence-reading horn 1 (EUTHYPHRO_HORN_2): goodness is a standard
+distinct from God that does not depend on God for what it is. This is the upshot
+the dilemma alleges for "approved because good", not that literal claim. -/
 def IndependentStandard : Prop :=
   d.goodness ≠ d.god ∧ ¬ d.DependsFor d.goodness d.god
 
-/-- Horn 2: goodness depends for what it is on God's approval, or is that
-approval. -/
+/-- Consequence-reading horn 2 (EUTHYPHRO_HORN_2): goodness depends for what it is
+on God's approval, or is that approval. -/
 def ConstitutedByApproval : Prop :=
   d.DependsFor d.goodness d.approval ∨ d.goodness = d.approval
 
-/-- The dilemma's coverage claim. -/
+/-- The dilemma's coverage claim on the consequence reading. -/
 def HornsCover : Prop := IndependentStandard d ∨ ConstitutedByApproval d
 
-/-- The dilemma fails in this frame: neither horn holds. -/
-def NeitherHorn : Prop := ¬ IndependentStandard d ∧ ¬ ConstitutedByApproval d
+/-- Neither consequence-reading horn holds: the coverage claim fails. -/
+def NeitherHorn : Prop := ¬ HornsCover d
+
+/-- Literal horn 1 (EUTHYPHRO_HORN_1): God's approving depends for what it is on
+goodness ("approved because good"). It does not by itself say that goodness is
+distinct from God. -/
+def ApprovedBecauseGood : Prop := d.DependsFor d.approval d.goodness
+
+/-- Literal horn 2 (EUTHYPHRO_HORN_1): goodness depends for what it is on God's
+approving ("good because approved"). -/
+def GoodBecauseApproved : Prop := d.DependsFor d.goodness d.approval
+
+/-- The literal dilemma: approved because good, or good because approved. -/
+def LiteralHornsCover : Prop := ApprovedBecauseGood d ∨ GoodBecauseApproved d
 
 /-- Distinctness: goodness is neither God nor God's nature. -/
 def GoodnessDistinctFromGod : Prop := d.goodness ≠ d.god ∧ d.goodness ≠ d.nature
@@ -164,6 +182,16 @@ def nonSimpleFrame : DependenceFrame where
   goodness := .nature
   DependsFor := fun x y => x = .approval ∧ y = .nature
 
+/-- Dependent-nature model: goodness is God's nature, which is not God but
+depends on God for what it is (an individual-nature view). -/
+def dependentNatureFrame : DependenceFrame where
+  Entity := Item
+  god := .god
+  nature := .nature
+  approval := .approval
+  goodness := .nature
+  DependsFor := fun x y => (x = .approval ∧ y = .nature) ∨ (x = .nature ∧ y = .god)
+
 /-- Voluntarist model: goodness is a distinct standard depending on approval. -/
 def voluntaristFrame : DependenceFrame where
   Entity := Item
@@ -188,10 +216,14 @@ def collapseModel : PropertyFrame where
   IsProperty := fun x => x = .standard
 
 /-- Controls for the coverage question. General conjuncts: identity with a
-necessary nature leaves goodness fixed across nature profiles; the property
+necessary nature leaves goodness fixed across nature profiles; identity with
+approval following nature gives the literal horn 1 ("approved because good"); the property
 collapse needs the identification of God's goodness with the shared universal.
-Finite conjuncts: identity model (all identity premises, neither horn,
-distinctness false); exemplar model (distinctness true, through-approval false,
+Finite conjuncts: in the identity model the literal horn 1 holds, literal
+horn 2 fails, and the consequence-reading horn 1 fails; a dependent-nature model
+(goodness is God's nature, which is not God but depends on him: neither
+consequence horn without simplicity); identity model (all identity premises,
+neither consequence horn, distinctness false); exemplar model (distinctness true, through-approval false,
 neither horn); non-simple model (identity and approval following nature hold,
 God is not his nature, horn 1 holds); voluntarist model (distinctness and
 through-approval hold, horn 2 holds); a contingent-nature model (identity in
@@ -201,6 +233,13 @@ property, and God is not). These are formal interpretations only. -/
 def DilemmaControls : Prop :=
   (∀ n : NatureProfiles, IdentityInEachProfile n → DivineNatureNecessary n →
       ¬ GoodnessVariesWithNature n) ∧
+  (∀ d : DependenceFrame, GoodnessIsDivineNature d → ApprovalFollowsNature d →
+      ApprovedBecauseGood d) ∧
+  (ApprovedBecauseGood identityFrame ∧ ¬ GoodBecauseApproved identityFrame ∧
+    LiteralHornsCover identityFrame ∧ ¬ IndependentStandard identityFrame) ∧
+  (GoodnessIsDivineNature dependentNatureFrame ∧ ApprovalFollowsNature dependentNatureFrame ∧
+    DependenceAsymmetric dependentNatureFrame ∧ ¬ GodIsOwnNature dependentNatureFrame ∧
+    NeitherHorn dependentNatureFrame) ∧
   (∀ p : PropertyFrame, p.god = p.divineGoodness →
       p.divineGoodness = p.goodnessUniversal → p.IsProperty p.goodnessUniversal →
       p.IsProperty p.god) ∧

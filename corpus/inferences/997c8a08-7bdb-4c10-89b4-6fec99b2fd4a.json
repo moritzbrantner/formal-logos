@@ -1,6 +1,6 @@
 {
   "id": "997c8a08-7bdb-4c10-89b4-6fec99b2fd4a",
-  "label": "Neither Euthyphro horn holds, from identity, simplicity and approval following nature (inference)",
+  "label": "Neither EUTHYPHRO_HORN_2 horn holds, from identity, simplicity and approval after nature (inference)",
   "input_statement_ids": [
     "2a304439-6fc1-4e7a-b35f-baeb38f96c30",
     "0ce33876-2356-4d58-92b6-6a7f8e377765",
@@ -9,7 +9,7 @@
   ],
   "output_statement_id": "8bc29667-ecdd-4255-b8df-06ad3973dc43",
   "rule": "identity defeats distinctness; asymmetry with approval following nature defeats constitution by approval",
-  "meaning": "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. None of the four premises is established.",
+  "meaning": "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. On the literal reading the same premises give horn 1 (approved because good): the reply takes literal horn 1 and denies its alleged consequence. None of the four premises is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

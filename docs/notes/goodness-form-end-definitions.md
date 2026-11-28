@@ -99,7 +99,7 @@ its perfection domain. That is the exact remaining route connection.
 | Railton’s welfare biconditional, after explicit fixed-agent aspect transfer | Has a due-actuality-compatible instance and an all-actuality/surplus instance | Which objective-interest criterion is correct, and whether welfare ascriptions transfer to this ontological question |
 | Coarse feature reduction omitting form/end | No exact classifier for the nonconstant artifact goodness relation | The specified projection is insufficient; this does not refute richer naturalist criteria |
 | Form-sensitive feature criterion | Exact classifier exists in the same finite profile | Classification alone establishes neither metaphysical property identity, empirical access nor categorical authority |
-| Fixed-assessor approval reduction | Conditional elimination requires its genuine correctness negation. The Euthyphro modal test (below) derives that negation for an assessor whose approvals vary with natures fixed, from invariance and a rigidity bridge; for an assessor approving exactly the due actualities the negation is false and a weaker premise suffices | This is a subjectivist identity proposal, not a surrogate for expressivism about moral language; a rigidified actual-approval account survives the modal test |
+| Fixed-assessor approval reduction | Conditional elimination requires its genuine correctness negation. The Euthyphro modal test (below) shows, for an assessor whose approvals vary with natures fixed, that approval does not coextend with goodness in every nature-fixed profile; it reaches the extensional negation only through a bridge equivalent to it. For an assessor approving exactly the due actualities the negation is false, and a weaker premise suffices | This is a subjectivist identity proposal, not a surrogate for expressivism about moral language; a rigidified actual-approval account survives the modal test |
 | Property-identity reading / Moore boundary | Identity entails due coextension; distinct formal referents can coextend | Extensional agreement does not settle simplicity, non-naturalness, indefinability or real property identity |
 
 The Boyd and Railton tests call their existing reading definitions with explicit
@@ -732,7 +732,9 @@ appear below only as unread leads. The module is
 `TruthCore.Ethics.Euthyphro`; the results are in
 `TruthCore.Results.Ethics.Euthyphro` and the spec is
 `specs/euthyphro-goodness.toml`. The research record is attempt
-`7363eaea-ec56-42aa-b95f-049b8b1c4ecc`.
+`7363eaea-ec56-42aa-b95f-049b8b1c4ecc`. An independent semantic challenge of
+the first checkpoint found 2 P1 and 7 P2 findings. They are repaired below,
+and the repairs are recorded in the attempt.
 
 ### What was missing
 
@@ -744,119 +746,152 @@ one definition space, forms, ends and due standards are shared. Each profile
 fixes actual perfections, goodness and the named assessor's approvals, and the
 base profile reproduces the frame and the space. Same natures means the same
 actual perfections. Which assessor the space names (a person, an ideal
-observer, God) is an interpretation and not a parameter. The theorems are
-therefore one test, applied symmetrically. The instances differ only in their
-premises.
+observer, God) is an interpretation and not a parameter. The statements are
+therefore instance-neutral, but their warrant is assessor-relative.
+`cd616911`, `d27756f6`, `c2c3bebf` and `50d8be94` say so in their
+paraphrases, and the per-instance warrant is recorded below. "Ground" in
+`ApprovalGroundsAcrossNatureFixed` is used in the modal (covariation) sense
+only. It is not grounding.
 
 ### Derivations (all zero-axiom)
 
 | Result | Premises → conclusion | Standing |
 | --- | --- | --- |
-| `approvalNotGroundFromInvariance` | weak invariance `30f61b46` + nature-fixed approval variation `cd616911` → approval does not coextend with goodness in every nature-fixed profile `b93773ca` | substantive; the Euthyphro core |
-| `approvalFailsFromNotGround` | `b93773ca` + rigidity bridge `c2c3bebf` → `50d8be94` | substantive; first support option for the target |
+| `approvalNotGroundFromInvariance` | weak invariance `30f61b46` + nature-fixed approval variation `cd616911` → approval does not coextend with goodness in every nature-fixed profile `b93773ca` | substantive. This is the Euthyphro core and the modal finding |
+| `approvalFailsFromNotGround` | `b93773ca` + rigidity bridge `c2c3bebf` → `50d8be94` | **transcription** (single application). For every family the premise bundle is equivalent to `50d8be94`; given the core premises, the bridge alone is. It adds no warrant |
 | `invarianceFromSupervenience` | supervenience `301b241d` → weak invariance `30f61b46` | strength order (`strengthens`) |
-| `dctGroundPrice` | approval as ground `72694566` + weak invariance → approvals fixed by natures `d27756f6` | price of the command-theory rival |
+| `dctGroundPrice` | approval coextending in every nature-fixed profile `72694566` + weak invariance → approvals fixed by natures `d27756f6` | price of the command-theory rival |
 | `approvalFailsWeakens`, `approvalCoincidesWeakens` | `50d8be94`, or approval/due coextension `79ba9d77` → weak approval premise `9134209f` | strength orders |
-| `dueFromWeakApprovalPremise` | `9108832f`, `40420659`, `4c22019a`, `9134209f` → due-actuality thesis `6cc47d1b` | weaker sufficient premise set for the correct-support elimination |
-| `controls` | none → finite controls `4f7359c3` | joint and omission models; tests `50d8be94`, `30f61b46`, `cd616911`, `c2c3bebf` |
+| `dueFromWeakApprovalPremise` | `9108832f`, `40420659`, `4c22019a`, `9134209f` → due-actuality thesis `6cc47d1b` | weaker sufficient premise set (minimality finding, not support) |
+| `controls` | none → finite controls `4f7359c3` | joint and omission models plus the two equivalences; tests `50d8be94`, `30f61b46`, `cd616911`, `c2c3bebf` |
 
 The controls also prove some general facts. A robust nature account (goodness
-as due actuality in every profile) gives supervenience. Under approval as
-ground, invariance is equivalent to approvals being fixed by natures. Weak
-invariance is exactly `ObjectiveTruthDefinitionFork.Stable` truth of every
-aspect over the nature-fixed profiles. This reuses the frame of attempts
-`fa1ce455` and `a6d3b944`: the invariance premise is the
-attitude-intervention invariance reading, applied to form/end goodness. Those
-attempts named the connection to this approval account as their open root
-target. Their mind-independence senses are not identified with this premise
-by that equivalence.
+as due actuality in every profile) gives supervenience. If approval coextends
+with goodness in every nature-fixed profile, invariance is equivalent to
+approvals being fixed by natures. Weak invariance is exactly
+`ObjectiveTruthDefinitionFork.Stable` truth of every aspect over the
+nature-fixed profiles. This reuses the frame of attempts `fa1ce455` and
+`a6d3b944`: the invariance premise is the attitude-intervention invariance
+reading, applied to form/end goodness. Those attempts named the connection to
+this approval account as their open root target. Their mind-independence
+senses are not identified with this premise by that equivalence.
+
+**What the modal test does and does not reach.** The finding is `b93773ca`:
+given invariance and nature-fixed variation, approval does not coextend with
+goodness in every nature-fixed profile. The test reaches the extensional
+premise `50d8be94` only through the rigidity bridge `c2c3bebf`, and given the
+test's own premises that bridge is equivalent to `50d8be94`. So the step to
+`50d8be94` is a re-presentation, and it is declared a transcription. The
+frontier keeps `50d8be94` open: a transcription closes its conclusion only
+when every premise is closed, and `c2c3bebf` is bare. The bridge's motivating
+warrant is an identity reading ("approval is what goodness is"). Its encoded
+antecedent is only base coextension. The step from base coextension to an
+identity or modal reading is exactly what `50d8be94` denies for a varying
+assessor and what the rigidified rival rejects. So that warrant does not
+transfer to the encoded bridge.
 
 ### The symmetric test
 
 | Assessor account | Invariance | Nature-fixed variation | Outcome under the same premises |
 | --- | --- | --- | --- |
-| Human fixed assessor (subjectivism) | held | holds: approvals of the same acts change while the natures stay fixed | Approval does not ground goodness; with the bridge, `50d8be94` (human-assessor model) |
-| Voluntarist command theory (God could approve otherwise) | denied, or else refuted | holds by hypothesis | With invariance, refuted exactly as subjectivism. The voluntarist model keeps approval as ground only by giving up invariance |
-| Command theory whose approvals follow necessarily from a good nature | held | fails | Survives (divine joint model); its price is `d27756f6`: approvals are fixed by the natures |
-| Rigidified actual approval | held | holds | Survives by denying the bridge: base approval is correct, but no profile-wide grounding (rigidified model) |
-| Modified command theory (goodness from nature, obligation from command) | held for goodness | commands vary | Survives the goodness test. Obligation is not invariant under command variation: the same test reappears one level up |
+| Human fixed assessor (subjectivism) | held | holds: approvals of the same aspects change while the natures stay fixed | Approval does not coextend with goodness in every nature-fixed profile (modal sense; human-assessor model) |
+| Voluntarist command theory (God could approve otherwise) | denied, or else refuted | holds by hypothesis | With invariance, refuted exactly as subjectivism. The voluntarist model keeps modal coextension only by giving up invariance |
+| Command theory whose approvals follow necessarily from a good nature | held | fails | Survives; its price is `d27756f6`: approvals are fixed by natures. The modified command model is the non-degenerate witness |
+| Rigidified actual approval | held | holds | Survives by denying the bridge: base approval is correct, with no profile-wide coextension (rigidified model) |
+| Modified command theory (goodness from nature, obligation from command) | held for goodness | commands vary | Survives the goodness test; obligation varies with command (see below) |
 
-The invariance premise therefore does not discriminate against theism or for
-it. It refutes every account on which approval both grounds goodness and
-varies while the natures stay fixed, whether the assessor is human or divine.
+At the level of the core theorem, the invariance premise neither favors nor
+disfavors theism. It refutes modal coextension for every assessor whose
+approvals vary while the natures stay fixed, human or divine.
 
 ### Relocation of the target premise
 
 In the divine joint model the named assessor approves exactly the due
-actualities. There, approval is a ground in the modal sense, approvals are
-fixed by natures, supervenience and the robust nature account hold, and the
-due-actuality thesis is true. **`50d8be94` is false in that model.** A
-theistic instance of the elimination that keeps `50d8be94` would assume
-something the nature account itself denies when God approves exactly the
-good. The elimination does not need it. `dueFromWeakApprovalPremise` needs
-only `9134209f`: either the approval account fails, or it has the
-due-actuality extension. That premise has two support options. One is
-`50d8be94`, through the Euthyphro derivation, for assessors whose approvals
-vary. The other is `79ba9d77`, for an assessor whose approvals track due
-actuality. The divine model witnesses that the weak premise is strictly
-weaker. This is a precise relocation and not a refutation of `50d8be94`. For
-a varying assessor it remains supported. For the tracking assessor, the case
-should use the weak premise route.
+actualities. There, `50d8be94` is false while the weak premise and the
+due-actuality thesis hold. That extensional content is the model's
+non-trivial content. Its modal conjuncts (supervenience, approvals fixed by
+natures, no variation) are degenerate: its second profile changes the
+natures, so the only nature-fixed profile is the base (Controls,
+`divineSingleton`). The modified command model is the non-degenerate divine
+witness. It has two nature-fixed profiles, invariance, approval coextending
+with goodness in both, approvals fixed by natures, and no variation.
+
+`dueFromWeakApprovalPremise` needs only `9134209f`: the approval account
+either fails, or it has the due-actuality extension. This is a
+**minimality finding**: `50d8be94` was stronger than the elimination needs,
+and the divine model witnesses that the weak premise is strictly weaker. It is
+**not support** for `6cc47d1b`. Given the other three correct-support inputs,
+`9134209f` is equivalent to the due thesis (with excluded middle the thesis
+gives the weak premise; Controls). So `9134209f` has no warrant of its own beyond its disjuncts.
+One disjunct is `50d8be94`, which the modal test reaches only through the
+equivalent bridge. The other is `79ba9d77`, which is bare and depends on the
+participation bridge. The reading of the divine assessor is also
+sense-relative (see the Catholic fit below).
 
 ### Warrant of the premises
 
-**Weak invariance (`30f61b46`).** This premise has the strongest prima facie
-standing in the set. Hold fixed what each thing is and which perfections it
+**Weak invariance (`30f61b46`).** The discriminating prima facie ground is the
+intuition itself. Hold fixed what each thing is and which perfections it
 actually has, and change only someone's attitude: the change does not make a
-blunt knife's missing edge good. The supervenience of the evaluative on the
-non-evaluative is accepted across realists, many naturalists and theists.
-Expressivists accept a version of it as a constraint on competent verdicts.
-`SupervenienceProfiles` records that this verdict constraint does not by
-itself give factual supervenience, so it is a recorded weaker cousin and not
-extra evidence. The strongest substantive rival is voluntarist bullet-biting.
-Its target is invariance. Its mechanism is that goodness is constituted by
-the will, so a variation in will is a variation in goodness. Its independent
-justification is unrestricted sovereignty: nothing distinct from the divine
-will constrains it. The voluntarist model shows that this rival is formally
-consistent. It pays by making "God is good" trivially true, since goodness is
-whatever God approves. It also conflicts with divine simplicity and the
-priority of intellect in the case's own theology, although that conflict does
-not refute it for a non-Thomist theist. Provisional assessment: strong prima
-facie warrant, an unrefuted but costly rival, and kept open.
+blunt knife's missing edge good. This is not the widely accepted
+supervenience of the evaluative on the total non-evaluative base. That base
+includes attitudes, and a subjectivist satisfies it. The encoded premise
+leaves approvals out of the base. It is therefore the stance-independence
+thesis that subjectivism and voluntarism deny, and consensus among realists
+adds nothing against those rivals. The strongest substantive rival is
+voluntarist bullet-biting. Its target is invariance. Its mechanism is that
+goodness is constituted by the will, so a variation in will is a variation in
+goodness. Its independent justification is unrestricted sovereignty: nothing
+distinct from the divine will constrains it. The voluntarist model shows that
+this rival is formally consistent. It pays by making "God is good" trivially
+true, since goodness is whatever God approves. It also conflicts with divine
+simplicity and the priority of intellect in the case's own theology, but that
+conflict does not refute it for a non-Thomist theist. Provisional assessment:
+prima facie warrant from the knife intuition alone, an unrefuted but costly
+rival, and kept open.
 
-**Nature-fixed variation (`cd616911`).** Its standing depends on the
-instance. For a human assessor, it is ordinary experience that the approvals
-of a person or community change while the acts and agents stay the same. For
-a voluntarist God it holds by hypothesis. For a God whose will follows a good
-nature it fails. No independent argument is offered here, and none is
-required for the human instance.
+**Nature-fixed variation (`cd616911`).** The statement is instance-neutral.
+Its warrant depends on the instance. For a human assessor, it is ordinary
+experience that a person's or community's approvals of the same aspects
+change while the natures stay the same. For a voluntarist God it holds by
+hypothesis. For a God whose will follows a good nature it fails. The
+alternative `d27756f6` is justified only for that last instance.
 
-**Rigidity bridge (`c2c3bebf`).** Its warrant is that the approval account is
-proposed as what goodness is, not as a reliable indicator. An identity claim
-does not hold only in the profile where the assessor happens to approve
-correctly. The strongest rival is rigidified response-dependence: goodness is
-what the assessor *actually* approves (Lewis- or Johnston-style dispositional
-theories are unread leads). Its mechanism is that rigidification keeps
-goodness fixed while non-actual approvals vary. This is checked: the
-rigidified account excludes the bridge, and the rigidified model is a witness.
-Its price is that approval no longer makes the difference in the varied
-profiles; goodness tracks one actual set of attitudes. For a fixed human
-assessor, the remaining question is whether that one actual approval
-extension coincides with goodness. The modal test does not settle it.
+**Rigidity bridge (`c2c3bebf`).** As stated above, the motivating identity
+reading is not encoded, and under the core premises the bridge is equivalent
+to `50d8be94`. The strongest rival is rigidified response-dependence: goodness
+is what the assessor *actually* approves (Lewis- or Johnston-style
+dispositional theories are unread leads). Its mechanism is that
+rigidification keeps goodness fixed while non-actual approvals vary. This is
+checked: the rigidified account excludes the bridge, and the rigidified model
+is a witness. The rigidified statement's variation conjunct is the test
+scenario, not part of the theory. Its price is that approval no longer makes
+the difference in the varied profiles; goodness tracks one actual set of
+attitudes. For a fixed human assessor, the open question is whether that
+actual approval extension coincides with goodness.
 
 ### Command-theory reply and modified command theory
 
 The strongest reply to the first horn is that the divine approvals cannot vary
-because they follow necessarily from a good nature. This survives the test, as
-`dctGroundPrice` and the divine model show. Its exact price is
-`d27756f6`: approvals are fixed by the natures. Extensionally, approval and
-nature then coincide, and the theorems cannot tell which is explanatorily
-prior. That question needs an explanation-order premise, which is the named
-gap. The modified command theory survives by splitting goodness from
-obligation. Goodness is fixed by the nature, and obligation is constituted by
-command restricted to good acts. Its price is checked: with command variation,
-obligation is not invariant. The modified command model keeps a promise-keeping act commanded in
-both profiles, while a ceremonial act is commanded in only one.
+because they follow necessarily from a good nature. This survives the test
+(`dctGroundPrice`; non-degenerate in the modified command model). Its exact
+price is `d27756f6`: approvals are fixed by natures, which gives up the
+voluntarist version. Extensionally, approval and nature then coincide, and
+the theorems cannot tell which comes first in explanation. That is the named
+gap.
+
+The modified command theory survives by splitting goodness from obligation.
+Goodness is fixed by the nature; obligation is constituted by command, and
+commands are restricted to good acts. In the model the restriction is not
+vacuous: cruelty is never good and never commanded. What varies between
+nature-fixed profiles is the command and obligation to keep a promise, a
+natural-law-type act. The checked general fact (command-constituted
+obligation with command variation is not invariant) is a definitional
+substitution. The model witnesses only that the theory permits such
+variation. On Adams's view, God's loving nature would rule out varying a
+commanded natural-law obligation; that is the same nature-fixing move one
+level up, and it is not modeled. A variation in a ceremonial obligation would
+not tell Adams apart from Thomist positive divine law, which also varies.
 
 ### Is the dilemma exhaustive? The identity reply
 
@@ -870,35 +905,61 @@ dependence of content. It is distinct from dependence for being on an agent
 cause and from Fine's strict ground between facts. Asymmetry is an explicit
 premise.
 
-`hornsCoverFromDistinctness` checks coverage under explicit background. From
-excluded middle (`ee4ab504`, established), distinctness of goodness from God
-and his nature, and approval-only dependence, it derives the dilemma.
-Approval-only dependence says that anything else distinct from God that
-depends on him for what it is depends on his approving. The horns are
-independent standard or constitution by approval. Their exclusivity is not
-claimed. The dilemma controls witness two exits, and each drops one premise:
+**Two readings of the horns** (disambiguation `5ceda5e1`, EUTHYPHRO_HORN):
 
-| Exit | Premise dropped | Model | Outcome |
+- EUTHYPHRO_HORN_1, literal: horn 1 is "approved because good" (approval
+  depends on goodness); horn 2 is "good because approved".
+- EUTHYPHRO_HORN_2, consequence: horn 1 is the upshot the dilemma alleges, an
+  independent standard distinct from God. Horn 2 is constitution by approval.
+
+`hornsCoverFromDistinctness` checks coverage on reading 2 under explicit
+background. From excluded middle (`ee4ab504`, established), distinctness of
+goodness from God and his nature, and approval-only dependence, it derives the
+dilemma. Approval-only dependence says that anything else distinct from God
+that depends on him for what it is depends on his approving. Given
+distinctness, the instance of approval-only dependence at goodness is already
+equivalent to coverage. The result therefore rests on applying that
+generalization (creatures depend on God through his will) to a distinct
+standard. Exclusivity of the horns is not claimed.
+
+| Exit (reading 2) | Premise dropped | Model | Outcome |
 | --- | --- | --- | --- |
-| Identity: goodness is God's nature and God is his nature | distinctness | identity model (approval-only dependence still holds) | neither horn |
-| Distinct exemplar standard depending on God, not on his approving | approval-only dependence | exemplar model | neither horn |
-| Non-simple: goodness is God's nature, God is not his nature | (simplicity) | non-simple model | horn 1 holds |
+| Identity: goodness is God's nature and God is his nature | distinctness | identity model | neither consequence horn |
+| Dependent nature: goodness is God's nature, which is not God but depends on him | (simplicity) | dependent-nature model | neither consequence horn |
+| Distinct exemplar standard depending on God, not on his approving | approval-only dependence | exemplar model | neither consequence horn |
+| Non-simple and independent: goodness is God's nature, which neither is God nor depends on him | (simplicity and dependence) | non-simple model | horn 1 holds |
 | Voluntarist | none | voluntarist model | horn 2 holds |
 
-`neitherHornFromIdentity` derives the identity reply. Goodness is God's
-nature, God is his nature, God's approving depends on that nature, and
-dependence is asymmetric; together these exclude both horns. Simplicity does
-its work only against horn 1. The non-simple model shows why. If goodness is
-God's nature but God is not identical with it, goodness is an independent
-standard (Platonism about the divine nature). So the classical reply needs
-simplicity as identity, not merely "goodness is grounded in the nature".
-Approval following nature, with asymmetry, is what excludes horn 2.
+`neitherHornFromIdentity` derives the identity reply on reading 2. Goodness is
+God's nature, God is his nature, God's approving depends on that nature, and
+dependence is asymmetric; together these exclude both consequence horns.
+Simplicity does its work only against horn 1. It is not the only way to do
+that work: identity with the nature excludes horn 1 together with
+simplicity, or together with the nature's dependence on God (the
+dependent-nature model, an individual-nature view). The non-simple model shows
+that one of the two is needed. Approval following nature, with asymmetry, is
+what excludes horn 2.
+
+**What the false-dilemma claim amounts to.** On reading 1 the identity reply
+does not escape the dilemma. It takes horn 1. Goodness identical with the
+divine nature, with approval following that nature, gives "approved because
+good" in general, and the identity model witnesses it. The reply denies only
+that this horn carries its alleged consequence, an independent external
+standard. In the identity model, literal horn 1 holds and consequence horn 1
+fails. So the precise claim is this. Read literally, the dilemma is exhaustive
+in the identity model, but as an *exclusive choice between an external
+standard and arbitrary command* it is false, because literal horn 1 does not
+carry the consequence. "Neither horn holds" is true only on reading 2. The
+controls are a premise-free mixing control: they show that the passage from
+literal horn 1 to the external-standard consequence fails.
+
 Approval-only dependence plausibly holds in Thomism for everything distinct
 from God, since creatures depend on God through his will (ST I q.19 a.4, an
-unread lead). For classical theism the exemplar exit is therefore closed,
-and the identity exit is the one it takes. The exemplar exit fits theists
-with a distinct standard grounded in the divine nature (Alston and Adams are
-unread leads).
+unread lead). If so, the exemplar exit would be closed for classical theism,
+and the identity or dependent-nature exit is the one it takes. This is
+provisional, because it rests on an unread lead. The exemplar exit fits
+theists with a distinct standard grounded in the divine nature (Alston and
+Adams are unread leads).
 
 **Status of the identity premises.** `GoodnessIsDivineNature` and
 `GodIsOwnNature` enter as open premises, and the conclusion is conditional
@@ -907,8 +968,8 @@ is proved on stage 2 only as non-composition, and the frontier records it as
 not reaching the root. The step from non-composition to identity of God with
 his essence and his goodness is an open bridge. No corpus vocabulary links
 the opaque `Composite` predicate to identity. `e0dae79f` predicates GOOD_4 of
-God in respect of being; that is goodness predicated of God, not identity
-with the standard.
+God in respect of being. That is goodness predicated, not identity with the
+standard, and it uses a different goodness sense from `6cc47d1b`.
 
 **Relation to the profile finding.** The profile frame is extensional. It
 can express which approvals and which goodness hold in each profile, but not
@@ -917,11 +978,9 @@ identity reading and with a distinct exemplar reading alike. Neither frame
 entails the other's claims without a bridge. Identity with approval
 following nature would give approvals fixed by natures (`d27756f6`) only
 through a dependence-to-covariation bridge, which is not formulated. Identity
-is stronger than what escaping the dilemma requires, since the exemplar model
-escapes without it. It is a different kind of claim from the nature-fixed
-modal account and is not implied by it. In the divine joint model, read
-either way, the extensional premise `50d8be94` is false for the divine
-assessor. That is why the case should use the weak premise route.
+is stronger than what escaping reading 2 requires, since the exemplar and
+dependent-nature models escape without it. It is a different kind of claim
+from the nature-fixed modal account and is not implied by it.
 
 **Objections to the identity reply.**
 
@@ -937,17 +996,21 @@ assessor. That is why the case should use the weak premise route.
   independent justification for a contingent divine nature is on file. The
   objection stands only as the demand for that bridge.
 - *(b) Plantinga-style property collapse.* Target: the identity of God with
-  goodness. Mechanism: if God is goodness and goodness is a property, God is
-  a property and cannot be a person or a cause. This is checked: the collapse
-  needs the further identification of the goodness by which God is good with
-  the universal that good things share. The property model has God identical
-  with his goodness, that goodness distinct from the universal, the universal
-  a property and God not one. That model shows only that the distinction is
-  formally consistent. A positive account of subsistent, non-universal
-  goodness is open. The corpus has participation vocabulary for esse but none
-  for analogical predication of goodness. Provisional standing: the
-  objection is relocated to whether that distinction can be given content.
-  It is neither defeated nor established.
+  goodness. The first prong's mechanism is that if God is goodness and
+  goodness is a property, God is a property and cannot be a person or a
+  cause. This is checked: the collapse needs the further identification of
+  the goodness by which God is good with the universal that good things
+  share. The property model has God identical with his goodness, that
+  goodness distinct from the universal, the universal a property and God not
+  one. That model shows only that the distinction is formally consistent. The
+  second prong says that all divine attributes become one, by transitivity
+  through God. It is met in the same way as triviality below, by distinct
+  presentations of one referent, and it is not separately encoded. A
+  positive account of subsistent, non-universal goodness is open. The corpus
+  has participation vocabulary for esse but none for analogical predication
+  of goodness. Provisional standing: the objection is relocated to whether
+  that distinction can be given content, and it is neither defeated nor
+  established.
 - *(c) Others.* Triviality ("God is good" would mean "God is God") is met by
   the sense/reference distinction already encoded (`PropertyPresentation`:
   distinct presentations can denote one referent). The regress "what makes
@@ -957,29 +1020,40 @@ assessor. That is why the case should use the weak premise route.
 
 ### Fit with the Catholic case
 
-The case's answer is the third option. Goodness is grounded in the divine
-nature: due actuality, `6cc47d1b`, with God's goodness as the maximal case,
-`e0dae79f` from argument `0011703b`. God's approval follows that goodness, so
-the divine assessor is a nature-fixed tracker and the weak premise route
-applies. On this reading, obligation belongs to law as an ordinance of reason,
-and the eternal law is in the divine intellect. Natural-law obligations
-follow from natures and do not vary under command. Positive divine law (for
-example ceremonial precepts) can vary. This is the structure of the modified
-command model, but natural-law obligation is not constituted by command. The relevant
-places are ST I q.6, I q.19, I-II q.90 a.1, q.93, q.94 a.5 and q.100 a.8. They
-are unread leads, and nothing is attributed to them here. The case therefore
-does not depend on a command theory, which would make `e0dae79f` trivial.
+The case's answer is the third option: goodness grounded in the divine nature,
+with God's approval following that goodness. Two goodness senses must be kept
+apart (DISAMB `f5b1a1e9`). `6cc47d1b` uses sense 2, goodness as due actuality.
+`e0dae79f` uses GOOD_4 and the convertibility reading, sense 1: goodness as
+unrestricted actuality. On sense 2, the divine assessor approves exactly the
+due actualities (`79ba9d77`) only if God's approval is read as due-actuality
+approval. On the convertibility reading, God approves or loves every
+actuality (ST I q.20 a.2 is an unread lead). Then the divine approval
+account fails against due-actuality goodness, and `9134209f` holds through its
+`50d8be94` disjunct, not through `79ba9d77`. The weak premise holds on either
+reading, so "the weak premise route applies" survives. The claim that the
+divine assessor is a nature-fixed tracker of due actuality is sense-relative.
+
+On this reading, obligation belongs to law as an ordinance of reason, and the
+eternal law is in the divine intellect. Natural-law obligations follow from
+natures and do not vary under command. Positive divine law (for example
+ceremonial precepts) can vary. The relevant places are ST I q.6, I q.19, I-II
+q.90 a.1, q.93, q.94 a.5 and q.100 a.8. They are unread leads, and nothing
+is attributed to them here. The case therefore does not depend on a command
+theory, which would make `e0dae79f` trivial.
 
 ### Not established; next tests
 
-No premise is established. `50d8be94` is now closed (proved) by a
-conditional derivation whose premises (variation, the bridge and
-supervenience/invariance) are open. The due thesis gains a route through the
-weak premise, which still needs `9108832f`, `40420659` and `4c22019a`. The
-obligation layer is not connected to any root statement. Next tests:
+No premise is established. `50d8be94` remains open. Its only derivation is the
+declared transcription from `b93773ca` and the bare bridge `c2c3bebf`,
+which is equivalent to it under the core premises. The due thesis gains a
+minimal-premise route through the weak premise, but that is a minimality
+finding and not support. The obligation layer is not connected to any root
+statement. Next tests:
 
 - an explanation-order premise that separates "approved because good" from
   "good because approved" under coextension;
+- an encoded identity reading of the approval account (approval as what
+  goodness is) that would give the bridge a non-equivalent warrant;
 - for a fixed human assessor under rigidification, whether actual approval
   coextends with due actuality, using cases of recognized approval error;
 - an obligation-level invariance premise and its relation to the natural-law

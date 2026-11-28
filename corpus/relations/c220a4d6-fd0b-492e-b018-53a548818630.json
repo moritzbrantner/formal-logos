@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "c2c3bebf-cd31-4ec4-9055-7d09acb898ac",
-  "note": "The rigidified model satisfies invariance and variation, the modal approval failure holds, the bridge fails and the base approval account is correct: the bridge is needed for the extensional conclusion."
+  "note": "The rigidified model satisfies invariance and variation, the modal approval failure holds, the bridge fails and the base approval account is correct: the bridge is needed for the extensional conclusion. The controls also prove that, given invariance and variation, the bridge is equivalent to the extensional approval failure."
 }

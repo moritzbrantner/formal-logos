@@ -11,7 +11,7 @@
   "inference_ids": [
     "9323efaf-f328-4ac7-9b3b-4a40d6f4f8e8"
   ],
-  "meaning": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. No premise is established.",
+  "meaning": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. Given the other three premises, the weak premise is equivalent to the conclusion (with excluded middle the due thesis gives it, as the Euthyphro controls prove). The result shows that 50d8be94 was stronger than needed; it adds no support to the due thesis. No premise is established.",
   "definition_ids": [
     "2b760306-fed0-583e-b7b8-53a8a1d85676",
     "b9df0e5b-7d1e-5259-a5d5-910e85328aab",

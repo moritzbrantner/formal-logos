@@ -275,12 +275,13 @@ def voluntaristFamily : ProfileFamily exactSpace where
   baseGood := fun _ _ => Iff.rfl
   baseApproves := fun _ _ => Iff.rfl
 
-/-- Two acts: `keep` (keep a promise, good in every profile) and `rite` (a
-ceremonial act, also good). Commands differ only on the ceremonial act. -/
-inductive Deed | keep | rite deriving DecidableEq
+/-- Three acts: `keep` (keep a promise, a natural-law-type act), `rite` (a
+ceremonial act) and `cruelty` (not good in any profile). -/
+inductive Deed | keep | rite | cruelty deriving DecidableEq
 
-/-- Modified command layer over the divine family's nature-fixed copy: the base
-commands both acts, the variant only `keep`. -/
+/-- Divine-instance family with a genuine nature-fixed variant: both profiles
+have the base natures, goodness is due actuality and the assessor approves
+exactly the good in both. -/
 def adamsFamily : ProfileFamily exactSpace where
   Profile := Bool
   base := false
@@ -291,11 +292,15 @@ def adamsFamily : ProfileFamily exactSpace where
   baseGood := fun _ _ => Iff.rfl
   baseApproves := fun _ _ => Iff.rfl
 
+/-- Modified command layer: cruelty is never good, so the constraint that
+commands are good acts is not vacuous. The base commands promise-keeping and
+the rite; the nature-fixed variant commands only the rite, so a
+natural-law-type obligation varies with command. -/
 def adamsLayer : CommandLayer adamsFamily where
   Act := Deed
-  goodAct := fun _ _ => True
-  commandsAt := fun w a => match w with | true => a = .keep | false => True
-  obligatoryAt := fun w a => match w with | true => a = .keep | false => True
+  goodAct := fun _ a => a ≠ .cruelty
+  commandsAt := fun w a => match w with | true => a = .rite | false => a = .keep ∨ a = .rite
+  obligatoryAt := fun w a => match w with | true => a = .rite | false => a = .keep ∨ a = .rite
 
 /-- Formal controls for the modal approval test. General conjuncts: the robust
 nature account entails supervenience; weak invariance is stable truth of every
@@ -309,8 +314,15 @@ the transfer bridge (the rigidified actual-approval model: invariance and
 variation hold, approval does not ground, the base approval account is correct);
 the rigidified account excludes the transfer bridge in general; omission of invariance
 (voluntarist: variation and ground hold); and the modified command model
-(goodness facts fixed, approval grounds, commands and obligations vary). These
-are formal interpretations, not metaphysical possibility claims. -/
+(goodness facts fixed, approval grounds, cruelty never commanded, and the
+promise-keeping command and obligation vary). Added conjuncts: the modified
+command model is a non-degenerate divine instance (a nature-fixed variant with
+fixed approvals); the divine joint model's only nature-fixed profile is the
+base, so its modal conjuncts are degenerate; and the premise bundle of the
+extensional step (modal failure plus the transfer bridge) is equivalent to the
+extensional failure, and, given invariance and variation, the bridge alone is;
+with excluded middle, the due thesis gives the weak approval premise.
+These are formal interpretations, not metaphysical possibility claims. -/
 def Controls : Prop :=
   (∀ {f : Frame} {s : DefinitionSpace f} (m : ProfileFamily s),
       RobustDueAccount m → GoodnessSupervenes m) ∧
@@ -343,6 +355,18 @@ def Controls : Prop :=
     ¬ GoodnessInvariantUnderApprovalVariation voluntaristFamily) ∧
   (ModifiedCommandTheory adamsLayer ∧ ActGoodnessInvariant adamsLayer ∧
     GoodnessSupervenes adamsFamily ∧ ApprovalGroundsAcrossNatureFixed adamsFamily ∧
-    CommandVariesWithNaturesFixed adamsLayer ∧ ¬ ObligationInvariant adamsLayer)
+    CommandVariesWithNaturesFixed adamsLayer ∧ ¬ ObligationInvariant adamsLayer) ∧
+  (ApprovalsFixedByNatures adamsFamily ∧ ¬ ApprovalVariesWithNaturesFixed adamsFamily ∧
+    SameNatures adamsFamily adamsFamily.base true ∧
+    (∀ w, ¬ adamsLayer.commandsAt w .cruelty) ∧ ¬ adamsLayer.goodAct adamsFamily.base .cruelty ∧
+    adamsLayer.commandsAt adamsFamily.base .keep ∧ ¬ adamsLayer.commandsAt true .keep) ∧
+  (∀ v, SameNatures divineFamily divineFamily.base v → v = false) ∧
+  (∀ {f : Frame} {s : DefinitionSpace f} (m : ProfileFamily s),
+      (ApprovalDoesNotGround m ∧ ApprovalCorrectnessTransfers m) ↔ ApprovalAccountFails s) ∧
+  (∀ {f : Frame} {s : DefinitionSpace f} (m : ProfileFamily s),
+      GoodnessInvariantUnderApprovalVariation m → ApprovalVariesWithNaturesFixed m →
+        (ApprovalCorrectnessTransfers m ↔ ApprovalAccountFails s)) ∧
+  (∀ {f : Frame} (s : DefinitionSpace f), ExcludedMiddle → DueActualityThesis f →
+      ApprovalFailsOrCoincidesWithDue s)
 
 end TruthCore.Ethics.Euthyphro

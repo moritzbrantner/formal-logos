@@ -1,6 +1,6 @@
 {
   "id": "a3ad2e8a-4e15-4bdd-80dc-053cf358ea77",
-  "label": "Euthyphro horns cover, from excluded middle, distinctness and approval-only dependence (inference)",
+  "label": "EUTHYPHRO_HORN_2 coverage, from excluded middle, distinctness and will-only dependence (inference)",
   "input_statement_ids": [
     "ee4ab504-c8fe-59bc-bc96-7cbeefed6410",
     "1707ae66-4f7a-4edd-99c8-b675cdaa0fd7",
@@ -8,7 +8,7 @@
   ],
   "output_statement_id": "5bb03e95-b971-445a-beb9-c6ba1ccf706a",
   "rule": "case split on goodness being the approving and on its dependence on God",
-  "meaning": "Checked coverage of the dilemma under explicit background: if goodness is the approving, horn 2; otherwise if it depends on God, distinctness and approval-only dependence make it depend on the approving, horn 2; otherwise horn 1. Exclusivity of the horns is not claimed.",
+  "meaning": "Checked coverage of the dilemma under explicit background: if goodness is the approving, horn 2; otherwise if it depends on God, distinctness and approval-only dependence make it depend on the approving, horn 2; otherwise horn 1. Exclusivity of the horns is not claimed. Given distinctness, the instance of approval-only dependence at goodness is equivalent to coverage, so the result rests on applying that generalization (creatures depend on God through his will) to a distinct standard.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

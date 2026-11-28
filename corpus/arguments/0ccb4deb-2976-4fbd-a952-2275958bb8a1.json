@@ -6,11 +6,14 @@
   "inference_ids": [
     "d8dc12c3-8ba4-45d0-98f3-5fd7abd392a3"
   ],
-  "meaning": "Identity model: all identity premises and approval-only dependence hold, distinctness fails and neither horn holds. Exemplar model: distinctness holds, approval-only dependence fails, neither horn holds. Non-simple model: goodness is God's nature, which is not God and does not depend on him, so horn 1 holds. Voluntarist model: distinctness and approval-only dependence hold and horn 2 holds. Contingent-nature model: identity in each profile without a necessary nature lets goodness vary; generally identity with a necessary nature fixes it. Property model: God is his goodness, which is not the shared universal property; generally collapse into a property needs that identification.",
+  "meaning": "Premise-free mixing control for EUTHYPHRO_HORN. Identity model: all identity premises and approval-only dependence hold, distinctness fails and neither consequence horn holds, while literal horn 1 (approved because good) holds and literal horn 2 fails; generally identity with approval following nature gives literal horn 1. Dependent-nature model: goodness is God's nature, which is not God but depends on him, and neither consequence horn holds, so either simplicity or the nature's dependence on God excludes horn 1. Exemplar model: distinctness holds, approval-only dependence fails, neither horn holds. Non-simple model: goodness is God's nature, which is not God and does not depend on him, so horn 1 holds. Voluntarist model: distinctness and approval-only dependence hold and horn 2 holds. Contingent-nature model: identity in each profile without a necessary nature lets goodness vary; generally identity with a necessary nature fixes it. Property model: God is his goodness, which is not the shared universal property; generally collapse into a property needs that identification.",
   "definition_ids": [
-    "68fff412-65a9-45ad-941d-665703c64d1c"
+    "68fff412-65a9-45ad-941d-665703c64d1c",
+    "0b5ad0e7-35af-43a3-b824-c98a6b46c501",
+    "0dca022a-c561-4510-9c72-cf25b68bb593"
   ],
   "disambiguation_ids": [
-    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
-  ]
+    "5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"
+  ],
+  "sense_mixing_control": true
 }

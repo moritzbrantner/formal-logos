@@ -1,0 +1,9 @@
+{
+  "id": "0b5ad0e7-35af-43a3-b824-c98a6b46c501",
+  "label": "EUTHYPHRO_HORN_1: literal horns, approved because good or good because approved",
+  "term": "Euthyphro horn, literal explanatory direction",
+  "definition": "[EUTHYPHRO_HORN_1] In a DependenceFrame, literal horn 1 ApprovedBecauseGood says God's approving depends for what it is on goodness; literal horn 2 GoodBecauseApproved says goodness depends for what it is on God's approving. LiteralHornsCover is their disjunction. Literal horn 1 does not by itself say that goodness is distinct from God.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.LiteralHornsCover",
+  "note": "Analyst formulation of the dilemma's literal question; attribution deferred (Plato, Euthyphro 10a is an unread lead). The identity model satisfies literal horn 1."
+}

@@ -9,7 +9,7 @@
   ],
   "output_statement_id": "6cc47d1b-4840-54e1-b96b-d389d74fbbf4",
   "rule": "case split on the named extension of a supported correct account; an approval-correct case coextends with due actuality",
-  "meaning": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. No premise is established.",
+  "meaning": "Weaker sufficient premise set for the correct-support elimination: the approval account need not fail, provided that if it is correct it coextends with due actuality. In the divine joint model the extensional approval-failure premise is false and this weak premise is true. Given the other three premises, the weak premise is equivalent to the conclusion (with excluded middle the due thesis gives it, as the Euthyphro controls prove). The result shows that 50d8be94 was stronger than needed; it adds no support to the due thesis. No premise is established.",
   "assumption_statement_ids": [],
   "discharged_statement_ids": []
 }

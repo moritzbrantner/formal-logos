@@ -1,7 +1,7 @@
 {
   "id": "cd616911-8bb5-4134-bec3-ff1451cbb0c3",
   "label": "The named assessor's approvals differ in some nature-fixed profile",
-  "paraphrase": "Open variation premise: some profile of the supplied family keeps the base profile's actual perfections while the named assessor's approval differs from its base approval at some bearer and perfection.",
+  "paraphrase": "Open variation premise: some profile of the supplied family keeps the base profile's actual perfections while the named assessor's approval differs from its base approval at some bearer and perfection. Instance-neutral in the named assessor: its warrant differs by assessor (human, voluntarist, nature-fixed divine) and is recorded per instance in the goodness note.",
   "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalVariesWithNaturesFixed",
   "definition_ids": [
     "2b760306-fed0-583e-b7b8-53a8a1d85676",

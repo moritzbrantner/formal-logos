@@ -6,5 +6,5 @@
   "predicate": "tests",
   "object_kind": "statement",
   "object_id": "50d8be94-f9c1-52af-bf43-fb2751915756",
-  "note": "False in the divine joint model, where the named assessor approves exactly the due actualities, and in the rigidified model; true in the human-assessor model. With the correct-support inputs, the due thesis holds in the divine model, so this premise is not needed there."
+  "note": "False in the divine joint model, where the named assessor approves exactly the due actualities, and in the rigidified model; true in the human-assessor model. With the correct-support inputs, the due thesis holds in the divine model, so this premise is not needed there. The controls also prove that the bundle of modal failure and the rigidity bridge is equivalent to this premise in every family. Its warrant is assessor-relative: recorded per instance in the goodness note."
 }

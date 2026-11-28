@@ -1,7 +1,7 @@
 {
   "id": "b93773ca-c349-482c-9ed8-b4f20939eec7",
   "label": "Approval does not coextend with goodness in every nature-fixed profile",
-  "paraphrase": "It is not the case that, in every profile of the supplied family keeping the base actual perfections, goodness coextends with the named assessor's approval. This is the modal failure of approval as what goodness consists in; it does not say in which profile the coextension fails.",
+  "paraphrase": "It is not the case that, in every profile of the supplied family keeping the base actual perfections, goodness coextends with the named assessor's approval. This is the modal (covariation) failure of approval; it does not say in which profile the coextension fails and it is the finding of the Euthyphro core.",
   "lean_declaration": "TruthCore.Ethics.Euthyphro.ApprovalDoesNotGround",
   "definition_ids": [
     "2b760306-fed0-583e-b7b8-53a8a1d85676",

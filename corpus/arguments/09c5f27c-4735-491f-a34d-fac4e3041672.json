@@ -1,6 +1,6 @@
 {
   "id": "09c5f27c-4735-491f-a34d-fac4e3041672",
-  "label": "Neither Euthyphro horn holds, from identity, simplicity and approval following nature",
+  "label": "Neither EUTHYPHRO_HORN_2 horn holds, from identity, simplicity and approval after nature",
   "premise_statement_ids": [
     "2a304439-6fc1-4e7a-b35f-baeb38f96c30",
     "0ce33876-2356-4d58-92b6-6a7f8e377765",
@@ -11,11 +11,15 @@
   "inference_ids": [
     "997c8a08-7bdb-4c10-89b4-6fec99b2fd4a"
   ],
-  "meaning": "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. None of the four premises is established.",
+  "meaning": "The identity reply, checked: goodness identical with God's nature and God identical with his nature exclude horn 1; approval depending on that nature, with asymmetric dependence, excludes horn 2. Simplicity is used only against horn 1. On the literal reading the same premises give horn 1 (approved because good): the reply takes literal horn 1 and denies its alleged consequence. None of the four premises is established.",
   "definition_ids": [
-    "68fff412-65a9-45ad-941d-665703c64d1c"
+    "68fff412-65a9-45ad-941d-665703c64d1c",
+    "0dca022a-c561-4510-9c72-cf25b68bb593"
   ],
   "disambiguation_ids": [
-    "f5b1a1e9-1ba8-58ed-976c-9f228d8a8d14"
-  ]
+    "5ceda5e1-be48-42a1-b2e5-04a52e64bcb8"
+  ],
+  "term_senses": {
+    "EUTHYPHRO_HORN": "c4511caf-74a6-4ecd-bad6-a03049ad0df2"
+  }
 }

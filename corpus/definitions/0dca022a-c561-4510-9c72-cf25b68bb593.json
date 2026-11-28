@@ -1,0 +1,9 @@
+{
+  "id": "0dca022a-c561-4510-9c72-cf25b68bb593",
+  "label": "EUTHYPHRO_HORN_2: consequence horns, independent standard or constituted by approval",
+  "term": "Euthyphro horn, alleged consequence",
+  "definition": "[EUTHYPHRO_HORN_2] In a DependenceFrame, horn 1 IndependentStandard says goodness is distinct from God and does not depend on him for what it is; horn 2 ConstitutedByApproval says goodness depends for what it is on God's approving or is that approving. HornsCover is their disjunction, NeitherHorn the negation of both.",
+  "basis": "stipulative",
+  "lean_declaration": "TruthCore.Ethics.EuthyphroDilemma.HornsCover",
+  "note": "Analyst formulation of the upshot the dilemma alleges for each literal horn (an external standard, or arbitrary constitution by command); attribution deferred."
+}
