@@ -1,6 +1,6 @@
 {
   "id": "f1ac8941-e5ba-4741-a821-16410e8b56b5",
-  "label": "A received bearer can survive with a protector present, no loss inducer and no strict giver",
+  "label": "A received bearer can survive with a protector present, no loss inducer and no strict giver at 1",
   "premise_statement_ids": [],
   "conclusion_statement_id": "5a4ba734-fea3-4e3c-afd1-50f086c32f41",
   "inference_ids": [

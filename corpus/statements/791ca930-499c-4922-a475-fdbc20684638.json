@@ -1,10 +1,15 @@
 {
   "id": "791ca930-499c-4922-a475-fdbc20684638",
-  "label": "External things reading on the actuality of a distinct bearer",
+  "label": "The same persistence law and reason for x leave a distinct bearer y's actuality open",
   "paraphrase": "Analyst control, attribution deferred. Two integer-time histories of one frame share the cessation law and no inducers. A bearer x has the same presence at each date and the same earlier-date reason for presence at date 1 in both histories, while a distinct bearer y is present at some date in one and at none in the other. Even the global law and the x-only reason fail to entail y's actuality.",
   "lean_declaration": "TruthCore.Explanation.InertialActuality.OtherBearerActualityOpen",
   "definition_ids": [
     "6e811e85-b983-5988-b20a-f4f3ee83c50e",
     "8c20c988-31fd-4b59-acf2-db230a6ea32e"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "3ef67739-a427-582b-9eaa-af6410b9c3d3",
+    "missing_bridge": "A frame adapter from the integer-time causality frame (dated presence and originOrInertia reasons) to the world-indexed existence, contingency and dependence vocabulary of 3ef67739-a427-582b-9eaa-af6410b9c3d3, with a recorded rival claiming that the persistence of given bearers accounts for the actuality of other actual contingent concreta. The result would then show that an x-only persistence reason supplies no instance for a distinct y, which needs its own origin or dependence premise.",
+    "blocker": "The temporal-presence bridge 85497562-9d71-558a-9a1e-e4b7c321488a maps dated presence to modal existence only and supplies no dependence or contingency, and no such adapter exists. No source or analyst rival asserting that persistence of one bearer accounts for another's actuality is recorded, so the result has no position to bear on."
+  }
 }

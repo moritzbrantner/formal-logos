@@ -8,5 +8,10 @@
   ],
   "disambiguation_ids": [
     "92df85d7-aae7-57ac-b84e-3780ade842f1"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "565ccd6c-0036-4613-8595-f6f03d273a0d",
+    "missing_bridge": "An argument instantiating the open nature premise 9d8f2c7e-ddf0-49e3-b35b-67880de96acb from 565ccd6c-0036-4613-8595-f6f03d273a0d for an esse = essence candidate in an integer-time causality frame, through the EXISTENCE_IN_ESSENCE_2 to EXISTENCE_IN_ESSENCE_5 implication (law 8 of the existence-in-essence controls), compared with a recorded parity rival to that route.",
+    "blocker": "For the bare existence fact that 565ccd6c-0036-4613-8595-f6f03d273a0d supplies, the selection is immediate from at-now coherence and adds nothing to the root-path premise. A discriminating use needs a further essential fact that entails existence, and no root-route premise supplies one. No parity rival to 565ccd6c-0036-4613-8595-f6f03d273a0d is recorded with an independently justified mechanism."
+  }
 }

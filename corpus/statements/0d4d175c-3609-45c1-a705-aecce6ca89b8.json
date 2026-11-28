@@ -6,5 +6,10 @@
   "definition_ids": [
     "6788dada-f316-5cc3-8376-e64c512b1a0e",
     "8c20c988-31fd-4b59-acf2-db230a6ea32e"
-  ]
+  ],
+  "connection_plan": {
+    "target_statement_id": "40a97664-e481-42d7-8458-78374a61aa26",
+    "missing_bridge": "A recorded existential-inertia rival to 40a97664-e481-42d7-8458-78374a61aa26 argued by analogy from location persistence: the state premise 628aaedc-7e33-4d15-8606-d894cb3d755d governs a received-esse bearer, which then persists through an inducer-free window with no strict giver. This control would attack the analogy step of that argument, since the reported location contrast holds while the state rule fails in a frame with no inducer, giver or onset.",
+    "blocker": "No rival argument from the tree analogy to the state premise is recorded. The analogy is an analyst reconstruction with attribution deferred, so no rival record exists for an attacks relation. The control shows non-entailment in one formal interpretation, not falsity of the state premise."
+  }
 }
